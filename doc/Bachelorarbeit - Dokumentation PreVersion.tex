@@ -1,0 +1,99 @@
+\documentclass{scrreprt}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[ngerman]{babel}
+\usepackage{amsmath}
+\usepackage{hyperref}
+
+\title{Eine gamifizierte Howto-App für Bachelorarbeiten}
+\author{Tim-Pascal Lau}
+\date{28.05.2018}
+\begin{document}
+
+\maketitle
+\tableofcontents
+\chapter{Einleitung}
+Für Studierende im letzten Semester eines Bachelorstudiengangs, umfasst die wesentliche Prüfungsleistung das Verfassen einer Bachelorarbeit.
+Die Auseinandersetzung mit komplexen Problemstellungen stellt jedoch erfahrungsgemäß für viele Studierende eine große Herausforderung dar, welche sich aus dem erstmaligem Zusammenspiel von selbständigem und eigenverantwortlichen Arbeiten, sowie Problemlösen mittels erworbener Fach- und Methodenkenntnisse über einen längeren (in etwa dreimonatigen) Zeitraum ergibt.
+\section{Motivation}
+Im Verlauf des Studiums sollten Studierende folgendes Wissen und folgende Fähigkeiten erworben haben und zielgerichtet Anwenden können:
+\begin{itemize}
+\item Studiengang-spezifisches Grundlagenwissen
+\item Wissensansammlung über fachspezifische Methoden und deren Eigenschaften
+\item Fähigkeit, komplexe Probleme zu erkennen, zu strukturieren und systematisch mittels geeigneter Methoden zu bearbeiten
+\end{itemize}
+Es kommt im Kontext von Bachelorarbeiten dennoch oftmals zu Schwierigkeiten, das erworbene Wissen und Fähigkeiten zielgerichtet auf reale Probleme anzuwenden und deren Ergebnisse zusammenhängend zu dokumentieren.
+\section{Lösungsansatz}
+Ein möglicher im Rahmen dieser Bachelorarbeit zu verfolgender Lösungsansatz wäre es, eine Software zu entwickeln, welche unterstützend und wegweisend bei dem systematischen Vorgehen bei komplexen Problemstellungen fungieren könnte und diese den Studierenden zugänglich zu machen.
+Hierbei soll es nicht darum gehen, den Studierenden die eigentliche Arbeit abzunehmen, sondern vielmehr darum, Studierende hinsichtlich Vorgehen und Methodenauswahl zielgerichtet zu unterstützen.
+\section{Zielsetzung}
+Mit einem solchen Ansatz soll es Studierenden ermöglicht werden, ihr gelerntes Wissen durch Fokussierung bestimmter Aufgaben und Zusammenhänge im Rahmen ihres eigenen Bachelorprojekts auf die Realität zu übertragen und somit einen motivierenden, sowie gleichermaßen fordernden Rahmen zu schaffen, um ihr Bachelorprojekt erfolgreich abzuschließen.
+\section{Aufgabenbeschreibung}
+Im Rahmen dieser Bachelorarbeit soll hierfür eine mobile Applikation entwickelt werden, die den Studierenden während der Dauer der Bachelorarbeit kontinuierlich "begleitet". Dabei sollen Gamificationansätze realisiert werden, welche motivierend im bei der Bearbeitung und dem Vorgehen der eigenen Bachelorarbeit wirken sollen. Dies soll beispielhaft für den Studiengang Informatik/Softwareentwicklung erfolgen. Eine Erweiterbarkeit für andere Studiengänge ist hierbei jedoch konzeptionell vorzusehen
+Primäre Funktionen der Software ist Studierenden bei den folgenden Aufgaben begleitend zu unterstützen und fortwährend zu motivieren "am Ball zu bleiben":
+\begin{itemize}
+\item Brainstorming (zur Unterstützung der Ideenfindung für Bachelorarbeiten)
+\item Recherche und Literaturverwaltung
+\item Gliederung (unterschiedlicher Kategorien von Bachelorarbeiten, zum Beispiel mittels bewehrter Templates)
+\item Zeitplanung/Fortschrittsverfolgung, sowie Erinnerungs- und Benachrichtigungsfunktion 
+\item Problem-orientierte Anforderungsanalyse und deren Dokumentation
+\item Problem-orientierte Methoden- und Tool-/Frameworkselektion und deren Dokumentation
+\item Methoden-spezifische Aufbereitung von Ergebnissen
+\item Problem-orientierte Nachweisführung und deren Dokumentation
+\end{itemize}
+Die Applikation soll mittels Flutter für Android und iOS entwickelt werden. Dabei soll erhoben werden, inwiefern sich Flutter für die Entwicklung solcher Apps eignet(Lessons Learned).
+Die im Rahmen der Aufgabenbeschreibung entstandenen Anforderungen werden durch die folgenden Teilaufgaben spezifiziert:
+\begin{itemize}
+\item Detaillierte Anforderungsanalyse oben angegebener Funktionen. Hierbei sind Studenten und Professoren des Studiengangs Informatik/Softwaretechnik geeignet einzubeziehen und relevante Literatur (insbesondere zu Gamification und Methoden der Informatik und des Softwareengineering) zu berücksichtigen.
+\item Architekturentwurf der Anwendung (Erweiterbarkeit für andere Studiengänge ist konzeptionell vorzusehen)
+\item Implementierung der Anwendung
+\item Die Funktonsfähigkeit der App soll mittels Softwaretests geeignet nachgewiesen werden.
+\item Die Nutzbarkeit der App soll systematisch evaluiert werden. Hierbei sind Studenten und Professoren des Studiengangs Informatik/Softwaretechnik geeignet einzubeziehen.
+\item Dokumentation der oben angegebenen Schritte inklusive Bewertung der Nutzbarkeit des Frameworks Flutter für solche Arten von Apps.
+\end{itemize}
+\section{Ausblick auf die Bachelorarbeit}
+\subsection{Beschreibung der Kernkomponenten}
+In der folgenden Dokumentation der Bachelorarbeit werden verschiedene aufeinander aufbauende Prozesse, Teilschritte und Ergebnisse der Softwareentwicklung dokumentiert sein. Hierbei liegt die Priorität vor allem bei dem Pflegen der Nachvollziehbarkeit der dargestellten Informationen durch aufeinander aufbauende Kapitel und dem reflektieren der eigenen Gedankengänge.
+\subsection{Anforderungsanalyse}
+Der Nachvollziehbarkeit halber empfiehlt es sich, Grundkenntnisse über die Basiskomponenten Android/iOS-Betriebssystem, sowie dem Flutter Framework zu besitzen. Sollte dies nicht der Fall sein, so lassen sich im Kapitel \textbf{Beschreibung der Basiskomponenten} die nötigen Informationen nachlesen.
+\subsection{Architektur der Software}
+Die Entscheidung eine mobile Applikation für Android und iOS mittels Flutter zu entwickeln, definiert bereits frühzeitig verschiedene Möglichkeiten und Pflichten, welche im Kapitel \textbf{Anforderungsmanagement} unter Zunahme anderer erhobener Anforderungen detailliert dokumentiert und beschrieben werden
+Alle nötigen Informationen zur Softwarearchitektur, zu den Entwurfsentscheidungen, sowie der Berücksichtigung der Erweiterbarkeit der Software, werden im Kapitel \textbf{Architekturentwurf} behandelt und sind somit wegweisend für die Implementierung der Software.
+\subsection{Implementierung}
+Informationen zur detaillierten Implementierung der in der Aufgabenbeschreibung definierten Funktionen, sowie die Umsetzung der Benutzeroberfläche, werden im Kapitel \textbf{Implementierung der Softwarefunktionen} behandelt. Unter Einbezug beispielhafter Codeauszüge werden hier die Funktionsweisen der Funktionen aufgeführt und beschrieben.
+Die Nachweisführung der Softwareanforderungen, der Usability-Anforderungen, sowie die Auswertung der Nützlichkeit der Verwendung des Frameworks Flutter bei der Entwicklung dieser App finden sich im Kapitel \textbf{Validierung und Verifikation} 
+\subsection{Präsentation der Ergebnisse}
+Abschließend folgt im Kapitel \textbf{Präsentation der Ergebnisse} eine Zusammenfassung der erreichten Ergebnisse und eine Reflexion der Teilschritte, sowie die Abschlussbetrachtung des gesamten Projekts.
+\chapter{Beschreibung der Kernkomponenten}
+\section{Das Andoid-Betriebssystem}
+\subsection{Systembeschreibung}
+\subsection{Berechtigungen}
+\section{Das iOS-Betriebssystem}
+\subsection{Systembeschreibung}
+\subsection{Berechtigungen}
+\section{Vorstellung des Frameworks Flutter}
+\subsection{Entwicklung von Betriebssystem übergreifenden Applikationen}
+\subsection{Laufzeit-Performance}
+\subsection{Material-Design}
+\chapter{Anforderungsanalyse}
+\section{Identifikation der Funktionalitäten}
+\section{Anforderungsbeschreibung}
+\subsection{Funktionale Anforderungen}
+\subsection{Nicht funktionale Anforderungen}
+\chapter{Architektur der Software}
+\section{Architekturbeschreibung}
+\section{Entwurfsentscheidungen}
+\section{Erweiterbarkeit der Software für andere Studiengänge}
+\chapter{Implementierung}
+\section{Umsetzung der Anforderungen}
+\section{Entwurf der Benutzeroberfläche}
+\chapter{Validierung und Verifikation}
+\section{Softwaretests}
+\section{Abdeckung der Softwareanforderungen}
+\section{Ausführung der Usabilitytests}
+\chapter{Präsentation der Ergebnisse}
+\section{Lessons Learned}
+\section{Abschlussbetrachtung}
+\end{document}
