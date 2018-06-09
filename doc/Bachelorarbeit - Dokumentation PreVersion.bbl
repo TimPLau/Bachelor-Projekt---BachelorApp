@@ -1,0 +1,55 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 2.9 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated as
+% required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+\datalist[entry]{nty/global//global/global}
+  \entry{aristotle:physics}{book}{}
+    \name{author}{1}{}{%
+      {{hash=A}{%
+         family={Aristotle},
+         familyi={A\bibinitperiod},
+      }}%
+    }
+    \name{translator}{2}{}{%
+      {{hash=WPH}{%
+         family={Wicksteed},
+         familyi={W\bibinitperiod},
+         given={P.\bibnamedelima H.},
+         giveni={P\bibinitperiod\bibinitdelim H\bibinitperiod},
+      }}%
+      {{hash=CFM}{%
+         family={Cornford},
+         familyi={C\bibinitperiod},
+         given={F.\bibnamedelima M.},
+         giveni={F\bibinitperiod\bibinitdelim M\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {G. P. Putnam}%
+    }
+    \strng{namehash}{A1}
+    \strng{fullhash}{A1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{shorttitle}
+    \field{sortinit}{A}
+    \field{sortinithash}{A}
+    \field{shorttitle}{Physics}
+    \field{title}{Physics}
+    \field{year}{1929}
+  \endentry
+\enddatalist
+\endinput

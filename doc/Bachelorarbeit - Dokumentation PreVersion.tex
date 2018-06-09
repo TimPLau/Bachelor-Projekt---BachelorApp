@@ -1,11 +1,14 @@
 \documentclass{scrreprt}
-
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{lmodern}
 \usepackage[ngerman]{babel}
 \usepackage{amsmath}
 \usepackage{hyperref}
+
+\usepackage[backend=bibtex, 
+]{biblatex} 
+\addbibresource{lit.bib} 
 
 \title{Eine gamifizierte Howto-App für Bachelorarbeiten}
 \author{Tim-Pascal Lau}
@@ -96,4 +99,7 @@ Abschließend folgt im Kapitel \textbf{Präsentation der Ergebnisse} eine Zusamm
 \chapter{Präsentation der Ergebnisse}
 \section{Lessons Learned}
 \section{Abschlussbetrachtung}
+\chapter{Literaturverzeichnis}
+\nocite{*}
+\printbibliography
 \end{document}
