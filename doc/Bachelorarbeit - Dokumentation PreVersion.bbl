@@ -17,39 +17,114 @@
 \endgroup
 
 \datalist[entry]{nty/global//global/global}
-  \entry{aristotle:physics}{book}{}
-    \name{author}{1}{}{%
-      {{hash=A}{%
-         family={Aristotle},
-         familyi={A\bibinitperiod},
-      }}%
-    }
-    \name{translator}{2}{}{%
-      {{hash=WPH}{%
-         family={Wicksteed},
-         familyi={W\bibinitperiod},
-         given={P.\bibnamedelima H.},
-         giveni={P\bibinitperiod\bibinitdelim H\bibinitperiod},
-      }}%
-      {{hash=CFM}{%
-         family={Cornford},
-         familyi={C\bibinitperiod},
-         given={F.\bibnamedelima M.},
-         giveni={F\bibinitperiod\bibinitdelim M\bibinitperiod},
-      }}%
-    }
-    \list{publisher}{1}{%
-      {G. P. Putnam}%
-    }
-    \strng{namehash}{A1}
-    \strng{fullhash}{A1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{shorttitle}
-    \field{sortinit}{A}
-    \field{sortinithash}{A}
-    \field{shorttitle}{Physics}
-    \field{title}{Physics}
-    \field{year}{1929}
+  \entry{Flu1}{manual}{}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{B}
+    \field{sortinithash}{B}
+    \field{title}{Build beautiful native apps in record time}
+    \verb{url}
+    \verb https://flutter.io/
+    \endverb
+    \field{year}{(Zugriff Juni 3, 2018)}
+  \endentry
+
+  \entry{Cup1}{manual}{}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{C}
+    \field{sortinithash}{C}
+    \field{title}{Cupertino (iOS-style) Widgets}
+    \verb{url}
+    \verb https://flutter.io/widgets/cupertino/
+    \endverb
+    \field{year}{(Zugriff Juni 3, 2018)}
+  \endentry
+
+  \entry{Flu6}{manual}{}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{F}
+    \field{sortinithash}{F}
+    \field{title}{Foundation Libaryn}
+    \verb{url}
+    \verb https://docs.flutter.io/flutter/foundation/foundation-library.html
+    \endverb
+    \field{year}{(Zugriff Juni 3, 2018)}
+  \endentry
+
+  \entry{Flu2}{manual}{}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{I}
+    \field{sortinithash}{I}
+    \field{title}{Introduction}
+    \verb{url}
+    \verb https://flutter.io/faq/#introduction
+    \endverb
+    \field{year}{(Zugriff Juni 3, 2018)}
+  \endentry
+
+  \entry{Flu7}{manual}{}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{M}
+    \field{sortinithash}{M}
+    \field{title}{Material Components Widgets}
+    \verb{url}
+    \verb https://flutter.io/widgets/material/
+    \endverb
+    \field{year}{(Zugriff Juni 3, 2018)}
+  \endentry
+
+  \entry{Mat1}{manual}{}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{M}
+    \field{sortinithash}{M}
+    \field{title}{Material Design}
+    \verb{url}
+    \verb https://material.io/design/
+    \endverb
+    \field{year}{(Zugriff Juni 3, 2018)}
+  \endentry
+
+  \entry{Skia1}{manual}{}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{S}
+    \field{sortinithash}{S}
+    \field{title}{Skia Graphics Library}
+    \verb{url}
+    \verb https://skia.org/
+    \endverb
+    \field{year}{(Zugriff Juni 3, 2018)}
+  \endentry
+
+  \entry{Flu5}{manual}{}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{T}
+    \field{sortinithash}{T}
+    \field{title}{Technical Overview}
+    \verb{url}
+    \verb https://flutter.io/technical-overview/
+    \endverb
+    \field{year}{(Zugriff Juni 3, 2018)}
+  \endentry
+
+  \entry{Flu3}{manual}{}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{T}
+    \field{sortinithash}{T}
+    \field{title}{Technology}
+    \verb{url}
+    \verb https://flutter.io/faq/#what-technology-is-flutter-built-with
+    \endverb
+    \field{year}{(Zugriff Juni 3, 2018)}
+  \endentry
+
+  \entry{Flu4}{manual}{}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{W}
+    \field{sortinithash}{W}
+    \field{title}{Welcome to the Engine Wiki}
+    \verb{url}
+    \verb https://github.com/flutter/engine/wiki
+    \endverb
+    \field{year}{(Zugriff Juni 3, 2018)}
   \endentry
 \enddatalist
 \endinput

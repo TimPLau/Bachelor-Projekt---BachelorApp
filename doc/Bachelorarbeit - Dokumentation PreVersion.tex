@@ -14,7 +14,6 @@
 \author{Tim-Pascal Lau}
 \date{28.05.2018}
 \begin{document}
-
 \maketitle
 \tableofcontents
 \chapter{Einleitung}
@@ -59,7 +58,7 @@ Die im Rahmen der Aufgabenbeschreibung entstandenen Anforderungen werden durch d
 \section{Ausblick auf die Bachelorarbeit}
 In der folgenden Dokumentation der Bachelorarbeit werden verschiedene aufeinander aufbauende Prozesse, Teilschritte und Ergebnisse der Softwareentwicklung dokumentiert sein. Hierbei liegt die Priorität vor allem bei dem Pflegen der Nachvollziehbarkeit der dargestellten Informationen durch aufeinander aufbauende Kapitel und dem reflektieren der eigenen Gedankengänge.
 \subsection{Beschreibung der Kernkomponenten}
-Der Nachvollziehbarkeit halber empfiehlt es sich, Grundkenntnisse über die Basiskomponenten Android/iOS-Betriebssystem, sowie dem Flutter Framework zu besitzen. Sollte dies nicht der Fall sein, so lassen sich im Kapitel \textbf{Beschreibung der Basiskomponenten} die nötigen Informationen nachlesen.
+Der Nachvollziehbarkeit halber empfiehlt es sich, Grundkenntnisse über die Basiskomponenten, wie dem Flutter Framework zu besitzen. Sollte dies nicht der Fall sein, so lassen sich im Kapitel \textbf{Beschreibung der Basiskomponenten} die nötigen Informationen nachlesen.
 \subsection{Anforderungsanalyse}
 Das Kapitel \textbf{Anforderungsanalyse} stellt in detaillierter Ausführung und Beschreibung die Prozesse der Anforderungsermittlung und deren Auswertung, sowie Definition dar und legt somit wichtige Grundlagen und Anforderungen an die Software fest. Weiterhin werden im Laufe des Kapitels Einblicke in Strategien und Gedankengänge ermöglicht, welche zusätzliche Anhaltspunkte für die Nachvollziehbarkeit der weiteren Kapitel beitragen können.
 \subsection{Architektur der Software}
@@ -73,9 +72,24 @@ Die Nachweisführung der Softwareanforderungen, der Usability-Anforderungen, sow
 Abschließend folgt im Kapitel \textbf{Präsentation der Ergebnisse} eine Zusammenfassung der erreichten Ergebnisse und eine Reflexion der Teilschritte, sowie die Abschlussbetrachtung des gesamten Projekts.
 \chapter{Beschreibung der Kernkomponenten}
 \section{Vorstellung des Frameworks Flutter}
+Flutter ist ein von Google entwickeltes opensource Framework, welches auf die Entwicklung mobiler 2D-Applikationen für Android- und iOS-Betriebssysteme ausgelegt ist. Beworben wird Flutter durch das Hervorheben der Einfachheit der Benutzung, die schnell zu erreichenden Fortschritte bei der Implementierung von Softwarefunktionen, sowie den Gestaltungsmöglichkeiten der Benutzeroberfläche und den hochqualitativen Ergebnissen.
+\subsection{Flutter Systemarchitektur} 
+Das Flutter Framework besteht aus drei verschiedenen Basiskomponenten, welche im folgenden Abschnitt kurz erläutert werden.
+\begin{itemize}
+\item{\textbf{Flutter Engine}}
+
+Die C/C++ basierte Flutter engine, setzt sich aus verschiedenen Kerntechnologien zusammen. Zum einen die open source 2D Graphics Libary Skia\cite{Skia1}, welche seit 2005 zu Google gehört und zum anderen die Dart Virtual Machine, welche im Kapitel \textbf{Dart} noch weiter beschrieben wird.
+\item{\textbf{Foundation Libary}}
+
+Die Foundation Libary, welche in Dart geschrieben wurde, stellt Basisklassen und -funktionen zur Verfügung und dient der Konstruktion von Applikationen mittels Flutter
+\item{\textbf{Design-specific Widgets}}
+
+Das Flutter Framework stellt zwei verschiedene Arten von Widgets zur Verfügung, welche zugehörig zu den jeweiligen Design Sprachen von Google Material Design\cite{Mat1}, welche 2014 entwickelt wurde und die iOS Design kopierende Design Sprache Cupertino\cite{Cup1}.
+\end{itemize}
 \subsection{Entwicklung von Betriebssystem übergreifenden Applikationen}
 \subsection{Laufzeit-Performance}
 \subsection{Material-Design}
+\section{Dart}
 \chapter{Anforderungsanalyse}
 \section{Identifikation des Ist-Zustands}
 \subsection{Problemabgrenzung (Welches Problem soll gelöst werden?)}

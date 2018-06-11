@@ -19,41 +19,51 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {1.5.3}Architektur der Software}{6}{subsection.1.5.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.5.4}Implementierung}{6}{subsection.1.5.4}
+\contentsline {subsection}{\numberline {1.5.4}Implementierung}{7}{subsection.1.5.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.5.5}Pr\IeC {\"a}sentation der Ergebnisse}{7}{subsection.1.5.5}
+\contentsline {subsection}{\numberline {1.5.5}Validierung und Verifikation}{7}{subsection.1.5.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {1.5.6}Pr\IeC {\"a}sentation der Ergebnisse}{7}{subsection.1.5.6}
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {2}Beschreibung der Kernkomponenten}{8}{chapter.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.1}Das Andoid-Betriebssystem}{8}{section.2.1}
+\contentsline {section}{\numberline {2.1}Vorstellung des Frameworks Flutter}{8}{section.2.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.1.1}Systembeschreibung}{8}{subsection.2.1.1}
+\contentsline {subsection}{\numberline {2.1.1}Flutter Systemarchitektur}{8}{subsection.2.1.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.1.2}Berechtigungen}{8}{subsection.2.1.2}
+\contentsline {subsection}{\numberline {2.1.2}Entwicklung von Betriebssystem \IeC {\"u}bergreifenden Applikationen}{8}{subsection.2.1.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.2}Das iOS-Betriebssystem}{8}{section.2.2}
+\contentsline {subsection}{\numberline {2.1.3}Laufzeit-Performance}{8}{subsection.2.1.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.2.1}Systembeschreibung}{8}{subsection.2.2.1}
+\contentsline {subsection}{\numberline {2.1.4}Material-Design}{8}{subsection.2.1.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.2.2}Berechtigungen}{8}{subsection.2.2.2}
-\defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.3}Vorstellung des Frameworks Flutter}{8}{section.2.3}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.3.1}Entwicklung von Betriebssystem \IeC {\"u}bergreifenden Applikationen}{8}{subsection.2.3.1}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.3.2}Laufzeit-Performance}{8}{subsection.2.3.2}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.3.3}Material-Design}{8}{subsection.2.3.3}
+\contentsline {section}{\numberline {2.2}Dart}{8}{section.2.2}
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {3}Anforderungsanalyse}{9}{chapter.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.1}Identifikation der Funktionalit\IeC {\"a}ten}{9}{section.3.1}
+\contentsline {section}{\numberline {3.1}Identifikation des Ist-Zustands}{9}{section.3.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.2}Anforderungsbeschreibung}{9}{section.3.2}
+\contentsline {subsection}{\numberline {3.1.1}Problemabgrenzung (Welches Problem soll gel\IeC {\"o}st werden?)}{9}{subsection.3.1.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.2.1}Funktionale Anforderungen}{9}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.1.2}Kontext des Problems (Wo liegt das Problem?)}{9}{subsection.3.1.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.2.2}Nicht funktionale Anforderungen}{9}{subsection.3.2.2}
+\contentsline {subsection}{\numberline {3.1.3}Ziele der Beteiligten (Warum muss es gel\IeC {\"o}st werden?)}{9}{subsection.3.1.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.1.4}Szenariensammlung (Wie k\IeC {\"o}nnte ein Softwaresystem helfen)}{9}{subsection.3.1.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.2}Identifikation des Soll-Zustands}{9}{section.3.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.3}Analyse der Schwachstellen}{9}{section.3.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.4}Anforderungskatalog}{9}{section.3.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.5}Lastenheft}{9}{section.3.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.6}Pflichtenheft}{9}{section.3.6}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.6.1}Funktionale Anforderungen}{9}{subsection.3.6.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.6.2}Nicht funktionale Anforderungen}{9}{subsection.3.6.2}
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {4}Architektur der Software}{10}{chapter.4}
 \defcounter {refsection}{0}\relax 
