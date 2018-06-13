@@ -1,0 +1,66 @@
+/*
+*	Types: Ausklappbare Tabs, Text, Grafik?, etc.
+*	Eingrenzen? Ein Tab kann nur Text(e)/Bild(er) als kind haben?
+*	Bild und Text können keine Kinder haben?
+*	Button führt auf Seite kann nur Tab(s)/... als Kind haben
+*/
+[
+	{
+		"title" 		: "Gliederung",
+		"description" 	: "Stellt die gängigen Gliederung dar",
+		"tags"			: [
+			"Allgemein",
+			"Gliederung"
+		],
+		"subsections"	: [
+			{
+				"type"			: 	null,
+				"title"			:	"Entwickelnde Arbeit",
+				"description"	:	"Gliederung einer enwickelnden Arbeit",
+				"tags"			:	[
+					"Entwickelnde Arbeit"
+				],
+				"subsections"		: [
+					{
+						"type"			: 	null,
+						"title"			:	"Beispiel I",
+						"description"	:	"Beispielgliederung I",
+						"tags"			:	[],
+						"subsections" 	: 	[]
+					},
+					{
+						"type"			: 	null,
+						"title"			:	"Beispiel II",
+						"description"	:	"Beispielgliederung II",
+						"tags"			:	[],
+						"subsections" 	: 	[]
+					}
+				]
+			},
+			{
+				"type"			: 	null,
+				"title"			:	"Vergleichende Arbeit",
+				"description"	:	"Gliederung einer vergleichenden Arbeit",
+				"tags"			:	[
+					"Vergleichende Arbeit"
+				],
+				"subsections"		: [
+					{
+						"type"			: 	null,
+						"title"			:	"Beispiel III",
+						"description"	:	"Beispielgliederung III",
+						"tags"			:	[],
+						"subsections" 	: 	[]
+					},
+					{
+						"type"			: 	null,
+						"title"			:	"Beispiel IV",
+						"description"	:	"Beispielgliederung IV",
+						"tags"			:	[],
+						"subsections" 	: 	[]
+					}
+				]
+			}
+		]
+	}
+]
