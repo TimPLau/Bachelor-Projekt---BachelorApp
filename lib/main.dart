@@ -1,7 +1,7 @@
 import 'dart:async';
 import 'package:flutter/services.dart' show rootBundle;
-import 'package:project_bachelorapplication/json_reader.dart';
-import 'content.dart';
+import 'package:project_bachelorapplication/json_reader/json_reader.dart';
+import 'package:project_bachelorapplication/content/content.dart';
 
 final String path = 'assets/data/';
 final String contentFilename = 'content.json';
@@ -18,5 +18,6 @@ Future<String> get _localPath async {
   void main() async{
     await init();
     JSONReader jsonReader = new JSONReader(localPath);
+
     print(jsonReader.contentManager.toString());
   }

@@ -1,5 +1,5 @@
 import 'dart:convert' as JSON;
-import 'content.dart';
+import 'package:project_bachelorapplication/content/content.dart';
 
 class JSONReader {
   bool _fileExists = false;
@@ -20,12 +20,12 @@ class JSONReader {
   void loadContent(){
     contentManager = new ContentManager();
 
-    for(dynamic d in jsonContent){
+    for(dynamic jsonContentModule in jsonContent){
       contentManager.addContentModule(new ContentModule(
-          d["title"],
-          d["description"],
-          d["tags"], loadSubsections(
-          d["subsections"])
+          jsonContentModule["title"],
+          jsonContentModule["description"],
+          jsonContentModule["tags"], loadSubsections(
+          jsonContentModule["subsections"])
       ));
 
     }
