@@ -1,9 +1,23 @@
+import 'package:flutter/material.dart';
+import 'package:project_bachelorapplication/pages/homescreen.dart';
+
 class ContentManager{
   List<ContentModule> _content;
 
   ContentManager(){
     _content = <ContentModule>[];
   }
+
+  StatelessWidget getContent(){
+    return new HomeScreen(
+        this.getContentModules(),
+          "BachelorApp");
+  }
+
+  List<ContentModule> getContentModules(){
+    return this._content;
+  }
+
 
   void addContentModule(ContentModule contentModule){
     _content.add(contentModule);
@@ -61,3 +75,4 @@ class ContentSection {
     return ret;
   }
 }
+

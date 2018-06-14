@@ -1,27 +1,25 @@
 import 'dart:convert' as JSON;
-import 'package:project_bachelorapplication/content/content.dart';
+import 'package:project_bachelorapplication/models/content.dart';
 
 class JSONReader {
   bool _fileExists = false;
-  List<dynamic> jsonContent;
-  List<ContentModule> _content;
-  ContentManager contentManager;
+  List<dynamic> _jsonContent;
+  ContentManager _contentManager;
 
   JSONReader (jsonCode){
-    jsonContent = JSON.jsonDecode(jsonCode);
-    _content = new List<ContentModule>();
-    loadContent();
+    _jsonContent = JSON.jsonDecode(jsonCode);
+    _loadContent();
   }
 
-  List<ContentModule> get content{
-    return this._content;
+  ContentManager get contentManager{
+    return _contentManager;
   }
 
-  void loadContent(){
-    contentManager = new ContentManager();
+  void _loadContent(){
+    this._contentManager = new ContentManager();
 
-    for(dynamic jsonContentModule in jsonContent){
-      contentManager.addContentModule(new ContentModule(
+    for(dynamic jsonContentModule in _jsonContent){
+      this._contentManager.addContentModule(new ContentModule(
           jsonContentModule["title"],
           jsonContentModule["description"],
           jsonContentModule["tags"], loadSubsections(
