@@ -6,9 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="f4dd6696-99ed-42f9-ad55-ec4d525f5ce1" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/assets/data/content.json" afterPath="$PROJECT_DIR$/assets/data/content.json" />
-      <change beforePath="$PROJECT_DIR$/lib/containers/content_buttonlist_widget.dart" afterPath="$PROJECT_DIR$/lib/containers/content_buttonlist_widget.dart" />
-      <change beforePath="$PROJECT_DIR$/lib/pages/screen.dart" afterPath="$PROJECT_DIR$/lib/pages/screen.dart" />
     </list>
     <ignored path="$PROJECT_DIR$/.dart_tool/" />
     <ignored path="$PROJECT_DIR$/.idea/" />
@@ -469,7 +466,14 @@
       <option name="project" value="LOCAL" />
       <updated>1529082101287</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Generalisiertes Menüsystem erarbeitet">
+      <created>1529082385548</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1529082385548</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="ToolWindowManager">
