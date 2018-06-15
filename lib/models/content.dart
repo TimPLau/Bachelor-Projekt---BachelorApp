@@ -1,25 +1,22 @@
 import 'package:flutter/material.dart';
 import 'package:project_bachelorapplication/pages/homescreen.dart';
+import 'package:project_bachelorapplication/pages/screen.dart';
+import 'package:project_bachelorapplication/containers/content_extensionpanel_widget.dart';
+import 'package:project_bachelorapplication/containers/content_buttonlist_widget.dart';
+
 
 class ContentManager{
-  List<ContentModule> _content;
+  List<Content> _content;
 
   ContentManager(){
-    _content = <ContentModule>[];
+    _content = <Content>[];
   }
 
-  StatelessWidget getContent(){
-    return new HomeScreen(
-        this.getContentModules(),
-          "BachelorApp");
-  }
-
-  List<ContentModule> getContentModules(){
+  List<Content> get content{
     return this._content;
   }
 
-
-  void addContentModule(ContentModule contentModule){
+  void addContent(Content contentModule){
     _content.add(contentModule);
   }
 
@@ -27,52 +24,33 @@ class ContentManager{
   String toString() {
     String ret = "";
 
-    for(ContentModule  contentModule in _content){
-      ret = ret + contentModule.toString();
+    for(Content  content in _content){
+      ret = ret + content.toString();
     }
 
     return ret;
   }
 }
 
-class ContentModule{
+class Content{
+  String type;
   String title;
   String description;
   List tags;
-  List <ContentSection> subsections;
+  List <Content> subsections;
 
-  ContentModule(this.title, this.description, this.tags, this.subsections);
+  Content(this.type, this.title, this.description, this.tags, this.subsections);
 
   @override
   String toString() {
     String ret = "Title: $title\nDescription: $description\nTags: $tags\n";
 
-    for(ContentSection contentSecion in subsections){
-      ret = ret + "\n" + contentSecion.toString();
+    for(Content subsection in subsections){
+      ret = ret + "\n" + subsection.toString();
     }
 
     return ret;
   }
 }
 
-class ContentSection {
-  String title;
-  String description;
-  List tags;
-  List<ContentSection> subsections;
-
-  int depth;
-
-  ContentSection(this.title, this.description, this.tags, this.subsections);
-
-  @override
-  String toString() {
-    String ret = "Title: $title\nDescription: $description\nTags: $tags\n";
-    for(ContentSection contentSecion in subsections){
-      ret = ret + contentSecion.toString();
-    }
-
-    return ret;
-  }
-}
 

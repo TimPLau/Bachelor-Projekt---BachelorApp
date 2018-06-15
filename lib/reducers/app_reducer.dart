@@ -3,7 +3,6 @@ import 'package:project_bachelorapplication/models/appstate.dart';
 
 AppState appReducer(AppState state, action){
   return new AppState(
-    menuReducer(state.menu, action)
+    menuReducer(state.actualContent, action)
   );
-  return state;
 }

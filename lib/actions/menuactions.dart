@@ -1,7 +1,7 @@
 import 'package:project_bachelorapplication/models/content.dart';
 
-class FillMenuAction{
-  List<ContentModule> menuContent;
+class UpdateContentAction{
+  List<Content> menuContent;
 
-  FillMenuAction(this.menuContent);
+  UpdateContentAction(this.menuContent);
 }

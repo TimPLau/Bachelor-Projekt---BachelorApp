@@ -1,7 +1,10 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart' show rootBundle;
+import 'package:path/path.dart';
+import 'package:project_bachelorapplication/actions/menuactions.dart';
 import 'package:project_bachelorapplication/models/json_reader.dart';
+import 'package:project_bachelorapplication/pages/homescreen.dart';
 import 'package:redux/redux.dart';
 import 'package:flutter_redux/flutter_redux.dart';
 import 'package:project_bachelorapplication/reducers/app_reducer.dart';
@@ -17,6 +20,7 @@ ContentManager contentManager;
 Future<String> get _localPath async {
   return rootBundle.loadString(path + contentFilename);
 }
+
   init()async{
     localPath = await _localPath;
   }
@@ -25,7 +29,7 @@ Future<String> get _localPath async {
     await init();
     JSONReader jsonReader = new JSONReader(localPath);
     contentManager = jsonReader.contentManager;
-    //print(contentManager.toString());
+
     runApp(BachelorApp());
   }
 
@@ -33,7 +37,7 @@ Future<String> get _localPath async {
 
     final store = new Store(
       appReducer,
-      initialState: new AppState([]),
+      initialState: new AppState(contentManager.content),
     );
 
   @override
@@ -45,7 +49,7 @@ Future<String> get _localPath async {
             bottomAppBarColor: Colors.red,
           ),
           title: "BachelorApp",
-          home: contentManager.getContent(),
+          home: new HomeScreen("BachelorApp", contentManager.content),
         ),
       );
     }

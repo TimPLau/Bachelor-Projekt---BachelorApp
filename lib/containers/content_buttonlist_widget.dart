@@ -7,30 +7,24 @@ import 'package:redux/redux.dart';
 import 'package:project_bachelorapplication/actions/menuactions.dart';
 
 class ContentButtonListWidget extends StatelessWidget{
-  List<ContentModule> contentModules;
+  List<Content> content;
 
-  ContentButtonListWidget(this.contentModules);
+  ContentButtonListWidget(this.content);
 
   @override
   Widget build(BuildContext context) {
-    StoreProvider.of<AppState>(context).dispatch(new FillMenuAction(contentModules));
     return new StoreConnector(
       builder: (BuildContext context, _ViewModel vm){
-        return new Expanded(child: ListView.builder(
-            itemCount: vm.list.length,
+         return new ListView.builder(
+            itemCount: content.length,
             itemBuilder: (context, index) => new ListTile(
-              title: new Text(vm.list[index].title),
+              title: new Text(content[index].title),
               onTap: () {
-                Navigator.of(context).push(new MaterialPageRoute(builder: (context) =>
-                new Screen(
-                    contentModules[].subsections,
-                    "HomeScreen2"
-                )),
-                );
-                },
+                Navigator.push(context, new MaterialPageRoute(builder: (context) => new Screen(this.content[index].title, this.content[index].subsections)));
+              }
             )
-        ),
         );
+
       },
       converter: _ViewModel.fromStore,
     );
@@ -38,14 +32,14 @@ class ContentButtonListWidget extends StatelessWidget{
 }
 
 class _ViewModel{
-  final List<ContentModule> list;
+  final List<Content> list;
 
   _ViewModel({
     @required this.list,
   });
 
   static _ViewModel fromStore(Store<AppState> store){
-    return new _ViewModel(list: store.state.menu);
+    return new _ViewModel(list: store.state.actualContent);
   }
 
 }

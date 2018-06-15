@@ -1,7 +1,7 @@
 import 'package:project_bachelorapplication/models/content.dart';
 
 class AppState {
-  final List<ContentModule> menu;
+  final List<Content> actualContent;
 
-  AppState(this.menu);
+  AppState(this.actualContent);
 }

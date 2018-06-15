@@ -1,5 +1,6 @@
 [
 	{
+		"type"			: "ButtonListWidget",
 		"title" 		: "Gliederung",
 		"description" 	: "Stellt die gängigen Gliederung dar",
 		"tags"			: [
@@ -8,7 +9,7 @@
 		],
 		"subsections"	: [
 			{
-				"type"			: 	null,
+				"type"			: 	"ButtonListWidget",
 				"title"			:	"Entwickelnde Arbeit",
 				"description"	:	"Gliederung einer enwickelnden Arbeit",
 				"tags"			:	[
@@ -16,14 +17,14 @@
 				],
 				"subsections"		: [
 					{
-						"type"			: 	null,
+						"type"			: 	"ExtensionPanelWidget",
 						"title"			:	"Beispiel I",
 						"description"	:	"Beispielgliederung I",
 						"tags"			:	[],
 						"subsections" 	: 	[]
 					},
 					{
-						"type"			: 	null,
+						"type"			: 	"ExtensionPanelWidget",
 						"title"			:	"Beispiel II",
 						"description"	:	"Beispielgliederung II",
 						"tags"			:	[],
@@ -32,7 +33,7 @@
 				]
 			},
 			{
-				"type"			: 	null,
+				"type"			: 	"ButtonListWidget",
 				"title"			:	"Vergleichende Arbeit",
 				"description"	:	"Gliederung einer vergleichenden Arbeit",
 				"tags"			:	[
@@ -40,14 +41,14 @@
 				],
 				"subsections"		: [
 					{
-						"type"			: 	null,
+						"type"			: 	"ExtensionPanelWidget",
 						"title"			:	"Beispiel III",
 						"description"	:	"Beispielgliederung III",
 						"tags"			:	[],
 						"subsections" 	: 	[]
 					},
 					{
-						"type"			: 	null,
+						"type"			: 	"ExtensionPanelWidget",
 						"title"			:	"Beispiel IV",
 						"description"	:	"Beispielgliederung IV",
 						"tags"			:	[],
@@ -58,56 +59,81 @@
 		]
 	},
 	{
+		"type"			: "ButtonListWidget",
 		"title" 		: "Anforderungsanalyse",
-		"description" 	: "Stellt die gängigen Gliederung dar",
+		"description" 	: "Anforderungsanalyse",
 		"tags"			: [
 			"Allgemein",
 			"Gliederung"
 		],
 		"subsections"	: [
 			{
-				"type"			: 	null,
-				"title"			:	"Entwickelnde Arbeit",
+				"type"			: 	"ButtonListWidget",
+				"title"			:	"Use-Case Diagramm",
 				"description"	:	"Gliederung einer enwickelnden Arbeit",
 				"tags"			:	[
 					"Entwickelnde Arbeit"
 				],
 				"subsections"		: [
 					{
-						"type"			: 	null,
+						"type"			: 	"ExtensionPanelWidget",
 						"title"			:	"Beispiel I",
-						"description"	:	"Beispielgliederung I",
+						"description"	:	"Beispiel I",
 						"tags"			:	[],
 						"subsections" 	: 	[]
 					},
 					{
-						"type"			: 	null,
+						"type"			: 	"ExtensionPanelWidget",
 						"title"			:	"Beispiel II",
-						"description"	:	"Beispielgliederung II",
+						"description"	:	"Beispiel II",
 						"tags"			:	[],
 						"subsections" 	: 	[]
 					}
 				]
 			},
 			{
-				"type"			: 	null,
-				"title"			:	"Vergleichende Arbeit",
-				"description"	:	"Gliederung einer vergleichenden Arbeit",
+				"type"			: 	"ButtonListWidget",
+				"title"			:	"Interviewmethode",
+				"description"	:	"Interviewmethode",
 				"tags"			:	[
 					"Vergleichende Arbeit"
 				],
 				"subsections"		: [
 					{
-						"type"			: 	null,
+						"type"			: 	"ExtensionPanelWidget",
 						"title"			:	"Beispiel III",
-						"description"	:	"Beispielgliederung III",
+						"description"	:	"Beispiel III",
 						"tags"			:	[],
 						"subsections" 	: 	[]
 					},
 					{
-						"type"			: 	null,
+						"type"			: 	"ExtensionPanelWidget",
 						"title"			:	"Beispiel IV",
-						"description"	:	"Beispielgliederung IV",
+						"description"	:	"Beispiel IV",
+						"tags"			:	[],
+						"subsections" 	: 	[]
+					}
+				]
+			},
+			{
+				"type"			: 	"ButtonListWidget",
+				"title"			:	"ABC-Analyse",
+				"description"	:	"ABC-Analyse",
+				"tags"			:	[
+					"Vergleichende Arbeit"
+				],
+				"subsections"		: [
+					{
+						"type"			: 	"ExtensionPanelWidget",
+						"title"			:	"Beispiel III",
+						"description"	:	"Beispiel III",
+						"tags"			:	[],
+						"subsections" 	: 	[]
+					},
+					{
+						"type"			: 	"ExtensionPanelWidget",
+						"title"			:	"Beispiel IV",
+						"description"	:	"BeispielIV",
 						"tags"			:	[],
 						"subsections" 	: 	[]
 					}
@@ -115,4 +141,4 @@
 			}
 		]
 	}
-]
+	]

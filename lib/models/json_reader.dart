@@ -19,27 +19,28 @@ class JSONReader {
     this._contentManager = new ContentManager();
 
     for(dynamic jsonContentModule in _jsonContent){
-      this._contentManager.addContentModule(new ContentModule(
+      this._contentManager.addContent(new Content(
+          jsonContentModule["type"],
           jsonContentModule["title"],
           jsonContentModule["description"],
-          jsonContentModule["tags"], loadSubsections(
-          jsonContentModule["subsections"])
+          jsonContentModule["tags"],
+          loadSubsections(jsonContentModule["subsections"])
       ));
 
     }
   }
 
-  List<ContentSection> loadSubsections(List<dynamic> subsections){
-    List<ContentSection> ret = [];
+  List<Content> loadSubsections(List<dynamic> subsections){
+    List<Content> ret = [];
 
     for(dynamic subsection in subsections){
-      ret.add(new ContentSection(
+      ret.add(new Content(
+          subsection["type"],
           subsection["title"],
           subsection["description"],
           subsection["tags"],
           loadSubsections(subsection["subsections"])
       ));
-
     }
     return ret;
   }
