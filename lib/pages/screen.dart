@@ -1,18 +1,11 @@
-import 'package:flutter_redux/flutter_redux.dart';
-import 'package:project_bachelorapplication/actions/menuactions.dart';
-import 'package:project_bachelorapplication/containers/content_list_widget.dart';
 import 'package:project_bachelorapplication/models/content.dart';
-import 'package:project_bachelorapplication/containers/content_extensionpanel_widget.dart';
 import 'package:flutter/material.dart';
-import 'package:project_bachelorapplication/containers/content_buttonlist_widget.dart';
-import 'package:project_bachelorapplication/models/appstate.dart';
-
+import 'package:project_bachelorapplication/containers/content_widget.dart';
 
 class Screen extends StatelessWidget{
   //List<Content> contentSections;
   String title;
   List<Content> content;
-
 
   Screen(this.title, this.content);
 
@@ -28,7 +21,7 @@ class Screen extends StatelessWidget{
             child: new Column(
                 children: <Widget>[
                   new Flexible(
-                    child: new ContentButtonListWidget(content),
+                    child: new ContentWidget(content),
                   ),
                 ]
             )

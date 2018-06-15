@@ -1,15 +1,13 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart' show rootBundle;
-import 'package:path/path.dart';
-import 'package:project_bachelorapplication/actions/menuactions.dart';
 import 'package:project_bachelorapplication/models/json_reader.dart';
-import 'package:project_bachelorapplication/pages/homescreen.dart';
 import 'package:redux/redux.dart';
 import 'package:flutter_redux/flutter_redux.dart';
 import 'package:project_bachelorapplication/reducers/app_reducer.dart';
 import 'package:project_bachelorapplication/models/appstate.dart';
 import 'package:project_bachelorapplication/models/content.dart';
+import 'pages/screen.dart';
 
 final String path = 'assets/data/';
 final String contentFilename = 'content.json';
@@ -49,7 +47,7 @@ Future<String> get _localPath async {
             bottomAppBarColor: Colors.red,
           ),
           title: "BachelorApp",
-          home: new HomeScreen("BachelorApp", contentManager.content),
+          home: new Screen("BachelorApp", contentManager.content),
         ),
       );
     }

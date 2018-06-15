@@ -1,10 +1,3 @@
-import 'package:flutter/material.dart';
-import 'package:project_bachelorapplication/pages/homescreen.dart';
-import 'package:project_bachelorapplication/pages/screen.dart';
-import 'package:project_bachelorapplication/containers/content_extensionpanel_widget.dart';
-import 'package:project_bachelorapplication/containers/content_buttonlist_widget.dart';
-
-
 class ContentManager{
   List<Content> _content;
 

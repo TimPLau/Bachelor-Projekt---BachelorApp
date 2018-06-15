@@ -6,10 +6,10 @@ import 'package:project_bachelorapplication/pages/screen.dart';
 import 'package:redux/redux.dart';
 import 'package:project_bachelorapplication/actions/menuactions.dart';
 
-class ContentButtonListWidget extends StatelessWidget{
+class ContentWidget extends StatelessWidget{
   List<Content> content;
 
-  ContentButtonListWidget(this.content);
+  ContentWidget(this.content);
 
   @override
   Widget build(BuildContext context) {
