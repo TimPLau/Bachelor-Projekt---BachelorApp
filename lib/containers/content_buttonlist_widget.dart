@@ -17,12 +17,27 @@ class ContentButtonListWidget extends StatelessWidget{
       builder: (BuildContext context, _ViewModel vm){
          return new ListView.builder(
             itemCount: content.length,
-            itemBuilder: (context, index) => new ListTile(
-              title: new Text(content[index].title),
-              onTap: () {
-                Navigator.push(context, new MaterialPageRoute(builder: (context) => new Screen(this.content[index].title, this.content[index].subsections)));
+            itemBuilder: (context, index) {
+              if(content[index].type == "ButtonListWidget") {
+                return new ListTile(
+                    title: new Text(content[index].title),
+                    onTap: () {
+                      Navigator.push(context, new MaterialPageRoute(
+                          builder: (context) =>
+                          new Screen(this.content[index].title,
+                              this.content[index].subsections)));
+                    }
+                );
               }
-            )
+              if(content[index].type == "ExtensionPanelWidget"){
+                return new ExpansionTile(
+                  title: new Text(content[index].title),
+                  children: <Widget>[
+                    new Text(content[index].description),
+                  ],
+                );
+              }
+            }
         );
 
       },

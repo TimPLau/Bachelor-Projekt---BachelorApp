@@ -12,18 +12,9 @@ class Screen extends StatelessWidget{
   //List<Content> contentSections;
   String title;
   List<Content> content;
-  StatelessWidget widget;
 
-  Screen(this.title, this.content){
-   if(this.content[0].type == "ButtonListWidget") {
-     print(this.content[0].type);
-     this.widget = new ContentButtonListWidget(this.content);
-   }
-   if(this.content[0].type == "ExtensionPanelWidget") {
-     print(this.content[0].type);
-     this.widget = new ContentExtensionPanelWidget(this.content);
-   }
-  }
+
+  Screen(this.title, this.content);
 
   @override
   Widget build(BuildContext context) {
@@ -37,7 +28,7 @@ class Screen extends StatelessWidget{
             child: new Column(
                 children: <Widget>[
                   new Flexible(
-                    child: widget,
+                    child: new ContentButtonListWidget(content),
                   ),
                 ]
             )

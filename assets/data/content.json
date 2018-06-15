@@ -17,7 +17,7 @@
 				],
 				"subsections"		: [
 					{
-						"type"			: 	"ExtensionPanelWidget",
+						"type"			: 	"ButtonListWidget",
 						"title"			:	"Beispiel I",
 						"description"	:	"Beispielgliederung I",
 						"tags"			:	[],
