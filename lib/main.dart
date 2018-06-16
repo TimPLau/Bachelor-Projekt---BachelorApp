@@ -7,13 +7,15 @@ import 'package:flutter_redux/flutter_redux.dart';
 import 'package:project_bachelorapplication/reducers/app_reducer.dart';
 import 'package:project_bachelorapplication/models/appstate.dart';
 import 'package:project_bachelorapplication/models/content.dart';
-import 'pages/screen.dart';
+import 'package:project_bachelorapplication/pages/screen.dart';
+import 'package:project_bachelorapplication/actions/menuactions.dart';
 
 final String path = 'assets/data/';
 final String contentFilename = 'content.json';
 String localPath;
 ContentManager contentManager;
-
+List<Screen> screens;
+List<String> paths;
 
 Future<String> get _localPath async {
   return rootBundle.loadString(path + contentFilename);
@@ -28,6 +30,9 @@ Future<String> get _localPath async {
     JSONReader jsonReader = new JSONReader(localPath);
     contentManager = jsonReader.contentManager;
 
+    screens.add(new Screen([new Content("", "", "", [], [])]));
+
+
     runApp(BachelorApp());
   }
 
@@ -35,11 +40,11 @@ Future<String> get _localPath async {
 
     final store = new Store(
       appReducer,
-      initialState: new AppState(contentManager.content),
+      initialState: new AppState("BachelorApp", "/", contentManager.content),
     );
 
   @override
-  Widget build(BuildContext context, ) {
+  Widget build(BuildContext context) {
       return StoreProvider(
         store: store,
         child: new MaterialApp(
@@ -47,7 +52,9 @@ Future<String> get _localPath async {
             bottomAppBarColor: Colors.red,
           ),
           title: "BachelorApp",
-          home: new Screen("BachelorApp", contentManager.content),
+          home: new Screen(),
+          //routes: new Map.fromIterable(contentManager.getRoutes(), key: (a) => a, value: (b) => (context) => new Screen())
+          routes: new Map.fromIterables(contentManager.getRoutes(), contentManager.screens.map((f) => ((context) => new Screen()))),
         ),
       );
     }

@@ -8,7 +8,6 @@ import 'package:project_bachelorapplication/actions/menuactions.dart';
 
 class ContentWidget extends StatelessWidget{
   List<Content> content;
-
   ContentWidget(this.content);
 
   @override
@@ -19,17 +18,22 @@ class ContentWidget extends StatelessWidget{
             itemCount: content.length,
             itemBuilder: (context, index) {
               if(content[index].type == "ButtonListWidget") {
+                print("ButtonListWidget");
+
                 return new ListTile(
                     title: new Text(content[index].title),
                     onTap: () {
-                      Navigator.push(context, new MaterialPageRoute(
-                          builder: (context) =>
-                          new Screen(this.content[index].title,
-                              this.content[index].subsections)));
+                      StoreProvider.of<AppState>(context).dispatch(new UpdateScreenTitleAction(this.content[index].title));
+                      StoreProvider.of<AppState>(context).dispatch(new UpdateScreenPathAction(this.content[index].path));
+                      //StoreProvider.of<AppState>(context).dispatch(new UpdateScreenContentAction(this.content[index].subsections));
+                      Navigator.of(context).pushNamed(this.content[index].path);
+                      print(this.content[index].path);
                     }
                 );
               }
+
               if(content[index].type == "ExtensionPanelWidget"){
+                print("ExtensionPanelWidget");
                 return new ExpansionTile(
                   title: new Text(content[index].title),
                   children: <Widget>[
@@ -38,6 +42,7 @@ class ContentWidget extends StatelessWidget{
                 );
               }
             }
+
         );
 
       },
@@ -47,14 +52,14 @@ class ContentWidget extends StatelessWidget{
 }
 
 class _ViewModel{
-  final List<Content> list;
+  final String screen;
 
   _ViewModel({
-    @required this.list,
+    @required this.screen,
   });
 
   static _ViewModel fromStore(Store<AppState> store){
-    return new _ViewModel(list: store.state.actualContent);
+    return new _ViewModel(screen: store.state.actualScreenTitle);
   }
 
 }
