@@ -10,6 +10,7 @@ class ContentManager{
   }
   ContentManager(){
     _content = <Content>[];
+    _screens =[];
   }
 
   List<Content> get content{
@@ -25,7 +26,6 @@ class ContentManager{
     List<Content> content = _content;
 
     ret.addAll(_getRoutes(content, ""));
-
     return ret;
   }
 
@@ -33,6 +33,8 @@ class ContentManager{
     List<String> ret = [];
 
     for(Content c in content) {
+      this._screens.add(new Screen(c.subsections, c.title));
+
       ret.add(parent + "/" + c.title);
       c._path = parent + "/" + c.title;
 
@@ -40,7 +42,6 @@ class ContentManager{
         ret.addAll(_getRoutes(c.subsections, parent + "/" + c.title));
 
     }
-
     return ret;
   }
 

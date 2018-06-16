@@ -13,7 +13,7 @@ class Screen extends StatelessWidget{
   List<Content> content;
   String path;
 
-  Screen(this.content);
+  Screen(this.content, this.title);
 
   @override
   Widget build(BuildContext context) {
@@ -23,7 +23,7 @@ class Screen extends StatelessWidget{
         return new Scaffold(
             appBar: new AppBar(
               backgroundColor: Colors.red,
-              title: new Text(StoreProvider.of<AppState>(context).state.actualScreenTitle),
+              title: new Text(this.title),
             ),
             body: new Container(
                 child: new Column(

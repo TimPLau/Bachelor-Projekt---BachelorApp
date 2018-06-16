@@ -17,23 +17,18 @@ class ContentWidget extends StatelessWidget{
          return new ListView.builder(
             itemCount: content.length,
             itemBuilder: (context, index) {
-              if(content[index].type == "ButtonListWidget") {
-                print("ButtonListWidget");
 
+              if(content[index].type == "ButtonListWidget") {
                 return new ListTile(
                     title: new Text(content[index].title),
                     onTap: () {
-                      StoreProvider.of<AppState>(context).dispatch(new UpdateScreenTitleAction(this.content[index].title));
                       StoreProvider.of<AppState>(context).dispatch(new UpdateScreenPathAction(this.content[index].path));
-                      //StoreProvider.of<AppState>(context).dispatch(new UpdateScreenContentAction(this.content[index].subsections));
-                      Navigator.of(context).pushNamed(this.content[index].path);
-                      print(this.content[index].path);
+                      Navigator.of(context).pushNamed(StoreProvider.of<AppState>(context).state.actualPath);
                     }
                 );
               }
 
               if(content[index].type == "ExtensionPanelWidget"){
-                print("ExtensionPanelWidget");
                 return new ExpansionTile(
                   title: new Text(content[index].title),
                   children: <Widget>[

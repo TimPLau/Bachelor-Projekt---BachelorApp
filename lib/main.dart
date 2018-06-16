@@ -29,10 +29,6 @@ Future<String> get _localPath async {
     await init();
     JSONReader jsonReader = new JSONReader(localPath);
     contentManager = jsonReader.contentManager;
-
-    screens.add(new Screen([new Content("", "", "", [], [])]));
-
-
     runApp(BachelorApp());
   }
 
@@ -52,9 +48,8 @@ Future<String> get _localPath async {
             bottomAppBarColor: Colors.red,
           ),
           title: "BachelorApp",
-          home: new Screen(),
-          //routes: new Map.fromIterable(contentManager.getRoutes(), key: (a) => a, value: (b) => (context) => new Screen())
-          routes: new Map.fromIterables(contentManager.getRoutes(), contentManager.screens.map((f) => ((context) => new Screen()))),
+          home: new Screen(contentManager.content, "Home"),
+          routes: new Map.fromIterables(contentManager.getRoutes(), contentManager.screens.map((f) => ((context) => f))),
         ),
       );
     }
