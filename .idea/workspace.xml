@@ -5,21 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f4dd6696-99ed-42f9-ad55-ec4d525f5ce1" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/lib/models/route_navigator.dart" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/lib/pages/contentscreen.dart" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/assets/data/content.json" afterPath="$PROJECT_DIR$/assets/data/content.json" />
-      <change beforePath="$PROJECT_DIR$/lib/actions/menuactions.dart" afterPath="$PROJECT_DIR$/lib/actions/menuactions.dart" />
-      <change beforePath="$PROJECT_DIR$/lib/containers/content_widget.dart" afterPath="$PROJECT_DIR$/lib/containers/content_widget.dart" />
-      <change beforePath="$PROJECT_DIR$/lib/main.dart" afterPath="$PROJECT_DIR$/lib/main.dart" />
-      <change beforePath="$PROJECT_DIR$/lib/models/appstate.dart" afterPath="$PROJECT_DIR$/lib/models/appstate.dart" />
-      <change beforePath="$PROJECT_DIR$/lib/models/content.dart" afterPath="$PROJECT_DIR$/lib/models/content.dart" />
-      <change beforePath="$PROJECT_DIR$/lib/pages/screen.dart" afterPath="$PROJECT_DIR$/lib/pages/screen.dart" />
-      <change beforePath="$PROJECT_DIR$/lib/reducers/app_reducer.dart" afterPath="$PROJECT_DIR$/lib/reducers/app_reducer.dart" />
-      <change beforePath="$PROJECT_DIR$/lib/reducers/menu_reducer.dart" afterPath="$PROJECT_DIR$/lib/reducers/menu_reducer.dart" />
-      <change beforePath="$PROJECT_DIR$/pubspec.lock" afterPath="$PROJECT_DIR$/pubspec.lock" />
-      <change beforePath="$PROJECT_DIR$/pubspec.yaml" afterPath="$PROJECT_DIR$/pubspec.yaml" />
     </list>
     <ignored path="$PROJECT_DIR$/.dart_tool/" />
     <ignored path="$PROJECT_DIR$/.idea/" />
@@ -526,7 +513,14 @@
       <option name="project" value="LOCAL" />
       <updated>1529082773880</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Generalisiertes Menüsystem erarbeitet">
+      <created>1529164562829</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1529164562829</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="ToolWindowManager">
