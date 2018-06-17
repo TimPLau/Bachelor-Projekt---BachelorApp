@@ -16,6 +16,7 @@ String localPath;
 ContentManager contentManager;
 List<Screen> screens;
 List<String> paths;
+Content initialContent;
 
 Future<String> get _localPath async {
   return rootBundle.loadString(path + contentFilename);
@@ -27,8 +28,8 @@ Future<String> get _localPath async {
 
   void main() async{
     await init();
-    JSONReader jsonReader = new JSONReader(localPath);
-    contentManager = jsonReader.contentManager;
+
+    contentManager = new ContentManager(localPath);
     runApp(BachelorApp());
   }
 
@@ -36,7 +37,7 @@ Future<String> get _localPath async {
 
     final store = new Store(
       appReducer,
-      initialState: new AppState("BachelorApp", "/", contentManager.content),
+      initialState: new AppState("BachelorApp", contentManager.initContent ,contentManager.content[0]),
     );
 
   @override
@@ -49,7 +50,7 @@ Future<String> get _localPath async {
           ),
           title: "BachelorApp",
           home: new Screen(contentManager.content, "Home"),
-          routes: new Map.fromIterables(contentManager.getRoutes(), contentManager.screens.map((f) => ((context) => f))),
+          //routes: new Map.fromIterables(contentManager.getRoutes(), contentManager.screens.map((f) => ((context) => f))),
         ),
       );
     }

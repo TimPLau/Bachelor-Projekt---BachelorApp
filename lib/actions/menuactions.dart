@@ -7,14 +7,34 @@ class UpdateScreenTitleAction{
   UpdateScreenTitleAction(this.screenTitle);
 }
 
-class UpdateScreenPathAction{
-  String screenPath;
+class UpdatePreviousContentAction{
+  Content previousContent;
 
-  UpdateScreenPathAction(this.screenPath);
+  UpdatePreviousContentAction(this.previousContent);
 }
 
-class UpdateScreenContentAction{
-  List<Content> screenContent;
+class UpdateActualContentAction{
+  Content actualContent;
 
-  UpdateScreenContentAction(this.screenContent);
+  UpdateActualContentAction(this.actualContent);
+}
+
+class UpdateScreenPathAction{
+  String actualScreenPath;
+  String previousScreenPath;
+
+
+  UpdateScreenPathAction(this.actualScreenPath, this.previousScreenPath);
+}
+
+class UpdatePreviousScreenPathAction{
+  String previousScreenPath;
+
+  UpdatePreviousScreenPathAction(this.previousScreenPath);
+}
+
+class LoadActualContentAction{
+  Content content;
+
+  LoadActualContentAction(this.content);
 }

@@ -1,46 +1,62 @@
 import 'package:flutter/material.dart';
 import 'package:project_bachelorapplication/pages/screen.dart';
+import 'dart:convert' as JSON;
 
 class ContentManager{
-  List<Content> _content;
-  List<Screen> _screens;
+  List<Content> _content = [];
+  Content _initContent;
 
-  List<Screen> get screens{
-    return this._screens;
+  ContentManager(jsonPath){
+    _readContent(jsonPath);
+
   }
-  ContentManager(){
-    _content = <Content>[];
-    _screens =[];
+
+  get initContent{
+    return this._initContent;
   }
+
 
   List<Content> get content{
     return this._content;
   }
 
-  void addContent(Content contentModule){
-    _content.add(contentModule);
+  _readContent(String jsonPath){
+
+    _initContent = new Content("ButtonListWidget", "Guide", "", []);
+    List<dynamic> _jsonContent = JSON.jsonDecode(jsonPath);
+
+    for(dynamic jsonContentModule in _jsonContent){
+      Content content = new Content(
+        jsonContentModule["type"],
+        jsonContentModule["title"],
+        jsonContentModule["description"],
+        jsonContentModule["tags"],
+      );
+
+      content.subsections = loadContent(jsonContentModule["subsections"], content);
+      content.prevContent = _initContent;
+      _initContent.subsections = [content];
+      _content.add(initContent);
+    }
   }
 
-  List<String> getRoutes(){
-    List<String> ret = [];
-    List<Content> content = _content;
+  List<Content> loadContent(List<dynamic> subsections, Content prevContent){
+    List<Content> ret = [];
 
-    ret.addAll(_getRoutes(content, ""));
-    return ret;
-  }
+    for(dynamic subsection in subsections){
 
-  List<String> _getRoutes(List<Content> content, String parent){
-    List<String> ret = [];
+      Content c = new Content(
+        subsection["type"],
+        subsection["title"],
+        subsection["description"],
+        subsection["tags"],
+      );
 
-    for(Content c in content) {
-      this._screens.add(new Screen(c.subsections, c.title));
+      c.prevContent = prevContent;
 
-      ret.add(parent + "/" + c.title);
-      c._path = parent + "/" + c.title;
+      c.subsections = loadContent(subsection["subsections"], c);
 
-      if (c.subsections.isNotEmpty)
-        ret.addAll(_getRoutes(c.subsections, parent + "/" + c.title));
-
+      ret.add(c);
     }
     return ret;
   }
@@ -62,24 +78,34 @@ class Content{
   String title;
   String description;
   List tags;
-  List <Content> subsections;
-  String _path;
+  //List<Content> _actualContent;
+  Content _prevContent;
+  List <Content> _subsections = [];
 
-  Content(this.type, this.title, this.description, this.tags, this.subsections);
+  Content(this.type, this.title, this.description, this.tags);
 
-  set path(String path) {
-    this._path = path;
+  get subsections{
+    return this._subsections;
   }
 
-  String get path{
-    return this._path;
+  set subsections(List<Content> content){
+    this._subsections.addAll(content);
   }
+
+  set prevContent(Content c) {
+    this._prevContent = c;
+  }
+
+  Content get prevContent{
+    return this._prevContent;
+  }
+
 
   @override
   String toString() {
     String ret = "Title: $title\nDescription: $description\nTags: $tags\n";
 
-    for(Content subsection in subsections){
+    for(Content subsection in _subsections){
       ret = ret + "\n" + subsection.toString();
     }
 

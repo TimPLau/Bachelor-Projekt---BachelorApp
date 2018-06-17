@@ -4,23 +4,23 @@ import 'package:project_bachelorapplication/pages/screen.dart';
 import 'package:project_bachelorapplication/models/appstate.dart';
 import 'package:project_bachelorapplication/actions/menuactions.dart';
 
-String updateScreenTitle(String current, UpdateScreenTitleAction action){
+String updateScreenTitle(String current, action){
   if(action is UpdateScreenTitleAction)
     return action.screenTitle;
 
   return current;
 }
 
-String updateScreenPath(String current, UpdateScreenPathAction action){
-  if(action is UpdateScreenPathAction)
-    return action.screenPath;
+Content updatePreviousContent(Content current, action){
+  if(action is UpdatePreviousContentAction)
+    return action.previousContent;
 
   return current;
 }
 
-List<Content> updateScreenContent(List<Content> current, UpdateScreenContentAction action){
-  if(action is UpdateScreenContentAction)
-    return action.screenContent;
+Content updateActualContent (Content current, action){
+  if(action is UpdateActualContentAction)
+    return action.actualContent;
 
   return current;
 }

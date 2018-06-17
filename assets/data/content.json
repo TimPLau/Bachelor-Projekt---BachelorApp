@@ -21,7 +21,13 @@
 						"title"			:	"Beispiel I",
 						"description"	:	"Beispielgliederung I",
 						"tags"			:	[],
-						"subsections" 	: 	[]
+						"subsections" 	: 	[{
+							"type"			: 	"ButtonListWidget",
+							"title"			:	"Beispiel II",
+							"description"	:	"Beispiel II",
+							"tags"			:	[],
+							"subsections" 	: 	[]
+						}]
 					},
 					{
 						"type"			: 	"ExtensionPanelWidget",
@@ -43,14 +49,14 @@
 					{
 						"type"			: 	"ExtensionPanelWidget",
 						"title"			:	"Beispiel III",
-						"description"	:	"Beispielgliederung III",
+						"description"	:	"Gliederung einer vergleichenden Arbeit.\nDiese Arbeit ist vergleichen und hat eine Gliederung:\n\n - Einleitung\n - Hauptteil\n - Schlussteil",
 						"tags"			:	[],
 						"subsections" 	: 	[]
 					},
 					{
 						"type"			: 	"ExtensionPanelWidget",
 						"title"			:	"Beispiel IV",
-						"description"	:	"Beispielgliederung IV",
+						"description"	:	"Beispielgliederung IV\nfgdfg",
 						"tags"			:	[],
 						"subsections" 	: 	[]
 					}

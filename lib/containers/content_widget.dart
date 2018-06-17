@@ -22,8 +22,8 @@ class ContentWidget extends StatelessWidget{
                 return new ListTile(
                     title: new Text(content[index].title),
                     onTap: () {
-                      StoreProvider.of<AppState>(context).dispatch(new UpdateScreenPathAction(this.content[index].path));
-                      Navigator.of(context).pushNamed(StoreProvider.of<AppState>(context).state.actualPath);
+                      StoreProvider.of<AppState>(context).dispatch(new UpdatePreviousContentAction(this.content[index].prevContent));
+                      StoreProvider.of<AppState>(context).dispatch(new UpdateActualContentAction(this.content[index]));
                     }
                 );
               }
@@ -31,8 +31,13 @@ class ContentWidget extends StatelessWidget{
               if(content[index].type == "ExtensionPanelWidget"){
                 return new ExpansionTile(
                   title: new Text(content[index].title),
+                  backgroundColor: Colors.white,
                   children: <Widget>[
-                    new Text(content[index].description),
+                    new Container(
+                      padding: const EdgeInsets.all(20.0),
+                      child: new Row(
+                      children: <Widget>[new Text(content[index].description,textAlign: TextAlign.left, textDirection: TextDirection.ltr,)],
+                    ),),
                   ],
                 );
               }

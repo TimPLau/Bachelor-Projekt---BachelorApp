@@ -3,27 +3,11 @@ import 'package:project_bachelorapplication/models/appstate.dart';
 import 'package:project_bachelorapplication/actions/menuactions.dart';
 
 AppState appReducer(AppState state, action){
-
-  if(action is UpdateScreenTitleAction)
+  //print(state.toString());
   return new AppState(
       updateScreenTitle(state.actualScreenTitle, action),
-      state.actualPath,
-      state.actualContent
-  );
-
-  if(action is UpdateScreenPathAction)
-    return new AppState(
-        state.actualScreenTitle,
-        updateScreenPath(state.actualPath, action),
-        state.actualContent
+      updatePreviousContent(state.previousContent, action),
+      updateActualContent(state.actualContent, action)
     );
 
-  if(action is UpdateScreenContentAction)
-    return new AppState(
-        state.actualScreenTitle,
-        state.actualPath,
-        updateScreenContent(state.actualContent, action)
-    );
-
-  return state;
 }

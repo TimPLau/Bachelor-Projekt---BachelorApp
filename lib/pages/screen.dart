@@ -20,10 +20,33 @@ class Screen extends StatelessWidget{
     return new StoreConnector(
       builder: (BuildContext context, _ViewModel vm){
         this.path = StoreProvider.of<AppState>(context).state.actualPath;
+        this.content = StoreProvider.of<AppState>(context).state.actualContent.subsections;
         return new Scaffold(
             appBar: new AppBar(
               backgroundColor: Colors.red,
               title: new Text(this.title),
+              leading: new IconButton(
+              onPressed: () {
+                if (StoreProvider
+                    .of<AppState>(context)
+                    .state
+                    .previousContent
+                     != null) {
+                  StoreProvider.of<AppState>(context).dispatch(
+                      new UpdateActualContentAction(StoreProvider
+                          .of<AppState>(context)
+                          .state
+                          .previousContent));
+
+                StoreProvider.of<AppState>(context).dispatch(
+                    new UpdatePreviousContentAction(StoreProvider
+                        .of<AppState>(context)
+                        .state
+                        .previousContent
+                        .prevContent));
+                }
+              },
+              icon: new Icon(Icons.arrow_back)),
             ),
             body: new Container(
                 child: new Column(
