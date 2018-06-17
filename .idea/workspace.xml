@@ -6,16 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="f4dd6696-99ed-42f9-ad55-ec4d525f5ce1" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/assets/data/content.json" afterPath="$PROJECT_DIR$/assets/data/content.json" />
-      <change beforePath="$PROJECT_DIR$/lib/actions/menuactions.dart" afterPath="$PROJECT_DIR$/lib/actions/menuactions.dart" />
-      <change beforePath="$PROJECT_DIR$/lib/containers/content_widget.dart" afterPath="$PROJECT_DIR$/lib/containers/content_widget.dart" />
-      <change beforePath="$PROJECT_DIR$/lib/main.dart" afterPath="$PROJECT_DIR$/lib/main.dart" />
-      <change beforePath="$PROJECT_DIR$/lib/models/appstate.dart" afterPath="$PROJECT_DIR$/lib/models/appstate.dart" />
-      <change beforePath="$PROJECT_DIR$/lib/models/content.dart" afterPath="$PROJECT_DIR$/lib/models/content.dart" />
-      <change beforePath="$PROJECT_DIR$/lib/models/json_reader.dart" afterPath="$PROJECT_DIR$/lib/models/json_reader.dart" />
-      <change beforePath="$PROJECT_DIR$/lib/pages/screen.dart" afterPath="$PROJECT_DIR$/lib/pages/screen.dart" />
-      <change beforePath="$PROJECT_DIR$/lib/reducers/app_reducer.dart" afterPath="$PROJECT_DIR$/lib/reducers/app_reducer.dart" />
-      <change beforePath="$PROJECT_DIR$/lib/reducers/menu_reducer.dart" afterPath="$PROJECT_DIR$/lib/reducers/menu_reducer.dart" />
     </list>
     <ignored path="$PROJECT_DIR$/.dart_tool/" />
     <ignored path="$PROJECT_DIR$/.idea/" />
@@ -531,7 +521,14 @@
       <option name="project" value="LOCAL" />
       <updated>1529166406992</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Generalisiertes Menüsystem jetzt wirklich Reduxbasiert">
+      <created>1529249232757</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1529249232757</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -583,7 +580,8 @@
     <MESSAGE value="ContentSystem angelegt&#10;Json Datei ausgelesen" />
     <MESSAGE value="Generalisiertes Menüsystem erarbeitet" />
     <MESSAGE value="Generalisiertes Menüsystem jetzt Reduxbasiert" />
-    <option name="LAST_COMMIT_MESSAGE" value="Generalisiertes Menüsystem jetzt Reduxbasiert" />
+    <MESSAGE value="Generalisiertes Menüsystem jetzt wirklich Reduxbasiert" />
+    <option name="LAST_COMMIT_MESSAGE" value="Generalisiertes Menüsystem jetzt wirklich Reduxbasiert" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
