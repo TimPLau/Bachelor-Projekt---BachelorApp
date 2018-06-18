@@ -1,22 +1,17 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart' show rootBundle;
-import 'package:project_bachelorapplication/models/json_reader.dart';
 import 'package:redux/redux.dart';
 import 'package:flutter_redux/flutter_redux.dart';
-import 'package:project_bachelorapplication/reducers/app_reducer.dart';
-import 'package:project_bachelorapplication/models/appstate.dart';
-import 'package:project_bachelorapplication/models/content.dart';
-import 'package:project_bachelorapplication/pages/screen.dart';
-import 'package:project_bachelorapplication/actions/menuactions.dart';
+import 'package:project_bachelorapplication/bachelorApp/reducers/app_reducer.dart';
+import 'package:project_bachelorapplication/bachelorApp/models/appstate.dart';
+import 'package:project_bachelorapplication/bachelorApp/models/content.dart';
+import 'package:project_bachelorapplication/bachelorApp/pages/screen.dart';
 
 final String path = 'assets/data/';
 final String contentFilename = 'content.json';
 String localPath;
-ContentManager contentManager;
-List<Screen> screens;
-List<String> paths;
-Content initialContent;
+ContentBuilder contentBuilder;
 
 Future<String> get _localPath async {
   return rootBundle.loadString(path + contentFilename);
@@ -29,7 +24,7 @@ Future<String> get _localPath async {
   void main() async{
     await init();
 
-    contentManager = new ContentManager(localPath);
+    contentBuilder = new ContentBuilder(localPath);
     runApp(BachelorApp());
   }
 
@@ -37,7 +32,7 @@ Future<String> get _localPath async {
 
     final store = new Store(
       appReducer,
-      initialState: new AppState("BachelorApp", contentManager.initContent ,contentManager.content[0]),
+      initialState: new AppState(contentBuilder.initContent ,contentBuilder.content[0]),
     );
 
   @override
@@ -49,7 +44,7 @@ Future<String> get _localPath async {
             bottomAppBarColor: Colors.red,
           ),
           title: "BachelorApp",
-          home: new Screen(contentManager.content, "Home"),
+          home: new Screen("Guide"),
           //routes: new Map.fromIterables(contentManager.getRoutes(), contentManager.screens.map((f) => ((context) => f))),
         ),
       );

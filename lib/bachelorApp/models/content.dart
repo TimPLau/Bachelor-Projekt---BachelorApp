@@ -1,20 +1,16 @@
-import 'package:flutter/material.dart';
-import 'package:project_bachelorapplication/pages/screen.dart';
 import 'dart:convert' as JSON;
 
-class ContentManager{
+class ContentBuilder {
   List<Content> _content = [];
   Content _initContent;
 
-  ContentManager(jsonPath){
+  ContentBuilder(jsonPath){
     _readContent(jsonPath);
-
   }
 
   get initContent{
     return this._initContent;
   }
-
 
   List<Content> get content{
     return this._content;
@@ -22,7 +18,7 @@ class ContentManager{
 
   _readContent(String jsonPath){
 
-    _initContent = new Content("ButtonListWidget", "Guide", "", []);
+    _initContent = new Content("", "initContent", "", []);
     List<dynamic> _jsonContent = JSON.jsonDecode(jsonPath);
 
     for(dynamic jsonContentModule in _jsonContent){
@@ -33,14 +29,14 @@ class ContentManager{
         jsonContentModule["tags"],
       );
 
-      content.subsections = loadContent(jsonContentModule["subsections"], content);
+      content.subsections = _loadContent(jsonContentModule["subsections"], content);
       content.prevContent = _initContent;
       _initContent.subsections = [content];
       _content.add(initContent);
     }
   }
 
-  List<Content> loadContent(List<dynamic> subsections, Content prevContent){
+  List<Content> _loadContent(List<dynamic> subsections, Content prevContent){
     List<Content> ret = [];
 
     for(dynamic subsection in subsections){
@@ -53,11 +49,10 @@ class ContentManager{
       );
 
       c.prevContent = prevContent;
-
-      c.subsections = loadContent(subsection["subsections"], c);
-
+      c.subsections = _loadContent(subsection["subsections"], c);
       ret.add(c);
     }
+
     return ret;
   }
 
@@ -78,7 +73,6 @@ class Content{
   String title;
   String description;
   List tags;
-  //List<Content> _actualContent;
   Content _prevContent;
   List <Content> _subsections = [];
 

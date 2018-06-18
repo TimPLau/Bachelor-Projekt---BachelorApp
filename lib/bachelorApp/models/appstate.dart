@@ -1,15 +1,10 @@
-import 'package:project_bachelorapplication/models/content.dart';
-import 'package:project_bachelorapplication/pages/screen.dart';
+import 'package:project_bachelorapplication/bachelorApp/models/content.dart';
 
 class AppState {
-  String actualScreenTitle;
-  String actualPath;
-  String prevPath;
   Content previousContent;
   Content actualContent;
-  //List<Content> actualContent;
 
-  AppState(this.actualScreenTitle, this.previousContent, this.actualContent);
+  AppState(this.previousContent, this.actualContent);
 
   @override
   String toString() {

@@ -1,19 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_redux/flutter_redux.dart';
-import 'package:project_bachelorapplication/models/appstate.dart';
-import 'package:project_bachelorapplication/models/content.dart';
-import 'package:project_bachelorapplication/pages/screen.dart';
+import 'package:project_bachelorapplication/bachelorApp/models/appstate.dart';
+import 'package:project_bachelorapplication/bachelorApp/models/content.dart';
 import 'package:redux/redux.dart';
-import 'package:project_bachelorapplication/actions/menuactions.dart';
+import 'package:project_bachelorapplication/bachelorApp/actions/menuactions.dart';
 
 class ContentWidget extends StatelessWidget{
-  List<Content> content;
-  ContentWidget(this.content);
+
+  ContentWidget();
 
   @override
   Widget build(BuildContext context) {
     return new StoreConnector(
       builder: (BuildContext context, _ViewModel vm){
+         List<Content> content = StoreProvider.of<AppState>(context).state.actualContent.subsections;
          return new ListView.builder(
             itemCount: content.length,
             itemBuilder: (context, index) {
@@ -22,8 +22,8 @@ class ContentWidget extends StatelessWidget{
                 return new ListTile(
                     title: new Text(content[index].title),
                     onTap: () {
-                      StoreProvider.of<AppState>(context).dispatch(new UpdatePreviousContentAction(this.content[index].prevContent));
-                      StoreProvider.of<AppState>(context).dispatch(new UpdateActualContentAction(this.content[index]));
+                      StoreProvider.of<AppState>(context).dispatch(new UpdatePreviousContentAction(content[index].prevContent));
+                      StoreProvider.of<AppState>(context).dispatch(new UpdateActualContentAction(content[index]));
                     }
                 );
               }
@@ -52,14 +52,14 @@ class ContentWidget extends StatelessWidget{
 }
 
 class _ViewModel{
-  final String screen;
+  final Content actualContent;
 
   _ViewModel({
-    @required this.screen,
+    @required this.actualContent,
   });
 
   static _ViewModel fromStore(Store<AppState> store){
-    return new _ViewModel(screen: store.state.actualScreenTitle);
+    return new _ViewModel(actualContent: store.state.actualContent);
   }
 
 }
