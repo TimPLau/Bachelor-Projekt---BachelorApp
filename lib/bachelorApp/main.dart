@@ -6,7 +6,7 @@ import 'package:flutter_redux/flutter_redux.dart';
 import 'package:project_bachelorapplication/bachelorApp/reducers/app_reducer.dart';
 import 'package:project_bachelorapplication/bachelorApp/models/appstate.dart';
 import 'package:project_bachelorapplication/bachelorApp/models/content.dart';
-import 'package:project_bachelorapplication/bachelorApp/pages/screen.dart';
+import 'package:project_bachelorapplication/bachelorApp/views/screen.dart';
 
 final String path = 'assets/data/';
 final String contentFilename = 'content.json';
@@ -30,7 +30,7 @@ Future<String> get _localPath async {
 
   class BachelorApp extends StatelessWidget{
 
-    final store = new Store(
+    final store = new Store<AppState>(
       appReducer,
       initialState: new AppState(contentBuilder.initContent ,contentBuilder.content[0]),
     );

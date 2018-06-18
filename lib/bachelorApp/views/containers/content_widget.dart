@@ -14,10 +14,10 @@ class ContentWidget extends StatelessWidget{
     return new StoreConnector(
       builder: (BuildContext context, _ViewModel vm){
          List<Content> content = StoreProvider.of<AppState>(context).state.actualContent.subsections;
+
          return new ListView.builder(
             itemCount: content.length,
             itemBuilder: (context, index) {
-
               if(content[index].type == "ButtonListWidget") {
                 return new ListTile(
                     title: new Text(content[index].title),
