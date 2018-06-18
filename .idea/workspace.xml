@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="f4dd6696-99ed-42f9-ad55-ec4d525f5ce1" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/lib/bachelorApp/main.dart" afterPath="$PROJECT_DIR$/lib/bachelorApp/main.dart" />
     </list>
     <ignored path="$PROJECT_DIR$/.dart_tool/" />
     <ignored path="$PROJECT_DIR$/.idea/" />
@@ -539,7 +538,14 @@
       <option name="project" value="LOCAL" />
       <updated>1529321154068</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Refactoring">
+      <created>1529321167374</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1529321167374</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="ToolWindowManager">
