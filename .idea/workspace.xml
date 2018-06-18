@@ -2,20 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f4dd6696-99ed-42f9-ad55-ec4d525f5ce1" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/main_dart.xml" afterPath="$PROJECT_DIR$/.idea/runConfigurations/main_dart.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/lib/actions/menuactions.dart" afterPath="$PROJECT_DIR$/lib/bachelorApp/actions/menuactions.dart" />
-      <change beforePath="$PROJECT_DIR$/lib/containers/content_widget.dart" afterPath="$PROJECT_DIR$/lib/bachelorApp/containers/content_widget.dart" />
-      <change beforePath="$PROJECT_DIR$/lib/main.dart" afterPath="$PROJECT_DIR$/lib/bachelorApp/main.dart" />
-      <change beforePath="$PROJECT_DIR$/lib/models/appstate.dart" afterPath="$PROJECT_DIR$/lib/bachelorApp/models/appstate.dart" />
-      <change beforePath="$PROJECT_DIR$/lib/models/content.dart" afterPath="$PROJECT_DIR$/lib/bachelorApp/models/content.dart" />
-      <change beforePath="$PROJECT_DIR$/lib/models/json_reader.dart" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/models/route_navigator.dart" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/pages/contentscreen.dart" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/pages/screen.dart" afterPath="$PROJECT_DIR$/lib/bachelorApp/pages/screen.dart" />
-      <change beforePath="$PROJECT_DIR$/lib/reducers/app_reducer.dart" afterPath="$PROJECT_DIR$/lib/bachelorApp/reducers/app_reducer.dart" />
-      <change beforePath="$PROJECT_DIR$/lib/reducers/menu_reducer.dart" afterPath="$PROJECT_DIR$/lib/bachelorApp/reducers/menu_reducer.dart" />
-      <change beforePath="$PROJECT_DIR$/test/widget_test.dart" afterPath="$PROJECT_DIR$/test/widget_test.dart" />
+      <change beforePath="$PROJECT_DIR$/lib/bachelorApp/main.dart" afterPath="$PROJECT_DIR$/lib/bachelorApp/main.dart" />
     </list>
     <ignored path="$PROJECT_DIR$/.dart_tool/" />
     <ignored path="$PROJECT_DIR$/.idea/" />
@@ -40,11 +28,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.dart" pinned="false" current-in-tab="true">
+      <file leaf-file-name="main.dart" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/bachelorApp/main.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="166">
-              <caret line="31" column="0" lean-forward="true" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+            <state relative-caret-position="680">
+              <caret line="40" column="21" lean-forward="true" selection-start-line="40" selection-start-column="21" selection-end-line="40" selection-end-column="21" />
               <folding>
                 <element signature="e#0#20#0" expanded="true" />
               </folding>
@@ -102,11 +90,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="app_reducer.dart" pinned="false" current-in-tab="false">
+      <file leaf-file-name="app_reducer.dart" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lib/bachelorApp/reducers/app_reducer.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="1" lean-forward="false" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
+            <state relative-caret-position="119">
+              <caret line="7" column="54" lean-forward="true" selection-start-line="7" selection-start-column="54" selection-end-line="7" selection-end-column="54" />
               <folding>
                 <element signature="e#0#84#0" expanded="true" />
               </folding>
@@ -229,7 +217,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -304,9 +291,10 @@
         </subPane>
         <option name="show-excluded-files" value="false" />
       </pane>
+      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="AndroidView" />
-      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -537,7 +525,14 @@
       <option name="project" value="LOCAL" />
       <updated>1529305838693</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Refactoring">
+      <created>1529320938140</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1529320938140</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -553,7 +548,7 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3116883" sideWeight="0.31769723" order="12" side_tool="true" content_ui="tabs" />
       <window_info id="Dart Analysis" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3116883" sideWeight="0.6823028" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3116883" sideWeight="0.6823028" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.49573562" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32467532" sideWeight="0.4946695" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Flutter Outline" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -591,7 +586,8 @@
     <MESSAGE value="Generalisiertes Menüsystem erarbeitet" />
     <MESSAGE value="Generalisiertes Menüsystem jetzt Reduxbasiert" />
     <MESSAGE value="Generalisiertes Menüsystem jetzt wirklich Reduxbasiert" />
-    <option name="LAST_COMMIT_MESSAGE" value="Generalisiertes Menüsystem jetzt wirklich Reduxbasiert" />
+    <MESSAGE value="Refactoring" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactoring" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -760,7 +756,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="196">
           <caret line="3494" column="4" lean-forward="false" selection-start-line="3494" selection-start-column="4" selection-end-line="3494" selection-end-column="4" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -830,9 +825,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="39" />
-          <folding>
-            <element signature="e#354#393#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -901,22 +893,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/bachelorApp/reducers/app_reducer.dart">
+    <entry file="file://$PROJECT_DIR$/lib/bachelorApp/main.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="1" lean-forward="false" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
+        <state relative-caret-position="680">
+          <caret line="40" column="21" lean-forward="true" selection-start-line="40" selection-start-column="21" selection-end-line="40" selection-end-column="21" />
           <folding>
-            <element signature="e#0#84#0" expanded="true" />
+            <element signature="e#0#20#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/bachelorApp/main.dart">
+    <entry file="file://$PROJECT_DIR$/lib/bachelorApp/reducers/app_reducer.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="166">
-          <caret line="31" column="0" lean-forward="true" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+        <state relative-caret-position="119">
+          <caret line="7" column="54" lean-forward="true" selection-start-line="7" selection-start-column="54" selection-end-line="7" selection-end-column="54" />
           <folding>
-            <element signature="e#0#20#0" expanded="true" />
+            <element signature="e#0#84#0" expanded="true" />
           </folding>
         </state>
       </provider>

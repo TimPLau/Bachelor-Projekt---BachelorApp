@@ -43,7 +43,7 @@ Future<String> get _localPath async {
           theme: new ThemeData(
             bottomAppBarColor: Colors.red,
           ),
-          title: "BachelorApp",
+          title: "BachelorAppp",
           home: new Screen("Guide"),
           //routes: new Map.fromIterables(contentManager.getRoutes(), contentManager.screens.map((f) => ((context) => f))),
         ),
