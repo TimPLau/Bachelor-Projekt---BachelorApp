@@ -5,9 +5,12 @@
 \usepackage[ngerman]{babel}
 \usepackage{amsmath}
 \usepackage{hyperref}
-
-\usepackage[backend=bibtex, 
-]{biblatex} 
+\usepackage{booktabs}
+\usepackage{pdflscape}
+%\usepackage{lscape}
+\setlength{\parindent}{0em} 
+\usepackage[backend=bibtex,]{biblatex} 
+\newcommand\tab[1][1cm]{\hspace*{#1}}
 \addbibresource{lit.bib} 
 
 \title{Eine gamifizierte Howto-App für Bachelorarbeiten}
@@ -16,9 +19,12 @@
 \begin{document}
 \maketitle
 \tableofcontents
+
+
 \chapter{Einleitung}
 Für Studierende im letzten Semester eines Bachelorstudiengangs, umfasst die wesentliche Prüfungsleistung das Verfassen einer Bachelorarbeit.
 Die Auseinandersetzung mit komplexen Problemstellungen stellt jedoch erfahrungsgemäß für viele Studierende eine große Herausforderung dar, welche sich aus dem erstmaligem Zusammenspiel von selbständigem und eigenverantwortlichen Arbeiten, sowie Problemlösen mittels erworbener Fach- und Methodenkenntnisse über einen längeren (in etwa dreimonatigen) Zeitraum ergibt.
+
 \section{Motivation}
 Im Verlauf des Studiums sollten Studierende folgendes Wissen und folgende Fähigkeiten erworben haben und zielgerichtet Anwenden können:
 \begin{itemize}
@@ -27,11 +33,14 @@ Im Verlauf des Studiums sollten Studierende folgendes Wissen und folgende Fähig
 \item Fähigkeit, komplexe Probleme zu erkennen, zu strukturieren und systematisch mittels geeigneter Methoden zu bearbeiten
 \end{itemize}
 Es kommt im Kontext von Bachelorarbeiten dennoch oftmals zu Schwierigkeiten, das erworbene Wissen und Fähigkeiten zielgerichtet auf reale Probleme anzuwenden und deren Ergebnisse zusammenhängend zu dokumentieren.
+
 \section{Lösungsansatz}
 Ein möglicher im Rahmen dieser Bachelorarbeit zu verfolgender Lösungsansatz wäre es, eine Software zu entwickeln, welche unterstützend und wegweisend bei dem systematischen Vorgehen bei komplexen Problemstellungen fungieren könnte und diese den Studierenden zugänglich zu machen.
 Hierbei soll es nicht darum gehen, den Studierenden die eigentliche Arbeit abzunehmen, sondern vielmehr darum, Studierende hinsichtlich Vorgehen und Methodenauswahl zielgerichtet zu unterstützen.
+
 \section{Zielsetzung}
 Mit einem solchen Ansatz soll es Studierenden ermöglicht werden, ihr gelerntes Wissen durch Fokussierung bestimmter Aufgaben und Zusammenhänge im Rahmen ihres eigenen Bachelorprojekts auf die Realität zu übertragen und somit einen motivierenden, sowie gleichermaßen fordernden Rahmen zu schaffen, um ihr Bachelorprojekt erfolgreich abzuschließen.
+
 \section{Aufgabenbeschreibung}
 Im Rahmen dieser Bachelorarbeit soll hierfür eine mobile Applikation entwickelt werden, die den Studierenden während der Dauer der Bachelorarbeit kontinuierlich "begleitet". Dabei sollen Gamificationansätze realisiert werden, welche motivierend im bei der Bearbeitung und dem Vorgehen der eigenen Bachelorarbeit wirken sollen. Dies soll beispielhaft für den Studiengang Informatik/Softwareentwicklung erfolgen. Eine Erweiterbarkeit für andere Studiengänge ist hierbei jedoch konzeptionell vorzusehen
 Primäre Funktionen der Software ist Studierenden bei den folgenden Aufgaben begleitend zu unterstützen und fortwährend zu motivieren "am Ball zu bleiben":
@@ -55,24 +64,35 @@ Die im Rahmen der Aufgabenbeschreibung entstandenen Anforderungen werden durch d
 \item Die Nutzbarkeit der App soll systematisch evaluiert werden. Hierbei sind Studenten und Professoren des Studiengangs Informatik/Softwaretechnik geeignet einzubeziehen.
 \item Dokumentation der oben angegebenen Schritte inklusive Bewertung der Nutzbarkeit des Frameworks Flutter für solche Arten von Apps.
 \end{itemize}
+
 \section{Ausblick auf die Bachelorarbeit}
 In der folgenden Dokumentation der Bachelorarbeit werden verschiedene aufeinander aufbauende Prozesse, Teilschritte und Ergebnisse der Softwareentwicklung dokumentiert sein. Hierbei liegt die Priorität vor allem bei dem Pflegen der Nachvollziehbarkeit der dargestellten Informationen durch aufeinander aufbauende Kapitel und dem reflektieren der eigenen Gedankengänge.
+
 \subsection{Beschreibung der Kernkomponenten}
 Der Nachvollziehbarkeit halber empfiehlt es sich, Grundkenntnisse über die Basiskomponenten, wie dem Flutter Framework zu besitzen. Sollte dies nicht der Fall sein, so lassen sich im Kapitel \textbf{Beschreibung der Basiskomponenten} die nötigen Informationen nachlesen.
+
 \subsection{Anforderungsanalyse}
 Das Kapitel \textbf{Anforderungsanalyse} stellt in detaillierter Ausführung und Beschreibung die Prozesse der Anforderungsermittlung und deren Auswertung, sowie Definition dar und legt somit wichtige Grundlagen und Anforderungen an die Software fest. Weiterhin werden im Laufe des Kapitels Einblicke in Strategien und Gedankengänge ermöglicht, welche zusätzliche Anhaltspunkte für die Nachvollziehbarkeit der weiteren Kapitel beitragen können.
+
 \subsection{Architektur der Software}
 Die Entscheidung eine mobile Applikation für Android und iOS mittels Flutter zu entwickeln, definiert bereits frühzeitig verschiedene Möglichkeiten und Pflichten, welche im Kapitel \textbf{Anforderungsmanagement} unter Zunahme anderer erhobener Anforderungen detailliert dokumentiert und beschrieben werden.
 Alle nötigen Informationen zur Softwarearchitektur, zu den Entwurfsentscheidungen, sowie der Berücksichtigung der Erweiterbarkeit der Software, werden im Kapitel \textbf{Architektur der Software} behandelt.
+
 \subsection{Implementierung}
 Informationen zur detaillierten Implementierung der in der Aufgabenbeschreibung definierten Funktionen, sowie die Umsetzung der Benutzeroberfläche, werden im Kapitel \textbf{Implementierung der Softwarefunktionen} behandelt. Unter Einbezug beispielhafter Codeauszüge werden hier die Funktionsweisen der Software aufgeführt und beschrieben.
+
 \subsection{Validierung und Verifikation}
 Die Nachweisführung der Softwareanforderungen, der Usability-Anforderungen, sowie die Auswertung der Nützlichkeit der Verwendung des Frameworks Flutter bei der Entwicklung dieser App lassen sich im Kapitel \textbf{Validierung und Verifikation} nachlesen.
+
 \subsection{Präsentation der Ergebnisse}
 Abschließend folgt im Kapitel \textbf{Präsentation der Ergebnisse} eine Zusammenfassung der erreichten Ergebnisse und eine Reflexion der Teilschritte, sowie die Abschlussbetrachtung des gesamten Projekts.
+
+
 \chapter{Beschreibung der Kernkomponenten}
+
 \section{Vorstellung des Frameworks Flutter}
 Flutter ist ein von Google entwickeltes opensource Framework, welches auf die Entwicklung mobiler 2D-Applikationen für Android- und iOS-Betriebssysteme ausgelegt ist. Beworben wird Flutter durch das Hervorheben der Einfachheit der Benutzung, die schnell zu erreichenden Fortschritte bei der Implementierung von Softwarefunktionen, sowie den Gestaltungsmöglichkeiten der Benutzeroberfläche und den hochqualitativen Ergebnissen.
+
 \subsection{Flutter Systemarchitektur} 
 Das Flutter Framework besteht aus drei verschiedenen Basiskomponenten, welche im folgenden Abschnitt kurz erläutert werden.
 \begin{itemize}
@@ -87,37 +107,136 @@ Die Foundation Libary, welche in Dart geschrieben wurde, stellt Basisklassen und
 Das Flutter Framework stellt zwei verschiedene Arten von Widgets zur Verfügung, welche zugehörig zu den jeweiligen Design Sprachen von Google Material Design\cite{Mat1}, welche 2014 entwickelt wurde und die iOS Design kopierende Design Sprache Cupertino\cite{Cup1}.
 \end{itemize}
 
-		...
+		...folgt
 
 \subsection{Entwicklung von Betriebssystem übergreifenden Applikationen}
+
 \subsection{Laufzeit-Performance}
+
+
 \chapter{Anforderungsanalyse}
+
+\section{Identifikation der Interessengruppen}
+\par In diesem Kapitel werden die identifizierten Interessengruppen dokumentiert und in Form von Steckbriefen in den verschiedenen Kategorien \textbf{Einfluss}, \textbf{Einstellung}, \textbf{Erwartungen}, sowie \textbf{Bemerkungen}  beschrieben.  
+
+\subsection{Studierende}
+\textbf{Einfluss:} Hoch\\\\
+\textbf{Einstellung:} Positiv\\\\
+\textbf{Erwartungen:}\par Optimales Ergebnis und weniger \glqq Fallstricke\grqq{} während der Bearbeitung der Bachelorarbeit, sowie ein allgemein \glqq nicht zu überfordernder\grqq{} Durchlauf der Bachelorarbeit durch weniger Unwissenheit vor/während der Bachelorarbeit\\\\
+\textbf{Bemerkungen:}\par Hauptzielgruppe des Projekts/Spätere potenzielle Anwender der Applikation
+
+\subsection{AStA}
+\textbf{Einfluss:} Hoch\\\\
+\textbf{Einstellung:} Positiv\\\\
+\textbf{Erwartungen:}\par ... folgt\\\\
+\textbf{Bemerkungen:}\par Stellt das Sprachrohr der Studierenden dar und vertritt somit deren Meinung, Interessen und Ziele
+\newpage
+
+\subsection{Betreuer der eigenen Bachelorarbeit}
+\textbf{Einfluss:} Hoch\\\\
+\textbf{Einstellung:} Positiv\\\\
+\textbf{Erwartungen:}\par Eine Steigende Bereitschaft/Motivation der Studierenden im Rahmen des Bachelor-Seminars Beiträge zu erbringen, sowie eine steigende Qualität der Kommunikation mit dem Betreuer und der damit zusammenhängenden Qualität der Bearbeitung der Bachelorarbeit und des Ergebnisses.
+\\\\Detaillierte Angabe der Erwartungen:
+\begin{itemize}
+\item Zielgerichteter(er) Methoden-Einsatz von allen Methoden, die im Informatik/SWT-Studium gelehrt werden
+\item Zielgerichtete(re) Vorbereitung auf Besprechungen mit dem Betreuer
+\item Bessere Lesbarkeit von Abschlussarbeiten
+\item Bessere \glqq rote Fäden\grqq{} in Abschlussarbeiten
+\item Bessere Zeitplanung
+\item Systematische(re) Problemanalyse und Anforderungserhebung und deren Dokumentation
+\item Bessere Architekturentwicklung und deren Dokumentation
+\item Systematische(re) Nachweisführung und deren Dokumentation
+\end{itemize}
+\textbf{Bemerkungen:}\par Führt das Bachelorseminar und hat somit direkten Kontakt mit der Zielgruppe, trägt wichtige Erfahrungswerte mit sich, woran es üblicherweise bei der Fertigstellung von Bachelorarbeiten mangelt
+\newpage
+
+\subsection{Professoren}
+\textbf{Einfluss:} Hoch\\\\
+\textbf{Einstellung:} Positiv\\\\
+\textbf{Erwartungen:}\par ... folgt\\\\
+\textbf{Bemerkungen:}\par Tragen Erfahrungswerte durch das Betreuen und Bewerten von Bachelorarbeiten, kennt die Probleme der Studenten und hat detaillierten Einblick in die Schwierigkeiten der Zielgruppe
+
+\subsection{Präsidium}
+\textbf{Einfluss:} Gering\\\\
+\textbf{Einstellung:} Positiv\\\\
+\textbf{Erwartungen:}
+\begin{itemize}
+\item Wenn Applikation positiven Einfluss auf die Ergebnisse von Abschlussarbeiten, kann die Fachhochschule Lübeck ihren Ruf festigen werden
+\item Erhöhung der Wettbewerbsfähigkeit durch bessere Leistung/bessere Abschlüsse der Studierenden
+\end{itemize}
+\textbf{Bemerkungen:}\par Machtpromotor
+\newpage
+
 \section{Identifikation des Ist-Zustands}
-\subsection{Problemabgrenzung (Welches Problem soll gelöst werden?)}
+
+\subsection{Hypothese}
+\par Die Auseinandersetzung mit komplexen Problemstellungen, wie die als abschließende Prüfungsleistung des Studiums zu erarbeitende Bachelorarbeit, stellt erfahrungsgemäß für viele Studierende eine große Herausforderung dar. Diese Herausforderung ergibt sich aus dem erstmaligen Zusammenspiel von selbstständigem und eigenverantwortlichem Arbeiten, sowie Problemlösen mittels erworbener Fach- und Methodenkenntnisse über einen längeren (in etwa dreimonatigen) Zeitraum.
+Trotz des Verlaufs des Studiums, des angeeigneten Wissens und der somit zahlreich erworbenen Fähigkeiten, kommt es im Kontext von Bachelorarbeiten dennoch oftmals zu Schwierigkeiten, diesen Zusammenhang auf reale Probleme anzuwenden und zusammenhängend zu dokumentieren.
+
+\subsection{Wahl der Analysestrategie}
+Um den Ist-Zustand zu ermitteln und somit eine Analysegrundlage zu erschaffen, werden eine Reihe von Einzel- und Gruppeninterviews durchgeführt, welche einen detaillierten Einblick in die Sichtweisen unterschiedlicher beteiligter Personen und Interessengruppen ermöglichen soll.
+jeweiligen Themengebiets.\\\\
+\textbf{Professoren}\\
+Für die Interessengruppe der Professoren aus dem Fachbereich Informatik, ist als Grundlage der Datenerhebung das Durchführen von Einzelinterviews vorgesehen. Dies bietet sowohl den Zugriff auf die unmittelbaren Erfahrungen der einzelnen Professoren als Betreuer und Ansprechpartner für Bacheloranden, als auch auf die von den Professoren eingenommene Sichtweise, welche durch die jeweilige fachspezifische Ausrichtung voneinander variiert. Dieser Ansatz ermöglicht eine grobe Klassifizierung der Prioritäten von Herangehensweisen, Werkzeugen und Inhalten einer Bachelorarbeit des jeweiligen Themengebiets.\\\\
+\textbf{Studierende}\\
+Für die Studierenden aus dem Studiengang Informatik/Softwareentwicklung ist es aufgrund der hohen Menge an Personen und den zu betreibenden Aufwand vorgesehen, priorisiert Gruppen- und nur in Ausnahmefällen auch Einzelinterviews zu durchzuführen. 
+Durch das Durchführen von Gruppeninterviews, sollen die Studierenden zu Diskussionen angeregt sein, welche von dem Leiter des Interviews durchaus auch motiviert werden können.\\\\
+Miteinbezogen werden vorzugsweise alle Studierende der oberen Semester, unabhängig davon, ob sie sich noch in der Phase vor Beginn (einschließlich dem 5. Semester), während der Bearbeitung oder nach Abschluss der Bachelorarbeit befinden. Hierbei wichtig zu beachten ist, dass die verschiedenen Erfahrungsstände in den Gruppeninterviews nicht aufeinandertreffen, da dieser Umstand zu einer gegenseitigen Beeinflussung führen könnte und wichtige Informationen nicht gewonnen werden. Die somit verschieden zu extrahierenden Sichtweisen auf die Bearbeitung der Bachelorarbeit können auf diese Weise differenziert betrachtet und analysiert werden.\\\\
+Des weiteren wird eine online Umfrage, welche sich nur an die Studierenden richtet, den Teil der Datenerhebung darstellen der quantitative Ergebnisse erzielt soll und deren Aussage somit eine nicht durch die Interviews abgebildete Menge darstellt.
+
 \subsection{Kontext des Problems (Wo liegt das Problem?)}
+
 \subsection{Ziele der Beteiligten (Warum muss es gelöst werden?)}
+
 \subsection{Szenariensammlung (Wie könnte ein Softwaresystem helfen)}
+
 \section{Identifikation des Soll-Zustands}
+
 \section{Analyse der Schwachstellen}
+
 \section{Anforderungskatalog}
+
 \section{Lastenheft}
-\section{Pflichtenheft }
+
+\section{Pflichtenheft}
+
 \subsection{Funktionale Anforderungen}
+
 \subsection{Nicht funktionale Anforderungen}
+
+
 \chapter{Architektur der Software}
+
 \section{Architekturbeschreibung}
+
 \section{Entwurfsentscheidungen}
+
 \section{Erweiterbarkeit der Software für andere Studiengänge}
+
+
 \chapter{Implementierung}
+
 \section{Umsetzung der Anforderungen}
+
 \section{Entwurf der Benutzeroberfläche}
+
+
 \chapter{Validierung und Verifikation}
+
 \section{Softwaretests}
+
 \section{Abdeckung der Softwareanforderungen}
+
 \section{Ausführung der Usabilitytests}
+
+
 \chapter{Präsentation der Ergebnisse}
+
 \section{Lessons Learned}
+
 \section{Abschlussbetrachtung}
+
+
 \chapter{Literaturverzeichnis}
 \nocite{*}
 \printbibliography
