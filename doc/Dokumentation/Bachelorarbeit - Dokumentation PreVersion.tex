@@ -10,6 +10,7 @@
 %\usepackage{lscape}
 \setlength{\parindent}{0em} 
 \usepackage[backend=bibtex,]{biblatex} 
+\usepackage{tabularx}
 \newcommand\tab[1][1cm]{\hspace*{#1}}
 \addbibresource{lit.bib} 
 
@@ -116,11 +117,14 @@ Das Flutter Framework stellt zwei verschiedene Arten von Widgets zur Verfügung,
 \section{Gamification}
 
 
-\chapter{Anforderungsanalyse}
+\chapter{Untersuchung des Problembereiches}
+
+\section{Hypothese}
+\par Die Auseinandersetzung mit komplexen Problemstellungen, wie die als abschließende Prüfungsleistung des Studiums zu erarbeitende Bachelorarbeit, stellt erfahrungsgemäß für viele Studierende eine große Herausforderung dar. Diese Herausforderung ergibt sich aus dem erstmaligen Zusammenspiel von selbstständigem und eigenverantwortlichem Arbeiten, sowie Problemlösen mittels erworbener Fach- und Methodenkenntnisse über einen längeren (in etwa dreimonatigen) Zeitraum.
+Trotz des Verlaufs des Studiums, des angeeigneten Wissens und der somit zahlreich erworbenen Fähigkeiten, kommt es im Kontext von Bachelorarbeiten dennoch oftmals zu Schwierigkeiten, diesen Zusammenhang auf reale Probleme abzubilden und zu dokumentieren.
 
 \section{Identifikation der Interessengruppen}
-\par In diesem Kapitel werden die identifizierten Interessengruppen dokumentiert und in Form von Steckbriefen in den verschiedenen Kategorien \textbf{Einfluss}, \textbf{Einstellung}, \textbf{Erwartungen}, sowie \textbf{Bemerkungen}  beschrieben.  
-
+\par In diesem Kapitel werden die identifizierten Interessengruppen dokumentiert und in Form von Steckbriefen in den verschiedenen Kategorien \textbf{Einfluss}, \textbf{Einstellung}, \textbf{Erwartungen}, sowie \textbf{Bemerkungen} beschrieben.  
 \subsection{Studierende}
 \textbf{Einfluss:} Hoch\\\\
 \textbf{Einstellung:} Positiv\\\\
@@ -169,9 +173,7 @@ Das Flutter Framework stellt zwei verschiedene Arten von Widgets zur Verfügung,
 \textbf{Bemerkungen:}\par Machtpromotor
 \newpage
 
-\section{Identifikation des Ist-Zustands}
-
-\subsection{Wahl der Analysestrategie}
+\section{Wahl der Analysestrategie}
 \par Um den Ist-Zustand zu ermitteln und somit eine Analysegrundlage zu erschaffen, werden Personengruppen der Fachhochschule Lübeck, durch verschiedene Befragungs- und Analysemethoden in das Projekt miteinbezogen. Dies soll einen detaillierten Einblick in die Sichtweisen der unterschiedlich beteiligten Personen und Interessengruppen ermöglichen und somit eine Grundlage für das Verständnis der aktuellen Situation bilden.
 
 \par Als primäre Einflussgeber wurden in diesem Rahmen die Gruppe der Professoren, sowie die Gruppe der Studierenden identifiziert. Diese Entscheidung wurde aufgrund der im Rahmen einer Bachelorarbeit  existierenden unterschiedlichen Sichtweisen, sowie Erfahrungsständen von Betreuern und Bacheloranden getätigt. \\
@@ -187,85 +189,215 @@ Durch das Durchführen von Gruppeninterviews, sollen die Studierenden zu Diskuss
 \par Miteinbezogen werden vorzugsweise alle Studierende der oberen Semester, unabhängig davon, ob sie sich noch in der Phase vor Beginn der Bearbeitung, während der Bearbeitung oder nach Abschluss der Bearbeitung der Bachelorarbeit befinden. Hierbei ist wichtig zu beachten, dass die verschiedenen Erfahrungsstände in den Gruppeninterviews nicht aufeinandertreffen, da dieser Umstand somit zu einer gegenseitigen Beeinflussung führen könnte und wichtige Informationen nicht gewonnen werden könnten. Die verschieden zu extrahierenden Sichtweisen auf die Bearbeitung der Bachelorarbeit können auf diese Weise differenziert betrachtet und analysiert werden.
 \par Des weiteren wird eine Online-Umfrage den Teil der Datenerhebung darstellen, der quantitative Ergebnisse erzielt soll und deren Aussage somit eine nicht durch die Interviews abgebildete Menge darstellt.
 
-\subsection{Hypothese}
-\par Die Auseinandersetzung mit komplexen Problemstellungen, wie die als abschließende Prüfungsleistung des Studiums zu erarbeitende Bachelorarbeit, stellt erfahrungsgemäß für viele Studierende eine große Herausforderung dar. Diese Herausforderung ergibt sich aus dem erstmaligen Zusammenspiel von selbstständigem und eigenverantwortlichem Arbeiten, sowie Problemlösen mittels erworbener Fach- und Methodenkenntnisse über einen längeren (in etwa dreimonatigen) Zeitraum.
-Trotz des Verlaufs des Studiums, des angeeigneten Wissens und der somit zahlreich erworbenen Fähigkeiten, kommt es im Kontext von Bachelorarbeiten dennoch oftmals zu Schwierigkeiten, diesen Zusammenhang auf reale Probleme abzubilden und zu dokumentieren.
-
+\section{Ergebnisse der Professoren}
 \subsection{Ergebnisse der Einzelinterviews mit den Professoren}
-\par Im Folgenden sind die gewonnenen Eindrücke und Kenntnisse der Einzelinterviews mit den Professoren des Fachbereichs Informatik, tabellarisch und durch Themenkategorien geordnet, in zusammengefasster Form dokumentiert. \\
+\par Im Folgenden sind die gewonnenen Eindrücke und Kenntnisse der Einzelinterviews mit den Professoren des Fachbereichs Informatik durch Themenkategorien geordnet und in zusammengefasster Form dokumentiert. \\
 \par Es haben insgesamt sechs Professoren an den Einzelinterviews teilgenommen, wobei es für fünf Interviews gestattet wurde, eine Tonaufzeichnung anzufertigen.\\\\
 \textbf{Allgemeine Informationen}
 \par Der zeitliche Rahmen der fünf aufgezeichneten Interviews erstreckt sich über einen Zeitrum von etwa 30 bis 45 Minuten. Für die Auswertung der aufgezeichneten Interviews wurden die Aussagen der Interviewpartner, auf Grundlage der vorliegenden Audioaufnahmen, unter Berücksichtigung des Kontextes aufbereitet und werden nachfolgend dargestellt.\\
-\par Ein weiteres Einzelinterview, welches nicht aufgezeichnet wurde, erstreckte sich über einen Zeitraum von 75 Minuten. Für dieses Interview wurden lediglich begleitende Feldnotizen angefertigt. Diese Feldnotizen wurden im Anschluss des Interviews aufbereitet und werden in der folgenden Tabelle separat gekennzeichnet dargestellt.\\
-\par Die gewählten Kategorien ergeben sich aus dem gewählten Auswertungsverfahren der qualitativen Inhaltsanalyse nach Mayring und basieren in diesem Kontext auf die gemäß des Verfahrens herausgearbeiteten Codings (siehe Anhang).
-
-(ZITIEREN UND ANHANG FÜLLEN)\\\\
-\textbf{Ergebnisse}
+\par Ein weiteres Einzelinterview, welches nicht aufgezeichnet wurde, erstreckte sich über einen Zeitraum von 75 Minuten. Für dieses Interview wurden lediglich begleitende Feldnotizen angefertigt. Diese Feldnotizen wurden im Anschluss des Interviews aufbereitet und werden in der folgenden Beschreibung einfließen.\\
+\par Die gewählten Kategorien ergeben sich aus dem gewählten Auswertungsverfahren der qualitativen Inhaltsanalyse nach Mayring\cite{Mayring2008} und basieren in diesem Kontext auf die gemäß des Verfahrens herausgearbeiteten Codings.\\\\
 
 
+\textbf{Art der Arbeit}\\
+\par Im Laufe der Interviews wurden verschiedene Typen von Arbeiten versucht zu identifizieren. Dabei geht es vor allem darum, die Vielfalt der typischen Arbeiten des Studiengangs Informatik/Softwareentwicklung zu erfassen und somit einen Überblick über die Situation zu bekommen.\\
+Als im allgemeinen auftretenden Arten der Arbeit wurden die Klassen \textbf{Entwickelnde Arbeit}  und \textbf{Evaluierende Arbeit} identifiziert. Weiterhin gibt es auch \textbf{reine Literaturarbeiten}, welche in dem Studiengang Informatik/Softwareentwicklung jedoch nicht oder nur in einem sehr geringen Vorkommen auftreten.\\
 
+\par Es folgt eine stichpunktartige Ausführung der gewonnenen Erkenntnisse:
 
+\begin{itemize}
+\item \textbf{Konstruktiv/Entwickelnd - Durchlauf des Softwareentwicklungszyklus}
+	\begin{itemize}
+	\item \textbf{Anforderungsanalyse}
+	\par Unterschiedlich komplex, je nach individueller Aufgabenstellung und 
+	Rahmenbedingungen. Ausschlaggebend hierfür ist vor allem, ob es sich um eine interne 
+	Arbeit an der Fachhochschule oder eine externe Arbeit in einem 	
+	Unternehmensumfeld handelt, bei der gegebenenfalls die Anforderungen schon definiert sind. 	
+	Sollten bereits Anforderungen existieren, so ist das Infragestellen dieser Anforderungen 
+	häufig Bestandteil der Aufgabe. 
+	\item \textbf{Entwurf einer Softwarearchitektur}
+	\par Je nach individueller Aufgabenstellung und Rahmenbedingungen können auch hier große 
+	Unterschiede in der Bearbeitung liegen. Ein wichtiger Orientierungspunkt hierbei ist das 
+	Vorhandensein von schon existierenden Softwareprodukten, welche entweder erweitert oder 
+	ersetzt	werden könnten. Dies ist häufig bei externen Bachelorarbeiten zu erwarten. 
+	Eine weitere Möglichkeit ist, dass es keine bereits vorhandene Softwarelösung gibt, 
+	sondern diese von Grund auf entwickelt werden soll.
+	\item \textbf{Implementierung und Evaluation eines Softwareprototyps}
+	\par Es wird betont, dass es zumindest bei internen Arbeiten nicht unbedingt darum geht, 
+	nach Abschluss der Bearbeitung der Bachelorarbeit, ein Softwareprodukt vorliegen zu haben, 
+	was für die Markteinführung geeignet ist. Es wird deshalb oftmals von einer prototypischen 
+	Implementierung gesprochen. Bei externen Arbeiten kann dies jedoch, im Sinne der Unternehmen 
+	oder Organisationen, durchaus den Zielanforderungen entsprechen. Im Rahmen der Evaluation 
+	gibt es eine Vielzahl von Möglichkeiten, die je nach Schwerpunkt der Arbeit den Fokus auf 
+	verschiedene Ziele legt. 
+	\par Softwaretesting findet in den entwickelnden Arbeiten bei 
+	Implementierung grundsätzlich statt, jedoch gibt es eine Vielzahl an weiteren Aspekten, wie 
+	Usability-Tests und Evaluation der Nützlichkeit einer Software, welche je nach 
+	Themenschwerpunkt untersucht werden können.
+	\item \textbf{Sonstige Anmerkungen}
+	\par Typische Aufgabenstellungen könnten sein:
+	\begin{itemize}
+		\item[1] Entwicklung einer mobilen Applikation zur Interpretation von Bildmaterial.
+		\item[2] Entwicklung einer mobilen Applikation zur Steigerung der Bereitschaft bei 
+		Senioren und Seniorinnen, Fitnessaktivitäten auszuführen unter Einbezug von 
+		Gamificationelementen.
+		\item[3] Entwicklung einer Software zur Optimierung der täglichen Arbeitsabläufe in 
+		Unternehmen A.
+	\end{itemize}
+	
+	\par Ein weiterer wichtiger Aspekt sind die möglichen Interessenunterschiede zwischen dem 
+	externen Unternehmen und dem internen Betreuer der Fachhochschule, welche einen 
+	Einfluss auf die Inhalte der Bachelorarbeit haben können. Externe Unternehmen sind 
+	tendenziell eher an dem resultierenden Ergebnis interessiert, während die internen Betreuer 
+	darüber hinausgehend einen hohen Wert auf nachvollziehbare Methodik, Herangehensweise, 
+	sowie Planung und dem sauberen wissenschaftlichen Arbeiten legen und somit ein  hohes 
+	Interesse an dem Gesamtprozess haben.
+	\end{itemize}
+\item \textbf{Analytisch/Evaluierend - Vergleich, Auswertung und/oder Nachweis eines Aufgabengegenstandes}
+	\begin{itemize}
+	\item \textbf{Erstellen eines Kriterienkatalogs}
+	\par Messbare Kriterien stellen die Grundlage des Experiments/der Auswertung dar und werden 
+	meistens bereits zu Beginn, in Form eines Kriterienkatalogs festgelegt. 
+	Ein wichtiger Aspekt ist herbei vor allem die Frage, wie die Kriterien gemessenen werden 
+	können. Die damit zusammenhängende Aussagekraft der Kriterien soll hierbei hinterfragt und 
+	diskutiert werden.
+	\item \textbf{Aufbau des Experiments}
+	\par Der Aufbau des Experiments hängt stark von dem Anwendungsfall, der Zielstellung und des 
+	Untersuchungsgegenstandes ab. Hierbei werden die gewählten Strategien und Rahmenbedingungen 
+	zusammenhängend erläutert und beschrieben, um ein nachvollziehbares Fundament für die 
+	Durchführung des Experiments zu erschaffen, Abhängigkeiten darzustellen und Besonderheiten 
+	zu klären. 
+	\par Im Rahmen der Untersuchung werden beispielsweise Datenerhebungsmethoden wie 
+	Online-Umfragen und Interviews geführt. 
+	\par Sollten Vergleiche verschiedener Technologien 
+	Gegenstand der Arbeit sein, so werden zum Beispiel auch Fallstudien durchgeführt. 
+	\par Bei Auswertung vorhandener Technologien sind oftmals auch Machbarkeitsstudien zentraler 
+	Bestandteil der Arbeit.
+	\item \textbf{Durchführung des Experiments}
+	\par Je nach Ausrichtung der Aufgabenstellung und des Themengebietes können hier 
+	unterschiedliche Ansätze ausgeprägt und beschrieben sein, welche zuvor im Aufbau des 
+	Experiments dargelegt wurden. 
+	\item \textbf{Evaluation und Ergebnisauswertung}
+	\par Die Evaluation der Ergebnisse und die damit zusammenhängende Diskussion ist der 
+	zentrale Bestandteil der Arbeit. Alle vorherig getätigten Entscheidungen und Strategien 
+	werden nun zusammenhängend mit der Problemstellung ausgewertet und weiterhin diskutiert. 
+	\item \textbf{Sonstige Anmerkungen}
+	\par Typische Aufgabenstellungen könnten sein:
+	\begin{itemize}
+		\item[1] Evaluation der Gesichtserkennungsdienste von Unternehmen A, Unternehmen B und 
+		Unternehmen C.
+		\item[2] Untersuchung des Verhaltens einer neuen Technologie A, im Vergleich mit einer 
+		alten Technologie B.
+		\item[3] Datenbankanalyse unter Anwendung von Machine-Learning-Alrogithmen
+	\end{itemize}
+	\end{itemize}
+\item \textbf{Reine Literaturarbeiten}
+\par Reine Recherchierende Arbeiten finden in dem Studiengang Informatik/Softwareentwicklung aufgrund dem geringen Interesse seitens der Studierenden kaum statt und werden aus Gründen der Vollständigkeit lediglich erwähnt und nicht ausgeführt.
+\end{itemize}
 
+\textbf{Erwartungen an den Bacheloranden}\\
+\par Im Laufe der Interviews wurden die Professoren hinsichtlich Ihrer Erwartungen an die Bacheloranden befragt und haben in diesem Rahmen häufig gleiche oder ähnliche Punkte ausgeführt. Aus diesem Grund werden im folgenden Verlauf die Meinungen der befragten Professoren aus der Sicht als Betreuer, unter den jeweiligen Aspekten als zusammengefasstes Meinungsbild wiedergegeben.\\
 
+\par Es folgt die Ausführung der gewonnenen Erkenntnisse:
+\begin{itemize}
+\item 
+\end{itemize}
 
+\textbf{Häufig Auftretende Probleme bei der Bearbeitung der Bachelorarbeit}\\
+\par Es stellte sich im Verlauf des Interviews heraus, dass unterschiedliche Studierende immer wieder mit gleichen oder ähnlichen Problemen zu kämpfen haben. Im folgenden Verlauf werden diese genannten Probleme in aufbereiteter Form stichpunktartig beschrieben.
+
+\par Es folgt die Ausführung der gewonnenen Erkenntnisse:
+\begin{itemize}
+\item 
+\end{itemize}
+
+\textbf{Die Applikation - Erwartungen, Chancen und Risiken}\\
+\par In jedem Interview bekamen die Professoren abschließend die Möglichkeit, ihre Erwartungen an eine solche Applikationen auszuführen und besonders auf die, aus ihrer Sicht mögliche Risiken und Chancen einzugehen und diesbezüglich auch Anmerkungen oder Empfehlungen zu tätigen. Diese Anmerkungen werden im folgenden Verlauf zusammengefasst dargestellt.
+
+\par Es folgt die Ausführung der gewonnenen Erkenntnisse:
+\begin{itemize}
+\item 
+\end{itemize}
 
 \subsection{Ergebnisse der E-Mail Befragung der Professoren}
+
+\section{Ergebnisse der Studierenden}
 \subsection{Ergebnisse der Interviews der mit den Studierenden}
 \subsection{Ergebnisse der Online-Befragung der Studierenden}
 
-\subsection{Kontext des Problems (Wo liegt das Problem?)}
+\section{Identifikation des Problembereiches}
 Als äußerst interessanter Aspekt, wurden die stark unterschiedlich ausfallenden Sichtweisen, sowie Erwartungen an den Prozess der Bearbeitung der Bachelorarbeit der Studierenden und der Professoren identifiziert.
 
 \subsection{Ziele der Beteiligten (Warum muss es gelöst werden?)}
-
 \subsection{Szenariensammlung (Wie könnte ein Softwaresystem helfen)}
-
-\section{Identifikation des Soll-Zustands}
-
-\section{Analyse der Schwachstellen}
-
+\subsection{Analyse der Schwachstellen}
 \section{Anforderungskatalog}
 
-\section{Lastenheft}
+\chapter{Konzeptvorstellung der Applikation}
+\section{Aufbau der Applikation}
+- Übersicht über die verschiedenen Sektionen der Applikation
+\subsection{Fortschrittsmanagement}
+- Timeboxing + Smart Methode
+- Vordefinierte Aufgaben?
+- Beginn und Ende eingaben
+- Meilensteine anpassen
+- Vordefinierte Schablone? Wochenweise Meilensteine mit Unteraufgaben.
+\subsection{Hinweise und Tipps}
+- Leitfaden der FH-Lübeck als Grundlage für Hinweise und Tipps - Guide
+\subsection{Comunity-Hub}
+- Tipps von anderen?
+- Hier Freundschaftsanfragen?
+- Andere Profile Aufrufen?
+\subsection{Dashboard}
+- Zusammenfassung von bestimmten App Funktionen?
+- Als Brückenelement zwischen Funktionalität und Gamification
+- Fortschrittsanzeige
+- Weekly Tasks
+- Anzeige anderer User?
+\section{Beschreibung der Gamificationelemente}
+- Zielgruppe Studenten oder INFORMATIKStudenten? Erweiterbarkeit beachten!
+- Informatikstudenten wenig Interesse an sozialem Anschluss
+- Motivationstheorie (Maslow/McCelland) 
+- Motivation durch ETWAS ERREICHEN
+- Emotionen ERNSTHAFTER SPAß - Veränderungen erreichen, etwas schaffen
+- Soziale Spieler: Eher nicht Informatiker. 
+- Erfolgsorientierter Spieler (Orientiert sich an zielen, die im SPiel zu erreichen sind)
+- Sammeln von Punkten, Aufsteigen im Level, Bestmarken
+-> Badges für Meilensteine, Unteraufgaben, 
 
-\section{Pflichtenheft}
-
-\subsection{Funktionale Anforderungen}
-
-\subsection{Nicht funktionale Anforderungen}
-
+- Einführung in die Software? Durch Video? Etc.
+\subsection{Auszeichnungen}
+- Man bekommt Punkte für jeden abgehakten Task?
+- Je mehr Unteraufgaben, desto mehr Punkte für einen Meilenstein? - Also macht man mehr Unteraufgaben und kann somit besser planen - Quasi wie Erfahrungspunkte?
+- Bonusbatch für mehr als 10 Unteraufgaben?
+- Nur einen Meilenstein pro Woche
+- Auf Basis agiler Softwareentwicklung. Arbeitspaketbildung.
+- Upvotes bringen Comunitybatches?
+- Was bringen Auszeichnungen? Es gibt keine direkte Belohnung? Keinen Einfluss auf Ende der Bachelorarbeit! Deswegen muss anderer Anreiz her! -> Soziale Interaktion
+\subsection{Soziale Interaktion}
+- Man sieht das andere Personen Punkte abhacken?
+- Freundschaftsanfragen? 
+- google konto?
+\subsection{Fortschrittsverfolgung}
+- Weekly Tasks
+- Abschlussbericht pro Woche?
 
 \chapter{Architektur der Software}
-
 \section{Architekturbeschreibung}
-
 \section{Entwurfsentscheidungen}
-
 \section{Erweiterbarkeit der Software für andere Studiengänge}
-
-
 \chapter{Implementierung}
-
 \section{Umsetzung der Anforderungen}
-
 \section{Entwurf der Benutzeroberfläche}
 
-
 \chapter{Validierung und Verifikation}
-
 \section{Softwaretests}
-
 \section{Abdeckung der Softwareanforderungen}
-
 \section{Ausführung der Usabilitytests}
 
-
 \chapter{Präsentation der Ergebnisse}
-
 \section{Lessons Learned}
-
 \section{Abschlussbetrachtung}
-
 
 \chapter{Literaturverzeichnis}
 \nocite{*}

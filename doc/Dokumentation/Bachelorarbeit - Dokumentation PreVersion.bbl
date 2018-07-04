@@ -83,6 +83,29 @@
     \field{year}{(Zugriff Juni 3, 2018)}
   \endentry
 
+  \entry{Mayring2008}{book}{}
+    \name{author}{1}{}{%
+      {{hash=MP}{%
+         family={Mayring.},
+         familyi={M\bibinitperiod},
+         given={Philipp},
+         giveni={P\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Beltz Verlag - Weinheim und Basel}%
+    }
+    \strng{namehash}{MP1}
+    \strng{fullhash}{MP1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{M}
+    \field{sortinithash}{M}
+    \field{title}{Qualitative Inhaltsanalyse - Grundlagen und Techniken 10.
+  Auflage}
+    \field{year}{2008}
+  \endentry
+
   \entry{Skia1}{manual}{}
     \field{labeltitlesource}{title}
     \field{sortinit}{S}
