@@ -115,6 +115,8 @@ Das Flutter Framework stellt zwei verschiedene Arten von Widgets zur Verfügung,
 \subsection{Laufzeit-Performance}
 
 \section{Gamification}
+(Vergleiche \cite{Strahringer2017}
+\subsection{Abgrenzung zu anderen Ansätzen}
 
 
 \chapter{Untersuchung des Problembereiches}
@@ -196,7 +198,7 @@ Durch das Durchführen von Gruppeninterviews, sollen die Studierenden zu Diskuss
 \textbf{Allgemeine Informationen}
 \par Der zeitliche Rahmen der fünf aufgezeichneten Interviews erstreckt sich über einen Zeitrum von etwa 30 bis 45 Minuten. Für die Auswertung der aufgezeichneten Interviews wurden die Aussagen der Interviewpartner, auf Grundlage der vorliegenden Audioaufnahmen, unter Berücksichtigung des Kontextes aufbereitet und werden nachfolgend dargestellt.\\
 \par Ein weiteres Einzelinterview, welches nicht aufgezeichnet wurde, erstreckte sich über einen Zeitraum von 75 Minuten. Für dieses Interview wurden lediglich begleitende Feldnotizen angefertigt. Diese Feldnotizen wurden im Anschluss des Interviews aufbereitet und werden in der folgenden Beschreibung einfließen.\\
-\par Die gewählten Kategorien ergeben sich aus dem gewählten Auswertungsverfahren der qualitativen Inhaltsanalyse nach Mayring\cite{Mayring2008} und basieren in diesem Kontext auf die gemäß des Verfahrens herausgearbeiteten Codings.\\\\
+\par Die gewählten Kategorien ergeben sich aus dem gewählten Auswertungsverfahren der qualitativen Inhaltsanalyse nach Mayring\cite{Mayring2015} und basieren in diesem Kontext auf die gemäß des Verfahrens herausgearbeiteten Codings.\\\\
 
 
 \textbf{Art der Arbeit}\\
@@ -331,30 +333,10 @@ Als äußerst interessanter Aspekt, wurden die stark unterschiedlich ausfallende
 \subsection{Ziele der Beteiligten (Warum muss es gelöst werden?)}
 \subsection{Szenariensammlung (Wie könnte ein Softwaresystem helfen)}
 \subsection{Analyse der Schwachstellen}
-\section{Anforderungskatalog}
 
-\chapter{Konzeptvorstellung der Applikation}
-\section{Aufbau der Applikation}
-- Übersicht über die verschiedenen Sektionen der Applikation
-\subsection{Fortschrittsmanagement}
-- Timeboxing + Smart Methode
-- Vordefinierte Aufgaben?
-- Beginn und Ende eingaben
-- Meilensteine anpassen
-- Vordefinierte Schablone? Wochenweise Meilensteine mit Unteraufgaben.
-\subsection{Hinweise und Tipps}
-- Leitfaden der FH-Lübeck als Grundlage für Hinweise und Tipps - Guide
-\subsection{Comunity-Hub}
-- Tipps von anderen?
-- Hier Freundschaftsanfragen?
-- Andere Profile Aufrufen?
-\subsection{Dashboard}
-- Zusammenfassung von bestimmten App Funktionen?
-- Als Brückenelement zwischen Funktionalität und Gamification
-- Fortschrittsanzeige
-- Weekly Tasks
-- Anzeige anderer User?
-\section{Beschreibung der Gamificationelemente}
+\section{Anforderungskatalog}\label{sec:anforderungskatalog}
+
+\section{Auswahl der Gamificationstrategie}
 - Zielgruppe Studenten oder INFORMATIKStudenten? Erweiterbarkeit beachten!
 - Informatikstudenten wenig Interesse an sozialem Anschluss
 - Motivationstheorie (Maslow/McCelland) 
@@ -365,19 +347,96 @@ Als äußerst interessanter Aspekt, wurden die stark unterschiedlich ausfallende
 - Sammeln von Punkten, Aufsteigen im Level, Bestmarken
 -> Badges für Meilensteine, Unteraufgaben, 
 
-- Einführung in die Software? Durch Video? Etc.
-\subsection{Auszeichnungen}
-- Man bekommt Punkte für jeden abgehakten Task?
-- Je mehr Unteraufgaben, desto mehr Punkte für einen Meilenstein? - Also macht man mehr Unteraufgaben und kann somit besser planen - Quasi wie Erfahrungspunkte?
-- Bonusbatch für mehr als 10 Unteraufgaben?
-- Nur einen Meilenstein pro Woche
+
+\chapter{Konzeptvorstellung der Applikation}
+
+\section{Beschreibung der Software}
+\par Die Applikation ist in verschiedene Kern-Softwareabschnitten unterteilt. Diese Abschnitte lassen sich in folgende namensgebende Aufgabenbereiche unterteilen, welche sich an den erhobenen Anforderungen und der Aufgabenstellung orientieren (siehe Kapitel \ref{sec:anforderungskatalog}).\\
+
+\par Es folgt eine stichpunktartige Auflistung der Kernfeatures des Tools, welche im Laufe dieses Kapitels ausführlich beschrieben werden:
+
+\begin{itemize}
+\item \textbf{Fortschrittsmanagement}
+\item \textbf{Guide}
+\item \textbf{Dashboard}
+\item \textbf{Sonstige Softwareinhalte}
+\end{itemize}
+
+\subsection{Fortschrittsmanagement}
+Das Fortschrittsmanagement ist ein Tool, welches das Anlegen, Planen und Verwalten von Meilensteinen, sowie Unteraufgaben der Meilensteine ermöglichen soll. 
+
 - Auf Basis agiler Softwareentwicklung. Arbeitspaketbildung.
-- Upvotes bringen Comunitybatches?
-- Was bringen Auszeichnungen? Es gibt keine direkte Belohnung? Keinen Einfluss auf Ende der Bachelorarbeit! Deswegen muss anderer Anreiz her! -> Soziale Interaktion
-\subsection{Soziale Interaktion}
-- Man sieht das andere Personen Punkte abhacken?
-- Freundschaftsanfragen? 
-- google konto?
+- Nur einen Meilenstein pro Woche
+- Timeboxing + Smart Methode
+- Vordefinierte Aufgaben?
+- Beginn und Ende eingaben
+- Meilensteine anpassen
+- Vordefinierte Schablone? Wochenweise Meilensteine mit Unteraufgaben.
+
+Es folgt eine stichpunktartige Auflistung und Beschreibung der Kernfeatures des Tools:
+\begin{itemize}
+\item \textbf{Ein Zeitstrahl als Grundlage}
+\par Der Zeitstrahl bietet die Arbeitsgrundlage des Fortschrittsmanagement-Tools. Hier können wochenweise Meilensteine mit Unteraufgaben angelegt werden.
+\item \textbf{Erstellung und Verwaltung von Meilensteinen}
+\par Es können Meilensteine erstellt, bearbeitet, verschoben und entfernt werden.
+\item \textbf{Erstellung und Verwaltung von Unteraufgaben}
+\par Jeder Meilenstein enthält Unteraufgaben, die von dem Benutzer einem Meilenstein zugeordnet, bearbeitet, verschoben und gelöscht werden können.
+\end{itemize}
+
+\subsection{Guide}
+\par Der Guide stellt den Teil der Applikation dar, der die Bereitstellung von Hinweisen, Tipps und weiteren hilfreichen Informationen zur Bearbeitung der Bachelorarbeit abdecken soll. Dieser Inhalt ergibt sich aus der Verwendung des, von der Fachhochschule Lübeck ausgehändigten Dokuments, welches als Ratgeber bei der Erstellung von Bachelorarbeiten funktionieren und somit die speziellen Anforderungen der FH-Lübeck berücksichtigen soll (vgl. \cite[Kapitel 1]{FHLuebeckBAAnleitung}).
+\par In dieser Hinsicht soll der Guide als genereller Anlaufpunkt funktionieren, der beispielsweise eine Hilfestellung für Bacheloranden darstellen.\\
+
+\par Die Bandbreite der Hinweise, Tipps und Informationen sollen somit den gesamten Verlauf der Bachelorarbeit abdecken und lassen sich in diesem Umfang in folgende Bereiche und Inhalte Zerlegen, welche sich an dem Leitfaden der FH-Lübeck\cite{FHLuebeckBAAnleitung} zur Erstellung einer Bachelorarbeit orientieren.\\
+
+\par Es folgt eine eigene Interpretation und Beschreibung der Unterteilung der Themengebiete:
+
+\begin{itemize}
+\item \textbf{Allgemeine Informationen}
+\par Dieser Abschnitt beinhaltet die allgemeinen Informationen, welche vor allem zur Klärung der Formalien bei der Bearbeitung der Abschlussarbeit wichtig sind.
+
+\item \textbf{Strukturierung der Abschlussarbeit}
+\par Der Abschnitt befasst sich näher mit dem Aufbau der Bachelorarbeit und stellt vor allem Informationen und Empfehlungen bereit, welche sich auf die Strukturierung und die Bedeutung der einzelnen Kapitel der Bachelorarbeit beziehen. 
+
+\item \textbf{Hinweise zum Schreiben der Arbeit}
+\par In diesem Abschnitt werden tiefgehende Informationen und Empfehlungen behandelt, welche sich auf die praktische Umsetzung des Schreibens im Detail beziehen. Beispielhaft hierfür sind der Schreibstil, die Verwendung von Zeiten oder die Einbindung von Bildern, Tabellen und Programmcode.
+
+\item \textbf{FAQ}
+\par Dieses Kapitel behandelt oft gestellte Fragen und verdeutlicht die Informationen in der Form eines Frage-Antwort Schemas.
+\end{itemize}
+
+\subsection{Dashboard}
+\par Das Dashboard stellt den Ausgangspunkt und Hauptbildschirm der Applikation dar und trägt somit die Aufgabe, aktuelle Informationen für den Nutzer aufbereitet anzuzeigen, sowie die Funktionen der Applikation auf einfache Weise zugänglich zu machen. Von diesem Punkt aus soll der Benutzer die verschiedenen Softwareabschnitte öffnen können, weshalb es eine essenzielle Eigenschaft des Dashboards ist, die Inhalte übersichtlich, strukturiert und visuell ansprechend darzustellen.\\
+
+\par Es folgt eine stichpunktartige Auflistung und Beschreibung der Inhalte:
+\begin{itemize}
+\item \textbf{Dynamische Anzeige des Fortschritts}
+\par Der bisher geleistete Gesamtfortschritt wird verdeutlicht, indem zu sehen ist, wie viele Meilensteine bisher abschlossen wurden, in Relation zu den Gesamtmeilenstein.
+\item \textbf{Dynamische Anzeige der Wöchentliche Aufgaben}
+\par Der bisher geleistete Wochenfortschritt wird verdeutlicht, indem zu sehen ist, wie viele Aufgaben in der jetzigen Woche erfüllt wurden, in Relation zu den vorher definierten gesamten Aufgaben für diese Woche.
+\item \textbf{Dynamische Anzeige der letzten erreichten Achivements}
+\par Die Anzeige zeigt die letzten n Achivements an. Zugehörig sind in diesem Fall die Darstellung des Typs des Achivements in Form einer Medaille, sowie den Titel der Herausforderung.
+\end{itemize}
+
+\subsection{Sonstige Softwareinhalte}
+\par Über die eigentlichen individuellen Funktionalitäten hinaus, sind weitere Grundfunktionalitäten vorhanden, welche unter den Punkt \textbf{Sonstige Softwareinhalte} fallen.\\
+
+Es folgt eine stichpunktartige Auflistung und Beschreibung der Inhalte:
+\begin{itemize}
+\item \textbf{Menü}
+\par Das Menü zeigt die existierenden Funktionalitäten und Softwareabschnitte in einer klassischen gelisteten Menüstruktur.
+\item \textbf{Einstellungen}
+\par Die Einstellungen beinhalten Optionen, die sich auf die Eigenschaften der Applikation auswirken. Beispielsweise das Verändern des Designs.
+\end{itemize}
+
+\section{Beschreibung der Gamification-Elemente}
+Auf Basis der Problemanalyse konnten bereits ...
+
+- Einführung in die Software? Durch Video? Etc.
+\subsection{Anfangsphase Achivements}
+\subsection{Bearbeitungsphase Achivements}
+\subsection{Abschlussphase Achivements}
+\subsection{App-Achivements Achivements}
 \subsection{Fortschrittsverfolgung}
 - Weekly Tasks
 - Abschlussbericht pro Woche?

@@ -17,6 +17,28 @@
 \endgroup
 
 \datalist[entry]{nty/global//global/global}
+  \entry{FHLuebeckBAAnleitung}{unpublished}{}
+    \name{author}{1}{}{%
+      {{hash=rnAHPD}{%
+         prefix={rer.\bibnamedelima nat.},
+         prefixi={r\bibinitperiod\bibinitdelim n\bibinitperiod},
+         family={Andreas\bibnamedelima Hanemann},
+         familyi={A\bibinitperiod\bibinitdelim H\bibinitperiod},
+         given={(Prof.\bibnamedelima Dr.},
+         giveni={P\bibinitperiod\bibinitdelim D\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{AHPDrn1}
+    \strng{fullhash}{AHPDrn1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{A}
+    \field{sortinithash}{A}
+    \field{note}{Herausgegeben an Studenten der Fachhochschule Lübeck, die das
+  Bachelorseminar besuchen}
+    \field{title}{Anleitung zum Erstellen einer Abschlussarbeit}
+  \endentry
+
   \entry{Flu1}{manual}{}
     \field{labeltitlesource}{title}
     \field{sortinit}{B}
@@ -83,17 +105,17 @@
     \field{year}{(Zugriff Juni 3, 2018)}
   \endentry
 
-  \entry{Mayring2008}{book}{}
+  \entry{Mayring2015}{book}{}
     \name{author}{1}{}{%
       {{hash=MP}{%
-         family={Mayring.},
+         family={Mayring},
          familyi={M\bibinitperiod},
          given={Philipp},
          giveni={P\bibinitperiod},
       }}%
     }
     \list{publisher}{1}{%
-      {Beltz Verlag - Weinheim und Basel}%
+      {Beltz}%
     }
     \strng{namehash}{MP1}
     \strng{fullhash}{MP1}
@@ -101,9 +123,12 @@
     \field{labeltitlesource}{title}
     \field{sortinit}{M}
     \field{sortinithash}{M}
-    \field{title}{Qualitative Inhaltsanalyse - Grundlagen und Techniken 10.
-  Auflage}
-    \field{year}{2008}
+    \field{isbn}{978-3-407-25730-7}
+    \field{title}{Qualitative Inhaltsanalyse - Grundlagen und Techniken}
+    \list{location}{1}{%
+      {Langensalza}%
+    }
+    \field{year}{2015}
   \endentry
 
   \entry{Skia1}{manual}{}
@@ -115,6 +140,39 @@
     \verb https://skia.org/
     \endverb
     \field{year}{(Zugriff Juni 3, 2018)}
+  \endentry
+
+  \entry{Strahringer2017}{book}{}
+    \name{author}{2}{}{%
+      {{hash=SS}{%
+         family={Strahringer},
+         familyi={S\bibinitperiod},
+         given={Susanne},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=LC}{%
+         family={Leyh},
+         familyi={L\bibinitperiod},
+         given={Christian},
+         giveni={C\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Springer-Verlag}%
+    }
+    \strng{namehash}{SSLC1}
+    \strng{fullhash}{SSLC1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{S}
+    \field{sortinithash}{S}
+    \field{isbn}{978-3-658-16742-4}
+    \field{title}{Gamification und Serious Games - Grundlagen, Vorgehen und
+  Anwendungen}
+    \list{location}{1}{%
+      {Berlin Heidelberg New York}%
+    }
+    \field{year}{2017}
   \endentry
 
   \entry{Flu5}{manual}{}
