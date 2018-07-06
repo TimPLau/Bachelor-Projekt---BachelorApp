@@ -5,63 +5,64 @@
 \BOOKMARK [1][-]{section.1.4}{Aufgabenbeschreibung}{chapter.1}% 5
 \BOOKMARK [1][-]{section.1.5}{Ausblick auf die Bachelorarbeit}{chapter.1}% 6
 \BOOKMARK [2][-]{subsection.1.5.1}{Beschreibung der Kernkomponenten}{section.1.5}% 7
-\BOOKMARK [2][-]{subsection.1.5.2}{Anforderungsanalyse}{section.1.5}% 8
-\BOOKMARK [2][-]{subsection.1.5.3}{Architektur der Software}{section.1.5}% 9
-\BOOKMARK [2][-]{subsection.1.5.4}{Implementierung}{section.1.5}% 10
-\BOOKMARK [2][-]{subsection.1.5.5}{Validierung und Verifikation}{section.1.5}% 11
-\BOOKMARK [2][-]{subsection.1.5.6}{Pr\344sentation der Ergebnisse}{section.1.5}% 12
-\BOOKMARK [0][-]{chapter.2}{Beschreibung der Kernkomponenten}{}% 13
-\BOOKMARK [1][-]{section.2.1}{Vorstellung des Frameworks Flutter}{chapter.2}% 14
-\BOOKMARK [2][-]{subsection.2.1.1}{Flutter Systemarchitektur}{section.2.1}% 15
-\BOOKMARK [2][-]{subsection.2.1.2}{Entwicklung von Betriebssystem \374bergreifenden Applikationen}{section.2.1}% 16
-\BOOKMARK [2][-]{subsection.2.1.3}{Laufzeit-Performance}{section.2.1}% 17
-\BOOKMARK [1][-]{section.2.2}{Gamification}{chapter.2}% 18
-\BOOKMARK [2][-]{subsection.2.2.1}{Abgrenzung zu anderen Ans\344tzen}{section.2.2}% 19
-\BOOKMARK [0][-]{chapter.3}{Untersuchung des Problembereiches}{}% 20
-\BOOKMARK [1][-]{section.3.1}{Hypothese}{chapter.3}% 21
-\BOOKMARK [1][-]{section.3.2}{Identifikation der Interessengruppen}{chapter.3}% 22
-\BOOKMARK [2][-]{subsection.3.2.1}{Studierende}{section.3.2}% 23
-\BOOKMARK [2][-]{subsection.3.2.2}{AStA}{section.3.2}% 24
-\BOOKMARK [2][-]{subsection.3.2.3}{Betreuer der eigenen Bachelorarbeit}{section.3.2}% 25
-\BOOKMARK [2][-]{subsection.3.2.4}{Professoren}{section.3.2}% 26
-\BOOKMARK [2][-]{subsection.3.2.5}{Pr\344sidium}{section.3.2}% 27
-\BOOKMARK [1][-]{section.3.3}{Wahl der Analysestrategie}{chapter.3}% 28
-\BOOKMARK [1][-]{section.3.4}{Ergebnisse der Professoren}{chapter.3}% 29
-\BOOKMARK [2][-]{subsection.3.4.1}{Ergebnisse der Einzelinterviews mit den Professoren}{section.3.4}% 30
-\BOOKMARK [2][-]{subsection.3.4.2}{Ergebnisse der E-Mail Befragung der Professoren}{section.3.4}% 31
+\BOOKMARK [2][-]{subsection.1.5.2}{Untersuchung des Problembereiches}{section.1.5}% 8
+\BOOKMARK [2][-]{subsection.1.5.3}{Konzeptvortellung der Applikation}{section.1.5}% 9
+\BOOKMARK [2][-]{subsection.1.5.4}{Architektur der Software}{section.1.5}% 10
+\BOOKMARK [2][-]{subsection.1.5.5}{Implementierung}{section.1.5}% 11
+\BOOKMARK [2][-]{subsection.1.5.6}{Validierung und Verifikation}{section.1.5}% 12
+\BOOKMARK [2][-]{subsection.1.5.7}{Pr\344sentation der Ergebnisse}{section.1.5}% 13
+\BOOKMARK [0][-]{chapter.2}{Beschreibung der Kernkomponenten}{}% 14
+\BOOKMARK [1][-]{section.2.1}{Vorstellung des Frameworks Flutter}{chapter.2}% 15
+\BOOKMARK [2][-]{subsection.2.1.1}{Flutter Systemarchitektur}{section.2.1}% 16
+\BOOKMARK [2][-]{subsection.2.1.2}{Entwicklung von Betriebssystem \374bergreifenden Applikationen}{section.2.1}% 17
+\BOOKMARK [2][-]{subsection.2.1.3}{Laufzeit-Performance}{section.2.1}% 18
+\BOOKMARK [1][-]{section.2.2}{Gamification}{chapter.2}% 19
+\BOOKMARK [2][-]{subsection.2.2.1}{Abgrenzung zu anderen Ans\344tzen}{section.2.2}% 20
+\BOOKMARK [0][-]{chapter.3}{Untersuchung des Problembereiches}{}% 21
+\BOOKMARK [1][-]{section.3.1}{Hypothese}{chapter.3}% 22
+\BOOKMARK [1][-]{section.3.2}{Identifikation der Interessengruppen}{chapter.3}% 23
+\BOOKMARK [2][-]{subsection.3.2.1}{Studierende}{section.3.2}% 24
+\BOOKMARK [2][-]{subsection.3.2.2}{AStA}{section.3.2}% 25
+\BOOKMARK [2][-]{subsection.3.2.3}{Betreuer der eigenen Bachelorarbeit}{section.3.2}% 26
+\BOOKMARK [2][-]{subsection.3.2.4}{Professoren}{section.3.2}% 27
+\BOOKMARK [2][-]{subsection.3.2.5}{Pr\344sidium}{section.3.2}% 28
+\BOOKMARK [1][-]{section.3.3}{Wahl der Analysestrategie}{chapter.3}% 29
+\BOOKMARK [1][-]{section.3.4}{Ergebnisse der Professoren}{chapter.3}% 30
+\BOOKMARK [2][-]{subsection.3.4.1}{Ergebnisse der Einzelinterviews mit den Professoren}{section.3.4}% 31
 \BOOKMARK [1][-]{section.3.5}{Ergebnisse der Studierenden}{chapter.3}% 32
-\BOOKMARK [2][-]{subsection.3.5.1}{Ergebnisse der Interviews der mit den Studierenden}{section.3.5}% 33
-\BOOKMARK [2][-]{subsection.3.5.2}{Ergebnisse der Online-Befragung der Studierenden}{section.3.5}% 34
-\BOOKMARK [1][-]{section.3.6}{Identifikation des Problembereiches}{chapter.3}% 35
-\BOOKMARK [2][-]{subsection.3.6.1}{Ziele der Beteiligten \(Warum muss es gel\366st werden?\)}{section.3.6}% 36
-\BOOKMARK [2][-]{subsection.3.6.2}{Szenariensammlung \(Wie k\366nnte ein Softwaresystem helfen\)}{section.3.6}% 37
-\BOOKMARK [2][-]{subsection.3.6.3}{Analyse der Schwachstellen}{section.3.6}% 38
-\BOOKMARK [1][-]{section.3.7}{Anforderungskatalog}{chapter.3}% 39
-\BOOKMARK [1][-]{section.3.8}{Auswahl der Gamificationstrategie}{chapter.3}% 40
-\BOOKMARK [0][-]{chapter.4}{Konzeptvorstellung der Applikation}{}% 41
-\BOOKMARK [1][-]{section.4.1}{Beschreibung der Software}{chapter.4}% 42
-\BOOKMARK [2][-]{subsection.4.1.1}{Fortschrittsmanagement}{section.4.1}% 43
-\BOOKMARK [2][-]{subsection.4.1.2}{Guide}{section.4.1}% 44
-\BOOKMARK [2][-]{subsection.4.1.3}{Dashboard}{section.4.1}% 45
-\BOOKMARK [2][-]{subsection.4.1.4}{Sonstige Softwareinhalte}{section.4.1}% 46
-\BOOKMARK [1][-]{section.4.2}{Beschreibung der Gamification-Elemente}{chapter.4}% 47
-\BOOKMARK [2][-]{subsection.4.2.1}{Anfangsphase Achivements}{section.4.2}% 48
-\BOOKMARK [2][-]{subsection.4.2.2}{Bearbeitungsphase Achivements}{section.4.2}% 49
-\BOOKMARK [2][-]{subsection.4.2.3}{Abschlussphase Achivements}{section.4.2}% 50
-\BOOKMARK [2][-]{subsection.4.2.4}{App-Achivements Achivements}{section.4.2}% 51
-\BOOKMARK [2][-]{subsection.4.2.5}{Fortschrittsverfolgung}{section.4.2}% 52
-\BOOKMARK [0][-]{chapter.5}{Architektur der Software}{}% 53
-\BOOKMARK [1][-]{section.5.1}{Architekturbeschreibung}{chapter.5}% 54
-\BOOKMARK [1][-]{section.5.2}{Entwurfsentscheidungen}{chapter.5}% 55
-\BOOKMARK [1][-]{section.5.3}{Erweiterbarkeit der Software f\374r andere Studieng\344nge}{chapter.5}% 56
-\BOOKMARK [0][-]{chapter.6}{Implementierung}{}% 57
-\BOOKMARK [1][-]{section.6.1}{Umsetzung der Anforderungen}{chapter.6}% 58
-\BOOKMARK [1][-]{section.6.2}{Entwurf der Benutzeroberfl\344che}{chapter.6}% 59
-\BOOKMARK [0][-]{chapter.7}{Validierung und Verifikation}{}% 60
-\BOOKMARK [1][-]{section.7.1}{Softwaretests}{chapter.7}% 61
-\BOOKMARK [1][-]{section.7.2}{Abdeckung der Softwareanforderungen}{chapter.7}% 62
-\BOOKMARK [1][-]{section.7.3}{Ausf\374hrung der Usabilitytests}{chapter.7}% 63
-\BOOKMARK [0][-]{chapter.8}{Pr\344sentation der Ergebnisse}{}% 64
-\BOOKMARK [1][-]{section.8.1}{Lessons Learned}{chapter.8}% 65
-\BOOKMARK [1][-]{section.8.2}{Abschlussbetrachtung}{chapter.8}% 66
-\BOOKMARK [0][-]{chapter.9}{Literaturverzeichnis}{}% 67
+\BOOKMARK [2][-]{subsection.3.5.1}{Ergebnisse der Interviews mit Studierenden}{section.3.5}% 33
+\BOOKMARK [2][-]{subsection.3.5.2}{Ergebnisse der schriftlichen Befragung der Studierenden}{section.3.5}% 34
+\BOOKMARK [2][-]{subsection.3.5.3}{Ergebnisse der schriftlichen Online-Umfrage der Studierenden}{section.3.5}% 35
+\BOOKMARK [1][-]{section.3.6}{Identifikation des Problembereiches}{chapter.3}% 36
+\BOOKMARK [2][-]{subsection.3.6.1}{Ziele der Beteiligten \(Warum muss es gel\366st werden?\)}{section.3.6}% 37
+\BOOKMARK [2][-]{subsection.3.6.2}{Analyse der Schwachstellen}{section.3.6}% 38
+\BOOKMARK [2][-]{subsection.3.6.3}{Szenariensammlung \(Wie k\366nnte ein Softwaresystem helfen\)}{section.3.6}% 39
+\BOOKMARK [1][-]{section.3.7}{Anforderungskatalog}{chapter.3}% 40
+\BOOKMARK [1][-]{section.3.8}{Auswahl der Gamificationstrategie}{chapter.3}% 41
+\BOOKMARK [0][-]{chapter.4}{Konzeptvorstellung der Applikation}{}% 42
+\BOOKMARK [1][-]{section.4.1}{Beschreibung der Software}{chapter.4}% 43
+\BOOKMARK [2][-]{subsection.4.1.1}{Fortschrittsmanagement}{section.4.1}% 44
+\BOOKMARK [2][-]{subsection.4.1.2}{Guide}{section.4.1}% 45
+\BOOKMARK [2][-]{subsection.4.1.3}{Dashboard}{section.4.1}% 46
+\BOOKMARK [2][-]{subsection.4.1.4}{Sonstige Softwareinhalte}{section.4.1}% 47
+\BOOKMARK [1][-]{section.4.2}{Beschreibung der Gamification-Elemente}{chapter.4}% 48
+\BOOKMARK [2][-]{subsection.4.2.1}{Anfangsphase Achivements}{section.4.2}% 49
+\BOOKMARK [2][-]{subsection.4.2.2}{Bearbeitungsphase Achivements}{section.4.2}% 50
+\BOOKMARK [2][-]{subsection.4.2.3}{Abschlussphase Achivements}{section.4.2}% 51
+\BOOKMARK [2][-]{subsection.4.2.4}{App-Achivements Achivements}{section.4.2}% 52
+\BOOKMARK [2][-]{subsection.4.2.5}{Fortschrittsverfolgung}{section.4.2}% 53
+\BOOKMARK [0][-]{chapter.5}{Architektur der Software}{}% 54
+\BOOKMARK [1][-]{section.5.1}{Architekturbeschreibung}{chapter.5}% 55
+\BOOKMARK [1][-]{section.5.2}{Entwurfsentscheidungen}{chapter.5}% 56
+\BOOKMARK [1][-]{section.5.3}{Erweiterbarkeit der Software f\374r andere Studieng\344nge}{chapter.5}% 57
+\BOOKMARK [0][-]{chapter.6}{Implementierung}{}% 58
+\BOOKMARK [1][-]{section.6.1}{Umsetzung der Anforderungen}{chapter.6}% 59
+\BOOKMARK [1][-]{section.6.2}{Entwurf der Benutzeroberfl\344che}{chapter.6}% 60
+\BOOKMARK [0][-]{chapter.7}{Validierung und Verifikation}{}% 61
+\BOOKMARK [1][-]{section.7.1}{Softwaretests}{chapter.7}% 62
+\BOOKMARK [1][-]{section.7.2}{Abdeckung der Softwareanforderungen}{chapter.7}% 63
+\BOOKMARK [1][-]{section.7.3}{Ausf\374hrung der Usabilitytests}{chapter.7}% 64
+\BOOKMARK [0][-]{chapter.8}{Pr\344sentation der Ergebnisse}{}% 65
+\BOOKMARK [1][-]{section.8.1}{Lessons Learned}{chapter.8}% 66
+\BOOKMARK [1][-]{section.8.2}{Abschlussbetrachtung}{chapter.8}% 67
+\BOOKMARK [0][-]{chapter.9}{Literaturverzeichnis}{}% 68

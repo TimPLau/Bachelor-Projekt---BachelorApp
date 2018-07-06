@@ -6,6 +6,7 @@
 \usepackage{amsmath}
 \usepackage{hyperref}
 \usepackage{booktabs}
+\usepackage{multirow}
 \usepackage{pdflscape}
 %\usepackage{lscape}
 \setlength{\parindent}{0em} 
@@ -20,7 +21,8 @@
 \begin{document}
 \maketitle
 \tableofcontents
-
+\listoftables
+\listoffigures
 
 \chapter{Einleitung}
 Für Studierende im letzten Semester eines Bachelorstudiengangs, umfasst die wesentliche Prüfungsleistung das Verfassen einer Bachelorarbeit.
@@ -67,29 +69,32 @@ Die im Rahmen der Aufgabenbeschreibung entstandenen Anforderungen werden durch d
 \end{itemize}
 
 \section{Ausblick auf die Bachelorarbeit}
-In der folgenden Dokumentation der Bachelorarbeit werden verschiedene aufeinander aufbauende Prozesse, Teilschritte und Ergebnisse der Softwareentwicklung dokumentiert sein. Hierbei liegt die Priorität vor allem bei dem Pflegen der Nachvollziehbarkeit der dargestellten Informationen durch aufeinander aufbauende Kapitel und dem reflektieren der eigenen Gedankengänge.
+\par In der folgenden Dokumentation der Bachelorarbeit werden verschiedene aufeinander aufbauende Prozesse, Teilschritte und Ergebnisse der Softwareentwicklung dokumentiert sein. Hierbei liegt die Priorität vor allem bei dem Pflegen der Nachvollziehbarkeit der dargestellten Informationen durch aufeinander aufbauende Kapitel und dem reflektieren der eigenen Gedankengänge.
 
 \subsection{Beschreibung der Kernkomponenten}
-Der Nachvollziehbarkeit halber empfiehlt es sich, Grundkenntnisse über die Basiskomponenten, wie dem Flutter Framework zu besitzen. Sollte dies nicht der Fall sein, so lassen sich im Kapitel \textbf{Beschreibung der Basiskomponenten} die nötigen Informationen nachlesen.
+\par Der Nachvollziehbarkeit halber empfiehlt es sich, Grundkenntnisse über die Basiskomponenten, wie dem Flutter Framework zu besitzen. Sollte dies nicht der Fall sein, so lassen sich in Kapitel \ref{chap:grundlagenkapitel} die nötigen Informationen nachlesen.
 
-\subsection{Anforderungsanalyse}
-Das Kapitel \textbf{Anforderungsanalyse} stellt in detaillierter Ausführung und Beschreibung die Prozesse der Anforderungsermittlung und deren Auswertung, sowie Definition dar und legt somit wichtige Grundlagen und Anforderungen an die Software fest. Weiterhin werden im Laufe des Kapitels Einblicke in Strategien und Gedankengänge ermöglicht, welche zusätzliche Anhaltspunkte für die Nachvollziehbarkeit der weiteren Kapitel beitragen können.
+\subsection{Untersuchung des Problembereiches}
+\par Das Kapitel \ref{chap:problemanalyse} stellt in detaillierter Ausführung und Beschreibung die Prozesse der Anforderungsermittlung und deren Auswertung, sowie Definition dar und legt somit wichtige Grundlagen und Anforderungen an die Software fest. Weiterhin werden im Laufe des Kapitels Einblicke in Strategien und Gedankengänge ermöglicht, welche zusätzliche Anhaltspunkte für die Nachvollziehbarkeit der weiteren Kapitel beitragen können.
+
+\subsection{Konzeptvortellung der Applikation}
+\par \ref{chap:konzept}
+
 
 \subsection{Architektur der Software}
-Die Entscheidung eine mobile Applikation für Android und iOS mittels Flutter zu entwickeln, definiert bereits frühzeitig verschiedene Möglichkeiten und Pflichten, welche im Kapitel \textbf{Anforderungsmanagement} unter Zunahme anderer erhobener Anforderungen detailliert dokumentiert und beschrieben werden.
-Alle nötigen Informationen zur Softwarearchitektur, zu den Entwurfsentscheidungen, sowie der Berücksichtigung der Erweiterbarkeit der Software, werden im Kapitel \textbf{Architektur der Software} behandelt.
+\par Alle Informationen zur Softwarearchitektur, zu den Entwurfsentscheidungen, sowie der Berücksichtigung der Erweiterbarkeit der Software, werden im Kapitel \ref{chap:architektur}  behandelt.
 
 \subsection{Implementierung}
-Informationen zur detaillierten Implementierung der in der Aufgabenbeschreibung definierten Funktionen, sowie die Umsetzung der Benutzeroberfläche, werden im Kapitel \textbf{Implementierung der Softwarefunktionen} behandelt. Unter Einbezug beispielhafter Codeauszüge werden hier die Funktionsweisen der Software aufgeführt und beschrieben.
+Informationen zur detaillierten Implementierung der in der Aufgabenbeschreibung definierten Funktionen, sowie die Umsetzung der Benutzeroberfläche, werden im Kapitel \ref{chap:implementierung} behandelt. Unter Einbezug beispielhafter Codeauszüge werden hier die Funktionsweisen der Software aufgeführt und beschrieben.
 
 \subsection{Validierung und Verifikation}
-Die Nachweisführung der Softwareanforderungen, der Usability-Anforderungen, sowie die Auswertung der Nützlichkeit der Verwendung des Frameworks Flutter bei der Entwicklung dieser App lassen sich im Kapitel \textbf{Validierung und Verifikation} nachlesen.
+Die Nachweisführung der Softwareanforderungen, der Usability-Anforderungen, sowie die Auswertung der Nützlichkeit der Verwendung des Frameworks Flutter bei der Entwicklung dieser App lassen sich im Kapitel \ref{chap:nachweisführung} nachlesen.
 
 \subsection{Präsentation der Ergebnisse}
-Abschließend folgt im Kapitel \textbf{Präsentation der Ergebnisse} eine Zusammenfassung der erreichten Ergebnisse und eine Reflexion der Teilschritte, sowie die Abschlussbetrachtung des gesamten Projekts.
+Abschließend folgt im Kapitel \ref{chap:ergebnisse} eine Zusammenfassung der erreichten Ergebnisse und eine Reflexion der Teilschritte, sowie die Abschlussbetrachtung des gesamten Projekts.
 
 
-\chapter{Beschreibung der Kernkomponenten}
+\chapter{Beschreibung der Kernkomponenten} \label{chap:grundlagenkapitel}
 
 \section{Vorstellung des Frameworks Flutter}
 Flutter ist ein von Google entwickeltes opensource Framework, welches auf die Entwicklung mobiler 2D-Applikationen für Android- und iOS-Betriebssysteme ausgelegt ist. Beworben wird Flutter durch das Hervorheben der Einfachheit der Benutzung, die schnell zu erreichenden Fortschritte bei der Implementierung von Softwarefunktionen, sowie den Gestaltungsmöglichkeiten der Benutzeroberfläche und den hochqualitativen Ergebnissen.
@@ -119,7 +124,7 @@ Das Flutter Framework stellt zwei verschiedene Arten von Widgets zur Verfügung,
 \subsection{Abgrenzung zu anderen Ansätzen}
 
 
-\chapter{Untersuchung des Problembereiches}
+\chapter{Untersuchung des Problembereiches} \label{chap:problemanalyse}
 
 \section{Hypothese}
 \par Die Auseinandersetzung mit komplexen Problemstellungen, wie die als abschließende Prüfungsleistung des Studiums zu erarbeitende Bachelorarbeit, stellt erfahrungsgemäß für viele Studierende eine große Herausforderung dar. Diese Herausforderung ergibt sich aus dem erstmaligen Zusammenspiel von selbstständigem und eigenverantwortlichem Arbeiten, sowie Problemlösen mittels erworbener Fach- und Methodenkenntnisse über einen längeren (in etwa dreimonatigen) Zeitraum.
@@ -186,18 +191,20 @@ Trotz des Verlaufs des Studiums, des angeeigneten Wissens und der somit zahlreic
 \par Dies bietet sowohl den Zugriff auf die unmittelbaren Erfahrungen der einzelnen Professoren als Spezialisten in den jeweiligen Fachgebieten, als auch auf die Erfahrungen der Professoren in der Position eines Betreuers und Ansprechpartners für Bacheloranden. Durch das Durchführen von Einzelinterviews wird ermöglicht, die Erwartungen seitens der Professoren an die Bacheloranden im Detail zu identifizieren und die, in dieser Hinsicht priorisierten inhaltlichen und methodischen Aspekte bei der Bearbeitung einer Bachelorarbeit herauszuarbeiten. Die Aufteilung auf Einzelinterviews und E-Mail Befragungen bietet den Vorteil, beide Strategien simultan zu verfolgen und nach Abschluss der Datenerhebung sowohl die detaillierten Einzelinterviews, als auch die oberflächlicher ausfallenden E-Mail Antworten in bereits dokumentierter Form vorliegen zu haben, um diese dann auszuwerten.\\
 
 \textbf{Studierende}
-\par Für die Studierenden aus dem Studiengang Informatik/Softwareentwicklung, ist es aufgrund der hohen Menge an Personen und den zu betreibenden Aufwand vorgesehen, priorisiert Gruppen- und nur in Ausnahmefällen auch Einzelinterviews zu durchzuführen. 
+\par Für die Studierenden aus dem Studiengang Informatik/Softwareentwicklung, ist es aufgrund der hohen Menge an Personen und den zu betreibenden Aufwand vorgesehen, wenige Gruppen- und nur in Ausnahmefällen auch Einzelinterviews, durchzuführen. 
+\par Die Interviews sollen als Grundlage zur Konzeption und Design weiterer Befragungsstrategien dienen und in diesem Umfang einen Ausgangspunkt für die Problemanalyse bieten.
 Durch das Durchführen von Gruppeninterviews, sollen die Studierenden zu Diskussionen angeregt sein, welche von dem Leiter des Interviews durchaus auch motiviert werden können.
-\par Miteinbezogen werden vorzugsweise alle Studierende der oberen Semester, unabhängig davon, ob sie sich noch in der Phase vor Beginn der Bearbeitung, während der Bearbeitung oder nach Abschluss der Bearbeitung der Bachelorarbeit befinden. Hierbei ist wichtig zu beachten, dass die verschiedenen Erfahrungsstände in den Gruppeninterviews nicht aufeinandertreffen, da dieser Umstand somit zu einer gegenseitigen Beeinflussung führen könnte und wichtige Informationen nicht gewonnen werden könnten. Die verschieden zu extrahierenden Sichtweisen auf die Bearbeitung der Bachelorarbeit können auf diese Weise differenziert betrachtet und analysiert werden.
-\par Des weiteren wird eine Online-Umfrage den Teil der Datenerhebung darstellen, der quantitative Ergebnisse erzielt soll und deren Aussage somit eine nicht durch die Interviews abgebildete Menge darstellt.
+\par Nach Absprache mit den intervieweten Studierenden, werden diese weiterhin per schriftlicher Befragung in die Entwicklung des Projektes, unter ergänzender Zunahme anderer Studierender, eingebunden. Dies bietet den Vorteil, durch einen weiteren Kanal, Informationen von den Studierenden beziehen zu können. Wesentlich dabei, ist die Hoffnung der höher Ausfallenden Reaktionsfreudigkeit der Studierenden als für die zeitaufwändigeren Interviews.
+\par Miteinbezogen werden vorzugsweise alle Studierende der oberen Semester, unabhängig davon, ob sie sich noch in der Phase vor Beginn der Bearbeitung, während der Bearbeitung oder nach Abschluss der Bearbeitung der Bachelorarbeit befinden. Hierbei ist wichtig zu beachten, dass die verschiedenen Erfahrungsstände in den Gruppeninterviews nicht aufeinandertreffen sollten, da dieser Umstand somit zu einer gegenseitigen Beeinflussung führen könnte und wichtige Informationen nicht gewonnen werden könnten. Die verschieden zu extrahierenden Sichtweisen auf die Bearbeitung der Bachelorarbeit können auf diese Weise differenziert betrachtet und analysiert werden.
+\par Des weiteren wird eine Online-Umfrage den Teil der Datenerhebung darstellen, der quantitative Ergebnisse erzielt soll und deren Aussage somit eine nicht durch die Interviews und die schriftlichen Befragungen abgebildete Menge darstellt.
 
 \section{Ergebnisse der Professoren}
 \subsection{Ergebnisse der Einzelinterviews mit den Professoren}
 \par Im Folgenden sind die gewonnenen Eindrücke und Kenntnisse der Einzelinterviews mit den Professoren des Fachbereichs Informatik durch Themenkategorien geordnet und in zusammengefasster Form dokumentiert. \\
 \par Es haben insgesamt sechs Professoren an den Einzelinterviews teilgenommen, wobei es für fünf Interviews gestattet wurde, eine Tonaufzeichnung anzufertigen.\\\\
-\textbf{Allgemeine Informationen}
+\textbf{Allgemeine Informationen}\\
 \par Der zeitliche Rahmen der fünf aufgezeichneten Interviews erstreckt sich über einen Zeitrum von etwa 30 bis 45 Minuten. Für die Auswertung der aufgezeichneten Interviews wurden die Aussagen der Interviewpartner, auf Grundlage der vorliegenden Audioaufnahmen, unter Berücksichtigung des Kontextes aufbereitet und werden nachfolgend dargestellt.\\
-\par Ein weiteres Einzelinterview, welches nicht aufgezeichnet wurde, erstreckte sich über einen Zeitraum von 75 Minuten. Für dieses Interview wurden lediglich begleitende Feldnotizen angefertigt. Diese Feldnotizen wurden im Anschluss des Interviews aufbereitet und werden in der folgenden Beschreibung einfließen.\\
+\par Ein weiteres Einzelinterview, welches nicht aufgezeichnet wurde, erstreckte sich über einen Zeitraum von 75 Minuten. Für dieses Interview wurden lediglich begleitende Feldnotizen angefertigt. Diese Feldnotizen wurden im Anschluss des Interviews aufbereitet und fließen in in die folgende Beschreibung ein.\\
 \par Die gewählten Kategorien ergeben sich aus dem gewählten Auswertungsverfahren der qualitativen Inhaltsanalyse nach Mayring\cite{Mayring2015} und basieren in diesem Kontext auf die gemäß des Verfahrens herausgearbeiteten Codings.\\\\
 
 
@@ -306,7 +313,7 @@ Als im allgemeinen auftretenden Arten der Arbeit wurden die Klassen \textbf{Entw
 \end{itemize}
 
 \textbf{Häufig Auftretende Probleme bei der Bearbeitung der Bachelorarbeit}\\
-\par Es stellte sich im Verlauf des Interviews heraus, dass unterschiedliche Studierende immer wieder mit gleichen oder ähnlichen Problemen zu kämpfen haben. Im folgenden Verlauf werden diese genannten Probleme in aufbereiteter Form stichpunktartig beschrieben.
+\par Es stellte sich im Verlauf des Interviews heraus, dass unterschiedliche Studierende immer wieder mit gleichen oder ähnlichen Problemen zu kämpfen haben. Im folgenden Verlauf werden diese genannten Probleme in aufbereiteter Form stichpunktartig beschrieben.\\
 
 \par Es folgt die Ausführung der gewonnenen Erkenntnisse:
 \begin{itemize}
@@ -314,25 +321,130 @@ Als im allgemeinen auftretenden Arten der Arbeit wurden die Klassen \textbf{Entw
 \end{itemize}
 
 \textbf{Die Applikation - Erwartungen, Chancen und Risiken}\\
-\par In jedem Interview bekamen die Professoren abschließend die Möglichkeit, ihre Erwartungen an eine solche Applikationen auszuführen und besonders auf die, aus ihrer Sicht mögliche Risiken und Chancen einzugehen und diesbezüglich auch Anmerkungen oder Empfehlungen zu tätigen. Diese Anmerkungen werden im folgenden Verlauf zusammengefasst dargestellt.
+\par In jedem Interview bekamen die Professoren abschließend die Möglichkeit, ihre Erwartungen an eine solche Applikationen auszuführen und besonders auf die, aus ihrer Sicht mögliche Risiken und Chancen einzugehen und diesbezüglich auch Anmerkungen oder Empfehlungen zu tätigen. Diese Anmerkungen werden im folgenden Verlauf zusammengefasst dargestellt.\\
 
 \par Es folgt die Ausführung der gewonnenen Erkenntnisse:
 \begin{itemize}
 \item 
 \end{itemize}
 
-\subsection{Ergebnisse der E-Mail Befragung der Professoren}
-
 \section{Ergebnisse der Studierenden}
-\subsection{Ergebnisse der Interviews der mit den Studierenden}
-\subsection{Ergebnisse der Online-Befragung der Studierenden}
+\par Das folgende Kapitel liefert einen Einblick in die Ergebnisse der Befragung der Studierenden und beschreibt die in diesem Rahmen gewonnenen Erkenntnisse.
+\par Im Fokus der Befragung stehen die Erwartungen an die Bachelorarbeit, sowie die typischen Probleme und Sorgen  der Studierenden. Da die Studierenden begleitend in das Projekt einbezogen werden, werden die Erkenntnisse des Projektverlaufes abschnittsweise in zusammengefasster Form dargestellt.
+
+\subsection{Ergebnisse der Interviews mit Studierenden}
+\par Informationen zu den Interviews:
+\begin{itemize}
+\item Insgesamt wurden 8 Studenten in 3 verschiedenen Gruppeninterviews befragt.
+\item Zwei Interviews mit je 3 Personen wurden mit Studenten, welche sich bereits in der Bachelorarbeitsphase befinden, wovon eines als Audioaufnahme aufgezeichnet wurde und das andere durch Feldnotizen dokumentiert wurde.
+\item Ein weiteres Interview wurde mit 2 Studenten geführt, welche sich noch in der Phase vor der Bearbeitung der Bachelorarbeit befinden. Dieses Interview wurde begleitend mit Feldnotizen dokumentiert.
+\end{itemize}
+
+\subsection{Ergebnisse der schriftlichen Befragung der Studierenden}
+\par Informationen zu der schriftlichen Befragung:
+\begin{itemize}
+\item Insgesamt wurden ? Studenten schriftlich befragt.
+\item ? der befragten Studenten befinden sich ab dem 4. Semester noch in der Phase vor der Bearbeitung der Bachelorarbeit.
+\item ? der befragten Studenten befinden sich bereist ungefähr einen Monat in der Bearbeitungsphase der Bachelorarbeit.
+\end{itemize}
+
+\newpage
+\par \textbf{Befragung der Studierenden zur Identifikation der allgemeinen Probleme}
+\par Die erste Befragung der Studierenden befasst sich mit der aktuellen allgemeinen Situation, bezüglich der Bearbeitung der Bachelorarbeit.\\
+
+\par Die Erkenntnisse lassen sich wie folgt zusammenfassen:
+\begin{itemize}
+
+\item \textbf{Erwartungen an den Betreuer}
+\begin{itemize}
+
+\item \textbf{Teilen von Erfahrungen}
+\par Insbesondere werden sich Erkenntnisgewinne durch das Teilen von Erfahrungen der Betreuer gewünscht, was sich besonders auf die Arbeit mit externen Unternehmen bezieht. Hinweise zu Besonderheiten und die wichtigen Unterschiede zu einer internen Bachelorarbeit. 
+\par Weiterhin das gemeinsame Erarbeiten eines Themas, was bezüglich des Umfangs durch die Erfahrungen des Betreuers eine angemessene Form annehmen sollte.\\
+
+\item \textbf{Kommunikation}
+\par Was die Kommunikationsbereitschaft betrifft, wird vor allem die Erreichbarkeit, das (schnelle) Beantworten von Fragen und die Möglichkeit, persönliche Treffen wahrnehmen zu können, von dem Betreuer erwartet.\\
+
+\item \textbf{Feedback}
+\par Der am häufigsten angesprochene Punkt ist, dass sich der Betreuer mit der Bachelorarbeit der Studierenden insofern beschäftigt, dass Feedbackpunkte zum aktuellen Stand, Inhalt und Umfang diskutiert werden können.
+\par In diesem Rahmen wird auch vereinzelt erwartet, dass der Betreuer Interesse an der Arbeit des Studierenden hat, sowie Bereitschaft für die Beantwortung von Fragen und das Diskutieren von Lösungsmöglichkeiten zeigt.\\
+
+\item \textbf{Impulse des Betreuers}
+\par Teilweise erwarten die befragten Studierende, dass der Betreuer aktiv an dem Prozess der Erstellung der Bachelorarbeit teilnimmt. Das bezieht sich auf die Unterstützung bei dem Zeitmanagement, das Geben von Denkanstößen und Anregungen, sowie das von dem Betreuer ausgehenden Einfordern von Leistungen.\\
+\end{itemize}
+
+\newpage
+\item \textbf{Einschätzung der größten Probleme}
+
+\begin{itemize}
+\item \textbf{Schreiben der Dokumentation}
+\par Die von den Studierenden angesprochenen Punkte bezüglich der Dokumentation, befassen sich mit den Unsicherheiten bei der Einschätzung von Umfang, Inhalt und Aufbau der Dokumentation. 
+\par Des weiteren werden Rechtschreibung, sowie der korrekte Umgang mit Quellen genannt.\\
+
+\item \textbf{Zeitmanagement}
+\par Der Punkt Zeitmanagement stellt für die Studierenden häufig eine Herausforderung dar, welche oftmals auch in Zusammenhang mit weiteren resultierenden Problemen genannt wird.\\
+
+\item \textbf{Fachliche Probleme}
+\par Teilweise werden auch fachliche Probleme unterschiedlicher Natur als größte Herausforderung genannt. Dazu zählen zum einen Probleme mit der im Rahmen der Bachelorarbeit zu verwendende Hardware, andererseits aber auch Softwareprobleme, das Entwickeln von sinnvollen Tests und das präzise Ermitteln von Anforderungen.\\
+
+\item \textbf{Sonstige Probleme}
+\par Weitere Probleme die vereinzelt genannt werden sind Probleme mit der Themenfindung, die Kommunikation zwischen internen Betreuer und der externen Firma oder die allgemeine Überforderung bei der Bearbeitung der Bachelorarbeit.\\
+\end{itemize}
+
+\newpage
+\item \textbf{Bessere Vorbereitung auf die Bachelorarbeit}
+\begin{itemize}
+
+\item \textbf{Zeitmanagement}
+\par Im Allgemeinen wünscht sich ein Großteil der Studierende eine bessere Vorbereitung bezüglich des Zeitmanagements. Die Studierenden bemängeln eine unzureichende Vorbereitung auf das Abschätzen von Zeitaufwand, Planung von größeren Projekten und nennen in diesem Rahmen den Wunsch nach Möglichkeiten und Maßnahmen im Studium, wie das häufigere Einbinden von Projektarbeiten.\\
+
+\item \textbf{Wissenschaftliches Arbeiten}
+\par Häufig wird der Wunsch nach besserer Vorbereitung auf das wissenschaftliche Arbeiten genannt, was sich explizit auf den Aufbau einer wissenschaftlichen Arbeit, der Umgang mit Quellen und das korrekte Einbinden von Quellcode-Inhalten. Als vorkommender Lösungsvorschlag wird ein Kurs, welcher zur besseren Vorbereitung vor dem 6. Semester stattfinden sollte, genannt.\\
+
+\item \textbf{Aufklärung zur Bachelorarbeit}
+\par Viele der befragten Studierenden wünschen sich vorbereitende und informierende Maßnahmen zur Bachelorarbeit. Dies bezieht sich vor allem auf das Klären organisatorischer Fragen, der wichtigen Formalien und der Umfang der Bachelorarbeit. Im Detail werden auch vorbereitende Maßnahmen gewünscht, die sich auf die Vor- und Nachteile einer extern oder intern betreuten Bachelorarbeit beziehen.\\ 
+
+\item \textbf{Sonstige Anmerkungen}
+\par Weiterhin treten bei der Befragung auch Fälle auf, bei denen keine expliziten Veränderung gewünscht werden.\\
+
+\end{itemize}
+
+\end{itemize}
+
+\newpage
+\par \textbf{Einbezug der Studierenden in die Gestaltung der Applikation}\\
+\par Die Einbindung der Studierenden befasst sich mit spezifischeren Fragen, hinsichtlich der motivierenden Gamificationinhalte der zu entwickelnden Applikation. Der Verlauf der folgenden Befragungen fand somit nicht in einem Durchlauf statt, sondern ergibt sich aus dem permanenten Einbinden der Studierenden.
+
+\par Primäres Ziel des Einbezugs der Studierenden ist, zu bestimmen, welche Einbindung von Gamificationstrategien ansprechend auf die Zielgruppe wirken und in welcher Weise sich das Einbinden von Gamificationelementen auf die Steigerung der Motivation von Studenten bei der Bearbeitung der Bachelorarbeit auswirkt.\\
+
+\par In der folgenden Tabelle werden die Ergebnisse der Befragung verdeutlicht:\\\\
+
+	\begin{tabular}{llc}
+		\hline
+		\textbf{Name der Gamificationstrategie} & \textbf{Art der Reaktion} & \textbf{Häufigkeit} \\ \hline
+		Motivation durch soziale Einbindung & Positiv & 3 \\
+		 & Negativ & 7 \\
+		 & Neutral & 1 \\ \hline
+		Motivation durch Sammeln von Archivements & Positiv & 10 \\
+		 & Negativ & 0 \\
+		 & Neutral & 1 \\ \hline
+		 &  & \textbf{11} \\
+	\end{tabular}
+	\captionof{table}{Einbezug der Studierende in Wahl der Gamificationstrategie}
+\label{tab:threecols}
+
+
+
+\subsection{Ergebnisse der schriftlichen Online-Umfrage der Studierenden}
 
 \section{Identifikation des Problembereiches}
-Als äußerst interessanter Aspekt, wurden die stark unterschiedlich ausfallenden Sichtweisen, sowie Erwartungen an den Prozess der Bearbeitung der Bachelorarbeit der Studierenden und der Professoren identifiziert.
+Als äußerst interessanter Aspekt, wurden die teilweise unterschiedlich ausfallenden Kenntnisstände, sowie Erwartungen an den Prozess der Bearbeitung der Bachelorarbeit der Studierenden und der Professoren identifiziert.
+
+... (Hier auf den Punkt bringen)
 
 \subsection{Ziele der Beteiligten (Warum muss es gelöst werden?)}
-\subsection{Szenariensammlung (Wie könnte ein Softwaresystem helfen)}
 \subsection{Analyse der Schwachstellen}
+\subsection{Szenariensammlung (Wie könnte ein Softwaresystem helfen)}
 
 \section{Anforderungskatalog}\label{sec:anforderungskatalog}
 
@@ -348,7 +460,7 @@ Als äußerst interessanter Aspekt, wurden die stark unterschiedlich ausfallende
 -> Badges für Meilensteine, Unteraufgaben, 
 
 
-\chapter{Konzeptvorstellung der Applikation}
+\chapter{Konzeptvorstellung der Applikation} \label{chap:konzept}
 
 \section{Beschreibung der Software}
 \par Die Applikation ist in verschiedene Kern-Softwareabschnitten unterteilt. Diese Abschnitte lassen sich in folgende namensgebende Aufgabenbereiche unterteilen, welche sich an den erhobenen Anforderungen und der Aufgabenstellung orientieren (siehe Kapitel \ref{sec:anforderungskatalog}).\\
@@ -441,20 +553,20 @@ Auf Basis der Problemanalyse konnten bereits ...
 - Weekly Tasks
 - Abschlussbericht pro Woche?
 
-\chapter{Architektur der Software}
+\chapter{Architektur der Software} \label{chap:architektur}
 \section{Architekturbeschreibung}
 \section{Entwurfsentscheidungen}
 \section{Erweiterbarkeit der Software für andere Studiengänge}
-\chapter{Implementierung}
+\chapter{Implementierung} \label{chap:implementierung}
 \section{Umsetzung der Anforderungen}
 \section{Entwurf der Benutzeroberfläche}
 
-\chapter{Validierung und Verifikation}
+\chapter{Validierung und Verifikation} \label{chap:nachweisführung}
 \section{Softwaretests}
 \section{Abdeckung der Softwareanforderungen}
 \section{Ausführung der Usabilitytests}
 
-\chapter{Präsentation der Ergebnisse}
+\chapter{Präsentation der Ergebnisse} \label{chap:ergebnisse}
 \section{Lessons Learned}
 \section{Abschlussbetrachtung}
 

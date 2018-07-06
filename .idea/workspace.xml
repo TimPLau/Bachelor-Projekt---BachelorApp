@@ -1,7 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f4dd6696-99ed-42f9-ad55-ec4d525f5ce1" name="Default" comment="" />
+    <list default="true" id="f4dd6696-99ed-42f9-ad55-ec4d525f5ce1" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/doc/Dokumentation/Anforderungsanalyse/Interviews/Studenten/Befragungen/Schriftliche Befragung/Schriftliche Befragung I PH.docx" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/doc/Dokumentation/Anforderungsanalyse/Interviews/Studenten/Befragungen/Schriftliche Befragung/Schriftliche Befragung II BE.docx" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/doc/Dokumentation/Anforderungsanalyse/Interviews/Studenten/Befragungen/Schriftliche Befragung/Schriftliche Befragung III BJ.docx" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/doc/Dokumentation/Anforderungsanalyse/Interviews/Studenten/Befragungen/Schriftliche Befragung/Schriftliche Befragung IV DA.docx" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/doc/Dokumentation/Bachelorarbeit - Dokumentation PreVersion.aux" afterPath="$PROJECT_DIR$/doc/Dokumentation/Bachelorarbeit - Dokumentation PreVersion.aux" />
+      <change beforePath="$PROJECT_DIR$/doc/Dokumentation/Bachelorarbeit - Dokumentation PreVersion.log" afterPath="$PROJECT_DIR$/doc/Dokumentation/Bachelorarbeit - Dokumentation PreVersion.log" />
+      <change beforePath="$PROJECT_DIR$/doc/Dokumentation/Bachelorarbeit - Dokumentation PreVersion.out" afterPath="$PROJECT_DIR$/doc/Dokumentation/Bachelorarbeit - Dokumentation PreVersion.out" />
+      <change beforePath="$PROJECT_DIR$/doc/Dokumentation/Bachelorarbeit - Dokumentation PreVersion.pdf" afterPath="$PROJECT_DIR$/doc/Dokumentation/Bachelorarbeit - Dokumentation PreVersion.pdf" />
+      <change beforePath="$PROJECT_DIR$/doc/Dokumentation/Bachelorarbeit - Dokumentation PreVersion.synctex.gz" afterPath="$PROJECT_DIR$/doc/Dokumentation/Bachelorarbeit - Dokumentation PreVersion.synctex.gz" />
+      <change beforePath="$PROJECT_DIR$/doc/Dokumentation/Bachelorarbeit - Dokumentation PreVersion.tex" afterPath="$PROJECT_DIR$/doc/Dokumentation/Bachelorarbeit - Dokumentation PreVersion.tex" />
+      <change beforePath="$PROJECT_DIR$/doc/Dokumentation/Bachelorarbeit - Dokumentation PreVersion.toc" afterPath="$PROJECT_DIR$/doc/Dokumentation/Bachelorarbeit - Dokumentation PreVersion.toc" />
+    </list>
     <ignored path="$PROJECT_DIR$/.dart_tool/" />
     <ignored path="$PROJECT_DIR$/.idea/" />
     <ignored path="$PROJECT_DIR$/.pub/" />
@@ -214,7 +226,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -282,9 +293,10 @@
         </subPane>
         <option name="show-excluded-files" value="false" />
       </pane>
-      <pane id="Scratches" />
       <pane id="AndroidView" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
