@@ -6,6 +6,7 @@
 \usepackage{amsmath}
 \usepackage{hyperref}
 \usepackage{booktabs}
+\usepackage{graphicx}
 \usepackage{multirow}
 \usepackage{pdflscape}
 %\usepackage{lscape}
@@ -349,7 +350,7 @@ Als im allgemeinen auftretenden Arten der Arbeit wurden die Klassen \textbf{Entw
 \end{itemize}
 
 \newpage
-\par \textbf{Befragung der Studierenden zur Identifikation der allgemeinen Probleme}
+\par \textbf{Schriftliches Interview der Studierenden zur Identifikation der allgemeinen Probleme und Wünsche}
 \par Die erste Befragung der Studierenden befasst sich mit der aktuellen allgemeinen Situation, bezüglich der Bearbeitung der Bachelorarbeit.\\
 
 \par Die Erkenntnisse lassen sich wie folgt zusammenfassen:
@@ -363,7 +364,7 @@ Als im allgemeinen auftretenden Arten der Arbeit wurden die Klassen \textbf{Entw
 \par Weiterhin das gemeinsame Erarbeiten eines Themas, was bezüglich des Umfangs durch die Erfahrungen des Betreuers eine angemessene Form annehmen sollte.\\
 
 \item \textbf{Kommunikation}
-\par Was die Kommunikationsbereitschaft betrifft, wird vor allem die Erreichbarkeit, das (schnelle) Beantworten von Fragen und die Möglichkeit, persönliche Treffen wahrnehmen zu können, von dem Betreuer erwartet.\\
+\par Was die Kommunikationsbereitschaft betrifft, wird vor allem die Erreichbarkeit, das (schnelle) Beantworten von Fragen und die Möglichkeit und persönliche Treffen wahrnehmen zu können, von dem Betreuer erwartet.\\
 
 \item \textbf{Feedback}
 \par Der am häufigsten angesprochene Punkt ist, dass sich der Betreuer mit der Bachelorarbeit der Studierenden insofern beschäftigt, dass Feedbackpunkte zum aktuellen Stand, Inhalt und Umfang diskutiert werden können.
@@ -419,34 +420,67 @@ Als im allgemeinen auftretenden Arten der Arbeit wurden die Klassen \textbf{Entw
 
 \par In der folgenden Tabelle werden die Ergebnisse der Befragung verdeutlicht:\\\\
 
-	\begin{tabular}{llc}
-		\hline
-		\textbf{Name der Gamificationstrategie} & \textbf{Art der Reaktion} & \textbf{Häufigkeit} \\ \hline
-		Motivation durch soziale Einbindung & Positiv & 3 \\
-		 & Negativ & 7 \\
-		 & Neutral & 1 \\ \hline
-		Motivation durch Sammeln von Archivements & Positiv & 10 \\
-		 & Negativ & 0 \\
-		 & Neutral & 1 \\ \hline
-		 &  & \textbf{11} \\
-	\end{tabular}
-	\captionof{table}{Einbezug der Studierende in Wahl der Gamificationstrategie}
-\label{tab:threecols}
 
-
+\begin{tabularx}{\textwidth}{l|l|c}
+	\hline
+	\textbf{Name der Gamificationstrategie} & \textbf{Art der Reaktion} & 
+	\textbf{Häufigkeit} \\ \hline
+	Motivation durch soziale Einbindung & Positiv & 3 \\
+	& Negativ & 7 \\
+	& Neutral & 1 \\ \hline
+	Motivation durch Sammeln von Archivements & Positiv & 10 \\
+	& Negativ & 0 \\
+	& Neutral & 1 \\ \hline
+	&  & \textbf{11} \\
+\end{tabularx}
+\captionof{table}{Einbezug der Studierende in Wahl der Gamificationstrategie}
+\label{tab:einbezugStudierende}
 
 \subsection{Ergebnisse der schriftlichen Online-Umfrage der Studierenden}
 
-\section{Identifikation des Problembereiches}
-Als äußerst interessanter Aspekt, wurden die teilweise unterschiedlich ausfallenden Kenntnisstände, sowie Erwartungen an den Prozess der Bearbeitung der Bachelorarbeit der Studierenden und der Professoren identifiziert.
+\newpage
+\section{Identifikation der Schwachstellen}
+\par Als äußerst interessanter Aspekt, wurden die teilweise unterschiedlich ausfallenden Kenntnisstände, sowie Erwartungen an den Prozess der Bearbeitung der Bachelorarbeit der Studierenden und der Professoren identifiziert.
 
 ... (Hier auf den Punkt bringen)
 
-\subsection{Ziele der Beteiligten (Warum muss es gelöst werden?)}
-\subsection{Analyse der Schwachstellen}
-\subsection{Szenariensammlung (Wie könnte ein Softwaresystem helfen)}
+\subsection{Ziele und Erwartungen der Beteiligten}
+\par Durch die Analyse der gewonnen Informationen aus Sicht der Studierenden und der Professoren, haben sich Ziele, sowie Erwartung der einzelnen Beteiligten herausarbeiten lassen, welche in der folgenden Tabelle (siehe Abbildung \ref{tab:zieleBeteiligte}) dargestellt sind.
+\par Die dabei genannten Ziele und Erwartungen entsprechen dem durch die Interviews allgemein ermittelten Bild, weshalb kleine Abweichungen in dieser Tabelle nicht mit aufgenommen wurden, da diese das Gesamtbild der Allgemeinheit zu negativ beeinflusst und die Realität verfälscht dargestellt hätte.\\
+\par Die kompletten schriftlichen Befragungen und Interviews befinden sich im Anhang TODO dieses Dokuments.\\
+
+\begin{tabularx}{\textwidth}{l|X}
+	\hline
+	\textbf{Name der Beteiligten} & \textbf{Ziele und Erwartungen der Beteiligten} \\ \hline
+	\textbf{Professoren} 
+	& - Steigerung der Fragebereitschaft von Studierenden\\
+	& - Weniger Aufwand in das sich wiederholende Informieren des Studierenden stecken\\
+	& - Zielgerichtetere Vorbereitung auf Besprechung mit dem Betreuer\\
+	& - Höhere Qualität von Abschlussarbeiten und der Dokumentation\\
+	& - Bessere Zeitplanung der Studierenden\\ 
+	& - Systematische(re) Vorgehensweise der Studierenden\\ \hline
+	\textbf{Studierende} 
+	& - Optimale Vorbereitung auf die Bearbeitung\\
+	& - Optimales Ergebnis der Bachelorarbeit\\
+	& - Kenntnisse über Formalien, Umfang und Ablauf der Bachelorarbeit besitzen\\
+	& - Kontrolle über die Bachelorarbeit und den Ablauf\\
+	& - Weniger Fallstricke bei der Bearbeitung der Bachelorarbeit stolpern\\ \hline
+\end{tabularx}
+\captionof{table}{Ziele der Beteiligten}
+\label{tab:zieleBeteiligte}
+\par Bei dem Vergleichen der Erwartungen und Ziele von Professoren und Studierenden, wird offensichtlich, dass sich diese größtenteils ergänzend zueinander verhalten und keine auftretenden Konflikte festzustellen sind.
+\par 
+
+\subsection{Die Kenntnisse der Beteiligten}
+TODO
+Vergleich der Erwartungen mit den Kenntnissen der Studierenden
+
+\subsection{Identifikation des Problembereichs}
 
 \section{Anforderungskatalog}\label{sec:anforderungskatalog}
+
+\subsection{Szenariensammlung (Wie könnte ein Softwaresystem helfen)}
+
 
 \section{Auswahl der Gamificationstrategie}
 - Zielgruppe Studenten oder INFORMATIKStudenten? Erweiterbarkeit beachten!
@@ -507,11 +541,14 @@ Es folgt eine stichpunktartige Auflistung und Beschreibung der Kernfeatures des 
 \item \textbf{Allgemeine Informationen}
 \par Dieser Abschnitt beinhaltet die allgemeinen Informationen, welche vor allem zur Klärung der Formalien bei der Bearbeitung der Abschlussarbeit wichtig sind.
 
-\item \textbf{Strukturierung der Abschlussarbeit}
+\item \textbf{Struktur der Arbeit}
 \par Der Abschnitt befasst sich näher mit dem Aufbau der Bachelorarbeit und stellt vor allem Informationen und Empfehlungen bereit, welche sich auf die Strukturierung und die Bedeutung der einzelnen Kapitel der Bachelorarbeit beziehen. 
 
-\item \textbf{Hinweise zum Schreiben der Arbeit}
+\item \textbf{Hinweise zum Schreiben}
 \par In diesem Abschnitt werden tiefgehende Informationen und Empfehlungen behandelt, welche sich auf die praktische Umsetzung des Schreibens im Detail beziehen. Beispielhaft hierfür sind der Schreibstil, die Verwendung von Zeiten oder die Einbindung von Bildern, Tabellen und Programmcode.
+
+\item \textbf{Methodenübersicht}
+\par Dieser Abschnitt bietet eine Übersicht, wichtiger Methoden der Informatik, die sich bei der Bearbeitung und Dokumentation der Bachelorarbeit als Hilfreich erweisen könnten.
 
 \item \textbf{FAQ}
 \par Dieses Kapitel behandelt oft gestellte Fragen und verdeutlicht die Informationen in der Form eines Frage-Antwort Schemas.
