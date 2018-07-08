@@ -6,7 +6,9 @@
 \usepackage{amsmath}
 \usepackage{hyperref}
 \usepackage{booktabs}
+\usepackage{subfigure} 
 \usepackage{graphicx}
+\usepackage{float}
 \usepackage{multirow}
 \usepackage{pdflscape}
 %\usepackage{lscape}
@@ -114,23 +116,17 @@ Die Foundation Libary, welche in Dart geschrieben wurde, stellt Basisklassen und
 Das Flutter Framework stellt zwei verschiedene Arten von Widgets zur Verfügung, welche zugehörig zu den jeweiligen Design Sprachen von Google Material Design\cite{Mat1}, welche 2014 entwickelt wurde und die iOS Design kopierende Design Sprache Cupertino\cite{Cup1}.
 \end{itemize}
 
-		...folgt
+		...
 
-\subsection{Entwicklung von Betriebssystem übergreifenden Applikationen}
-
-\subsection{Laufzeit-Performance}
+\section{Firebase}
 
 \section{Gamification}
 (Vergleiche \cite{Strahringer2017}
+\subsection{Nutzergruppen}
 \subsection{Abgrenzung zu anderen Ansätzen}
 
 
 \chapter{Untersuchung des Problembereiches} \label{chap:problemanalyse}
-
-\section{Hypothese}
-\par Die Auseinandersetzung mit komplexen Problemstellungen, wie die als abschließende Prüfungsleistung des Studiums zu erarbeitende Bachelorarbeit, stellt erfahrungsgemäß für viele Studierende eine große Herausforderung dar. Diese Herausforderung ergibt sich aus dem erstmaligen Zusammenspiel von selbstständigem und eigenverantwortlichem Arbeiten, sowie Problemlösen mittels erworbener Fach- und Methodenkenntnisse über einen längeren (in etwa dreimonatigen) Zeitraum.
-Trotz des Verlaufs des Studiums, des angeeigneten Wissens und der somit zahlreich erworbenen Fähigkeiten, kommt es im Kontext von Bachelorarbeiten dennoch oftmals zu Schwierigkeiten, diesen Zusammenhang auf reale Probleme abzubilden und zu dokumentieren.
-
 \section{Identifikation der Interessengruppen}
 \par In diesem Kapitel werden die identifizierten Interessengruppen dokumentiert und in Form von Steckbriefen in den verschiedenen Kategorien \textbf{Einfluss}, \textbf{Einstellung}, \textbf{Erwartungen}, sowie \textbf{Bemerkungen} beschrieben.  
 \subsection{Studierende}
@@ -181,6 +177,11 @@ Trotz des Verlaufs des Studiums, des angeeigneten Wissens und der somit zahlreic
 \textbf{Bemerkungen:}\par Machtpromotor
 \newpage
 
+
+\section{Hypothese}
+\par Die Auseinandersetzung mit komplexen Problemstellungen, wie die als abschließende Prüfungsleistung des Studiums zu erarbeitende Bachelorarbeit, stellt erfahrungsgemäß für viele Studierende eine große Herausforderung dar. Diese Herausforderung ergibt sich aus dem erstmaligen Zusammenspiel von selbstständigem und eigenverantwortlichem Arbeiten, sowie dem Problemlösen mittels erworbener Fach- und Methodenkenntnisse über einen längeren (in etwa dreimonatigen) Zeitraum.
+Trotz des Verlaufs des Studiums, des angeeigneten Wissens und der somit zahlreich erworbenen Fähigkeiten, kommt es im Kontext von Bachelorarbeiten dennoch oftmals zu Schwierigkeiten, diesen Zusammenhang auf reale Probleme abzubilden und zu dokumentieren.
+
 \section{Wahl der Analysestrategie}
 \par Um den Ist-Zustand zu ermitteln und somit eine Analysegrundlage zu erschaffen, werden Personengruppen der Fachhochschule Lübeck, durch verschiedene Befragungs- und Analysemethoden in das Projekt miteinbezogen. Dies soll einen detaillierten Einblick in die Sichtweisen der unterschiedlich beteiligten Personen und Interessengruppen ermöglichen und somit eine Grundlage für das Verständnis der aktuellen Situation bilden.
 
@@ -193,23 +194,22 @@ Trotz des Verlaufs des Studiums, des angeeigneten Wissens und der somit zahlreic
 
 \textbf{Studierende}
 \par Für die Studierenden aus dem Studiengang Informatik/Softwareentwicklung, ist es aufgrund der hohen Menge an Personen und den zu betreibenden Aufwand vorgesehen, wenige Gruppen- und nur in Ausnahmefällen auch Einzelinterviews, durchzuführen. 
-\par Die Interviews sollen als Grundlage zur Konzeption und Design weiterer Befragungsstrategien dienen und in diesem Umfang einen Ausgangspunkt für die Problemanalyse bieten.
-Durch das Durchführen von Gruppeninterviews, sollen die Studierenden zu Diskussionen angeregt sein, welche von dem Leiter des Interviews durchaus auch motiviert werden können.
-\par Nach Absprache mit den intervieweten Studierenden, werden diese weiterhin per schriftlicher Befragung in die Entwicklung des Projektes, unter ergänzender Zunahme anderer Studierender, eingebunden. Dies bietet den Vorteil, durch einen weiteren Kanal, Informationen von den Studierenden beziehen zu können. Wesentlich dabei, ist die Hoffnung der höher Ausfallenden Reaktionsfreudigkeit der Studierenden als für die zeitaufwändigeren Interviews.
+\par Die Interviews sollen als Grundlage zur Konzeption und Design weiterer Befragungsstrategien dienen und stellen in diesem Umfang einen Ausgangspunkt für die Problemanalyse dar. Weiterhin werden die gewählten Interviewpartner bei Zustimmung, über das gesamte Projekt und nach Absprache, auch in die Evaluation der Applikation miteinbezogen.\\
+Durch das Durchführen von Gruppeninterviews, sollen die Studierenden zu Diskussionen angeregt sein, welche von dem Leiter des Interviews durchaus auch motiviert werden können. Dies hat den Zweck, die Situation und die Rolle der Studierenden für den Interviewer erkenntlich zu machen.  Diese persönlichen Interviews dienen in erster Linie also nicht zur Erhebung von Daten, sondern als strategischer Orientierungspunkt für mich, den Projektleiter.
+\par Nach Absprache mit den intervieweten Studierenden, werden diese weiterhin per schriftlicher Befragung in die Entwicklung des Projektes, unter ergänzender Zunahme anderer Studierender, eingebunden. Dies bietet den Vorteil, durch einen weiteren Kanal, Informationen von den Studierenden beziehen zu können. Wesentlich dabei ist, die Hoffnung der höher Ausfallenden Reaktionsfreudigkeit der Studierenden, als für die im Vergleich zeitaufwändiger ausfallenden persönlichen Interviews.
 \par Miteinbezogen werden vorzugsweise alle Studierende der oberen Semester, unabhängig davon, ob sie sich noch in der Phase vor Beginn der Bearbeitung, während der Bearbeitung oder nach Abschluss der Bearbeitung der Bachelorarbeit befinden. Hierbei ist wichtig zu beachten, dass die verschiedenen Erfahrungsstände in den Gruppeninterviews nicht aufeinandertreffen sollten, da dieser Umstand somit zu einer gegenseitigen Beeinflussung führen könnte und wichtige Informationen nicht gewonnen werden könnten. Die verschieden zu extrahierenden Sichtweisen auf die Bearbeitung der Bachelorarbeit können auf diese Weise differenziert betrachtet und analysiert werden.
-\par Des weiteren wird eine Online-Umfrage den Teil der Datenerhebung darstellen, der quantitative Ergebnisse erzielt soll und deren Aussage somit eine nicht durch die Interviews und die schriftlichen Befragungen abgebildete Menge darstellt.
+\par Des weiteren wird eine Online-Umfrage den Teil der Datenerhebung darstellen, der quantitative Ergebnisse erzielen soll und deren Aussage somit eine nicht durch die Interviews und die schriftlichen Befragungen abgebildete Menge darstellt.
 
 \section{Ergebnisse der Professoren}
-\subsection{Ergebnisse der Einzelinterviews mit den Professoren}
-\par Im Folgenden sind die gewonnenen Eindrücke und Kenntnisse der Einzelinterviews mit den Professoren des Fachbereichs Informatik durch Themenkategorien geordnet und in zusammengefasster Form dokumentiert. \\
-\par Es haben insgesamt sechs Professoren an den Einzelinterviews teilgenommen, wobei es für fünf Interviews gestattet wurde, eine Tonaufzeichnung anzufertigen.\\\\
-\textbf{Allgemeine Informationen}\\
-\par Der zeitliche Rahmen der fünf aufgezeichneten Interviews erstreckt sich über einen Zeitrum von etwa 30 bis 45 Minuten. Für die Auswertung der aufgezeichneten Interviews wurden die Aussagen der Interviewpartner, auf Grundlage der vorliegenden Audioaufnahmen, unter Berücksichtigung des Kontextes aufbereitet und werden nachfolgend dargestellt.\\
-\par Ein weiteres Einzelinterview, welches nicht aufgezeichnet wurde, erstreckte sich über einen Zeitraum von 75 Minuten. Für dieses Interview wurden lediglich begleitende Feldnotizen angefertigt. Diese Feldnotizen wurden im Anschluss des Interviews aufbereitet und fließen in in die folgende Beschreibung ein.\\
+\par Im Folgenden sind die gewonnenen Eindrücke und Kenntnisse der Einzelinterviews mit den Professoren des Fachbereichs Informatik durch Themenkategorien geordnet und in zusammengefasster Form dokumentiert.
+\par Es haben insgesamt sechs Professoren an persönlichen Einzelinterviews teilgenommen, wobei es für fünf Interviews gestattet wurde, eine Tonaufzeichnung anzufertigen.\\
+\par Des Weiteren wird auch eine schriftliche Befragungen miteinbezogen, die jedoch das gleiche Fragespektrum wie die Interviews einnimmt. \\
+\par \textbf{Allgemeine Informationen}
+\par Der zeitliche Rahmen der fünf aufgezeichneten Interviews erstreckt sich über einen Zeitrum von etwa 30 bis 45 Minuten. Für die Auswertung der aufgezeichneten Interviews wurden die Aussagen der Interviewpartner, auf Grundlage der vorliegenden Audioaufnahmen, unter Berücksichtigung des Kontextes aufbereitet und werden nachfolgend dargestellt. Ein weiteres Einzelinterview, welches nicht aufgezeichnet wurde, erstreckte sich über einen Zeitraum von 75 Minuten. Für dieses Interview wurden lediglich begleitende Feldnotizen angefertigt. Diese Feldnotizen wurden im Anschluss des Interviews aufbereitet und fließen zusammen mit den Ergebnissen der schriftlichen Befragung in die folgende Beschreibung ein.\\
 \par Die gewählten Kategorien ergeben sich aus dem gewählten Auswertungsverfahren der qualitativen Inhaltsanalyse nach Mayring\cite{Mayring2015} und basieren in diesem Kontext auf die gemäß des Verfahrens herausgearbeiteten Codings.\\\\
 
 
-\textbf{Art der Arbeit}\\
+\textbf{Art der Arbeit}
 \par Im Laufe der Interviews wurden verschiedene Typen von Arbeiten versucht zu identifizieren. Dabei geht es vor allem darum, die Vielfalt der typischen Arbeiten des Studiengangs Informatik/Softwareentwicklung zu erfassen und somit einen Überblick über die Situation zu bekommen.\\
 Als im allgemeinen auftretenden Arten der Arbeit wurden die Klassen \textbf{Entwickelnde Arbeit}  und \textbf{Evaluierende Arbeit} identifiziert. Weiterhin gibt es auch \textbf{reine Literaturarbeiten}, welche in dem Studiengang Informatik/Softwareentwicklung jedoch nicht oder nur in einem sehr geringen Vorkommen auftreten.\\
 
@@ -305,33 +305,86 @@ Als im allgemeinen auftretenden Arten der Arbeit wurden die Klassen \textbf{Entw
 \par Reine Recherchierende Arbeiten finden in dem Studiengang Informatik/Softwareentwicklung aufgrund dem geringen Interesse seitens der Studierenden kaum statt und werden aus Gründen der Vollständigkeit lediglich erwähnt und nicht ausgeführt.
 \end{itemize}
 
-\textbf{Erwartungen an den Bacheloranden}\\
+\textbf{Erwartungen an den Bacheloranden}
 \par Im Laufe der Interviews wurden die Professoren hinsichtlich Ihrer Erwartungen an die Bacheloranden befragt und haben in diesem Rahmen häufig gleiche oder ähnliche Punkte ausgeführt. Aus diesem Grund werden im folgenden Verlauf die Meinungen der befragten Professoren aus der Sicht als Betreuer, unter den jeweiligen Aspekten als zusammengefasstes Meinungsbild wiedergegeben.\\
 
 \par Es folgt die Ausführung der gewonnenen Erkenntnisse:
 \begin{itemize}
-\item 
+\item \textbf{Selbständiges Arbeiten}
+\par Das selbstständige Arbeiten und Vorgehen ist eines der am häufigsten genannten Erwartungen, welches sich in unterschiedlichen Punkten zum Ausdruck bringen lässt. Dazu zählt vor allem das selbständige kommunizieren von Ergebnissen und das Einholen von Feedback, sowie die Transparenz bei Problemen oder Schwierigkeiten, um sich Hilfe von dem Betreuer zu holen. Es wurde mehrfach betont, dass es im Allgemeinen nicht die Aufgabe des Betreuers ist, nachzufragen und aufzufordern. Das Einbinden des Studierenden in die Erarbeitung der Aufgabenstellung ist ein häufig genannter Punkt, welcher bereits frühzeitig Engagement des Studierenden erfordert.
+\par Des Weiteren stellt das Selbstständige Einarbeiten in die Probleme, die Auswahl geeigneter Methoden und Werkzeuge ein wesentlicher Inhalt der Arbeit dar.
+\item \textbf{Die Vorgehensweise}
+\par Sehr häufig wird betont, dass die Vorgehensweise hinsichtlich der wissenschaftlichen Arbeitsweise von essenzieller Bedeutung ist. In diesem Rahmen soll der Studierende auch zeigen, dass er in der Lage ist große Probleme systematisch in Teilprobleme zu zerlegen und diese unter Berücksichtigung der im Studium vermittelten Methoden, Modelle und Techniken zu bearbeiten. Sehr wichtig ist dabei das vorausschauende Planen von Teilprozessen, wie beispielsweise das Evaluieren der Ergebnisse. Dies sollte von Anfang an berücksichtigt werden und die in diesem Rahmen getroffenen Entscheidungen sollten nachvollziehbar erklärt werden können. Dazu zählt weiterhin das Erstellen eines Zeitplans, welcher sich über die Zeit jedoch durchaus verändern kann. Es wird sehr viel Wert darauf gelegt, zu sehen, dass die Studierenden einen weiten Blick auf das gesamte Projekt entwickeln und pflegen.
+\item \textbf{Der Literaturteil}
+\par Es wird betont, dass vor allem Wert auf einschlägige Quellen Wert gelegt wird. In diesem Umfang ist es wichtig, dass die Studierenden Literaturquellen verwenden sollten, die bereits eine anerkannte längere Gültigkeit besitzen. Weiterhin sollten die Studierenden über den Umfang von Grundlagenliteratur hinaus blicken und je nach Themengebiet und Arbeitsstand spezifischere Fachliteratur in die Arbeit einbeziehen. Dies kann auch bedeuten, dass auf wissenschaftliche Papiere und Primärquellen verwiesen werden soll. Je nach Thema und Aufgabenstellung kann der Literaturteil mehr oder weniger Umfangreich ausfallen, welches sich mit dem praktischen Teil der Arbeit ausgleichen kann.
+\item \textbf{Der praktische Teil}
+\par Im Allgemeinen soll der praktische Teil den Umfang der Aufgabenstellung abdecken und gegebene und/oder erhobene Anforderungen erfüllen. Je nach Thema und Aufgabenstellung der Arbeit nimmt dieser Teil einen höheren oder niedriger ausfallenden Umfang ein.
+Der Studierende soll bei der praktischen Bearbeitung der Aufgabe zeigen, das er in der Lage ist, das im Studium gelernte Wissen, die kennengelernten Methoden und deren Ausführung umzusetzen. 
+\item \textbf{Das Ergebnis der Bachelorarbeit}
+\par Grundsätzlich soll die Bachelorarbeit aus zwei Teilen von Leistungen bestehen. Die von dem Studenten durchgeführte Literaturarbeit nimmt einen Teil der Arbeit ein, während die eigenständige praktische Leistung den anderen Teil erfüllt. Der Umfang der jeweiligen Anteile kann dabei je nach Themengebiet und Aufgabenstellung stark variieren.
+\par Das Ergebnis der Bachelorarbeit, welches sich je nach Art der Arbeit voneinander stark unterscheiden kann, soll wissenschaftlich erarbeitet und somit nachvollziehbar und belegbar sein, sowie im Optimalfall die Aufgabenstellung erfüllen. Es kann jedoch auch vorkommen, dass das angestrebte Ziel aus verschiedenen Gründen nicht erreicht wurde. Dies muss nicht bedeuten, dass es zu einer schlechten Bewertung der Bachelorarbeit kommt, sofern der Grund oder die Erkenntnis über ein bestimmtes aufgetretenes Problems belegbar und nachvollziehbar dokumentiert ist.
 \end{itemize}
 
-\textbf{Häufig Auftretende Probleme bei der Bearbeitung der Bachelorarbeit}\\
+\textbf{Häufig Auftretende Probleme bei der Bearbeitung der Bachelorarbeit}
 \par Es stellte sich im Verlauf des Interviews heraus, dass unterschiedliche Studierende immer wieder mit gleichen oder ähnlichen Problemen zu kämpfen haben. Im folgenden Verlauf werden diese genannten Probleme in aufbereiteter Form stichpunktartig beschrieben.\\
 
 \par Es folgt die Ausführung der gewonnenen Erkenntnisse:
 \begin{itemize}
-\item 
+\item \textbf{Zeitmanagement}
+\par Als am häufigster genannter Aspekt ist das mangelhafte Zeitmanagement der Studierenden. Im Laufe der Bearbeitung der Bachelorarbeit kommt es häufig zu der Unterschätzung des nötigen  Zeitaufwandes, besonders hinsichtlich des Schreibens der Dokumentation. 
+\par Viele Studierende schieben das Schreiben der Dokumentation auf einen späteren Zeitpunkt und geraten im späteren Verlauf der Bearbeitungszeit somit unter Zeitdruck. Die Betreuer haben unter diesen Umständen wenig Möglichkeiten, rechtzeitiges und hilfreiches Feedback zu liefern. Es wird häufig empfohlen, frühzeitig mit dem Schreiben anzufangen und dies begleitend zum Arbeitsfortschritt die Dokumentation an mehreren Stellen wachsen zu lassen. Trotz vieler Hinweise seitens der Betreuer, kommt es in diesen Belangen häufig zu starken Problemen.
+Das Problem des mangelnden Zeitmanagements äußert sich unter anderem auch darin, dass die Studierenden sich bei der Bearbeitung in Details verlieren, da sie die Schwerpunkte der Arbeit nicht erkennen.
+\item \textbf{Wissenschaftliches Arbeiten}
+\par Die Studierenden erfassen teilweise nicht die Bedeutung des wissenschaftlichen Arbeiten. Es kommt immer wieder zu Schwierigkeiten und Unklarheiten über den eigentlichen Umfang der Arbeit und wodurch sich das wissenschaftliche Arbeiten auszeichnet. Oft wird der falsche Umgang mit Literatur und Quellen als negatives Beispiel genannt.
+\par Ein Kritikpunkt ist, dass es gibt in dem Studiengang Informatik/Softwareentwicklung keinen Kurs gibt, welcher die Studienenden auf das wissenschaftliche Arbeiten vorbereitet. In einigen Wahlpflichtmodulen werden diesbezüglich zwar Ansätze im Rahmen von Projekten integriert, jedoch gilt dies somit nur für die an dem Wahlpflichtmodul teilnehmenden Studierenden und steht auch nicht im Fokus der Projektarbeit.
+\item \textbf{Kommunikation}
+\par Kommunikation und Transparenz ist ein weiteres angesprochenes Problem. Es kommt vor, dass Studierende und Betreuer unterschiedliche Ansichten über die Zusammenarbeit haben, welche sich dadurch äußern, dass die Studierenden auf Forderungen bezüglich Leistungen oder Ergebnissen der Betreuer warten oder aus sich sogar aus diversen Gründen nicht trauen, ihren aktuellen Arbeitsstand oder ihre Probleme mit dem Betreuer zu teilen. 
+\item \textbf{Die Vorbereitung der Studierenden}
+\par Bei der Vorbereitung der Studierenden nennen die beteiligten Interviewpartner unterschiedliche Aspekte, welche zum einen das mangelhafte selbständige Informieren der Studierenden kritisiert, andererseits jedoch auch eine optimaler zu gestaltende Vorbereitung der Studierenden seitens der Fachhochschule für den Studiengang Informatik/Softwareentwicklung.
+\par Das angebotenen Bachelorarbeit Seminar wird positiv erwähnt, da es einen positiven Einfluss auf die Arbeit der Studienenden hat. Es müssen weniger Aspekte einer Bachelorarbeit erklärt werden, jedoch müssen viele Aspekte mehrfach wiederholt werden. 
+\par Es wird betont, dass auch viele Informationsmaterialien im Lernraum der Fachhochschule Lübeck zu finden sind, auf die auch oft hingewiesen wird, jedoch von den Studierenden nicht in dem Umfang beachtet werden, für den die Materialien gedacht sind. Dabei wird unter anderem auch kritisiert, das die Informationsmaterialien teilweise schwer auffindbar sind, da sie nicht an einer zentralen Stelle, sondern verteilt im Lernraum liegen. 
+\par Weiterhin wird jedoch auch betont, dass die Studierenden zu wenig Engagement aufbringen, sich trotz vieler Möglichkeiten selbstständig zu informieren. 
 \end{itemize}
 
-\textbf{Die Applikation - Erwartungen, Chancen und Risiken}\\
+\textbf{Die Applikation - Wünsche, Chancen und Risiken}
 \par In jedem Interview bekamen die Professoren abschließend die Möglichkeit, ihre Erwartungen an eine solche Applikationen auszuführen und besonders auf die, aus ihrer Sicht mögliche Risiken und Chancen einzugehen und diesbezüglich auch Anmerkungen oder Empfehlungen zu tätigen. Diese Anmerkungen werden im folgenden Verlauf zusammengefasst dargestellt.\\
 
 \par Es folgt die Ausführung der gewonnenen Erkenntnisse:
 \begin{itemize}
-\item 
+\item \textbf{Anregungen und Wünsche}
+\begin{itemize}
+\item \textbf{Neuer Kanal zu den Studierenden}
+\par Es wird der Wunsch geäußert, dass die Applikation verwendet werden kann, um in zentraler Form konkrete interne oder externe Bachelorarbeit-Themen, sowie Beispielthemen angeben zu können, da dies an der Fachhochschule Lübeck bisher nicht ermöglicht ist.
+\item \textbf{Plattform als Informationsquelle}
+\par Es besteht der Wunsch, die im Lernraum vorliegenden Informationsmaterialien, durchaus auch in aufbereiteter Form, durch die Applikation den Studienreden zugänglicher zu machen.
+\item \textbf{Applikation zur Unterstützung des Zeitmanagements}
+\par Es wird der Wunsch geäußert, die Studierenden bei dem Zeitmanagement, unter anderem durch Erinnerungen, zu unterstützen. In diesem Rahmen wird der Vorschlag eingebracht, möglichst detaillierte Beschreibungen von Arbeitspaketen in dem Tool zu verlangen, damit die Studierenden dazu gezwungen sind, sich rechtzeitig mit der Aufwandseinschätzung zu beschäftigen.
+\end{itemize}
+\item \textbf{Chancen}
+\begin{itemize}
+\item Die Applikation als neuer Kanal für die Studierenden, der dafür dienen kann, dass Studierende sich besser informieren können. Dies wird besonders in Bezug auf die Formalien einer Bachelorarbeit betont, da viele Studierende gar nicht wissen was die Rahmenbedingungen einer Bachelorarbeit sind oder welche Regeln und Anforderungen es überhaupt gibt.
+\item Die Applikation kann im Gegensatz zum Bachelorseminar begleitend zu der eigenen Bachelorarbeit genutzt werden kann. Dies kann dafür sorgen, dass die Aufnahmebereitschaft der Studierenden für Tipps, Empfehlungen und weiteren Aspekten gesteigert wird, da sie sich zu diesem Zeitpunkt mit dem Problem konfrontiert sehen und somit der Lerneffekt am höchsten ist. In diesem Ansatz wird auch die Chance erkannt, dass der Fokus der Studierenden zum richtigen Zeitpunkt auf bestimmte wichtige Fragen gelenkt werden können und somit grobe Fehler minimiert werden können.
+\item Besseres Zeitmanagement der Studierenden und die somit geförderten organisatorischen Fähigkeiten der Studenten.
+\item Die App könnte Probleme im Projektmanagement und bei der Gestaltung der Dokumentation minimieren.
+\item Das Senken des Beratungsaufwandes für Professoren und somit das Minimieren von sich wiederholenden Arbeitsabläufen für die unterschiedlichen Bacheloranden wird als Chance genannt, da in einfacher Form auf eine Applikation verwiesen werden kann, die alle nötigen Informationen enthält.
 \end{itemize}
 
+\item \textbf{Risiken}
+\begin{itemize}
+\item Die Applikation kennt nicht den realen Stand der Bachelorarbeit, sondern die Studierenden sind für die Verwaltung selbst zuständig. Wenn der Benutzer eine der Aufgaben abhakt, stellt dies unter Umständen nicht den echten Zustand der Bachelorarbeit dar und könnte dem Studierenden einen falschen Eindruck des Fortschritts geben.
+\item Die Applikation regt dazu an, sich durch das Zeitmanagementtool zu über-planen, was dafür sorgt, dass der Benutzer von der eigentlichen Arbeit abgehalten wird. In diesem Rahmen kann die Applikation dem Benutzer nicht die Eigenverantwortung abnehmen. Der Studierende kann der Applikation nicht die Schuld für einen Misserfolg geben.
+\item Gamificationelemente könnten unter Umständen einen sehr begrenzten Effekt haben, da sie kein Interesse an einem Thema wecken können, sondern das Grundinteresse aus der Eigenmotivation erzeugt werden muss.
+\item Befürchtung, dass Studenten gegebenenfalls die Applikation als Leitfaden als unumstößlich ansehen könnten und somit durch unterschiedliche Ansichten in einen Konflikt mit dem Betreuer geraten können.
+\item Die App könnte missverstanden werden als Ersatz für die persönliche Betreuung – insbesondere fachliche Aspekte wird eine App naturgemäß nicht abdecken können. Es könnte weiterhin zu einem „Device Mismatch“ kommen, da Bachelorarbeiten üblicherweise nicht an mobilen Endgeräten entstehen man müsste also immer zwei Geräte bedienen: Notebook/Desktop-PC und Smartphone.
+
+\end{itemize}
+
+\end{itemize}
+
+\newpage
 \section{Ergebnisse der Studierenden}
 \par Das folgende Kapitel liefert einen Einblick in die Ergebnisse der Befragung der Studierenden und beschreibt die in diesem Rahmen gewonnenen Erkenntnisse.
-\par Im Fokus der Befragung stehen die Erwartungen an die Bachelorarbeit, sowie die typischen Probleme und Sorgen  der Studierenden. Da die Studierenden begleitend in das Projekt einbezogen werden, werden die Erkenntnisse des Projektverlaufes abschnittsweise in zusammengefasster Form dargestellt.
+\par Im Fokus der Befragung stehen die Erwartungen an die Bachelorarbeit und den Betreuer, sowie die typischen Probleme und Sorgen der Studierenden. Die Erkenntnisse der Befragung werden abschnittsweise in zusammengefasster Form dargestellt. Die gesamten schriftlichen Befragungen sind im Anhang zu finden. (TODO) 
 
 \subsection{Ergebnisse der Interviews mit Studierenden}
 \par Informationen zu den Interviews:
@@ -344,13 +397,10 @@ Als im allgemeinen auftretenden Arten der Arbeit wurden die Klassen \textbf{Entw
 \subsection{Ergebnisse der schriftlichen Befragung der Studierenden}
 \par Informationen zu der schriftlichen Befragung:
 \begin{itemize}
-\item Insgesamt wurden ? Studenten schriftlich befragt.
-\item ? der befragten Studenten befinden sich ab dem 4. Semester noch in der Phase vor der Bearbeitung der Bachelorarbeit.
-\item ? der befragten Studenten befinden sich bereist ungefähr einen Monat in der Bearbeitungsphase der Bachelorarbeit.
+\item Insgesamt wurden 17 Studenten schriftlich befragt.
 \end{itemize}
 
-\newpage
-\par \textbf{Schriftliches Interview der Studierenden zur Identifikation der allgemeinen Probleme und Wünsche}
+\par \textbf{Schriftliche Befragung der Studierenden}
 \par Die erste Befragung der Studierenden befasst sich mit der aktuellen allgemeinen Situation, bezüglich der Bearbeitung der Bachelorarbeit.\\
 
 \par Die Erkenntnisse lassen sich wie folgt zusammenfassen:
@@ -361,52 +411,50 @@ Als im allgemeinen auftretenden Arten der Arbeit wurden die Klassen \textbf{Entw
 
 \item \textbf{Teilen von Erfahrungen}
 \par Insbesondere werden sich Erkenntnisgewinne durch das Teilen von Erfahrungen der Betreuer gewünscht, was sich besonders auf die Arbeit mit externen Unternehmen bezieht. Hinweise zu Besonderheiten und die wichtigen Unterschiede zu einer internen Bachelorarbeit. 
-\par Weiterhin das gemeinsame Erarbeiten eines Themas, was bezüglich des Umfangs durch die Erfahrungen des Betreuers eine angemessene Form annehmen sollte.\\
+\par Weiterhin das gemeinsame Erarbeiten eines Themas, was bezüglich des Umfangs durch die Erfahrungen des Betreuers eine angemessene Form annehmen sollte.
 
 \item \textbf{Kommunikation}
-\par Was die Kommunikationsbereitschaft betrifft, wird vor allem die Erreichbarkeit, das (schnelle) Beantworten von Fragen und die Möglichkeit und persönliche Treffen wahrnehmen zu können, von dem Betreuer erwartet.\\
+\par Was die Kommunikationsbereitschaft betrifft, wird vor allem eine hohe Erreichbarkeit, das (schnelle) Beantworten von Fragen und die Möglichkeit, persönliche Treffen wahrnehmen zu können, von dem Betreuer erwartet.
 
 \item \textbf{Feedback}
-\par Der am häufigsten angesprochene Punkt ist, dass sich der Betreuer mit der Bachelorarbeit der Studierenden insofern beschäftigt, dass Feedbackpunkte zum aktuellen Stand, Inhalt und Umfang diskutiert werden können.
-\par In diesem Rahmen wird auch vereinzelt erwartet, dass der Betreuer Interesse an der Arbeit des Studierenden hat, sowie Bereitschaft für die Beantwortung von Fragen und das Diskutieren von Lösungsmöglichkeiten zeigt.\\
+\par Grundsätzlich wird von dem Betreuer erwartet, dass dieser sich mit der Bachelorarbeit der Studierenden insofern beschäftigt, dass Feedbackpunkte zum aktuellen Stand, Inhalt, Ideen und Umfang konstruktiv diskutiert werden können. Darüber Hinaus erwarten die Studierenden, dass der Betreuer Hinweise bei Unverständlichkeiten der Doku gibt und gegebenenfalls schlechte Ideen und Entwurfsentscheidungen hinterfragt.
+\par In diesem Rahmen wird auch vereinzelt erwartet, dass der Betreuer Interesse an der Arbeit des Studierenden hat, sowie Bereitschaft für die Beantwortung von Fragen und das Diskutieren von Lösungsmöglichkeiten eingeht.
 
 \item \textbf{Impulse des Betreuers}
-\par Teilweise erwarten die befragten Studierende, dass der Betreuer aktiv an dem Prozess der Erstellung der Bachelorarbeit teilnimmt. Das bezieht sich auf die Unterstützung bei dem Zeitmanagement, das Geben von Denkanstößen und Anregungen, sowie das von dem Betreuer ausgehenden Einfordern von Leistungen.\\
+\par In wenigen Fällen erwarten die befragten Studierende, dass der Betreuer aktiv an dem Prozess der Erstellung der Bachelorarbeit teilnimmt. Das bezieht sich auf die Unterstützung bei dem Zeitmanagement, das Geben von Denkanstößen und Anregungen, sowie das von dem Betreuer ausgehenden Einfordern von Leistungen.
 \end{itemize}
 
-\newpage
 \item \textbf{Einschätzung der größten Probleme}
 
 \begin{itemize}
 \item \textbf{Schreiben der Dokumentation}
-\par Die von den Studierenden angesprochenen Punkte bezüglich der Dokumentation, befassen sich mit den Unsicherheiten bei der Einschätzung von Umfang, Inhalt und Aufbau der Dokumentation. 
-\par Des weiteren werden Rechtschreibung, sowie der korrekte Umgang mit Quellen genannt.\\
+\par Die von den Studierenden angesprochenen Punkte befassen sich in erster Linie mit Unsicherheiten bei der Einschätzung von Umfang, Inhalt und Aufbau der Dokumentation. 
+\par Des weiteren werden Rechtschreibung, sowie der korrekte Umgang mit Quellen genannt.
 
 \item \textbf{Zeitmanagement}
-\par Der Punkt Zeitmanagement stellt für die Studierenden häufig eine Herausforderung dar, welche oftmals auch in Zusammenhang mit weiteren resultierenden Problemen genannt wird.\\
+\par Der Punkt Zeitmanagement stellt für viele Studierenden eine grundsätzliche die größte Herausforderung dar.
 
 \item \textbf{Fachliche Probleme}
-\par Teilweise werden auch fachliche Probleme unterschiedlicher Natur als größte Herausforderung genannt. Dazu zählen zum einen Probleme mit der im Rahmen der Bachelorarbeit zu verwendende Hardware, andererseits aber auch Softwareprobleme, das Entwickeln von sinnvollen Tests und das präzise Ermitteln von Anforderungen.\\
+\par Teilweise werden auch fachliche Probleme unterschiedlicher Natur als größte Herausforderung genannt. Dazu zählen zum einen Probleme mit der im Rahmen der Bachelorarbeit zu verwendende Hardware, andererseits aber auch Softwareprobleme, das Entwickeln von sinnvollen Tests und das präzise Ermitteln von Anforderungen.
 
 \item \textbf{Sonstige Probleme}
-\par Weitere Probleme die vereinzelt genannt werden sind Probleme mit der Themenfindung, die Kommunikation zwischen internen Betreuer und der externen Firma oder die allgemeine Überforderung bei der Bearbeitung der Bachelorarbeit.\\
+\par Weitere Probleme die vereinzelt genannt werden sind Probleme mit der Themenfindung, die Kommunikation zwischen internen Betreuer und der externen Firma oder die allgemeine Überforderung bei der Bearbeitung der Bachelorarbeit.
 \end{itemize}
 
-\newpage
 \item \textbf{Bessere Vorbereitung auf die Bachelorarbeit}
 \begin{itemize}
 
 \item \textbf{Zeitmanagement}
-\par Im Allgemeinen wünscht sich ein Großteil der Studierende eine bessere Vorbereitung bezüglich des Zeitmanagements. Die Studierenden bemängeln eine unzureichende Vorbereitung auf das Abschätzen von Zeitaufwand, Planung von größeren Projekten und nennen in diesem Rahmen den Wunsch nach Möglichkeiten und Maßnahmen im Studium, wie das häufigere Einbinden von Projektarbeiten.\\
+\par Im Allgemeinen wünscht sich ein großer Teil der Studierende eine bessere Vorbereitung bezüglich des Zeitmanagements. Die Studierenden bemängeln eine unzureichende Vorbereitung auf das Abschätzen von Zeitaufwand, Planung von größeren Projekten und nennen in diesem Rahmen den Wunsch nach Möglichkeiten und Maßnahmen im Studium, wie das häufigere Einbinden von Projektarbeiten.
 
 \item \textbf{Wissenschaftliches Arbeiten}
-\par Häufig wird der Wunsch nach besserer Vorbereitung auf das wissenschaftliche Arbeiten genannt, was sich explizit auf den Aufbau einer wissenschaftlichen Arbeit, der Umgang mit Quellen und das korrekte Einbinden von Quellcode-Inhalten. Als vorkommender Lösungsvorschlag wird ein Kurs, welcher zur besseren Vorbereitung vor dem 6. Semester stattfinden sollte, genannt.\\
+\par Häufig wird der Wunsch nach besserer Vorbereitung auf das wissenschaftliche Arbeiten genannt, was sich explizit auf den Aufbau einer wissenschaftlichen Arbeit, der Umgang mit Quellen und das korrekte Einbinden von Quellcode-Inhalten. Als vorkommender Lösungsvorschlag wird ein Kurs, welcher zur besseren Vorbereitung vor dem 6. Semester stattfinden sollte, genannt.
 
 \item \textbf{Aufklärung zur Bachelorarbeit}
-\par Viele der befragten Studierenden wünschen sich vorbereitende und informierende Maßnahmen zur Bachelorarbeit. Dies bezieht sich vor allem auf das Klären organisatorischer Fragen, der wichtigen Formalien und der Umfang der Bachelorarbeit. Im Detail werden auch vorbereitende Maßnahmen gewünscht, die sich auf die Vor- und Nachteile einer extern oder intern betreuten Bachelorarbeit beziehen.\\ 
+\par Viele der befragten Studierenden wünschen sich vorbereitende und informierende Maßnahmen zur Bachelorarbeit. Dies bezieht sich vor allem auf das Klären organisatorischer Fragen, der wichtigen Formalien und der Umfang der Bachelorarbeit. Im Detail werden auch vorbereitende Maßnahmen gewünscht, die sich auf die Vor- und Nachteile einer extern oder intern betreuten Bachelorarbeit beziehen.
 
 \item \textbf{Sonstige Anmerkungen}
-\par Weiterhin treten bei der Befragung auch Fälle auf, bei denen keine expliziten Veränderung gewünscht werden.\\
+\par Weiterhin treten bei der Befragung auch Fälle auf, bei denen keine expliziten Veränderung gewünscht werden, da die Studierenden zufrieden sind. Der Wunsch nach einem stärkeren Fokus auf Design-Pattern im Laufe des Studiums wurde einmal geäußert.
 
 \end{itemize}
 
@@ -414,24 +462,25 @@ Als im allgemeinen auftretenden Arten der Arbeit wurden die Klassen \textbf{Entw
 
 \newpage
 \par \textbf{Einbezug der Studierenden in die Gestaltung der Applikation}\\
-\par Die Einbindung der Studierenden befasst sich mit spezifischeren Fragen, hinsichtlich der motivierenden Gamificationinhalte der zu entwickelnden Applikation. Der Verlauf der folgenden Befragungen fand somit nicht in einem Durchlauf statt, sondern ergibt sich aus dem permanenten Einbinden der Studierenden.
+\par Die Einbindung der Studierenden befasst sich mit spezifischeren Fragen, hinsichtlich der motivierenden Gamificationinhalte der zu entwickelnden Applikation. Der Verlauf der folgenden Befragungen fand somit nicht in einem Durchlauf statt, sondern ergibt sich aus dem permanenten Einbinden der Studierenden. Es wurden bei der Befragung zwei Gamification-Ansätze vorgestellt.\\
+\par Der erste Ansatz fällt unter anderem in die Benutzergruppe der \textbf{Socialiser}. Inhalt des Ansatzes ist es, die Motivation durch den sozialen Kontakt und Austausch mit anderen Teilnehmern zu erzeugen, indem diese den Fortschritt bei der Bearbeitung der Bachelorarbeit anderer Studierender wahrnehmen können.\\
+\par Als Gegengewicht zum ersten Ansatz, orientiert sich der zweite Ansatz an der Benutzergruppe \textbf{Achievers}. Dieser Ansatz beruht vor allem auf das Abschließen und Sammeln von Erfolgen. Im Rahmen der Applikation wird es dem Benutzer bei dieser Idee ermöglicht, Erfolge durch erfüllen von definierten Aufgaben zu erlangen und somit den Fortschritt des Projektes durch das abschließen von geeigneten Aufgaben zu verfolgen.\\
 
-\par Primäres Ziel des Einbezugs der Studierenden ist, zu bestimmen, welche Einbindung von Gamificationstrategien ansprechend auf die Zielgruppe wirken und in welcher Weise sich das Einbinden von Gamificationelementen auf die Steigerung der Motivation von Studenten bei der Bearbeitung der Bachelorarbeit auswirkt.\\
+\par Primäres Ziel des Einbezugs der Studierenden ist, zu bestimmen, welche Einbindung von Gamificationstrategien ansprechend auf die Zielgruppe der Studierenden wirken und in welcher Weise sich das Einbinden von Gamificationelementen auf die Steigerung der Motivation von Studenten bei der Bearbeitung der Bachelorarbeit auswirkt.\\
 
 \par In der folgenden Tabelle werden die Ergebnisse der Befragung verdeutlicht:\\\\
 
-
-\begin{tabularx}{\textwidth}{l|l|c}
+\begin{tabularx}{\textwidth}{l|X|c}
 	\hline
 	\textbf{Name der Gamificationstrategie} & \textbf{Art der Reaktion} & 
 	\textbf{Häufigkeit} \\ \hline
 	Motivation durch soziale Einbindung & Positiv & 3 \\
-	& Negativ & 7 \\
-	& Neutral & 1 \\ \hline
-	Motivation durch Sammeln von Archivements & Positiv & 10 \\
+	& Negativ & 12 \\
+	& Neutral & 2 \\ \hline
+	Motivation durch Sammeln von Archivements & Positiv & 15 \\
 	& Negativ & 0 \\
 	& Neutral & 1 \\ \hline
-	&  & \textbf{11} \\
+	&  & \textbf{17} \\
 \end{tabularx}
 \captionof{table}{Einbezug der Studierende in Wahl der Gamificationstrategie}
 \label{tab:einbezugStudierende}
@@ -439,49 +488,64 @@ Als im allgemeinen auftretenden Arten der Arbeit wurden die Klassen \textbf{Entw
 \subsection{Ergebnisse der schriftlichen Online-Umfrage der Studierenden}
 
 \newpage
-\section{Identifikation der Schwachstellen}
-\par Als äußerst interessanter Aspekt, wurden die teilweise unterschiedlich ausfallenden Kenntnisstände, sowie Erwartungen an den Prozess der Bearbeitung der Bachelorarbeit der Studierenden und der Professoren identifiziert.
+\section{Identifikation des Problembereichs}
+\par Aus den Ergebnissen der Befragungen geht hervor, dass die Probleme nicht in den unterschiedlichen Ansichten der Studierenden und der Professoren liegen, da beide beteiligte Gruppen sehr kompatible Erwartungen und Ziele besitzen.\\
 
-... (Hier auf den Punkt bringen)
+\par Häufig wird von den Studierenden geäußert, dass sie sich unzureichend vorbereitet für die Bachelorarbeit fühlen und die größten Probleme der Studierenden im Bereich Zeitmanagement und dem wissenschaftlichen Arbeiten liegen. Zusätzlich äußern sich die Studierenden zu fehlenden oder unzureichend aufgebauten Kenntnissen bezüglich der Rahmenbedingungen und weiteren Informationen zu Bachelorarbeiten als Ganzes.\\
 
-\subsection{Ziele und Erwartungen der Beteiligten}
-\par Durch die Analyse der gewonnen Informationen aus Sicht der Studierenden und der Professoren, haben sich Ziele, sowie Erwartung der einzelnen Beteiligten herausarbeiten lassen, welche in der folgenden Tabelle (siehe Abbildung \ref{tab:zieleBeteiligte}) dargestellt sind.
-\par Die dabei genannten Ziele und Erwartungen entsprechen dem durch die Interviews allgemein ermittelten Bild, weshalb kleine Abweichungen in dieser Tabelle nicht mit aufgenommen wurden, da diese das Gesamtbild der Allgemeinheit zu negativ beeinflusst und die Realität verfälscht dargestellt hätte.\\
-\par Die kompletten schriftlichen Befragungen und Interviews befinden sich im Anhang TODO dieses Dokuments.\\
+\par Die Professoren sehen die Probleme bei den Studierenden eindeutig auch bei dem Zeitmanagement, dem Wissenschaftlichen Arbeiten, der Kommunikation und einer mangelnden Vorbereitung, bezüglich den Formalitäten und des Ablaufs einer Bachelorarbeit.\\
+
+\par Hervorzuheben ist der Aspekt, dass die existierenden Probleme sowohl den Professoren, als auch den Studierenden bewusst sind und unabhängig der unterschiedlich ausfallenden Sichtweisen übereinstimmen.\\
+
+\par Somit lässt sich erwarten, dass die angestrebten Ziele der Studierenden und die Erwartungen der Professoren aufgrund dieser Wissens- und Erfahrungslücken unter Umständen nicht reibungslos im Rahmen der Bachelorarbeit erfüllt werden können. Auf diese Weise werden die Erwartungen der Professoren, sowie die Ziele der Studierenden gefährdet und können unter Umständen nicht erfüllt werden, obwohl dies im Sinne beider Beteiligten ist.
+
+\subsection{Erwartungen an die Applikation}
+\par Durch die Befragung der Beteiligten und der Analyse der gewonnen Informationen, haben sich die Erwartungen der Beteiligten an die Benutzung der Applikation herausarbeiten lassen, welche in der folgenden Tabelle (siehe Abbildung \ref{tab:erwartungenBeteiligte}) dargestellt sind.
+\par Die dabei genannten Ziele und Erwartungen entsprechen dem allgemeinen Bild, welches durch die Interviews ermittelten werden konnte, weshalb kleine Abweichungen in dieser Tabelle nicht mit aufgenommen wurden. Kleinen Abweichungen hätten einen zu großen Einfluss auf das Gesamtbild. Die kompletten schriftlichen Befragungen und Interviews befinden sich im Anhang (TODO) dieses Dokuments.\\
 
 \begin{tabularx}{\textwidth}{l|X}
 	\hline
 	\textbf{Name der Beteiligten} & \textbf{Ziele und Erwartungen der Beteiligten} \\ \hline
 	\textbf{Professoren} 
-	& - Steigerung der Fragebereitschaft von Studierenden\\
-	& - Weniger Aufwand in das sich wiederholende Informieren des Studierenden stecken\\
-	& - Zielgerichtetere Vorbereitung auf Besprechung mit dem Betreuer\\
-	& - Höhere Qualität von Abschlussarbeiten und der Dokumentation\\
-	& - Bessere Zeitplanung der Studierenden\\ 
-	& - Systematische(re) Vorgehensweise der Studierenden\\ \hline
+	& Steigerung der Fragebereitschaft von Studierenden\\
+	& Weniger Aufwand in das sich wiederholende Informieren des Studierenden stecken\\
+	& Zielgerichtetere Vorbereitung auf Besprechung mit dem Betreuer\\
+	& Höhere Qualität von Abschlussarbeiten und der Dokumentation\\
+	& Bessere Zeitplanung der Studierenden\\ 
+	& Systematische(re) Vorgehensweise der Studierenden\\ \hline
 	\textbf{Studierende} 
-	& - Optimale Vorbereitung auf die Bearbeitung\\
-	& - Optimales Ergebnis der Bachelorarbeit\\
-	& - Kenntnisse über Formalien, Umfang und Ablauf der Bachelorarbeit besitzen\\
-	& - Kontrolle über die Bachelorarbeit und den Ablauf\\
-	& - Weniger Fallstricke bei der Bearbeitung der Bachelorarbeit stolpern\\ \hline
+	& Optimale Vorbereitung auf die Bearbeitung der Bachelorarbeit\\
+	& Optimales Ergebnis der Bachelorarbeit\\
+	& Kenntnisse über Formalien, Umfang und Ablauf der Bachelorarbeit\\
+	& Kontrolle über die Bachelorarbeit und den Ablauf\\
+	& Unterstützung \\
+	& Weniger Fallstricke bei der Bearbeitung der Bachelorarbeit stolpern\\ \hline
 \end{tabularx}
-\captionof{table}{Ziele der Beteiligten}
-\label{tab:zieleBeteiligte}
-\par Bei dem Vergleichen der Erwartungen und Ziele von Professoren und Studierenden, wird offensichtlich, dass sich diese größtenteils ergänzend zueinander verhalten und keine auftretenden Konflikte festzustellen sind.
-\par 
+\captionof{table}{Erwartung der Beteiligten an die Applikation}
+\label{tab:erwartungenBeteiligte}
 
-\subsection{Die Kenntnisse der Beteiligten}
-TODO
-Vergleich der Erwartungen mit den Kenntnissen der Studierenden
-
-\subsection{Identifikation des Problembereichs}
-
+\newpage
 \section{Anforderungskatalog}\label{sec:anforderungskatalog}
+\subsection{Produktübersicht}
+
+\subsection{Produktfunktionen}
+
+\begin{tabularx}{\textwidth}{l|X}
+	\hline
+	\textbf{Bezeichnung} & \textbf{Beschreibung} \\ \hline
+	/PF10/ & \\
+	/PF20/ & \\
+	/PF30/ & \\
+	/PF40/ & \\
+	/PF50/ & \\
+	/PF60/ & \\ \hline
+\end{tabularx}
+\captionof{table}{Übersicht der Produktfunktionen}
+\label{tab:produktfunktionen}
 
 \subsection{Szenariensammlung (Wie könnte ein Softwaresystem helfen)}
 
-
+\newpage
 \section{Auswahl der Gamificationstrategie}
 - Zielgruppe Studenten oder INFORMATIKStudenten? Erweiterbarkeit beachten!
 - Informatikstudenten wenig Interesse an sozialem Anschluss
@@ -505,9 +569,13 @@ Vergleich der Erwartungen mit den Kenntnissen der Studierenden
 \item \textbf{Fortschrittsmanagement}
 \item \textbf{Guide}
 \item \textbf{Dashboard}
+\item \textbf{Herausforderungen}
+\item \textbf{Achivements}
 \item \textbf{Sonstige Softwareinhalte}
+
 \end{itemize}
 
+\newpage
 \subsection{Fortschrittsmanagement}
 Das Fortschrittsmanagement ist ein Tool, welches das Anlegen, Planen und Verwalten von Meilensteinen, sowie Unteraufgaben der Meilensteine ermöglichen soll. 
 
@@ -522,13 +590,21 @@ Das Fortschrittsmanagement ist ein Tool, welches das Anlegen, Planen und Verwalt
 Es folgt eine stichpunktartige Auflistung und Beschreibung der Kernfeatures des Tools:
 \begin{itemize}
 \item \textbf{Ein Zeitstrahl als Grundlage}
-\par Der Zeitstrahl bietet die Arbeitsgrundlage des Fortschrittsmanagement-Tools. Hier können wochenweise Meilensteine mit Unteraufgaben angelegt werden.
+\par Der scrollbare Zeitstrahl bietet die Arbeitsgrundlage des Fortschrittsmanagement-Tools. Hier können wochenweise Meilensteine mit Unteraufgaben angelegt werden.
 \item \textbf{Erstellung und Verwaltung von Meilensteinen}
 \par Es können Meilensteine erstellt, bearbeitet, verschoben und entfernt werden.
 \item \textbf{Erstellung und Verwaltung von Unteraufgaben}
 \par Jeder Meilenstein enthält Unteraufgaben, die von dem Benutzer einem Meilenstein zugeordnet, bearbeitet, verschoben und gelöscht werden können.
 \end{itemize}
 
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.4\textwidth, keepaspectratio]{Bilder/Zeitmanagement.png}
+	\caption{Benutzeroberfläche Fortschrittsmanagement}
+	\label{img:fortschrittsmanagement}
+\end{figure}
+
+\newpage
 \subsection{Guide}
 \par Der Guide stellt den Teil der Applikation dar, der die Bereitstellung von Hinweisen, Tipps und weiteren hilfreichen Informationen zur Bearbeitung der Bachelorarbeit abdecken soll. Dieser Inhalt ergibt sich aus der Verwendung des, von der Fachhochschule Lübeck ausgehändigten Dokuments, welches als Ratgeber bei der Erstellung von Bachelorarbeiten funktionieren und somit die speziellen Anforderungen der FH-Lübeck berücksichtigen soll (vgl. \cite[Kapitel 1]{FHLuebeckBAAnleitung}).
 \par In dieser Hinsicht soll der Guide als genereller Anlaufpunkt funktionieren, der beispielsweise eine Hilfestellung für Bacheloranden darstellen.\\
@@ -554,6 +630,15 @@ Es folgt eine stichpunktartige Auflistung und Beschreibung der Kernfeatures des 
 \par Dieses Kapitel behandelt oft gestellte Fragen und verdeutlicht die Informationen in der Form eines Frage-Antwort Schemas.
 \end{itemize}
 
+\begin{figure}[H]
+	\subfigure[Guide Hauptbildschirm]{\includegraphics[width=0.4\textwidth]{Bilder/Guide.png}}
+	\subfigure[Guide Themen-Ebene]{\includegraphics[width=0.4\textwidth]{Bilder/GuideThemenbereich.png}}
+	\subfigure[Guide Informations-Ebene]{\includegraphics[width=0.4\textwidth]{Bilder/GuideThemenbereich.png}}
+	\caption{Benutzeroberfläche Guide}
+	\label{img:guide}
+\end{figure}
+
+\newpage
 \subsection{Dashboard}
 \par Das Dashboard stellt den Ausgangspunkt und Hauptbildschirm der Applikation dar und trägt somit die Aufgabe, aktuelle Informationen für den Nutzer aufbereitet anzuzeigen, sowie die Funktionen der Applikation auf einfache Weise zugänglich zu machen. Von diesem Punkt aus soll der Benutzer die verschiedenen Softwareabschnitte öffnen können, weshalb es eine essenzielle Eigenschaft des Dashboards ist, die Inhalte übersichtlich, strukturiert und visuell ansprechend darzustellen.\\
 
@@ -567,6 +652,34 @@ Es folgt eine stichpunktartige Auflistung und Beschreibung der Kernfeatures des 
 \par Die Anzeige zeigt die letzten n Achivements an. Zugehörig sind in diesem Fall die Darstellung des Typs des Achivements in Form einer Medaille, sowie den Titel der Herausforderung.
 \end{itemize}
 
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.45\textwidth,keepaspectratio]{Bilder/Dashboard.png}
+	\caption{Benutzeroberfläche Dashboard}
+	\label{img:dashboard}
+\end{figure}
+
+\newpage
+\subsection{Herausforderungen}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.4\textwidth, keepaspectratio]{Bilder/AufgabenSortiert.jpg}
+	\caption{Benutzeroberfläche Herausforderungen}
+	\label{img:aufgaben}
+\end{figure}
+
+\newpage
+\subsection{Achivements}
+
+\begin{figure}[H]
+	\subfigure[Achivements Hauptbildschirm]{\includegraphics[width=0.49\textwidth]{Bilder/AchivementsUebersicht}}
+	\subfigure[Achivements]{\includegraphics[width=0.49\textwidth]{Bilder/AchivementsUebersichtAchivements.jpg}}
+	\caption{Benutzeroberfläche Achivements}
+	\label{img:achivements}
+\end{figure}
+
+\newpage
 \subsection{Sonstige Softwareinhalte}
 \par Über die eigentlichen individuellen Funktionalitäten hinaus, sind weitere Grundfunktionalitäten vorhanden, welche unter den Punkt \textbf{Sonstige Softwareinhalte} fallen.\\
 
@@ -578,6 +691,14 @@ Es folgt eine stichpunktartige Auflistung und Beschreibung der Inhalte:
 \par Die Einstellungen beinhalten Optionen, die sich auf die Eigenschaften der Applikation auswirken. Beispielsweise das Verändern des Designs.
 \end{itemize}
 
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.4\textwidth,keepaspectratio]{Bilder/Menu.png}
+	\caption{Benutzeroberfläche Navigations-Menü}
+	\label{img:navigation}
+\end{figure}
+
+\newpage
 \section{Beschreibung der Gamification-Elemente}
 Auf Basis der Problemanalyse konnten bereits ...
 
