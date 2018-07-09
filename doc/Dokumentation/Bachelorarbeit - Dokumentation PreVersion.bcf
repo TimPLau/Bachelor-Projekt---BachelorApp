@@ -1974,6 +1974,15 @@
     <bcf:datasource type="file" datatype="bibtex">lit.bib</bcf:datasource>
   </bcf:bibdata>
   <bcf:section number="0">
+    <bcf:citekey order="1">Skia1</bcf:citekey>
+    <bcf:citekey order="2">Mat1</bcf:citekey>
+    <bcf:citekey order="3">Cup1</bcf:citekey>
+    <bcf:citekey order="4">Strahringer2017</bcf:citekey>
+    <bcf:citekey order="5">Mayring2015</bcf:citekey>
+    <bcf:citekey order="6">Sailer2016</bcf:citekey>
+    <bcf:citekey order="7">Balzert2010</bcf:citekey>
+    <bcf:citekey order="8">FHLuebeckBAAnleitung</bcf:citekey>
+    <bcf:citekey order="9">FHLuebeckBAAnleitung</bcf:citekey>
     <bcf:citekey order="0">*</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->

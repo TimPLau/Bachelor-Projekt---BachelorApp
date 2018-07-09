@@ -13,7 +13,7 @@
 \usepackage{pdflscape}
 %\usepackage{lscape}
 \setlength{\parindent}{0em} 
-\usepackage[backend=bibtex,]{biblatex} 
+\usepackage[citestyle=authoryear,natbib=true,style=alphabetic,backend=bibtex]{biblatex}
 \usepackage{tabularx}
 \newcommand\tab[1][1cm]{\hspace*{#1}}
 \addbibresource{lit.bib} 
@@ -107,24 +107,70 @@ Das Flutter Framework besteht aus drei verschiedenen Basiskomponenten, welche im
 \begin{itemize}
 \item{\textbf{Flutter Engine}}
 
-Die C/C++ basierte Flutter Engine, setzt sich aus verschiedenen Kerntechnologien zusammen. Zum einen die open source 2D Graphics Libary Skia\cite{Skia1}, welche seit 2005 zu Google gehört und zum anderen die Dart Virtual Machine.
+Die C/C++ basierte Flutter Engine, setzt sich aus verschiedenen Kerntechnologien zusammen. Zum einen die open source 2D Graphics Libary Skia\citep{Skia1}, welche seit 2005 zu Google gehört und zum anderen die Dart Virtual Machine.
 \item{\textbf{Foundation Libary}}
 
 Die Foundation Libary, welche in Dart geschrieben wurde, stellt Basisklassen und -funktionen zur Verfügung und dient der Konstruktion von Applikationen mittels Flutter
 \item{\textbf{Design-specific Widgets}}
 
-Das Flutter Framework stellt zwei verschiedene Arten von Widgets zur Verfügung, welche zugehörig zu den jeweiligen Design Sprachen von Google Material Design\cite{Mat1}, welche 2014 entwickelt wurde und die iOS Design kopierende Design Sprache Cupertino\cite{Cup1}.
+Das Flutter Framework stellt zwei verschiedene Arten von Widgets zur Verfügung, welche zugehörig zu den jeweiligen Design Sprachen von Google Material Design\citep{Mat1}, welche 2014 entwickelt wurde und die iOS Design kopierende Design Sprache Cupertino\citep{Cup1}.
 \end{itemize}
 
 		...
 
 \section{Firebase}
 
-\section{Gamification}
-(Vergleiche \cite{Strahringer2017}
-\subsection{Nutzergruppen}
+\section{Gamification} \label{sec:grundlagenkapitelGamification}
+Vergleiche \citep{Strahringer2017}57
+
 \subsection{Abgrenzung zu anderen Ansätzen}
 
+\subsection{Bekannte Spiel-Design-Elemente}
+Im folgenden Kapitel werden die wichtigsten Spiel-Design-Elemente \citep[vgl.]{blohm2013gamification} Vorgestellt und beschrieben. 
+Vergleiche \citep[Kapitel 2.2.2 Analyse einzelner Spiel-Design-Elemente]{Sailer2016}\\
+
+\begin{tabularx}{\textwidth}{l|l|X}
+	\toprule
+	\textbf{Spiel-Mechanik} & \textbf{Spiel-Dynamik} & \textbf{Motiv}\\ \midrule
+	Dokumentation von Verhaltensweisen & Exploration & Wissbegierde\\
+	Punktesysteme, Badges, Trophäen & Sammeln  & Leistung\\
+	Ranglisten & Wettbewerb & Soziale Anerkennung\\ 
+	Ränge, Levels, Reputationspunkte & Statuserwerb  & \\
+	Gruppenaufgaben & Zusammenarbeit  & Sozialer Austausch\\
+	Zeitdruck, Aufgaben, Missionen & Herausforderung & Kognitive Stimulation\\ 
+	Avatare, virtuelle Welten, virtueller Handel & Entwickeln/Organisieren & Selbstbestimmung \\ 
+	\bottomrule
+\end{tabularx}
+\captionof{table}{Übersicht der Spiel-Design-Elemente \citep[vgl.]{blohm2013gamification}}
+\label{tab:spielDesignElemente}
+
+\begin{itemize}
+\item Dokumentation von Verhaltensweisen
+\item Punktesysteme, Badges, Trophäen
+\item Ranglisten 
+\item Ränge, Levels, Reputationspunkte 
+\item Gruppenaufgaben 
+\item Zeitdruck, Aufgaben, Missionen 
+\item Avatare, virtuelle Welten, virtueller Handel
+\end{itemize}
+\subsection{Nutzergruppen nach Bartle}
+\par Nach Bartle \citep{bartle1996hearts} werden vier verschiedene Nutzertypen voneinander unterschieden, welche im folgenden kurz erläutert werden.\\
+Zudem werden zu den jeweils genannten Benutzergruppen die bekannten Spiel-Design Elemente ihrer Wirksamkeit bei der Steigerung der Motivation zugeordnet. (TODO)
+
+\begin{itemize}
+\item \textbf{Der Killer}
+\par Die Killer legen den Fokus auf den Wettkampf und somit beruht ihre Motivationsquelle auf stark kompetitiv ausgeprägte Ursprünge. Sie fühlen sich dadurch motiviert, den Kontakt mit anderen Individuen im Rahmen eines Wettkampf zu überstehen und sich durch den eigenen Sieg gegenüber anderen Personen zu behaupten.
+
+\item \textbf{Der Socializer}
+\par Die Gruppe der Socializer sind immer auf der Suche nach sozialer Interaktivität. Ohne diese, können sie der Welt wenig bis keine Motivation abgewinnen. Die Spielwelt in der sie sich bewegen, ist vor allem nur der Mittel zum Zweck der Kommunikation. Der größte Stolz der Socializer ist die Freundschaft und der Kontakt zu anderen Personen:
+
+\item \textbf{Der Achiever}
+\par Der Achiever ist im allgemeinen der Spielertyp, welcher sich auf das Erreichen von Leistungen konzentriert. Dieser wird so eingeschätzt, dass er die möglichst optimale geforderte Leistung erbringen will und er somit seine Motivation unter anderem auf das schrittweise Sammeln von Erfolgen und erfüllen von Aufgaben aufbaut.
+
+\item \textbf{Der Explorer}
+\par Die Explorer legen den Hauptfokus auf die Welt in der sie sich bewegen und möchten im Zusammenspiel mit dieser Spielwelt, durch immer wieder neu gestellte Aufgaben und erlebte Überraschungen alles entdecken, was es zu entdecken gibt. Sie sind sehr ambitioniert und empfinden Stolz für Ihr Wissen und Ihre Erfahrung in der Spielwelt. 
+\par Die Explorer haben vor allem Interesse an der Spielwelt, und weniger an den Personen, die sie im Laufe der Erkundung treffen.
+\end{itemize}
 
 \chapter{Untersuchung des Problembereiches} \label{chap:problemanalyse}
 \section{Identifikation der Interessengruppen}
@@ -183,22 +229,32 @@ Das Flutter Framework stellt zwei verschiedene Arten von Widgets zur Verfügung,
 Trotz des Verlaufs des Studiums, des angeeigneten Wissens und der somit zahlreich erworbenen Fähigkeiten, kommt es im Kontext von Bachelorarbeiten dennoch oftmals zu Schwierigkeiten, diesen Zusammenhang auf reale Probleme abzubilden und zu dokumentieren.
 
 \section{Wahl der Analysestrategie}
-\par Um den Ist-Zustand zu ermitteln und somit eine Analysegrundlage zu erschaffen, werden Personengruppen der Fachhochschule Lübeck, durch verschiedene Befragungs- und Analysemethoden in das Projekt miteinbezogen. Dies soll einen detaillierten Einblick in die Sichtweisen der unterschiedlich beteiligten Personen und Interessengruppen ermöglichen und somit eine Grundlage für das Verständnis der aktuellen Situation bilden.
+\par Um den Problembereich zu ermitteln und somit eine Analysegrundlage zu erschaffen, werden Personengruppen der Fachhochschule Lübeck, durch verschiedene Befragungs- und Analysemethoden in das Projekt miteinbezogen. Dies soll einen detaillierten Einblick in die Sichtweisen der unterschiedlich beteiligten Personen und Interessengruppen ermöglichen und somit eine Grundlage für das Verständnis der aktuellen Situation bilden.
 
-\par Als primäre Einflussgeber wurden in diesem Rahmen die Gruppe der Professoren, sowie die Gruppe der Studierenden identifiziert. Diese Entscheidung wurde aufgrund der im Rahmen einer Bachelorarbeit  existierenden unterschiedlichen Sichtweisen, sowie Erfahrungsständen von Betreuern und Bacheloranden getätigt. \\
+\par Als primäre Einflussgeber wurden in diesem Rahmen die Gruppe der Professoren, sowie die Gruppe der Studierenden identifiziert. Diese Entscheidung wurde aufgrund der im Rahmen einer Bachelorarbeit  existierenden unterschiedlichen Sichtweisen, sowie Erfahrungsständen von Betreuern und Bacheloranden getätigt.
 
-\textbf{Professoren}
-\par Für die Interessengruppe der Professoren aus dem Fachbereich Informatik, ist als Grundlage der Datenerhebung einerseits das Durchführen von Einzelinterviews mit einer ausgewählten Gruppe von Professoren vorgesehen, während eine weitere Gruppe von Professoren schriftlich per E-Mail befragt wird. 
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.95\textwidth, keepaspectratio]{Bilder/Diagramme/Analysestrategie.png}
+	\caption{Beschreibung der Analysestrategie}
+	\label{img:analysestrategie}
+\end{figure}
 
-\par Dies bietet sowohl den Zugriff auf die unmittelbaren Erfahrungen der einzelnen Professoren als Spezialisten in den jeweiligen Fachgebieten, als auch auf die Erfahrungen der Professoren in der Position eines Betreuers und Ansprechpartners für Bacheloranden. Durch das Durchführen von Einzelinterviews wird ermöglicht, die Erwartungen seitens der Professoren an die Bacheloranden im Detail zu identifizieren und die, in dieser Hinsicht priorisierten inhaltlichen und methodischen Aspekte bei der Bearbeitung einer Bachelorarbeit herauszuarbeiten. Die Aufteilung auf Einzelinterviews und E-Mail Befragungen bietet den Vorteil, beide Strategien simultan zu verfolgen und nach Abschluss der Datenerhebung sowohl die detaillierten Einzelinterviews, als auch die oberflächlicher ausfallenden E-Mail Antworten in bereits dokumentierter Form vorliegen zu haben, um diese dann auszuwerten.\\
+\par Durch die Gespräche mit den Studierenden ließen sich Erkenntnisse über den Umfang des Problems gewinnen. Auf Grundlage dieser Erkenntnisse wurde die Analysestrategie verfeinert und für die Umsetzung vorbereitet (siehe Abbildung \ref{img:analysestrategie}), welche im folgenden Verlauf beschrieben werden.
+\par \par Die Interviews sollen als Grundlage zur Konzeption und Design weiterer Befragungsstrategien dienen und stellen in diesem Umfang einen Ausgangspunkt für die Problemanalyse dar. Weiterhin werden die gewählten Interviewpartner bei Zustimmung, über das gesamte Projekt und nach Absprache, auch in die Evaluation der Applikation miteinbezogen.\\
+\par Durch das Durchführen von Gruppeninterviews, sollen die Studierenden zu Diskussionen angeregt sein, welche von dem Leiter des Interviews durchaus auch motiviert werden können. Dies hat den Zweck, die Situation und die Rolle der Studierenden für den Interviewer erkenntlich zu machen.  Diese persönlichen Interviews dienen in erster Linie also nicht zur Erhebung von Daten, sondern als strategischer Orientierungspunkt für mich, den Projektleiter.\\
 
-\textbf{Studierende}
-\par Für die Studierenden aus dem Studiengang Informatik/Softwareentwicklung, ist es aufgrund der hohen Menge an Personen und den zu betreibenden Aufwand vorgesehen, wenige Gruppen- und nur in Ausnahmefällen auch Einzelinterviews, durchzuführen. 
-\par Die Interviews sollen als Grundlage zur Konzeption und Design weiterer Befragungsstrategien dienen und stellen in diesem Umfang einen Ausgangspunkt für die Problemanalyse dar. Weiterhin werden die gewählten Interviewpartner bei Zustimmung, über das gesamte Projekt und nach Absprache, auch in die Evaluation der Applikation miteinbezogen.\\
-Durch das Durchführen von Gruppeninterviews, sollen die Studierenden zu Diskussionen angeregt sein, welche von dem Leiter des Interviews durchaus auch motiviert werden können. Dies hat den Zweck, die Situation und die Rolle der Studierenden für den Interviewer erkenntlich zu machen.  Diese persönlichen Interviews dienen in erster Linie also nicht zur Erhebung von Daten, sondern als strategischer Orientierungspunkt für mich, den Projektleiter.
-\par Nach Absprache mit den intervieweten Studierenden, werden diese weiterhin per schriftlicher Befragung in die Entwicklung des Projektes, unter ergänzender Zunahme anderer Studierender, eingebunden. Dies bietet den Vorteil, durch einen weiteren Kanal, Informationen von den Studierenden beziehen zu können. Wesentlich dabei ist, die Hoffnung der höher Ausfallenden Reaktionsfreudigkeit der Studierenden, als für die im Vergleich zeitaufwändiger ausfallenden persönlichen Interviews.
-\par Miteinbezogen werden vorzugsweise alle Studierende der oberen Semester, unabhängig davon, ob sie sich noch in der Phase vor Beginn der Bearbeitung, während der Bearbeitung oder nach Abschluss der Bearbeitung der Bachelorarbeit befinden. Hierbei ist wichtig zu beachten, dass die verschiedenen Erfahrungsstände in den Gruppeninterviews nicht aufeinandertreffen sollten, da dieser Umstand somit zu einer gegenseitigen Beeinflussung führen könnte und wichtige Informationen nicht gewonnen werden könnten. Die verschieden zu extrahierenden Sichtweisen auf die Bearbeitung der Bachelorarbeit können auf diese Weise differenziert betrachtet und analysiert werden.
-\par Des weiteren wird eine Online-Umfrage den Teil der Datenerhebung darstellen, der quantitative Ergebnisse erzielen soll und deren Aussage somit eine nicht durch die Interviews und die schriftlichen Befragungen abgebildete Menge darstellt.
+\subsection{Einbezug der Professoren}
+\par Für die Interessengruppe der Professoren aus dem Fachbereich Informatik, ist als Grundlage der Datenerhebung einerseits das Durchführen von Einzelinterviews mit einer ausgewählten Gruppe von Professoren vorgesehen, während eine weitere Gruppe von Professoren schriftlich per E-Mail befragt wird (siehe Abbildung \ref{img:analysestrategie}). Dies bietet sowohl den Zugriff auf die unmittelbaren Erfahrungen der einzelnen Professoren als Spezialisten in den jeweiligen Fachgebieten, als auch auf die Erfahrungen der Professoren in der Position eines Betreuers und Ansprechpartners für Bacheloranden. 
+\par Durch das Durchführen von Einzelinterviews wird ermöglicht, die Erwartungen seitens der Professoren an die Bacheloranden im Detail zu identifizieren und die, in dieser Hinsicht priorisierten inhaltlichen und methodischen Aspekte bei der Bearbeitung einer Bachelorarbeit herauszuarbeiten. Die Aufteilung auf Einzelinterviews und E-Mail Befragungen bietet den Vorteil, beide Strategien simultan zu verfolgen und nach Abschluss der Datenerhebung sowohl die detaillierten Einzelinterviews, als auch die oberflächlicher ausfallenden E-Mail Antworten in bereits dokumentierter Form vorliegen zu haben, um diese dann auszuwerten.\\
+
+\subsection{Einbezug der Studierenden}
+\par Nach Absprache mit den intervieweten Studierenden, werden diese weiterhin per schriftlicher Befragung in die Entwicklung des Projektes, unter ergänzender Zunahme anderer Studierender, eingebunden.
+\par In diesem Umfang werden die teilnehmenden Studierenden mittels Bildern, Fragen und Gestaltungsmöglichkeiten der Applikation regelmäßig über den aktuellen Stand der Entwicklung informiert. Auf diese Weise sollte es möglich sein, ein breites, jedoch persönliches Feedback zu erhalten, da sich die Einbindung der Studierenden auf diese Weise sehr gut automatisieren lässt. Wesentlich dabei ist auch die Hoffnung, dass die Reaktionsfreudigkeit der Studierenden höher ausfällt, als für die im Vergleich existierende Alternative der zeitaufwändigeren persönlichen Interviews.
+\par Durch die Durchführung der schriftlichen Befragung wird der Ablauf bereits dokumentiert und der Fragesteller, sowie die Studierenden haben jederzeit die Möglichkeit Fragen und Anregungen zu teilen.
+\par Miteinbezogen werden vorzugsweise alle Studierende der oberen Semester, unabhängig davon, ob sie sich vor Beginn, während der Bearbeitung oder nach Abschluss der Bachelorarbeit befinden, da die unterschiedlichen Sichtweisen und Erfahrungsstände wichtige Impulse für die Entwicklung der Applikation geben könnten.\\
+\par Des weiteren wird eine Online-Umfrage den Teil der Datenerhebung darstellen, der quantitative Ergebnisse erzielen soll und deren Aussage somit eine nicht durch die schriftlichen Befragungen abgebildete Menge darstellt.
+\par Die Umfrage richtet sich nicht nur an die Studierenden des Studiengangs Informatik/Softwaretechnik, sondern im Sinne der Erweiterbarkeit für andere Studiengänge, an Studierende im Allgemeinen, welche sich ab dem 4. Semester bereits in der zweiten Hälfte des Studiums befinden und somit schon einen ein­schätz­baren Erfahrungsschatz aufgebaut haben.
 
 \section{Ergebnisse der Professoren}
 \par Im Folgenden sind die gewonnenen Eindrücke und Kenntnisse der Einzelinterviews mit den Professoren des Fachbereichs Informatik durch Themenkategorien geordnet und in zusammengefasster Form dokumentiert.
@@ -206,10 +262,10 @@ Durch das Durchführen von Gruppeninterviews, sollen die Studierenden zu Diskuss
 \par Des Weiteren wird auch eine schriftliche Befragungen miteinbezogen, die jedoch das gleiche Fragespektrum wie die Interviews einnimmt. \\
 \par \textbf{Allgemeine Informationen}
 \par Der zeitliche Rahmen der fünf aufgezeichneten Interviews erstreckt sich über einen Zeitrum von etwa 30 bis 45 Minuten. Für die Auswertung der aufgezeichneten Interviews wurden die Aussagen der Interviewpartner, auf Grundlage der vorliegenden Audioaufnahmen, unter Berücksichtigung des Kontextes aufbereitet und werden nachfolgend dargestellt. Ein weiteres Einzelinterview, welches nicht aufgezeichnet wurde, erstreckte sich über einen Zeitraum von 75 Minuten. Für dieses Interview wurden lediglich begleitende Feldnotizen angefertigt. Diese Feldnotizen wurden im Anschluss des Interviews aufbereitet und fließen zusammen mit den Ergebnissen der schriftlichen Befragung in die folgende Beschreibung ein.\\
-\par Die gewählten Kategorien ergeben sich aus dem gewählten Auswertungsverfahren der qualitativen Inhaltsanalyse nach Mayring\cite{Mayring2015} und basieren in diesem Kontext auf die gemäß des Verfahrens herausgearbeiteten Codings.\\\\
+\par Die gewählten Kategorien ergeben sich aus dem gewählten Auswertungsverfahren der qualitativen Inhaltsanalyse nach Mayring\citep{Mayring2015} und basieren in diesem Kontext auf die gemäß des Verfahrens herausgearbeiteten Codings.\\\\
 
 
-\textbf{Art der Arbeit}
+\subsection{Art der Arbeit}
 \par Im Laufe der Interviews wurden verschiedene Typen von Arbeiten versucht zu identifizieren. Dabei geht es vor allem darum, die Vielfalt der typischen Arbeiten des Studiengangs Informatik/Softwareentwicklung zu erfassen und somit einen Überblick über die Situation zu bekommen.\\
 Als im allgemeinen auftretenden Arten der Arbeit wurden die Klassen \textbf{Entwickelnde Arbeit}  und \textbf{Evaluierende Arbeit} identifiziert. Weiterhin gibt es auch \textbf{reine Literaturarbeiten}, welche in dem Studiengang Informatik/Softwareentwicklung jedoch nicht oder nur in einem sehr geringen Vorkommen auftreten.\\
 
@@ -305,7 +361,7 @@ Als im allgemeinen auftretenden Arten der Arbeit wurden die Klassen \textbf{Entw
 \par Reine Recherchierende Arbeiten finden in dem Studiengang Informatik/Softwareentwicklung aufgrund dem geringen Interesse seitens der Studierenden kaum statt und werden aus Gründen der Vollständigkeit lediglich erwähnt und nicht ausgeführt.
 \end{itemize}
 
-\textbf{Erwartungen an den Bacheloranden}
+\subsection{Erwartungen an den Bacheloranden}
 \par Im Laufe der Interviews wurden die Professoren hinsichtlich Ihrer Erwartungen an die Bacheloranden befragt und haben in diesem Rahmen häufig gleiche oder ähnliche Punkte ausgeführt. Aus diesem Grund werden im folgenden Verlauf die Meinungen der befragten Professoren aus der Sicht als Betreuer, unter den jeweiligen Aspekten als zusammengefasstes Meinungsbild wiedergegeben.\\
 
 \par Es folgt die Ausführung der gewonnenen Erkenntnisse:
@@ -325,7 +381,7 @@ Der Studierende soll bei der praktischen Bearbeitung der Aufgabe zeigen, das er 
 \par Das Ergebnis der Bachelorarbeit, welches sich je nach Art der Arbeit voneinander stark unterscheiden kann, soll wissenschaftlich erarbeitet und somit nachvollziehbar und belegbar sein, sowie im Optimalfall die Aufgabenstellung erfüllen. Es kann jedoch auch vorkommen, dass das angestrebte Ziel aus verschiedenen Gründen nicht erreicht wurde. Dies muss nicht bedeuten, dass es zu einer schlechten Bewertung der Bachelorarbeit kommt, sofern der Grund oder die Erkenntnis über ein bestimmtes aufgetretenes Problems belegbar und nachvollziehbar dokumentiert ist.
 \end{itemize}
 
-\textbf{Häufig Auftretende Probleme bei der Bearbeitung der Bachelorarbeit}
+\subsection{Häufig auftretende Probleme}
 \par Es stellte sich im Verlauf des Interviews heraus, dass unterschiedliche Studierende immer wieder mit gleichen oder ähnlichen Problemen zu kämpfen haben. Im folgenden Verlauf werden diese genannten Probleme in aufbereiteter Form stichpunktartig beschrieben.\\
 
 \par Es folgt die Ausführung der gewonnenen Erkenntnisse:
@@ -346,7 +402,7 @@ Das Problem des mangelnden Zeitmanagements äußert sich unter anderem auch dari
 \par Weiterhin wird jedoch auch betont, dass die Studierenden zu wenig Engagement aufbringen, sich trotz vieler Möglichkeiten selbstständig zu informieren. 
 \end{itemize}
 
-\textbf{Die Applikation - Wünsche, Chancen und Risiken}
+\subsection{Die Applikation - Wünsche, Chancen und Risiken}
 \par In jedem Interview bekamen die Professoren abschließend die Möglichkeit, ihre Erwartungen an eine solche Applikationen auszuführen und besonders auf die, aus ihrer Sicht mögliche Risiken und Chancen einzugehen und diesbezüglich auch Anmerkungen oder Empfehlungen zu tätigen. Diese Anmerkungen werden im folgenden Verlauf zusammengefasst dargestellt.\\
 
 \par Es folgt die Ausführung der gewonnenen Erkenntnisse:
@@ -386,15 +442,7 @@ Das Problem des mangelnden Zeitmanagements äußert sich unter anderem auch dari
 \par Das folgende Kapitel liefert einen Einblick in die Ergebnisse der Befragung der Studierenden und beschreibt die in diesem Rahmen gewonnenen Erkenntnisse.
 \par Im Fokus der Befragung stehen die Erwartungen an die Bachelorarbeit und den Betreuer, sowie die typischen Probleme und Sorgen der Studierenden. Die Erkenntnisse der Befragung werden abschnittsweise in zusammengefasster Form dargestellt. Die gesamten schriftlichen Befragungen sind im Anhang zu finden. (TODO) 
 
-\subsection{Ergebnisse der Interviews mit Studierenden}
-\par Informationen zu den Interviews:
-\begin{itemize}
-\item Insgesamt wurden 8 Studenten in 3 verschiedenen Gruppeninterviews befragt.
-\item Zwei Interviews mit je 3 Personen wurden mit Studenten, welche sich bereits in der Bachelorarbeitsphase befinden, wovon eines als Audioaufnahme aufgezeichnet wurde und das andere durch Feldnotizen dokumentiert wurde.
-\item Ein weiteres Interview wurde mit 2 Studenten geführt, welche sich noch in der Phase vor der Bearbeitung der Bachelorarbeit befinden. Dieses Interview wurde begleitend mit Feldnotizen dokumentiert.
-\end{itemize}
-
-\subsection{Ergebnisse der schriftlichen Befragung der Studierenden}
+\subsection{Ergebnisse der schriftlichen Befragung der Studierenden} \label{sub:studentenchriftlichErgebnisse}
 \par Informationen zu der schriftlichen Befragung:
 \begin{itemize}
 \item Insgesamt wurden 17 Studenten schriftlich befragt.
@@ -463,8 +511,8 @@ Das Problem des mangelnden Zeitmanagements äußert sich unter anderem auch dari
 \newpage
 \par \textbf{Einbezug der Studierenden in die Gestaltung der Applikation}\\
 \par Die Einbindung der Studierenden befasst sich mit spezifischeren Fragen, hinsichtlich der motivierenden Gamificationinhalte der zu entwickelnden Applikation. Der Verlauf der folgenden Befragungen fand somit nicht in einem Durchlauf statt, sondern ergibt sich aus dem permanenten Einbinden der Studierenden. Es wurden bei der Befragung zwei Gamification-Ansätze vorgestellt.\\
-\par Der erste Ansatz fällt unter anderem in die Benutzergruppe der \textbf{Socialiser}. Inhalt des Ansatzes ist es, die Motivation durch den sozialen Kontakt und Austausch mit anderen Teilnehmern zu erzeugen, indem diese den Fortschritt bei der Bearbeitung der Bachelorarbeit anderer Studierender wahrnehmen können.\\
-\par Als Gegengewicht zum ersten Ansatz, orientiert sich der zweite Ansatz an der Benutzergruppe \textbf{Achievers}. Dieser Ansatz beruht vor allem auf das Abschließen und Sammeln von Erfolgen. Im Rahmen der Applikation wird es dem Benutzer bei dieser Idee ermöglicht, Erfolge durch erfüllen von definierten Aufgaben zu erlangen und somit den Fortschritt des Projektes durch das abschließen von geeigneten Aufgaben zu verfolgen.\\
+\par Der erste Ansatz fällt unter anderem in die Benutzergruppe der \textbf{Socialiser} (Siehe Kapitel \ref{sec:grundlagenkapitelGamification}). Inhalt des Ansatzes ist es, die Motivation durch den sozialen Kontakt und Austausch mit anderen Teilnehmern zu erzeugen, indem diese den Fortschritt bei der Bearbeitung der Bachelorarbeit anderer Studierender wahrnehmen können.\\
+\par Als Gegengewicht zum ersten Ansatz, orientiert sich der zweite Ansatz an der Benutzergruppe \textbf{Achievers} (Siehe Kapitel \ref{sec:grundlagenkapitelGamification}). Dieser Ansatz beruht vor allem auf das Abschließen und Sammeln von Erfolgen. Im Rahmen der Applikation wird es dem Benutzer bei dieser Idee ermöglicht, Erfolge durch erfüllen von definierten Aufgaben zu erlangen und somit den Fortschritt des Projektes durch das abschließen von geeigneten Aufgaben zu verfolgen.\\
 
 \par Primäres Ziel des Einbezugs der Studierenden ist, zu bestimmen, welche Einbindung von Gamificationstrategien ansprechend auf die Zielgruppe der Studierenden wirken und in welcher Weise sich das Einbinden von Gamificationelementen auf die Steigerung der Motivation von Studenten bei der Bearbeitung der Bachelorarbeit auswirkt.\\
 
@@ -472,13 +520,13 @@ Das Problem des mangelnden Zeitmanagements äußert sich unter anderem auch dari
 
 \begin{tabularx}{\textwidth}{l|X|c}
 	\hline
-	\textbf{Name der Gamificationstrategie} & \textbf{Art der Reaktion} & 
+	\multirow{2}*{\textbf{Art der Gamificationstrategie}} & \textbf{Art der Reaktion} & 
 	\textbf{Häufigkeit} \\ \hline
-	Motivation durch soziale Einbindung & Positiv & 3 \\
+	\multirow{3}*{Motivation durch soziale Einbindung} & Positiv & 3 \\
 	& Negativ & 12 \\
 	& Neutral & 2 \\ \hline
-	Motivation durch Sammeln von Archivements & Positiv & 15 \\
-	& Negativ & 0 \\
+	\multirow{3}*{Sammeln von Achievements und Erfüllen von Aufgaben} & Positiv & 15 \\
+	& Negativ & 1 \\
 	& Neutral & 1 \\ \hline
 	&  & \textbf{17} \\
 \end{tabularx}
@@ -488,7 +536,32 @@ Das Problem des mangelnden Zeitmanagements äußert sich unter anderem auch dari
 \subsection{Ergebnisse der schriftlichen Online-Umfrage der Studierenden}
 
 \newpage
-\section{Identifikation des Problembereichs}
+\section{Untersuchung der Ergebnisse}
+
+\subsection{Identifikation des Problembereichs}
+\par Durch die Befragung der Beteiligten und der Analyse der gewonnen Informationen, haben sich die Erwartungen der Beteiligten an die Benutzung der Applikation herausarbeiten lassen, welche in der folgenden Tabelle (siehe Abbildung \ref{tab:erwartungenBeteiligte}) dargestellt sind.
+\par Die dabei genannten Ziele und Erwartungen entsprechen dem allgemeinen Bild, welches durch die Interviews ermittelten werden konnte, weshalb kleine Abweichungen in dieser Tabelle nicht mit aufgenommen wurden. Kleinen Abweichungen hätten einen zu großen Einfluss auf das Gesamtbild. Die kompletten schriftlichen Befragungen und Interviews befinden sich im Anhang (TODO) dieses Dokuments.\\
+
+\begin{tabularx}{\textwidth}{l|X}
+	\toprule
+	\textbf{Name der Beteiligten} & \textbf{Wünsche der Beteiligten} \\ \midrule
+	{\textbf{Professoren}}
+	& Steigerung der Fragebereitschaft von Studierenden\\
+	& Weniger Aufwand in das sich wiederholende Informieren des Studierenden stecken\\ 
+	& Zielgerichtetere Vorbereitung auf Besprechung mit dem Betreuer\\
+	& Höhere Qualität von Abschlussarbeiten und der Dokumentation\\
+	& Bessere Zeitplanung der Studierenden\\
+	& Systematische(re) Vorgehensweise der Studierenden\\
+	\multirow{6}*{\textbf{Studierende}} & Optimale Vorbereitung auf die Bearbeitung der Bachelorarbeit\\ \midrule
+	& Optimales Ergebnis der Bachelorarbeit\\
+	& Kenntnisse über Formalien, Umfang und Ablauf der Bachelorarbeit\\
+	& Kontrolle über die Bachelorarbeit und den Ablauf\\
+	& Unterstützung \\
+	& Weniger Fallstricke bei der Bearbeitung der Bachelorarbeit stolpern\\ \bottomrule
+\end{tabularx}
+\captionof{table}{Erwartung der Beteiligten an die Applikation}
+\label{tab:erwartungenBeteiligte}
+
 \par Aus den Ergebnissen der Befragungen geht hervor, dass die Probleme nicht in den unterschiedlichen Ansichten der Studierenden und der Professoren liegen, da beide beteiligte Gruppen sehr kompatible Erwartungen und Ziele besitzen.\\
 
 \par Häufig wird von den Studierenden geäußert, dass sie sich unzureichend vorbereitet für die Bachelorarbeit fühlen und die größten Probleme der Studierenden im Bereich Zeitmanagement und dem wissenschaftlichen Arbeiten liegen. Zusätzlich äußern sich die Studierenden zu fehlenden oder unzureichend aufgebauten Kenntnissen bezüglich der Rahmenbedingungen und weiteren Informationen zu Bachelorarbeiten als Ganzes.\\
@@ -499,64 +572,46 @@ Das Problem des mangelnden Zeitmanagements äußert sich unter anderem auch dari
 
 \par Somit lässt sich erwarten, dass die angestrebten Ziele der Studierenden und die Erwartungen der Professoren aufgrund dieser Wissens- und Erfahrungslücken unter Umständen nicht reibungslos im Rahmen der Bachelorarbeit erfüllt werden können. Auf diese Weise werden die Erwartungen der Professoren, sowie die Ziele der Studierenden gefährdet und können unter Umständen nicht erfüllt werden, obwohl dies im Sinne beider Beteiligten ist.
 
-\subsection{Erwartungen an die Applikation}
-\par Durch die Befragung der Beteiligten und der Analyse der gewonnen Informationen, haben sich die Erwartungen der Beteiligten an die Benutzung der Applikation herausarbeiten lassen, welche in der folgenden Tabelle (siehe Abbildung \ref{tab:erwartungenBeteiligte}) dargestellt sind.
-\par Die dabei genannten Ziele und Erwartungen entsprechen dem allgemeinen Bild, welches durch die Interviews ermittelten werden konnte, weshalb kleine Abweichungen in dieser Tabelle nicht mit aufgenommen wurden. Kleinen Abweichungen hätten einen zu großen Einfluss auf das Gesamtbild. Die kompletten schriftlichen Befragungen und Interviews befinden sich im Anhang (TODO) dieses Dokuments.\\
+\subsection{Auswahl der Motivationsstrategie}
+\par Wie aus den Ergebnissen in Kapitel \ref{sub:studentenchriftlichErgebnisse} in Tabelle \ref{tab:einbezugStudierende} abzulesen ist, äußern sich die befragten Studierenden gegenüber dem vorgestellten Designvorschlag, welcher die soziale Einbindung der Studierenden vorsieht, überwiegend sehr kritisch. Im Vergleich dazu wird die vorgestellte Variante des Einsetzens von Achievements und Aufgaben in Form von Herausforderungen stark positiv reflektiert.
+\par Aufgrund der eindeutigen Reaktionen der eingebundenen Studierenden, wird die Entscheidung getroffen, den ersten Ansatz nicht weiter zu verfolgen, dafür aber den zweiten Ansatz auszubauen.
 
-\begin{tabularx}{\textwidth}{l|X}
-	\hline
-	\textbf{Name der Beteiligten} & \textbf{Ziele und Erwartungen der Beteiligten} \\ \hline
-	\textbf{Professoren} 
-	& Steigerung der Fragebereitschaft von Studierenden\\
-	& Weniger Aufwand in das sich wiederholende Informieren des Studierenden stecken\\
-	& Zielgerichtetere Vorbereitung auf Besprechung mit dem Betreuer\\
-	& Höhere Qualität von Abschlussarbeiten und der Dokumentation\\
-	& Bessere Zeitplanung der Studierenden\\ 
-	& Systematische(re) Vorgehensweise der Studierenden\\ \hline
-	\textbf{Studierende} 
-	& Optimale Vorbereitung auf die Bearbeitung der Bachelorarbeit\\
-	& Optimales Ergebnis der Bachelorarbeit\\
-	& Kenntnisse über Formalien, Umfang und Ablauf der Bachelorarbeit\\
-	& Kontrolle über die Bachelorarbeit und den Ablauf\\
-	& Unterstützung \\
-	& Weniger Fallstricke bei der Bearbeitung der Bachelorarbeit stolpern\\ \hline
-\end{tabularx}
-\captionof{table}{Erwartung der Beteiligten an die Applikation}
-\label{tab:erwartungenBeteiligte}
+\par Wie in \citep{Sailer2016}[S. 32 - 34] beschrieben wird, besitzen Achievements verschiedene Eigenschaften, welche in Bezug auf bestimmte Zielstellungen, einer steuernden und in diesem Sinne auch fordernden Funktion dienen können.\\\\
+
+S. 147
+Bartle’s Player Types for Gamification
+Bartle, R. (1996). Hearts, Clubs, Diamonds, Spades: Players who suit MUDs. http://www.mud.co.uk/richard/hcds.htm
+- Erfolgsorientierter Spieler (Orientiert sich an zielen, die im SPiel zu erreichen sind)
+- Sammeln von Punkten, Aufsteigen im Level, Bestmarken
 
 \newpage
 \section{Anforderungskatalog}\label{sec:anforderungskatalog}
 \subsection{Produktübersicht}
 
+
 \subsection{Produktfunktionen}
+\par In der folgenden Tabelle sind die Produktanforderungen in natürlicher Sprache vorzufinden. Diese wurden auf Basis einer Anforderungsschablone aus dem Lehrbuch der Softwaretechnik von Helmut Balzert verfasst\citep{Balzert2010}.\\
+\begin{itemize}
 
-\begin{tabularx}{\textwidth}{l|X}
-	\hline
-	\textbf{Bezeichnung} & \textbf{Beschreibung} \\ \hline
-	/PF10/ & \\
-	/PF20/ & \\
-	/PF30/ & \\
-	/PF40/ & \\
-	/PF50/ & \\
-	/PF60/ & \\ \hline
-\end{tabularx}
-\captionof{table}{Übersicht der Produktfunktionen}
-\label{tab:produktfunktionen}
+\item Die Applikation soll die Studierende bei dem Zeitmanagement unterstützen
+\begin{itemize}
+\item Die Software muss dem Studierenden ermöglichen, Meilenteine und zugehörige 		Aufgaben anzulegen und zu verwalten
+\item Die Software soll den Studierende auf bevorstehende Meilensteine und Aufgaben aufmerksam machen
+\end{itemize}
 
-\subsection{Szenariensammlung (Wie könnte ein Softwaresystem helfen)}
+\item Die Applikation muss den Studierenden hilfreiche Informationen zum schreiben von Bachelorarbeiten bereitstellen
+\begin{itemize}
+\item Die Software soll den Studierenden Informationen über die Rahmenbedingungen und Formalien der Bachelorarbeit an der Fachhochschule Lübeck bieten
+\item Die Software soll den Studierenden Hinweise und Empfehlungen zu Aufbau und Struktur von Bachelorarbeiten bieten
+\item Die Software soll den Studierenden Hinweise und Empfehlungen zu Durchführung von Bachelorarbeiten bieten
+\end{itemize}
 
-\newpage
-\section{Auswahl der Gamificationstrategie}
-- Zielgruppe Studenten oder INFORMATIKStudenten? Erweiterbarkeit beachten!
-- Informatikstudenten wenig Interesse an sozialem Anschluss
-- Motivationstheorie (Maslow/McCelland) 
-- Motivation durch ETWAS ERREICHEN
-- Emotionen ERNSTHAFTER SPAß - Veränderungen erreichen, etwas schaffen
-- Soziale Spieler: Eher nicht Informatiker. 
-- Erfolgsorientierter Spieler (Orientiert sich an zielen, die im SPiel zu erreichen sind)
-- Sammeln von Punkten, Aufsteigen im Level, Bestmarken
--> Badges für Meilensteine, Unteraufgaben, 
+\item Die Applikation muss den Studierenden motivierende Gamificationinhalte bieten
+\begin{itemize}
+\item Die Software ...
+\end{itemize}
 
+\end{itemize}
 
 \chapter{Konzeptvorstellung der Applikation} \label{chap:konzept}
 
@@ -570,7 +625,7 @@ Das Problem des mangelnden Zeitmanagements äußert sich unter anderem auch dari
 \item \textbf{Guide}
 \item \textbf{Dashboard}
 \item \textbf{Herausforderungen}
-\item \textbf{Achivements}
+\item \textbf{Achievements}
 \item \textbf{Sonstige Softwareinhalte}
 
 \end{itemize}
@@ -599,17 +654,17 @@ Es folgt eine stichpunktartige Auflistung und Beschreibung der Kernfeatures des 
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.4\textwidth, keepaspectratio]{Bilder/Zeitmanagement.png}
+	\includegraphics[width=0.4\textwidth, keepaspectratio]{Bilder/Prototyp/Zeitmanagement.png}
 	\caption{Benutzeroberfläche Fortschrittsmanagement}
 	\label{img:fortschrittsmanagement}
 \end{figure}
 
 \newpage
 \subsection{Guide}
-\par Der Guide stellt den Teil der Applikation dar, der die Bereitstellung von Hinweisen, Tipps und weiteren hilfreichen Informationen zur Bearbeitung der Bachelorarbeit abdecken soll. Dieser Inhalt ergibt sich aus der Verwendung des, von der Fachhochschule Lübeck ausgehändigten Dokuments, welches als Ratgeber bei der Erstellung von Bachelorarbeiten funktionieren und somit die speziellen Anforderungen der FH-Lübeck berücksichtigen soll (vgl. \cite[Kapitel 1]{FHLuebeckBAAnleitung}).
+\par Der Guide stellt den Teil der Applikation dar, der die Bereitstellung von Hinweisen, Tipps und weiteren hilfreichen Informationen zur Bearbeitung der Bachelorarbeit abdecken soll. Dieser Inhalt ergibt sich aus der Verwendung des, von der Fachhochschule Lübeck ausgehändigten Dokuments, welches als Ratgeber bei der Erstellung von Bachelorarbeiten funktionieren und somit die speziellen Anforderungen der FH-Lübeck berücksichtigen soll \citep[vgl. Kapitel 1]{FHLuebeckBAAnleitung}.
 \par In dieser Hinsicht soll der Guide als genereller Anlaufpunkt funktionieren, der beispielsweise eine Hilfestellung für Bacheloranden darstellen.\\
 
-\par Die Bandbreite der Hinweise, Tipps und Informationen sollen somit den gesamten Verlauf der Bachelorarbeit abdecken und lassen sich in diesem Umfang in folgende Bereiche und Inhalte Zerlegen, welche sich an dem Leitfaden der FH-Lübeck\cite{FHLuebeckBAAnleitung} zur Erstellung einer Bachelorarbeit orientieren.\\
+\par Die Bandbreite der Hinweise, Tipps und Informationen sollen somit den gesamten Verlauf der Bachelorarbeit abdecken und lassen sich in diesem Umfang in folgende Bereiche und Inhalte Zerlegen, welche sich an dem Leitfaden der FH-Lübeck\citep{FHLuebeckBAAnleitung} zur Erstellung einer Bachelorarbeit orientieren.\\
 
 \par Es folgt eine eigene Interpretation und Beschreibung der Unterteilung der Themengebiete:
 
@@ -631,52 +686,57 @@ Es folgt eine stichpunktartige Auflistung und Beschreibung der Kernfeatures des 
 \end{itemize}
 
 \begin{figure}[H]
-	\subfigure[Guide Hauptbildschirm]{\includegraphics[width=0.4\textwidth]{Bilder/Guide.png}}
-	\subfigure[Guide Themen-Ebene]{\includegraphics[width=0.4\textwidth]{Bilder/GuideThemenbereich.png}}
-	\subfigure[Guide Informations-Ebene]{\includegraphics[width=0.4\textwidth]{Bilder/GuideThemenbereich.png}}
+	\subfigure[Guide Hauptbildschirm]{\includegraphics[width=0.4\textwidth]{Bilder/Prototyp/Guide.png}}
+	\subfigure[Guide Themen-Ebene]{\includegraphics[width=0.4\textwidth]{Bilder/Prototyp/GuideThemenbereich.png}}
+	\subfigure[Guide Informations-Ebene]{\includegraphics[width=0.4\textwidth]{Bilder/Prototyp/GuideThemenbereichInformationen.png}}
 	\caption{Benutzeroberfläche Guide}
 	\label{img:guide}
 \end{figure}
 
 \newpage
 \subsection{Dashboard}
-\par Das Dashboard stellt den Ausgangspunkt und Hauptbildschirm der Applikation dar und trägt somit die Aufgabe, aktuelle Informationen für den Nutzer aufbereitet anzuzeigen, sowie die Funktionen der Applikation auf einfache Weise zugänglich zu machen. Von diesem Punkt aus soll der Benutzer die verschiedenen Softwareabschnitte öffnen können, weshalb es eine essenzielle Eigenschaft des Dashboards ist, die Inhalte übersichtlich, strukturiert und visuell ansprechend darzustellen.\\
+\par Das Dashboard stellt den Ausgangspunkt und Hauptbildschirm der Applikation dar und trägt somit die Aufgabe, aktuelle Informationen für den Nutzer aufbereitet anzuzeigen, sowie die Funktionen der Applikation auf einfache Weise zugänglich zu machen. Von diesem Punkt aus soll der Benutzer die verschiedenen Softwareabschnitte öffnen können, weshalb es eine essenzielle Eigenschaft des Dashboards ist, die Inhalte übersichtlich, strukturiert und gleichzeitig aber visuell ansprechend darzustellen.\\
 
 \par Es folgt eine stichpunktartige Auflistung und Beschreibung der Inhalte:
 \begin{itemize}
 \item \textbf{Dynamische Anzeige des Fortschritts}
-\par Der bisher geleistete Gesamtfortschritt wird verdeutlicht, indem zu sehen ist, wie viele Meilensteine bisher abschlossen wurden, in Relation zu den Gesamtmeilenstein.
-\item \textbf{Dynamische Anzeige der Wöchentliche Aufgaben}
-\par Der bisher geleistete Wochenfortschritt wird verdeutlicht, indem zu sehen ist, wie viele Aufgaben in der jetzigen Woche erfüllt wurden, in Relation zu den vorher definierten gesamten Aufgaben für diese Woche.
-\item \textbf{Dynamische Anzeige der letzten erreichten Achivements}
-\par Die Anzeige zeigt die letzten n Achivements an. Zugehörig sind in diesem Fall die Darstellung des Typs des Achivements in Form einer Medaille, sowie den Titel der Herausforderung.
+\par Der bisher geleistete Gesamtfortschritt wird verdeutlicht, indem zu sehen ist, wie viele Meilensteine bisher abschlossen wurden, in Relation zu den Gesamtmeilenstein. Weiterhin wird der bisher geleistete Wochenfortschritt verdeutlicht, indem zu sehen ist, wie viele Aufgaben in der Phase bis zum nächsten Meilenstein erfüllt wurden, in Relation zu den vorher definierten gesamten Aufgaben für diese Woche.
+\item \textbf{Anzeige der zu leistenden Herausforderungen}
+\par Es wird angezeigt, wievielte Herausforderungen der jeweiligen Kategorien abgeschlossen wurden, in Relation zu deren Gesamtanzahl.
+\item \textbf{Dynamische Anzeige der letzten erreichten Achievements}
+\par Die Anzeige zeigt die letzten n erreichten Achievements an. Zugehörig sind in diesem Fall die Darstellung des Typs des Achievements in Form der jeweiligen Färbung, sowie den Titel der Herausforderung. Das zuletzt erreichte Achievement wird hierbei durch Größe der Darstellung und Beschreibung hervorgehoben.
+\item \textbf{Dynamische Anzeige von allgemeinen Tipps}
+\par Die Anzeige zeigt zufällig ausgewählte allgemeine Tipps zur Bearbeitung der Bachelorarbeit. Die Tipps wechseln nach einem definierten Zeitintervall.
 \end{itemize}
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.45\textwidth,keepaspectratio]{Bilder/Dashboard.png}
+	\includegraphics[width=0.45\textwidth,keepaspectratio]{Bilder/Prototyp/Dashboard.png}
 	\caption{Benutzeroberfläche Dashboard}
 	\label{img:dashboard}
 \end{figure}
 
 \newpage
 \subsection{Herausforderungen}
+In diesem Bereich der Applikation kann der Benutzer einsehen, welche Herausforderungen schon abgeschlossen wurden und welche noch offen sind. Die Herausforderungen sind nach festgelegten Kategorien geordnet. Bei öffnen der Kategorien, gelangt der Benutzer in eine tiefere Ebene, in der die jeweiligen, noch zu erledigen oder abgeschlossenen Aufgaben, einzusehen sind.
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.4\textwidth, keepaspectratio]{Bilder/AufgabenSortiert.jpg}
+	\includegraphics[width=0.4\textwidth, keepaspectratio]{Bilder/Prototyp/AufgabenSortiert.jpg}
 	\caption{Benutzeroberfläche Herausforderungen}
 	\label{img:aufgaben}
 \end{figure}
 
 \newpage
-\subsection{Achivements}
+\subsection{Achievements}
+\par Der Achievement Hauptbildschirm enthält eine Übersicht der verschiedenen Kategorien von Achievements (siehe Abbildung \ref{img:achievements}). Die nächste Ebene dieses Abschnitts zeigt die detaillierte Ansicht der jeweiligen Achievements an, wo sich der Benutzer einsehen kann, welche Achievements er bereits erhalten hat. Weitere Informationen zu den einzelnen Achievement und deren Kategorien finden ich im Kapitel \ref{sec:gamificationelemente}\\
 
 \begin{figure}[H]
-	\subfigure[Achivements Hauptbildschirm]{\includegraphics[width=0.49\textwidth]{Bilder/AchivementsUebersicht}}
-	\subfigure[Achivements]{\includegraphics[width=0.49\textwidth]{Bilder/AchivementsUebersichtAchivements.jpg}}
-	\caption{Benutzeroberfläche Achivements}
-	\label{img:achivements}
+\centering
+	\subfigure[Achievements Hauptbildschirm]{\includegraphics[width=0.35\textwidth]{Bilder/Prototyp/AchievementsUebersicht}}
+	\subfigure[Achievements]{\includegraphics[width=0.35\textwidth]{Bilder/Prototyp/AchievementsUebersichtAchievements.jpg}}
+	\caption{Benutzeroberfläche Achievements}
+	\label{img:achievements}
 \end{figure}
 
 \newpage
@@ -693,20 +753,20 @@ Es folgt eine stichpunktartige Auflistung und Beschreibung der Inhalte:
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.4\textwidth,keepaspectratio]{Bilder/Menu.png}
+	\includegraphics[width=0.4\textwidth,keepaspectratio]{Bilder/Prototyp/Menu.png}
 	\caption{Benutzeroberfläche Navigations-Menü}
 	\label{img:navigation}
 \end{figure}
 
 \newpage
-\section{Beschreibung der Gamification-Elemente}
-Auf Basis der Problemanalyse konnten bereits ...
+\section{Beschreibung der Gamification-Elemente} \label{sec:gamificationelemente}
+\par Im folgenden Kapitel werden die Gamification-Elemente, welche in der Applikation zum Einsatz kommen, näher beschrieben. Dabei wird vor allem auf die identifizierten Kategorien der Achievements eingegangen, welche den Kern der gewählten Motivationsstrategie bilden. Darüber Hinaus wird auch beschrieben, in welcher Form die gewählte Motivationsstrategie in der Realität, in Bezug auf den Fortschritt bei der Bearbeitung der bachelorarbeit, funktionieren soll.
 
-- Einführung in die Software? Durch Video? Etc.
-\subsection{Anfangsphase Achivements}
-\subsection{Bearbeitungsphase Achivements}
-\subsection{Abschlussphase Achivements}
-\subsection{App-Achivements Achivements}
+\subsection{Anfangsphase Achievements}
+
+\subsection{Bearbeitungsphase Achievements}
+\subsection{Abschlussphase Achievements}
+\subsection{App-Achievements Achievements}
 \subsection{Fortschrittsverfolgung}
 - Weekly Tasks
 - Abschlussbericht pro Woche?
@@ -728,7 +788,6 @@ Auf Basis der Problemanalyse konnten bereits ...
 \section{Lessons Learned}
 \section{Abschlussbetrachtung}
 
-\chapter{Literaturverzeichnis}
 \nocite{*}
 \printbibliography
 \end{document}

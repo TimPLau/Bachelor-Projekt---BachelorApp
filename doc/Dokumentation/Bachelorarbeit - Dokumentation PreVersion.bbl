@@ -16,7 +16,7 @@
   {}
 \endgroup
 
-\datalist[entry]{nty/global//global/global}
+\datalist[entry]{anyt/global//global/global}
   \entry{FHLuebeckBAAnleitung}{unpublished}{}
     \name{author}{1}{}{%
       {{hash=rnAHPD}{%
@@ -32,6 +32,7 @@
     \strng{fullhash}{AHPDrn1}
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
+    \field{labelalpha}{AH}
     \field{sortinit}{A}
     \field{sortinithash}{A}
     \field{note}{Herausgegeben an Studenten der Fachhochschule Lübeck, die das
@@ -39,19 +40,95 @@
     \field{title}{Anleitung zum Erstellen einer Abschlussarbeit}
   \endentry
 
-  \entry{Flu1}{manual}{}
+  \entry{Balzert2010}{book}{}
+    \name{author}{1}{}{%
+      {{hash=BH}{%
+         family={Balzert},
+         familyi={B\bibinitperiod},
+         given={Helmut},
+         giveni={H\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Springer-Verlag}%
+    }
+    \strng{namehash}{BH1}
+    \strng{fullhash}{BH1}
+    \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
+    \field{labelalpha}{Bal10}
     \field{sortinit}{B}
     \field{sortinithash}{B}
-    \field{title}{Build beautiful native apps in record time}
-    \verb{url}
-    \verb https://flutter.io/
-    \endverb
-    \field{year}{(Zugriff Juni 3, 2018)}
+    \field{isbn}{978-3-827-42247-7}
+    \field{title}{Lehrbuch der Softwaretechnik: Basiskonzepte und Requirements
+  Engineering -}
+    \list{location}{1}{%
+      {Berlin Heidelberg New York}%
+    }
+    \field{year}{2010}
+  \endentry
+
+  \entry{bartle1996hearts}{article}{}
+    \name{author}{1}{}{%
+      {{hash=BR}{%
+         family={Bartle},
+         familyi={B\bibinitperiod},
+         given={Richard},
+         giveni={R\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{BR1}
+    \strng{fullhash}{BR1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{Bar96}
+    \field{sortinit}{B}
+    \field{sortinithash}{B}
+    \field{number}{1}
+    \field{pages}{19}
+    \field{title}{Hearts, clubs, diamonds, spades: Players who suit MUDs}
+    \field{volume}{1}
+    \field{journaltitle}{Journal of MUD research}
+    \field{year}{1996}
+  \endentry
+
+  \entry{blohm2013gamification}{article}{}
+    \name{author}{2}{}{%
+      {{hash=BI}{%
+         family={Blohm},
+         familyi={B\bibinitperiod},
+         given={Ivo},
+         giveni={I\bibinitperiod},
+      }}%
+      {{hash=LJM}{%
+         family={Leimeister},
+         familyi={L\bibinitperiod},
+         given={Jan\bibnamedelima Marco},
+         giveni={J\bibinitperiod\bibinitdelim M\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Springer Gabler}%
+    }
+    \strng{namehash}{BILJM1}
+    \strng{fullhash}{BILJM1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{BL13}
+    \field{sortinit}{B}
+    \field{sortinithash}{B}
+    \field{number}{4}
+    \field{pages}{275\bibrangedash 278}
+    \field{title}{Gamification: Gestaltung IT-basierter Zusatzdienstleistungen
+  zur Motivationsunterst{\"u}tzung und Verhaltens{\"a}nderung}
+    \field{volume}{55}
+    \field{journaltitle}{Wirtschaftinformatik}
+    \field{year}{2013}
   \endentry
 
   \entry{Cup1}{manual}{}
     \field{labeltitlesource}{title}
+    \field{labelalpha}{Cup}
     \field{sortinit}{C}
     \field{sortinithash}{C}
     \field{title}{Cupertino (iOS-style) Widgets}
@@ -61,8 +138,23 @@
     \field{year}{(Zugriff Juni 3, 2018)}
   \endentry
 
+  \entry{Flu1}{manual}{}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{Flu}
+    \field{extraalpha}{1}
+    \field{sortinit}{F}
+    \field{sortinithash}{F}
+    \field{title}{Build beautiful native apps in record time}
+    \verb{url}
+    \verb https://flutter.io/
+    \endverb
+    \field{year}{(Zugriff Juni 3, 2018)}
+  \endentry
+
   \entry{Flu6}{manual}{}
     \field{labeltitlesource}{title}
+    \field{labelalpha}{Flu}
+    \field{extraalpha}{2}
     \field{sortinit}{F}
     \field{sortinithash}{F}
     \field{title}{Foundation Libaryn}
@@ -74,8 +166,10 @@
 
   \entry{Flu2}{manual}{}
     \field{labeltitlesource}{title}
-    \field{sortinit}{I}
-    \field{sortinithash}{I}
+    \field{labelalpha}{Flu}
+    \field{extraalpha}{3}
+    \field{sortinit}{F}
+    \field{sortinithash}{F}
     \field{title}{Introduction}
     \verb{url}
     \verb https://flutter.io/faq/#introduction
@@ -85,8 +179,10 @@
 
   \entry{Flu7}{manual}{}
     \field{labeltitlesource}{title}
-    \field{sortinit}{M}
-    \field{sortinithash}{M}
+    \field{labelalpha}{Flu}
+    \field{extraalpha}{4}
+    \field{sortinit}{F}
+    \field{sortinithash}{F}
     \field{title}{Material Components Widgets}
     \verb{url}
     \verb https://flutter.io/widgets/material/
@@ -94,8 +190,48 @@
     \field{year}{(Zugriff Juni 3, 2018)}
   \endentry
 
+  \entry{Flu5}{manual}{}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{Flu}
+    \field{extraalpha}{5}
+    \field{sortinit}{F}
+    \field{sortinithash}{F}
+    \field{title}{Technical Overview}
+    \verb{url}
+    \verb https://flutter.io/technical-overview/
+    \endverb
+    \field{year}{(Zugriff Juni 3, 2018)}
+  \endentry
+
+  \entry{Flu3}{manual}{}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{Flu}
+    \field{extraalpha}{6}
+    \field{sortinit}{F}
+    \field{sortinithash}{F}
+    \field{title}{Technology}
+    \verb{url}
+    \verb https://flutter.io/faq/#what-technology-is-flutter-built-with
+    \endverb
+    \field{year}{(Zugriff Juni 3, 2018)}
+  \endentry
+
+  \entry{Flu4}{manual}{}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{Flu}
+    \field{extraalpha}{7}
+    \field{sortinit}{F}
+    \field{sortinithash}{F}
+    \field{title}{Welcome to the Engine Wiki}
+    \verb{url}
+    \verb https://github.com/flutter/engine/wiki
+    \endverb
+    \field{year}{(Zugriff Juni 3, 2018)}
+  \endentry
+
   \entry{Mat1}{manual}{}
     \field{labeltitlesource}{title}
+    \field{labelalpha}{Mat}
     \field{sortinit}{M}
     \field{sortinithash}{M}
     \field{title}{Material Design}
@@ -121,6 +257,7 @@
     \strng{fullhash}{MP1}
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
+    \field{labelalpha}{May15}
     \field{sortinit}{M}
     \field{sortinithash}{M}
     \field{isbn}{978-3-407-25730-7}
@@ -131,8 +268,37 @@
     \field{year}{2015}
   \endentry
 
+  \entry{Sailer2016}{book}{}
+    \name{author}{1}{}{%
+      {{hash=SM}{%
+         family={Sailer},
+         familyi={S\bibinitperiod},
+         given={Michael},
+         giveni={M\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Springer-Verlag}%
+    }
+    \strng{namehash}{SM1}
+    \strng{fullhash}{SM1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{Sai16}
+    \field{sortinit}{S}
+    \field{sortinithash}{S}
+    \field{isbn}{978-3-658-14309-1}
+    \field{title}{Die Wirkung von Gamification auf Motivation und Leistung -
+  Empirische Studien im Kontext manueller Arbeitsprozesse}
+    \list{location}{1}{%
+      {Berlin Heidelberg New York}%
+    }
+    \field{year}{2016}
+  \endentry
+
   \entry{Skia1}{manual}{}
     \field{labeltitlesource}{title}
+    \field{labelalpha}{Ski}
     \field{sortinit}{S}
     \field{sortinithash}{S}
     \field{title}{Skia Graphics Library}
@@ -164,6 +330,7 @@
     \strng{fullhash}{SSLC1}
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
+    \field{labelalpha}{SL17}
     \field{sortinit}{S}
     \field{sortinithash}{S}
     \field{isbn}{978-3-658-16742-4}
@@ -173,39 +340,6 @@
       {Berlin Heidelberg New York}%
     }
     \field{year}{2017}
-  \endentry
-
-  \entry{Flu5}{manual}{}
-    \field{labeltitlesource}{title}
-    \field{sortinit}{T}
-    \field{sortinithash}{T}
-    \field{title}{Technical Overview}
-    \verb{url}
-    \verb https://flutter.io/technical-overview/
-    \endverb
-    \field{year}{(Zugriff Juni 3, 2018)}
-  \endentry
-
-  \entry{Flu3}{manual}{}
-    \field{labeltitlesource}{title}
-    \field{sortinit}{T}
-    \field{sortinithash}{T}
-    \field{title}{Technology}
-    \verb{url}
-    \verb https://flutter.io/faq/#what-technology-is-flutter-built-with
-    \endverb
-    \field{year}{(Zugriff Juni 3, 2018)}
-  \endentry
-
-  \entry{Flu4}{manual}{}
-    \field{labeltitlesource}{title}
-    \field{sortinit}{W}
-    \field{sortinithash}{W}
-    \field{title}{Welcome to the Engine Wiki}
-    \verb{url}
-    \verb https://github.com/flutter/engine/wiki
-    \endverb
-    \field{year}{(Zugriff Juni 3, 2018)}
   \endentry
 \enddatalist
 \endinput
