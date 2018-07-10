@@ -129,6 +129,19 @@ Vergleiche \citep{Strahringer2017}57
 Im folgenden Kapitel werden die wichtigsten Spiel-Design-Elemente \citep[vgl.]{blohm2013gamification} Vorgestellt und beschrieben. 
 Vergleiche \citep[Kapitel 2.2.2 Analyse einzelner Spiel-Design-Elemente]{Sailer2016}\\
 
+\begin{itemize}
+\item Dokumentation von Verhaltensweisen
+\par Durch die ständige Dokumentation von der eigenen Verhaltensweisen, werden Fortschritte für den Anwender sichtbar gemacht. Diese Fortschritte können ein Gefühl von hoher Leistungsfähigkeit auslösen 
+\item Punkte 
+\par Punktesysteme sind in ihrer Einfachheit eine weitverbreitete Form der Spiel-Design-Elemente, welche hauptsächlich eine Feedbackfunktion erfüllen. Diese Feedbackfunktion kann dem Spieler durch diverse weitere Möglichkeiten, wie zum Beispiel das Aufsteigen eine Levels, unterschiedlich stark verdeutlicht werden, weshalb Punkte häufig als Grundbestandteil von Gamification-Anwendungen auftreten. Weiterhin symbolisieren Punkte dem Spieler seinen derzeitigen Spielstand und bieten bei der Kombination mit Bestenlisten eine Vergleichsmöglichkeit zu anderen Spielern. In dieser Kombination können Punktesysteme also je nach Zielstellung auch Gewinner einer Herausforderung identifizieren.
+\par In den zwei empirischen Untersuchungen \citep{mekler2013disassembling} und \citep{mekler2013points}, wurde nachgewiesen, dass Punkte durchaus einen leistungsfördernden Effekt auf Spieler haben können.
+\item Ranglisten 
+\item Ränge, Levels, Reputationspunkte 
+\item Gruppenaufgaben 
+\item Zeitdruck, Aufgaben, Missionen 
+\item Avatare, virtuelle Welten, virtueller Handel
+\end{itemize}
+
 \begin{tabularx}{\textwidth}{l|l|X}
 	\toprule
 	\textbf{Spiel-Mechanik} & \textbf{Spiel-Dynamik} & \textbf{Motiv}\\ \midrule
@@ -143,17 +156,7 @@ Vergleiche \citep[Kapitel 2.2.2 Analyse einzelner Spiel-Design-Elemente]{Sailer2
 \end{tabularx}
 \captionof{table}{Übersicht der Spiel-Design-Elemente \citep[vgl.]{blohm2013gamification}}
 \label{tab:spielDesignElemente}
-
-\begin{itemize}
-\item Dokumentation von Verhaltensweisen
-\item Punktesysteme, Badges, Trophäen
-\item Ranglisten 
-\item Ränge, Levels, Reputationspunkte 
-\item Gruppenaufgaben 
-\item Zeitdruck, Aufgaben, Missionen 
-\item Avatare, virtuelle Welten, virtueller Handel
-\end{itemize}
-\subsection{Nutzergruppen nach Bartle}
+\subsection{Nutzergruppen nach Bartle} \label{sub:nutzergruppenBartle}
 \par Nach Bartle \citep{bartle1996hearts} werden vier verschiedene Nutzertypen voneinander unterschieden, welche im folgenden kurz erläutert werden.\\
 Zudem werden zu den jeweils genannten Benutzergruppen die bekannten Spiel-Design Elemente ihrer Wirksamkeit bei der Steigerung der Motivation zugeordnet. (TODO)
 
@@ -171,6 +174,13 @@ Zudem werden zu den jeweils genannten Benutzergruppen die bekannten Spiel-Design
 \par Die Explorer legen den Hauptfokus auf die Welt in der sie sich bewegen und möchten im Zusammenspiel mit dieser Spielwelt, durch immer wieder neu gestellte Aufgaben und erlebte Überraschungen alles entdecken, was es zu entdecken gibt. Sie sind sehr ambitioniert und empfinden Stolz für Ihr Wissen und Ihre Erfahrung in der Spielwelt. 
 \par Die Explorer haben vor allem Interesse an der Spielwelt, und weniger an den Personen, die sie im Laufe der Erkundung treffen.
 \end{itemize}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\textwidth, keepaspectratio]{Bilder/Diagramme/InterestGraphBartle.png}
+	\caption{Interest Graph nach Bartle \cite{bartle1996hearts}}
+	\label{img:interetGraphBartle}
+\end{figure}
 
 \chapter{Untersuchung des Problembereiches} \label{chap:problemanalyse}
 \section{Identifikation der Interessengruppen}
@@ -522,7 +532,7 @@ Das Problem des mangelnden Zeitmanagements äußert sich unter anderem auch dari
 	\hline
 	\multirow{2}*{\textbf{Art der Gamificationstrategie}} & \textbf{Art der Reaktion} & 
 	\textbf{Häufigkeit} \\ \hline
-	\multirow{3}*{Motivation durch soziale Einbindung} & Positiv & 3 \\
+	\multirow{3}*{Motivation durch soziale Interaktion} & Positiv & 3 \\
 	& Negativ & 12 \\
 	& Neutral & 2 \\ \hline
 	\multirow{3}*{Sammeln von Achievements und Erfüllen von Aufgaben} & Positiv & 15 \\
@@ -574,15 +584,22 @@ Das Problem des mangelnden Zeitmanagements äußert sich unter anderem auch dari
 
 \subsection{Auswahl der Motivationsstrategie}
 \par Wie aus den Ergebnissen in Kapitel \ref{sub:studentenchriftlichErgebnisse} in Tabelle \ref{tab:einbezugStudierende} abzulesen ist, äußern sich die befragten Studierenden gegenüber dem vorgestellten Designvorschlag, welcher die soziale Einbindung der Studierenden vorsieht, überwiegend sehr kritisch. Im Vergleich dazu wird die vorgestellte Variante des Einsetzens von Achievements und Aufgaben in Form von Herausforderungen stark positiv reflektiert.
-\par Aufgrund der eindeutigen Reaktionen der eingebundenen Studierenden, wird die Entscheidung getroffen, den ersten Ansatz nicht weiter zu verfolgen, dafür aber den zweiten Ansatz auszubauen.
+\par Aufgrund der eindeutigen Reaktionen der eingebundenen Studierenden, wird die Entscheidung getroffen, den ersten Ansatz nicht weiter zu verfolgen, dafür aber den zweiten Ansatz auszubauen. Somit fallen die Nutzergruppen überwiegend in den Spannungsbereich der \textbf{Explorers} und \textbf{Achievers}, wie in Abbildung \ref{img:interestGraphBartleAchiversExplorers} verdeutlicht wird. 
 
-\par Wie in \citep{Sailer2016}[S. 32 - 34] beschrieben wird, besitzen Achievements verschiedene Eigenschaften, welche in Bezug auf bestimmte Zielstellungen, einer steuernden und in diesem Sinne auch fordernden Funktion dienen können.\\\\
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.75\textwidth, keepaspectratio]{Bilder/Diagramme/InterestGraphBartleAchieversExplorers.png}
+	\caption{Benutzeroberfläche Fortschrittsmanagement}
+	\label{img:interestGraphBartleAchiversExplorers}
+\end{figure}
 
-S. 147
-Bartle’s Player Types for Gamification
-Bartle, R. (1996). Hearts, Clubs, Diamonds, Spades: Players who suit MUDs. http://www.mud.co.uk/richard/hcds.htm
-- Erfolgsorientierter Spieler (Orientiert sich an zielen, die im SPiel zu erreichen sind)
-- Sammeln von Punkten, Aufsteigen im Level, Bestmarken
+\par Durch den vorgesehenen Kontext der Applikation, die Studierenden während der Bearbeitung der Bachelorarbeit wegweisend zu unterstützen und zu motivieren, bietet sich somit an, Herausforderungen und die damit verbundenen Achievements in Form von kontextbezogenen fokuslenkenden Game-Design-Elementen (siehe \ref{sec:grundlagenkapitelGamification}) in die Applikation als festen Bestandteil der Motivationsstrategie zu integrieren.\\
+
+\par Wie in \citep{Sailer2016}[S. 32 - 34] beschrieben wird, besitzen Achievements verschiedene Eigenschaften, welche in Bezug auf Zielstellungen, einer steuernden und in diesem Sinne auch fordernden Funktion dienen können. Eine wichtiges Kriterium bei der Wahl der Achievements als Spiel-Design Elemente ist, dass sie dem Benutzer ein nicht-kontrollierendes, positives Feedback geben und somit nicht unangenehm gängeln oder den ohnehin schon sehr hoch ausfallenden Druck auf die Studierenden bei der Bearbeitung der Bachelorarbeit erhöhen. Es sollte in diesem Sinne nicht aus den Augen verloren werden, dass die Applikation den Studierenden positiv unterstützen soll.\\
+
+\par Im weiteren Verlauf werden den Nutzergruppen entsprechend auf Spiel-Design-Elemente wie Bestenlisten oder anderen sozialen Motivationsmodellen verzichtet.
+
+\par Weiterhin wird das Integrieren eines Punkte- oder Levelsystems, sowie einer Avatarfunktion nicht verfolgt. Dies dient der Absicht, dass die Applikation zwar motivierende Spiel-Design-Elemente enthalten soll, jedoch dies in einem Umfang passieren soll, der keine, an Gamification desinteressierten Benutzer, ausschließt und somit in diesem Fall eine weiterhin hilfreiche Lösung darstellen soll.
 
 \newpage
 \section{Anforderungskatalog}\label{sec:anforderungskatalog}
@@ -686,9 +703,9 @@ Es folgt eine stichpunktartige Auflistung und Beschreibung der Kernfeatures des 
 \end{itemize}
 
 \begin{figure}[H]
-	\subfigure[Guide Hauptbildschirm]{\includegraphics[width=0.4\textwidth]{Bilder/Prototyp/Guide.png}}
-	\subfigure[Guide Themen-Ebene]{\includegraphics[width=0.4\textwidth]{Bilder/Prototyp/GuideThemenbereich.png}}
-	\subfigure[Guide Informations-Ebene]{\includegraphics[width=0.4\textwidth]{Bilder/Prototyp/GuideThemenbereichInformationen.png}}
+	\subfigure[Guide Hauptbildschirm]{\includegraphics[width=0.33\textwidth]{Bilder/Prototyp/Guide.png}}
+	\subfigure[Guide Themen-Ebene]{\includegraphics[width=0.33\textwidth]{Bilder/Prototyp/GuideThemenbereich.png}}
+	\subfigure[Guide Informations-Ebene]{\includegraphics[width=0.33\textwidth]{Bilder/Prototyp/GuideThemenbereichInformationen.png}}
 	\caption{Benutzeroberfläche Guide}
 	\label{img:guide}
 \end{figure}

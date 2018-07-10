@@ -268,6 +268,98 @@
     \field{year}{2015}
   \endentry
 
+  \entry{mekler2013disassembling}{inproceedings}{}
+    \name{author}{4}{}{%
+      {{hash=MED}{%
+         family={Mekler},
+         familyi={M\bibinitperiod},
+         given={Elisa\bibnamedelima D},
+         giveni={E\bibinitperiod\bibinitdelim D\bibinitperiod},
+      }}%
+      {{hash=BF}{%
+         family={Br{\"u}hlmann},
+         familyi={B\bibinitperiod},
+         given={Florian},
+         giveni={F\bibinitperiod},
+      }}%
+      {{hash=OK}{%
+         family={Opwis},
+         familyi={O\bibinitperiod},
+         given={Klaus},
+         giveni={K\bibinitperiod},
+      }}%
+      {{hash=TAN}{%
+         family={Tuch},
+         familyi={T\bibinitperiod},
+         given={Alexandre\bibnamedelima N},
+         giveni={A\bibinitperiod\bibinitdelim N\bibinitperiod},
+      }}%
+    }
+    \list{organization}{1}{%
+      {ACM}%
+    }
+    \strng{namehash}{MED+1}
+    \strng{fullhash}{MEDBFOKTAN1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{Mek+13}
+    \field{extraalpha}{1}
+    \field{sortinit}{M}
+    \field{sortinithash}{M}
+    \field{booktitle}{CHI'13 extended abstracts on human factors in computing
+  systems}
+    \field{pages}{1137\bibrangedash 1142}
+    \field{title}{Disassembling gamification: the effects of points and meaning
+  on user motivation and performance}
+    \field{year}{2013}
+  \endentry
+
+  \entry{mekler2013points}{inproceedings}{}
+    \name{author}{4}{}{%
+      {{hash=MED}{%
+         family={Mekler},
+         familyi={M\bibinitperiod},
+         given={Elisa\bibnamedelima D},
+         giveni={E\bibinitperiod\bibinitdelim D\bibinitperiod},
+      }}%
+      {{hash=BF}{%
+         family={Br{\"u}hlmann},
+         familyi={B\bibinitperiod},
+         given={Florian},
+         giveni={F\bibinitperiod},
+      }}%
+      {{hash=OK}{%
+         family={Opwis},
+         familyi={O\bibinitperiod},
+         given={Klaus},
+         giveni={K\bibinitperiod},
+      }}%
+      {{hash=TAN}{%
+         family={Tuch},
+         familyi={T\bibinitperiod},
+         given={Alexandre\bibnamedelima N},
+         giveni={A\bibinitperiod\bibinitdelim N\bibinitperiod},
+      }}%
+    }
+    \list{organization}{1}{%
+      {ACM}%
+    }
+    \strng{namehash}{MED+1}
+    \strng{fullhash}{MEDBFOKTAN1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{Mek+13}
+    \field{extraalpha}{2}
+    \field{sortinit}{M}
+    \field{sortinithash}{M}
+    \field{booktitle}{Proceedings of the First International Conference on
+  gameful design, research, and applications}
+    \field{pages}{66\bibrangedash 73}
+    \field{title}{Do points, levels and leaderboards harm intrinsic
+  motivation?: an empirical analysis of common gamification elements}
+    \field{year}{2013}
+  \endentry
+
   \entry{Sailer2016}{book}{}
     \name{author}{1}{}{%
       {{hash=SM}{%
