@@ -79,72 +79,66 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {3.5.1}Ergebnisse der schriftlichen Befragung der Studierenden}{28}{subsection.3.5.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.5.2}Ergebnisse der schriftlichen Online-Umfrage der Studierenden}{31}{subsection.3.5.2}
-\defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {3.6}Untersuchung der Ergebnisse}{32}{section.3.6}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {3.6.1}Identifikation des Problembereichs}{32}{subsection.3.6.1}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {3.6.2}Auswahl der Motivationsstrategie}{33}{subsection.3.6.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.7}Anforderungskatalog}{35}{section.3.7}
+\contentsline {subsection}{\numberline {3.6.3}Abgeleitete Produktfunktionen und Anforderungen}{35}{subsection.3.6.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.7.1}Produkt\IeC {\"u}bersicht}{35}{subsection.3.7.1}
+\contentsline {chapter}{\numberline {4}Konzeptvorstellung der Applikation}{37}{chapter.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.7.2}Produktfunktionen}{35}{subsection.3.7.2}
+\contentsline {section}{\numberline {4.1}Beschreibung der Software}{37}{section.4.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {4}Konzeptvorstellung der Applikation}{36}{chapter.4}
+\contentsline {subsection}{\numberline {4.1.1}Fortschrittsmanagement}{38}{subsection.4.1.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.1}Beschreibung der Software}{36}{section.4.1}
+\contentsline {subsection}{\numberline {4.1.2}Guide}{39}{subsection.4.1.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.1.1}Fortschrittsmanagement}{37}{subsection.4.1.1}
+\contentsline {subsection}{\numberline {4.1.3}Dashboard}{41}{subsection.4.1.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.1.2}Guide}{38}{subsection.4.1.2}
+\contentsline {subsection}{\numberline {4.1.4}Herausforderungen}{43}{subsection.4.1.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.1.3}Dashboard}{40}{subsection.4.1.3}
+\contentsline {subsection}{\numberline {4.1.5}Achievements}{44}{subsection.4.1.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.1.4}Herausforderungen}{42}{subsection.4.1.4}
+\contentsline {subsection}{\numberline {4.1.6}Sonstige Softwareinhalte}{45}{subsection.4.1.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.1.5}Achievements}{43}{subsection.4.1.5}
+\contentsline {section}{\numberline {4.2}Beschreibung der Gamification-Elemente}{46}{section.4.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.1.6}Sonstige Softwareinhalte}{44}{subsection.4.1.6}
+\contentsline {subsection}{\numberline {4.2.1}Anfangsphase Achievements}{46}{subsection.4.2.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.2}Beschreibung der Gamification-Elemente}{45}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.2}Bearbeitungsphase Achievements}{46}{subsection.4.2.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.2.1}Anfangsphase Achievements}{45}{subsection.4.2.1}
+\contentsline {subsection}{\numberline {4.2.3}Abschlussphase Achievements}{46}{subsection.4.2.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.2.2}Bearbeitungsphase Achievements}{45}{subsection.4.2.2}
+\contentsline {subsection}{\numberline {4.2.4}App-Achievements Achievements}{46}{subsection.4.2.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.2.3}Abschlussphase Achievements}{45}{subsection.4.2.3}
+\contentsline {subsection}{\numberline {4.2.5}Fortschrittsverfolgung}{46}{subsection.4.2.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.2.4}App-Achievements Achievements}{45}{subsection.4.2.4}
+\contentsline {chapter}{\numberline {5}Architektur der Software}{47}{chapter.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.2.5}Fortschrittsverfolgung}{45}{subsection.4.2.5}
+\contentsline {section}{\numberline {5.1}Architekturbeschreibung}{47}{section.5.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {5}Architektur der Software}{46}{chapter.5}
+\contentsline {section}{\numberline {5.2}Entwurfsentscheidungen}{47}{section.5.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.1}Architekturbeschreibung}{46}{section.5.1}
+\contentsline {section}{\numberline {5.3}Erweiterbarkeit der Software f\IeC {\"u}r andere Studieng\IeC {\"a}nge}{47}{section.5.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.2}Entwurfsentscheidungen}{46}{section.5.2}
+\contentsline {chapter}{\numberline {6}Implementierung}{48}{chapter.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.3}Erweiterbarkeit der Software f\IeC {\"u}r andere Studieng\IeC {\"a}nge}{46}{section.5.3}
+\contentsline {section}{\numberline {6.1}Umsetzung der Anforderungen}{48}{section.6.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {6}Implementierung}{47}{chapter.6}
+\contentsline {section}{\numberline {6.2}Entwurf der Benutzeroberfl\IeC {\"a}che}{48}{section.6.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6.1}Umsetzung der Anforderungen}{47}{section.6.1}
+\contentsline {chapter}{\numberline {7}Validierung und Verifikation}{49}{chapter.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6.2}Entwurf der Benutzeroberfl\IeC {\"a}che}{47}{section.6.2}
+\contentsline {section}{\numberline {7.1}Softwaretests}{49}{section.7.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {7}Validierung und Verifikation}{48}{chapter.7}
+\contentsline {section}{\numberline {7.2}Abdeckung der Softwareanforderungen}{49}{section.7.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {7.1}Softwaretests}{48}{section.7.1}
+\contentsline {section}{\numberline {7.3}Ausf\IeC {\"u}hrung der Usabilitytests}{49}{section.7.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {7.2}Abdeckung der Softwareanforderungen}{48}{section.7.2}
+\contentsline {chapter}{\numberline {8}Pr\IeC {\"a}sentation der Ergebnisse}{50}{chapter.8}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {7.3}Ausf\IeC {\"u}hrung der Usabilitytests}{48}{section.7.3}
+\contentsline {section}{\numberline {8.1}Lessons Learned}{50}{section.8.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {8}Pr\IeC {\"a}sentation der Ergebnisse}{49}{chapter.8}
-\defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {8.1}Lessons Learned}{49}{section.8.1}
-\defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {8.2}Abschlussbetrachtung}{49}{section.8.2}
+\contentsline {section}{\numberline {8.2}Abschlussbetrachtung}{50}{section.8.2}
