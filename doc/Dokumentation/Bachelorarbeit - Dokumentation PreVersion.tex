@@ -3,11 +3,17 @@
 \usepackage[T1]{fontenc}
 \usepackage{lmodern}
 \usepackage[ngerman]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{microtype}
+\usepackage{pifont}
 \usepackage{amsmath}
 \usepackage{hyperref}
 \usepackage{booktabs}
 \usepackage{subfigure} 
+\usepackage{colortbl}
 \usepackage{graphicx}
+\usepackage{enumitem}
+\usepackage{threeparttable}
 \usepackage{float}
 \usepackage{multirow}
 \usepackage{pdflscape}
@@ -17,13 +23,6 @@
 \usepackage{tabularx}
 
 \newcommand*\adjust{\setlength\hsize{3\hsize+4\tabcolsep}} 
-
-\renewcommand{\theenumi}{\arabic{enumi}}
-\renewcommand{\labelenumi}{\textbf{PF\theenumi}}
-\renewcommand{\theenumii}{\arabic{enumii}}
-\renewcommand{\labelenumii}{\textbf{[Req\theenumi.\theenumii]}}
-\renewcommand{\theenumiii}{\arabic{enumiii}}
-\renewcommand{\labelenumiii}{[\theenumi.\theenumii.\theenumiii]}
 
 \addbibresource{lit.bib} 
 
@@ -554,10 +553,11 @@ Das Problem des mangelnden Zeitmanagements äußert sich unter anderem auch dari
 
 \newpage
 \section{Untersuchung der Ergebnisse}
+\par In dem folgenden Kapitel werden alle relevanten Kenntnisse, welche aus der Datenerhebung und -Auswertung hervorgehen, untersucht und analysiert. Dazu gehört die Identifikation des Problembereiches, die Auswahl der zu verfolgenden Motivationsstrategie bezüglich der Wahl der Spiel-Design-Elemente, sowie die relevanten Produktfunktionen und deren abgeleitete Anforderungen, Chancen und Risiken.
 
 \subsection{Identifikation des Problembereichs}
 \par Durch die Befragung der Beteiligten und der Analyse der gewonnen Informationen, haben sich die Erwartungen der Beteiligten an die Benutzung der Applikation herausarbeiten lassen, welche in der folgenden Tabelle (siehe Abbildung \ref{tab:erwartungenBeteiligte}) dargestellt sind.
-\par Die dabei genannten Ziele und Erwartungen entsprechen dem allgemeinen Bild, welches durch die Interviews ermittelten werden konnte, weshalb kleine Abweichungen in dieser Tabelle nicht mit aufgenommen wurden. Kleinen Abweichungen hätten einen zu großen Einfluss auf das Gesamtbild. Die kompletten schriftlichen Befragungen und Interviews befinden sich im Anhang (TODO) dieses Dokuments.\\
+\par Die dabei genannten Ziele und Erwartungen entsprechen dem allgemeinen Bild, welches durch die Interviews und schriftlichen Befragungen ermittelten werden konnte, weshalb kleine Abweichungen in dieser Tabelle nicht mit aufgenommen wurden, da diese einen zu großen verzerrenden Einfluss auf das Gesamtbild hätten. Die kompletten schriftlichen Befragungen und Interviews befinden sich im Anhang (TODO) dieses Dokuments.\\
 
 \begin{tabularx}{\textwidth}{l|X}
 	\toprule
@@ -579,7 +579,7 @@ Das Problem des mangelnden Zeitmanagements äußert sich unter anderem auch dari
 \captionof{table}{Erwartung der Beteiligten an die Applikation}
 \label{tab:erwartungenBeteiligte}
 
-\par Aus den Ergebnissen der Befragungen geht hervor, dass die Probleme nicht in den unterschiedlichen Ansichten der Studierenden und der Professoren liegen, da beide beteiligte Gruppen sehr kompatible Erwartungen und Ziele besitzen.
+\par \bigskip Aus den Ergebnissen der Befragungen geht hervor, dass die Probleme nicht in den unterschiedlichen Ansichten der Studierenden und der Professoren liegen, da beide beteiligte Gruppen sehr kompatible Erwartungen und Ziele besitzen.
 
 \par\medskip Häufig wird von den Studierenden geäußert, dass sie sich unzureichend vorbereitet für die Bachelorarbeit fühlen und die größten Probleme der Studierenden im Bereich Zeitmanagement und dem wissenschaftlichen Arbeiten liegen. Zusätzlich äußern sich die Studierenden zu fehlenden oder unzureichend aufgebauten Kenntnissen bezüglich der Rahmenbedingungen und weiteren Informationen zu Bachelorarbeiten als Ganzes.
 
@@ -590,7 +590,7 @@ Das Problem des mangelnden Zeitmanagements äußert sich unter anderem auch dari
 \par\medskip Somit lässt sich erwarten, dass die angestrebten Ziele der Studierenden und die Erwartungen der Professoren aufgrund dieser Wissens- und Erfahrungslücken unter Umständen nicht reibungslos im Rahmen der Bachelorarbeit erfüllt werden können. Auf diese Weise werden die Erwartungen der Professoren, sowie die Ziele der Studierenden gefährdet und können unter Umständen nicht erfüllt werden, obwohl dies im Sinne beider Beteiligten ist.
 
 \subsection{Auswahl der Motivationsstrategie}
-\par Wie aus den Ergebnissen in Kapitel \ref{sub:studentenchriftlichErgebnisse} in Tabelle \ref{tab:einbezugStudierende} abzulesen ist, äußern sich die befragten Studierenden gegenüber dem vorgestellten Designvorschlag, welcher die soziale Einbindung der Studierenden vorsieht, überwiegend sehr kritisch. Im Vergleich dazu wird die vorgestellte Variante des Einsetzens von Achievements und Aufgaben in Form von Herausforderungen stark positiv reflektiert.
+\par Wie aus den Ergebnissen in Kapitel \ref{sub:studentenchriftlichErgebnisse} in Tabelle \ref{tab:einbezugStudierende} abzulesen ist, äußern sich die befragten Studierenden gegenüber dem vorgestellten Designvorschlag, welcher die soziale Einbindung der Studierenden vorsieht, überwiegend sehr kritisch. Im Vergleich dazu wird die vorgestellte Variante des Einsetzens von Achievements und Aufgaben in Kombination mit Herausforderungen stark positiv reflektiert.
 \par Aufgrund der eindeutigen Reaktionen der eingebundenen Studierenden, wird die Entscheidung getroffen, den ersten Ansatz nicht weiter zu verfolgen, dafür aber den zweiten Ansatz auszubauen. Somit fallen die Nutzergruppen überwiegend in den Spannungsbereich der \textbf{Explorers} und \textbf{Achievers}, wie in Abbildung \ref{img:interestGraphBartleAchiversExplorers} verdeutlicht wird. 
 
 \begin{figure}[H]
@@ -602,88 +602,169 @@ Das Problem des mangelnden Zeitmanagements äußert sich unter anderem auch dari
 
 \par Durch den vorgesehenen Kontext der Applikation, die Studierenden während der Bearbeitung der Bachelorarbeit wegweisend zu unterstützen und zu motivieren, bietet sich somit an, Herausforderungen und die damit verbundenen Achievements in Form von kontextbezogenen fokuslenkenden Game-Design-Elementen (siehe \ref{sec:grundlagenkapitelGamification}) in die Applikation als festen Bestandteil der Motivationsstrategie zu integrieren.
 
-\par\medskip Wie in \citep{Sailer2016}[S. 32 - 34] beschrieben wird, besitzen Achievements verschiedene Eigenschaften, welche in Bezug auf Zielstellungen, einer steuernden und in diesem Sinne auch fordernden Funktion dienen können. Eine wichtiges Kriterium bei der Wahl der Achievements als Spiel-Design Elemente ist, dass sie dem Benutzer ein nicht-kontrollierendes, positives Feedback geben und somit nicht unangenehm gängeln oder den ohnehin schon sehr hoch ausfallenden Druck auf die Studierenden bei der Bearbeitung der Bachelorarbeit erhöhen. Es sollte in diesem Sinne nicht aus den Augen verloren werden, dass die Applikation den Studierenden positiv unterstützen soll.
+\par\medskip Wie in \citep{Sailer2016}[S. 32 - 34] beschrieben wird, besitzen Achievements verschiedene Eigenschaften, welche in Bezug auf Zielstellungen, einer steuernden und in diesem Sinne auch fordernden Funktion dienen können. Eine wichtiges Kriterium bei der Wahl der Achievements als Spiel-Design Elemente ist, dass sie dem Benutzer ein nicht-kontrollierendes, positives Feedback geben und somit nicht unangenehm kontrollieren oder den ohnehin schon sehr hoch ausfallenden Druck auf die Studierenden bei der Bearbeitung der Bachelorarbeit erhöhen. Es sollte in diesem Sinne nicht aus den Augen verloren werden, dass die Applikation den Studierenden positiv unterstützen soll.
 
-\par\medskip Im weiteren Verlauf werden den Nutzergruppen entsprechend auf Spiel-Design-Elemente wie Bestenlisten oder anderen sozialen Motivationsmodellen verzichtet.
+\par\medskip Im weiteren Verlauf werden den Nutzergruppen entsprechend, auf Spiel-Design-Elemente wie Bestenlisten oder anderen sozialen Motivationsmodellen verzichtet.
 
-\par Weiterhin wird das Integrieren eines Punkte- oder Levelsystems, sowie einer Avatarfunktion nicht verfolgt. Dies dient der Absicht, dass die Applikation zwar motivierende Spiel-Design-Elemente enthalten soll, jedoch dies in einem Umfang passieren soll, der keine, an Gamification desinteressierten Benutzer, ausschließt und somit in diesem Fall eine weiterhin hilfreiche Lösung darstellen soll.
-
-\newpage
-\subsection{Abgeleitete Produktfunktionen und Anforderungen}
-\par Im folgenden Verlauf sind die, aus der Aufgabenstellung und der Anforderungsanalyse erhobenen Produktanforderungen, in natürlicher Sprache vorzufinden. Diese wurden an einer Anforderungsschablone aus dem Lehrbuch der Softwaretechnik von Helmut Balzert orientiert und nach Bedarf spezifiziert\citep[Kapitel 19 - Natürlichsprachliche Anforderungen, Seite 481]{Balzert2010}:\\
-
-\begin{enumerate}
-
-\item \textbf{Unterstützung bei Zeit- und Fortschrittsmanagement}
-\begin{enumerate}
-\item Die Software muss dem Studierenden ermöglichen Meilensteine zu verwalten.
-\begin{enumerate}
-\item Das Anlegen von Meilensteinen
-\item Das Entfernen von Meilensteinen
-\item Das Ändern von Meilensteinen
-\item Das Verschieben von Meilensteinen
-\end{enumerate}
-
-\item Die Software muss dem Studierenden ermöglichen, den Meilensteinen zugehörige Aufgabenpakete zu verwalten.
-\begin{enumerate}
-\item Das Anlegen von Arbeitspaketen
-\item Das Entfernen von Arbeitspaketen
-\item Das Ändern von Arbeitspaketen
-\item Das Verschieben von Arbeitspaketen
-\item Das Markieren von Arbeitspaketen als \textit{abgeschlossen}
-\end{enumerate}
-
-\item Die Software soll die Studierende auf bevorstehende Meilensteine und Aufgabenpakete aufmerksam machen.
-\begin{enumerate}
-\item Das Auslösen von Erinnerungen/Benachrichtigungen
-\end{enumerate}
-\end{enumerate}
+\par Weiterhin wird das Integrieren eines Punkte- oder Levelsystems, sowie einer Avatarfunktion nicht verfolgt. Dies dient der Absicht, dass die Applikation zwar motivierende Spiel-Design-Elemente enthalten soll, jedoch dies in einem Umfang passieren soll, der keine, an Gamification desinteressierten Benutzer, ausschließt und somit in diesem Fall weiterhin eine brauchbare Hilfestellung bieten soll.
 
 \newpage
-\item \textbf{Unterstützung bei der Bearbeitung der Bachelorarbeit}.
-\begin{enumerate}
-\item Die Software muss den Studierenden Informationen über die Rahmenbedingungen und Formalien der Bachelorarbeit an der Fachhochschule Lübeck bereitstellen können.
-\item Die Software muss den Studierenden Hinweise und Empfehlungen zu Aufbau und Struktur von Bachelorarbeiten bereitstellen können.
-\item Die Software muss den Studierenden Hinweise und Empfehlungen zur Durchführung von Bachelorarbeiten bereitstellen können.
-\item Die Software muss den Studierenden eine Übersicht über studiengangs-spezifischen und -übergreifenden relevante Techniken und Methoden bereitstellen können.
-\begin{enumerate}
-\item Hilfestellung/Übersicht zu Themenfindung für Bachelorarbeit
-\item Hilfestellung/Übersicht von studiengangs-spezifischen Inhalten
-\item Hilfestellung/Übersicht zu Aufbereitung von Ergebnissen
-\item Hilfestellung/Übersicht zu Nachweisführung
-\end{enumerate}
-\item Die Software muss den Umgang von zielgruppen-spezifischen Anpassungen der Inhalte ermöglichen können.
-\item Die Anpassungen der Inhalte soll software-extern realisierbar und integrierbar sein.
+\subsection{Übersicht der abgeleiteten Produktfunktionen und Anforderungen} \label{sub:produktfunktionen}
+\par Im folgenden Verlauf sind die, aus der Aufgabenstellung und der Anforderungsanalyse erhobenen Produktanforderungen in natürlicher Sprache vorzufinden. Diese wurden an einer Anforderungsschablone aus dem Lehrbuch der Softwaretechnik von Helmut Balzert orientiert \citep[Kapitel 19 - Natürlichsprachliche Anforderungen, Seite 481]{Balzert2010} und nach Bedarf spezifiziert:\\
+
+\begin{enumerate} [label=\textbf{PR\arabic*}]
+
+\item \label{prod:pZeitFortschritt} \textbf{Unterstützung bei Zeit- und Fortschrittsmanagement}
+\begin{enumerate} [label=\textit{[Req1.\arabic*]}]
+\item \label{anf:meilensteinVerwalten} Die Software muss dem Studierenden ermöglichen, Meilensteine zu verwalten.
+\begin{enumerate} [label=\textit{[Req1.1.\arabic*]}]
+\item \label{uanf:meilensteinAnlegen} Das Anlegen von Meilensteinen
+\item \label{uanf:meilensteinEntfernen} Das Entfernen von Meilensteinen
+\item \label{uanf:meilensteinAendern} Das Ändern von Meilensteinen
+\item \label{uanf:meilensteinVerschieben} Das Verschieben von Meilensteinen
 \end{enumerate}
 
-\item \textbf{Einsatz von Gamificationelementen zur Steigerung der Motivation}
-\begin{enumerate}
-\item Die Software muss im Rahmen der Gamificationstrategie, Spiel-Design-Elemente bereitstellen, welche der ermittelten Benutzerklassen entsprechen.
-\item Die Spiel-Design-Elemente sollen unter Berücksichtigung der wegweisenden Eigenschaft, geeignet an dem Ablauf einer Bachelorarbeit orientiert sein.
+\bigskip
+\item \label{anf:arbeitspaketVerwalten} Die Software muss dem Studierenden ermöglichen, den Meilensteinen zugehörige Aufgabenpakete zu verwalten.
+\begin{enumerate} [label=\textit{[Req1.2.\arabic*]}]
+\item \label{uanf:arbeitspaketAnlegen} Das Anlegen von Arbeitspaketen
+\item \label{uanf:arbeitspaketEntfernen} Das Entfernen von Arbeitspaketen
+\item \label{uanf:arbeitspaketAendern} Das Ändern von Arbeitspaketen
+\item \label{uanf:arbeitspaketVerschieben} Das Verschieben von Arbeitspaketen
+\item \label{uanf:arbeitspaketMarkieren} Das Markieren von Arbeitspaketen als \textit{abgeschlossen}
+\item \label{uanf:arbeitspaketPlanen} Das Planen von Arbeitspaketen
 \end{enumerate}
 
-\item \textbf{Weitere Anforderungen}
-\begin{enumerate}
-\item Die Software muss sämtliche Inhalte und Leistungen auch für international-sprachige Personengruppen enthalten.
-\item Die Software kann die Möglichkeit bieten, dass Betreuer ihre persönlichen Themenvorschläge für die Studierenden sichtbar, per Weboberfläche hinzufügen/entfernen können 
+\bigskip
+\item \label{anf:erinnerungenBenachrichtigungen}Die Software soll die Studierende auf bevorstehende Meilensteine und Aufgabenpakete aufmerksam machen.
+
+\begin{enumerate} [label=\textit{[Req1.3.\arabic*]}]
+\item \label{uanf:erinnerungAusloesen}Das Auslösen von Erinnerungen/Benachrichtigungen
 \end{enumerate}
 \end{enumerate}
+
+\newpage
+\item \label{prod:unterstuetzungBachelorarbeit} \textbf{Unterstützung bei der Bearbeitung der Bachelorarbeit}.
+\begin{enumerate} [label=\textit{[Req2.\arabic*]}]
+
+\item \label{anf:infRahmenbedingungenFormalien} Die Software muss den Studierenden Informationen über die Rahmenbedingungen und Formalien der Bachelorarbeit an der Fachhochschule Lübeck bereitstellen können.
+
+\bigskip
+\item \label{anf:infAufbauStruktur} Die Software muss den Studierenden Hinweise und Empfehlungen zu Aufbau und Struktur von Bachelorarbeiten bereitstellen können.
+
+\bigskip
+\item \label{anf:infDurchfuerungBachelorarbeit} Die Software muss den Studierenden Hinweise und Empfehlungen zur Durchführung von Bachelorarbeiten bereitstellen können.
+
+\bigskip
+\item \label{anf:infMethodenTechniken} Die Software muss den Studierenden eine Übersicht über studiengangs-spezifischen und -übergreifenden relevante Techniken und Methoden bereitstellen können.
+
+\begin{enumerate} [label=\textit{[Req2.4.\arabic*]}]
+\item \label{uanf:infThemenfindung} Hilfestellung/Übersicht zu Themenfindung für Bachelorarbeit
+\item \label{uanf:infInhalt} Hilfestellung/Übersicht von studiengangs-spezifischen Inhalten
+\item \label{uanf:infAufbereitungErgebnisse} Hilfestellung/Übersicht zu Aufbereitung von Ergebnissen
+\item \label{uanf:infNachweisfuerung} Hilfestellung/Übersicht zu Nachweisführung
+\end{enumerate}
+
+\bigskip
+\item \label{anf:anpassungZielgruppen} Die Software muss den Umgang von zielgruppen-spezifischen Anpassungen der Inhalte ermöglichen können.
+
+\bigskip
+\item \label{anf:anpassungSoftwareextern} Die Anpassungen der Inhalte soll software-extern realisierbar und integrierbar sein.
+\end{enumerate}
+
+\item\label{prod:gamificationelementeEinsatz} \textbf{Einsatz von Gamificationelementen zur Steigerung der Motivation}
+\begin{enumerate} [label=\textit{[Req3.\arabic*]}]
+\item \label{anf:spielDesignElementeBenutzerklassen} Die Software muss im Rahmen der Gamificationstrategie, Spiel-Design-Elemente bereitstellen, welche der ermittelten Benutzerklassen entsprechen.
+
+\bigskip
+\item \label{anf:spielDesignElementeOrientiertungAnBachelorarabeit} Die Spiel-Design-Elemente sollen unter Berücksichtigung der wegweisenden Eigenschaft, geeignet an dem Ablauf einer Bachelorarbeit orientiert sein.
+\end{enumerate}
+
+\bigskip
+\item \textbf{\label{prod:sonstige} Weitere Anforderungen}
+\begin{enumerate} [label=\textit{[Req4.\arabic*]}]
+\item \label{anf:mehrsprachig} Die Software muss sämtliche Inhalte und Leistungen auch für international-sprachige Personengruppen enthalten.
+
+\bigskip
+\item \label{anf:persoenlicheThemenvorschlaege} Die Software kann die Möglichkeit bieten, dass Betreuer ihre persönlichen Themenvorschläge für die Studierenden sichtbar, per Weboberfläche hinzufügen/entfernen können 
+\end{enumerate}
+
+
+\end{enumerate}
+
+\newpage
+\subsection{Übersicht der Risiken} \label{sub:risikouebersicht}
+\par Im Laufe der mit den Professoren durchgeführten Interviews, wurden häufig Bedenken geäußert bezüglich der Risiken, die der Einsatz der Software für die Studierenden mit sich bringen könnte. 
+\par \bigskip Es folgt die Aufzählung der ermittelten Risiken, sowie einer Gewichtung in Bezug auf die stärke der negativen Auswirkungen bei Eintreten dieser Risiken:
+
+\begin{enumerate} [label=\textit{[R\arabic*]}]
+\item \label{risk:realerZustand} 
+\par Auswirkungen: Hoch
+\par Die Applikation kennt den realen Zustand und Fortschritt der Bachelorarbeit nicht und könnte somit zu einer Verfälschung des realen Bildes führen. Studierende könnten somit den eigentlichen Zustand der Arbeit aus den Augen verlieren.
+\item \label{risk:inhaltUnumstoesslich} 
+\par Auswirkungen: Hoch
+\par Studierende könnten die Hilfestellung der Applikation als unumstößlich ansehen und so unter Umständen in Konflikt mit dem Betreuer kommen.
+\item \label{risk:erstazBetreuer} 
+\par Auswirkungen: Hoch
+\par Die Applikation kann als Ersatz für die Betreuung von einem Professor oder Professorin wahrgenommen werden, was zu weitreichenden Konsequenzen für die Qualität der Abschlussarbeit führen könnte.
+\item \label{risk:ueberplanung} 
+\par Auswirkungen: Mittel
+\par Die Applikation könnte im Rahmen des Zeitmanagement-Tools zu einer Überplanung führen, was den Studierenden von der eigentlichen Arbeit abhalten könnte.
+\item \label{risk:gamificationEffekt} 
+\par Auswirkungen: Gering
+\par Gamification-Elemente können einen sehr geringen Effekt haben, da nicht sie die Motivation aufrecht erhalten, sondern die Interesse des Studierenden.
+\end{enumerate}
+
+\newpage
+\subsection{Übersicht der Chancen} \label{sub:chancenuebersicht}
+\par Aus den gewonnen Informationen, welche sich aus dem Verlauf der Interviews mit den Professoren und der schriftlichen Befragung mit den Studierenden ergeben haben, ließen sich Chancen für Betreuer und Studierende durch Einsatz der Applikation identifizieren, welche im Folgenden genannt werden.
+
+\par \bigskip Es folgt die Aufzählung der ermittelten Chancen, sowie einer Gewichtung in Bezug auf die stärke der positiven Auswirkungen bei Erreichen dieser Chancen:
+
+\begin{enumerate} [label=\textit{[C\arabic*]}]
+\item 
+\par Auswirkungen: Hoch
+\par Aufnahmebereitschaft gegenüber Tipps, Empfehlungen und anderen Aspekten könnte im Gegensatz zum Bachelorarbeit-Seminar gesteigert werden, da der Einsatz der Applikation von begleitender Natur ist und sich die Studierenden somit besser mit dem Problem identifizieren könnten.
+\item
+\par Auswirkungen: Hoch
+\par Vermeiden von großen Fehlern der Studierenden, durch Lenken des Fokus der Studierenden auf wichtige Aspekte der Bachelorarbeit, bei denen üblicherweise häufig Probleme auftreten.
+\item
+\par Auswirkungen: Hoch
+\par Besseres Zeitmanagement der Studierenden und die Steigerung der organisatorischen Fähigkeiten durch Anwendung der Applikation.
+\item
+\par Auswirkungen: Hoch
+\par Systematischere Vorgehensweise der Studierenden bei Problemanalyse, Anforderungserhebung und Nachweisführung
+\item
+\par Auswirkungen: Hoch
+\par Senken des Beratungsaufwandes seitens der Betreuer bei Trivialitäten und bei sich wiederholenden Fragestellungen.
+\item 
+\par Auswirkungen: Mittel
+\par Neuer Informationskanal für Studierende, welcher Wissenslücken bezüglich der Rahmenbedingungen und Regeln einer Bachelorarbeit schließen kann.
+\item
+\par Auswirkungen: Mittel
+\par Zielgerichteterer Methoden- und Werkzeugeinsatz, sowie Anwendung fachspezifischer und fachübergreifender Techniken.
+\item
+\par Auswirkungen: Mittel
+\par Minimieren von Problemen bei der Gestaltung der Dokumentation.
+\item
+\par Auswirkungen: Gering
+\par Bessere Vorbereitung der Studierenden auf Gesprächsterminen mit dem Betreuer.
+\end{enumerate}
+
+
 
 \chapter{Konzeptvorstellung der Applikation} \label{chap:konzept}
 
 \section{Beschreibung der Software}
-\par Die Applikation ist in verschiedene Kern-Softwareabschnitten unterteilt. Diese Abschnitte lassen sich in folgende namensgebende Aufgabenbereiche unterteilen, welche sich an den erhobenen Anforderungen und der Aufgabenstellung orientieren (siehe Kapitel \ref{sec:anforderungskatalog}).
-
-\par\medskip Es folgt eine stichpunktartige Auflistung der Kernfeatures des Tools, welche im Laufe dieses Kapitels ausführlich beschrieben werden:
+\par Die Applikation ist in verschiedene Kern-Softwareabschnitten unterteilt. Diese Abschnitte lassen sich weiterhin auf folgende namensgebende Aufgabenbereiche aufteilen, welche sich an den erhobenen Anforderungen und der Aufgabenstellung orientieren (siehe Kapitel \ref{sub:produktfunktionen}).
 
 \begin{itemize}
-\item \textbf{Fortschrittsmanagement}
-\item \textbf{Guide}
-\item \textbf{Dashboard}
-\item \textbf{Herausforderungen}
-\item \textbf{Achievements}
-\item \textbf{Sonstige Softwareinhalte}
-
+\item Fortschrittsmanagement
+\item Guide
+\item Herausforderungen
+\item Achievements
+\item Sonstige Softwareinhalte
+\item Dashboard
 \end{itemize}
 
 \newpage
@@ -693,11 +774,11 @@ Das Problem des mangelnden Zeitmanagements äußert sich unter anderem auch dari
 \par\bigskip Es folgt eine stichpunktartige Auflistung und Beschreibung der Kernfeatures des Tools:
 \begin{itemize}
 \item \textbf{Ein Zeitstrahl als Grundlage}
-\par Der scrollbare Zeitstrahl bietet die Arbeitsgrundlage des Fortschrittsmanagement-Tools. Hier können wochenweise Meilensteine mit Arbeitspaketen angelegt werden.
+\par Der scrollbare Zeitstrahl bietet die Arbeitsgrundlage des Fortschrittsmanagement-Tools. Hier können wochenweise Meilensteine mit Arbeitspaketen angelegt werden.  \ref{anf:meilensteinVerwalten}
 \item \textbf{Erstellung und Verwaltung von Meilensteinen}
-\par Es können Meilensteine erstellt, bearbeitet, verschoben und entfernt werden. Jede Woche kann maximal einen Meilenstein zugeordnet bekommen haben.
+\par Es können Meilensteine erstellt \ref{uanf:meilensteinAnlegen}, bearbeitet\ref{uanf:meilensteinAendern}, verschoben\ref{uanf:meilensteinVerschieben} und entfernt\ref{uanf:meilensteinEntfernen} werden. Jeder Woche kann maximal ein Meilenstein zugeordnet werden.
 \item \textbf{Erstellung und Verwaltung von Arbeitspaketen}
-\par Jeder Meilenstein enthält Arbeitspakete, die von dem Benutzer einem Meilenstein hinzugefügt, bearbeitet, verschoben und gelöscht werden können. Weiterhin lassen sich die Arbeitspakete optional konkreten Wochen zuordnen, um eine individuelle Planung zu ermöglichen.
+\par Jeder Meilenstein enthält Arbeitspakete\ref{anf:arbeitspaketVerwalten}, die von dem Benutzer einem Meilenstein hinzugefügt\ref{uanf:arbeitspaketAnlegen}, bearbeitet\ref{uanf:arbeitspaketAendern}, verschoben\ref{uanf:arbeitspaketVerschieben} und gelöscht\ref{uanf:arbeitspaketEntfernen} werden können. Weiterhin lassen sich die Arbeitspakete optional konkreten Wochen zuordnen, um eine individuelle Planung\ref{uanf:arbeitspaketPlanen} zu ermöglichen und als abgeschlossen markieren\ref{uanf:arbeitspaketMarkieren}.
 \end{itemize}
 
 \begin{figure}[H]
@@ -706,6 +787,9 @@ Das Problem des mangelnden Zeitmanagements äußert sich unter anderem auch dari
 	\caption{Benutzeroberfläche Fortschrittsmanagement}
 	\label{img:fortschrittsmanagement}
 \end{figure}
+
+\par \medskip
+
 
 \newpage
 \subsection{Guide}
@@ -718,21 +802,22 @@ Das Problem des mangelnden Zeitmanagements äußert sich unter anderem auch dari
 
 \begin{itemize}
 \item \textbf{Allgemeine Informationen}
-\par Dieser Abschnitt beinhaltet die allgemeinen Informationen, welche vor allem zur Klärung der Formalien bei der Bearbeitung der Abschlussarbeit wichtig sind.
+\par Dieser Abschnitt beinhaltet die allgemeinen Informationen , welche vor allem zur Klärung der Formalien bei der Bearbeitung der Abschlussarbeit wichtig sind.\ref{anf:infRahmenbedingungenFormalien}
 
 \item \textbf{Struktur der Arbeit}
-\par Der Abschnitt befasst sich näher mit dem Aufbau der Bachelorarbeit und stellt vor allem Informationen und Empfehlungen bereit, welche sich auf die Strukturierung und die Bedeutung der einzelnen Kapitel der Bachelorarbeit beziehen. 
+\par Der Abschnitt befasst sich näher mit dem Aufbau der Bachelorarbeit und stellt vor allem Informationen und Empfehlungen bereit, welche sich auf die Strukturierung und die Bedeutung der einzelnen Kapitel der Bachelorarbeit beziehen.\ref{anf:infAufbauStruktur}
 
 \item \textbf{Hinweise zum Schreiben}
-\par In diesem Abschnitt werden tiefgehende Informationen und Empfehlungen behandelt, welche sich auf die praktische Umsetzung des Schreibens im Detail beziehen. Beispielhaft hierfür sind der Schreibstil, die Verwendung von Zeiten oder die Einbindung von Bildern, Tabellen und Programmcode.
+\par In diesem Abschnitt werden tiefgehende Informationen und Empfehlungen behandelt, welche sich auf die praktische Umsetzung des Schreibens im Detail beziehen. Beispielhaft hierfür sind der Schreibstil, die Verwendung von Zeiten oder die Einbindung von Bildern, Tabellen und Programmcode.\ref{anf:infDurchfuerungBachelorarbeit}
 
 \item \textbf{Methodenübersicht}
-\par Dieser Abschnitt bietet eine Übersicht, wichtiger Methoden der Informatik, die sich bei der Bearbeitung und Dokumentation der Bachelorarbeit als Hilfreich erweisen könnten.
+\par Dieser Abschnitt bietet eine Übersicht, wichtiger Methoden der Informatik, die sich bei der Bearbeitung und Dokumentation der Bachelorarbeit als Hilfreich erweisen könnten.\ref{anf:infMethodenTechniken}
 
 \item \textbf{FAQ}
 \par Dieses Kapitel behandelt oft gestellte Fragen und verdeutlicht die Informationen in der Form eines Frage-Antwort Schemas.
 \end{itemize}
 
+\newpage
 \begin{figure}[H]
 	\subfigure[Guide Hauptbildschirm]{\includegraphics[width=0.33\textwidth]{Bilder/Prototyp/Guide.png}}
 	\subfigure[Guide Themen-Ebene]{\includegraphics[width=0.33\textwidth]{Bilder/Prototyp/GuideThemenbereich.png}}
@@ -742,31 +827,8 @@ Das Problem des mangelnden Zeitmanagements äußert sich unter anderem auch dari
 \end{figure}
 
 \newpage
-\subsection{Dashboard}
-\par Das Dashboard stellt den Ausgangspunkt und Hauptbildschirm der Applikation dar und trägt somit die Aufgabe, aktuelle Informationen für den Nutzer aufbereitet anzuzeigen, sowie die Funktionen der Applikation auf einfache Weise zugänglich zu machen. Von diesem Punkt aus soll der Benutzer die verschiedenen Softwareabschnitte öffnen können, weshalb es eine essenzielle Eigenschaft des Dashboards ist, die Inhalte übersichtlich, strukturiert und gleichzeitig aber visuell ansprechend darzustellen.
-
-\par\medskip Es folgt eine stichpunktartige Auflistung und Beschreibung der Inhalte:
-\begin{itemize}
-\item \textbf{Dynamische Anzeige des Fortschritts}
-\par Der bisher geleistete Gesamtfortschritt wird verdeutlicht, indem zu sehen ist, wie viele Meilensteine in Relation zu den Gesamtmeilenstein bisher abschlossen wurden. Weiterhin wird der bisher geleistete Wochenfortschritt verdeutlicht, indem zu sehen ist, wie viele Aufgabenpakete in der Phase bis zum nächsten Meilenstein, in Relation zu den vorher definierten gesamten Arbeitspaketen, schon erfüllt wurden.
-\item \textbf{Anzeige der noch offenen Herausforderungen}
-\par Es wird angezeigt, wievielte Herausforderungen der jeweiligen Kategorien abgeschlossen wurden, in Relation zu deren Gesamtanzahl.
-\item \textbf{Dynamische Anzeige der letzten erreichten Achievements}
-\par Die Anzeige zeigt die letzten n erreichten Achievements an. Zugehörig sind in diesem Fall die Darstellung des Typs des Achievements in Form der jeweiligen Färbung, sowie den Titel der Herausforderung. Das zuletzt erreichte Achievement wird hierbei durch Größe der Darstellung und Beschreibung hervorgehoben.
-\item \textbf{Dynamische Anzeige von allgemeinen Tipps}
-\par Die Anzeige zeigt zufällig ausgewählte allgemeine Tipps zur Bearbeitung der Bachelorarbeit. Die Tipps wechseln nach einem definierten Zeitintervall.
-\end{itemize}
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.45\textwidth,keepaspectratio]{Bilder/Prototyp/Dashboard.png}
-	\caption{Benutzeroberfläche Dashboard}
-	\label{img:dashboard}
-\end{figure}
-
-\newpage
 \subsection{Herausforderungen}
-In diesem Bereich der Applikation kann der Benutzer einsehen, welche Herausforderungen schon abgeschlossen wurden und welche noch offen sind. Die Herausforderungen sind nach festgelegten Kategorien geordnet. Bei öffnen der Kategorien, gelangt der Benutzer in eine tiefere Ebene, in der die jeweiligen, noch zu erledigen oder abgeschlossenen Herausforderungen, einzusehen sind.
+\par In diesem Bereich der Applikation kann der Benutzer einsehen, welche Herausforderungen \ref{anf:spielDesignElementeBenutzerklassen} schon abgeschlossen wurden und welche noch offen sind. Die Herausforderungen sind nach festgelegten Kategorien geordnet und orientieren sich nach dem typischen Ablauf einer Bachelorarbeit\ref{anf:spielDesignElementeOrientiertungAnBachelorarabeit}. Bei öffnen der Kategorien, gelangt der Benutzer in eine tiefere Ebene, in der die jeweiligen, noch zu erledigen oder abgeschlossenen Herausforderungen, einzusehen sind.
 
 \begin{figure}[H]
 	\centering
@@ -777,7 +839,7 @@ In diesem Bereich der Applikation kann der Benutzer einsehen, welche Herausforde
 
 \newpage
 \subsection{Achievements}
-\par Der Achievement Hauptbildschirm enthält eine Übersicht der verschiedenen Kategorien von Achievements (siehe Abbildung \ref{img:achievements}). Die nächste Ebene dieses Abschnitts zeigt die detaillierte Ansicht der jeweiligen Achievements an, wo sich der Benutzer einsehen kann, welche Achievements er bereits erhalten hat. Weitere Informationen zu den einzelnen Achievement und deren Kategorien finden ich im Kapitel \ref{sec:gamificationelemente}\\
+\par Der Achievement-Hauptbildschirm\ref{anf:spielDesignElementeBenutzerklassen} enthält eine Übersicht der verschiedenen Kategorien von Achievements (siehe Abbildung \ref{img:achievements}). Die nächste Ebene dieses Abschnitts zeigt die detaillierte Ansicht der jeweiligen Achievements an, wo sich der Benutzer einsehen kann, welche Achievements er bereits erhalten hat. Weitere Informationen zu den einzelnen Achievement und deren Kategorien finden ich im Kapitel \ref{sec:gamificationelemente}\\
 
 \begin{figure}[H]
 \centering
@@ -796,7 +858,7 @@ In diesem Bereich der Applikation kann der Benutzer einsehen, welche Herausforde
 \item \textbf{Menü}
 \par Das Menü zeigt die existierenden Funktionalitäten und Softwareabschnitte in einer klassischen gelisteten Menüstruktur.
 \item \textbf{Einstellungen}
-\par Die Einstellungen beinhalten Optionen, die sich auf die Eigenschaften der Applikation auswirken. Beispielsweise das Verändern des Designs.
+\par Die Einstellungen beinhalten Optionen, die sich auf die Eigenschaften der Applikation auswirken. Beispielsweise das Verändern des Designs oder der Sprache\ref{anf:mehrsprachig}
 \end{itemize}
 
 \begin{figure}[H]
@@ -805,6 +867,206 @@ In diesem Bereich der Applikation kann der Benutzer einsehen, welche Herausforde
 	\caption{Benutzeroberfläche Navigations-Menü}
 	\label{img:navigation}
 \end{figure}
+
+\newpage
+\subsection{Dashboard}
+\par Das Dashboard stellt den Ausgangspunkt und Hauptbildschirm der Applikation dar und trägt somit die Aufgabe, aktuelle Informationen für den Nutzer aufbereitet anzuzeigen, sowie die Funktionen der Applikation auf einfache Weise zugänglich zu machen. Von diesem Punkt aus soll der Benutzer die verschiedenen Softwareabschnitte öffnen können, weshalb es eine essenzielle Eigenschaft des Dashboards ist, die Inhalte übersichtlich, strukturiert und gleichzeitig aber visuell ansprechend darzustellen.
+
+\par \medskip Es folgt eine stichpunktartige Auflistung und Beschreibung der Inhalte:
+\begin{itemize}
+\item \textbf{Dynamische Anzeige des Fortschritts}
+\par Der bisher geleistete Gesamtfortschritt wird verdeutlicht, indem zu sehen ist, wie viele Meilensteine in Relation zu den Gesamtmeilenstein bisher abschlossen wurden. Weiterhin wird der bisher geleistete Wochenfortschritt verdeutlicht, indem zu sehen ist, wie viele Aufgabenpakete in der Phase bis zum nächsten Meilenstein, in Relation zu den vorher definierten gesamten Arbeitspaketen, schon erfüllt wurden.
+\item \textbf{Anzeige der noch offenen Herausforderungen}
+\par Es wird angezeigt, wievielte Herausforderungen der jeweiligen Kategorien abgeschlossen wurden, in Relation zu deren Gesamtanzahl.
+\item \textbf{Dynamische Anzeige der letzten erreichten Achievements}
+\par Die Anzeige zeigt die letzten n erreichten Achievements an. Zugehörig sind in diesem Fall die Darstellung des Typs des Achievements in Form der jeweiligen Färbung, sowie den Titel der Herausforderung. Das zuletzt erreichte Achievement wird hierbei durch Größe der Darstellung und Beschreibung hervorgehoben.
+\item \textbf{Dynamische Anzeige von allgemeinen Tipps}
+\par Die Anzeige zeigt zufällig ausgewählte allgemeine Tipps zur Bearbeitung der Bachelorarbeit. Die Tipps wechseln nach einem definierten Zeitintervall.
+\end{itemize}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.45\textwidth,keepaspectratio]{Bilder/Prototyp/Dashboard.png}
+	\caption{Benutzeroberfläche Dashboard}
+	\label{img:dashboard}
+\end{figure}
+
+
+\newpage
+\subsection{Übersicht der Abdeckung der Produktfunktionen}
+\par Die unterschiedlichen Abschnitte der Software stehen unterschiedlich stark in Verbindung mit den verschiedenen definierten Produktanforderungen. Um eine Übersicht über die groben Zusammenhänge zu ermöglichen, folgt eine zusammenfassende Tabelle (Siehe Tabelle \ref{tab:abdeckungProduktfunktionen}).
+\bigskip
+
+\begin{tabularx}{\textwidth}{l|X|c|c|c|c|c|c}
+\toprule
+\textbf{Bezeichnung} 
+& \textbf{Beschreibung} 
+& \textbf{A1} 
+& \textbf{A2} 
+& \textbf{A3} 
+& \textbf{A4} 
+& \textbf{A5} 
+& \textbf{A6}
+\\ \midrule
+	
+\textbf{\ref{anf:meilensteinVerwalten}}
+&  (Verwaltung von Meilensteinen) 
+& \ding{108} 
+&  
+&  
+&  
+&  
+&  
+\\ \midrule
+	
+\textbf{\ref{anf:arbeitspaketVerwalten}}
+& (Verwaltung von Aufgabenpaketen) 
+& \ding{108} 
+&  
+&  
+&  
+&  
+&  
+\\ \midrule
+	
+\textbf{\ref{anf:erinnerungenBenachrichtigungen}}
+& (Erinnerung an Meilensteine) 
+& \ding{108} 
+&  
+&  
+&  
+&  
+&  
+\\ \midrule
+	
+\textbf{\ref{anf:infRahmenbedingungenFormalien}}
+& (Hinweise zu Rahmenbedingungen und Formalien) 
+&  
+& \ding{108} 
+&  
+&  
+&  
+&  
+\\ \midrule
+	
+\textbf{\ref{anf:infAufbauStruktur}}
+& (Hinweise zu Aufbau und Struktur) 
+&  
+& \ding{108} 
+&  
+&  
+&  
+&  
+\\ \midrule
+	
+\textbf{\ref{anf:infDurchfuerungBachelorarbeit}}
+& (Hinweise zu Durchführung) 
+&  
+& \ding{108} 
+&  
+&  
+&  
+&  
+\\ \midrule
+	
+\textbf{\ref{anf:infMethodenTechniken}}
+& (Übersicht von Methoden und Techniken) 
+&  
+& \ding{108} 
+&  
+& 
+&  
+&  
+\\ \midrule
+	
+\textbf{\ref{anf:anpassungZielgruppen}}
+& (Anpassbarkeit an Zielgruppe) 
+&  
+& \ding{108} 
+&  
+&  
+&  
+&  
+\\ \midrule
+	
+\textbf{\ref{anf:anpassungSoftwareextern}}
+& (Software-externe Anpassung) 
+&  
+& \ding{108} 
+&  
+&  
+&  
+&  \\ \midrule
+	
+\textbf{\ref{anf:spielDesignElementeBenutzerklassen}}
+& (Benutzerklassen-orientierte Spiel-Design-Elemente) 
+&  
+&  
+& \ding{108} 
+& \ding{108} 
+& \ding{108} 
+&  
+\\ \midrule
+	
+\textbf{\ref{anf:spielDesignElementeOrientiertungAnBachelorarabeit}}
+& (Spiel-Design-Elemente sinnvoll an Bachelorarbeit orientieren) 
+&  
+&  
+& \ding{108} 
+& \ding{108} 
+&  
+&  
+\\ \midrule
+	
+\textbf{\ref{anf:mehrsprachig}}
+& (Mehrsprachigkeit) 
+&  
+&  
+&  
+&  
+&  
+& \ding{108} 
+\\ \midrule
+	
+\textbf{\ref{anf:persoenlicheThemenvorschlaege}}
+& (Bachelorarbeitsthemen über Applikation ausschreiben)
+&   
+&   
+&   
+&  
+&  
+& \ding{109} 
+\\ \midrule
+\bottomrule
+\end{tabularx}
+\begin{tablenotes}
+\item  A1 - Fortschrittsmanagement
+\item  A2 - Guide
+\item  A3 - Herausforderungen
+\item  A4 - Achievements
+\item  A5 - Dashboard
+\item  A6 - Sonstige Softwareinhalte
+\item \ding{108} - Teil der Applikation
+\item \ding{109} - Als Erweiterung vorgesehen
+\end{tablenotes} 
+\captionof{table}{Abdeckung der Produktfunktionen}
+\label{tab:abdeckungProduktfunktionen}
+
+\newpage
+\subsection{Umgang mit Risiken}
+
+\par \medskip Da sich die Herausforderungen an dem Ablauf einer Bachelorarbeit orientieren und den Studierenden somit vor typische Aufgaben stellt, kam es im Verlauf der Interviews zu den Befürchtungen\ref{risk:realerZustand}, dass die Applikation nicht den realen Zustand der Bachelorarbeit kennt und somit der Studierende durch das Erfüllen von Herausforderungen ein Gefühl von Erfolg hat, obwohl diese Herausforderungen nicht den geforderten Qualitäten entsprechen und der Studierende dies durch das positive Feedback nicht merkt.
+\par Um diesem Risiko entgegenzuwirken, sollen die erstellten Herausforderungen möglichst auffordernder Natur entsprechen (Beispiel: Beginne deine Einleitung). Bei Einsatz von Herausforderungen, welche auf inhaltliche Aspekte abzielen, sollen Checklisten zum Abschließen der Herausforderungen genutzt werden, um den Fokus auf eine allgemeingültige Vorgehensweise zu reduzieren, für die die Studierenden im Detail jedoch selbst verantwortlich sind. 
+\par Auch hier wird eine klare Kommunikation durch die Applikation als zwingend erforderlich angesehen.
+
+\par \medskip Die Gefahren der Risiken \ref{risk:inhaltUnumstoesslich} und \ref{risk:erstazBetreuer}, welche sich damit auseinander setzen, dass die Applikation fälschlicherweise als Ersatz eines Betreuers wahrgenommen oder der Inhalt der Applikation als unumstößlich angesehen werden könnte, soll durch eine klare Kommunikation mit den Anwendern reduziert werden. Es werden als Maßnahmen einerseits immer die Quellen der Informationen angegeben und weiterhin eine allgemein sichtbare Erklärung zur Anwendung, sowie Fehlanwendung der Applikation deutlich kommuniziert.
+
+\par \medskip  Das identifizierte Risiko \ref{risk:ueberplanung}, welches die Befürchtung einer Überplanung der Studierenden beinhaltet, was die Auswirkung haben kann, dass die Studierenden von der eigentlichen Arbeit abgehalten werden, wird als nicht ausschlaggebend betrachtet.
+Studierende die zur Überplanung neigen, würden diese auch ohne Applikation durchführen. 
+\par Wichtiger wird in dieser Hinsicht die Freiheit der einzelnen Planungs-Bedürfnisse durch die individuellen Studierenden angesehen, weshalb keine weiteren Maßnahmen zur Reduzierung der Planungsfreiheit getroffen werden. Weiterhin steht die Intensität der Planung nicht in der Verantwortung der Applikation, sondern in der Verantwortung der Benutzer. 
+
+\par \medskip Das Risiko \ref{risk:gamificationEffekt}, welches sich mit dem Nichtwirken der Gamificationmotivation beschäftigt, wird als nicht weitreichend betrachtet, da die Gamificationinhalte zwar Bestandteil der Applikation, jedoch nicht zwangsweise notwendig zur Benutzung der Applikation sind. Die Spiel-Design-Elemente sollen nicht die Interesse an einem bestimmten Thema steigern, sondern dienen im Kontext der Bachelorarbeit einer wegweisenden Natur, welche motivierende Einflüsse auf die Bearbeitenden hervorrufen können, jedoch nicht müssen, um ihren Nutzen zu erfüllen. 
+
 
 \newpage
 \section{Beschreibung der Gamification-Elemente} \label{sec:gamificationelemente}
@@ -825,12 +1087,10 @@ In diesem Bereich der Applikation kann der Benutzer einsehen, welche Herausforde
 \section{Erweiterbarkeit der Software für andere Studiengänge}
 \chapter{Implementierung} \label{chap:implementierung}
 \section{Umsetzung der Anforderungen}
-\section{Entwurf der Benutzeroberfläche}
 
 \chapter{Validierung und Verifikation} \label{chap:nachweisführung}
-\section{Softwaretests}
 \section{Abdeckung der Softwareanforderungen}
-\section{Ausführung der Usabilitytests}
+\section{Ausführung der Usabilityevaluation}
 
 \chapter{Präsentation der Ergebnisse} \label{chap:ergebnisse}
 \section{Lessons Learned}
