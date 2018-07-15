@@ -14,13 +14,13 @@
 \BOOKMARK [0][-]{chapter.2}{Beschreibung der Kernkomponenten}{}% 14
 \BOOKMARK [1][-]{section.2.1}{Vorstellung des Frameworks Flutter}{chapter.2}% 15
 \BOOKMARK [2][-]{subsection.2.1.1}{Flutter Systemarchitektur}{section.2.1}% 16
-\BOOKMARK [1][-]{section.2.2}{Firebase}{chapter.2}% 17
+\BOOKMARK [1][-]{section.2.2}{Redux-Architektur}{chapter.2}% 17
 \BOOKMARK [1][-]{section.2.3}{Gamification}{chapter.2}% 18
 \BOOKMARK [2][-]{subsection.2.3.1}{Bekannte Spiel-Design-Elemente}{section.2.3}% 19
 \BOOKMARK [2][-]{subsection.2.3.2}{Nutzergruppen nach Bartle}{section.2.3}% 20
 \BOOKMARK [0][-]{chapter.3}{Untersuchung des Problembereiches}{}% 21
-\BOOKMARK [1][-]{section.3.1}{Identifikation der Interessengruppen}{chapter.3}% 22
-\BOOKMARK [1][-]{section.3.2}{Hypothese}{chapter.3}% 23
+\BOOKMARK [1][-]{section.3.1}{Hypothese}{chapter.3}% 22
+\BOOKMARK [1][-]{section.3.2}{Identifikation der Interessengruppen}{chapter.3}% 23
 \BOOKMARK [1][-]{section.3.3}{Wahl der Analysestrategie}{chapter.3}% 24
 \BOOKMARK [2][-]{subsection.3.3.1}{Einbezug der Professoren}{section.3.3}% 25
 \BOOKMARK [2][-]{subsection.3.3.2}{Einbezug der Studierenden}{section.3.3}% 26

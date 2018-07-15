@@ -126,9 +126,7 @@ Das Flutter Framework stellt zwei verschiedene Arten von Widgets zur Verfügung,
 \end{itemize}
 
 		...
-
-\section{Firebase}
-
+\section{Redux-Architektur}
 \section{Gamification} \label{sec:grundlagenkapitelGamification}
 Vergleiche \citep{Strahringer2017}57
 
@@ -163,8 +161,8 @@ Vergleiche \citep[Kapitel 2.2.2 Analyse einzelner Spiel-Design-Elemente]{Sailer2
 \captionof{table}{Übersicht der Spiel-Design-Elemente \citep[vgl.]{blohm2013gamification}}
 \label{tab:spielDesignElemente}
 \subsection{Nutzergruppen nach Bartle} \label{sub:nutzergruppenBartle}
-\par Nach Bartle \citep{bartle1996hearts} werden vier verschiedene Nutzertypen voneinander unterschieden, welche im folgenden kurz erläutert werden.\\
-Zudem werden zu den jeweils genannten Benutzergruppen die bekannten Spiel-Design Elemente ihrer Wirksamkeit bei der Steigerung der Motivation zugeordnet. (TODO)
+\par Nach Bartle \citep{bartle1996hearts} werden vier verschiedene Nutzertypen voneinander unterschieden, welche im folgenden kurz erläutert werden.
+\par Zudem werden den jeweils genannten Benutzergruppen die bekannten Spiel-Design Elemente ihrer Wirksamkeit bei der Steigerung der Motivation zugeordnet. (TODO)
 
 \begin{itemize}
 \item \textbf{Der Killer}
@@ -189,6 +187,12 @@ Zudem werden zu den jeweils genannten Benutzergruppen die bekannten Spiel-Design
 \end{figure}
 
 \chapter{Untersuchung des Problembereiches} \label{chap:problemanalyse}
+\par In dem folgenden Kapitel werden die Rahmenbedingungen und die Analysestrategie zu den durchgeführten Befragungen von Professoren und Studierenden, aus dem Studiengang Informatik/Softwaretechnik der Fachhochschule Lübeck, dargestellt und die daraus resultierenden Ergebnisse und Erkenntnisse beider Seiten in zusammengefasster Form beschrieben. 
+\par Weiterhin stellt die Diskussion dieser Ergebnisse und die aus den durchgeführten Befragungen abgeleiteten Anforderungen, an die zu entwickelnde Software, das Produkt der Anforderungsanalyse und somit den Ausgangspunkt für die gesamte Arbeit dar.
+
+\section{Hypothese}
+\par Die Auseinandersetzung mit komplexen Problemstellungen, wie die als abschließende Prüfungsleistung des Studiums zu erarbeitende Bachelorarbeit, stellt erfahrungsgemäß für viele Studierende eine große Herausforderung dar. Diese Herausforderung ergibt sich aus dem erstmaligen Zusammenspiel von selbstständigem und eigenverantwortlichem Arbeiten, sowie dem Problemlösen mittels erworbener Fach- und Methodenkenntnisse über einen längeren (in etwa dreimonatigen) Zeitraum.
+Trotz des Verlaufs des Studiums, des angeeigneten Wissens und der somit zahlreich erworbenen Fähigkeiten, kommt es im Kontext von Bachelorarbeiten dennoch oftmals zu Schwierigkeiten, diesen Zusammenhang auf reale Probleme abzubilden und zu dokumentieren.
 
 \newpage
 \section{Identifikation der Interessengruppen}
@@ -250,29 +254,25 @@ Zudem werden zu den jeweils genannten Benutzergruppen die bekannten Spiel-Design
 \end{center}
 
 \newpage
-\section{Hypothese}
-\par Die Auseinandersetzung mit komplexen Problemstellungen, wie die als abschließende Prüfungsleistung des Studiums zu erarbeitende Bachelorarbeit, stellt erfahrungsgemäß für viele Studierende eine große Herausforderung dar. Diese Herausforderung ergibt sich aus dem erstmaligen Zusammenspiel von selbstständigem und eigenverantwortlichem Arbeiten, sowie dem Problemlösen mittels erworbener Fach- und Methodenkenntnisse über einen längeren (in etwa dreimonatigen) Zeitraum.
-Trotz des Verlaufs des Studiums, des angeeigneten Wissens und der somit zahlreich erworbenen Fähigkeiten, kommt es im Kontext von Bachelorarbeiten dennoch oftmals zu Schwierigkeiten, diesen Zusammenhang auf reale Probleme abzubilden und zu dokumentieren.
-
 \section{Wahl der Analysestrategie}
 \par Um den Problembereich zu ermitteln und somit eine Analysegrundlage zu erschaffen, werden Personengruppen der Fachhochschule Lübeck, durch verschiedene Befragungs- und Analysemethoden in das Projekt miteinbezogen. Dies soll einen detaillierten Einblick in die Sichtweisen der unterschiedlich beteiligten Personen und Interessengruppen ermöglichen und somit eine Grundlage für das Verständnis der aktuellen Situation bilden.
 
-\par Als primäre Einflussgeber wurden in diesem Rahmen die Gruppe der Professoren, sowie die Gruppe der Studierenden identifiziert. Diese Entscheidung wurde aufgrund der im Rahmen einer Bachelorarbeit  existierenden unterschiedlichen Sichtweisen, sowie Erfahrungsständen von Betreuern und Bacheloranden getätigt.
+\par Als primäre Einflussgeber, welche in die Entwicklung der Applikation stark eingebunden werden, wurde die Gruppe der Professoren, sowie die Gruppe der Studierenden identifiziert. Diese Entscheidung wurde aufgrund der im Rahmen der Bachelorarbeit existierenden unterschiedlichen Sichtweisen, sowie der unmittelbaren Berührung des Problembereiches der Beteiligten und den unterschiedlichen Erfahrungsständen von Betreuern und Bacheloranden getätigt (siehe Abbildung \ref{tab:uebersichtInteressengruppen}). Darüber hinaus handelt es sich bei den Studierenden um die Zielgruppe und potentiellen späteren Anwender, weshalb die Aufnahme der Probleme und Meinungen der Studierenden als essenziell angesehen wird.
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.95\textwidth, keepaspectratio]{Bilder/Diagramme/Analysestrategie.png}
+	\includegraphics[width=1\textwidth, keepaspectratio]{Bilder/Diagramme/Analysestrategie.png}
 	\caption{Beschreibung der Analysestrategie}
 	\label{img:analysestrategie}
 \end{figure}
 
-\par Durch die Gespräche mit den Studierenden ließen sich Erkenntnisse über den Umfang des Problems gewinnen. Auf Grundlage dieser Erkenntnisse wurde die Analysestrategie verfeinert und für die Umsetzung vorbereitet (siehe Abbildung \ref{img:analysestrategie}), welche im folgenden Verlauf beschrieben werden.
-\par Die Interviews sollen als Grundlage zur Konzeption und Design weiterer Befragungsstrategien dienen und stellen in diesem Umfang einen Ausgangspunkt für die Problemanalyse dar. Weiterhin werden die gewählten Interviewpartner bei Zustimmung, über das gesamte Projekt und nach Absprache, auch in die Evaluation der Applikation miteinbezogen.
-\par\medskip Durch das Durchführen von Gruppeninterviews, sollen die Studierenden zu Diskussionen angeregt sein, welche von dem Leiter des Interviews durchaus auch motiviert werden können. Dies hat den Zweck, die Situation und die Rolle der Studierenden für den Interviewer erkenntlich zu machen.  Diese persönlichen Interviews dienen in erster Linie also nicht zur Erhebung von Daten, sondern als strategischer Orientierungspunkt für mich, den Projektleiter.\\
+\par Durch die initial ausgeführten Gespräche mit den Studierenden ließen sich Erkenntnisse über den Umfang des Problems gewinnen. Auf Grundlage dieser Erkenntnisse wurde die weitere Analysestrategie verfeinert und für die Umsetzung durch die Erstellung von Fragekatalogen und Interview-Leitfaden vorbereitet (siehe Abbildung \ref{img:analysestrategie}), welche im folgenden Verlauf beschrieben werden.
+\par Die Interviews mit den Studierenden sollen somit als Grundlage zur Konzeption und Design weiterer Befragungsstrategien dienen und stellen in diesem Umfang einen Ausgangspunkt für die Problemanalyse dar. Weiterhin wurden die gewählten Interviewpartner bei Zustimmung, über das gesamte Projekt und nach Absprache, auch in die Evaluation der Applikation miteinbezogen.
+\par\medskip Durch das Durchführen von Gruppeninterviews, sollen die Studierenden zu Diskussionen angeregt sein, welche von dem Leiter des Interviews durchaus auch motiviert werden können. Dies hat den Zweck, die Situation und die Rolle der Studierenden für den Interviewer erkenntlich zu machen.  Diese persönlichen Interviews dienen in erster Linie also nicht der Erhebung konkreter Daten, sondern als erster Berührungspunkt mit dem Problembereich und in diesem Rahmen als strategischer Orientierungspunkt für mich, als Projektleiter.
 
 \subsection{Einbezug der Professoren}
 \par Für die Interessengruppe der Professoren aus dem Fachbereich Informatik, ist als Grundlage der Datenerhebung einerseits das Durchführen von Einzelinterviews mit einer ausgewählten Gruppe von Professoren vorgesehen, während eine weitere Gruppe von Professoren schriftlich per E-Mail befragt wird (siehe Abbildung \ref{img:analysestrategie}). Dies bietet sowohl den Zugriff auf die unmittelbaren Erfahrungen der einzelnen Professoren als Spezialisten in den jeweiligen Fachgebieten, als auch auf die Erfahrungen der Professoren in der Position eines Betreuers und Ansprechpartners für Bacheloranden. 
-\par Durch das Durchführen von Einzelinterviews wird ermöglicht, die Erwartungen seitens der Professoren an die Bacheloranden im Detail zu identifizieren und die, in dieser Hinsicht priorisierten inhaltlichen und methodischen Aspekte bei der Bearbeitung einer Bachelorarbeit herauszuarbeiten. Die Aufteilung auf Einzelinterviews und E-Mail Befragungen bietet den Vorteil, beide Strategien simultan zu verfolgen und nach Abschluss der Datenerhebung sowohl die detaillierten Einzelinterviews, als auch die oberflächlicher ausfallenden E-Mail Antworten in bereits dokumentierter Form vorliegen zu haben, um diese dann auszuwerten.\\
+\par Durch das Durchführen von Einzelinterviews wird ermöglicht, die Erwartungen seitens der Professoren an die Bacheloranden im Detail zu identifizieren und die, in dieser Hinsicht priorisierten inhaltlichen und methodischen Aspekte bei der Bearbeitung einer Bachelorarbeit herauszuarbeiten. Die Aufteilung auf Einzelinterviews und E-Mail Befragungen bietet den Vorteil, beide Strategien simultan zu verfolgen und nach Abschluss der Datenerhebung sowohl die detaillierten Einzelinterviews, als auch die oberflächlicher ausfallenden E-Mail Antworten in bereits dokumentierter Form vorliegen zu haben, um diese dann auszuwerten.
 
 \subsection{Einbezug der Studierenden}
 \par Nach Absprache mit den intervieweten Studierenden, werden diese weiterhin per schriftlicher Befragung in die Entwicklung des Projektes, unter ergänzender Zunahme anderer Studierender, eingebunden.
@@ -290,8 +290,9 @@ Trotz des Verlaufs des Studiums, des angeeigneten Wissens und der somit zahlreic
 \par Der zeitliche Rahmen der fünf aufgezeichneten Interviews erstreckt sich über einen Zeitrum von etwa 30 bis 45 Minuten. Für die Auswertung der aufgezeichneten Interviews wurden die Aussagen der Interviewpartner, auf Grundlage der vorliegenden Audioaufnahmen, unter Berücksichtigung des Kontextes aufbereitet und werden nachfolgend dargestellt. Ein weiteres Einzelinterview, welches nicht aufgezeichnet wurde, erstreckte sich über einen Zeitraum von 75 Minuten. Für dieses Interview wurden lediglich begleitende Feldnotizen angefertigt. Diese Feldnotizen wurden im Anschluss des Interviews aufbereitet und fließen zusammen mit den Ergebnissen der schriftlichen Befragung in die folgende Beschreibung ein.
 \par\medskip Die gewählten Kategorien ergeben sich aus dem gewählten Auswertungsverfahren, was sich an der qualitativen Inhaltsanalyse nach Mayring\citep{Mayring2015} orientiert und basieren in diesem Kontext auf die gemäß des Verfahrens herausgearbeiteten Codings.
 
-\par \bigskip Die komplette Zusammenfassung ist im Anhang dieses Dokuments zu finden (siehe Anhang \ref{anhang:anhangAuswertungProfessoren})). Weiterhin sind auch die Interviews mit den einzelnen Professoren in transkribierter Form im Anhang zu finden (siehe TODO).
+\par \bigskip Die komplette Zusammenfassung ist im Anhang dieses Dokuments zu finden (siehe Anhang \ref{anhang:interviewProfessorenAuswertung})). Weiterhin sind auch die Interviews mit den einzelnen Professoren in transkribierter Form im Anhang zu finden (siehe Anhang \ref{anhang:interviewProfessorenTranskripte}).
 
+\newpage
 \subsection{Art der Arbeit}
 \par Im Laufe der Interviews wurden verschiedene Typen von Arbeiten versucht zu identifizieren. Dabei geht es vor allem darum, die Vielfalt der typischen Arbeiten des Studiengangs Informatik/Softwareentwicklung zu erfassen und somit einen Überblick über die Situation zu bekommen.
 \par \medskip Als im allgemeinen auftretenden Arten der Arbeit wurden die Klassen \textit{Entwickelnde Arbeit}  und \textit{Evaluierende Arbeit} identifiziert. Weiterhin gibt es auch \textit{Reine Literaturarbeiten}, welche in dem Studiengang Informatik/Softwareentwicklung jedoch nicht oder nur in einem sehr geringen Vorkommen auftreten.
@@ -420,7 +421,7 @@ Das Problem des mangelnden Zeitmanagements äußert sich unter anderem auch dari
 \newpage
 \section{Ergebnisse der Studierenden}
 \par Das folgende Kapitel liefert einen Einblick in die Ergebnisse der Befragung der Studierenden und beschreibt die in diesem Rahmen gewonnenen Erkenntnisse.
-\par Im Fokus der Befragung stehen die Erwartungen an die Bachelorarbeit und den Betreuer, sowie die typischen Probleme und Sorgen der Studierenden. Die Erkenntnisse der Befragung werden abschnittsweise in zusammengefasster Form dargestellt. Die gesamten schriftlichen Befragungen sind im Anhang zu finden. (TODO) 
+\par Im Fokus der Befragung stehen die Erwartungen an die Bachelorarbeit und den Betreuer, sowie die typischen Probleme und Sorgen der Studierenden. Die Erkenntnisse der Befragung werden abschnittsweise in zusammengefasster Form dargestellt. Die gesamten Antworten der schriftlich befragten Studierenden ist in kategorisierter Form im Anhang zu finden (siehe \ref{anhang:schriftlicheBefragungStudierendeZusammenfassung}). Weiterhin stehen auch die nicht aufbereiteten Originalaufzeichnungen der schriftlichen Befragung zur Verfügung (siehe TODO).
 
 \label{sub:studentenchriftlichErgebnisse}
 \par \bigskip Informationen zu der schriftlichen Befragung:
@@ -445,7 +446,6 @@ Das Problem des mangelnden Zeitmanagements äußert sich unter anderem auch dari
 \par \medskip \textbf{Impulse des Betreuers}
 \par In wenigen Fällen erwarten die befragten Studierende, dass der Betreuer aktiv an dem Prozess der Erstellung der Bachelorarbeit teilnimmt. Das bezieht sich auf die Unterstützung bei dem Zeitmanagement, das Geben von Denkanstößen und Anregungen, sowie das von dem Betreuer ausgehenden Einfordern von Leistungen.
 
-\newpage
 \subsection{Die größten Probleme der Studierenden}
 \par Die Studierenden wurden nach ihrer eigenen Einschätzung ihrer größten Unsicherheiten und Probleme gefragt und haben einige, sich im Laufe der Befragung wiederholenden Aspekte angesprochen, welche im folgenden Verlauf zusammengefasst werden.
 
@@ -510,7 +510,7 @@ Das Problem des mangelnden Zeitmanagements äußert sich unter anderem auch dari
 
 \subsection{Identifikation des Problembereichs}
 \par Durch die Befragung der Beteiligten und der Analyse der gewonnen Informationen, haben sich die Erwartungen der Beteiligten an die Benutzung der Applikation herausarbeiten lassen, welche in der folgenden Tabelle (siehe Abbildung \ref{tab:erwartungenBeteiligte}) dargestellt sind.
-\par Die dabei genannten Ziele und Erwartungen entsprechen dem allgemeinen Bild, welches durch die Interviews und schriftlichen Befragungen ermittelten werden konnte, weshalb kleine Abweichungen in dieser Tabelle nicht mit aufgenommen wurden, da diese einen zu großen verzerrenden Einfluss auf das Gesamtbild hätten. Die kompletten schriftlichen Befragungen und Interviews befinden sich im Anhang (TODO) dieses Dokuments.\\
+\par Die dabei genannten Ziele und Erwartungen entsprechen dem allgemeinen Bild, welches durch die Interviews und schriftlichen Befragungen ermittelten werden konnte, weshalb kleine Abweichungen in dieser Tabelle nicht mit aufgenommen wurden, da diese einen zu großen verzerrenden Einfluss auf das Gesamtbild hätten.\bigskip
 
 \begin{tabularx}{\textwidth}{l|X}
 	\toprule
@@ -754,7 +754,9 @@ Das Problem des mangelnden Zeitmanagements äußert sich unter anderem auch dari
 
 \par\medskip Die Bandbreite der Hinweise, Tipps und Informationen sollen somit den gesamten Verlauf der Bachelorarbeit abdecken und lassen sich in diesem Umfang in folgende Bereiche und Inhalte Zerlegen, welche sich an dem Leitfaden der FH-Lübeck\citep{FHLuebeckBAAnleitung} zur Erstellung einer Bachelorarbeit orientieren.
 
-\par\medskip Es folgt eine eigene Interpretation und Beschreibung der Unterteilung der Themengebiete:
+\par\medskip Es folgt eine Interpretation und Beschreibung der Unterteilung der Themengebiete:
+
+\par\medskip \textit{Anmerkung: Die folgenden Themengebiete/Softwareabschnitte stellen nur eine Möglichkeit der Aufteilung dar. Bei Einsatz der Software sollen die hier dargestellten Inhalte individuell erweitert oder verändert werden können.}
 
 \begin{itemize}
 \item \textbf{Allgemeine Informationen}

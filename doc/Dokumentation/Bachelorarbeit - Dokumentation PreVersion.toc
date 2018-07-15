@@ -33,7 +33,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {2.1.1}Flutter Systemarchitektur}{10}{subsection.2.1.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.2}Firebase}{10}{section.2.2}
+\contentsline {section}{\numberline {2.2}Redux-Architektur}{10}{section.2.2}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {2.3}Gamification}{10}{section.2.3}
 \defcounter {refsection}{0}\relax 
@@ -43,9 +43,9 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {3}Untersuchung des Problembereiches}{14}{chapter.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.1}Identifikation der Interessengruppen}{15}{section.3.1}
+\contentsline {section}{\numberline {3.1}Hypothese}{14}{section.3.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.2}Hypothese}{16}{section.3.2}
+\contentsline {section}{\numberline {3.2}Identifikation der Interessengruppen}{15}{section.3.2}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {3.3}Wahl der Analysestrategie}{16}{section.3.3}
 \defcounter {refsection}{0}\relax 
