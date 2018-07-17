@@ -1,39 +1,29 @@
 import 'dart:async';
+import 'dart:io';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart' show rootBundle;
 import 'package:redux/redux.dart';
 import 'package:flutter_redux/flutter_redux.dart';
 import 'package:project_bachelorapplication/bachelorApp/reducers/app_reducer.dart';
 import 'package:project_bachelorapplication/bachelorApp/models/appstate.dart';
 import 'package:project_bachelorapplication/bachelorApp/models/content.dart';
-import 'package:project_bachelorapplication/bachelorApp/views/screen.dart';
+import 'package:project_bachelorapplication/bachelorApp/views/informationToolScreen.dart';
+import 'package:project_bachelorapplication/bachelorApp/views/dashboardScreen.dart';
 
-final String path = 'assets/data/';
-final String contentFilename = 'content.json';
-String localPath;
-ContentBuilder contentBuilder;
+InformationToolManager informationToolBuilder;
 
-Future<String> get _localPath async {
-  return rootBundle.loadString(path + contentFilename);
-}
+  Future main() async {
+    informationToolBuilder = new InformationToolManager("https://api.github.com/repos/TimPLau/BachelorAppRepository/contents/appContent/information-tool");
+    await informationToolBuilder.init("informationToolContent.json");
 
-  init()async{
-    localPath = await _localPath;
-  }
-
-  void main() async{
-    await init();
-
-    contentBuilder = new ContentBuilder(localPath);
     runApp(BachelorApp());
   }
 
   class BachelorApp extends StatelessWidget{
-
     final store = new Store<AppState>(
       appReducer,
-      initialState: new AppState(contentBuilder.initContent ,contentBuilder.content[0]),
+      initialState: new AppState(informationToolBuilder.initContent),
     );
+
 
   @override
   Widget build(BuildContext context) {
@@ -44,7 +34,11 @@ Future<String> get _localPath async {
             bottomAppBarColor: Colors.red,
           ),
           title: "BachelorApp",
-          home: new Screen("Guide"),
+          initialRoute: '/',
+          routes: {
+            '/': (context) => DashboardScreen("Dashboard"),
+            '/guide': (context) => InformationToolScreen("Bachelorarbeit Guide"),
+          },
           //routes: new Map.fromIterables(contentManager.getRoutes(), contentManager.screens.map((f) => ((context) => f))),
         ),
       );

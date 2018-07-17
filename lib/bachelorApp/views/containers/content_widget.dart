@@ -13,7 +13,7 @@ class ContentWidget extends StatelessWidget{
   Widget build(BuildContext context) {
     return new StoreConnector(
       builder: (BuildContext context, _ViewModel vm){
-         List<Content> content = StoreProvider.of<AppState>(context).state.actualContent.subsections;
+         List<Content> content = StoreProvider.of<AppState>(context).state.informationToolContent.subsections;
 
          return new ListView.builder(
             itemCount: content.length,
@@ -22,7 +22,6 @@ class ContentWidget extends StatelessWidget{
                 return new ListTile(
                     title: new Text(content[index].title),
                     onTap: () {
-                      StoreProvider.of<AppState>(context).dispatch(new UpdatePreviousContentAction(content[index].prevContent));
                       StoreProvider.of<AppState>(context).dispatch(new UpdateActualContentAction(content[index]));
                     }
                 );
@@ -52,14 +51,14 @@ class ContentWidget extends StatelessWidget{
 }
 
 class _ViewModel{
-  final Content actualContent;
+  final String actualContent;
 
   _ViewModel({
     @required this.actualContent,
   });
 
   static _ViewModel fromStore(Store<AppState> store){
-    return new _ViewModel(actualContent: store.state.actualContent);
+    return new _ViewModel(actualContent: "");
   }
 
 }

@@ -6,10 +6,10 @@ import 'package:redux/redux.dart';
 import 'package:project_bachelorapplication/bachelorApp/models/appstate.dart';
 import 'package:project_bachelorapplication/bachelorApp/actions/menuactions.dart';
 
-class Screen extends StatelessWidget{
+class InformationToolScreen extends StatelessWidget{
   String title;
 
-  Screen(this.title);
+  InformationToolScreen(this.title);
 
   @override
   Widget build(BuildContext context) {
@@ -21,24 +21,14 @@ class Screen extends StatelessWidget{
               title: new Text(this.title),
               leading: new IconButton(
               onPressed: () {
-                if (StoreProvider
-                    .of<AppState>(context)
-                    .state
-                    .previousContent
-                     != null) {
+                if(StoreProvider.of<AppState>(context).state.informationToolContent.parentContent != null) {
                   StoreProvider.of<AppState>(context).dispatch(
                       new UpdateActualContentAction(StoreProvider
                           .of<AppState>(context)
                           .state
-                          .previousContent));
-
-                StoreProvider.of<AppState>(context).dispatch(
-                    new UpdatePreviousContentAction(StoreProvider
-                        .of<AppState>(context)
-                        .state
-                        .previousContent
-                        .prevContent));
-                }
+                          .informationToolContent
+                          .parentContent));
+                };
               },
               icon: new Icon(Icons.arrow_back)),
             ),
@@ -59,14 +49,14 @@ class Screen extends StatelessWidget{
 }
 
 class _ViewModel{
-  final Content actualContent;
+  final String actualContent;
 
   _ViewModel({
     @required this.actualContent,
   });
 
   static _ViewModel fromStore(Store<AppState> store){
-    return new _ViewModel(actualContent: store.state.actualContent);
+    return new _ViewModel(actualContent: "");
   }
 
 }
