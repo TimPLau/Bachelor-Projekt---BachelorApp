@@ -19,7 +19,7 @@ class InformationToolManager {
   }
 
   void init(String fileName) async{
-    loadDataFromInternet(fileName);
+    await loadDataFromInternet(fileName);
     await loadLocalFile(fileName);
   }
 
@@ -42,7 +42,7 @@ class InformationToolManager {
 
   loadLocalFile(String fileName) async{
     String content = await readFile(fileName);
-    _readContent(content);
+    await _readContent(content);
   }
 
   Content get initContent{
