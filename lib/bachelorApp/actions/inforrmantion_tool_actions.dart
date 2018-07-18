@@ -1,4 +1,4 @@
-import 'package:project_bachelorapplication/bachelorApp/models/content.dart';
+import 'package:project_bachelorapplication/bachelorApp/models/InformationTool/information_tool.dart';
 
 class UpdateScreenTitleAction{
   String screenTitle;
