@@ -4,12 +4,26 @@
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/lib/bachelorApp/models/content.dart" line="210" />
+    <bookmark url="file://$PROJECT_DIR$/lib/bachelorApp/views/milestoneScreen.dart" line="42" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f4dd6696-99ed-42f9-ad55-ec4d525f5ce1" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/bachelorApp/actions/task_manager_tool_actions.dart" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/bachelorApp/models/InformationTool/information_tool.dart" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/bachelorApp/models/TaskManagmentTool/task_tool.dart" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/bachelorApp/reducers/task_manager_tool_reducers.dart" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/bachelorApp/views/milestoneScreen.dart" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/lib/bachelorApp/models/content.dart" afterPath="$PROJECT_DIR$/lib/bachelorApp/models/content.dart" />
+      <change beforePath="$PROJECT_DIR$/doc/Dokumentation/Bilder/Diagramme/BachelorApp.vpp" afterPath="$PROJECT_DIR$/doc/Dokumentation/Bilder/Diagramme/BachelorApp.vpp" />
+      <change beforePath="$PROJECT_DIR$/lib/bachelorApp/actions/menuactions.dart" afterPath="$PROJECT_DIR$/lib/bachelorApp/actions/inforrmantion_tool_actions.dart" />
+      <change beforePath="$PROJECT_DIR$/lib/bachelorApp/main.dart" afterPath="$PROJECT_DIR$/lib/bachelorApp/main.dart" />
+      <change beforePath="$PROJECT_DIR$/lib/bachelorApp/models/appstate.dart" afterPath="$PROJECT_DIR$/lib/bachelorApp/models/appstate.dart" />
+      <change beforePath="$PROJECT_DIR$/lib/bachelorApp/models/content.dart" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/lib/bachelorApp/reducers/app_reducer.dart" afterPath="$PROJECT_DIR$/lib/bachelorApp/reducers/app_reducer.dart" />
+      <change beforePath="$PROJECT_DIR$/lib/bachelorApp/reducers/content_reducer.dart" afterPath="$PROJECT_DIR$/lib/bachelorApp/reducers/information_tool_reducer.dart" />
+      <change beforePath="$PROJECT_DIR$/lib/bachelorApp/views/containers/content_widget.dart" afterPath="$PROJECT_DIR$/lib/bachelorApp/views/containers/content_widget.dart" />
+      <change beforePath="$PROJECT_DIR$/lib/bachelorApp/views/containers/navigation_widget.dart" afterPath="$PROJECT_DIR$/lib/bachelorApp/views/containers/navigation_widget.dart" />
+      <change beforePath="$PROJECT_DIR$/lib/bachelorApp/views/informationToolScreen.dart" afterPath="$PROJECT_DIR$/lib/bachelorApp/views/informationToolScreen.dart" />
     </list>
     <ignored path="$PROJECT_DIR$/.dart_tool/" />
     <ignored path="$PROJECT_DIR$/.idea/" />
@@ -27,31 +41,11 @@
       <file leaf-file-name="main.dart" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/bachelorApp/main.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="663">
-              <caret line="39" column="81" lean-forward="false" selection-start-line="39" selection-start-column="81" selection-end-line="39" selection-end-column="81" />
+            <state relative-caret-position="420">
+              <caret line="47" column="112" lean-forward="false" selection-start-line="47" selection-start-column="112" selection-end-line="47" selection-end-column="112" />
               <folding>
                 <element signature="e#0#20#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pubspec.yaml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pubspec.yaml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="58" lean-forward="false" selection-start-line="8" selection-start-column="58" selection-end-line="8" selection-end-column="58" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="appstate.dart" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/bachelorApp/models/appstate.dart">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="31" lean-forward="false" selection-start-line="3" selection-start-column="31" selection-end-line="3" selection-end-column="31" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -59,33 +53,43 @@
       <file leaf-file-name="app_reducer.dart" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/bachelorApp/reducers/app_reducer.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="7" column="4" lean-forward="false" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
+            <state relative-caret-position="119">
+              <caret line="7" column="44" lean-forward="false" selection-start-line="7" selection-start-column="44" selection-end-line="7" selection-end-column="44" />
+              <folding>
+                <element signature="e#0#78#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="appstate.dart" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/bachelorApp/models/appstate.dart">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="content.dart" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/lib/bachelorApp/models/content.dart">
+      <file leaf-file-name="task_manager_tool_reducers.dart" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/bachelorApp/reducers/task_manager_tool_reducers.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="16" column="53" lean-forward="false" selection-start-line="16" selection-start-column="53" selection-end-line="16" selection-end-column="53" />
+            <state relative-caret-position="136">
+              <caret line="8" column="3" lean-forward="false" selection-start-line="8" selection-start-column="3" selection-end-line="8" selection-end-column="3" />
               <folding>
-                <element signature="e#0#20#0" expanded="true" />
+                <element signature="e#0#96#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="content_widget.dart" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/bachelorApp/views/containers/content_widget.dart">
+      <file leaf-file-name="information_tool.dart" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/bachelorApp/models/InformationTool/information_tool.dart">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="187">
-              <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-              <folding>
-                <element signature="e#0#39#0" expanded="true" />
-              </folding>
+              <caret line="15" column="6" lean-forward="false" selection-start-line="15" selection-start-column="6" selection-end-line="15" selection-end-column="6" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -93,11 +97,19 @@
       <file leaf-file-name="informationToolScreen.dart" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/bachelorApp/views/informationToolScreen.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="15" column="4" lean-forward="false" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="30" />
-              <folding>
-                <element signature="e#0#77#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="374">
+              <caret line="37" column="34" lean-forward="false" selection-start-line="37" selection-start-column="26" selection-end-line="37" selection-end-column="34" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="content_widget.dart" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/bachelorApp/views/containers/content_widget.dart">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="21" column="36" lean-forward="false" selection-start-line="21" selection-start-column="36" selection-end-line="21" selection-end-column="36" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -105,8 +117,18 @@
       <file leaf-file-name="dashboardScreen.dart" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/bachelorApp/views/dashboardScreen.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="27" column="13" lean-forward="false" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
+            <state relative-caret-position="306">
+              <caret line="22" column="34" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="46" selection-end-column="1" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="milestoneScreen.dart" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/lib/bachelorApp/views/milestoneScreen.dart">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="692">
+              <caret line="118" column="32" lean-forward="false" selection-start-line="118" selection-start-column="32" selection-end-line="118" selection-end-column="32" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
@@ -114,23 +136,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="navigation_widget.dart" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/bachelorApp/views/containers/navigation_widget.dart">
+      <file leaf-file-name="information_tool_reducer.dart" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/bachelorApp/reducers/information_tool_reducer.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="12" column="38" lean-forward="false" selection-start-line="12" selection-start-column="38" selection-end-line="12" selection-end-column="38" />
-              <folding>
-                <element signature="e#0#39#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="achievementScreen.dart" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/bachelorApp/views/achievementScreen.dart">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="17">
+              <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -147,11 +157,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>AppState</find>
-      <find>Screen</find>
-      <find>prevContent</find>
-      <find>pri</find>
-      <find>init</find>
       <find>initCo</find>
       <find>initContent</find>
       <find>initConent</find>
@@ -173,10 +178,15 @@
       <find>set</find>
       <find>get</find>
       <find>get con</find>
-      <find>initC</find>
       <find>print</find>
       <find>Content _initContent;</find>
       <find>_initContent;</find>
+      <find>localPath</find>
+      <find>fac</find>
+      <find>Information</find>
+      <find>InformationToolFile</find>
+      <find>Content</find>
+      <find>initC</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -190,15 +200,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/lib/Content.dart" />
-        <option value="$PROJECT_DIR$/lib/json_reader.dart" />
-        <option value="$PROJECT_DIR$/lib/content.dart" />
-        <option value="$PROJECT_DIR$/lib/json_reader/json_reader.dart" />
-        <option value="$PROJECT_DIR$/lib/reducers/appreducer.dart" />
-        <option value="$PROJECT_DIR$/lib/reducers/menuReducer.dart" />
-        <option value="$PROJECT_DIR$/lib/containers/contentWidget.dart" />
-        <option value="$PROJECT_DIR$/lib/containers/content_button_list.dart" />
-        <option value="$PROJECT_DIR$/lib/containers/content_list.dart" />
         <option value="$PROJECT_DIR$/lib/containers/content_panel_widget.dart" />
         <option value="$PROJECT_DIR$/lib/containers/content_extpanel_widget.dart" />
         <option value="$PROJECT_DIR$/lib/containers/content_extensionpanel_widget.dart" />
@@ -230,25 +231,34 @@
         <option value="$PROJECT_DIR$/lib/bachelorApp/reducers/content_reducer.dart" />
         <option value="$PROJECT_DIR$/pubspec.yaml" />
         <option value="$PROJECT_DIR$/lib/bachelorApp/models/informationToolContent.dart" />
-        <option value="$PROJECT_DIR$/lib/bachelorApp/models/appstate.dart" />
-        <option value="$PROJECT_DIR$/lib/bachelorApp/reducers/app_reducer.dart" />
         <option value="$PROJECT_DIR$/lib/bachelorApp/views/screen.dart" />
         <option value="$PROJECT_DIR$/lib/bachelorApp/views/containers/content_widget.dart" />
         <option value="$PROJECT_DIR$/lib/bachelorApp/views/informationToolScreen.dart" />
         <option value="$PROJECT_DIR$/lib/bachelorApp/views/containers/dashboard.dart" />
         <option value="$PROJECT_DIR$/lib/bachelorApp/views/achievementScreen.dart" />
-        <option value="$PROJECT_DIR$/lib/bachelorApp/main.dart" />
         <option value="$PROJECT_DIR$/lib/bachelorApp/views/containers/navigation_widget.dart" />
         <option value="$PROJECT_DIR$/lib/bachelorApp/views/dashboardScreen.dart" />
         <option value="$PROJECT_DIR$/lib/bachelorApp/models/content.dart" />
+        <option value="$PROJECT_DIR$/lib/bachelorApp/models/TaskManagmentTool/task.dart" />
+        <option value="$PROJECT_DIR$/lib/bachelorApp/views/MilestoneScreen.dart" />
+        <option value="$PROJECT_DIR$/lib/bachelorApp/models/InformationTool/information_tool.dart" />
+        <option value="$PROJECT_DIR$/lib/bachelorApp/actions/taskManagerTool.dart" />
+        <option value="$PROJECT_DIR$/lib/bachelorApp/actions/taskManagerToolActions.dart" />
+        <option value="$PROJECT_DIR$/lib/bachelorApp/reducers/information_tool_reducer.dart" />
+        <option value="$PROJECT_DIR$/lib/bachelorApp/reducers/app_reducer.dart" />
+        <option value="$PROJECT_DIR$/lib/bachelorApp/models/TaskManagmentTool/task_tool.dart" />
+        <option value="$PROJECT_DIR$/lib/bachelorApp/reducers/task_manager_tool_reducers.dart" />
+        <option value="$PROJECT_DIR$/lib/bachelorApp/models/appstate.dart" />
+        <option value="$PROJECT_DIR$/lib/bachelorApp/main.dart" />
+        <option value="$PROJECT_DIR$/lib/bachelorApp/views/milestoneScreen.dart" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="248" />
-    <option name="y" value="-10" />
-    <option name="width" value="1090" />
-    <option name="height" value="1047" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -267,7 +277,6 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -316,6 +325,22 @@
               <item name="project_bachelorapplication" type="462c0819:PsiDirectoryNode" />
               <item name="lib" type="462c0819:PsiDirectoryNode" />
               <item name="bachelorApp" type="462c0819:PsiDirectoryNode" />
+              <item name="models" type="462c0819:PsiDirectoryNode" />
+              <item name="InformationTool" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="project_bachelorapplication" type="b2602c69:ProjectViewProjectNode" />
+              <item name="project_bachelorapplication" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+              <item name="bachelorApp" type="462c0819:PsiDirectoryNode" />
+              <item name="models" type="462c0819:PsiDirectoryNode" />
+              <item name="TaskManagmentTool" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="project_bachelorapplication" type="b2602c69:ProjectViewProjectNode" />
+              <item name="project_bachelorapplication" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+              <item name="bachelorApp" type="462c0819:PsiDirectoryNode" />
               <item name="reducers" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -343,12 +368,13 @@
         </subPane>
         <option name="show-excluded-files" value="false" />
       </pane>
-      <pane id="AndroidView" />
       <pane id="Scratches" />
+      <pane id="AndroidView" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../redux" />
     <property name="dart.analysis.tool.window.force.activate" value="false" />
     <property name="show.migrate.to.gradle.popup" value="false" />
     <property name="io.flutter.reload.alreadyRun" value="true" />
@@ -356,11 +382,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\lauti\Desktop\Bachelorarbeit\project_bachelorapplication\lib\bachelorApp\models\InformationTool" />
       <recent name="C:\Users\lauti\Desktop\Bachelorarbeit\project_bachelorapplication\lib\bachelorApp\views" />
       <recent name="C:\Users\lauti\Desktop\Bachelorarbeit\project_bachelorapplication\lib\bachelorApp" />
       <recent name="C:\Users\lauti\Desktop\Bachelorarbeit\project_bachelorapplication\lib\bachelorApp\pages" />
       <recent name="C:\Users\lauti\Desktop\Bachelorarbeit\project_bachelorapplication\test" />
-      <recent name="C:\Users\lauti\Desktop\Bachelorarbeit\project_bachelorapplication\lib\models" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -617,31 +643,33 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Android Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.49253732" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="simpleUML" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3107676" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31385282" sideWeight="0.3683369" order="12" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2943723" sideWeight="0.3763326" order="12" side_tool="true" content_ui="tabs" />
       <window_info id="Dart Analysis" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31385282" sideWeight="0.6316631" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.4936034" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32467532" sideWeight="0.48614073" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Flutter Outline" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Flutter Outline" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32928804" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Logcat" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.4978678" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15565032" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Device File Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6759062" sideWeight="0.50549453" order="4" side_tool="true" content_ui="tabs" />
-      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.49253732" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="simpleUML" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3107676" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2943723" sideWeight="0.62366736" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.4936034" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32467532" sideWeight="0.48614073" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12313433" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.48933902" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
-      <window_info id="Flutter Inspector" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.6748401" sideWeight="0.4945055" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Flutter Inspector" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.8118337" sideWeight="0.4945055" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -649,7 +677,6 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32792208" sideWeight="0.60714287" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.4914712" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="UnknownFeatures">
@@ -670,36 +697,17 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="4" />
+      <breakpoints>
+        <line-breakpoint enabled="true" type="Dart">
+          <url>file://$PROJECT_DIR$/lib/bachelorApp/main.dart</url>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="5" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/assets/data/content.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="39" lean-forward="false" selection-start-line="14" selection-start-column="39" selection-end-line="14" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/models/json_reader.dart" />
-    <entry file="file://$PROJECT_DIR$/lib/bachelorApp/models/content.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="23" column="21" lean-forward="false" selection-start-line="23" selection-start-column="21" selection-end-line="23" selection-end-column="21" />
-          <folding>
-            <element signature="e#0#20#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/widget_test.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="16" column="1" lean-forward="false" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/bachelorApp/main.dart">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -820,13 +828,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/AppData/Roaming/Pub/Cache/hosted/pub.dartlang.org/redux-3.0.0/lib/src/store.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="756">
-          <caret line="249" column="28" lean-forward="false" selection-start-line="249" selection-start-column="28" selection-end-line="249" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/AppData/Roaming/Pub/Cache/hosted/pub.dartlang.org/flutter_redux-0.5.1/lib/flutter_redux.dart">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="20">
@@ -836,14 +837,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/bachelorApp/redux/actions/asd.dart" />
     <entry file="file://$PROJECT_DIR$/lib/bachelorApp/redux/redux.dart" />
-    <entry file="file://$PROJECT_DIR$/lib/bachelorApp/actions/menuactions.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="1" lean-forward="false" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/AppData/Roaming/Pub/Cache/hosted/pub.dartlang.org/http-0.11.3+16/lib/src/response.dart">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
@@ -881,34 +874,10 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/bachelorApp/models/informationToolContent.dart" />
-    <entry file="file://$PROJECT_DIR$/lib/bachelorApp/reducers/content_reducer.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="19" column="32" lean-forward="false" selection-start-line="19" selection-start-column="32" selection-end-line="19" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assets/data/content.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="1" column="5" lean-forward="false" selection-start-line="1" selection-start-column="5" selection-end-line="1" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/bachelorApp/reducers/app_reducer.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="7" column="4" lean-forward="false" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/bachelorApp/models/appstate.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="31" lean-forward="false" selection-start-line="3" selection-start-column="31" selection-end-line="3" selection-end-column="31" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -920,36 +889,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/bachelorApp/main.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="663">
-          <caret line="39" column="81" lean-forward="false" selection-start-line="39" selection-start-column="81" selection-end-line="39" selection-end-column="81" />
-          <folding>
-            <element signature="e#0#20#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/bachelorApp/views/informationToolScreen.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="15" column="4" lean-forward="false" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="30" />
-          <folding>
-            <element signature="e#0#77#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/bachelorApp/views/containers/content_widget.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/bachelorApp/views/achievementScreen.dart">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -958,32 +897,130 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/lib/bachelorApp/actions/task_manager_tool_actions.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="1" lean-forward="false" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/bachelorApp/actions/inforrmantion_tool_actions.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Roaming/Pub/Cache/hosted/pub.dartlang.org/redux-3.0.0/lib/src/store.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="217" column="20" lean-forward="false" selection-start-line="217" selection-start-column="20" selection-end-line="217" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/lib/bachelorApp/views/containers/navigation_widget.dart">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="12" column="38" lean-forward="false" selection-start-line="12" selection-start-column="38" selection-end-line="12" selection-end-column="38" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/bachelorApp/models/TaskManagmentTool/task_tool.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="23" lean-forward="false" selection-start-line="8" selection-start-column="23" selection-end-line="8" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/bachelorApp/reducers/information_tool_reducer.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/bachelorApp/views/dashboardScreen.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="27" column="13" lean-forward="false" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
+        <state relative-caret-position="306">
+          <caret line="22" column="34" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="46" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/bachelorApp/views/informationToolScreen.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="37" column="34" lean-forward="false" selection-start-line="37" selection-start-column="26" selection-end-line="37" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/bachelorApp/models/InformationTool/information_tool.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="15" column="6" lean-forward="false" selection-start-line="15" selection-start-column="6" selection-end-line="15" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/bachelorApp/reducers/task_manager_tool_reducers.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="3" lean-forward="false" selection-start-line="8" selection-start-column="3" selection-end-line="8" selection-end-column="3" />
           <folding>
-            <element signature="e#0#39#0" expanded="true" />
+            <element signature="e#0#96#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/bachelorApp/models/content.dart">
+    <entry file="file://$PROJECT_DIR$/lib/bachelorApp/reducers/app_reducer.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="16" column="53" lean-forward="false" selection-start-line="16" selection-start-column="53" selection-end-line="16" selection-end-column="53" />
+        <state relative-caret-position="119">
+          <caret line="7" column="44" lean-forward="false" selection-start-line="7" selection-start-column="44" selection-end-line="7" selection-end-column="44" />
+          <folding>
+            <element signature="e#0#78#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/bachelorApp/models/appstate.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/bachelorApp/main.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="47" column="112" lean-forward="false" selection-start-line="47" selection-start-column="112" selection-end-line="47" selection-end-column="112" />
           <folding>
             <element signature="e#0#20#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/bachelorApp/views/containers/content_widget.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="21" column="36" lean-forward="false" selection-start-line="21" selection-start-column="36" selection-end-line="21" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/bachelorApp/views/milestoneScreen.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="692">
+          <caret line="118" column="32" lean-forward="false" selection-start-line="118" selection-start-column="32" selection-end-line="118" selection-end-column="32" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
           </folding>
         </state>
       </provider>
