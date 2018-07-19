@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_redux/flutter_redux.dart';
+import 'package:project_bachelorapplication/bachelorApp/views/task_manager_tool/taskScreen.dart';
 import 'package:redux/redux.dart';
 import 'package:project_bachelorapplication/bachelorApp/models/appstate.dart';
 import 'package:project_bachelorapplication/bachelorApp/views/containers/navigation_widget.dart';
@@ -63,7 +64,6 @@ class AddingMilestoneScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-        print("Cool");
         return new Scaffold(
             appBar: new AppBar(
               backgroundColor: Colors.red,
@@ -83,7 +83,7 @@ class AddingMilestoneScreen extends StatelessWidget {
                         hintText: 'Name des Meilenteins',
                         labelText: 'Meilensteinname'),
                     validator: (v){
-                      return v.trim().isEmpty ? "Bitte bennene deinen Meilenstein" : null;
+                      return v.trim().isEmpty ? "Bitte bennene deinen neuen Meilenstein" : null;
                     },
                   ),
                   new TextFormField(
@@ -125,41 +125,6 @@ class AddingMilestoneScreen extends StatelessWidget {
           .dispatch(new AddMilestoneAction(new Milestone(_nameInputField.currentState.value, _descriptionInputField.currentState.value)));
       Navigator.pop(context);
     }
-  }
-}
-
-class MainTaskScreen extends StatelessWidget {
-  final Milestone milestone;
-  MainTaskScreen(this.milestone);
-
-  @override
-  Widget build(BuildContext context) {
-    return new StoreConnector(
-      builder: (BuildContext context, _ViewModel vm) {
-
-        return new Scaffold(
-            drawer: NavigatorWidget(),
-            appBar: new AppBar(
-              backgroundColor: Colors.red,
-              title: new Text(this.milestone.title),
-            ),
-            floatingActionButton: new FloatingActionButton(
-                child: new Icon(Icons.add),
-                onPressed: () {
-                  Navigator.pushNamed(
-                      context, "/milestoneOverview/AddingMilestones");
-                }),
-            body: new Container(
-                child: new ListView.builder(
-                    itemCount: milestone.activeTasks.length,
-                    itemBuilder: (context, index) {
-                      return new ListTile(
-                          title: new Text(milestone.activeTasks[index].title),
-                          );
-                    })));
-      },
-      converter: _ViewModel.fromStore,
-    );
   }
 }
 

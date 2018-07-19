@@ -1,13 +1,14 @@
+import 'package:uuid/uuid.dart';
+
+final Uuid idGenerator = new Uuid();
+
 class TaskManager {
-  Map<int, Milestone> milestones = new Map<int, Milestone>();
+  Map<String, Milestone> milestones = new Map<String, Milestone>();
 
   TaskManager();
 
   addMilestone(Milestone milestone){
-    this.milestones[milestones.length] = milestone;
-
-    for(Milestone m in milestones.values)
-      print(m.title);
+    this.milestones[milestone.id] = milestone;
   }
 
   removeMilestone(){
@@ -17,28 +18,46 @@ class TaskManager {
 }
 
 class Milestone {
+  String id;
   String title;
+  String description;
   DateTime date;
-  Map<int, Task> activeTasks;
-  Map<int, Task> completedTasks;
+  Map<String, Task> tasks = new Map<String, Task>();
 
-  Milestone(this.title){
-    this.activeTasks = new Map<int, Task>();
-    this.completedTasks = new Map<int, Task>();
+
+  Milestone(this.title, [this.description]){
+    this.id = idGenerator.v1();
+  }
+
+  addTask(Task task){
+    this.tasks[task.id] = task;
   }
 
 }
 
 class Task{
+  String id;
   String title;
   String description;
   TaskState taskState;
-  List<Task> task;
+  List<Task> tasks = new List<Task>();
 
-  Task(this.title, this.description, this.taskState);
+  Task(this.title, this.taskState, [this.description = ""]){
+
+    this.id = idGenerator.v1();
+  }
+
+  void addSubTask(Task task){
+    print(tasks);
+    this.tasks.add(task);
+  }
 
   TaskState changeState(){
-      return (this.taskState == TaskState.completed) ? this.taskState = TaskState.completed : this.taskState = TaskState.notCompleted;
+      return (this.taskState == TaskState.completed) ? this.taskState = TaskState.notCompleted : this.taskState = TaskState.completed;
+  }
+
+  bool isCompleted(){
+    return (taskState == TaskState.completed) ? true : false;
   }
 }
 

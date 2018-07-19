@@ -9,7 +9,7 @@ import 'package:project_bachelorapplication/bachelorApp/models/InformationTool/i
 import 'package:project_bachelorapplication/bachelorApp/views/informationToolScreen.dart';
 import 'package:project_bachelorapplication/bachelorApp/views/dashboardScreen.dart';
 import 'package:project_bachelorapplication/bachelorApp/models/TaskManagmentTool/task_tool.dart';
-import 'package:project_bachelorapplication/bachelorApp/views/milestoneScreen.dart';
+import 'package:project_bachelorapplication/bachelorApp/views/task_manager_tool/milestoneScreen.dart';
 
 InformationToolManager informationToolBuilder;
 TaskManager taskManager;
@@ -17,9 +17,11 @@ TaskManager taskManager;
   main() async{
     informationToolBuilder = new InformationToolManager("https://api.github.com/repos/TimPLau/BachelorAppRepository/contents/appContent/information-tool");
     await informationToolBuilder.init("informationToolContent.json");
-
     taskManager = await new  TaskManager();
-    taskManager.addMilestone(new Milestone("Meilenstein1"));
+
+    Milestone m = new Milestone("Meilenstein");
+    taskManager.addMilestone(m);
+    m.addTask(new Task("Task", TaskState.notCompleted));
 
     runApp(BachelorApp());
   }
@@ -45,7 +47,7 @@ TaskManager taskManager;
             '/': (context) => DashboardScreen("Dashboard"),
             '/guide': (context) => InformationToolScreen("Bachelorarbeit Guide"),
             '/milestoneOverview': (context) => MilestoneOverviewScreen("Deine Meilensteine"),
-            '/milestoneOverview/AddingMilestones': (context) => AddingMilestoneScreen("Meilenstein hinzufügen"),
+            '/milestoneOverview/AddingMilestones': (context) => AddingMilestoneScreen(),
           },
           //routes: new Map.fromIterables(contentManager.getRoutes(), contentManager.screens.map((f) => ((context) => f))),
         ),
