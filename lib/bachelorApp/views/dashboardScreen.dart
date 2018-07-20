@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_redux/flutter_redux.dart';
 import 'package:redux/redux.dart';
 import 'package:project_bachelorapplication/bachelorApp/models/appstate.dart';
-import 'package:project_bachelorapplication/bachelorApp/views/containers/navigation_widget.dart';
+import 'package:project_bachelorapplication/bachelorApp/views/widgets/navigation_widget.dart';
 
 class DashboardScreen extends StatelessWidget{
   final String title;

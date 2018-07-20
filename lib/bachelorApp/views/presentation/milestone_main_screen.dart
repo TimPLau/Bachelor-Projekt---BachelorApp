@@ -1,11 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_redux/flutter_redux.dart';
-import 'package:project_bachelorapplication/bachelorApp/views/task_manager_tool/taskScreen.dart';
 import 'package:redux/redux.dart';
 import 'package:project_bachelorapplication/bachelorApp/models/appstate.dart';
-import 'package:project_bachelorapplication/bachelorApp/views/containers/navigation_widget.dart';
+import 'package:project_bachelorapplication/bachelorApp/views/widgets/navigation_widget.dart';
 import 'package:project_bachelorapplication/bachelorApp/models/TaskManagmentTool/task_tool.dart';
-import 'package:project_bachelorapplication/bachelorApp/actions/task_manager_tool_actions.dart';
 import 'package:project_bachelorapplication/bachelorApp/views/presentation/milestone_detail_screen.dart';
 
 class MilestoneOverviewScreen extends StatelessWidget {
@@ -47,7 +45,7 @@ class MilestoneOverviewScreen extends StatelessWidget {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => MainTaskScreen(children[index]))
+                                    builder: (context) => MilestoneDetailScreen(children[index]))
                             );
                           });
                     })));

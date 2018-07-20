@@ -7,14 +7,13 @@ class TaskManager {
 
   TaskManager();
 
-  addMilestone(Milestone milestone){
+  addMilestone(Milestone milestone) {
     this.milestones[milestone.id] = milestone;
   }
 
-  removeMilestone(){
-
+  removeMilestone(Milestone milestone) {
+    this.milestones.remove(milestone);
   }
-
 }
 
 class Milestone {
@@ -24,39 +23,55 @@ class Milestone {
   DateTime date;
   Map<String, Task> tasks = new Map<String, Task>();
 
-
-  Milestone(this.title, [this.description]){
+  Milestone(this.title, [this.description = ""]) {
     this.id = idGenerator.v1();
   }
 
-  addTask(Task task){
+  addTask(Task task) {
     this.tasks[task.id] = task;
   }
 
+  changeValues(String title, [String description]) {
+    this.title = title;
+    this.description = description;
+  }
+
+  removeTask(Task task) {
+    this.tasks.remove(task);
+  }
 }
 
-class Task{
+class Task {
   String id;
   String title;
   String description;
   TaskState taskState;
-  List<Task> tasks = new List<Task>();
+  Map<String, Task> subTasks = new Map<String, Task>();
 
-  Task(this.title, this.taskState, [this.description = ""]){
-
+  Task(this.title, this.taskState, [this.description = ""]) {
     this.id = idGenerator.v1();
   }
 
-  void addSubTask(Task task){
-    print(tasks);
-    this.tasks.add(task);
+  void addSubTask(Task task) {
+    this.subTasks[task.id] = task;
   }
 
-  TaskState changeState(){
-      return (this.taskState == TaskState.completed) ? this.taskState = TaskState.notCompleted : this.taskState = TaskState.completed;
+  changeValues(String title, [String description]) {
+    this.title = title;
+    this.description = description;
   }
 
-  bool isCompleted(){
+  removeSubTask(Task subTask) {
+    this.subTasks.remove(subTask.id);
+  }
+
+  TaskState changeState() {
+    return (this.taskState == TaskState.completed)
+        ? this.taskState = TaskState.notCompleted
+        : this.taskState = TaskState.completed;
+  }
+
+  bool isCompleted() {
     return (taskState == TaskState.completed) ? true : false;
   }
 }

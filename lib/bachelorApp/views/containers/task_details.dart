@@ -4,7 +4,6 @@ import 'package:project_bachelorapplication/bachelorApp/models/TaskManagmentTool
 import 'package:project_bachelorapplication/bachelorApp/models/appstate.dart';
 import 'package:redux/redux.dart';
 import 'package:project_bachelorapplication/bachelorApp/actions/task_manager_tool_actions.dart';
-import 'package:project_bachelorapplication/bachelorApp/views/task_manager_tool/taskScreen.dart';
 import 'package:project_bachelorapplication/bachelorApp/views/presentation/task_detail_screen.dart';
 
 class TaskDetails extends StatelessWidget {

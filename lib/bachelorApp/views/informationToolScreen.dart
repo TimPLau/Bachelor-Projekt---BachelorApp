@@ -1,6 +1,5 @@
-import 'package:project_bachelorapplication/bachelorApp/models/InformationTool/information_tool.dart';
 import 'package:flutter/material.dart';
-import 'package:project_bachelorapplication/bachelorApp//views/containers/content_widget.dart';
+import 'package:project_bachelorapplication/bachelorApp/views/widgets/content_widget.dart';
 import 'package:flutter_redux/flutter_redux.dart';
 import 'package:redux/redux.dart';
 import 'package:project_bachelorapplication/bachelorApp/models/appstate.dart';

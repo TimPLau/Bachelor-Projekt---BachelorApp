@@ -1,22 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_redux/flutter_redux.dart';
-import 'package:project_bachelorapplication/bachelorApp/actions/task_manager_tool_actions.dart';
-import 'package:project_bachelorapplication/bachelorApp/models/InformationTool/information_tool.dart';
 import 'package:project_bachelorapplication/bachelorApp/models/TaskManagmentTool/task_tool.dart';
-import 'package:project_bachelorapplication/bachelorApp/models/appstate.dart';
-import 'package:project_bachelorapplication/bachelorApp/views/widgets/navigation_widget.dart';
-import 'package:redux/redux.dart';
-import 'package:project_bachelorapplication/bachelorApp/views/containers/task_details.dart';
-import 'package:project_bachelorapplication/bachelorApp/models/appstate.dart';
 
-class AddingTaskScreen extends StatelessWidget {
+class AddTaskScreen extends StatelessWidget {
   static final GlobalKey<FormFieldState<String>> _titleInputField =
   GlobalKey<FormFieldState<String>>();
   static final GlobalKey<FormFieldState<String>> _descriptionInputField =
   GlobalKey<FormFieldState<String>>();
-  final Milestone milestone;
 
-  AddingTaskScreen(this.milestone);
+  final Milestone milestone;
+  final Function(String, String) addTask;
+
+  AddTaskScreen(this.milestone, this.addTask);
 
   @override
   Widget build(BuildContext context) {
@@ -78,10 +72,7 @@ class AddingTaskScreen extends StatelessWidget {
 
   void submit(context) {
     if (_titleInputField.currentState.validate()) {
-      StoreProvider.of<AppState>(context).dispatch(new AddTaskAction(
-          this.milestone,
-          new Task(_titleInputField.currentState.value, TaskState.notCompleted,
-              _descriptionInputField.currentState.value)));
+      this.addTask(_titleInputField.currentState.value, _descriptionInputField.currentState.value);
       Navigator.pop(context);
     }
   }

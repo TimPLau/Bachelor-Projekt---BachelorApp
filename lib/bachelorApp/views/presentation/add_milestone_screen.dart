@@ -1,19 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_redux/flutter_redux.dart';
-import 'package:project_bachelorapplication/bachelorApp/actions/task_manager_tool_actions.dart';
-import 'package:project_bachelorapplication/bachelorApp/models/InformationTool/information_tool.dart';
-import 'package:project_bachelorapplication/bachelorApp/models/TaskManagmentTool/task_tool.dart';
-import 'package:project_bachelorapplication/bachelorApp/models/appstate.dart';
-import 'package:project_bachelorapplication/bachelorApp/views/widgets/navigation_widget.dart';
-import 'package:redux/redux.dart';
-import 'package:project_bachelorapplication/bachelorApp/views/containers/task_details.dart';
-import 'package:project_bachelorapplication/bachelorApp/models/appstate.dart';
 
-class AddingMilestoneScreen extends StatelessWidget {
+class AddMilestoneScreen extends StatelessWidget {
   static final GlobalKey<FormFieldState<String>> _nameInputField = GlobalKey<FormFieldState<String>>();
   static final GlobalKey<FormFieldState<String>> _descriptionInputField = GlobalKey<FormFieldState<String>>();
 
-  AddingMilestoneScreen();
+  final Function(String, String) addMilestone;
+
+  AddMilestoneScreen(this.addMilestone);
 
   @override
   Widget build(BuildContext context) {
@@ -73,9 +66,7 @@ class AddingMilestoneScreen extends StatelessWidget {
 
   void submit(context) {
     if (_nameInputField.currentState.validate()) {
-      StoreProvider
-          .of<AppState>(context)
-          .dispatch(new AddMilestoneAction(new Milestone(_nameInputField.currentState.value, _descriptionInputField.currentState.value)));
+      addMilestone(_nameInputField.currentState.value, _descriptionInputField.currentState.value);
       Navigator.pop(context);
     }
   }
