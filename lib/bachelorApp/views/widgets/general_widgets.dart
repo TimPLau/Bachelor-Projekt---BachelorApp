@@ -6,9 +6,10 @@ Container buildDescriptionContainer(String heading, String description) {
       children: <Widget>[
         new Row(
           children: <Widget>[
-            new Container(
+            new Flexible(
               child: new Text(
                 heading,
+                softWrap: true,
                 style: TextStyle(
                   fontSize: 24.0,
                 ),
@@ -18,9 +19,10 @@ Container buildDescriptionContainer(String heading, String description) {
         ),
         new Row(
           children: <Widget>[
-            new Container(
+            new Flexible(
               child: new Text(
                 description,
+                softWrap: true,
               ),
             ),
           ],

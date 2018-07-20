@@ -13,7 +13,7 @@ class InformationToolManager {
   }
 
   void init(String fileName) async{
-    //await loadDataFromInternet(fileName);
+    await loadDataFromInternet(fileName);
     await loadLocalFile(fileName);
   }
 
