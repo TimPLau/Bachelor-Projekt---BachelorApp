@@ -17,22 +17,41 @@ class AddMilestone extends StatelessWidget {
         return _ViewModel.fromStore(store);
       },
       builder: (BuildContext context, _ViewModel vm) {
-        return AddMilestoneScreen(vm.addMilestone);
+        return AddMilestoneScreen(vm.addMilestone, vm.currentMilestones, vm.initialDate);
       },
     );
   }
 }
 
 class _ViewModel {
-  final Function addMilestone;
+  final Function(String, DateTime, String) addMilestone;
+  final List<Milestone> currentMilestones;
+  final List<String> currentMilestonesDates;
+  DateTime initialDate;
 
   _ViewModel(
-      {this.addMilestone});
+      {this.addMilestone, this.currentMilestones, this.currentMilestonesDates}){
+    this.initialDate = getInitialDate();
+  }
 
   factory _ViewModel.fromStore(
       Store<AppState> store) {
     return _ViewModel(
-        addMilestone: (String title, String description) => store.dispatch(new AddMilestoneAction(new Milestone(title, description)))
+        addMilestone: (String title, DateTime date, String description) => store.dispatch(new AddMilestoneAction(new Milestone(title, date, description))),
+        currentMilestones: store.state.taskManager.milestones.values.toList(),
+        currentMilestonesDates: store.state.taskManager.getMilestoneDates(),
     );
   }
+
+
+  DateTime getInitialDate(){
+    DateTime ret = DateTime(DateTime.now().year, DateTime.now().month, DateTime.now().day);
+    this.currentMilestonesDates.sort();
+    for(String date in this.currentMilestonesDates)
+      if(date == ret.toIso8601String()){
+        ret = DateTime(ret.year, ret.month, ret.day+1);
+      }
+    return ret;
+
+    }
 }

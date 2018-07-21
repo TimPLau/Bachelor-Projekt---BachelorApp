@@ -65,7 +65,6 @@ class TaskDetailScreen extends StatelessWidget {
                               },
                               decoration: InputDecoration(
                                 border: InputBorder.none,
-                                hintText: "asd",
                               ),
                             ),
                           ),

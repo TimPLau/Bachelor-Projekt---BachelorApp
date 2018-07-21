@@ -14,6 +14,18 @@ class TaskManager {
   removeMilestone(Milestone milestone) {
     this.milestones.remove(milestone);
   }
+
+
+  List<String> getMilestoneDates(){
+    List<String> retDates = [];
+
+    for(Milestone m in this.milestones.values){
+      retDates.add(m.date.toIso8601String());
+    }
+
+    return retDates;
+  }
+
 }
 
 class Milestone {
@@ -23,7 +35,7 @@ class Milestone {
   DateTime date;
   Map<String, Task> tasks = new Map<String, Task>();
 
-  Milestone(this.title, [this.description = ""]) {
+  Milestone(this.title, this.date, [this.description = ""]) {
     this.id = idGenerator.v1();
   }
 
@@ -39,6 +51,7 @@ class Milestone {
   removeTask(Task task) {
     this.tasks.remove(task);
   }
+
 }
 
 class Task {

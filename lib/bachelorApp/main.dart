@@ -18,7 +18,7 @@ TaskManager taskManager;
     await informationToolBuilder.init("informationToolContent.json");
     taskManager = await new  TaskManager();
 
-    Milestone m = new Milestone("Meilenstein", "Beschreibung eines Meilensteins");
+    Milestone m = new Milestone("Meilenstein", DateTime(2018, 7, 21), "Beschreibung eines Meilensteins");
     taskManager.addMilestone(m);
     m.addTask(new Task("Task", TaskState.notCompleted, "Eine Beschreibung des Tasks"));
 

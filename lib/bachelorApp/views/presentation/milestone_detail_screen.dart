@@ -21,6 +21,7 @@ class MilestoneDetailScreen extends StatelessWidget {
         title: new Text(this.milestone.title),
       ),
       floatingActionButton: new FloatingActionButton(
+        backgroundColor: Colors.red,
           child: new Icon(Icons.add),
           onPressed: () {
             Navigator.push(

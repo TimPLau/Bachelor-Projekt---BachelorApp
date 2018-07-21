@@ -22,7 +22,6 @@ class AddTaskScreen extends StatelessWidget {
       body: new Container(
         padding: new EdgeInsets.all(20.0),
         child: new Form(
-          //key: _formKey,
           child: new ListView(
             children: <Widget>[
               new TextFormField(
