@@ -1,3 +1,4 @@
+/*
 import 'package:flutter/material.dart';
 import 'package:project_bachelorapplication/bachelorApp/models/TaskManagmentTool/task_tool.dart';
 import 'package:project_bachelorapplication/bachelorApp/views/widgets/general_widgets.dart';
@@ -14,7 +15,7 @@ class TaskDetailScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    List<Task> children = task.subTasks.values.toList();
+    List<Task> children = subTasks.values.toList();
     return new Scaffold(
       appBar: new AppBar(
         backgroundColor: Colors.red,
@@ -24,7 +25,7 @@ class TaskDetailScreen extends StatelessWidget {
         padding: EdgeInsets.all(20.0),
         child: new Column(
           children: <Widget>[
-            buildDescriptionContainer("Beschreibung", this.task.description),
+            buildDescriptionContainer("Beschreibung", [this.task.description]),
             new TextFormField(
               controller: new TextEditingController(text: ""),
               autofocus: true,
@@ -89,3 +90,4 @@ class TaskDetailScreen extends StatelessWidget {
     );
   }
 }
+*/

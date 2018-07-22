@@ -3,21 +3,49 @@ import 'package:flutter_redux/flutter_redux.dart';
 import 'package:project_bachelorapplication/bachelorApp/models/appstate.dart';
 import 'package:redux/redux.dart';
 
-class NavigatorWidget extends StatelessWidget{
 
+
+class NavigatorWidget extends StatelessWidget {
   NavigatorWidget();
+
+
 
   @override
   Widget build(BuildContext context) {
-    return new StoreConnector(
-      builder: (BuildContext context, _ViewModel vm){
-        return Drawer(
+   /* return new BottomNavigationBar(
+      onTap: Navigator.of(context).pushNamed(pagesRouteFactories.keys.toList()[routeName]),
+      fixedColor: Colors.red,
+      items: [
+        new BottomNavigationBarItem(
+          icon: Icon(Icons.dashboard),
+          title: new Text("Dashboard"),
+        ),
+
+        new BottomNavigationBarItem(
+          icon: Icon(Icons.help),
+          title: new Text("Guide"),
+        ),
+
+        new BottomNavigationBarItem(
+          icon: Icon(Icons.local_play),
+          title: new Text("Aufgabenplanung"),
+        ),
+
+        new BottomNavigationBarItem(
+          icon: Icon(Icons.star),
+          title: new Text("Herausforderungen"),
+        ),
+      ],
+    );*/
+
+
+    return Drawer(
           child: new ListView(
           children: <Widget>[
             new ListTile(
                 title: new Text("Dashboard"),
                 onTap: () {
-                  Navigator.pushNamedAndRemoveUntil(context, '/', ModalRoute.withName(''));
+                  Navigator.pushNamedAndRemoveUntil(context, '/', ModalRoute.withName('/'));
                 }
             ),
             new ListTile(
@@ -58,22 +86,5 @@ class NavigatorWidget extends StatelessWidget{
           ],
         ),
         );
-      },
-      converter: _ViewModel.fromStore,
-    );
   }
 }
-
-class _ViewModel{
-  final String actualContent;
-
-  _ViewModel({
-    @required this.actualContent,
-  });
-
-  static _ViewModel fromStore(Store<AppState> store){
-    return new _ViewModel(actualContent: "");
-  }
-
-}
-

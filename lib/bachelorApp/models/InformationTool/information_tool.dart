@@ -52,7 +52,7 @@ class InformationToolManager {
   }
 
   _readContent(String jsonFile) {
-    _initContent = new Content("", "initContent", "");
+    _initContent = new Content("", "Bachelorarbeit Guide", "");
     List<dynamic> _jsonContent = json.decode(jsonFile);
 
     for (dynamic jsonContentModule in _jsonContent) {

@@ -14,8 +14,11 @@ class RemoveMilestoneAction {
 
 class EditMilestoneAction {
   Milestone milestone;
+  String newTitle;
+  DateTime newDate;
+  String newDescription;
 
-  EditMilestoneAction(this.milestone);
+  EditMilestoneAction(this.milestone, this.newTitle, this.newDate, this.newDescription);
 }
 
 class AddTaskAction {
@@ -25,13 +28,6 @@ class AddTaskAction {
   AddTaskAction(this.milestone, this.task);
 }
 
-class EditTaskAction {
-  Milestone milestone;
-  Task task;
-
-  EditTaskAction(this.milestone, this.task);
-}
-
 class RemoveTaskAction {
   Milestone milestone;
   Task task;
@@ -39,38 +35,19 @@ class RemoveTaskAction {
   RemoveTaskAction(this.milestone, this.task);
 }
 
-class AddSubTaskAction {
+class EditTaskAction {
   Milestone milestone;
   Task task;
-  Task subTask;
+  String editedTaskTitle;
 
-  AddSubTaskAction(this.milestone, this.task, this.subTask);
+  EditTaskAction(this.milestone, this.task, this.editedTaskTitle);
 }
 
-class EditSubTaskAction {
+class ChangeTaskStateAction {
   Milestone milestone;
   Task task;
-  Task subTask;
-  String editedSubTaskTitle;
-  String editedSubTaskDescription;
 
-  EditSubTaskAction(this.milestone, this.task, this.subTask, this.editedSubTaskTitle, [this.editedSubTaskDescription]);
-}
-
-class RemoveSubTaskAction {
-  Milestone milestone;
-  Task task;
-  Task subTask;
-
-  RemoveSubTaskAction(this.milestone, this.task, this.subTask);
-}
-
-class ChangeStateAction {
-  Milestone milestone;
-  Task task;
-  Task subTask;
-
-  ChangeStateAction(this.milestone, this.task, this.subTask);
+  ChangeTaskStateAction(this.milestone, this.task);
 }
 
 

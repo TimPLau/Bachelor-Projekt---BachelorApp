@@ -4,10 +4,11 @@ import 'package:project_bachelorapplication/bachelorApp/models/TaskManagmentTool
 import 'package:project_bachelorapplication/bachelorApp/models/appstate.dart';
 import 'package:redux/redux.dart';
 import 'package:project_bachelorapplication/bachelorApp/actions/task_manager_tool_actions.dart';
-import 'package:project_bachelorapplication/bachelorApp/views/presentation/add_milestone_screen.dart';
+import 'package:project_bachelorapplication/bachelorApp/views/presentation/milestone_tool_add_edit_milestone_screen.dart';
 
 
 class AddMilestone extends StatelessWidget {
+
   AddMilestone();
 
   @override
@@ -17,7 +18,7 @@ class AddMilestone extends StatelessWidget {
         return _ViewModel.fromStore(store);
       },
       builder: (BuildContext context, _ViewModel vm) {
-        return AddMilestoneScreen(vm.addMilestone, vm.currentMilestones, vm.initialDate);
+        return AddEditMilestoneScreen(vm.addMilestone, vm.currentMilestones, vm.initialDate, false);
       },
     );
   }
@@ -34,8 +35,7 @@ class _ViewModel {
     this.initialDate = getInitialDate();
   }
 
-  factory _ViewModel.fromStore(
-      Store<AppState> store) {
+  factory _ViewModel.fromStore(Store<AppState> store) {
     return _ViewModel(
         addMilestone: (String title, DateTime date, String description) => store.dispatch(new AddMilestoneAction(new Milestone(title, date, description))),
         currentMilestones: store.state.taskManager.milestones.values.toList(),
@@ -47,10 +47,12 @@ class _ViewModel {
   DateTime getInitialDate(){
     DateTime ret = DateTime(DateTime.now().year, DateTime.now().month, DateTime.now().day);
     this.currentMilestonesDates.sort();
-    for(String date in this.currentMilestonesDates)
-      if(date == ret.toIso8601String()){
-        ret = DateTime(ret.year, ret.month, ret.day+1);
+    for(String date in this.currentMilestonesDates) {
+      print(date);
+      if (date == ret.toIso8601String()) {
+        ret = DateTime(ret.year, ret.month, ret.day + 1);
       }
+    }
     return ret;
 
     }

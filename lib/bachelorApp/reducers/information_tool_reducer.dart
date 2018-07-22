@@ -1,4 +1,4 @@
-import 'package:project_bachelorapplication/bachelorApp/actions/inforrmantion_tool_actions.dart';
+import 'package:project_bachelorapplication/bachelorApp/actions/informantion_tool_actions.dart';
 import 'package:project_bachelorapplication/bachelorApp/models/InformationTool/information_tool.dart';
 
 

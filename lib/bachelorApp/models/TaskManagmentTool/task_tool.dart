@@ -12,9 +12,9 @@ class TaskManager {
   }
 
   removeMilestone(Milestone milestone) {
-    this.milestones.remove(milestone);
+    print("REMOVE");
+    this.milestones.remove(milestone.id);
   }
-
 
   List<String> getMilestoneDates(){
     List<String> retDates = [];
@@ -43,13 +43,25 @@ class Milestone {
     this.tasks[task.id] = task;
   }
 
-  changeValues(String title, [String description]) {
+  changeValues(String title, DateTime date, [String description]) {
     this.title = title;
+    this.date = date;
     this.description = description;
   }
 
-  removeTask(Task task) {
-    this.tasks.remove(task);
+  removeTask(Task subTask) {
+    this.tasks.remove(subTask.id);
+  }
+
+  List<Task> getCompletedTasks(){
+    List<Task> ret = [];
+
+    for(Task task in this.tasks.values.toList()){
+      if(task.taskState == TaskState.completed)
+        ret.add(task);
+    }
+
+    return ret;
   }
 
 }
@@ -57,25 +69,16 @@ class Milestone {
 class Task {
   String id;
   String title;
-  String description;
   TaskState taskState;
-  Map<String, Task> subTasks = new Map<String, Task>();
 
-  Task(this.title, this.taskState, [this.description = ""]) {
+  Task(this.title, this.taskState) {
     this.id = idGenerator.v1();
   }
 
-  void addSubTask(Task task) {
-    this.subTasks[task.id] = task;
-  }
-
-  changeValues(String title, [String description]) {
+  changeValues(String title) {
+    print("old " + title);
     this.title = title;
-    this.description = description;
-  }
-
-  removeSubTask(Task subTask) {
-    this.subTasks.remove(subTask.id);
+    print("new " + title);
   }
 
   TaskState changeState() {

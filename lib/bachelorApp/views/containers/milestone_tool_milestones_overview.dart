@@ -2,41 +2,39 @@ import 'package:flutter/material.dart';
 import 'package:flutter_redux/flutter_redux.dart';
 import 'package:project_bachelorapplication/bachelorApp/models/TaskManagmentTool/task_tool.dart';
 import 'package:project_bachelorapplication/bachelorApp/models/appstate.dart';
+import 'package:project_bachelorapplication/bachelorApp/views/presentation/milestone_tool_milestone_detail_screen.dart';
+import 'package:project_bachelorapplication/bachelorApp/views/presentation/milestone_tool_milestone_overview_screen.dart';
 import 'package:redux/redux.dart';
 import 'package:project_bachelorapplication/bachelorApp/actions/task_manager_tool_actions.dart';
-import 'package:project_bachelorapplication/bachelorApp/views/presentation/add_task_screen.dart';
 
-
-class AddTask extends StatelessWidget {
-  final Milestone milestone;
-
-  AddTask(this.milestone);
+class MilestoneOverview extends StatelessWidget {
+  MilestoneOverview();
 
   @override
   Widget build(BuildContext context) {
     return new StoreConnector(
       converter: (Store<AppState> store) {
-        return _ViewModel.fromStore(store, this.milestone);
+        return _ViewModel.fromStore(store);
       },
       builder: (BuildContext context, _ViewModel vm) {
-        return AddTaskScreen(vm.actualMilestone, vm.addTask);
+        return MilestoneOverviewScreen(
+          vm.currentMilestones,
+        );
       },
     );
   }
 }
 
 class _ViewModel {
-  final Milestone actualMilestone;
-  final Function addTask;
+  final List<Milestone> currentMilestones;
 
   _ViewModel(
-      {this.actualMilestone, this.addTask});
+      {this.currentMilestones});
 
   factory _ViewModel.fromStore(
-      Store<AppState> store, Milestone actualMilestone) {
+      Store<AppState> store) {
     return _ViewModel(
-        actualMilestone: actualMilestone,
-        addTask: (String title, String description) => store.dispatch(new AddTaskAction(actualMilestone, new Task(title, TaskState.notCompleted, description)))
+      currentMilestones: store.state.taskManager.milestones.values.toList(),
     );
   }
 }
