@@ -4,7 +4,7 @@ import 'package:project_bachelorapplication/bachelorApp/views/containers/milesto
 import 'package:redux/redux.dart';
 import 'package:project_bachelorapplication/bachelorApp/models/appstate.dart';
 import 'package:project_bachelorapplication/bachelorApp/views/widgets/navigation_widget.dart';
-import 'package:project_bachelorapplication/bachelorApp/models/TaskManagmentTool/task_tool.dart';
+import 'package:project_bachelorapplication/bachelorApp/models/milestone_tool.dart';
 import 'package:project_bachelorapplication/bachelorApp/views/presentation/milestone_tool_milestone_detail_screen.dart';
 
 class MilestoneOverviewScreen extends StatelessWidget {

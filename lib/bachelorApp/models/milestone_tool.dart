@@ -16,16 +16,15 @@ class TaskManager {
     this.milestones.remove(milestone.id);
   }
 
-  List<String> getMilestoneDates(){
+  List<String> getMilestoneDates() {
     List<String> retDates = [];
 
-    for(Milestone m in this.milestones.values){
+    for (Milestone m in this.milestones.values) {
       retDates.add(m.date.toIso8601String());
     }
 
     return retDates;
   }
-
 }
 
 class Milestone {
@@ -53,17 +52,15 @@ class Milestone {
     this.tasks.remove(subTask.id);
   }
 
-  List<Task> getCompletedTasks(){
+  List<Task> getCompletedTasks() {
     List<Task> ret = [];
 
-    for(Task task in this.tasks.values.toList()){
-      if(task.taskState == TaskState.completed)
-        ret.add(task);
+    for (Task task in this.tasks.values.toList()) {
+      if (task.taskState == TaskState.completed) ret.add(task);
     }
 
     return ret;
   }
-
 }
 
 class Task {
@@ -76,9 +73,7 @@ class Task {
   }
 
   changeValues(String title) {
-    print("old " + title);
     this.title = title;
-    print("new " + title);
   }
 
   TaskState changeState() {
@@ -90,13 +85,6 @@ class Task {
   bool isCompleted() {
     return (taskState == TaskState.completed) ? true : false;
   }
-}
-
-enum Phase {
-  initiation,
-  planning,
-  realizing,
-  completion,
 }
 
 enum TaskState {

@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_redux/flutter_redux.dart';
-import 'package:project_bachelorapplication/bachelorApp/models/TaskManagmentTool/task_tool.dart';
+import 'package:project_bachelorapplication/bachelorApp/models/milestone_tool.dart';
 import 'package:project_bachelorapplication/bachelorApp/models/appstate.dart';
 import 'package:redux/redux.dart';
-import 'package:project_bachelorapplication/bachelorApp/actions/task_manager_tool_actions.dart';
+import 'package:project_bachelorapplication/bachelorApp/actions/milestone_tool_actions.dart';
 import 'package:project_bachelorapplication/bachelorApp/views/presentation/milestone_tool_add_edit_milestone_screen.dart';
 
 

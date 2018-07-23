@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:project_bachelorapplication/bachelorApp/models/TaskManagmentTool/task_tool.dart';
+import 'package:project_bachelorapplication/bachelorApp/models/milestone_tool.dart';
 import 'package:intl/intl.dart';
 
 class AddEditMilestoneScreen extends StatefulWidget {
@@ -80,7 +80,6 @@ class AddEditMilestoneForm extends State<AddEditMilestoneScreen> {
             child: new Form(
               key: _formKey,
               child: new ListView(
-
                 children: <Widget>[
                   new Row(
                     children: <Widget>[
@@ -112,8 +111,7 @@ class AddEditMilestoneForm extends State<AddEditMilestoneScreen> {
                       onTap: () {
                         setDate(context);
                       },
-                      child:
-                      new Row(
+                      child: new Row(
                         children: <Widget>[
                           new Container(
                             padding: EdgeInsets.only(right: 15.0),
@@ -123,7 +121,7 @@ class AddEditMilestoneForm extends State<AddEditMilestoneScreen> {
                             child: new TextFormField(
                               enabled: false,
                               controller: _dateInputController,
-                             // key: _nameInputField,
+                              // key: _nameInputField,
                               keyboardType: TextInputType.text,
                               maxLength: 50,
                               decoration: new InputDecoration(

@@ -4,11 +4,11 @@ import 'dart:io';
 import 'package:http/http.dart' as http;
 import 'package:path_provider/path_provider.dart';
 
-class InformationToolManager {
+class ContentBuilder {
   Content _initContent;
   String informationToolPath;
 
-  InformationToolManager(String informationToolPath) {
+  ContentBuilder(String informationToolPath) {
     this.informationToolPath = informationToolPath;
   }
 
@@ -120,8 +120,6 @@ class JSONInformationToolFile {
     http.Response response;
 
     response = await http.get(this.url);
-
-    print(parseFileInformation(response.body));
 
     if (response.statusCode == 200) {
       this.jsonInformationToolFileContent = parseFileInformation(response.body);

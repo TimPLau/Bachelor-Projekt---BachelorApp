@@ -63,17 +63,17 @@ class NavigatorWidget extends StatelessWidget {
                 }
             ),
             new ListTile(
-                title: new Text("Herausforderungen"),
-                onTap: () {
-                  Navigator.pushNamedAndRemoveUntil(context, '/', ModalRoute.withName('/'));
-                  Navigator.pushNamed(context, '/challenges');
-                }
-            ),
-            new ListTile(
                 title: new Text("Achievements"),
                 onTap: () {
                   Navigator.pushNamedAndRemoveUntil(context, '/', ModalRoute.withName('/'));
-                  Navigator.pushNamed(context, '/achievements');
+                  Navigator.pushNamed(context, '/achievementOverview');
+                }
+            ),
+            new ListTile(
+                title: new Text("Herausforderungen"),
+                onTap: () {
+                  Navigator.pushNamedAndRemoveUntil(context, '/', ModalRoute.withName('/'));
+                  Navigator.pushNamed(context, '/challengeOverview');
                 }
             ),
             new ListTile(

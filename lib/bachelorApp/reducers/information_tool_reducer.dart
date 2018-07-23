@@ -1,5 +1,5 @@
 import 'package:project_bachelorapplication/bachelorApp/actions/informantion_tool_actions.dart';
-import 'package:project_bachelorapplication/bachelorApp/models/InformationTool/information_tool.dart';
+import 'package:project_bachelorapplication/bachelorApp/models/information_tool.dart';
 
 
 Content updateActualContent (Content current, action){

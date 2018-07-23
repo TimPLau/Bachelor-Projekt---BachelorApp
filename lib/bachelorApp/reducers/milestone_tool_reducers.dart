@@ -1,5 +1,5 @@
-import 'package:project_bachelorapplication/bachelorApp/actions/task_manager_tool_actions.dart';
-import 'package:project_bachelorapplication/bachelorApp/models/TaskManagmentTool/task_tool.dart';
+import 'package:project_bachelorapplication/bachelorApp/actions/milestone_tool_actions.dart';
+import 'package:project_bachelorapplication/bachelorApp/models/milestone_tool.dart';
 
 TaskManager updateTasks (TaskManager current, action){
 

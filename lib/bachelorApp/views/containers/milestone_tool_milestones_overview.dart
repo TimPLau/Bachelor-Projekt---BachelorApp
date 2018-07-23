@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_redux/flutter_redux.dart';
-import 'package:project_bachelorapplication/bachelorApp/models/TaskManagmentTool/task_tool.dart';
+import 'package:project_bachelorapplication/bachelorApp/models/milestone_tool.dart';
 import 'package:project_bachelorapplication/bachelorApp/models/appstate.dart';
 import 'package:project_bachelorapplication/bachelorApp/views/presentation/milestone_tool_milestone_detail_screen.dart';
 import 'package:project_bachelorapplication/bachelorApp/views/presentation/milestone_tool_milestone_overview_screen.dart';
 import 'package:redux/redux.dart';
-import 'package:project_bachelorapplication/bachelorApp/actions/task_manager_tool_actions.dart';
+import 'package:project_bachelorapplication/bachelorApp/actions/milestone_tool_actions.dart';
 
 class MilestoneOverview extends StatelessWidget {
   MilestoneOverview();
@@ -28,11 +28,9 @@ class MilestoneOverview extends StatelessWidget {
 class _ViewModel {
   final List<Milestone> currentMilestones;
 
-  _ViewModel(
-      {this.currentMilestones});
+  _ViewModel({this.currentMilestones});
 
-  factory _ViewModel.fromStore(
-      Store<AppState> store) {
+  factory _ViewModel.fromStore(Store<AppState> store) {
     return _ViewModel(
       currentMilestones: store.state.taskManager.milestones.values.toList(),
     );

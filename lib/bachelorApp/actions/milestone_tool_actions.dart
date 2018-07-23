@@ -1,4 +1,4 @@
-import 'package:project_bachelorapplication/bachelorApp/models/TaskManagmentTool/task_tool.dart';
+import 'package:project_bachelorapplication/bachelorApp/models/milestone_tool.dart';
 
 class AddMilestoneAction {
   Milestone milestone;
