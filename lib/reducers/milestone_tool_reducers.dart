@@ -1,34 +1,34 @@
 import 'package:project_bachelorapplication/actions/milestone_tool_actions.dart';
 import 'package:project_bachelorapplication/models/milestone_tool.dart';
 
-TaskManager updateTasks (TaskManager current, action){
+Map<String, Milestone> updateMilestones (Map<String, Milestone> current, action){
 
   if(action is AddMilestoneAction) {
-    current.addMilestone(action.milestone);
+    current[action.milestone.id] = action.milestone;
     return current;
   }
   if(action is AddTaskAction) {
-    current.milestones[action.milestone.id].addTask(action.task);
+    current[action.milestone.id].addTask(action.task);
     return current;
   }
   if(action is RemoveMilestoneAction) {
-    current.removeMilestone(action.milestone);
+    current.remove(action.milestone.id);
     return current;
   }
   if(action is RemoveTaskAction) {
-    current.milestones[action.milestone.id].removeTask(action.task);
+    current[action.milestone.id].removeTask(action.task);
     return current;
   }
   if(action is EditMilestoneAction) {
-    current.milestones[action.milestone.id].changeValues(action.newTitle, action.newDate, action.newDescription);
+    current[action.milestone.id].changeValues(action.newTitle, action.newDate, action.newDescription);
     return current;
   }
   if(action is EditTaskAction) {
-    current.milestones[action.milestone.id].tasks[action.task.id].changeValues(action.editedTaskTitle);
+    current[action.milestone.id].tasks[action.task.id].changeValues(action.editedTaskTitle);
     return current;
   }
   if(action is ChangeTaskStateAction) {
-    current.milestones[action.milestone.id].tasks[action.task.id].changeState();
+    current[action.milestone.id].tasks[action.task.id].changeState();
     return current;
   }
 

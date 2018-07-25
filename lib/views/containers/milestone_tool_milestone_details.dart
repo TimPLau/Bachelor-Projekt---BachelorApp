@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_redux/flutter_redux.dart';
+import 'package:project_bachelorapplication/actions/achievement_tool_actions.dart';
 import 'package:project_bachelorapplication/models/milestone_tool.dart';
 import 'package:project_bachelorapplication/models/appstate.dart';
 import 'package:project_bachelorapplication/views/presentation/milestone_tool_milestone_detail_screen.dart';
@@ -15,6 +16,7 @@ class MilestoneDetails extends StatelessWidget {
   Widget build(BuildContext context) {
     return new StoreConnector(
       converter: (Store<AppState> store) {
+
         return _ViewModel.fromStore(store, this.milestone);
       },
       builder: (BuildContext context, _ViewModel vm) {

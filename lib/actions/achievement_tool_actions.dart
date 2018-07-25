@@ -6,3 +6,13 @@ class ChangeStateChallengeAction{
 
   ChangeStateChallengeAction(this.challenge);
 }
+
+class CheckForAchieveAction{
+  Map<String, Achievement> actualAchievements;
+
+  CheckForAchieveAction(this.actualAchievements);
+}
+
+class ClearAchievedAchievementsAction{
+  ClearAchievedAchievementsAction();
+}

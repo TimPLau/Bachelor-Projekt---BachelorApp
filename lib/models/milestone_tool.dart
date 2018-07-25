@@ -1,7 +1,9 @@
+import 'package:meta/meta.dart';
 import 'package:uuid/uuid.dart';
 
 final Uuid idGenerator = new Uuid();
 
+/*
 class TaskManager {
   Map<String, Milestone> milestones = new Map<String, Milestone>();
 
@@ -25,6 +27,7 @@ class TaskManager {
     return retDates;
   }
 }
+*/
 
 class Milestone {
   String id;

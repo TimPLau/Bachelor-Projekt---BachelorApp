@@ -1,5 +1,9 @@
 //https://gamedevelopment.tutsplus.com/tutorials/how-to-code-unlockable-achievements-for-your-game-a-simple-approach--gamedev-6012
 
+const String ACTIVE_IF_GREATER_THAN = ">";
+const String ACTIVE_IF_LESS_THAN = "<";
+const String ACTIVE_IF_EQUALS_TO = "==";
+
 class Challenge {
   String title;
   String description;
@@ -14,26 +18,14 @@ class Challenge {
   }
 }
 
-class AchievementManager {
-  static const String ACTIVE_IF_GREATER_THAN = ">";
-  static const String ACTIVE_IF_LESS_THAN = "<";
-  static const String ACTIVE_IF_EQUALS_TO = "==";
+class AchievementHandler {
+
 
   Map<String, Property> properties;
-  Map<String, Achievement> achievements;
+  Map<String, Achievement> activeAchievements;
+  List<Achievement> achievedAchievements;
 
-  AchievementManager(this.properties, this.achievements);
-
-  /*addProperties(var name, var initialValue, var activationRule,
-      var activationValue) {
-    properties[name] =
-        new Property(name, initialValue, activationRule, activationValue);
-  }*/
-
-  /*addAchievements(
-      String title, AchievementType type, List<Property> properties) {
-    achievements[title] = new Achievement(title, type, properties);
-  }*/
+  AchievementHandler(this.properties, this.activeAchievements);
 
   getPropertyValue(String name) {
     return this.properties[name].currentValue;
@@ -54,9 +46,12 @@ class AchievementManager {
   List<Achievement> checkAchievements() {
     List<Achievement> ret = [];
 
-    for(Achievement achievement in this.achievements.values.toList()){
+    for(Achievement achievement in this.activeAchievements.values.toList()){
       if(achievement.completed == false){
-        if(achievement.checkAchievement() == true) ret.add(achievement);
+        if(achievement.checkAchievement() == true) {
+          this.achievedAchievements.add(achievement);
+          this.activeAchievements.remove(achievement.title);
+        }
       }
     }
 
@@ -102,13 +97,13 @@ class Property{
 
   bool isActive() {
     switch (activationRule) {
-      case AchievementManager.ACTIVE_IF_GREATER_THAN:
+      case ACTIVE_IF_GREATER_THAN:
         return currentValue > activationValue;
         break;
-      case AchievementManager.ACTIVE_IF_LESS_THAN:
+      case ACTIVE_IF_LESS_THAN:
         return currentValue < activationValue;
         break;
-      case AchievementManager.ACTIVE_IF_EQUALS_TO:
+      case ACTIVE_IF_EQUALS_TO:
         return currentValue == activationValue;
         break;
     }

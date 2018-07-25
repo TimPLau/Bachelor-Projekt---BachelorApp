@@ -7,8 +7,10 @@ import 'package:project_bachelorapplication/reducers/milestone_tool_reducers.dar
 AppState appReducer(AppState state, dynamic action) {
   return new AppState(
     updateActualContent(state.informationToolContent, action),
-    updateTasks(state.taskManager, action),
-    updateCurrentAchievements(state.achievementManager, action),
+    updateMilestones(state.currentMilestones, action),
+    updateProperties(state.properties, action),
+    updateAchievedAchievements(state.achievedAchievements, action),
     updateChallenges(state.challenges, action),
   );
 }
+

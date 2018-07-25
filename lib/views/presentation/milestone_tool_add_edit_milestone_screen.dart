@@ -182,7 +182,7 @@ class AddEditMilestoneForm extends State<AddEditMilestoneScreen> {
       widget.addEditMilestone(_nameInputField.currentState.value, chosenDate,
           _descriptionInputField.currentState.value);
 
-      Navigator.pop(context);
+      Navigator.pop(this.context);
 
       setState(() {
         chosenDate = widget.initialDate;

@@ -32,7 +32,7 @@ class _ViewModel {
 
   factory _ViewModel.fromStore(Store<AppState> store) {
     return _ViewModel(
-      currentMilestones: store.state.taskManager.milestones.values.toList(),
+      currentMilestones: store.state.currentMilestones.values.toList(),
     );
   }
 }

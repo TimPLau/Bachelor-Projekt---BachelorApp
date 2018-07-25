@@ -9,6 +9,7 @@ import 'package:project_bachelorapplication/views/containers/achievement_tool_ac
 import 'package:project_bachelorapplication/views/containers/achievement_tool_challenges.dart';
 import 'package:project_bachelorapplication/views/containers/content_tool_content_guide.dart';
 import 'package:project_bachelorapplication/views/containers/milestone_tool_milestones_overview.dart';
+import 'package:project_bachelorapplication/views/presentation/achievement_overlay_screen.dart';
 import 'package:redux/redux.dart';
 import 'package:flutter_redux/flutter_redux.dart';
 import 'package:project_bachelorapplication/reducers/app_reducer.dart';
@@ -25,10 +26,11 @@ var initializationSettings;
 FlutterLocalNotificationsPlugin flutterLocalNotificationsPlugin = FlutterLocalNotificationsPlugin();
 
 AppContentLoader contentLoader;
-TaskManager taskManager = new TaskManager();
-AchievementManager achievementManager;
+//TaskManager taskManager = new TaskManager();
+AchievementHandler achievementHandler;
 InformationToolContentBuilder informationToolContentBuilder =
     new InformationToolContentBuilder();
+Map<String, Map<String, Achievement>> achievedAchievements = {"Recognized":{}, "NotRecognized":{}, "Achieved":{}, "AllAchievements":AchievementLookUp.achievements,};
 
 init() async {
   initializationSettingsAndroid = new AndroidInitializationSettings("@mipmap/ic_launcher");
@@ -42,7 +44,10 @@ init() async {
   //await contentLoader.loadDataFromInternet();
   informationToolContentBuilder
       .generateContent(await contentLoader.getFileContent("guide.json"));
-  achievementManager = new AchievementManager(
+
+  Map<String, Achievement> achievements;
+
+  achievementHandler = new AchievementHandler(
       AchievementLookUp.properties, AchievementLookUp.achievements);
 }
 
@@ -56,7 +61,7 @@ class BachelorApp extends StatelessWidget {
   final store = new Store<AppState>(
     appReducer,
     initialState: new AppState(informationToolContentBuilder.rootContent,
-        taskManager, achievementManager, ChallengesLookUp.challenges),
+        new Map<String, Milestone>(), AchievementLookUp.properties,  achievedAchievements, ChallengesLookUp.challenges),
 
   );
 

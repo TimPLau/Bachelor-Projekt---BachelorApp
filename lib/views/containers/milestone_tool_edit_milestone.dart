@@ -29,11 +29,12 @@ class _ViewModel {
   final Milestone currentMilestone;
   final Function(String, DateTime, String) editMilestone;
   final List<Milestone> currentMilestones;
-  final List<String> currentMilestonesDates;
+  List<String> currentMilestonesDates;
   DateTime initialDate;
 
   _ViewModel(
       {this.currentMilestone, this.editMilestone, this.currentMilestones, this.currentMilestonesDates}){
+    this.currentMilestonesDates = getMilestoneDates(this.currentMilestones);
     this.initialDate = getInitialDate();
   }
 
@@ -41,9 +42,17 @@ class _ViewModel {
       Store<AppState> store, currentMilestone) {
     return _ViewModel(
       editMilestone: (String title, DateTime date, String description) => store.dispatch(new EditMilestoneAction(currentMilestone, title, date, description)),
-      currentMilestones: store.state.taskManager.milestones.values.toList(),
-      currentMilestonesDates: store.state.taskManager.getMilestoneDates(),
+      currentMilestones: store.state.currentMilestones.values.toList(),
     );
+  }
+
+  List<String> getMilestoneDates(List<Milestone> milestones) {
+    List<String> retDates;
+
+    for (Milestone m in milestones)
+      retDates.add(m.date.toIso8601String());
+
+    return retDates;
   }
 
 

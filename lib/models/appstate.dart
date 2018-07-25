@@ -3,10 +3,14 @@ import 'package:project_bachelorapplication/models/information_tool.dart';
 import 'package:project_bachelorapplication/models/milestone_tool.dart';
 
 class AppState {
-  Content informationToolContent;
-  TaskManager taskManager;
-  AchievementManager achievementManager;
-  Map<String, Challenge> challenges;
+  final Content informationToolContent;
+  final Map<String, Milestone> currentMilestones;
+  final Map<String, Property> properties;
+  //final Map<String, Achievement> activeAchievements;
 
-  AppState(this.informationToolContent, this.taskManager, this.achievementManager, this.challenges);
+  final Map<String, Map<String, Achievement>> achievedAchievements;
+
+  final Map<String, Challenge> challenges;
+
+  AppState(this.informationToolContent, this.currentMilestones, this.properties, this.achievedAchievements, this.challenges);
 }
