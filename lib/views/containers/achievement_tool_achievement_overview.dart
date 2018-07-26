@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_redux/flutter_redux.dart';
+import 'package:path/path.dart';
 import 'package:project_bachelorapplication/actions/achievement_tool_actions.dart';
 import 'package:project_bachelorapplication/models/achievement_tool.dart';
 import 'package:project_bachelorapplication/models/milestone_tool.dart';
 import 'package:project_bachelorapplication/models/appstate.dart';
+import 'package:project_bachelorapplication/models/notifications.dart';
 import 'package:project_bachelorapplication/views/presentation/achievement_overlay_screen.dart';
 import 'package:project_bachelorapplication/views/presentation/achievement_tool_achievement_overview_screen.dart';
 import 'package:project_bachelorapplication/views/presentation/achievement_tool_challenges_overview_screen.dart';
@@ -41,8 +43,10 @@ class _ViewModel {
     return _ViewModel(
         activeAchievements: store.state.achievedAchievements["AllAchievements"].values.toList(),
         achievedAchievements: store.state.achievedAchievements["NotRecognized"].values.toList(),
-        onRecognized: () =>
-            store.dispatch(new ClearAchievedAchievementsAction()),
+        onRecognized: () {
+            store.dispatch(new ClearAchievedAchievementsAction());
+            checkNotification(context);
+        }
     );
   }
 }

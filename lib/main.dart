@@ -7,6 +7,7 @@ import 'package:project_bachelorapplication/models/achievement_tool.dart';
 import 'package:project_bachelorapplication/models/appContentLoader.dart';
 import 'package:project_bachelorapplication/views/containers/achievement_tool_achievement_overview.dart';
 import 'package:project_bachelorapplication/views/containers/achievement_tool_challenges.dart';
+import 'package:project_bachelorapplication/views/containers/bachelor_application_dashboard.dart';
 import 'package:project_bachelorapplication/views/containers/content_tool_content_guide.dart';
 import 'package:project_bachelorapplication/views/containers/milestone_tool_milestones_overview.dart';
 import 'package:project_bachelorapplication/views/presentation/achievement_overlay_screen.dart';
@@ -19,6 +20,7 @@ import 'package:project_bachelorapplication/views/presentation/bachelor_applicat
 import 'package:project_bachelorapplication/models/milestone_tool.dart';
 import 'views/containers/milestone_tool_add_milestone.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
+import 'package:project_bachelorapplication/middleware/notificationMiddleware.dart';
 
 var initializationSettingsAndroid;
 var initializationSettingsIOS;
@@ -61,13 +63,10 @@ class BachelorApp extends StatelessWidget {
   final store = new Store<AppState>(
     appReducer,
     initialState: new AppState(informationToolContentBuilder.rootContent,
-        new Map<String, Milestone>(), AchievementLookUp.properties,  achievedAchievements, ChallengesLookUp.challenges),
+        {}, AchievementLookUp.properties,  achievedAchievements, ChallengesLookUp.challenges),
+    middleware: [notificationMiddleware],
 
   );
-
-  BachelorApp(){
-
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -81,7 +80,7 @@ class BachelorApp extends StatelessWidget {
         title: "BachelorApp",
         initialRoute: '/',
         routes: {
-          '/': (context) => DashboardScreen(),
+          '/': (context) => Dashboard(),
           '/guide': (context) => ContentGuide(),
           '/milestoneOverview': (context) => MilestoneOverview(),
           '/milestoneOverview/AddingMilestones': (context) => AddMilestone(),
@@ -95,13 +94,3 @@ class BachelorApp extends StatelessWidget {
 
 }
 
-Future showNotification(String achievementName, String achievementDescription) async {
-  var androidPlatformChannelSpecifics = new AndroidNotificationDetails(
-      'your channel id', 'your channel name', 'your channel description',
-      importance: Importance.Max, priority: Priority.High);
-  var iOSPlatformChannelSpecifics = new IOSNotificationDetails();
-  var platformChannelSpecifics = new NotificationDetails(
-      androidPlatformChannelSpecifics, iOSPlatformChannelSpecifics);
-  await flutterLocalNotificationsPlugin
-      .show(0, achievementName, achievementDescription, platformChannelSpecifics, payload: 'item x');
-}

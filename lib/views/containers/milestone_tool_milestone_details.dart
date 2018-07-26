@@ -53,16 +53,20 @@ class _ViewModel {
       Store<AppState> store, Milestone actualMilestone) {
     return _ViewModel(
       actualMilestone: actualMilestone,
-      onRemoveMilestone: () =>
-          store.dispatch(new RemoveMilestoneAction(actualMilestone)),
-      onRemoveTask: (Task deleteTask) =>
-          store.dispatch(new RemoveTaskAction(actualMilestone, deleteTask)),
-      onAdd: (Task newTask) =>
-          store.dispatch(new AddTaskAction(actualMilestone, newTask)),
-      onEdit: (Task editTask, String newTitle) => store
-          .dispatch(new EditTaskAction(actualMilestone, editTask, newTitle)),
-      onChangeState: (Task changedTask) => store
-          .dispatch(new ChangeTaskStateAction(actualMilestone, changedTask)),
+      onRemoveMilestone: (Milestone activeMilestone) =>
+          store.dispatch(new RemoveMilestoneAction(activeMilestone)),
+
+      onRemoveTask: (Task deleteTask, Milestone activeMilestone) =>
+          store.dispatch(new RemoveTaskAction(activeMilestone, deleteTask)),
+
+      onAdd: (Task newTask, Milestone activeMilestone) =>
+          store.dispatch(new AddTaskAction(activeMilestone, newTask)),
+
+      onEdit: (Task editTask, String newTitle, Milestone activeMilestone) => store
+          .dispatch(new EditTaskAction(activeMilestone, editTask, newTitle)),
+
+      onChangeState: (Task changedTask, Milestone activeMilestone) => store
+          .dispatch(new ChangeTaskStateAction(activeMilestone, changedTask)),
     );
   }
 }

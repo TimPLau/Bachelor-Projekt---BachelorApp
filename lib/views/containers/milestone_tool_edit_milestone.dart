@@ -47,7 +47,7 @@ class _ViewModel {
   }
 
   List<String> getMilestoneDates(List<Milestone> milestones) {
-    List<String> retDates;
+    List<String> retDates = [];
 
     for (Milestone m in milestones)
       retDates.add(m.date.toIso8601String());

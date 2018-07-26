@@ -24,6 +24,11 @@ Map<String, Map<String, Achievement>> updateAchievedAchievements(
     return current;
   }
 
+  if (action is ClearAchievedAction){
+    current["Achieved"] = {};
+    return current;
+  }
+
   if (action is CheckForAchieveAction) {
 
     Map<String, Achievement> newAchievements =
@@ -36,16 +41,6 @@ Map<String, Map<String, Achievement>> updateAchievedAchievements(
         current["NotRecognized"][achievement.title] = achievement;
       }
     }
-
-      if (newAchievements.length > 1) {
-        showNotification(
-            "Sehr gut! Du hast ${newAchievements
-                .length} Achievement erhalten",
-            "");
-      } else if (newAchievements.length == 1){
-        showNotification(
-            "Sehr gut! Du hast ein Achievement erhalten", newAchievements.values.toList()[0].title);
-      }
 
     return current;
   }
