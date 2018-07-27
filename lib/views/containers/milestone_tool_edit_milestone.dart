@@ -5,7 +5,7 @@ import 'package:project_bachelorapplication/models/appstate.dart';
 import 'package:redux/redux.dart';
 import 'package:project_bachelorapplication/actions/milestone_tool_actions.dart';
 import 'package:project_bachelorapplication/views/presentation/milestone_tool_add_edit_milestone_screen.dart';
-
+import 'package:project_bachelorapplication/views/containers/milestone_tool_add_milestone.dart';
 
 class EditMilestone extends StatelessWidget {
 
@@ -35,7 +35,7 @@ class _ViewModel {
   _ViewModel(
       {this.currentMilestone, this.editMilestone, this.currentMilestones, this.currentMilestonesDates}){
     this.currentMilestonesDates = getMilestoneDates(this.currentMilestones);
-    this.initialDate = getInitialDate();
+    this.initialDate = getInitialDate(currentMilestonesDates);
   }
 
   factory _ViewModel.fromStore(
@@ -46,25 +46,4 @@ class _ViewModel {
     );
   }
 
-  List<String> getMilestoneDates(List<Milestone> milestones) {
-    List<String> retDates = [];
-
-    for (Milestone m in milestones)
-      retDates.add(m.date.toIso8601String());
-
-    return retDates;
-  }
-
-
-  DateTime getInitialDate(){
-    DateTime ret = DateTime(DateTime.now().year, DateTime.now().month, DateTime.now().day);
-    this.currentMilestonesDates.sort();
-    for(String date in this.currentMilestonesDates) {
-      if (date == ret.toIso8601String()) {
-        ret = DateTime(ret.year, ret.month, ret.day + 1);
-      }
-    }
-    return ret;
-
-  }
 }

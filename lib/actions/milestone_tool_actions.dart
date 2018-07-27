@@ -50,4 +50,16 @@ class ChangeTaskStateAction {
   ChangeTaskStateAction(this.milestone, this.task);
 }
 
+class UpdateBeginDateAction{
+  DateTime begin;
+
+  UpdateBeginDateAction(this.begin);
+}
+
+class UpdateEndDateAction{
+  DateTime end;
+
+  UpdateEndDateAction(this.end);
+}
+
 

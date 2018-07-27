@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_redux/flutter_redux.dart';
 import 'package:project_bachelorapplication/models/appstate.dart';
-import 'package:project_bachelorapplication/models/information_tool.dart';
+import 'package:project_bachelorapplication/models/bachelorguide_tool_content.dart';
 import 'package:project_bachelorapplication/views/widgets/navigation_widget.dart';
 import 'package:redux/redux.dart';
 import 'package:project_bachelorapplication/actions/informantion_tool_actions.dart';
@@ -20,7 +20,7 @@ class ContentGuideScreen extends StatelessWidget {
         //bottomNavigationBar: NavigatorWidget(),
         appBar: new AppBar(
           backgroundColor: Theme.of(context).bottomAppBarColor,
-          title: new Text(this.content.title),
+          title: new Text(this.content.title == "INIT" ? "Bachelorarbeit Guide" : this.content.title),
         ),
         body: new ListView.builder(
             itemCount: content.length,

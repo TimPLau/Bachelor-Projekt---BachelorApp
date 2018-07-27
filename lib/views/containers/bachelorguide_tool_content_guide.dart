@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_redux/flutter_redux.dart';
-import 'package:project_bachelorapplication/models/information_tool.dart';
+import 'package:project_bachelorapplication/models/bachelorguide_tool_content.dart';
 import 'package:project_bachelorapplication/models/appstate.dart';
-import 'package:project_bachelorapplication/views/presentation/content_tool_guide_screen.dart';
+import 'package:project_bachelorapplication/views/presentation/bachelorguide_tool_guide_screen.dart';
 import 'package:redux/redux.dart';
 
 

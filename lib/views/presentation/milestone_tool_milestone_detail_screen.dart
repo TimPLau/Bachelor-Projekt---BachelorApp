@@ -46,10 +46,11 @@ class MilestoneDetailScreen extends StatelessWidget {
         ),
         body: new Container(
           padding: EdgeInsets.all(20.0),
-          child: new ListView(children: itemListOf(context, this.milestone, onAdd, onChangeState, onEdit, onRemoveTask)),
+          child: new ListView(
+              children: itemListOf(context, this.milestone, onAdd,
+                  onChangeState, onEdit, onRemoveTask)),
         ));
   }
-
 }
 
 Container buildInfoSectionElement(IconData iconData, String information) {
@@ -61,73 +62,95 @@ Container buildInfoSectionElement(IconData iconData, String information) {
         new Icon(iconData),
         new Expanded(
             child: new Container(
-              padding: EdgeInsets.only(left: 20.0),
-              child: new Text(
-                information,
-                softWrap: true,
-              ),
-            ))
+          padding: EdgeInsets.only(left: 20.0),
+          child: new Text(
+            information,
+            softWrap: true,
+          ),
+        ))
       ],
     ),
   );
 }
 
-List<Widget> itemListOf(BuildContext context, Milestone milestone, Function onAdd, Function onChangeState, Function onEdit, Function onRemoveTask) {
+List<Widget> itemListOf(
+    BuildContext context,
+    Milestone milestone,
+    Function onAdd,
+    Function onChangeState,
+    Function onEdit,
+    Function onRemoveTask) {
   List<Widget> ret = [];
+
+  List<Widget> taskTiles = [
+    new Container(
+      padding: EdgeInsets.only(top: 25.0),
+    )
+  ];
+  milestone.tasks.forEach((s, t) => taskTiles
+      .add(toListTaskTile(t, onChangeState, onEdit, onRemoveTask, milestone)));
 
   ret.addAll([
     new InkWell(
       onTap: () {
-        Navigator.push(
-            context,
-            MaterialPageRoute(
-                builder: (context) => EditMilestone(milestone)));
+        Navigator.push(context,
+            MaterialPageRoute(builder: (context) => EditMilestone(milestone)));
       },
       child: new Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
-          buildHeading("Informationen"),
-          buildInfoSectionElement(Icons.local_play, milestone.title),
-          buildInfoSectionElement(Icons.description, milestone.description),
-          buildInfoSectionElement(
-              Icons.date_range,
-              "${DateFormat.y().format(
-                  milestone.date)}.${DateFormat.M().format(
-                  milestone.date)}.${DateFormat.d().format(
-                  milestone.date)}"),
+
+              buildHeading("Informationen"),
+              buildInfoSectionElement(Icons.local_play, milestone.title),
+              milestone.description.isEmpty
+                  ? new Text("")
+                  : buildInfoSectionElement(
+                      Icons.description, milestone.description),
+              buildInfoSectionElement(
+                  Icons.date_range,
+                  "${DateFormat.d().format(
+                    milestone.date)}.${DateFormat.M().format(
+                    milestone.date)}.${DateFormat.y().format(
+                    milestone.date)}"),
+
+
         ],
       ),
     ),
-
     new Container(
       padding: EdgeInsets.only(top: 20.0, bottom: 20.0),
       child: new Divider(),
     ),
-
-    new Column(crossAxisAlignment: CrossAxisAlignment.start,children: <Widget>[
-      new Container(
-        child: buildHeading("Aufgaben"),
-      ),
-      new TextFormField(
-        controller: new TextEditingController(text: ""),
-        autofocus: false,
-        keyboardType: TextInputType.text,
-        decoration: new InputDecoration(
-            hintText: 'Aufgabentitel', labelText: 'Neue Aufgabe hinzufügen...'),
-        onFieldSubmitted: (input) {
-          onAdd(new Task(input, TaskState.notCompleted), milestone);
-        },
-      ),
-    ],)
+    new Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: <Widget>[
+        new Container(
+          child: buildHeading("Aufgaben"),
+        ),
+        new TextFormField(
+          controller: new TextEditingController(text: ""),
+          autofocus: false,
+          keyboardType: TextInputType.text,
+          decoration: new InputDecoration(
+              hintText: 'Aufgabentitel',
+              labelText: 'Neue Aufgabe hinzufügen...'),
+          onFieldSubmitted: (input) {
+            onAdd(new Task(input, TaskState.notCompleted), milestone);
+          },
+        ),
+        new ExpansionTile(
+          title: new Text("Aufgaben"),
+          children: taskTiles,
+        ),
+      ],
+    )
   ]);
-
-  milestone.tasks.forEach((s, t) => ret.add(toListTaskTile(t, onChangeState, onEdit, onRemoveTask, milestone)));
 
   return ret;
 }
 
-
-Container toListTaskTile(Task t, Function onChangeState, Function onEdit, Function onRemoveTask, Milestone milestone) {
+Container toListTaskTile(Task t, Function onChangeState, Function onEdit,
+    Function onRemoveTask, Milestone milestone) {
   return new Container(
     child: new Row(
       children: <Widget>[

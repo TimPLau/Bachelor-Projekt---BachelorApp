@@ -7,7 +7,7 @@ class InformationToolContentBuilder {
   InformationToolContentBuilder();
 
   generateContent(String jsonFile) {
-    Content init = new Content("", "init", "", []);
+    Content init = new Content("", "INIT", "", []);
 
     for (dynamic jsonContentModule in json.decode(jsonFile)) {
       Content content = new Content(

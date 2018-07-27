@@ -1,6 +1,21 @@
 import 'package:project_bachelorapplication/actions/milestone_tool_actions.dart';
 import 'package:project_bachelorapplication/models/milestone_tool.dart';
 
+updateBeginDate(DateTime current, action){
+  if(action is UpdateBeginDateAction)
+    return action.begin;
+
+  return current;
+}
+
+updateEndDate(DateTime current, action){
+  if(action is UpdateEndDateAction)
+    return action.end;
+
+
+  return current;
+}
+
 Map<String, Milestone> updateMilestones (Map<String, Milestone> current, action){
 
   if(action is AddMilestoneAction) {

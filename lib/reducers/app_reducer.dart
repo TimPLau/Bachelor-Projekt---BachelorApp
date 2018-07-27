@@ -11,6 +11,8 @@ AppState appReducer(AppState state, dynamic action) {
     updateProperties(state.properties, action),
     updateAchievedAchievements(state.achievedAchievements, action),
     updateChallenges(state.challenges, action),
+    updateBeginDate(state.begin, action),
+    updateEndDate(state.end, action),
   );
 }
 

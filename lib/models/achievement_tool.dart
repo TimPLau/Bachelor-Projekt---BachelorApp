@@ -1,5 +1,9 @@
 //https://gamedevelopment.tutsplus.com/tutorials/how-to-code-unlockable-achievements-for-your-game-a-simple-approach--gamedev-6012
 
+import 'dart:ui';
+
+import 'package:flutter/material.dart';
+
 const String ACTIVE_IF_GREATER_THAN = ">";
 const String ACTIVE_IF_LESS_THAN = "<";
 const String ACTIVE_IF_EQUALS_TO = "==";
@@ -114,3 +118,17 @@ class Property{
 enum AchievementType { low, medium, high, special }
 
 class AchievementLibrary {}
+
+Color getAchievementTypeColor(Achievement achievement){
+  Color ret;
+
+  switch(achievement.type){
+    case AchievementType.low: ret = Colors.yellow; break;
+    case AchievementType.medium: ret = Colors.orangeAccent; break;
+    case AchievementType.high: ret = Colors.red; break;
+    case AchievementType.special: ret = Colors.blue; break;
+    default: ret = Colors.white10;
+  }
+
+  return ret;
+}

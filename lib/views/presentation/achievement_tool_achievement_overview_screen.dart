@@ -20,7 +20,7 @@ class AchievementOverviewScreen extends StatelessWidget {
         itemCount: this.achievements.length,
         itemBuilder: (context, index){
           return new ListTile(
-            leading: ((this.achievements[index].completed) ? Icon(Icons.star, color: Colors.amber) : Icon(Icons.star_border,)),
+            leading: ((this.achievements[index].completed) ? Icon(Icons.star, color: getAchievementTypeColor(this.achievements[index])) : Icon(Icons.star_border, color: getAchievementTypeColor(this.achievements[index]),)),
             title: new Text(this.achievements[index].title, softWrap: true,),
           );
         },
@@ -28,3 +28,4 @@ class AchievementOverviewScreen extends StatelessWidget {
     );
   }
 }
+

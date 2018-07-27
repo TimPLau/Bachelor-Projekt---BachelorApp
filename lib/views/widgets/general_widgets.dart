@@ -37,7 +37,7 @@ Container buildHeading(String heading) {
       style: TextStyle(
           decorationStyle: TextDecorationStyle.dashed,
           fontStyle: FontStyle.normal,
-          fontSize: 26.0),
+          fontSize: 20.0),
     ),
   );
 }

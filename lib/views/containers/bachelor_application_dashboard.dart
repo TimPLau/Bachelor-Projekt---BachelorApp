@@ -6,7 +6,9 @@ import 'package:project_bachelorapplication/models/achievement_tool.dart';
 import 'package:project_bachelorapplication/models/appstate.dart';
 import 'package:project_bachelorapplication/models/milestone_tool.dart';
 import 'package:project_bachelorapplication/models/notifications.dart';
+import 'package:project_bachelorapplication/views/containers/bachelor_application_add_begin_end_date.dart';
 import 'package:project_bachelorapplication/views/presentation/bachelor_application_dashboard_screen.dart';
+import 'package:project_bachelorapplication/views/presentation/dashboard_initial_date_screen.dart';
 import 'package:redux/redux.dart';
 
 class Dashboard extends StatelessWidget {
@@ -22,13 +24,23 @@ class Dashboard extends StatelessWidget {
         flutterLocalNotificationsPlugin.onSelectNotification =
             (s) => onSelectNotification(s, context);
 
+        if(!(vm.beginDate == null) && !(vm.endDate == null)) {
+          print("BOBA " + vm.beginDate.toIso8601String());
+          print("BOBA " + vm.endDate.toIso8601String());
+        }
+        if((vm.beginDate == null) || (vm.endDate == null)) return AddBeginEndDate();
+
+
+
         return DashboardScreen(
             vm.milestones,
             vm.onAdd,
             vm.onEdit,
             vm.onChangeState,
             vm.onRemoveTask,
-            vm.onRemoveMilestone
+            vm.onRemoveMilestone,
+          vm.beginDate,
+          vm.endDate,
         );
       },
     );
@@ -43,12 +55,20 @@ class _ViewModel {
   final Function onChangeState;
   final Function onRemoveTask;
   final Function onRemoveMilestone;
+  final Function addEditDate;
+  DateTime initialBeginDate;
+  DateTime initialEndDate;
+  final DateTime beginDate;
+  final DateTime endDate;
+  bool isEditing;
 
   _ViewModel({this.milestones, this.achievements, this.onAdd,
     this.onEdit,
     this.onChangeState,
     this.onRemoveTask,
-    this.onRemoveMilestone}){}
+    this.onRemoveMilestone, this.addEditDate,this.beginDate, this.endDate}){
+
+  }
 
   factory _ViewModel.fromStore(Store<AppState> store) {
     return _ViewModel(
@@ -67,6 +87,16 @@ class _ViewModel {
 
       onChangeState: (Task changedTask, Milestone activeMilestone) => store
           .dispatch(new ChangeTaskStateAction(activeMilestone, changedTask)),
+
+      addEditDate: (DateTime begin, DateTime end) {
+        store.dispatch(UpdateBeginDateAction(begin));
+        store.dispatch(UpdateEndDateAction(end));
+      },
+
+      beginDate: store.state.begin,
+
+      endDate: store.state.end,
+
     );
   }
 }

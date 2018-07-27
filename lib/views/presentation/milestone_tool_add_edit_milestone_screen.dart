@@ -123,7 +123,6 @@ class AddEditMilestoneForm extends State<AddEditMilestoneScreen> {
                               controller: _dateInputController,
                               // key: _nameInputField,
                               keyboardType: TextInputType.text,
-                              maxLength: 50,
                               decoration: new InputDecoration(
                                   hintText: 'Datum des Meilenteins',
                                   labelText: 'MM/DD/YYYY'),

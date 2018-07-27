@@ -37,18 +37,18 @@ class MilestoneOverviewScreen extends StatelessWidget {
             return new ListTile(
               title: new Text(milestones[index].title),
               subtitle: new Text(
-                milestones[index].description,
+                "${milestones[index].date.day}.${milestones[index].date.month}.${milestones[index].date.year}",
                 softWrap: true,
+                style: TextStyle(color: this.milestones[index].getColorState()),
               ),
               trailing: new Text(this.milestones[index].tasks.length > 0
                   ? "${this.milestones[index]
                   .getCompletedTasks()
                   .length}/${this.milestones[index].tasks.length}"
-                  : ""),
+                  : "keine Aufgaben", style: TextStyle(color: this.milestones[index].getColorState()),),
               leading: Container(
                 child: Icon(
                   Icons.local_play,
-                  color: Colors.black54,
                 ),
               ),
               onTap: () {

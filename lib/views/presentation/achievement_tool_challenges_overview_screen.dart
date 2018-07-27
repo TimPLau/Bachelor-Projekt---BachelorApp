@@ -22,7 +22,7 @@ class ChallengesOverviewScreen extends StatelessWidget {
         itemBuilder: (context, index){
 
           return new ListTile(
-            leading: ((this.challenges[index].completed) ? Icon(Icons.star, color: Colors.amber) : Icon(Icons.star_border,)),
+            leading: ((this.challenges[index].completed) ? Icon(Icons.check_box) : Icon(Icons.check_box_outline_blank,)),
             title: new Text(this.challenges[index].title, softWrap: true,),
             onTap: () {this.changeChallengeState(this.challenges[index]);},
 
