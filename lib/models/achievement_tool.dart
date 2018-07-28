@@ -1,78 +1,40 @@
 //https://gamedevelopment.tutsplus.com/tutorials/how-to-code-unlockable-achievements-for-your-game-a-simple-approach--gamedev-6012
 
 import 'dart:ui';
-
+import 'package:json_annotation/json_annotation.dart';
 import 'package:flutter/material.dart';
+
+part 'achievement_tool.g.dart';
 
 const String ACTIVE_IF_GREATER_THAN = ">";
 const String ACTIVE_IF_LESS_THAN = "<";
 const String ACTIVE_IF_EQUALS_TO = "==";
 
-class Challenge {
-  String title;
-  String description;
+@JsonSerializable()
+class Challenge extends Object with _$ChallengeSerializerMixin{
+  final String title;
+  final String description;
   bool completed;
 
-  Challenge(this.title, this.description){
-    this.completed = false;
-  }
+  Challenge( this.title,  this.description, [this.completed = false]);
 
   changeState() {
     this.completed = (this.completed == false) ? true : false;
   }
-}
 
-class AchievementHandler {
-
-
-  Map<String, Property> properties;
-  Map<String, Achievement> activeAchievements;
-  List<Achievement> achievedAchievements;
-
-  AchievementHandler(this.properties, this.activeAchievements);
-
-  getPropertyValue(String name) {
-    return this.properties[name].currentValue;
-  }
-
-  setPropertyValue(String name, int newValue) {
-
-    Property property = this.properties[name];
-
-    switch(property.activationRule){
-      case ACTIVE_IF_GREATER_THAN: property.currentValue = (newValue > property.currentValue) ? newValue : property.currentValue; break;
-      case ACTIVE_IF_LESS_THAN: property.currentValue = (newValue < property.currentValue) ? newValue : property.currentValue; break;
-      case ACTIVE_IF_EQUALS_TO: property.currentValue = newValue; break;
-    }
-
-  }
-
-  List<Achievement> checkAchievements() {
-    List<Achievement> ret = [];
-
-    for(Achievement achievement in this.activeAchievements.values.toList()){
-      if(achievement.completed == false){
-        if(achievement.checkAchievement() == true) {
-          this.achievedAchievements.add(achievement);
-          this.activeAchievements.remove(achievement.title);
-        }
-      }
-    }
-
-    return ret;
-  }
+  factory Challenge.fromJson(Map<String, dynamic> json) => _$ChallengeFromJson(json);
 
 }
 
-class Achievement {
+@JsonSerializable()
+class Achievement extends Object with _$AchievementSerializerMixin{
   String title;
   bool completed;
   AchievementType type;
   List<Property> properties;
 
-  Achievement(this.title, this.type, this.properties){
-    this.completed = false;
-  }
+
+  Achievement(this.title, this.type, this.properties, [this.completed = false]);
 
   bool checkAchievement() {
 
@@ -85,9 +47,13 @@ class Achievement {
 
     return true;
   }
+
+  factory Achievement.fromJson(Map<String, dynamic> json) => _$AchievementFromJson(json);
+
 }
 
-class Property{
+@JsonSerializable()
+class Property extends Object with _$PropertySerializerMixin{
   String name;
   int currentValue;
   String activationRule;
@@ -95,8 +61,7 @@ class Property{
   int initialValue;
 
   Property(
-      this.name, this.initialValue, this.activationRule, this.activationValue){
-    currentValue = initialValue;
+      this.name, this.initialValue, this.activationRule, this.activationValue, [this.currentValue = 0]){
   }
 
   bool isActive() {
@@ -113,11 +78,11 @@ class Property{
     }
     return false;
   }
+
+  factory Property.fromJson(Map<String, dynamic> json) => _$PropertyFromJson(json);
 }
 
 enum AchievementType { low, medium, high, special }
-
-class AchievementLibrary {}
 
 Color getAchievementTypeColor(Achievement achievement){
   Color ret;

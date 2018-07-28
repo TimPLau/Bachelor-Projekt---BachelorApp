@@ -1,18 +1,54 @@
+import 'dart:convert';
+import 'package:json_annotation/json_annotation.dart';
 import 'package:project_bachelorapplication/models/achievement_tool.dart';
 import 'package:project_bachelorapplication/models/bachelorguide_tool_content.dart';
 import 'package:project_bachelorapplication/models/milestone_tool.dart';
 
-class AppState {
+
+part 'appstate.g.dart';
+
+@JsonSerializable()
+class AppState extends Object with _$AppStateSerializerMixin{
   final Content informationToolContent;
   final Map<String, Milestone> currentMilestones;
   final Map<String, Property> properties;
-  //final Map<String, Achievement> activeAchievements;
+  final Map<String, Map<String, Achievement>> achievedAchievements;
+  final Map<String, Challenge> challenges;
   final DateTime begin;
   final DateTime end;
 
-  final Map<String, Map<String, Achievement>> achievedAchievements;
+  AppState(
+      {this.informationToolContent,
+      this.currentMilestones,
+      this.properties,
+      this.achievedAchievements,
+      this.challenges,
+      this.begin,
+      this.end});
 
-  final Map<String, Challenge> challenges;
+  AppState copyWith(
+      {Content informationToolContent,
+      Map<String, Milestone> currentMilestones,
+      final Map<String, Property> properties,
+      Map<String, Map<String, Achievement>> achievedAchievement,
+      Map<String, Challenge> challenges,
+      DateTime begin,
+      DateTime end}) {
+    return new AppState(
+      informationToolContent:
+          informationToolContent ?? this.informationToolContent,
+      currentMilestones: currentMilestones ?? this.currentMilestones,
+      properties: properties ?? this.properties,
+      achievedAchievements: achievedAchievements ?? this.achievedAchievements,
+      challenges: challenges ?? this.challenges,
+      begin: begin ?? this.begin,
+      end: end ?? this.end,
+    );
+  }
 
-  AppState(this.informationToolContent, this.currentMilestones, this.properties, this.achievedAchievements, this.challenges, this.begin, this.end, );
+  factory AppState.fromJson(dynamic json) => _$AppStateFromJson(json);
+
+  static AppState fromJsonDecoder(dynamic json) => AppState.fromJson(json);
+
+
 }

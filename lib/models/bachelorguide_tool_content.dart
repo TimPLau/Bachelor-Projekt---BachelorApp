@@ -1,4 +1,7 @@
 import 'dart:convert';
+import 'package:json_annotation/json_annotation.dart';
+
+part 'bachelorguide_tool_content.g.dart';
 
 class InformationToolContentBuilder {
 
@@ -41,30 +44,31 @@ class InformationToolContentBuilder {
   }
 }
 
-class Content {
+@JsonSerializable()
+class Content extends Object with _$ContentSerializerMixin{
   String type;
   String title;
   String description;
-  List<Content> _subsections = [];
+  List<Content> subsections = [];
 
-  Content(this.type, this.title, this.description, this._subsections);
+  Content(this.type, this.title, this.description, this.subsections);
 
-  get subsections {
-    return this._subsections;
-  }
-
-  set subsections(List<Content> content) {
-    this._subsections.addAll(content);
-  }
 
   @override
   String toString() {
     String ret = "Title: $title\nDescription: $description";
 
-    for (Content subsection in _subsections) {
+    for (Content subsection in subsections) {
       ret = ret + "\n" + subsection.toString();
     }
 
     return ret;
   }
+
+  //factory Challenge.fromJson(Map<String, dynamic> json) => _$ChallengeFromJson(json);
+
+  factory Content.fromJson(Map<String, dynamic> json) => _$ContentFromJson(json);
+
+  //Map<String, dynamic>  toJson() => {'type' : type, 'title' : title, 'description' : description, '_subsections' : _subsections};
+
 }

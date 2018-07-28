@@ -1,11 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:json_annotation/json_annotation.dart';
 import 'package:meta/meta.dart';
 import 'package:project_bachelorapplication/models/achievement_tool.dart';
 import 'package:uuid/uuid.dart';
 
+part 'milestone_tool.g.dart';
 final Uuid idGenerator = new Uuid();
 
-class Milestone {
+@JsonSerializable()
+class Milestone extends Object with _$MilestoneSerializerMixin{
   String id;
   String title;
   String description;
@@ -60,9 +63,14 @@ class Milestone {
     else
       return Colors.yellow;
   }
+
+  factory Milestone.fromJson(Map<String, dynamic> json) => _$MilestoneFromJson(json);
+
+  //Map<String, dynamic>  toJson() => {'id' : id, 'title' : title, 'description' : description, 'date' : date, 'tasks' : tasks};
 }
 
-class Task {
+@JsonSerializable()
+class Task extends Object with _$TaskSerializerMixin{
   String id;
   String title;
   TaskState taskState;
@@ -84,6 +92,10 @@ class Task {
   bool isCompleted() {
     return (taskState == TaskState.completed) ? true : false;
   }
+
+  //Map<String, dynamic>  toJson() => {'id' : id, 'title' : title, 'taskState' : taskState};
+
+  factory Task.fromJson(Map<String, dynamic> json) => _$TaskFromJson(json);
 }
 
 enum TaskState {

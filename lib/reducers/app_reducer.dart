@@ -3,16 +3,26 @@ import 'package:project_bachelorapplication/reducers/achievement_tool_reducers.d
 import 'package:project_bachelorapplication/reducers/challenge_tool_reducers.dart';
 import 'package:project_bachelorapplication/reducers/information_tool_reducer.dart';
 import 'package:project_bachelorapplication/reducers/milestone_tool_reducers.dart';
+import 'package:redux_persist/redux_persist.dart';
 
 AppState appReducer(AppState state, dynamic action) {
-  return new AppState(
-    updateActualContent(state.informationToolContent, action),
-    updateMilestones(state.currentMilestones, action),
-    updateProperties(state.properties, action),
-    updateAchievedAchievements(state.achievedAchievements, action),
-    updateChallenges(state.challenges, action),
-    updateBeginDate(state.begin, action),
-    updateEndDate(state.end, action),
-  );
-}
 
+  if (action is LoadedAction<AppState>) {
+    return action.state ?? state;
+
+  } else if (!(action is LoadedAction<AppState>)) {
+    return state.copyWith(
+      informationToolContent:
+          updateActualContent(state.informationToolContent, action),
+      currentMilestones: updateMilestones(state.currentMilestones, action),
+      properties: updateProperties(state.properties, action),
+      achievedAchievement:
+          updateAchievedAchievements(state.achievedAchievements, action),
+      challenges: updateChallenges(state.challenges, action),
+      begin: updateBeginDate(state.begin, action),
+      end: updateEndDate(state.end, action),
+    );
+  }
+
+  return state;
+}
