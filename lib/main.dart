@@ -26,9 +26,7 @@ var initializationSettingsIOS;
 var initializationSettings;
 FlutterLocalNotificationsPlugin flutterLocalNotificationsPlugin =
     FlutterLocalNotificationsPlugin();
-
 AppContentLoader contentLoader;
-
 InformationToolContentBuilder informationToolContentBuilder =
     new InformationToolContentBuilder();
 Map<String, Map<String, Achievement>> achievedAchievements = {
@@ -84,7 +82,6 @@ class BachelorApp extends StatelessWidget {
 
     persistor.start(store);
   }
-
 
   @override
   Widget build(BuildContext context) {

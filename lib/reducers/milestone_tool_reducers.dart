@@ -35,7 +35,10 @@ Map<String, Milestone> updateMilestones (Map<String, Milestone> current, action)
     return current;
   }
   if(action is EditMilestoneAction) {
-    current[action.milestone.id].changeValues(action.newTitle, action.newDate, action.newDescription);
+    current.remove(action.milestone.id);
+    Milestone newMilestone = new Milestone(action.newTitle, action.newDate, action.newDescription);
+    current[newMilestone.id] = newMilestone;
+
     return current;
   }
   if(action is EditTaskAction) {

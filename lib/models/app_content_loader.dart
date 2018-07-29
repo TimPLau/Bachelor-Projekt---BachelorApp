@@ -7,8 +7,6 @@ import 'package:path_provider/path_provider.dart';
 class AppContentLoader {
   String httpRequest;
 
-  //String saveFileName;
-
   AppContentLoader(this.httpRequest);
 
   Future<List<JSONAppContentFile>> getFiles(String repositoryRequest) async {

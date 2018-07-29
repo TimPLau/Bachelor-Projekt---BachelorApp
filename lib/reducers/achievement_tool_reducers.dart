@@ -5,9 +5,9 @@ import 'package:project_bachelorapplication/models/achievement_tool.dart';
 import 'package:project_bachelorapplication/achievement_tool_datas.dart';
 
 Map<String, Property> updateProperties(Map<String, Property> current, action) {
+
   if (action is AddMilestoneAction)
-    current =
-        setPropertyValue(current, AchievementLookUp.firstMilestone.name, 1);
+    current = setPropertyValue(current, AchievementLookUp.firstMilestone.name, 1);
 
   if (action is ChangeStateChallengeAction)
     current = setPropertyValue(current, action.challenge.title, 1);

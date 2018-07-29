@@ -4,7 +4,6 @@ import 'package:project_bachelorapplication/models/appstate.dart';
 import 'package:project_bachelorapplication/models/bachelorguide_tool_content.dart';
 import 'package:project_bachelorapplication/views/widgets/navigation_widget.dart';
 import 'package:redux/redux.dart';
-import 'package:project_bachelorapplication/actions/informantion_tool_actions.dart';
 
 class ContentGuideScreen extends StatelessWidget {
   final Content content;
