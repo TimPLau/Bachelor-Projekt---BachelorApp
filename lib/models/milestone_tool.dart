@@ -61,7 +61,7 @@ class Milestone extends Object with _$MilestoneSerializerMixin{
     else if (this.tasks.isNotEmpty && this.date.isBefore(DateTime.now()))
       return Colors.red;
     else
-      return Colors.yellow;
+      return Colors.amber;
   }
 
   factory Milestone.fromJson(Map<String, dynamic> json) => _$MilestoneFromJson(json);

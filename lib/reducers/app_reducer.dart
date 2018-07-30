@@ -15,9 +15,10 @@ AppState appReducer(AppState state, dynamic action) {
       informationToolContent:
           updateActualContent(state.informationToolContent, action),
       currentMilestones: updateMilestones(state.currentMilestones, action),
+      selectedMilestone: updateSelectedMilestone(state.selectedMilestone, action),
       properties: updateProperties(state.properties, action),
-      achievedAchievement:
-          updateAchievedAchievements(state.achievedAchievements, action),
+      achievedAchievements:
+          updateAchievedAchievements(state.achievedAchievements, state.properties, action),
       challenges: updateChallenges(state.challenges, action),
       begin: updateBeginDate(state.begin, action),
       end: updateEndDate(state.end, action),

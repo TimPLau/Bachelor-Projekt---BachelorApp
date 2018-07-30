@@ -39,9 +39,14 @@ class Achievement extends Object with _$AchievementSerializerMixin{
   bool checkAchievement() {
 
     if (this.completed == false) {
-      for (Property property in properties)
+      print("f");
+      for (Property property in properties) {
+        print(property.name);
+        print(property.isActive());
+        print(property.currentValue);
+        print(property.activationValue);
         if (property.isActive() == false) return false;
-
+      }
       this.completed = true;
     }
 
@@ -73,6 +78,7 @@ class Property extends Object with _$PropertySerializerMixin{
         return currentValue < activationValue;
         break;
       case ACTIVE_IF_EQUALS_TO:
+        print(currentValue == activationValue);
         return currentValue == activationValue;
         break;
     }

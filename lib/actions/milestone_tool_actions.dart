@@ -6,6 +6,12 @@ class AddMilestoneAction {
   AddMilestoneAction(this.milestone);
 }
 
+class UpdateSelectedMilestone{
+  Milestone milestone;
+
+  UpdateSelectedMilestone(this.milestone);
+}
+
 class RemoveMilestoneAction {
   Milestone milestone;
 

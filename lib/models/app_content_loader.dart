@@ -13,6 +13,7 @@ class AppContentLoader {
     final response = await http.get(repositoryRequest);
 
     if (response.statusCode == 200) {
+      print(response.body);
       return parseFiles(response.body);
     } else {
       throw Exception('Failed to load data\nMax requests per hour: ' +
@@ -24,8 +25,6 @@ class AppContentLoader {
 
   loadDataFromInternet() async {
     List<JSONAppContentFile> informationToolFiles = await getFiles(httpRequest);
-
-    List<JSONFileAppContent> fileContent = [];
 
     for (JSONAppContentFile file in informationToolFiles) {
       await file.getJsonContent();

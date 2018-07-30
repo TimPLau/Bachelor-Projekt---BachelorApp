@@ -24,21 +24,18 @@ class Dashboard extends StatelessWidget {
         flutterLocalNotificationsPlugin.onSelectNotification =
             (s) => onSelectNotification(s, context);
 
-        if(!(vm.beginDate == null) && !(vm.endDate == null)) {
-          print("BOBA " + vm.beginDate.toIso8601String());
-          print("BOBA " + vm.endDate.toIso8601String());
-        }
-        if((vm.beginDate == null) || (vm.endDate == null)) return AddBeginEndDate();
-
-
+        if ((vm.beginDate == null) || (vm.endDate == null))
+          return AddBeginEndDate();
 
         return DashboardScreen(
-            vm.milestones,
-            vm.onAdd,
-            vm.onEdit,
-            vm.onChangeState,
-            vm.onRemoveTask,
-            vm.onRemoveMilestone,
+          vm.milestones,
+          vm.selectedMilestone,
+          vm.onAdd,
+          vm.onEdit,
+          vm.onChangeState,
+          vm.onRemoveTask,
+          vm.onRemoveMilestone,
+          vm.onSelectedMilestone,
           vm.beginDate,
           vm.endDate,
         );
@@ -48,56 +45,60 @@ class Dashboard extends StatelessWidget {
 }
 
 class _ViewModel {
-  Map<String, Milestone> milestones;
+  final Map<String, Milestone> milestones;
   Map<String, Achievement> achievements;
+  final Milestone selectedMilestone;
   final Function onAdd;
   final Function onEdit;
   final Function onChangeState;
   final Function onRemoveTask;
   final Function onRemoveMilestone;
   final Function addEditDate;
+  final Function onSelectedMilestone;
   DateTime initialBeginDate;
   DateTime initialEndDate;
   final DateTime beginDate;
   final DateTime endDate;
   bool isEditing;
 
-  _ViewModel({this.milestones, this.achievements, this.onAdd,
+  _ViewModel({this.milestones,
+    this.achievements,
+    this.selectedMilestone,
+    this.onAdd,
     this.onEdit,
     this.onChangeState,
     this.onRemoveTask,
-    this.onRemoveMilestone, this.addEditDate,this.beginDate, this.endDate}){
-
-  }
+    this.onRemoveMilestone,
+    this.addEditDate,
+    this.onSelectedMilestone,
+    this.beginDate,
+    this.endDate}) {}
 
   factory _ViewModel.fromStore(Store<AppState> store) {
     return _ViewModel(
       milestones: store.state.currentMilestones,
+      selectedMilestone: store.state.selectedMilestone,
       onRemoveMilestone: (Milestone activeMilestone) =>
           store.dispatch(new RemoveMilestoneAction(activeMilestone)),
-
       onRemoveTask: (Task deleteTask, Milestone activeMilestone) =>
           store.dispatch(new RemoveTaskAction(activeMilestone, deleteTask)),
-
       onAdd: (Task newTask, Milestone activeMilestone) =>
           store.dispatch(new AddTaskAction(activeMilestone, newTask)),
-
-      onEdit: (Task editTask, String newTitle, Milestone activeMilestone) => store
-          .dispatch(new EditTaskAction(activeMilestone, editTask, newTitle)),
-
-      onChangeState: (Task changedTask, Milestone activeMilestone) => store
-          .dispatch(new ChangeTaskStateAction(activeMilestone, changedTask)),
-
+      onEdit: (Task editTask, String newTitle, Milestone activeMilestone) =>
+          store.dispatch(
+              new EditTaskAction(activeMilestone, editTask, newTitle)),
+      onChangeState: (Task changedTask, Milestone activeMilestone) =>
+          store
+              .dispatch(
+              new ChangeTaskStateAction(activeMilestone, changedTask)),
       addEditDate: (DateTime begin, DateTime end) {
         store.dispatch(UpdateBeginDateAction(begin));
         store.dispatch(UpdateEndDateAction(end));
       },
-
+      onSelectedMilestone: (Milestone milestone) =>
+          store.dispatch(new UpdateSelectedMilestone(milestone)),
       beginDate: store.state.begin,
-
       endDate: store.state.end,
-
     );
   }
 }
-

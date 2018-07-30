@@ -26,9 +26,9 @@ void main() {
         initialState: new AppState(
             informationToolContent: informationToolContentBuilder.rootContent,
             currentMilestones: new SplayTreeMap<String, Milestone>(),
-            properties: AchievementLookUp.properties,
+            properties: properties,
             achievedAchievements: achievedAchievements,
-            challenges: ChallengesLookUp.challenges,
+            challenges: challenges,
             begin: null,
             end: null),
       );
@@ -53,9 +53,9 @@ void main() {
         initialState: new AppState(
             informationToolContent: informationToolContentBuilder.rootContent,
             currentMilestones: new SplayTreeMap<String, Milestone>(),
-            properties: AchievementLookUp.properties,
+            properties: properties,
             achievedAchievements: achievedAchievements,
-            challenges: ChallengesLookUp.challenges,
+            challenges: challenges,
             begin: null,
             end: null),
       );
@@ -88,9 +88,9 @@ void main() {
         initialState: new AppState(
             informationToolContent: informationToolContentBuilder.rootContent,
             currentMilestones: new SplayTreeMap<String, Milestone>(),
-            properties: AchievementLookUp.properties,
+            properties: properties,
             achievedAchievements: achievedAchievements,
-            challenges: ChallengesLookUp.challenges,
+            challenges: challenges,
             begin: null,
             end: null),
       );
@@ -129,9 +129,9 @@ void main() {
         initialState: new AppState(
             informationToolContent: informationToolContentBuilder.rootContent,
             currentMilestones: new SplayTreeMap<String, Milestone>(),
-            properties: AchievementLookUp.properties,
+            properties: properties,
             achievedAchievements: achievedAchievements,
-            challenges: ChallengesLookUp.challenges,
+            challenges: challenges,
             begin: null,
             end: null),
       );
@@ -157,9 +157,9 @@ void main() {
         initialState: new AppState(
             informationToolContent: informationToolContentBuilder.rootContent,
             currentMilestones: new SplayTreeMap<String, Milestone>(),
-            properties: AchievementLookUp.properties,
+            properties: properties,
             achievedAchievements: achievedAchievements,
-            challenges: ChallengesLookUp.challenges,
+            challenges: challenges,
             begin: null,
             end: null),
       );
@@ -184,9 +184,9 @@ void main() {
         initialState: new AppState(
             informationToolContent: informationToolContentBuilder.rootContent,
             currentMilestones: new SplayTreeMap<String, Milestone>(),
-            properties: AchievementLookUp.properties,
+            properties: properties,
             achievedAchievements: achievedAchievements,
-            challenges: ChallengesLookUp.challenges,
+            challenges: challenges,
             begin: null,
             end: null),
       );

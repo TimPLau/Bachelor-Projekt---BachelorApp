@@ -92,7 +92,7 @@ class AddEditMilestoneForm extends State<AddEditMilestoneScreen> {
                           controller: _nameInputController,
                           key: _nameInputField,
                           keyboardType: TextInputType.text,
-                          maxLength: 20,
+                          maxLength: 60,
                           decoration: new InputDecoration(
                               hintText: 'Name des Meilenteins',
                               labelText: 'Meilensteinname'),
@@ -148,7 +148,6 @@ class AddEditMilestoneForm extends State<AddEditMilestoneScreen> {
                           controller: _descriptionInputController,
                           key: _descriptionInputField,
                           keyboardType: TextInputType.text,
-                          maxLength: 20,
                           decoration: new InputDecoration(
                               hintText: 'Beschreibung',
                               labelText: 'Beschreibung (optional)'),

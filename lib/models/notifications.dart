@@ -15,11 +15,13 @@ Future onSelectNotification(String payload, BuildContext context) async {
 }
 
 Future<dynamic> checkNotification(context) {
+
   StoreProvider.of<AppState>(context).dispatch(new CheckForAchieveAction(
       StoreProvider
           .of<AppState>(context)
           .state
           .achievedAchievements["AllAchievements"]));
+
   final action = new SendAchievementNotificationAction();
   StoreProvider.of<AppState>(context).dispatch(action);
   return action.completer.future;

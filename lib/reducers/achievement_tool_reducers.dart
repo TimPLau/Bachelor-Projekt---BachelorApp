@@ -6,33 +6,37 @@ import 'package:project_bachelorapplication/achievement_tool_datas.dart';
 
 Map<String, Property> updateProperties(Map<String, Property> current, action) {
 
-  if (action is AddMilestoneAction)
-    current = setPropertyValue(current, AchievementLookUp.firstMilestone.name, 1);
 
-  if (action is ChangeStateChallengeAction)
+  if (action is AddMilestoneAction) {
+    current = setPropertyValue(current, firstMilestone.name, 1);
+  }
+
+  if (action is ChangeStateChallengeAction) {
     current = setPropertyValue(current, action.challenge.title, 1);
+  }
+
 
   return current;
 }
 
 Map<String, Map<String, Achievement>> updateAchievedAchievements(
-    Map<String, Map<String, Achievement>> current, action) {
-
+    Map<String, Map<String, Achievement>> current,
+    Map<String, Property> properties,
+    action) {
   if (action is ClearAchievedAchievementsAction) {
     current["Recognized"].addAll(current["NotRecognized"]);
     current["NotRecognized"] = {};
     return current;
   }
 
-  if (action is ClearAchievedAction){
+  if (action is ClearAchievedAction) {
     current["Achieved"] = {};
     return current;
   }
 
   if (action is CheckForAchieveAction) {
-
     Map<String, Achievement> newAchievements =
-        setAchievedAchievements(current["AllAchievements"]);
+        setAchievedAchievements(properties, current["AllAchievements"]);
     current["Achieved"].addAll(newAchievements);
 
     for (Achievement achievement in newAchievements.values.toList()) {
@@ -70,12 +74,21 @@ Map<String, Property> setPropertyValue(
 }
 
 Map<String, Achievement> setAchievedAchievements(
+    Map<String, Property> properties,
     Map<String, Achievement> activeAchievements) {
   Map<String, Achievement> ret = new Map<String, Achievement>();
 
   for (Achievement achievement in activeAchievements.values.toList()) {
     if (achievement.completed == false) {
-      if (achievement.checkAchievement() == true) {
+
+      List<Property> achievementsProperties = [];
+
+      //TODO Ändern der Properties auf String id's
+      for (Property p in achievement.properties) {
+        achievementsProperties.add(properties[p.name]);
+      }
+
+      if (checkAchievement(achievementsProperties) == true) {
         achievement.completed = true;
         ret[achievement.title] = achievement;
       }
@@ -83,4 +96,12 @@ Map<String, Achievement> setAchievedAchievements(
   }
 
   return ret;
+}
+
+bool checkAchievement(List<Property> properties) {
+  for (Property property in properties) {
+    if (property.isActive() == false) return false;
+  }
+
+  return true;
 }

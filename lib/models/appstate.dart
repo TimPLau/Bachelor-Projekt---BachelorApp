@@ -4,13 +4,13 @@ import 'package:project_bachelorapplication/models/achievement_tool.dart';
 import 'package:project_bachelorapplication/models/bachelorguide_tool_content.dart';
 import 'package:project_bachelorapplication/models/milestone_tool.dart';
 
-
 part 'appstate.g.dart';
 
 @JsonSerializable()
-class AppState extends Object with _$AppStateSerializerMixin{
+class AppState extends Object with _$AppStateSerializerMixin {
   final Content informationToolContent;
   final Map<String, Milestone> currentMilestones;
+  final Milestone selectedMilestone;
   final Map<String, Property> properties;
   final Map<String, Map<String, Achievement>> achievedAchievements;
   final Map<String, Challenge> challenges;
@@ -20,6 +20,7 @@ class AppState extends Object with _$AppStateSerializerMixin{
   AppState(
       {this.informationToolContent,
       this.currentMilestones,
+      this.selectedMilestone,
       this.properties,
       this.achievedAchievements,
       this.challenges,
@@ -29,8 +30,9 @@ class AppState extends Object with _$AppStateSerializerMixin{
   AppState copyWith(
       {Content informationToolContent,
       Map<String, Milestone> currentMilestones,
-      final Map<String, Property> properties,
-      Map<String, Map<String, Achievement>> achievedAchievement,
+        Milestone selectedMilestone,
+      Map<String, Property> properties,
+      Map<String, Map<String, Achievement>> achievedAchievements,
       Map<String, Challenge> challenges,
       DateTime begin,
       DateTime end}) {
@@ -38,6 +40,7 @@ class AppState extends Object with _$AppStateSerializerMixin{
       informationToolContent:
           informationToolContent ?? this.informationToolContent,
       currentMilestones: currentMilestones ?? this.currentMilestones,
+      selectedMilestone: selectedMilestone ?? this.selectedMilestone,
       properties: properties ?? this.properties,
       achievedAchievements: achievedAchievements ?? this.achievedAchievements,
       challenges: challenges ?? this.challenges,
@@ -49,6 +52,4 @@ class AppState extends Object with _$AppStateSerializerMixin{
   factory AppState.fromJson(dynamic json) => _$AppStateFromJson(json);
 
   static AppState fromJsonDecoder(dynamic json) => AppState.fromJson(json);
-
-
 }
