@@ -53,21 +53,51 @@ class MilestoneDetailScreen extends StatelessWidget {
   }
 }
 
-Container buildInfoSectionElement(IconData iconData, String information) {
+Container buildInfoSectionElement(
+    IconData iconData, String title, String information) {
   return new Container(
-    //padding: EdgeInsets.only(top: 20.0, left: 10.0, right: 10.0),
-    child: new Row(
+    padding: EdgeInsets.only(bottom: 5.0),
+    child: new Flex(
+      direction: Axis.horizontal,
       mainAxisAlignment: MainAxisAlignment.start,
       children: <Widget>[
-        new Icon(iconData),
-        new Expanded(
-            child: new Container(
-          padding: EdgeInsets.only(left: 20.0),
-          child: new Text(
-            information,
-            softWrap: true,
+        new Flexible(
+          child: new Container(
+            child: new Row(
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: <Widget>[
+                new Expanded(
+                  flex: 4,
+                  child: new Row(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                      new Container(
+                        child: new Icon(iconData),
+                      ),
+                      new Expanded(
+                        child: new Container(
+                          padding: EdgeInsets.only(left: 10.0),
+                          child: new Text(
+                            title,
+                            style: TextStyle(fontWeight: FontWeight.bold),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                new Expanded(
+                  child: new Text(
+                    information,
+                  ),
+                  flex:7,
+                ),
+              ],
+            ),
           ),
-        ))
+        ),
       ],
     ),
   );
@@ -82,11 +112,7 @@ List<Widget> itemListOf(
     Function onRemoveTask) {
   List<Widget> ret = [];
 
-  List<Widget> taskTiles = [
-    new Container(
-      padding: EdgeInsets.only(top: 25.0),
-    )
-  ];
+  List<Widget> taskTiles = [];
   milestone.tasks.forEach((s, t) => taskTiles
       .add(toListTaskTile(t, onChangeState, onEdit, onRemoveTask, milestone)));
 
@@ -99,21 +125,19 @@ List<Widget> itemListOf(
       child: new Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
-
-              buildHeading("Informationen"),
-              buildInfoSectionElement(Icons.local_play, milestone.title),
-              milestone.description.isEmpty
-                  ? new Text("")
-                  : buildInfoSectionElement(
-                      Icons.description, milestone.description),
-              buildInfoSectionElement(
-                  Icons.date_range,
-                  "${DateFormat.d().format(
-                    milestone.date)}.${DateFormat.M().format(
-                    milestone.date)}.${DateFormat.y().format(
-                    milestone.date)}"),
-
-
+          buildHeading("Informationen"),
+          buildInfoSectionElement(Icons.local_play, "Titel:", milestone.title),
+          milestone.description.isEmpty
+              ? new Text("")
+              : buildInfoSectionElement(
+                  Icons.description, "Beschreibung:", milestone.description),
+          buildInfoSectionElement(
+              Icons.date_range,
+              "Datum:",
+              "${DateFormat.d().format(
+                  milestone.date)}.${DateFormat.M().format(
+                  milestone.date)}.${DateFormat.y().format(
+                  milestone.date)}"),
         ],
       ),
     ),
@@ -139,6 +163,7 @@ List<Widget> itemListOf(
           },
         ),
         new ExpansionTile(
+          initiallyExpanded: true,
           title: new Text("Aufgaben"),
           children: taskTiles,
         ),

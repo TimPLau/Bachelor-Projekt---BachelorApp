@@ -14,19 +14,25 @@ class ContentGuideScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     List<Content> content = this.content.subsections;
 
+
     return new Scaffold(
         drawer: NavigatorWidget(),
         //bottomNavigationBar: NavigatorWidget(),
         appBar: new AppBar(
           backgroundColor: Theme.of(context).bottomAppBarColor,
-          title: new Text(this.content.title == "INIT" ? "Bachelorarbeit Guide" : this.content.title),
+          title: new Text(this.content.title == "INIT"
+              ? "Bachelorarbeit Guide"
+              : this.content.title),
         ),
         body: new ListView.builder(
             itemCount: content.length,
             itemBuilder: (context, index) {
               if (content[index].type == "ButtonListWidget") {
                 return new ListTile(
-                    title: new Text(content[index].title),
+                    title: new Text(
+                      content[index].title,
+                      softWrap: true,
+                    ),
                     onTap: () {
                       Navigator.push(
                           context,
@@ -37,23 +43,33 @@ class ContentGuideScreen extends StatelessWidget {
               }
 
               if (content[index].type == "ExtensionPanelWidget") {
-                return new ExpansionTile(
-                  title: new Text(content[index].title),
-                  backgroundColor: Colors.white,
-                  children: <Widget>[
-                    new Container(
-                      padding: const EdgeInsets.all(20.0),
-                      child: new Row(
-                        children: <Widget>[
-                          new Text(
-                            content[index].description,
-                            textAlign: TextAlign.left,
-                            textDirection: TextDirection.ltr,
-                          )
-                        ],
+                return new Container(
+                  padding: EdgeInsets.only(top: 10.0, left: 15.0, right: 15.0),
+                  child: new Card(
+                    child: new ExpansionTile(
+                      title: new Text(
+                        content[index].title,
+                        softWrap: true,
                       ),
+                      backgroundColor: Colors.white,
+                      children: <Widget>[
+                        new Container(
+                          padding: const EdgeInsets.all(20.0),
+                          child: new Row(
+                            children: <Widget>[
+                              new Expanded(
+                                child: new Text(
+                                  content[index].description,
+                                  textAlign: TextAlign.left,
+                                  softWrap: true,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ],
                     ),
-                  ],
+                  ),
                 );
               }
             }));

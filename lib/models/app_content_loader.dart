@@ -13,7 +13,6 @@ class AppContentLoader {
     final response = await http.get(repositoryRequest);
 
     if (response.statusCode == 200) {
-      print(response.body);
       return parseFiles(response.body);
     } else {
       throw Exception('Failed to load data\nMax requests per hour: ' +
@@ -93,9 +92,11 @@ class JSONAppContentFile {
     response = await http.get(this.downloadUrl);
 
     if (response.statusCode == 200) {
+      print("BODY " + response.body);
       this.jsonFileContent = new JSONFileAppContent(response.body);
       return this.jsonFileContent;
     } else {
+      print("FAIL");
       throw Exception('Failed to load data\nMax requests per hour: ' +
           response.headers["x-ratelimit-limit"] +
           '\n' +

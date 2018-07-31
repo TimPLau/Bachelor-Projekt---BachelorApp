@@ -1,16 +1,15 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
+
 part of 'appstate.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-AppState _$AppStateFromJson(Map<String, dynamic> json) => new AppState(
-    informationToolContent: json['informationToolContent'] == null
-        ? null
-        : new Content.fromJson(
-            json['informationToolContent'] as Map<String, dynamic>),
+AppState _$AppStateFromJson(Map<String, dynamic> json) {
+  return new AppState(
+    informationToolContent: globalAppContent,
     currentMilestones: json['currentMilestones'] == null
         ? null
         : new Map<String, Milestone>.fromIterables(
@@ -28,7 +27,7 @@ AppState _$AppStateFromJson(Map<String, dynamic> json) => new AppState(
     achievedAchievements: json['achievedAchievements'] == null ? null : new Map<String, Map<String, Achievement>>.fromIterables((json['achievedAchievements'] as Map<String, dynamic>).keys, (json['achievedAchievements'] as Map).values.map((e) => e == null ? null : new Map<String, Achievement>.fromIterables((e as Map<String, dynamic>).keys, (e as Map).values.map((e) => e == null ? null : new Achievement.fromJson(e as Map<String, dynamic>))))),
     challenges: json['challenges'] == null ? null : new Map<String, Challenge>.fromIterables((json['challenges'] as Map<String, dynamic>).keys, (json['challenges'] as Map).values.map((e) => e == null ? null : new Challenge.fromJson(e as Map<String, dynamic>))),
     begin: json['begin'] == null ? null : DateTime.parse(json['begin'] as String),
-    end: json['end'] == null ? null : DateTime.parse(json['end'] as String));
+    end: json['end'] == null ? null : DateTime.parse(json['end'] as String));}
 
 abstract class _$AppStateSerializerMixin {
   Content get informationToolContent;

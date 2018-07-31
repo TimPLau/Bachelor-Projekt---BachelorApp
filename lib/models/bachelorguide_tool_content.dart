@@ -13,6 +13,7 @@ class InformationToolContentBuilder {
     Content init = new Content("", "INIT", "", []);
 
     for (dynamic jsonContentModule in json.decode(jsonFile)) {
+
       Content content = new Content(
         jsonContentModule["type"],
         jsonContentModule["title"],
@@ -20,7 +21,8 @@ class InformationToolContentBuilder {
         _loadInformation(jsonContentModule["subsections"]),
       );
 
-      init.subsections = [content];
+      print(content.title);
+      init.subsections.add(content);
     }
 
     this.rootContent = init;

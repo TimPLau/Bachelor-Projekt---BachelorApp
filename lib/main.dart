@@ -46,15 +46,18 @@ init() async {
 
   contentLoader = new AppContentLoader(
       "https://api.github.com/repos/TimPLau/BachelorAppRepository/contents/appContent/information-tool");
+
   await contentLoader.loadDataFromInternet();
-  informationToolContentBuilder
+
+  await informationToolContentBuilder
       .generateContent(await contentLoader.getFileContent("guide.json"));
+
+  globalAppContent = informationToolContentBuilder.rootContent;
 }
 
 main() async {
   await init();
-
-  runApp(BachelorApp());
+  await runApp(BachelorApp());
 }
 
 class BachelorApp extends StatelessWidget {
@@ -64,13 +67,14 @@ class BachelorApp extends StatelessWidget {
   BachelorApp() {
     persistor = new Persistor<AppState>(
       storage: new FlutterStorage("AppStateStorage"),
-      decoder: AppState.fromJsonDecoder,
+
+      decoder: AppState.fromJsonDecoder
     );
 
     store = new Store<AppState>(
       appReducer,
       initialState: new AppState(
-          informationToolContent:  informationToolContentBuilder.rootContent,
+          informationToolContent:  globalAppContent,
           currentMilestones:  new SplayTreeMap<String, Milestone>(),
           properties:  properties,
           achievedAchievements:  achievedAchievements,

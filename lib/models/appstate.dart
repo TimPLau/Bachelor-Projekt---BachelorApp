@@ -3,8 +3,10 @@ import 'package:json_annotation/json_annotation.dart';
 import 'package:project_bachelorapplication/models/achievement_tool.dart';
 import 'package:project_bachelorapplication/models/bachelorguide_tool_content.dart';
 import 'package:project_bachelorapplication/models/milestone_tool.dart';
+import 'package:project_bachelorapplication/main.dart';
 
 part 'appstate.g.dart';
+Content globalAppContent;
 
 @JsonSerializable()
 class AppState extends Object with _$AppStateSerializerMixin {
@@ -30,7 +32,7 @@ class AppState extends Object with _$AppStateSerializerMixin {
   AppState copyWith(
       {Content informationToolContent,
       Map<String, Milestone> currentMilestones,
-        Milestone selectedMilestone,
+      Milestone selectedMilestone,
       Map<String, Property> properties,
       Map<String, Map<String, Achievement>> achievedAchievements,
       Map<String, Challenge> challenges,
@@ -38,7 +40,7 @@ class AppState extends Object with _$AppStateSerializerMixin {
       DateTime end}) {
     return new AppState(
       informationToolContent:
-          informationToolContent ?? this.informationToolContent,
+          this.informationToolContent,
       currentMilestones: currentMilestones ?? this.currentMilestones,
       selectedMilestone: selectedMilestone ?? this.selectedMilestone,
       properties: properties ?? this.properties,
@@ -49,7 +51,9 @@ class AppState extends Object with _$AppStateSerializerMixin {
     );
   }
 
-  factory AppState.fromJson(dynamic json) => _$AppStateFromJson(json);
+  factory AppState.fromJson(dynamic json) {
+    return _$AppStateFromJson(json);
+  }
 
   static AppState fromJsonDecoder(dynamic json) => AppState.fromJson(json);
 }
