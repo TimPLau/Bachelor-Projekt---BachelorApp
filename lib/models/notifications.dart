@@ -6,6 +6,7 @@ import 'package:project_bachelorapplication/actions/achievement_tool_actions.dar
 import 'package:project_bachelorapplication/main.dart';
 import 'package:project_bachelorapplication/models/appstate.dart';
 
+
 Future onSelectNotification(String payload, BuildContext context) async {
   if (payload != null) {
     debugPrint('notification payload: ' + payload);
@@ -13,6 +14,8 @@ Future onSelectNotification(String payload, BuildContext context) async {
 
   Navigator.pushNamed(context, "/achievementOverview");
 }
+
+
 
 Future<dynamic> checkNotification(context) {
 
