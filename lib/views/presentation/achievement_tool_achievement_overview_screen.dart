@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:project_bachelorapplication/models/achievement_tool.dart';
+import 'package:project_bachelorapplication/views/presentation/achievement_tool_achievement_details_overview_screen.dart';
 import 'package:project_bachelorapplication/views/widgets/navigation_widget.dart';
 
 class AchievementOverviewScreen extends StatelessWidget {
-  final List<Achievement> achievements;
+  final Map<AchievementType, List<Achievement>> achievements;
 
   AchievementOverviewScreen(this.achievements);
 
@@ -17,15 +18,34 @@ class AchievementOverviewScreen extends StatelessWidget {
         title: new Text("Deine Achievements"),
       ),
       body: new ListView.builder(
-        itemCount: this.achievements.length,
-        itemBuilder: (context, index){
+        itemCount: this.achievements.keys.length,
+        itemBuilder: (context, index) {
           return new ListTile(
-            leading: ((this.achievements[index].completed) ? Icon(Icons.star, color: getAchievementTypeColor(this.achievements[index])) : Icon(Icons.star_border, color: getAchievementTypeColor(this.achievements[index]),)),
-            title: new Text(this.achievements[index].title, softWrap: true,),
-          );
+            title: new Text(getTitle(this.achievements.keys.toList()[index]),
+              softWrap: true,
+            ),
+              onTap: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) =>
+                            AchievementDetailsOverviewScreen(this.achievements.values.toList()[index])));
+              });
+
         },
       ),
     );
   }
-}
 
+  String getTitle(AchievementType type){
+
+      switch(type){
+        case AchievementType.prePhase: return "Vorbereitungsphase"; break;
+        case AchievementType.beginningPhase: return "Anfangsphase"; break;
+        case AchievementType.processingPhase: return "Bearbeitungsphase"; break;
+        case AchievementType.conclusionPhase: return "Abschlussphase"; break;
+        case AchievementType.special: return "App-Achievements"; break;
+        default: break;
+      }
+    }
+}

@@ -1,7 +1,6 @@
 import 'dart:collection';
 import 'package:flutter/material.dart';
 import 'package:project_bachelorapplication/achievement_tool_datas.dart';
-import 'package:project_bachelorapplication/challenge_tool_data.dart';
 import 'package:project_bachelorapplication/models/achievement_tool.dart';
 import 'package:project_bachelorapplication/models/app_content_loader.dart';
 import 'package:project_bachelorapplication/views/containers/achievement_tool_achievement_overview.dart';

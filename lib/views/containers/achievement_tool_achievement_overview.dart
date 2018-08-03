@@ -24,7 +24,7 @@ class AchievementOverview extends StatelessWidget {
       },
       builder: (BuildContext context, _ViewModel vm) {
         return vm.achievedAchievements.isEmpty ? AchievementOverviewScreen(
-            vm.activeAchievements) : AchievementOverlayScreen(
+            vm.categoryAchievements) : AchievementOverlayScreen(
             vm.achievedAchievements, vm.onRecognized);
       },
     );
@@ -32,12 +32,15 @@ class AchievementOverview extends StatelessWidget {
 }
 
 class _ViewModel {
-  List<Achievement> activeAchievements;
-  List<Achievement> achievedAchievements;
-  Function onRecognized;
+  final List<Achievement> activeAchievements;
+  final List<Achievement> achievedAchievements;
+  final Function onRecognized;
+  Map<AchievementType, List<Achievement>> categoryAchievements;
 
   _ViewModel(
-      {this.activeAchievements, this.achievedAchievements, this.onRecognized});
+      {this.activeAchievements, this.achievedAchievements, this.onRecognized}){
+   this.categoryAchievements = getAchievementCategories();
+  }
 
   factory _ViewModel.fromStore(Store<AppState> store) {
     return _ViewModel(
@@ -46,7 +49,30 @@ class _ViewModel {
         onRecognized: () {
             store.dispatch(new ClearAchievedAchievementsAction());
             checkNotification(context);
-        }
+        },
     );
+  }
+
+  Map<AchievementType, List<Achievement>> getAchievementCategories(){
+    Map<AchievementType, List<Achievement>> ret = {
+      AchievementType.prePhase : [],
+      AchievementType.beginningPhase : [],
+      AchievementType.processingPhase : [],
+      AchievementType.conclusionPhase : [],
+      AchievementType.special : [],
+    };
+
+    for(Achievement achievement in this.activeAchievements){
+      switch(achievement.type){
+        case AchievementType.prePhase: ret[AchievementType.prePhase].add(achievement); break;
+        case AchievementType.beginningPhase: ret[AchievementType.beginningPhase].add(achievement); break;
+        case AchievementType.processingPhase: ret[AchievementType.processingPhase].add(achievement); break;
+        case AchievementType.conclusionPhase: ret[AchievementType.conclusionPhase].add(achievement); break;
+        case AchievementType.special: ret[AchievementType.special].add(achievement); break;
+        default: break;
+      }
+    }
+
+    return ret;
   }
 }

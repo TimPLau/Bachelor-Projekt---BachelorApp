@@ -88,15 +88,16 @@ class Property extends Object with _$PropertySerializerMixin{
   factory Property.fromJson(Map<String, dynamic> json) => _$PropertyFromJson(json);
 }
 
-enum AchievementType { low, medium, high, special }
+enum AchievementType { prePhase , beginningPhase, processingPhase, conclusionPhase , special}
 
 Color getAchievementTypeColor(Achievement achievement){
   Color ret;
 
   switch(achievement.type){
-    case AchievementType.low: ret = Colors.yellow; break;
-    case AchievementType.medium: ret = Colors.orangeAccent; break;
-    case AchievementType.high: ret = Colors.red; break;
+    case AchievementType.prePhase: ret = Colors.white10; break;
+    case AchievementType.beginningPhase: ret = Colors.yellow; break;
+    case AchievementType.processingPhase: ret = Colors.orangeAccent; break;
+    case AchievementType.conclusionPhase: ret = Colors.red; break;
     case AchievementType.special: ret = Colors.blue; break;
     default: ret = Colors.white10;
   }

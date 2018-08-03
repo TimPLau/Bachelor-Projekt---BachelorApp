@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:project_bachelorapplication/models/achievement_tool.dart';
 import 'package:project_bachelorapplication/views/widgets/navigation_widget.dart';
 
-class AchievementOverviewScreen extends StatelessWidget {
-  final Map<AchievementType, List<Achievement>> achievements;
+class AchievementDetailsOverviewScreen extends StatelessWidget {
+  final List<Achievement> achievements;
 
-  AchievementOverviewScreen(this.achievements);
+  AchievementDetailsOverviewScreen(this.achievements);
 
   @override
   Widget build(BuildContext context) {
@@ -17,28 +17,31 @@ class AchievementOverviewScreen extends StatelessWidget {
         title: new Text("Deine Achievements"),
       ),
       body: new ListView.builder(
-        itemCount: this.achievements.keys.length,
+        itemCount: this.achievements.length,
         itemBuilder: (context, index) {
-          return new ListTile(
-            title: new Text(getTitle(this.achievements.keys.toList()[index]),
-              softWrap: true,
+          return new Container(
+            padding: EdgeInsets.only(left: 15.0, right: 15.0, top: 5.0),
+            child: new Card(
+              elevation: 5.0,
+              child: new ListTile(
+                leading: ((this.achievements[index].completed)
+                    ? Icon(Icons.star,
+                        color:
+                            getAchievementTypeColor(this.achievements[index]))
+                    : Icon(
+                        Icons.star_border,
+                        color:
+                            getAchievementTypeColor(this.achievements[index]),
+                      )),
+                title: new Text(
+                  this.achievements[index].title,
+                  softWrap: true,
+                ),
+              ),
             ),
-            onTap: ,
           );
         },
       ),
     );
   }
-
-  String getTitle(AchievementType type){
-
-      switch(type){
-        case AchievementType.prePhase: return "Vorbereitungsphase"; break;
-        case AchievementType.beginningPhase: return "Anfangsphase"; break;
-        case AchievementType.processingPhase: return "Bearbeitungsphase"; break;
-        case AchievementType.conclusionPhase: return "Abschlussphase"; break;
-        case AchievementType.special: return "App-Achievements"; break;
-        default: break;
-      }
-    }
 }

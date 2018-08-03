@@ -8,7 +8,6 @@ import 'dart:collection';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:project_bachelorapplication/achievement_tool_datas.dart';
 import 'package:project_bachelorapplication/actions/milestone_tool_actions.dart';
-import 'package:project_bachelorapplication/challenge_tool_data.dart';
 import 'package:project_bachelorapplication/actions/achievement_tool_actions.dart';
 
 import 'package:project_bachelorapplication/main.dart';
@@ -220,7 +219,7 @@ void main() {
           "Beginne deine Zweileitung Beschreibung");
 
       Property prop = new Property("Beginne deine Einleitung", 0, ACTIVE_IF_EQUALS_TO, 1);
-      Achievement achievement = new Achievement("Beginne deine Einleitung", AchievementType.low, [prop]);
+      Achievement achievement = new Achievement("Beginne deine Einleitung", AchievementType.beginningPhase, [prop]);
       Map<String, Achievement> achievements = {
         achievement.title : achievement
       };
