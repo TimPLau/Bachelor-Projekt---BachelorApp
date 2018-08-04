@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:project_bachelorapplication/models/milestone_tool.dart';
 import 'package:intl/intl.dart';
+import 'package:project_bachelorapplication/views/containers/milestone_tool_milestone_details.dart';
 
 class AddEditMilestoneScreen extends StatefulWidget {
   final Function(String, DateTime, String) addEditMilestone;
@@ -180,11 +181,13 @@ class AddEditMilestoneForm extends State<AddEditMilestoneScreen> {
       widget.addEditMilestone(_nameInputField.currentState.value, chosenDate,
           _descriptionInputField.currentState.value);
 
-      Navigator.pop(this.context);
-
       setState(() {
         chosenDate = widget.initialDate;
       });
+
+      Navigator.pop(this.context);
+      Navigator.pop(this.context);
+
     }
   }
 }

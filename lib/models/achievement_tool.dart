@@ -10,60 +10,41 @@ const String ACTIVE_IF_GREATER_THAN = ">";
 const String ACTIVE_IF_LESS_THAN = "<";
 const String ACTIVE_IF_EQUALS_TO = "==";
 
+@immutable
 @JsonSerializable()
 class Challenge extends Object with _$ChallengeSerializerMixin{
   final String title;
   final String description;
-  bool completed;
+  final bool completed;
 
   Challenge( this.title,  this.description, [this.completed = false]);
-
-  changeState() {
-    this.completed = (this.completed == false) ? true : false;
-  }
 
   factory Challenge.fromJson(Map<String, dynamic> json) => _$ChallengeFromJson(json);
 
 }
 
+@immutable
 @JsonSerializable()
 class Achievement extends Object with _$AchievementSerializerMixin{
-  String title;
-  bool completed;
-  AchievementType type;
-  List<Property> properties;
-
+  final String title;
+  final bool completed;
+  final AchievementType type;
+  final List<Property> properties;
 
   Achievement(this.title, this.type, this.properties, [this.completed = false]);
-
-  bool checkAchievement() {
-
-    if (this.completed == false) {
-      print("f");
-      for (Property property in properties) {
-        print(property.name);
-        print(property.isActive());
-        print(property.currentValue);
-        print(property.activationValue);
-        if (property.isActive() == false) return false;
-      }
-      this.completed = true;
-    }
-
-    return true;
-  }
 
   factory Achievement.fromJson(Map<String, dynamic> json) => _$AchievementFromJson(json);
 
 }
 
+@immutable
 @JsonSerializable()
 class Property extends Object with _$PropertySerializerMixin{
-  String name;
-  int currentValue;
-  String activationRule;
-  int activationValue;
-  int initialValue;
+  final String name;
+  final int currentValue;
+  final String activationRule;
+  final int activationValue;
+  final int initialValue;
 
   Property(
       this.name, this.initialValue, this.activationRule, this.activationValue, [this.currentValue = 0]){
@@ -78,7 +59,6 @@ class Property extends Object with _$PropertySerializerMixin{
         return currentValue < activationValue;
         break;
       case ACTIVE_IF_EQUALS_TO:
-        print(currentValue == activationValue);
         return currentValue == activationValue;
         break;
     }

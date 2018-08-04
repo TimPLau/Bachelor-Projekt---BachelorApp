@@ -7,17 +7,16 @@ import 'package:uuid/uuid.dart';
 part 'milestone_tool.g.dart';
 final Uuid idGenerator = new Uuid();
 
+@immutable
 @JsonSerializable()
 class Milestone extends Object with _$MilestoneSerializerMixin{
-  String id;
-  String title;
-  String description;
-  DateTime date;
-  Map<String, Task> tasks = new Map<String, Task>();
+  final String id;
+  final String title;
+  final String description;
+  final DateTime date;
+  final Map<String, Task> tasks;
 
-  Milestone(this.title, this.date, [this.description = ""]) {
-    this.id = date.toIso8601String();
-  }
+  Milestone(this.title, this.date, this.id, this.tasks, [this.description = ""]);
 
   Map<String, Task> getCompletedTasks() {
     Map<String, Task> ret = {};
@@ -39,29 +38,15 @@ class Milestone extends Object with _$MilestoneSerializerMixin{
     return ret;
   }
 
-  addTask(Task task) {
-    this.tasks[task.id] = task;
-  }
-
-  changeValues(String title, DateTime date, [String description]) {
-    this.title = title;
-    this.date = date;
-    this.description = description;
-  }
-
-  removeTask(Task subTask) {
-    this.tasks.remove(subTask.id);
-  }
-
-  Color getColorState() {
+  MilestoneState getMilestoneState() {
     if (this.tasks.isEmpty)
-      return Colors.grey;
+      return MilestoneState.empty;
     else if (this.tasks.isNotEmpty && this.getNotCompletedTasks().isEmpty)
-      return Colors.green;
+      return MilestoneState.allTasksCompleted;
     else if (this.tasks.isNotEmpty && this.date.isBefore(DateTime.now()))
-      return Colors.red;
+      return MilestoneState.outOfDateAndSomeTasksNotCompleted;
     else
-      return Colors.amber;
+      return MilestoneState.someTasksNotCompleted;
   }
 
   factory Milestone.fromJson(Map<String, dynamic> json) => _$MilestoneFromJson(json);
@@ -69,31 +54,25 @@ class Milestone extends Object with _$MilestoneSerializerMixin{
   //Map<String, dynamic>  toJson() => {'id' : id, 'title' : title, 'description' : description, 'date' : date, 'tasks' : tasks};
 }
 
+enum MilestoneState{
+  empty,
+  allTasksCompleted,
+  someTasksNotCompleted,
+  outOfDateAndSomeTasksNotCompleted
+}
+
+@immutable
 @JsonSerializable()
 class Task extends Object with _$TaskSerializerMixin{
-  String id;
-  String title;
-  TaskState taskState;
+  final String id;
+  final String title;
+  final TaskState taskState;
 
-  Task(this.title, this.taskState) {
-    this.id = idGenerator.v1();
-  }
-
-  changeValues(String title) {
-    this.title = title;
-  }
-
-  TaskState changeState() {
-    return (this.taskState == TaskState.completed)
-        ? this.taskState = TaskState.notCompleted
-        : this.taskState = TaskState.completed;
-  }
+  Task(this.title, this.taskState, this.id);
 
   bool isCompleted() {
     return (taskState == TaskState.completed) ? true : false;
   }
-
-  //Map<String, dynamic>  toJson() => {'id' : id, 'title' : title, 'taskState' : taskState};
 
   factory Task.fromJson(Map<String, dynamic> json) => _$TaskFromJson(json);
 }

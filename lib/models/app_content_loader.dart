@@ -27,7 +27,7 @@ class AppContentLoader {
 
     for (JSONAppContentFile file in informationToolFiles) {
       await file.getJsonContent();
-      saveDataOnDevice(file.jsonFileContent.content, file.name);
+      saveDataOnDevice(file.jsonFileContent, file.name);
     }
   }
 
@@ -75,7 +75,7 @@ class AppContentLoader {
 class JSONAppContentFile {
   final String name;
   final String downloadUrl;
-  JSONFileAppContent jsonFileContent;
+  String jsonFileContent;
 
   JSONAppContentFile({this.name, this.downloadUrl});
 
@@ -86,32 +86,19 @@ class JSONAppContentFile {
     );
   }
 
-  Future<JSONFileAppContent> getJsonContent() async {
+  Future<String> getJsonContent() async {
     http.Response response;
 
     response = await http.get(this.downloadUrl);
 
     if (response.statusCode == 200) {
-      print("BODY " + response.body);
-      this.jsonFileContent = new JSONFileAppContent(response.body);
-      return this.jsonFileContent;
+      return response.body;
     } else {
-      print("FAIL");
       throw Exception('Failed to load data\nMax requests per hour: ' +
           response.headers["x-ratelimit-limit"] +
           '\n' +
           '\nRequests left: ' +
           response.headers["x-ratelimit-remaining"]);
     }
-  }
-}
-
-class JSONFileAppContent {
-  final String _content;
-
-  JSONFileAppContent(this._content);
-
-  String get content {
-    return _content;
   }
 }

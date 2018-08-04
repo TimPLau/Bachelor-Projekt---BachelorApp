@@ -43,8 +43,9 @@ class _ViewModel {
     return _ViewModel(
       addMilestone: (String title, DateTime date, String description) {
         store.dispatch(
-            new AddMilestoneAction(new Milestone(title, date, description)));
-        checkNotification(context);
+            new AddMilestoneAction(title, description, date)
+        );
+        checkAchievementNotification(context);
       },
       currentMilestones: store.state.currentMilestones.values.toList(),
       context: context,

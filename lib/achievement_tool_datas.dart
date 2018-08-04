@@ -6,10 +6,10 @@ import 'package:project_bachelorapplication/models/achievement_tool.dart';
   Property allBeginner = new Property("Schließe alle Achievements der Kategorie ANFANGSPHASE ab", 0, ACTIVE_IF_EQUALS_TO, 1);
 
   Map<String, Achievement> achievements = {
-    "Du hast deine Einleitung begonnen": Achievement("Du hast deine Einleitung begonnen", AchievementType.beginningPhase, [einleitung]),
-    "Du hast deine Zweileitung begonnen": Achievement("Du hast deine Zweileitung begonnen", AchievementType.beginningPhase, [zweileitung]),
-    "Du hast alle Einleitungsachievements abgeschlossen": Achievement("Du hast alle Einleitungsachievements abgeschlossen", AchievementType.special, [einleitung, zweileitung]),
-    "Dein erster Meilenstein ist gesetzt": Achievement("Dein erster Meilenstein ist gesetzt", AchievementType.special, [firstMilestone]),
+    "Du hast deine Einleitung begonnen": Achievement("Du hast deine Einleitung begonnen", AchievementType.beginningPhase, [einleitung], false),
+    "Du hast deine Zweileitung begonnen": Achievement("Du hast deine Zweileitung begonnen", AchievementType.beginningPhase, [zweileitung],false),
+    "Du hast alle Einleitungsachievements abgeschlossen": Achievement("Du hast alle Einleitungsachievements abgeschlossen", AchievementType.special, [einleitung, zweileitung], false),
+    "Dein erster Meilenstein ist gesetzt": Achievement("Dein erster Meilenstein ist gesetzt", AchievementType.special, [firstMilestone], false),
   };
 
   Map<String, Property> properties = {

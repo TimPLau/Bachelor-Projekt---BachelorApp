@@ -1,9 +1,11 @@
 import 'package:project_bachelorapplication/models/milestone_tool.dart';
 
 class AddMilestoneAction {
-  Milestone milestone;
+  String title;
+  String description;
+  DateTime date;
 
-  AddMilestoneAction(this.milestone);
+  AddMilestoneAction(this.title, this.description, this.date);
 }
 
 class UpdateSelectedMilestone{
@@ -29,9 +31,9 @@ class EditMilestoneAction {
 
 class AddTaskAction {
   Milestone milestone;
-  Task task;
+  String taskTitle;
 
-  AddTaskAction(this.milestone, this.task);
+  AddTaskAction(this.milestone, this.taskTitle);
 }
 
 class RemoveTaskAction {

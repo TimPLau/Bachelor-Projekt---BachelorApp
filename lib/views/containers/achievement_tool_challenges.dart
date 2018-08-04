@@ -36,7 +36,7 @@ class _ViewModel {
       challenges: store.state.challenges.values.toList(),
       changeChallengeState: (Challenge challenge) {
         store.dispatch(new ChangeStateChallengeAction(challenge));
-        checkNotification(context);
+        checkAchievementNotification(context);
       },
     );
   }

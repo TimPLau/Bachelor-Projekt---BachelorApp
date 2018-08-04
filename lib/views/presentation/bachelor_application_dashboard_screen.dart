@@ -19,7 +19,7 @@ OverlayVisualizer ov;
 class DashboardScreen extends StatelessWidget {
   final Map<String, Milestone> milestones;
   final Milestone selectedMilestone;
-  final Function(Task, Milestone) onAdd;
+  final Function(String, Milestone) onAdd;
   final Function(Task, String, Milestone) onEdit;
   final Function(Task, Milestone) onChangeState;
   final Function(Task, Milestone) onRemoveTask;

@@ -22,7 +22,7 @@ class Dashboard extends StatelessWidget {
       },
       builder: (BuildContext context, _ViewModel vm) {
         flutterLocalNotificationsPlugin.onSelectNotification =
-            (s) => onSelectNotification(s, context);
+            (s) => onSelectAchievementNotification(s, context);
 
         if ((vm.beginDate == null) || (vm.endDate == null))
           return AddBeginEndDate();
@@ -82,7 +82,7 @@ class _ViewModel {
           store.dispatch(new RemoveMilestoneAction(activeMilestone)),
       onRemoveTask: (Task deleteTask, Milestone activeMilestone) =>
           store.dispatch(new RemoveTaskAction(activeMilestone, deleteTask)),
-      onAdd: (Task newTask, Milestone activeMilestone) =>
+      onAdd: (String newTask, Milestone activeMilestone) =>
           store.dispatch(new AddTaskAction(activeMilestone, newTask)),
       onEdit: (Task editTask, String newTitle, Milestone activeMilestone) =>
           store.dispatch(

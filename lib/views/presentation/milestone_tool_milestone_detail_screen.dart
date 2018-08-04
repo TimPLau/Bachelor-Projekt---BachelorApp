@@ -6,7 +6,7 @@ import 'package:intl/intl.dart';
 
 class MilestoneDetailScreen extends StatelessWidget {
   final Milestone milestone;
-  final Function(Task, Milestone) onAdd;
+  final Function(String, Milestone) onAdd;
   final Function(Task, String, Milestone) onEdit;
   final Function(Task, Milestone) onChangeState;
   final Function(Task, Milestone) onRemoveTask;
@@ -159,7 +159,7 @@ List<Widget> itemListOf(
               hintText: 'Aufgabentitel',
               labelText: 'Neue Aufgabe hinzufügen...'),
           onFieldSubmitted: (input) {
-            onAdd(new Task(input, TaskState.notCompleted), milestone);
+            onAdd(input, milestone);
           },
         ),
         new ExpansionTile(

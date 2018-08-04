@@ -32,12 +32,13 @@ void main() {
             end: null),
       );
 
+      DateTime t = DateTime(2018, 07, 27);
       Milestone newMilestone =
-          new Milestone("Milestone", DateTime(2018, 07, 27));
+          new Milestone("Milestone", t, t.toIso8601String(), {});
 
       expect(store.state.currentMilestones.isEmpty, true);
 
-      store.dispatch(new AddMilestoneAction(newMilestone));
+      store.dispatch(new AddMilestoneAction(newMilestone.title, newMilestone.description, newMilestone.date));
 
       expect(store.state.currentMilestones.containsKey(newMilestone.id), true);
       expect(store.state.currentMilestones[newMilestone.id].date,
@@ -59,12 +60,13 @@ void main() {
             end: null),
       );
 
+      DateTime t = DateTime(2018, 07, 27);
       Milestone newMilestone =
-          new Milestone("Milestone", DateTime(2018, 07, 27));
+      new Milestone("Milestone", t, t.toIso8601String(), {});
 
       expect(store.state.currentMilestones.isEmpty, true);
 
-      store.dispatch(new AddMilestoneAction(newMilestone));
+      store.dispatch(new AddMilestoneAction(newMilestone.title, newMilestone.description, newMilestone.date));
 
       expect(store.state.currentMilestones.isEmpty, false);
 
@@ -94,11 +96,12 @@ void main() {
             end: null),
       );
 
+      DateTime t = DateTime(2018, 07, 27);
       Milestone milestone =
-          new Milestone("Milestone 1", DateTime(2018, 07, 27));
+      new Milestone("Milestone", t, t.toIso8601String(), {});
 
       expect(store.state.currentMilestones.isEmpty, true);
-      store.dispatch(new AddMilestoneAction(milestone));
+      store.dispatch(new AddMilestoneAction(milestone.title, milestone.description, milestone.date));
 
       store.dispatch(new EditMilestoneAction(milestone, "Milestone 2",
           DateTime(2018, 08, 27), "Milestone 2 Description"));
@@ -107,18 +110,21 @@ void main() {
           store.state.currentMilestones
               .containsKey(DateTime(2018, 08, 27).toIso8601String()),
           true);
+
       expect(
           store
               .state
               .currentMilestones[DateTime(2018, 08, 27).toIso8601String()]
               .title,
           "Milestone 2");
+
       expect(
           store
               .state
               .currentMilestones[DateTime(2018, 08, 27).toIso8601String()]
               .description,
           "Milestone 2 Description");
+
       expect(store.state.currentMilestones.length, 1);
     });
 
@@ -135,19 +141,23 @@ void main() {
             end: null),
       );
 
+      DateTime t = DateTime(2018, 07, 27);
       Milestone milestone =
-          new Milestone("Milestone 1", DateTime(2018, 07, 27));
-      store.dispatch(new AddMilestoneAction(milestone));
+      new Milestone("Milestone", t, t.toIso8601String(), {});
+
+      store.dispatch(new AddMilestoneAction(milestone.title, milestone.description, milestone.date));
       expect(store.state.currentMilestones[milestone.id].tasks.length, 0);
 
-      Task task = new Task("Task 1", TaskState.notCompleted);
-      store.dispatch(new AddTaskAction(milestone, task));
+      String newTaskTitle = "Task 1";
+      store.dispatch(new AddTaskAction(milestone, newTaskTitle));
+
       expect(store.state.currentMilestones[milestone.id].tasks.length, 1);
-      expect(store.state.currentMilestones[milestone.id].tasks[task.id].title,
-          task.title);
-      expect(
-          store.state.currentMilestones[milestone.id].tasks[task.id].taskState,
-          task.taskState);
+
+      expect(store.state.currentMilestones[milestone.id].tasks.values.toList()[0].title,
+          newTaskTitle);
+
+      expect(store.state.currentMilestones[milestone.id].tasks.values.toList()[0].taskState,
+      TaskState.notCompleted);
     });
 
     test('Remove Task from Milestone on Store', () {
@@ -163,14 +173,18 @@ void main() {
             end: null),
       );
 
+      DateTime t = DateTime(2018, 07, 27);
       Milestone milestone =
-          new Milestone("Milestone 1", DateTime(2018, 07, 27));
-      store.dispatch(new AddMilestoneAction(milestone));
+      new Milestone("Milestone", t, t.toIso8601String(), {});
+
+      store.dispatch(new AddMilestoneAction(milestone.title, milestone.description, milestone.date));
       expect(store.state.currentMilestones[milestone.id].tasks.length, 0);
 
-      Task task = new Task("Task 1", TaskState.notCompleted);
-      store.dispatch(new AddTaskAction(milestone, task));
+      String newTaskTitle = "Task 1";
+      store.dispatch(new AddTaskAction(milestone, newTaskTitle));
       expect(store.state.currentMilestones[milestone.id].tasks.length, 1);
+
+      Task task = store.state.currentMilestones[milestone.id].tasks.values.toList()[0];
 
       store.dispatch(new RemoveTaskAction(milestone, task));
 
@@ -190,14 +204,18 @@ void main() {
             end: null),
       );
 
+      DateTime t = DateTime(2018, 07, 27);
       Milestone milestone =
-          new Milestone("Milestone 1", DateTime(2018, 07, 27));
-      store.dispatch(new AddMilestoneAction(milestone));
+      new Milestone("Milestone", t, t.toIso8601String(), {});
+
+      store.dispatch(new AddMilestoneAction(milestone.title, milestone.description, milestone.date));
       expect(store.state.currentMilestones[milestone.id].tasks.length, 0);
 
-      Task task = new Task("Task 1", TaskState.notCompleted);
-      store.dispatch(new AddTaskAction(milestone, task));
+      String newTaskTitle = "Task 1";
+      store.dispatch(new AddTaskAction(milestone, newTaskTitle));
       expect(store.state.currentMilestones[milestone.id].tasks.length, 1);
+
+      Task task = store.state.currentMilestones[milestone.id].tasks.values.toList()[0];
 
       store.dispatch(new EditTaskAction(milestone, task, "New Task 1 Title"));
 

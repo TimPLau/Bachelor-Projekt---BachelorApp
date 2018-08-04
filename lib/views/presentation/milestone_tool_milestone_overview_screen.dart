@@ -39,13 +39,13 @@ class MilestoneOverviewScreen extends StatelessWidget {
               subtitle: new Text(
                 "${milestones[index].date.day}.${milestones[index].date.month}.${milestones[index].date.year}",
                 softWrap: true,
-                style: TextStyle(color: this.milestones[index].getColorState()),
+                style: TextStyle(color: getStateColor(this.milestones[index].getMilestoneState())),
               ),
               trailing: new Text(this.milestones[index].tasks.length > 0
                   ? "${this.milestones[index]
                   .getCompletedTasks()
                   .length}/${this.milestones[index].tasks.length}"
-                  : "keine Aufgaben", style: TextStyle(color: this.milestones[index].getColorState()),),
+                  : "keine Aufgaben", style: TextStyle(color: getStateColor(this.milestones[index].getMilestoneState())),),
               leading: Container(
                 child: Icon(
                   Icons.local_play,
@@ -63,5 +63,14 @@ class MilestoneOverviewScreen extends StatelessWidget {
         ),
       ),
     );
+  }
+}
+
+Color getStateColor(MilestoneState state){
+  switch(state){
+    case MilestoneState.empty: return Colors.grey; break;
+    case MilestoneState.someTasksNotCompleted: return Colors.amber; break;
+    case MilestoneState.allTasksCompleted: return Colors.green; break;
+    case MilestoneState.outOfDateAndSomeTasksNotCompleted: return Colors.red; break;
   }
 }

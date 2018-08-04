@@ -48,7 +48,7 @@ class _ViewModel {
         achievedAchievements: store.state.achievedAchievements["NotRecognized"].values.toList(),
         onRecognized: () {
             store.dispatch(new ClearAchievedAchievementsAction());
-            checkNotification(context);
+            checkAchievementNotification(context);
         },
     );
   }

@@ -1,12 +1,9 @@
 import 'package:project_bachelorapplication/actions/achievement_tool_actions.dart';
 import 'package:project_bachelorapplication/actions/milestone_tool_actions.dart';
-import 'package:project_bachelorapplication/main.dart';
 import 'package:project_bachelorapplication/models/achievement_tool.dart';
 import 'package:project_bachelorapplication/achievement_tool_datas.dart';
 
 Map<String, Property> updateProperties(Map<String, Property> current, action) {
-
-
   if (action is AddMilestoneAction) {
     current = setPropertyValue(current, firstMilestone.name, 1);
   }
@@ -15,7 +12,6 @@ Map<String, Property> updateProperties(Map<String, Property> current, action) {
     current = setPropertyValue(current, action.challenge.title, 1);
   }
 
-
   return current;
 }
 
@@ -23,6 +19,7 @@ Map<String, Map<String, Achievement>> updateAchievedAchievements(
     Map<String, Map<String, Achievement>> current,
     Map<String, Property> properties,
     action) {
+
   if (action is ClearAchievedAchievementsAction) {
     current["Recognized"].addAll(current["NotRecognized"]);
     current["NotRecognized"] = {};
@@ -35,73 +32,76 @@ Map<String, Map<String, Achievement>> updateAchievedAchievements(
   }
 
   if (action is CheckForAchieveAction) {
-    Map<String, Achievement> newAchievements =
-        setAchievedAchievements(properties, current["AllAchievements"]);
-    current["Achieved"].addAll(newAchievements);
+    return setAchievedAchievements(properties, current);
+  }
 
-    for (Achievement achievement in newAchievements.values.toList()) {
-      if (!current["NotRecognized"].containsKey(achievement.title) &&
-          !current["Recognized"].containsKey(achievement.title)) {
-        current["NotRecognized"][achievement.title] = achievement;
+  return current;
+}
+
+Map<String, Map<String, Achievement>> setAchievedAchievements(
+    Map<String, Property> properties,
+    Map<String, Map<String, Achievement>> achievements) {
+
+  for (Achievement achievement in achievements["AllAchievements"].values.toList()) {
+
+    if (achievement.completed == false) {
+
+      if (checkAchievement(achievement, properties) == true) {
+        Achievement newAchievement = new Achievement(achievement.title, achievement.type, achievement.properties, true);
+
+        achievements["AllAchievements"][achievement.title] = newAchievement;
+        achievements["Achieved"][achievement.title] = newAchievement;
+
+        if (!achievements["NotRecognized"].containsKey(newAchievement.title) &&
+            !achievements["Recognized"].containsKey(newAchievement.title)) {
+            achievements["NotRecognized"][newAchievement.title] = newAchievement;
+        }
+
       }
     }
 
-    return current;
   }
-  return current;
+  return achievements;
+}
+
+bool checkAchievement(Achievement achievement, Map<String, Property> properties) {
+  for (Property property in achievement.properties) {
+
+    if (properties[property.name].isActive() == false) return false;
+
+  }
+
+  return true;
 }
 
 Map<String, Property> setPropertyValue(
     Map<String, Property> properties, String name, int newValue) {
   Map<String, Property> ret = properties;
-  Property property = ret[name];
 
-  switch (property.activationRule) {
+  Property oldProperty = properties[name];
+
+  switch (properties[name].activationRule) {
     case ACTIVE_IF_GREATER_THAN:
-      property.currentValue =
-          (newValue > property.currentValue) ? newValue : property.currentValue;
+      properties[name] = (newValue > oldProperty.currentValue)
+          ? new Property(oldProperty.name, oldProperty.initialValue,
+              oldProperty.activationRule, oldProperty.activationValue, newValue)
+          : oldProperty;
       break;
     case ACTIVE_IF_LESS_THAN:
-      property.currentValue =
-          (newValue < property.currentValue) ? newValue : property.currentValue;
+      properties[name] = (newValue < oldProperty.currentValue)
+          ? new Property(oldProperty.name, oldProperty.initialValue,
+              oldProperty.activationRule, oldProperty.activationValue, newValue)
+          : oldProperty;
       break;
     case ACTIVE_IF_EQUALS_TO:
-      property.currentValue = newValue;
+      properties[name] = new Property(
+          oldProperty.name,
+          oldProperty.initialValue,
+          oldProperty.activationRule,
+          oldProperty.activationValue,
+          newValue);
       break;
   }
 
   return ret;
-}
-
-Map<String, Achievement> setAchievedAchievements(
-    Map<String, Property> properties,
-    Map<String, Achievement> activeAchievements) {
-  Map<String, Achievement> ret = new Map<String, Achievement>();
-
-  for (Achievement achievement in activeAchievements.values.toList()) {
-    if (achievement.completed == false) {
-
-      List<Property> achievementsProperties = [];
-
-      //TODO Ändern der Properties auf String id's
-      for (Property p in achievement.properties) {
-        achievementsProperties.add(properties[p.name]);
-      }
-
-      if (checkAchievement(achievementsProperties) == true) {
-        achievement.completed = true;
-        ret[achievement.title] = achievement;
-      }
-    }
-  }
-
-  return ret;
-}
-
-bool checkAchievement(List<Property> properties) {
-  for (Property property in properties) {
-    if (property.isActive() == false) return false;
-  }
-
-  return true;
 }
