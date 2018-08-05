@@ -243,10 +243,10 @@ void main() {
       };
 
       Map<String, Map<String, Achievement>> achievementState = {
-        "Recognized": {},
-        "NotRecognized": {},
-        "Achieved": {},
-        "AllAchievements": achievements,
+        RECOGNIZED: {},
+        NOT_RECOGNIZED: {},
+        ACHIEVED: {},
+        ALL_ACHIEVEMENTS: achievements,
       };
 
       Map<String, Challenge> challenges = {

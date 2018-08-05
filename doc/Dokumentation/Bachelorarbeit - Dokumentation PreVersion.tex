@@ -17,6 +17,31 @@
 \usepackage{threeparttable}
 \usepackage{float}
 \usepackage{multirow}
+\usepackage{listings}
+\usepackage{color}
+
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+\lstset{frame=tb,
+  language=Java,
+  aboveskip=3mm,
+  belowskip=3mm,
+  showstringspaces=false,
+  columns=flexible,
+  basicstyle={\small\ttfamily},
+  numbers=left,
+  numberstyle=\tiny\color{gray},
+  keywordstyle=\color{blue},
+  commentstyle=\color{dkgreen},
+  stringstyle=\color{mauve},
+  escapeinside={(*@}{@*)},
+  breaklines=true,
+  breakatwhitespace=true,
+  tabsize=3
+}
+
 \usepackage{pdflscape}
 %\usepackage{lscape}
 \setlength{\parindent}{0em} 
@@ -35,6 +60,7 @@
 \tableofcontents
 \listoftables
 \listoffigures
+\lstlistoflistings
 
 \chapter{Einleitung}
 Für Studierende im letzten Semester eines Bachelorstudiengangs, umfasst die wesentliche Prüfungsleistung das Verfassen einer Bachelorarbeit.
@@ -57,8 +83,8 @@ Hierbei soll es nicht darum gehen, den Studierenden die eigentliche Arbeit abzun
 Mit einem solchen Ansatz soll es Studierenden ermöglicht werden, ihr gelerntes Wissen durch Fokussierung bestimmter Aufgaben und Zusammenhänge im Rahmen ihres eigenen Bachelorprojekts auf die Realität zu übertragen und somit einen motivierenden, sowie gleichermaßen fordernden Rahmen zu schaffen, um ihr Bachelorprojekt erfolgreich abzuschließen.
 
 \section{Aufgabenbeschreibung}
-Im Rahmen dieser Bachelorarbeit soll hierfür eine mobile Applikation entwickelt werden, die den Studierenden während der Dauer der Bachelorarbeit kontinuierlich \qquad begleitet \qquad. Dabei sollen Gamificationansätze realisiert werden, welche motivierend im bei der Bearbeitung und dem Vorgehen der eigenen Bachelorarbeit wirken sollen. Dies soll beispielhaft für den Studiengang Informatik/Softwareentwicklung erfolgen. Eine Erweiterbarkeit für andere Studiengänge ist hierbei jedoch konzeptionell vorzusehen
-Primäre Funktionen der Software ist Studierenden bei den folgenden Aufgaben begleitend zu unterstützen und fortwährend zu motivieren \qquad am Ball zu bleiben \qquad:
+Im Rahmen dieser Bachelorarbeit soll hierfür eine mobile Applikation entwickelt werden, die den Studierenden während der Dauer der Bachelorarbeit kontinuierlich  "begleitet". Dabei sollen Gamificationansätze realisiert werden, welche motivierend im bei der Bearbeitung und dem Vorgehen der eigenen Bachelorarbeit wirken sollen. Dies soll beispielhaft für den Studiengang Informatik/Softwareentwicklung erfolgen. Eine Erweiterbarkeit für andere Studiengänge ist hierbei jedoch konzeptionell vorzusehen
+Primäre Funktionen der Software ist Studierenden bei den folgenden Aufgaben begleitend zu unterstützen und fortwährend zu motivieren "am Ball zu bleiben":
 \begin{itemize}
 \item Brainstorming (zur Unterstützung der Ideenfindung für Bachelorarbeiten)
 \item Recherche und Literaturverwaltung
@@ -989,7 +1015,7 @@ Das Problem des mangelnden Zeitmanagements äußert sich unter anderem auch dari
 &  
 &  
 &  
-& \ding{108} 
+& \ding{109} 
 \\ \midrule
 	
 \textbf{\ref{anf:persoenlicheThemenvorschlaege}}
@@ -1064,12 +1090,11 @@ Studierende die zur Überplanung neigen, würden diese auch ohne Applikation dur
 
 \section{Architekturübersicht}
 \par Aufgrund der Vorzüge einer konsequenten zentralen Verwaltung des Zustands der Applikation, welche in diesem Rahmen auch mit einer komfortablen Wartbarkeit und den strikt getrennten und auf diese Weise auch eindeutig nachverfolgbaren Datenflüssen und Operationen einhergeht, wurde eine Architektur konstruiert, welche sich an dem Redux-Architekturmuster orientiert (siehe TODO GRUNDLAGEN). 
-\par Die folgende Grafik soll in vereinfachter Form verdeutlichen, wie die verschiedenen Komponenten der gewählten Architektur hinsichtlich des Aufbaus und des Datenflusses zueinander in Beziehung stehen. Die detaillierte Beschreibung der einzelnen Komponenten folgt in Kapitel (siehe TODO).
-TODO GRAFIK
+\par Die folgende Grafik soll in vereinfachter Form verdeutlichen, wie die verschiedenen Komponenten der gewählten Architektur hinsichtlich des Aufbaus und des Datenflusses zueinander in Beziehung stehen. Die detaillierte Beschreibung der einzelnen Komponenten folgt in Kapitel \ref{komponentenDetails}.
 
 \par \bigskip \textbf{Model}
 \par Die Model Komponenten stellen den aktuellen internen Zustand des Systems dar und enthalten somit in erster Linie die hierfür verwendeten Objekt-Klassen.
-\par Die für die gewählte Architektur durch ihre Wichtigkeit hervorzuhebende Klasse State, ist die zentrale Verwaltungsklasse für den gespeicherten Status der Applikation und trägt alle relevanten Informationen in sich, welche den aktuellen Zustand des Systems abbilden. Der Status selbst dient also lediglich als zentrales Datenhalterelement in der gewählten Architektur.
+\par Die für die gewählte Architektur durch ihre Wichtigkeit hervorzuhebende Klasse AppState, ist die zentrale Verwaltungsklasse für den gespeicherten Status der Applikation und trägt alle relevanten Informationen in sich, welche den aktuellen Zustand des Systems abbilden. Die Klasse AppState selbst dient also lediglich als zentrales Element zur Datenhaltung in der gewählten Architektur.
 
 \par \bigskip \textbf{Action}
 \par Eine Action Komponente beinhaltet Informationen über die jeweilige auszuführende Operation und dient somit als Identifikationsmittel und Informationspaket, welche von der Middleware und/oder den Reducer Komponenten aufgegriffen und verarbeitet werden.
@@ -1084,140 +1109,398 @@ TODO GRAFIK
 \par Die Presentation Komponenten sind alleinig für die Visualisierung der gegebenen Informationen sowie für die Entgegennahme der Benutzereingaben zuständig.
 
 \par \bigskip \textbf{Middleware}
-\par Die Middleware verarbeitet und/oder manipuliert die in den Actions übermittelten Informationen bevor diese zu den Reducer Komponenten gelangen. Weiterhin können auch in der Middleware selbst Actions ausgelöst werden Siehe (TODO IMPLEMENTIERUNG ACHIEVEMENTS). 
+\par Die Middleware verarbeitet und/oder manipuliert die in den Actions übermittelten Informationen bevor diese zu den Reducer Komponenten gelangen. Weiterhin können auch in der Middleware selbst Actions ausgelöst werden wie im späteren Verlauf in Kapitel \ref{sec:middleware} nachzuvollziehen ist. 
 
+\newpage
 \section{Detaillierte Beschreibung der Model Komponenten}
+\label{sec:komponentenDetails}
 \par Die Model Komponenten stellen den aktuellen internen Zustand des Systems dar und enthalten somit in erster Linie die verwendeten Objekt-Klassen.
-Die folgenden Klassen sind Teil der Model Komponente:
+\par \medskip Die nun folgenden Unterkapitel beschreiben die Klassen, welche Teil der  Model Komponente sind.
+
+\subsection{Milestone-Klasse}
+\par Ein Meilenstein besitzt die folgenden Attribute und Methoden (siehe Abbildung \ref{img:ClassMilestoneAndTask}):
+\begin{itemize}
+\item \par Jeder Meilenstein besitzt eine ID (id), welche immer auf dem jeweils festgelegten Datum des Meilensteins basiert.
+\item \par Der eigentliche Titel (title), beschreibt dem von dem Benutzer gegebenen Namen des Meilensteins und dient als Identifikations- und Anzeigemittel für den Benutzer
+\item \par In dem Datenfeld description befindet sich die von dem Benutzer eingetragene Beschreibung des Meilensteins.
+\item \par Jeder Meilenstein muss ein Ablaufdatum erhalten, welches den Tag darstellt, an dem der Meilenstein liegt.
+\item \par Meilensteine besitzen von dem Benutzer hinzugefügte Unteraufgaben, welche in dem Datenfeld tasks liegen.
+\item \par Weiterhin ist durch die Methoden getCompletedTasks() und getNotCompletedTasks() die Möglichkeit gegeben abgeschlossene und noch offene Unteraufgaben der Meilensteine herauszufiltern.
+\item \par Darüber Hinaus bietet sich durch die Methode getMilestoneState() die Möglichkeit den aktuellen Status des Meilensteins zu bestimmen, welcher auf abgeschlossene Unteraufgaben, noch offene Unteraufgaben sowie der Relation zwischen dem aktuellen Zeitpunkt und dem definierten Ablaufzeitpunkt basiert. Für diesen Zweck wurde weiterhin die Enumeration MilestoneState erstellt, welche die vier Zustände Empty, AllTasksCompleted, SomeTasksNotCompleted und outOffDateAndSomeTasksNotCompleted darstellt.
+\end{itemize}
+
+
+\subsection{Task-Klasse}
+\par Ein Achievement besitzt die folgenden Attribute und Methoden(siehe Abbildung \ref{img:ClassMilestoneAndTask})
+
+\begin{itemize}
+\item Jeder Task erhält eine ID (id) als Identifikationsmöglichkeit
+\item Der Titel (title) eines Tasks stellt die von dem Nutzer erstellte inhaltlich zu lösende Aufgabe dar.
+\item Ein Task kann verschiedene Zustände Completed und NotCompleted annehmen, welche durch eine Enumeration dargestellt werden. Es wurde eine Enumeration einem booleschen Wert bevorzugt, da weitere Zustände wie zum Beispiel das Favorisieren von Unteraufgaben bei Bedarf hinzugefügt werden könnten.
+\end{itemize}
+
+\newpage
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\textwidth, keepaspectratio]{Bilder/ClassMilestoneAndTask.png}
+	\caption{Milestone Klasse und Task Klasse}
+	\label{img:ClassMilestoneAndTask}
+\end{figure}
 
 \subsection{Achievement-Klasse}
 \par Ein Achievement besitzt die folgenden Attribute:
-\par (TODO LISTING)
-\par Der Titel (title) des Achievements ist der Teil, welcher dem Nutzer als Identifikationsmittel des jeweiligen Achievements angezeigt in wird. 
-\par Die Information ob ein Achievement erreicht wurde, wird durch den boolschen Wert des Attributs completed dargestellt.
-\par Der Typ (type), welcher durch ein Enum verdeutlicht wird, stellt die Art des Achievements dar, welcher für den Nutzer vor allem durch eine spezielle Visualisierung, durch zum Beispiel ein Badge kenntlich gemacht werden soll (siehe TODO Konzept). 
-\par Im Rahmen der Prototyp Entwicklung wurde diese Visualisierungsmöglichkeit jedoch aus Zeitgründen auf die einfache Unterscheidung von unterschiedlich gefärbten Sternsymbolen reduziert, welche sich jedoch durch einfache Anpassungen der Oberfläche auch durch andere grafische Elemente austauschen lassen.
-\par Weiterhin beinhaltet ein Achievement bestimmte Eigenschaften (properties), welche erfüllt werden müssen, damit das Achievement als erreicht bezeichnet werden kann. Ein Achievement wird also nur erreicht, wenn alle seine Properties als erfüllt gelten. TODO (WEIL NUR STING ID NÖTIG)
-\par Die Eigenschaften (properties) werden im Rahmen des flach ausgerichteten Key-Value Stores des States nicht als Objektreferenzen, sondern als IDs in textueller Form gespeichert und identifiziert.
 
+\begin{itemize}
+\item \par Der Titel des Achievements ist der Teil, welcher dem Nutzer als Identifikationsmittel des jeweiligen Achievements angezeigt in wird. 
+\item \par Die Information ob ein Achievement erreicht wurde, wird durch den Wert des Attributs completed dargestellt.
+
+\item \par Weiterhin beinhaltet ein Achievement bestimmte Eigenschaften (siehe Kapitel \ref{sub:propertyclass}), welche erfüllt werden müssen, damit das Achievement als erreicht bezeichnet werden kann. Ein Achievement wird also nur erreicht, wenn alle seine Properties als erfüllt gelten. 
+\par Die Eigenschaften  werden im Rahmen des in der Regel flach ausgerichteten Key-Value Stores des AppStates nicht als Objektreferenzen, sondern als IDs in textueller Form in dem Datenfeld propertiyIDs gespeichert und auf diese Weise im späteren Verlauf identifiziert.
+\item \par Der Typ (type), welcher durch eine Enumeration verdeutlicht wird, stellt die Art des Achievements dar.
+\end{itemize}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.5\textwidth, keepaspectratio]{Bilder/ClassAchievement.png}
+	\caption{Achievement Klasse}
+	\label{img:achievementClass}
+\end{figure}
+
+\newpage
 \subsection{Property-Klasse}
-\par Die bereits angesprochene Property-Klasse enthält die folgenden Attribute:
-\par TODO
-\par Der Name (name) eines Property-Instanz stellt die Bezeichnung dar, welche dem Nutzer als Identifikationsmöglichkeit und im Rahmen der Applikation als Instruktion angezeigt werden kann., weshalb diese Bezeichnung wohlüberlegt gewählt werden sollte. 
-\par Der Initialwert (initialValue) beschreibt wie der Name bereits impliziert den Startwert, welcher bei Initialisieren des Objektes angenommen wird.
-\par Ein aktueller Wert (currentValue) stellt den aktuellen Fortschritt der jeweiligen Eigenschaft, welche es zu erfüllen gilt dar. 
-\par Das Datenfeld activationValue stellt den Zielwert dar, welcher als zu erfüllen gilt.
-\par Die genannten Felder initialValue, currentValue und activationValue werden durch eine definierte Regel (activiationRule) in Beziehung zueinander gesetzt. Diese Regel kann verschieden ausgeprägt sein um dem Ersteller von Achievements sowie deren Kriterien zur Erfüllung eine gewisse Freiheit zu ermöglichen. Im Rahmen des Projektes wurden drei verschiedene Regeln in Form von konstanten Variablen des Datentyps String aufgestellt:
-\par TODO LISTING
-\par Diese Regeln werden als Werkzeug benutzt, um die Semantik der zu erfüllenden Eigenschaften auf die logische Ebene zu übertragen.
-Beispielsweise kann somit überprüft werden, ob der Benutzer bereits drei Meilensteine erstellt hat.
-\par TODO BEISPIEL LISTING
+\label{sub:propertyclass}
+\par \medskip Die Klasse Property enthält die folgenden Attribute und Funktionen:
 
+\begin{itemize}
+\item \par Der Name (name) eines Property-Instanz stellt die Bezeichnung dar, welche dem Nutzer als Identifikationsmöglichkeit und im Rahmen der Applikation als Instruktion angezeigt werden kann., weshalb diese Bezeichnung wohlüberlegt gewählt werden sollte. 
+\item \par Der Initialwert (initialValue) beschreibt wie der Name bereits impliziert den Startwert, welcher bei Initialisieren des Objektes angenommen wird.
+\item \par Ein aktueller Wert (currentValue) stellt den aktuellen Fortschritt der jeweiligen Eigenschaft, welche es zu erfüllen gilt dar. 
+\item \par Das Datenfeld activationValue stellt den Zielwert dar, welcher als zu erfüllen gilt.
+\item \par Die genannten Felder initialValue, currentValue und activationValue werden durch eine definierte Regel (activiationRule) in Beziehung zueinander gesetzt. Diese Regel kann verschieden ausgeprägt sein um dem Ersteller von Achievements sowie deren Kriterien zur Erfüllung eine gewisse Freiheit zu ermöglichen. Im Rahmen des Projektes wurden drei verschiedene Regeln in Form von konstanten Variablen des Datentyps String aufgestellt, welche die Regeln \grqq <\grqq, \grqq >\grqq und \grqq ==\grqq enthalten. 
+\item \par Diese Regeln werden als Werkzeug benutzt, um die Semantik der zu erfüllenden Eigenschaften auf die logische Ebene zu übertragen.
+Beispielsweise kann somit in der Methode isActive() überprüft werden, ob der Benutzer bereits drei Meilensteine erstellt hat, also die jeweilige Eigenschaft erfüllt wurde.
+\end{itemize}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.4\textwidth, keepaspectratio]{Bilder/ClassProperty.png}
+	\caption{Property Klasse}
+	\label{img:propertyClass}
+\end{figure}
+
+\newpage
 \subsection{AppContentLoader-Klasse}
 \par Die ContentLoader Klasse stellt die Schnittstelle zum gewählten Git-Repository dar und trägt in diesem Umfang die Aufgabe, die in dem Repository Ordner angelegten JSON-Dateien, welche einen Teil des Inhalts der Applikation darstellen, durch Http-Requests  einzulesen und dem System zur weiteren Verarbeitung zur Verfügung zu stellen. Dies wird umgesetzt, indem diese eingelesenen Dateien in lokaler Form auf dem Endgerät gespeichert werden.
-\par Die Klasse besitzt lediglich ein Datenfeld (httpRequest), welches die Http-Anfrage beinhaltet, auf welcher die auszuführenden Operationen der Klasseninstanz beruhen.
+\par Die Klasse besitzt lediglich ein Datenfeld (String httpRequest), welches die Http-Anfrage beinhaltet, auf welcher die auszuführenden Operationen der Klasseninstanz beruhen.
 
 \subsection{JSONAppContentFile-Klasse}
 \par Eine Instanz dieser Klasse, welche von durch eine Objektinstanz der Klasse ContentLoader erzeugt wird, stellt eine aus dem Repository eingelesene JSON-Datei dar und enthält die folgenden Attribute:
 TODO LISTING
-\par Der Name (name) der im Repository vorliegenden JSON-Datei wird auch weiterhin als Dateiname in dem lokalen Speicher des Endgeräts verwendet.
-\par Die durch den ContentBuilder ermittelte jeweilige Download Adresse (downloadUrl) der verschiedenen im Repository liegenden Dateien, dient zum Herunterladen des jeweiligen Inhaltes der JSON Dateien.
-\par Der jeweilige Inhalt der Datei wird durch das Datenfeld jsonFileContent repräsentiert, welches durch die Methode Future<String> getJsonContent() durch Ausführung eines Http-Requests initialisiert wird.
-\par InformationToolContentBuilder-Klasse
-\par Die Hilfsklasse InformationToolContentBuilder dient als Werkzeug, zur Generierung des Inhaltes der „Guide“ Sektion der Applikation siehe (TODO KONZEPT). Die Content-Objekte werden durch die jeweilige JSON-Datei, welche zuvor aus dem Git-Repository ausgelesen und gespeichert wurde, in rekursiver Form generiert. Jedes Content Objekt kann mehrere Content Objekte beinhalten, welche in diesem Rahmen als subsections bezeichnet werden. Dies geschieht so lange, bis ein Content-Objekt keine subsections mehr besitzt. Jedes dieser \par Content-Objekte enthält weiterhin ein Titel (title) sowie eine Beschreibung (description), welche dem Nutzer im Rahmen der „Guide“ Funktion dargestellt werden (siehe Kapitel TODO PRESENTATIOON).
+\begin{itemize}
+\item \par Der Name (name) der im Repository vorliegenden JSON-Datei wird auch weiterhin als Dateiname in dem lokalen Speicher des Endgeräts verwendet.
+\item \par Die durch den ContentBuilder ermittelte jeweilige Download Adresse (downloadUrl) der verschiedenen im Repository liegenden Dateien, dient zum Herunterladen des jeweiligen Inhaltes der JSON Dateien.
+\item \par Der jeweilige Inhalt der Datei wird durch das Datenfeld jsonFileContent repräsentiert, welches durch die Methode Future<String> getJsonContent() durch Ausführung eines Http-Requests initialisiert wird.
 
+\end{itemize}
+
+\subsection{InformationToolContentBuilder-Klasse}
+\par Die Hilfsklasse InformationToolContentBuilder dient als Werkzeug, zur Generierung des Inhaltes der \grqq Guide\grqq Sektion der Applikation. Die Content-Objekte werden durch die jeweilige JSON-Datei, welche zuvor aus dem Git-Repository ausgelesen und gespeichert wurde, in rekursiver Form generiert. Jedes Content Objekt kann mehrere Content Objekte beinhalten, welche in diesem Rahmen als subsections bezeichnet werden. Dies geschieht so lange, bis ein Content-Objekt keine subsections mehr besitzt. Jedes dieser Content-Objekte enthält weiterhin ein Titel (title) sowie eine Beschreibung (description), welche dem Nutzer im Rahmen der \grqq Guide\grqq Funktion dargestellt werden.
+
+\newpage
 \subsection{Content-Klasse}
-\par Eine Objektinstanz der Content Klasse stellt den Inhalt der „Guide“ Funktion dar und enthält die folgenden Attribute:
-\par TODO ATTRIBUTE
-\par Der Titel (title) des Content Objekts ist gleichzusetzen mit einer Überschrift für den jeweiligen Inhalt, welcher durch die Beschreibung (description) ausgedrückt wird.
-\par Der Typ (type) enthält Informationen darüber, welche Art von Darstellung innerhalb des „Guide“ - Tools für die Benutzeroberfläche verwendet werden soll. Dies bietet den Vorteil, dass bei dem Erstellen der JSON Datei für den Inhalt dieser Funktion, keine Kenntnisse über die softwareinterne Lösung vorhanden sein muss, sondern der Ersteller nur vordefinierte Begriffe eintragen muss, welche dann softwareintern den jeweiligen Bildschirminhalt generieren.
+\par Eine Objektinstanz der Content Klasse stellt den Inhalt der \grqq Guide\grqq Funktion dar und enthält die folgenden Attribute:
+\begin{itemize}
+\item \par Der Titel (title) des Content Objekts ist gleichzusetzen mit einer Überschrift für den jeweiligen Inhalt, welcher durch die Beschreibung (description) ausgedrückt wird.
+\item \par Das Datenfeld subsections enthält weitere Content-Objekte, welche in Beziehung mit dem jeweils übergeordneten Content-Objekts, als Unterabschnitte zu bezeichnen sind.
+\item \par Der Typ (type) enthält Informationen darüber, welche Art von Darstellung innerhalb des \grqq Guide\grqq - Tools für die Benutzeroberfläche verwendet werden soll. Dies bietet den Vorteil, dass bei dem Erstellen der JSON Datei für den Inhalt dieser Funktion, keine Kenntnisse über die softwareinterne Lösung vorhanden sein muss, sondern der Ersteller nur vordefinierte Begriffe eintragen muss, welche dann softwareintern den jeweiligen Bildschirminhalt generieren.
 \par Im Rahmen der Prototypentwicklung sind zwei verschiedene Arten der Darstellung vorgesehen. 
-\par Die erste Möglichkeit ist das Erzeugen eines Buttons („ButtonListWidget“), welcher den Titel des Content-Objektes anzeigt und bei antippen auf eine nächste Seite führt und dort die jeweiligen subsections TODO LISTING anzeigt.
-\par Die zweite Möglichkeit ist das Generieren eines ausklappbaren Elements („ExtensionPanelWidget“), welches den Titel des Content-Objektes anzeigt und bei Ausklappen dessen Beschreibung sichtbar wird.
+\par Die erste Möglichkeit ist das Erzeugen eines Buttons (\grqq ButtonListWidget\grqq), welcher den Titel des Content-Objektes anzeigt und bei antippen auf eine nächste Seite führt und dort die jeweiligen subsections anzeigt.
+\par Die zweite Möglichkeit ist das Generieren eines ausklappbaren Elements (\grqq ExtensionPanelWidget\grqq), welches den Titel des Content-Objektes anzeigt und bei Ausklappen dessen Beschreibung sichtbar wird.
+\end{itemize}
 
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.6\textwidth, keepaspectratio]{Bilder/ClassContent.png}
+	\caption{Content Klasse}
+	\label{img:contentClass}
+\end{figure}
+
+\newpage
 \subsection{AppState-Klasse}
 \par Die Klasse AppState stellt den aktuellen Status der Applikation dar und trägt somit die meisten der zuvor beschrieben Informationen in sich. Diese Informationen werden im Rahmen der Redux-orientierten Architektur durch das Einsetzen von Key-Value Stores strukturiert und verwaltet. 
-\par Jede für den Zustand der Applikation relevante Information ist auf diese Weise an einer zentralen Stelle im System gespeichert. Durch einen lesenden Zugriff können die Oberflächenkomponenten alle benötigten aktuellen Informationen ermitteln und abbilden. Weiterhin kann der Status der Applikation durch das Ausführen von Aktionen des Benutzers, was das Auslösen der sogenannten Actions (siehe REDUX GRUNDLAGEN) mit sich trägt, verändert werden.
-\par TODO MAPS1
-\par Die aktuellen Meilensteine werden durch das Datenfeld currentMilestonres abgebildet. Diese Datenstruktur enthält alle von dem Benutzer angelegten Meilensteine und deren jeweiligen Unteraufgaben.
+
+\par \medskip Jede für den Zustand der Applikation relevante Information ist auf diese Weise an einer zentralen Stelle im System gespeichert (siehe Abbildung \ref{lst:appstateFields}). Durch einen lesenden Zugriff können die Oberflächenkomponenten alle benötigten aktuellen Informationen ermitteln und abbilden. Weiterhin kann der Status der Applikation durch das Ausführen von Aktionen des Benutzers, was das Auslösen der sogenannten Actions mit sich trägt, verändert werden.
+  
+  \bigskip
+\begin{lstlisting}[caption={Datenfelder der Klasse Appstate},captionpos=b, label=lst:appstateFields]
+class AppState{
+
+  final Map<String, Milestone> currentMilestones;
+  final Map<String, Property> properties;
+  final Map<String, Map<String, Achievement>> achievedAchievements;
+  final Map<String, Challenge> challenges;
+  
+  final Content informationToolContent;
+  
+  final Milestone selectedMilestone;
+  final DateTime begin;
+  final DateTime end;
+
+	...
+  }
+\end{lstlisting}
+\bigskip
+
+\par \bigskip \textbf{Aktueller Zustand der Meilensteine}
+\par Die aktuellen Meilensteine werden durch das Datenfeld currentMilestones abgebildet. Diese Datenstruktur enthält alle von dem Benutzer angelegten Meilensteine und deren jeweilige Unteraufgaben und wird als SplayTreeMap initialisiert. TODO LINK Die selbst-sortierende Eigenschaft dieser Datenstruktur bietet einige Vorteile im Rahmen der Handhabung von Meilensteinen in der Implementierung, da deren einzigartige IDs auf dem angegebenen Meilensteindatum basieren.
+
+\newpage
+\par \bigskip \textbf{Aktueller Zustand der Achievements}
 \par Die von dem Benutzer der Applikation zu erreichenden Achievements werden in dem Datenfeld achievements gespeichert. Dieses Datenfeld weißt einige Besonderheiten vor, auf die ich im Folgenden hinweisen möchte:
-\par Es handelt sich bei dieser Datenstruktur im Detail um eine HashMap, welche weitere HashMaps beinhaltet.
-\par TODO LISTING Map<String, Map<Achievement>>
-\par Diese HashMap wird mit genau vier verschiedenen konstanten Einträgen initialisiert. 
-\par 	\qquad ALL \qquad – enthält alle vorhandenen Achievements
-\par 	\qquad ACHIEVED \qquad – enthält alle Achievements, welche von dem Benutzer gesammelt wurden
-\par \qquad RECOGNIZED \qquad – enthält alle gesammelten Achievements, welche von dem Benutzer betrachtet wurden.
-\par \qquad NOT RECOGNIZED \qquad enthält alle gesammelten Achievements, welche von dem Benutzer noch nicht betrachtet wurden
+\par \medskip Hinweis: Es handelt sich bei dieser Datenstruktur im Detail um eine HashMap, welche weitere HashMaps beinhaltet. 
+\par \medskip Diese HashMap wird mit genau vier verschiedenen konstanten Einträgen initialisiert.
+\begin{itemize}
+\item \textbf{ALL\char`_ACHIEVEMENTS}
+\par Enthält alle vorhandenen Achievements
+\item \textbf{ACHIEVED}
+\par Enthält alle Achievements, welche von dem Benutzer gesammelt wurden
+\item \textbf{RECOGNIZED}
+\par Enthält alle gesammelten Achievements, welche von dem Benutzer betrachtet wurden.
+\item \textbf{NOT\char`_RECOGNIZED}
+\par Enthält alle gesammelten Achievements, welche von dem Benutzer noch nicht betrachtet wurden
+\end{itemize}
+
 \par Diese Unterscheidung ist auf die Idee zurückzuführen, die unterschiedlichen Zustände der Achievements bei der Handhabung der Benutzerinteraktion zu unterschiedlicher Zeit zu berücksichtigen. Beispielsweise sollen neu erworbene Achievements, welche von dem Benutzer noch nicht eingesehen worden sind, bis zu dem Moment in dem sie betrachtet wurden, gesondert behandelt werden.
+
+\par \bigskip \textbf{Aktueller Zustand der Properties}
 \par Die zu verwaltenden Eigenschaften zur Erfüllung der Achievements werden in dem Datenfeld properties gespeichert. Dies bietet den Vorteil, dass die Properties, welche von unterschiedlichen Achievements geteilt werden können, an einer zentralen Stelle im State verwaltet werden können.
+
+\par \bigskip \textbf{Aktueller Zustand der Herausforderungen}
 \par Die für den Benutzer zu erledigenden Herausforderungen werden in dem Datenfeld challenges verwaltet.
 Über den bereits genannten Verwaltungsstrukturen hinaus, beinhaltet die Klasse weiterhin spezielle einzelne Informationen:
-\par Der aktuell, im Rahmen der Bedienung der Applikation, von dem Nutzer ausgewählte Meilenstein wird in dem Datenfeld selectedMilestone gespeichert. 
-\par Die beiden Felder begin und end, bezeichnen den von dem Benutzer angegebenen Zeitraum der Bearbeitung der Bachelorarbeit.
 
+\par \bigskip \textbf{Weitere Datenfelder}
+\par Der aktuell, im Rahmen der Bedienung der Applikation, von dem Nutzer ausgewählte Meilenstein wird in dem Datenfeld selectedMilestone gespeichert. 
+\par \medskip Die beiden Felder begin und end, bezeichnen den von dem Benutzer angegebenen Zeitraum der Bearbeitung der Bachelorarbeit.
+
+\newpage
 \subsection{Notification Funktionen}
 \par Für die Implementierung der Notification wurde ein externes Plugin genutzt TODO LINK, da die grundsätzliche Möglichkeit der Handhabung von Notifications durch das Framework Flutter nicht gegeben ist.
-\par Bei der Verwendung des Plugins sind jedoch einige zielplattformabhängige Konfigurationen nötig, welche sich unter dem angegebenen Link nachvollziehen lassen.
-\par Bei der Umsetzung der Notifications wurde sich an den gegebenen Beispielen orientiert, welche für die eigene Umsetzung adaptiert wurden.
+\par\medskip Bei der Verwendung des Plugins sind jedoch einige zielplattformabhängige Konfigurationen nötig, welche sich unter TODO LINK nachvollziehen lassen.
+\par \medskip Bei der Umsetzung der Notifications wurde sich an den gegebenen Beispielen orientiert, welche für die eigene Umsetzung adaptiert wurden.
 \par Die Verwendung der Notifications wird im Rahmen der prototypischen Implementierung durch spezielle Top-Level Funktionen gelöst, welche durch Aufrufen die jeweiligen Actions senden.
-\par Weitere Informationen zum Ablauf und der Funktionsweise sind in dem Kapitel TODO MIDDLEWARE zu finden.
-\par TODO LISTING
+\par \bigskip Weitere Informationen zum Ablauf und der Funktionsweise von Notification sind in dem Kapitel \ref{sec:middleware} zu finden.
 
+\newpage
 \section{Actions}
 \par Im Rahmen der auf der Anforderungsanalyse basierenden Konzeption der Softwarelösung, wurden verschieden Benutzeraktionen identifiziert, welche sich größtenteils in den sogenannten Actions wiederfinden.
 Für jede dieser Actions existiert eine eigene Klasse, welche im folgenden Verlauf beispielhaft an einem für alle Actions repräsentativen Fall erläutert wird.
 
 \subsection{Beispielhafte Demonstration einer Meilensteinbearbeitung}
 \par Das gewählte Beispiel bezieht sich auf die Nutzeraktion des Änderns eines Meilensteins:
-LISTING EDITMILESTONEACTIOn TODO
-\par Wie in TODO zu sehen ist, enthält die Klasse EditMilestoneAction vier verschiedene Datenfelder. 
-Der zu ändernde Meilenstein (milestone), sowie die jeweiligen neuen Werte newTitle, newDate und newDescription, welche die zu dem vorhandenen Meilenstein zugehörigen Werte überschreiben sollen.
-\par Es wird deutlich, dass eine solche Klasse außer das Beinhalten der spezifischen Payload-Daten, keine tiefe Funktionalität bieten soll. Die weitere Verarbeitung der Daten wird im Kapitel TODO REDUCER verdeutlicht.
 
+\par Wie in Abbildung \ref{lst:milestoneEditAction} zu sehen ist, enthält die Klasse EditMilestoneAction vier verschiedene Datenfelder. 
+Der zu ändernde Meilenstein (milestone), sowie die jeweiligen neuen Werte newTitle, newDate und newDescription, welche die zu dem vorhandenen Meilenstein zugehörigen Werte überschreiben sollen.
+\par Es wird deutlich, dass eine solche Klasse außer das Beinhalten der spezifischen Payload-Daten, keine tiefe Funktionalität bieten soll. 
+\par Die weitere Verarbeitung der Daten wird im Kapitel \ref{sec:reducer} verdeutlicht.
+
+\bigskip
+\begin{lstlisting}[caption={Meilenstein Action Beispiel},captionpos=b, label=lst:milestoneEditAction]
+class EditMilestoneAction {
+  Milestone milestone;
+  String newTitle;
+  DateTime newDate;
+  String newDescription;
+
+  EditMilestoneAction(this.milestone, this.newTitle, this.newDate, this.newDescription);
+}
+\end{lstlisting}
+\bigskip
+
+
+\newpage
 \section{Reducer}
+\label{sec:reducer}
 \par Die verschiedenen Reducer Funktionen werden tragen die eigentliche Aufgabe der Datenmanipulation und Verwaltung. In diesen Komponenten passieren die entscheidenden Änderungen am aktuellen Zustand der Applikation.
 
 \subsection{Der App-Reducer}
-\par Der App Reducer ist die Top-Funktion der Reducer, welche nach jeder durchgeführten Action einen neuen Zustand der Applikation generiert. Jedes Datenfeld des aktuellen Zustands wird in diesem Rahmen durch das Delegieren an untergeordnete Reducer Funktionen, neu generiert. Dabei wird immer der aktuelle Zustand des Systems sowie die in der Action-Klasse enthaltenen Informationen übergeben.
-\par Im folgenden Verlauf wird dieser Ablauf an einem repräsentativen Beispiel verdeutlicht
+\par Der App Reducer ist die Top-Funktion der Reducer, welche nach jeder durchgeführten Action einen neuen Zustand der Applikation generiert. Jedes Datenfeld des aktuellen Zustands wird in diesem Rahmen durch die Delegation an untergeordnete Reducer Funktionen neu generiert. Dabei wird immer der aktuelle Zustand des Systems sowie die in der Action-Klasse enthaltenen Informationen übergeben.
+\par \medskip Im folgenden Verlauf wird dieser Ablauf an einem repräsentativen Beispiel verdeutlicht.
 
 \subsection{Beispielhafte Demonstration einer Meilensteinbearbeitung}
-\par TODO LISTING EDITMILESTONEACTION
-\par Innerhalb dieser Funktion wird überprüft, um welche Action es sich handelt. Sollte es sich um keine der angegebenen Actions handeln, so wird der aktuell existierende Zustand unverändert zurückgegeben. Sollte die Action jedoch übereinstimmen, so wird anschließend die jeweils definierte Folge von Befehlen ausgeführt und das neue Ergebnis zurückgegeben.
 
+\par Innerhalb der von dem AppReducer aufgerufenen updateMilestones Funktion (siehe Abbildung \ref{lst:milestoneReducer}), wird überprüft, um welche Action es sich handelt. Sollte es sich um keine der angegebenen Actions handeln, so wird der aktuell existierende Zustand unverändert zurückgegeben (vgl. Zeile \ref{lstNum:returnCurrentMilestones}). Sollte die Action jedoch übereinstimmen, so wird anschließend die jeweils definierte Folge von Befehlen ausgeführt und der neue Zustand der jeweiligen Daten zurückgegeben (vgl. Zeile \ref{lstNum:returnNewMilestones}).
+
+\bigskip
+\begin{lstlisting}[caption={Meilenstein Reducer Beispiel},captionpos=b, label=lst:milestoneReducer]
+Map<String, Milestone> updateMilestones (Map<String, Milestone> current, action){
+Map<String, Milestone> ret = new SplayTreeMap<String, Milestone>();
+
+...
+
+  if(action is EditMilestoneAction) {
+
+    Milestone editedMilestone = new Milestone(action.newTitle, action.newDate, action.newDate.toIso8601String(), action.milestone.tasks, action.newDescription);
+    current.remove(action.milestone.id);
+    current[editedMilestone.id] = editedMilestone;
+
+    return current; (*@ \label{lstNum:returnNewMilestones} @*)
+  }
+  
+...
+  return current; (*@ \label{lstNum:returnCurrentMilestones} @*)
+\end{lstlisting}
+\bigskip
+
+\newpage
 \section{Container}
 \par Die Container Komponenten dienen in dieser Redux-orientierten Architektur als Schnittstelle zwischen der Benutzeroberfläche (Presentation) und dem internen Zustand der Applikation (Model). Sie stehen somit einerseits in der direkten lesenden Beziehung zu dem Store, welcher den aktuellen Status der Applikation beinhaltet und andererseits in Beziehung zu den Reducer Komponenten, welche diesen Status durch das Auslösen von Actions schreibend aktualisieren. 
 \par Im folgenden Verlauf wird dieser Ablauf an einem repräsentativen Beispiel verdeutlicht
 
 \subsection{Beispielhafte Demonstration einer Meilensteinbearbeitung}
-\par TODO LISTING EDITMILESTONE
-\par Um die für die Presentation Komponente AddEditMilestoneScreen relevanten Informationen zu beziehen, wird die Hilfsklasse ViewModel verwendet. Hier werden einerseits die Informationen aus dem Store geladen und weiterhin auch die getätigten Actions gesendet. Letzteres funktioniert durch das übermitteln von Callback Funktionen an die Presentation Komponente.
+
+\par Die Converter-Funktion (siehe Abbildung \ref{lst:containerMilestoneChange}, vgl. Zeile \ref{lstNum:converter}) des StoreConnectors konvertiert den aktuellen Store in ein ViewModel, welches die für die Presentation Komponente relevanten Daten in der Builder-Funktion (vgl. Zeile \ref{lstNum:builder}) bereitstellen kann.
+
+\bigskip
+\begin{lstlisting}[caption={Container Komponente einer Meilensteinänderung},captionpos=b, label=lst:containerMilestoneChange]
+class EditMilestone extends StatelessWidget {
+  final Milestone milestone;
+  EditMilestone(this.milestone);
+
+  @override
+  Widget build(BuildContext context) {
+    return new StoreConnector(
+      converter: (Store<AppState> store) (*@ \label{lstNum:converter} @*) {
+        return _ViewModel.fromStore(store, this.milestone);
+      },
+      builder: (BuildContext context, _ViewModel vm) (*@ \label{lstNum:builder} @*){
+        return AddEditMilestoneScreen(vm.editMilestone, vm.currentMilestones, vm.initialDate, true, milestone);
+      }(*@ \label{lstNum:addEditMilestoneScreen} @*),
+    );
+  }
+}
+\end{lstlisting}
+\bigskip
+
+\par In der ViewModel Klasse werden einerseits die Informationen aus dem Store geladen (vgl. Zeile \ref{lstNum:getStore}) und weiterhin auch die getätigten Actions gesendet (vgl. Zeile \ref{lstNum:sendAction}). Insbesondere Letzteres funktioniert durch das Übermitteln von Callback Funktionen an die Presentation Komponente (siehe Abbildung \ref{lst:containerMilestoneChange}, vgl. Zeile \ref{lstNum:addEditMilestoneScreen}).
+
+\newpage
+\bigskip
+\begin{lstlisting}[caption={ViewModel von Container Komponente einer Meilensteinänderung},captionpos=b, label=lst:containerMilestoneChangeViewModel]
+class _ViewModel {
+  final Milestone currentMilestone;
+  final Function(String, DateTime, String) editMilestone;
+  final List<Milestone> currentMilestones;
+  List<String> currentMilestonesDates;
+  DateTime initialDate;
+
+  _ViewModel(
+      {this.currentMilestone, this.editMilestone, this.currentMilestones, this.currentMilestonesDates}) {
+   // ... initialisieren von currentMilestoneDates und initialDate
+  }
+
+  
+  
+  factory _ViewModel.fromStore(Store<AppState> store, currentMilestone) {
+    return _ViewModel(
+      editMilestone: (String title, DateTime date, String description) =>(*@ \label{lstNum:sendAction} @*)
+          store.dispatch(new EditMilestoneAction(
+              currentMilestone, title, date, description)),
+      currentMilestones: store.state.currentMilestones.values.toList(),(*@ \label{lstNum:getStore} @*)
+    );
+  }
+}
+\end{lstlisting}
+\bigskip
+
+\newpage
 \section{Presentation}
 \par Die Presentation Komponenten stellen die Schnittstelle zwischen System und dem Benutzer dar. In dieser Hinsicht ist die Aufgabe dieser Komponenten die über die Nutzereigaben erhaltenen Informationen an die jeweiligen Container Komponenten zur Weiterverarbeitung zu vermittelt und den aktuellen Systemzustand für den Anwender geeignet darzustellen. Eine Presentation Komponente erhält alle nötigen Informationen von der jeweiligen übergeordneten Container Komponente und soll nicht direkt mit dem Store interagieren. Ziel ist es, die Darstellung von der direkten Systeminteraktion scharf zu trennen, um Austauschbarkeit und Änderungen an der Benutzeroberfläche zu erleichtern.
 \par \medskip Im folgenden Verlauf wird dieser Ablauf an einem repräsentativen Beispiel verdeutlicht
 
-\subsection{Beispielhafte Demonstration einer Presentation Komponente}
-\par TODO LISTING SUBMIT EDIT
-\par Wie in TODO zu sehen wird die, von der Container Komponente übermittelte Callback Funktion addEditMilestone bei Bestätigen der vom Nutzer eingegebenen Inhalte ausgeführt.
-\par TODO OBERFLÄCHE HIER BESCHREIBEN??? IN KONZEPT NUR HERANGEHENSWEISE/ZIELE?
+\subsection{Beispielhafte Demonstration einer Meilensteinbearbeitung}
 
+\par Wie in Abbildung \ref{lst:submitMilestoneChange} zu sehen ist, wird die von der Container Komponente übermittelte Callback Funktion addEditMilestone bei Bestätigen der vom Nutzer eingegebenen Inhalte ausgeführt.
+Darunter zählen in diesem Fall der Titel, das Datum und eine optionale Beschreibung des bearbeiteten Meilensteins.
+
+\bigskip
+\begin{lstlisting}[caption={Bestätigung einer Meilensteinänderung Methode},captionpos=b, label=lst:submitMilestoneChange]
+void submit(context) {
+
+    if (_formKey.currentState.validate()) {
+      addEditMilestone(_nameInputField.currentState.value, chosenDate,
+          _descriptionInputField.currentState.value);
+
+      ...
+    }
+  }
+  
+}
+\end{lstlisting}
+\bigskip
+
+\newpage
 \section{Middleware}
-\par Im Folgenden wird die eingesetzte Middleware beschrieben, welche im Rahmen der prototypischen Entwicklung der Applikation für die Verwaltung von Push Notifications und das Lokale Speichern und Laden des aktuellen Zustands bei Schließen und Öffnen der Applikation.
+\label{sec:middleware}
+\par Im Folgenden wird die eingesetzte Middleware beschrieben, welche im Rahmen der prototypischen Entwicklung der Applikation für die Verwaltung von Push Notifications und das Lokale Speichern und Laden des aktuellen Zustands bei Schließen und Öffnen der Applikation zuständig ist.
 
 \subsection{Beispielhafte Demonstration der Notification Middleware}
-\par TODO LISTING NOTIFICATIONMIDDLEWARE
-\par Wie in TODO zu sehen ist, wird auch hier wie in den Reducer Komponenten innerhalb dieser Middleware eine Abfrage zu der Art der ausgelösten Actions getätigt. Sollte die Bedingung, dass es sich um eine SendAchievementNotificationAction() nicht bestätigen, so wird die eingegangene Action weiter an die Reducer Komponenten geleitet. Falls sich die Bedingung jedoch als wahr herausstellt, so wird der darauffolgende Ablauf von Befehlen ausgeführt, welcher sich hier auf das Auslösen einer Notification bezieht. 
-\par Eine Besonderheit innerhalb dieser Komponente ist die Verwendung eines Completers, welcher einen Teil der Action Payload darstellt. 
-\par \bigskip Hinweis: Ein Completer ist eine von Dart gegebene Klasse, welche es in diesem Fall ermöglicht, eine zukünftig ausgeführte Funktion so zu behandeln, als wären der Rückgabewert bereits bekannt. 
-\par TODO https://api.dartlang.org/stable/2.0.0/dart-async/Completer-class.html
+\par Wie in Abbildung \ref{lst:notificationMiddleware} zu sehen ist, wird auch hier wie in den Reducer Komponenten innerhalb dieser Middleware eine Abfrage zu der Art der ausgelösten Actions getätigt (vlg. Zeile 6). Sollte die Bedingung, dass es sich um eine SendAchievementNotificationAction nicht bestätigen, so wird die eingegangene Action sofort weiter an die Reducer Komponenten geleitet. Falls sich die Bedingung jedoch als wahr herausstellt, so wird der darauffolgende Ablauf von Befehlen ausgeführt, welcher sich hier auf das Auslösen einer Notification bezieht. 
+\par Eine Besonderheit innerhalb dieser Komponente ist die Verwendung eines Completers, welcher als Teil der Action Payload übermittelt wurde. 
+\par \bigskip Hinweis: Ein Completer ist eine von Dart gegebene Klasse, welche es in diesem Fall ermöglicht, eine zukünftig ausgeführte Funktion so zu behandeln, als wären der Rückgabewert bereits bekannt. Weitere Informationen sind unter 
+TODO https://api.dartlang.org/stable/2.0.0/dart-async/Completer-class.html zu finden.
 
-\par In diesem Rahmen wird nach dem Ausführen von Actions, das Senden einer Notification durch das aufrufen der Top-Level Funktion checkAchievementNotification() „vorbereitet“.
-\par Sollten folglich die Bedingungen für das Ausführen dieser Notification zutreffen, so wird wie in TODO zu sehen ist, die „versprochene“ Aktion durch action.completer.complete() ausgeführt und in diesem Fall die Notification angezeigt. 
-\par TODO checkAchievementNotification() LISTING
-\par Um zu gewährleisten, dass neue Achievements registriert werden, wird vor Ausführung der SendAchievementNotificationAction in TODO ABBILDUNG die CheckForAchieveAction() ausgelößt, welche das  Aktualisieren der aktuellen Achievements nach sich zieht.
+\bigskip
+\begin{lstlisting}[caption={Notification Middleware},captionpos=b, label=lst:notificationMiddleware]
+void notificationMiddleware(
+    Store<AppState> store,
+    dynamic action,
+    NextDispatcher next,
+    ) { 
+  if (action is SendAchievementNotificationAction) {
+  	new Future.delayed(new Duration(seconds: 1), () {}).then( (result) {
+  	
+      if (NEUE ACHIEVEMENTS VORHANDEN) {
+        if (MEHRERE ACHIEVEMENTS) {
+          showAchievementNotification(
+				//... spezifischer Inhalt eines Achievements       
+          );
+        } else if (GENAU EIN ACHIEVEMENT) {
+          showAchievementNotification(
+				//... spezifischer Inhalt mehrerer Achievements     
+          );
+        }
+      }
+      action.completer.complete();
+      store.dispatch(new ClearAchievedAction());
+    },
+  );
+  }
+  next(action);
+}
+\end{lstlisting}
+\bigskip
 
-\subsection{Persistor Middleware}
-\par Um das Speichern und Laden des jeweiligen Systemzustands bei Schließen und Öffnen der Applikation zu gewährleisten, wurde das für diese Absicht vorhandene externes Paket (redux persist flutter) verwendet.
+\par In diesem Rahmen wird nach dem allgemeinen Ausführen von Actions in der Applikation, das Senden einer Notification durch das Aufrufen der Top-Level Funktion checkAchievementNotification() \grqq vorbereitet\grqq (siehe Abbildung \ref{lst:checkAchievementNotification}, vgl. Zeile  9 - 11).
+\par Um zu gewährleisten, dass neue Achievements registriert werden, wird vor Ausführung der SendAchievementNotificationAction in Abbildung \ref{lst:checkAchievementNotification}( vgl. Zeile 3 - 7) die CheckForAchieveAction() ausgelößt, welche für das Aktualisieren der aktuellen Achievements sorgt.
+\par \medskip Sollten folglich die Bedingungen für das Ausführen dieser Notification zutreffen, so wird wie in Abbildung \ref{lst:notificationMiddleware} zu sehen ist, die \grqq versprochene\grqq Aktion ausgeführt (vlg. Zeile 25) und in diesem Fall die Notification angezeigt. 
+
+\bigskip
+\begin{lstlisting}[caption={checkAchievementNotification Methode},captionpos=b, label=lst:checkAchievementNotification]
+
+Future<dynamic> checkAchievementNotification(context) {
+  StoreProvider.of<AppState>(context).dispatch(new CheckForAchieveAction(
+      StoreProvider
+          .of<AppState>(context)
+          .state
+          .achievedAchievements[ALL_ACHIEVEMENTS]));
+
+  final action = new SendAchievementNotificationAction();
+  StoreProvider.of<AppState>(context).dispatch(action);
+  return action.completer.future;
+}
+\end{lstlisting}
+\bigskip
 
 \chapter{Validierung und Verifikation} \label{chap:nachweisführung}
 \section{Abdeckung der Softwareanforderungen}

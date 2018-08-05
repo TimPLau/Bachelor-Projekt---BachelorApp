@@ -1,5 +1,6 @@
 import 'package:project_bachelorapplication/actions/achievement_tool_actions.dart';
 import 'package:project_bachelorapplication/actions/milestone_tool_actions.dart';
+import 'package:project_bachelorapplication/main.dart';
 import 'package:project_bachelorapplication/models/achievement_tool.dart';
 import 'package:project_bachelorapplication/achievement_tool_datas.dart';
 
@@ -21,13 +22,13 @@ Map<String, Map<String, Achievement>> updateAchievedAchievements(
     action) {
 
   if (action is ClearAchievedAchievementsAction) {
-    current["Recognized"].addAll(current["NotRecognized"]);
-    current["NotRecognized"] = {};
+    current[RECOGNIZED].addAll(current[NOT_RECOGNIZED]);
+    current[NOT_RECOGNIZED] = {};
     return current;
   }
 
   if (action is ClearAchievedAction) {
-    current["Achieved"] = {};
+    current[ACHIEVED] = {};
     return current;
   }
 
@@ -42,19 +43,19 @@ Map<String, Map<String, Achievement>> setAchievedAchievements(
     Map<String, Property> properties,
     Map<String, Map<String, Achievement>> achievements) {
 
-  for (Achievement achievement in achievements["AllAchievements"].values.toList()) {
+  for (Achievement achievement in achievements[ALL_ACHIEVEMENTS].values.toList()) {
 
     if (achievement.completed == false) {
 
       if (checkAchievement(achievement, properties) == true) {
         Achievement newAchievement = new Achievement(achievement.title, achievement.type, achievement.properties, true);
 
-        achievements["AllAchievements"][achievement.title] = newAchievement;
-        achievements["Achieved"][achievement.title] = newAchievement;
+        achievements[ALL_ACHIEVEMENTS][achievement.title] = newAchievement;
+        achievements[ACHIEVED][achievement.title] = newAchievement;
 
-        if (!achievements["NotRecognized"].containsKey(newAchievement.title) &&
-            !achievements["Recognized"].containsKey(newAchievement.title)) {
-            achievements["NotRecognized"][newAchievement.title] = newAchievement;
+        if (!achievements[NOT_RECOGNIZED].containsKey(newAchievement.title) &&
+            !achievements[RECOGNIZED].containsKey(newAchievement.title)) {
+            achievements[NOT_RECOGNIZED][newAchievement.title] = newAchievement;
         }
 
       }

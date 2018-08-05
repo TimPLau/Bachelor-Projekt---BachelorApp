@@ -22,7 +22,7 @@ class Milestone extends Object with _$MilestoneSerializerMixin{
     Map<String, Task> ret = {};
 
     tasks.forEach((key, value) {
-      value.isCompleted() ? ret[key] = value : null;
+      value.taskState == TaskState.completed ? ret[key] = value : null;
     });
 
     return ret;
@@ -32,7 +32,7 @@ class Milestone extends Object with _$MilestoneSerializerMixin{
     Map<String, Task> ret = {};
 
     tasks.forEach((key, value) {
-      !value.isCompleted() ? ret[key] = value : null;
+      value.taskState == TaskState.notCompleted ? ret[key] = value : null;
     });
 
     return ret;
@@ -70,9 +70,6 @@ class Task extends Object with _$TaskSerializerMixin{
 
   Task(this.title, this.taskState, this.id);
 
-  bool isCompleted() {
-    return (taskState == TaskState.completed) ? true : false;
-  }
 
   factory Task.fromJson(Map<String, dynamic> json) => _$TaskFromJson(json);
 }

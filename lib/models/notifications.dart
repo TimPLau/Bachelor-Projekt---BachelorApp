@@ -6,6 +6,12 @@ import 'package:project_bachelorapplication/actions/achievement_tool_actions.dar
 import 'package:project_bachelorapplication/main.dart';
 import 'package:project_bachelorapplication/models/appstate.dart';
 
+var initializationSettingsAndroid;
+var initializationSettingsIOS;
+var initializationSettings;
+FlutterLocalNotificationsPlugin flutterLocalNotificationsPlugin =
+FlutterLocalNotificationsPlugin();
+
 Future onSelectAchievementNotification(String payload, BuildContext context) async {
   if (payload != null) {
     debugPrint('notification payload: ' + payload);
@@ -19,7 +25,7 @@ Future<dynamic> checkAchievementNotification(context) {
       StoreProvider
           .of<AppState>(context)
           .state
-          .achievedAchievements["AllAchievements"]));
+          .achievedAchievements[ALL_ACHIEVEMENTS]));
 
   final action = new SendAchievementNotificationAction();
   StoreProvider.of<AppState>(context).dispatch(action);

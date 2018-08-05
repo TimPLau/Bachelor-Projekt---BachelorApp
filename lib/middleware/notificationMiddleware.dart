@@ -14,17 +14,17 @@ void notificationMiddleware(
   if (action is SendAchievementNotificationAction) {
     new Future.delayed(new Duration(seconds: 1), () {}).then(
       (result) {
-        if (store.state.achievedAchievements["Achieved"].isNotEmpty) {
-          if (store.state.achievedAchievements["Achieved"].length > 1) {
+        if (store.state.achievedAchievements[ACHIEVED].isNotEmpty) {
+          if (store.state.achievedAchievements[ACHIEVED].length > 1) {
             showAchievementNotification(
                 "Sehr gut! Du hast ${store.state
-                    .achievedAchievements["Achieved"]
+                    .achievedAchievements[ACHIEVED]
                     .length} Achievement erhalten",
                 "");
-          } else if (store.state.achievedAchievements["Achieved"].length == 1) {
+          } else if (store.state.achievedAchievements[ACHIEVED].length == 1) {
             showAchievementNotification(
                 "Sehr gut! Du hast ein Achievement erhalten",
-                store.state.achievedAchievements["Achieved"].values
+                store.state.achievedAchievements[ACHIEVED].values
                     .toList()[0]
                     .title);
           }
@@ -36,4 +36,3 @@ void notificationMiddleware(
   }
   next(action);
 }
-

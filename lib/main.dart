@@ -3,11 +3,12 @@ import 'package:flutter/material.dart';
 import 'package:project_bachelorapplication/achievement_tool_datas.dart';
 import 'package:project_bachelorapplication/models/achievement_tool.dart';
 import 'package:project_bachelorapplication/models/app_content_loader.dart';
-import 'package:project_bachelorapplication/views/containers/achievement_tool_achievement_overview.dart';
-import 'package:project_bachelorapplication/views/containers/achievement_tool_challenges.dart';
-import 'package:project_bachelorapplication/views/containers/bachelor_application_dashboard.dart';
-import 'package:project_bachelorapplication/views/containers/bachelorguide_tool_content_guide.dart';
-import 'package:project_bachelorapplication/views/containers/milestone_tool_milestones_overview.dart';
+import 'package:project_bachelorapplication/models/notifications.dart';
+import 'package:project_bachelorapplication/containers/achievement_tool_achievement_overview.dart';
+import 'package:project_bachelorapplication/containers/achievement_tool_challenges.dart';
+import 'package:project_bachelorapplication/containers/bachelor_application_dashboard.dart';
+import 'package:project_bachelorapplication/containers/bachelorguide_tool_content_guide.dart';
+import 'package:project_bachelorapplication/containers/milestone_tool_milestones_overview.dart';
 import 'package:redux/redux.dart';
 import 'package:flutter_redux/flutter_redux.dart';
 import 'package:project_bachelorapplication/reducers/app_reducer.dart';
@@ -15,24 +16,26 @@ import 'package:project_bachelorapplication/models/appstate.dart';
 import 'package:project_bachelorapplication/models/bachelorguide_tool_content.dart';
 import 'package:project_bachelorapplication/models/milestone_tool.dart';
 import 'package:redux_persist/redux_persist.dart';
-import 'views/containers/milestone_tool_add_milestone.dart';
+import 'package:project_bachelorapplication/containers/milestone_tool_add_milestone.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:project_bachelorapplication/middleware/notificationMiddleware.dart';
 import 'package:redux_persist_flutter/redux_persist_flutter.dart';
 
-var initializationSettingsAndroid;
-var initializationSettingsIOS;
-var initializationSettings;
-FlutterLocalNotificationsPlugin flutterLocalNotificationsPlugin =
-    FlutterLocalNotificationsPlugin();
+const String RECOGNIZED       = "RECOGNIZED";
+const String NOT_RECOGNIZED   = "NOT_RECOGNIZED";
+const String ACHIEVED         = "ACHIEVED";
+const String ALL_ACHIEVEMENTS = "ALL_ACHIEVEMENTS";
+
 AppContentLoader contentLoader;
 InformationToolContentBuilder informationToolContentBuilder =
-    new InformationToolContentBuilder();
+new InformationToolContentBuilder();
+
+
 Map<String, Map<String, Achievement>> achievedAchievements = {
-  "Recognized": {},
-  "NotRecognized": {},
-  "Achieved": {},
-  "AllAchievements": achievements,
+  RECOGNIZED : {},
+  NOT_RECOGNIZED : {},
+  ACHIEVED : {},
+  ALL_ACHIEVEMENTS: achievements,
 };
 
 init() async {
