@@ -138,6 +138,49 @@
     \field{year}{(Zugriff Juni 3, 2018)}
   \endentry
 
+  \entry{deterding2011gamification}{inproceedings}{}
+    \name{author}{4}{}{%
+      {{hash=DS}{%
+         family={Deterding},
+         familyi={D\bibinitperiod},
+         given={Sebastian},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=KR}{%
+         family={Khaled},
+         familyi={K\bibinitperiod},
+         given={Rilla},
+         giveni={R\bibinitperiod},
+      }}%
+      {{hash=NLE}{%
+         family={Nacke},
+         familyi={N\bibinitperiod},
+         given={Lennart\bibnamedelima E},
+         giveni={L\bibinitperiod\bibinitdelim E\bibinitperiod},
+      }}%
+      {{hash=DD}{%
+         family={Dixon},
+         familyi={D\bibinitperiod},
+         given={Dan},
+         giveni={D\bibinitperiod},
+      }}%
+    }
+    \list{organization}{1}{%
+      {Vancouver BC, Canada}%
+    }
+    \strng{namehash}{DS+1}
+    \strng{fullhash}{DSKRNLEDD1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{Det+11}
+    \field{sortinit}{D}
+    \field{sortinithash}{D}
+    \field{booktitle}{CHI 2011 gamification workshop proceedings}
+    \field{title}{Gamification: Toward a definition}
+    \field{volume}{12}
+    \field{year}{2011}
+  \endentry
+
   \entry{Flu1}{manual}{}
     \field{labeltitlesource}{title}
     \field{labelalpha}{Flu}
@@ -360,6 +403,56 @@
     \field{year}{2013}
   \endentry
 
+  \entry{pflanzl2018gamification}{book}{}
+    \name{author}{1}{}{%
+      {{hash=PN}{%
+         family={Pflanzl},
+         familyi={P\bibinitperiod},
+         given={Nicolas},
+         giveni={N\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{PN1}
+    \strng{fullhash}{PN1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{Pfl18}
+    \field{sortinit}{P}
+    \field{sortinithash}{P}
+    \field{title}{Gamification for business process modeling}
+    \field{year}{2018}
+  \endentry
+
+  \entry{reeves2009total}{book}{}
+    \name{author}{2}{}{%
+      {{hash=RB}{%
+         family={Reeves},
+         familyi={R\bibinitperiod},
+         given={Byron},
+         giveni={B\bibinitperiod},
+      }}%
+      {{hash=RJL}{%
+         family={Read},
+         familyi={R\bibinitperiod},
+         given={J\bibnamedelima Leighton},
+         giveni={J\bibinitperiod\bibinitdelim L\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Harvard Business Press}%
+    }
+    \strng{namehash}{RBRJL1}
+    \strng{fullhash}{RBRJL1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{RR09}
+    \field{sortinit}{R}
+    \field{sortinithash}{R}
+    \field{title}{Total engagement: How games and virtual worlds are changing
+  the way people work and businesses compete}
+    \field{year}{2009}
+  \endentry
+
   \entry{Sailer2016}{book}{}
     \name{author}{1}{}{%
       {{hash=SM}{%
@@ -432,6 +525,36 @@
       {Berlin Heidelberg New York}%
     }
     \field{year}{2017}
+  \endentry
+
+  \entry{werbach2012win}{book}{}
+    \name{author}{2}{}{%
+      {{hash=WK}{%
+         family={Werbach},
+         familyi={W\bibinitperiod},
+         given={Kevin},
+         giveni={K\bibinitperiod},
+      }}%
+      {{hash=HD}{%
+         family={Hunter},
+         familyi={H\bibinitperiod},
+         given={Dan},
+         giveni={D\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Wharton Digital Press}%
+    }
+    \strng{namehash}{WKHD1}
+    \strng{fullhash}{WKHD1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{WH12}
+    \field{sortinit}{W}
+    \field{sortinithash}{W}
+    \field{title}{For the win: How game thinking can revolutionize your
+  business}
+    \field{year}{2012}
   \endentry
 \enddatalist
 \endinput

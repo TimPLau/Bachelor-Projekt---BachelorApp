@@ -7,48 +7,7 @@
     <bookmark url="file://$PROJECT_DIR$/lib/presentation/milestone_tool_milestone_overview_screen.dart" line="28" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f4dd6696-99ed-42f9-ad55-ec4d525f5ce1" name="Default" comment="Refactoring">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/doc/Dokumentation/Bachelorarbeit - Dokumentation PreVersion.aux" afterPath="$PROJECT_DIR$/doc/Dokumentation/Bachelorarbeit - Dokumentation PreVersion.aux" />
-      <change beforePath="$PROJECT_DIR$/doc/Dokumentation/Bachelorarbeit - Dokumentation PreVersion.lof" afterPath="$PROJECT_DIR$/doc/Dokumentation/Bachelorarbeit - Dokumentation PreVersion.lof" />
-      <change beforePath="$PROJECT_DIR$/doc/Dokumentation/Bachelorarbeit - Dokumentation PreVersion.log" afterPath="$PROJECT_DIR$/doc/Dokumentation/Bachelorarbeit - Dokumentation PreVersion.log" />
-      <change beforePath="$PROJECT_DIR$/doc/Dokumentation/Bachelorarbeit - Dokumentation PreVersion.lot" afterPath="$PROJECT_DIR$/doc/Dokumentation/Bachelorarbeit - Dokumentation PreVersion.lot" />
-      <change beforePath="$PROJECT_DIR$/doc/Dokumentation/Bachelorarbeit - Dokumentation PreVersion.out" afterPath="$PROJECT_DIR$/doc/Dokumentation/Bachelorarbeit - Dokumentation PreVersion.out" />
-      <change beforePath="$PROJECT_DIR$/doc/Dokumentation/Bachelorarbeit - Dokumentation PreVersion.pdf" afterPath="$PROJECT_DIR$/doc/Dokumentation/Bachelorarbeit - Dokumentation PreVersion.pdf" />
-      <change beforePath="$PROJECT_DIR$/doc/Dokumentation/Bachelorarbeit - Dokumentation PreVersion.synctex.gz" afterPath="$PROJECT_DIR$/doc/Dokumentation/Bachelorarbeit - Dokumentation PreVersion.synctex.gz" />
-      <change beforePath="$PROJECT_DIR$/doc/Dokumentation/Bachelorarbeit - Dokumentation PreVersion.tex" afterPath="$PROJECT_DIR$/doc/Dokumentation/Bachelorarbeit - Dokumentation PreVersion.tex" />
-      <change beforePath="$PROJECT_DIR$/doc/Dokumentation/Bachelorarbeit - Dokumentation PreVersion.toc" afterPath="$PROJECT_DIR$/doc/Dokumentation/Bachelorarbeit - Dokumentation PreVersion.toc" />
-      <change beforePath="$PROJECT_DIR$/lib/main.dart" afterPath="$PROJECT_DIR$/lib/main.dart" />
-      <change beforePath="$PROJECT_DIR$/lib/middleware/notificationMiddleware.dart" afterPath="$PROJECT_DIR$/lib/middleware/notificationMiddleware.dart" />
-      <change beforePath="$PROJECT_DIR$/lib/models/milestone_tool.dart" afterPath="$PROJECT_DIR$/lib/models/milestone_tool.dart" />
-      <change beforePath="$PROJECT_DIR$/lib/models/notifications.dart" afterPath="$PROJECT_DIR$/lib/models/notifications.dart" />
-      <change beforePath="$PROJECT_DIR$/lib/reducers/achievement_tool_reducers.dart" afterPath="$PROJECT_DIR$/lib/reducers/achievement_tool_reducers.dart" />
-      <change beforePath="$PROJECT_DIR$/lib/views/containers/achievement_tool_achievement_overview.dart" afterPath="$PROJECT_DIR$/lib/containers/achievement_tool_achievement_overview.dart" />
-      <change beforePath="$PROJECT_DIR$/lib/views/containers/achievement_tool_challenges.dart" afterPath="$PROJECT_DIR$/lib/containers/achievement_tool_challenges.dart" />
-      <change beforePath="$PROJECT_DIR$/lib/views/containers/bachelor_application_add_begin_end_date.dart" afterPath="$PROJECT_DIR$/lib/containers/bachelor_application_add_begin_end_date.dart" />
-      <change beforePath="$PROJECT_DIR$/lib/views/containers/bachelor_application_dashboard.dart" afterPath="$PROJECT_DIR$/lib/containers/bachelor_application_dashboard.dart" />
-      <change beforePath="$PROJECT_DIR$/lib/views/containers/bachelor_application_edit_begin_end_date.dart" afterPath="$PROJECT_DIR$/lib/containers/bachelor_application_edit_begin_end_date.dart" />
-      <change beforePath="$PROJECT_DIR$/lib/views/containers/bachelorguide_tool_content_guide.dart" afterPath="$PROJECT_DIR$/lib/containers/bachelorguide_tool_content_guide.dart" />
-      <change beforePath="$PROJECT_DIR$/lib/views/containers/milestone_tool_add_milestone.dart" afterPath="$PROJECT_DIR$/lib/containers/milestone_tool_add_milestone.dart" />
-      <change beforePath="$PROJECT_DIR$/lib/views/containers/milestone_tool_edit_milestone.dart" afterPath="$PROJECT_DIR$/lib/containers/milestone_tool_edit_milestone.dart" />
-      <change beforePath="$PROJECT_DIR$/lib/views/containers/milestone_tool_milestone_details.dart" afterPath="$PROJECT_DIR$/lib/containers/milestone_tool_milestone_details.dart" />
-      <change beforePath="$PROJECT_DIR$/lib/views/containers/milestone_tool_milestones_overview.dart" afterPath="$PROJECT_DIR$/lib/containers/milestone_tool_milestones_overview.dart" />
-      <change beforePath="$PROJECT_DIR$/lib/views/presentation/achievement_overlay_screen.dart" afterPath="$PROJECT_DIR$/lib/presentation/achievement_overlay_screen.dart" />
-      <change beforePath="$PROJECT_DIR$/lib/views/presentation/achievement_tool_achievement_details_overview_screen.dart" afterPath="$PROJECT_DIR$/lib/presentation/achievement_tool_achievement_details_overview_screen.dart" />
-      <change beforePath="$PROJECT_DIR$/lib/views/presentation/achievement_tool_achievement_overview_screen.dart" afterPath="$PROJECT_DIR$/lib/presentation/achievement_tool_achievement_overview_screen.dart" />
-      <change beforePath="$PROJECT_DIR$/lib/views/presentation/achievement_tool_challenges_overview_screen.dart" afterPath="$PROJECT_DIR$/lib/presentation/achievement_tool_challenges_overview_screen.dart" />
-      <change beforePath="$PROJECT_DIR$/lib/views/presentation/bachelor_application_dashboard_screen.dart" afterPath="$PROJECT_DIR$/lib/presentation/bachelor_application_dashboard_screen.dart" />
-      <change beforePath="$PROJECT_DIR$/lib/views/presentation/bachelor_application_dashboard_timechart.dart" afterPath="$PROJECT_DIR$/lib/presentation/bachelor_application_dashboard_timechart.dart" />
-      <change beforePath="$PROJECT_DIR$/lib/views/presentation/bachelorguide_tool_guide_screen.dart" afterPath="$PROJECT_DIR$/lib/presentation/bachelorguide_tool_guide_screen.dart" />
-      <change beforePath="$PROJECT_DIR$/lib/views/presentation/dashboard_initial_date_screen.dart" afterPath="$PROJECT_DIR$/lib/presentation/dashboard_initial_date_screen.dart" />
-      <change beforePath="$PROJECT_DIR$/lib/views/presentation/milestone_tool_add_edit_milestone_screen.dart" afterPath="$PROJECT_DIR$/lib/presentation/milestone_tool_add_edit_milestone_screen.dart" />
-      <change beforePath="$PROJECT_DIR$/lib/views/presentation/milestone_tool_milestone_detail_screen.dart" afterPath="$PROJECT_DIR$/lib/presentation/milestone_tool_milestone_detail_screen.dart" />
-      <change beforePath="$PROJECT_DIR$/lib/views/presentation/milestone_tool_milestone_overview_screen.dart" afterPath="$PROJECT_DIR$/lib/presentation/milestone_tool_milestone_overview_screen.dart" />
-      <change beforePath="$PROJECT_DIR$/lib/views/presentation/milestone_tool_task_detail_screen.dart" afterPath="$PROJECT_DIR$/lib/presentation/milestone_tool_task_detail_screen.dart" />
-      <change beforePath="$PROJECT_DIR$/lib/views/widgets/general_widgets.dart" afterPath="$PROJECT_DIR$/lib/widgets/general_widgets.dart" />
-      <change beforePath="$PROJECT_DIR$/lib/views/widgets/navigation_widget.dart" afterPath="$PROJECT_DIR$/lib/widgets/navigation_widget.dart" />
-      <change beforePath="$PROJECT_DIR$/test/reducer_test.dart" afterPath="$PROJECT_DIR$/test/reducer_test.dart" />
-    </list>
+    <list default="true" id="f4dd6696-99ed-42f9-ad55-ec4d525f5ce1" name="Default" comment="Refactoring" />
     <ignored path="$PROJECT_DIR$/.dart_tool/" />
     <ignored path="$PROJECT_DIR$/.idea/" />
     <ignored path="$PROJECT_DIR$/.pub/" />
@@ -98,9 +57,11 @@
       <file leaf-file-name="main.dart" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lib/main.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="21" column="62" lean-forward="false" selection-start-line="21" selection-start-column="62" selection-end-line="21" selection-end-column="62" />
-              <folding />
+            <state relative-caret-position="442">
+              <caret line="35" column="22" lean-forward="true" selection-start-line="35" selection-start-column="22" selection-end-line="35" selection-end-column="22" />
+              <folding>
+                <element signature="e#0#25#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -691,7 +652,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1296" height="1000" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Android Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18070363" sideWeight="0.5056361" order="2" side_tool="true" content_ui="tabs" />
@@ -1160,9 +1120,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/main.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="21" column="62" lean-forward="false" selection-start-line="21" selection-start-column="62" selection-end-line="21" selection-end-column="62" />
-          <folding />
+        <state relative-caret-position="442">
+          <caret line="35" column="22" lean-forward="true" selection-start-line="35" selection-start-column="22" selection-end-line="35" selection-end-column="22" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

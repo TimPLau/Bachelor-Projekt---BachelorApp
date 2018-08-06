@@ -153,25 +153,27 @@ Das Flutter Framework stellt zwei verschiedene Arten von Widgets zur Verfügung,
 
 		...
 \section{Redux-Architektur}
+\newpage
 \section{Gamification} \label{sec:grundlagenkapitelGamification}
-Vergleiche \citep{Strahringer2017}57
+\par In dem folgenden Kapitel werden für diese Arbeit relevante Informationen zu dem Thema Gamification vermittelt. Die dabei gewählte Grundlagenliteratur setzt sich sowohl aus länger bestehenden Werken, als auch, aufgrund der aktuell anhaltenden Relevanz, aktuelleren Werken zusammen.
+
+\subsection{Die heutige Bedeutung von Gamification}
+\par Im Kontext dieser Ausarbeitung wird sich auf die folgende Definition für den Begriff \grqq Gamification\grqq bezogen (vgl. \citep{deterding2011gamification}): 
+\begin{quotation} 
+Gamification is the use of elements of game design in non-game contexts. 
+\end{quotation}
+\par Was sich aus dieser Definition ableiten lässt, beschreibt das Gamification sich dadurch auszeichnet, dass ein spielfremder Kontext  durch das Einsetzen spieltypischer Elemente bereichert wird.
+\par Somit lässt sich ein Kontext bereits als \grqq gamifiziert\grqq{}
+beschreiben, sobald Spiel-Design-Elemente in den spezifischen Kontext integriert worden sind, weshalb in den aktuellen Literaturwerken besonders im Kontext der Unternehmenseinführung zwischen Enterprise Gamification und Serious Games unterschieden wird\citep[vlg. Kapitel 1.1 Gamification: Definition und Abgrenzung, Seite 4]{Sailer2016}.
+\par \bigskip \grqq Enterprise Gamification\grqq bezeichnet in diesem Rahmen das konkrete Einbinden von Gamification Elementen in Arbeits- und/oder Lernprozessen, mit dem expliziten Ziel der Motivationssteigerung seitens der Anwender.
+\par \bigskip Gegenüber diesem Ansatz hat sich weiterhin der Begriff \grqq Serious Games\grqq integriert, welcher das explizite Einsetzen von Spielen in einem ernsten Kontext vorsieht und die Unterhaltung nicht im Fokus der Anwendung steht, sondern die Wertschöpfung von Wissen und Realwelterfahrungen. 
 
 \subsection{Bekannte Spiel-Design-Elemente} \label{sub:grundlagenSpielDesignElemente}
-\par Im folgenden Kapitel werden die wichtigsten interaktiven Spiel-Design-Elemente \citep[vgl.]{blohm2013gamification} Vorgestellt und beschrieben. 
-Vergleiche \citep[Kapitel 2.2.2 Analyse einzelner Spiel-Design-Elemente]{Sailer2016}
 
-\par \bigskip \textbf{Dokumentation von Verhaltensweisen}
-\par Durch die ständige Dokumentation der eigenen Verhaltensweisen, werden persönliche Fortschritte für den Anwender sichtbar gemacht. Diese Fortschritte können ein Gefühl von hoher Leistungsfähigkeit auslösen, da auf diese Weise ein Vergleich zu den bisherig erreichten Leistungen ermöglicht wird und somit bei Verbesserung der eigenen Leistung, der persönliche Fortschritt verdeutlicht werden kann.
-\par \bigskip \textbf{Punkte}
-\par Punktesysteme sind in ihrer Einfachheit eine weitverbreitete Form der Spiel-Design-Elemente, welche hauptsächlich eine Feedbackfunktion erfüllen. Diese Feedbackfunktion kann dem Spieler durch diverse weitere Möglichkeiten, wie zum Beispiel das Aufsteigen eine Levels, unterschiedlich stark verdeutlicht werden, weshalb Punkte häufig als Grundbestandteil von Gamification-Anwendungen auftreten. Weiterhin symbolisieren Punkte dem Spieler seinen derzeitigen Spielstand und bieten bei der Kombination mit Bestenlisten eine Vergleichsmöglichkeit zu anderen Spielern. In dieser Kombination können Punktesysteme also je nach Zielstellung auch Gewinner einer Herausforderung identifizieren.
-\par In den zwei, in \citep{Sailer2016} behandelten, empirischen Untersuchungen \citep{mekler2013disassembling} und \citep{mekler2013points}, wurde nachgewiesen, dass der Einsatz von Punktesystemen, durchaus einen leistungsfördernden Effekt auf Spieler haben können.
-\par \bigskip \textbf{Ranglisten}
-\par \bigskip \textbf{Ränge, Levels, Reputationspunkte}
-\par \bigskip \textbf{Gruppenaufgaben}
-\par \bigskip \textbf{Zeitdruck, Aufgaben, Missionen}
-\par \bigskip \textbf{Avatare, virtuelle Welten, virtueller Handel}
+\par Im folgenden Kapitel werden die wichtigsten der interaktiven Spiel-Design-Elemente, welche in Tabelle \ref{tab:spielDesignElemente} genannt werden, vorgestellt und beschrieben. 
+\par Der Einsatz von Gamification-Elementen basieren auf der Annahme, dass diese die grundsätzlichen Bedürfnisse der Menschen ansprechen\citep[Kapitel 1.1 Enterprise Gamification - Vorgehen und Anwendung, Seite 5]{Sailer2016}
 
-
+\bigskip
 \begin{tabularx}{\textwidth}{l|l|X}
 	\toprule
 	\textbf{Spiel-Mechanik} & \textbf{Spiel-Dynamik} & \textbf{Motiv}\\ \midrule
@@ -186,24 +188,69 @@ Vergleiche \citep[Kapitel 2.2.2 Analyse einzelner Spiel-Design-Elemente]{Sailer2
 \end{tabularx}
 \captionof{table}{Übersicht der Spiel-Design-Elemente \citep[vgl.]{blohm2013gamification}}
 \label{tab:spielDesignElemente}
+
+\par \bigskip Die folgenden ausgeführten Informationen wurden größtenteils aus den Werken \citep[Kapitel 2.2.2 Analyse einzelner Spiel-Design-Elemente]{Sailer2016} und \citep[Kapitel 4 The Gamification Toolkit Game Elements]{werbach2012win} entnommen, bei Abweichungen werden die konkreten Literaturwerke aus Gründen des Lesefluss explizit angegeben.
+
+\par \bigskip \textbf{Dokumentation von Verhaltensweisen}
+\par Durch die ständige Dokumentation der eigenen Verhaltensweisen, werden persönliche Fortschritte für den Anwender sichtbar gemacht. Diese Fortschritte können ein Gefühl von hoher Leistungsfähigkeit auslösen, da auf diese Weise ein Vergleich zu den bisherigen erreichten Leistungen ermöglicht wird und somit bei Verbesserung der eigenen Leistung der persönliche Fortschritt verdeutlicht werden kann.
+
+\par \bigskip \textbf{Punkte}
+\par Punktesysteme sind in ihrer Einfachheit eine weitverbreitete Form der Spiel-Design-Elemente, welche hauptsächlich eine Feedback-Funktion erfüllen. Diese Feedback-Funktion kann dem Spieler durch diverse weitere Möglichkeiten, wie zum Beispiel durch das Aufsteigen eines Levels, unterschiedlich stark verdeutlicht werden, weshalb Punkte häufig als Grundbestandteil von Gamification-Anwendungen auftreten. Weiterhin symbolisieren Punkte dem Spieler seinen derzeitigen Spielstand und bieten bei der Kombination mit Bestenlisten eine Vergleichsmöglichkeit zu anderen Spielern. In dieser Kombination können Punktesysteme also je nach Zielstellung auch Gewinner einer Herausforderung identifizieren.
+\par In den zwei, in \citep{Sailer2016} behandelten, empirischen Untersuchungen \citep{mekler2013disassembling} und \citep{mekler2013points}, wurde nachgewiesen, dass der Einsatz von Punktesystemen durchaus einen leistungsfördernden Effekt auf Spieler haben können.
+
+\par \bigskip \textbf{Abzeichen}
+\par Die Abzeichen, welche sich in der Regel durch erreichbare Achievements, Badges und/oder Patches innerhalb von Gamificationanwendungen etabliert haben, dienen einerseits einer Ziel-setzenden und darüber Hinaus auch einer nicht-kontrollierenden Feedback-Funktion. 
+\par Zu erwähnen gilt, dass Badges und Patches nicht mit Achievements gleichzusetzen sind, sondern lediglich die visuelle Repräsentation eines Achievements darstellen.
+\par Durch den Einsatz solcher Spiel-Design-Elemente soll der Benutzer sinnvoll gefordert werden und sich im Optimalfall durch das somit klare gesteckte Ziel motiviert fühlen.
+\par \medskip Weiterhin lassen sich bei dem Einsatz von Achievements unterschiedliche strategische Ansätze identifizieren, welche sich von der bereits genannten Ziel-setzenden Strategie abheben. 
+\par Beispielsweise kann bewusst auf die Angabe des Ziels eines Achievements verzichtet werden, um je nach Kontext die Neugierde des Benutzers zu fördern und den Effekt des Erreichens umso größer ausfallen zu lassen, da diese Achievements durch Ausführen unbekannter Tätigkeiten überraschend erreicht werden. Dies spricht vor allem die Benutzerklasse \textbf{Explorer} an (siehe Kapitel \ref{sub:nutzergruppenBartle}). 
+\par Auf diese Weise kann auch eine stärkere Bindung einer Comunity entstehen, da der Austausch zwischen Anwendern die bereits wissen wie ein bestimmtes Achievement erreicht wird und denjenigen, die es noch nicht erreicht haben die Kommunikation untereinander fördern kann.
+
+\par \bigskip \textbf{Ranglisten}
+\par Die sogenannten Rang- oder auch Bestenlisten dienen der Identifikation und Abgrenzung von unterschiedlichen Benutzern, welche im Kontext der Gamification Anwendung unterschiedliche hohe Erfolge, häufig in Form von Punkten, erreicht haben.
+\par Zentrale Absicht solcher Ranglisten ist das Darstellen der besten Spieler, was je nach Kontext für einen hohen kompetitiven Anwendungsanteil spricht.
+
+\par \medskip Im Rahmen von Ranglisten-Spiel-Elementen können weiterhin verschiedene Kategorien identifiziert werden, welche sich auf unterschiedliche Weise durch verschiedene Vor- und Nachteile des jeweiligen Zielkontextes äußern.
+\par Während individuelle Ranglisten die Leistung des Einzelnen aufzeigen und somit versuchen das Individuum von den restlichen Spielern abzugrenzen, ermöglichen Team-basierte Ranglisten zumindest in einer etwas Individuum-dezentralen Variante das kooperative vernetzen unterschiedlicher Personen und identifizieren ganzer Team-Leistungen.
+
+
+\par \bigskip \textbf{Ränge, Levels und Reputationspunkte}
+\par Wie in \citep[Kapitel 4.5 Reputations, Ranks and Levels, Seite 75]{reeves2009total} beschrieben wird, können Reputationsmöglichkeiten für Benutzer ein wichtiges Identifikationsmittel sein. Durch die Möglichkeit bestimmte Ränge oder Levels zu erreichen, sind Spieler besonders im Rahmen von Multiplayer Spiel-Design Umgebungen dazu angehalten ihr Ansehen gegenüber anderen Spielern zu steigern oder zu festigen und somit eine Art Veteranen Ausstrahlung anzunehmen.
+\par Diese Art von Game-Design-Elementen ermöglichen auf das Ausstrahlen von Kompetenzen, Talenten Erfahrungen und somit den Platz, den der jeweilige Spieler in der Spielwelt einnimmt.
+
+\par \bigskip \textbf{Avatare, virtuelle Welten, virtueller Handel}
+\par Durch die Möglichkeit der Erstellung eines persönlichen Avatars, werden dem Spieler je nach Ausprägung hoch oder gering ausfallende Individualisierungs- und somit auch Identifikationsmöglichkeiten angeboten. 
+\par Ein wichtiger Aspekt, welcher je nach Anwendungsfeld unterschiedlich ausgelegt wird, ist das Interagieren mit der virtuellen Welt, in der sich der Avatar befindet. Hierbei kann es zur Interaktion mit anderen Spieler-Avataren oder mit definierten Teilen der virtuellen Welt kommen. Die virtuelle Welt kann hierbei beispielsweise Möglichkeiten bieten, sich frei in einer dreidimensionalen Welt zu bewegen. 
+\par Die virtuelle Welt muss nicht zwangsweise dreidimensional ausfallen, sondern kann durch geschickte Konzipierung des Interface-Designs auch mit weniger hoher ausfallenden Freiheit den gewünschten Effekt erzielen.
+
+\par \bigskip \textbf{Zeitdruck, Aufgaben, Missionen}
+\par In \citep[Kapitel 6.1.1 Tasks]{pflanzl2018gamification} wird beschrieben, dass Aufgaben und Missionen im Kontext von Gamification Anwendungen eine sehr breit vertretene Variante von Spiel-Design-Elementen sind. 
+\par Sie können sehr gut mit anderen Elementen wie Level-Systemen kombiniert werden und lassen sich durch die hohe Individualisierbarkeit der Aufgabeninhalte im Rahmen des jeweiligen Anwendungskontext als ziel- oder weg-weisende Spiel-Elemente benutzen, welche sich weiterhin in direkter Form auf das reale Anwendungsfeld beziehen lassen.
+
+\par \bigskip \textbf{Gruppenaufgaben}
+\par Wie in \citep[Kapitel 6.1.1 Tasks]{pflanzl2018gamification} weiterhin beschrieben wird, stehen die Gruppenaufgaben, wie auch die Einzelaufgaben, für eine zu erfüllende Gesamtaufgabe. Eine Gruppenaufgabe hebt sich jedoch insofern ab, dass sie aus mehreren kleinen Aufgaben besteht, welche im Team gelöst werden sollen. Wie auch in den Team-Bestenlisten rückt bei Einsatz dieser Elemente die kooperative Ausführung von Aufgaben in den Vordergrund und soll so durch eine starke Teamidentifikation für eine erhöhte Motivation des einzelnen sorgen.
+
 \subsection{Nutzergruppen nach Bartle} \label{sub:nutzergruppenBartle}
-\par Nach Bartle \citep{bartle1996hearts} werden vier verschiedene Nutzertypen voneinander unterschieden, welche im folgenden kurz erläutert werden.
-\par Zudem werden den jeweils genannten Benutzergruppen die bekannten Spiel-Design Elemente ihrer Wirksamkeit bei der Steigerung der Motivation zugeordnet. (TODO)
+\par Nach Bartle \citep{bartle1996hearts} werden vier verschiedene Nutzertypen voneinander unterschieden, welche in vielen Gamification Literaturwerken als Grundlage oder zumindest als Orientierungsmöglichkeit referenziert werden. Diese verschiedenen Nutzerklassen werden im Folgenden kurz erläutert.
 
 \begin{itemize}
 \item \textbf{Der Killer}
-\par Die Killer legen den Fokus auf den Wettkampf und somit beruht ihre Motivationsquelle auf stark kompetitiv ausgeprägte Ursprünge. Sie fühlen sich dadurch motiviert, den Kontakt mit anderen Individuen im Rahmen eines Wettkampf zu überstehen und sich durch den eigenen Sieg gegenüber anderen Personen zu behaupten.
+\par Die Killer legen den Fokus auf den Wettkampf und somit beruht ihre Motivationsquelle auf stark kompetitiv ausgeprägte Ansätze. Sie fühlen sich dadurch motiviert, den Kontakt mit anderen Individuen im Rahmen eines Wettkampfes zu suchen und sich durch den eigenen Sieg gegenüber anderen Personen zu behaupten.
 
 \item \textbf{Der Socialiser}
-\par Die Gruppe der Socialiser sind immer auf der Suche nach sozialer Interaktivität. Ohne diese, können sie der Welt wenig bis keine Motivation abgewinnen. Die Spielwelt in der sie sich bewegen, ist vor allem nur der Mittel zum Zweck der Kommunikation. Der größte Stolz der Socialiser ist die Freundschaft und der Kontakt zu anderen Personen:
+\par Die Gruppe der Socialiser sind immer auf der Suche nach sozialer Interaktion. Ohne diese können sie der Spielwelt wenig bis keine Motivation abgewinnen. Die Spielwelt, in der sie sich bewegen, ist vor allem nur das Mittel zum Zweck der Kommunikation. Der größte Anreiz der Socialiser ist die Freundschaft und der Kontakt zu anderen Personen.
 
 \item \textbf{Der Achiever}
-\par Der Achiever ist im allgemeinen der Spielertyp, welcher sich auf das Erreichen von Leistungen konzentriert. Dieser wird so eingeschätzt, dass er die möglichst optimale geforderte Leistung erbringen will und er somit seine Motivation unter anderem auf das schrittweise Sammeln von Erfolgen und erfüllen von Aufgaben aufbaut.
+\par Der Achiever ist im Allgemeinen der Spielertyp, der sich auf das Erreichen von Leistungen konzentriert. Er wird so eingeschätzt, dass er die möglichst optimale geforderte Leistung erbringen will und er somit seine Motivation aus dem schrittweisen Sammeln von Erfolgen und dem Erfüllen von Aufgaben zieht.
 
+\newpage
 \item \textbf{Der Explorer}
-\par Die Explorer legen den Hauptfokus auf die Welt in der sie sich bewegen und möchten im Zusammenspiel mit dieser Spielwelt, durch immer wieder neu gestellte Aufgaben und erlebte Überraschungen alles entdecken, was es zu entdecken gibt. Sie sind sehr ambitioniert und empfinden Stolz für Ihr Wissen und Ihre Erfahrung in der Spielwelt. 
-\par Die Explorer haben vor allem Interesse an der Spielwelt, und weniger an den Personen, die sie im Laufe der Erkundung treffen.
+\par Die Explorer legen den Hauptfokus auf die Welt, in der sie sich bewegen und möchten im Zusammenspiel mit dieser Spielwelt durch immer wieder neu gestellte Aufgaben und erlebte Überraschungen alles entdecken, was es zu entdecken gibt. Sie sind sehr ambitioniert und empfinden Stolz für Ihr Wissen und Ihre Erfahrung in der Spielwelt. 
+\par Die Explorer haben vor allem Interesse an der Spielwelt und weniger an den Personen, die sie im Laufe der Erkundung treffen.
 \end{itemize}
+
+\par \bigskip Wie aus den Beschreibungen zu erkennen ist, entsteht bei der allgemeinen Betrachtung aller Benutzerklassen ein Spannungsfeld der Interessen, welches in Abbildung \ref{img:interetGraphBartle} verdeutlicht werden soll.
+\par \bigskip Das Spannungswelt wird weiterhin definiert durch die vier verschiedenen Interessenausprägungen Spieler (Players), die virtuelle Welt (World), das Handeln in dieser Welt (Acting) und das Interagieren mit der virtuellen Welt (Interacting).
 
 \begin{figure}[H]
 	\centering
@@ -212,6 +259,7 @@ Vergleiche \citep[Kapitel 2.2.2 Analyse einzelner Spiel-Design-Elemente]{Sailer2
 	\label{img:interetGraphBartle}
 \end{figure}
 
+\bigskip
 \chapter{Untersuchung des Problembereiches} \label{chap:problemanalyse}
 \par In dem folgenden Kapitel werden die Rahmenbedingungen und die Analysestrategie zu den durchgeführten Befragungen von Professoren und Studierenden, aus dem Studiengang Informatik/Softwaretechnik der Fachhochschule Lübeck, dargestellt und die daraus resultierenden Ergebnisse und Erkenntnisse beider Seiten in zusammengefasster Form beschrieben. 
 \par Weiterhin stellt die Diskussion dieser Ergebnisse und die aus den durchgeführten Befragungen abgeleiteten Anforderungen, an die zu entwickelnde Software, das Produkt der Anforderungsanalyse und somit den Ausgangspunkt für die gesamte Arbeit dar.
@@ -1323,11 +1371,11 @@ class EditMilestoneAction {
 \label{sec:reducer}
 \par Die verschiedenen Reducer Funktionen werden tragen die eigentliche Aufgabe der Datenmanipulation und Verwaltung. In diesen Komponenten passieren die entscheidenden Änderungen am aktuellen Zustand der Applikation.
 
-\subsection{Der App-Reducer}
+\subsection{App-Reducer}
 \par Der App Reducer ist die Top-Funktion der Reducer, welche nach jeder durchgeführten Action einen neuen Zustand der Applikation generiert. Jedes Datenfeld des aktuellen Zustands wird in diesem Rahmen durch die Delegation an untergeordnete Reducer Funktionen neu generiert. Dabei wird immer der aktuelle Zustand des Systems sowie die in der Action-Klasse enthaltenen Informationen übergeben.
 \par \medskip Im folgenden Verlauf wird dieser Ablauf an einem repräsentativen Beispiel verdeutlicht.
 
-\subsection{Beispielhafte Demonstration einer Meilensteinbearbeitung}
+\subsection{Beispielhafte Demonstration eines Meilenstein Reducers}
 
 \par Innerhalb der von dem AppReducer aufgerufenen updateMilestones Funktion (siehe Abbildung \ref{lst:milestoneReducer}), wird überprüft, um welche Action es sich handelt. Sollte es sich um keine der angegebenen Actions handeln, so wird der aktuell existierende Zustand unverändert zurückgegeben (vgl. Zeile \ref{lstNum:returnCurrentMilestones}). Sollte die Action jedoch übereinstimmen, so wird anschließend die jeweils definierte Folge von Befehlen ausgeführt und der neue Zustand der jeweiligen Daten zurückgegeben (vgl. Zeile \ref{lstNum:returnNewMilestones}).
 
