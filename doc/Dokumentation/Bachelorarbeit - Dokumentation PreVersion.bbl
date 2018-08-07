@@ -40,6 +40,19 @@
     \field{title}{Anleitung zum Erstellen einer Abschlussarbeit}
   \endentry
 
+  \entry{AnouncingFlutterBeta}{manual}{}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{Ano}
+    \field{sortinit}{A}
+    \field{sortinithash}{A}
+    \field{title}{Announcing Flutter beta 1: Build beautiful native apps}
+    \verb{url}
+    \verb https://developers.googleblog.com/2018/02/announcing-flutter-beta-1.h
+    \verb tml
+    \endverb
+    \field{year}{Februar 27, 2018 (Zugriff Juni 3, 2018)}
+  \endentry
+
   \entry{Balzert2010}{book}{}
     \name{author}{1}{}{%
       {{hash=BH}{%
@@ -194,13 +207,40 @@
     \field{year}{(Zugriff Juni 3, 2018)}
   \endentry
 
-  \entry{Flu6}{manual}{}
+  \entry{FlutterBuildingLayouts}{manual}{}
     \field{labeltitlesource}{title}
     \field{labelalpha}{Flu}
     \field{extraalpha}{2}
     \field{sortinit}{F}
     \field{sortinithash}{F}
-    \field{title}{Foundation Libaryn}
+    \field{title}{Building Layouts in Flutter}
+    \verb{url}
+    \verb https://flutter.io/tutorials/layout/
+    \endverb
+    \field{year}{Februar 27, 2018 (Zugriff Juni 3, 2018)}
+  \endentry
+
+  \entry{Flu5}{manual}{}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{Flu}
+    \field{extraalpha}{3}
+    \field{sortinit}{F}
+    \field{sortinithash}{F}
+    \field{title}{Flutter System Architecture}
+    \verb{url}
+    \verb https://docs.google.com/presentation/d/1cw7A4HbvM_Abv320rVgPVGiUP2msV
+    \verb s7tfGbkgdrTy0I/edit#slide=id.p
+    \endverb
+    \field{year}{April 23, 2017 (Zugriff Juni 3, 2018)}
+  \endentry
+
+  \entry{Flu6}{manual}{}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{Flu}
+    \field{extraalpha}{4}
+    \field{sortinit}{F}
+    \field{sortinithash}{F}
+    \field{title}{Foundation Libary}
     \verb{url}
     \verb https://docs.flutter.io/flutter/foundation/foundation-library.html
     \endverb
@@ -210,7 +250,7 @@
   \entry{Flu2}{manual}{}
     \field{labeltitlesource}{title}
     \field{labelalpha}{Flu}
-    \field{extraalpha}{3}
+    \field{extraalpha}{5}
     \field{sortinit}{F}
     \field{sortinithash}{F}
     \field{title}{Introduction}
@@ -223,7 +263,7 @@
   \entry{Flu7}{manual}{}
     \field{labeltitlesource}{title}
     \field{labelalpha}{Flu}
-    \field{extraalpha}{4}
+    \field{extraalpha}{6}
     \field{sortinit}{F}
     \field{sortinithash}{F}
     \field{title}{Material Components Widgets}
@@ -233,10 +273,10 @@
     \field{year}{(Zugriff Juni 3, 2018)}
   \endentry
 
-  \entry{Flu5}{manual}{}
+  \entry{Flu8}{manual}{}
     \field{labeltitlesource}{title}
     \field{labelalpha}{Flu}
-    \field{extraalpha}{5}
+    \field{extraalpha}{7}
     \field{sortinit}{F}
     \field{sortinithash}{F}
     \field{title}{Technical Overview}
@@ -249,12 +289,12 @@
   \entry{Flu3}{manual}{}
     \field{labeltitlesource}{title}
     \field{labelalpha}{Flu}
-    \field{extraalpha}{6}
+    \field{extraalpha}{8}
     \field{sortinit}{F}
     \field{sortinithash}{F}
     \field{title}{Technology}
     \verb{url}
-    \verb https://flutter.io/faq/#what-technology-is-flutter-built-with
+    \verb https://flutter.io/faq/
     \endverb
     \field{year}{(Zugriff Juni 3, 2018)}
   \endentry
@@ -262,12 +302,49 @@
   \entry{Flu4}{manual}{}
     \field{labeltitlesource}{title}
     \field{labelalpha}{Flu}
-    \field{extraalpha}{7}
+    \field{extraalpha}{9}
     \field{sortinit}{F}
     \field{sortinithash}{F}
     \field{title}{Welcome to the Engine Wiki}
     \verb{url}
     \verb https://github.com/flutter/engine/wiki
+    \endverb
+    \field{year}{(Zugriff Juni 3, 2018)}
+  \endentry
+
+  \entry{FoundationLibary}{manual}{}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{Fou}
+    \field{sortinit}{F}
+    \field{sortinithash}{F}
+    \field{title}{Foundation Libary}
+    \verb{url}
+    \verb https://docs.flutter.io/flutter/foundation/foundation-library.html
+    \endverb
+    \field{year}{(Zugriff August 6, 2018)}
+  \endentry
+
+  \entry{HackernoonFlutterArcticle}{manual}{}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{Hac}
+    \field{sortinit}{H}
+    \field{sortinithash}{H}
+    \field{title}{What’s Revolutionary about Flutter}
+    \verb{url}
+    \verb https://hackernoon.com/whats-revolutionary-about-flutter-946915b09514
+    \endverb
+    \field{year}{(Zugriff Juni 3, 2018)}
+  \endentry
+
+  \entry{iOSDesign}{manual}{}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{Ios}
+    \field{sortinit}{I}
+    \field{sortinithash}{I}
+    \field{title}{iOS Design Themes}
+    \verb{url}
+    \verb https://developer.apple.com/design/human-interface-guidelines/ios/ove
+    \verb rview/themes/
     \endverb
     \field{year}{(Zugriff Juni 3, 2018)}
   \endentry
@@ -401,6 +478,18 @@
     \field{title}{Do points, levels and leaderboards harm intrinsic
   motivation?: an empirical analysis of common gamification elements}
     \field{year}{2013}
+  \endentry
+
+  \entry{MobileWordCongress}{manual}{}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{Mob}
+    \field{sortinit}{M}
+    \field{sortinithash}{M}
+    \field{title}{Mobile World Congress}
+    \verb{url}
+    \verb https://www.mobileworldcongress.com/about/
+    \endverb
+    \field{year}{(Zugriff August 6, 2018)}
   \endentry
 
   \entry{pflanzl2018gamification}{book}{}

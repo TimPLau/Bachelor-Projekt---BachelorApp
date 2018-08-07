@@ -134,25 +134,100 @@ Abschließend folgt im Kapitel \ref{chap:ergebnisse} eine Zusammenfassung der er
 
 \chapter{Beschreibung der Kernkomponenten} \label{chap:grundlagenkapitel}
 
-\section{Vorstellung des Frameworks Flutter}
-Flutter ist ein von Google entwickeltes opensource Framework, welches auf die Entwicklung mobiler 2D-Applikationen für Android- und iOS-Betriebssysteme ausgelegt ist. Beworben wird Flutter durch das Hervorheben der Einfachheit der Benutzung, die schnell zu erreichenden Fortschritte bei der Implementierung von Softwarefunktionen, sowie den Gestaltungsmöglichkeiten der Benutzeroberfläche und den hochqualitativen Ergebnissen.
+\section{Vorstellung des Flutter Frameworks}
+\par Flutter ist ein von Google entwickeltes open-source Framework, welches auf die Entwicklung mobiler 2D-Applikationen für Android- und iOS-Betriebssysteme ausgelegt ist. 
+\par \medskip Beworben wird Flutter seit der Ankündigung der Flutter Beta Version durch einen offiziellen Blogeintrag der \textbf{Google Developers}\citep{AnouncingFlutterBeta} im Rahmen des \textbf{Mobile World Congess 2018}\citep{MobileWordCongress}, durch die besonders flexibel handhabbare und mit Leichtigkeit umzusetzende Gestaltung und Kombination von User-Interfaces und Softwarefunktionalität und die in diesem Rahmen extrem hoch zu erwartende Qualität der Ergebnisse und der optimierten Laufzeitperformance. 
 
-\subsection{Flutter Systemarchitektur} 
-Das Flutter Framework besteht aus drei verschiedenen Basiskomponenten, welche im folgenden Abschnitt kurz erläutert werden.
-\begin{itemize}
-\item{\textbf{Flutter Engine}}
+\par \medskip Im folgenden Kapitel werden die Kernprinzipien des Frameworks erläutert und die framework-spezifischen Besonderheiten beschrieben, um einen Eindruck von dem Framework zu bekommen und die grundsätzliche Funktionsweise nachvollziehen zu können.
 
-Die C/C++ basierte Flutter Engine, setzt sich aus verschiedenen Kerntechnologien zusammen. Zum einen die open source 2D Graphics Libary Skia\citep{Skia1}, welche seit 2005 zu Google gehört und zum anderen die Dart Virtual Machine.
-\item{\textbf{Foundation Libary}}
+\subsection{Flutter Kerntechnologien} 
+Das Flutter Framework besteht aus verschiedenen Basiskomponenten, welche aus aufeinander aufbauenden Systemschichten bestehen (siehe Abbildung \ref{img:flutterHighLevelSystemOverview}) und sich auf oberster Abstaktionsebene auf die Flutter Engine und das Flutter Framework unterteilen lassen.
 
-Die Foundation Libary, welche in Dart geschrieben wurde, stellt Basisklassen und -funktionen zur Verfügung und dient der Konstruktion von Applikationen mittels Flutter
-\item{\textbf{Design-specific Widgets}}
+\par \medskip Im folgenden Abschnitt werden die drei Basistechnologien von Flutter kurz beschrieben:
 
-Das Flutter Framework stellt zwei verschiedene Arten von Widgets zur Verfügung, welche zugehörig zu den jeweiligen Design Sprachen von Google Material Design\citep{Mat1}, welche 2014 entwickelt wurde und die iOS Design kopierende Design Sprache Cupertino\citep{Cup1}.
-\end{itemize}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\textwidth, keepaspectratio]{Bilder/highLevelOverview.png}
+	\caption{Flutter High-Level Systemarchitektur \cite{Flu5}}
+	\label{img:flutterHighLevelSystemOverview}
+\end{figure}
 
-		...
-\section{Redux-Architektur}
+\newpage
+\par \bigskip \textbf{Flutter Engine}
+\par Wie in dem Flutter Wiki \citep{Flu4} beschrieben wird, setzt sich die C/C++ basierte Flutter Engine aus den drei Kerntechnologien Skia\citep{Skia1}, eine open source 2D Graphics Libary, die Dart Virtual Machine sowie die verschiedene verwendeten Bibliotheken zum Rendern von Texten zusammen.
+
+\par \bigskip \textbf{Foundation Libary}
+\par Die Dart basierte Foundation Libary\citep{FoundationLibary} stellt Basisklassen und -funktionen zur Verfügung, welche von den anderen in der Flutter Architektur überliegenden Schichten genutzt werden (siehe Abbildung \ref{img:flutterHighLevelSystemOverview}) und stellt somit eine zentralen Grundlage bei der Konstruktion von Applikationen mittels dem Flutter Framework dar.
+
+\par \bigskip \textbf{Design-specific Widgets}
+\par Das Flutter Framework stellt zwei verschiedene Design-Stile der Widgets zur Verfügung, welche den jeweiligen Design Sprachen von \textbf{Google Material Design}\citep{Mat1}, welche 2014 entwickelt wurde sowie die \textbf{iOS Design}\citep{iOSDesign} kopierende Design Sprache \textbf{Cupertino}\citep{Cup1} entsprechen.
+
+\subsection{Plattformübergreifende Entwicklung von mobilen Applikationen}
+\par Flutter ermöglicht das plattform-unabhängige Entwickeln von mobilen Applikationen für Android- und iOS-Betriebssystemen und verarbeitet Oberflächen-spezifische Darstellungsformen der jeweiligen Zielplattformen, Framework-intern. Dies bedeutet, dass zum Zeitpunkt der Entwicklung auf extrem abstrakter Ebene ein Zielplattform-unabhängiges Oberflächendesign konzipiert werden kann, da die Plattform-spezifischen Darstellungsweisen von dem Framework selbst gelöst werden und von den jeweiligen Entwicklern nicht berücksichtigt werden muss. 
+\par \bigskip Hinweis: Die in Abbildung \ref{img:FlutterVisualisierungiOSAndoid} gezeigten Oberflächen, entstammen dem selben Programmcode.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.55\textwidth, keepaspectratio]{Bilder/PlattformUebergreifendDesign.png}
+	\caption{Darstellung (Android und iOS): Plattformunabhängige Entwicklung von Applikationen \cite[What is Flutter?]{Flu8}}
+	\label{img:FlutterVisualisierungiOSAndoid}
+\end{figure}
+
+\newpage
+\subsection{Hot-Reload Funktion}
+\par Die sogenannte \grqq Hot Reload\grqq -Funktion spielt im Rahmen der App Entwicklung mit Flutter eine primäre Rolle, da bei Änderungen an der Oberfläche während der Laufzeit ermöglicht wird innerhalb von \grqq Millisekunden\grqq{} die Oberfläche neu zu generieren und das System dabei den internen Zustand beibehält. Diese Funktion soll eine schnelle und experimentelle Vorgehensweise ermöglichen.\citep{Flu1}
+
+\subsection{Flutter Widgets}
+\par Alle User-Interface Grundbausteine in Flutter werden als sogenannte Widgets bezeichnet und dementsprechend gleich behandelt(\cite[vgl. Everything’s a Widget]{Flu5}). Diese Grundbausteine stellen die jeweiligen Design- und Interaktions-Elemente der Applikation dar und umfassen verschieden spezialisierte Ausprägungen wie in Abbildung \ref{img:FlutterWidgetButtonSectionExample} beispielhaft zu sehen ist.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\textwidth, keepaspectratio]{Bilder/FlutterWidgetButtonSectionExample.png}
+	\caption{Beispiel: Aufbau von Widgets  \cite{FlutterBuildingLayouts}}
+	\label{img:FlutterWidgetButtonSectionExample}
+\end{figure}
+
+\par \medskip Ein in dem Artikel \citep[Widgets]{HackernoonFlutterArcticle} beschriebener wichtiger Aspekt ist, dass Flutter im Gegensatz zu anderen Alternativen eine eigene erstellte Systemschnittstellen-Architektur besitzt und nicht auf OEM-Widgets oder DOM-Web Views zurückgreift, wie in Abbildung \ref{img:hackernoonFlutterArcticleArchitecture} verdeutlicht wird. Dies ermöglicht eine extrem freie Handhabung und Individualisierung im Umgang mit den Widgets und Plattform spezifischen Diensten.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\textwidth, keepaspectratio]{Bilder/WidgetsFlutterArchitecture.png}
+	\caption{Flutter Widgets Architektur \cite{HackernoonFlutterArcticle}}
+	\label{img:hackernoonFlutterArcticleArchitecture}
+\end{figure}
+
+\par \medskip Diese Widgets bilden zur Laufzeit eine hierarchische Struktur und setzen sich selbst aus weiteren Widgets zusammen. Somit ist der Ursprung einer jeden Programm Oberfläche ein Wurzel-Widget, welches wiederum Kinder-Widgets enthält und diese somit über mehrere Ebenen eine Gesamtkomposition bilden, den sogenannten \textbf{Widget Tree}. 
+
+\par \medskip Diese Widgets können je nach Ausprägung strukturierende Elemente, wie Beispielsweise Spalten, Zeilen oder andere Layout-Strukturen oder auch Stil-definierende Elemente, wie Farbdefinitionen oder Elemente, welche die Interaktion mit dem Benutzer ermöglichen, wie beispielsweise Buttons und Textfelder, und noch viele weitere Elemente mit unterschiedlichen Eigenschaften darstellen.
+
+\subsection{Flutter UI Rendering}
+\par Flutter verwendet im Gegensatz zu anderen Alternativen nach eigener Aussage eine selbst entwickelte und optimierte Rendering-Engine welche die Benutzeroberfläche nach einer Veränderung des aktuellen Status neu generiert, und diese Veränderung dem Benutzer darstellt (vlg. \citep[What makes Flutter unique?]{Flu3}). Die folgende Abbildung \ref{img:flutterHighLevelRendering} stellt einen solchen Ablauf dar.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\textwidth, keepaspectratio]{Bilder/FlutterRendering.png}
+	\caption{Flutter Rendering \cite{Flu5}}
+	\label{img:flutterHighLevelRendering}
+\end{figure}
+
+\par Sollte sich der aktuelle Zustand der Applikation beispielsweise durch eine Benutzeraktion verändern, so werden die ,in der Baumstruktur vorhandenen Widgets, neu generiert, deren Eigenschaften aktualisiert und dem Benutzer letztendlich angezeigt.
+	
+
+		
+\newpage		
+\section{Was ist Redux?}
+\par 
+
+\subsection{Komponenten einer Redux-Architektur}
+\par 
+
+\subsection{Datenfluss einer Redux-Architektur}
+\par 
+
+\subsection{Beschreibung der Flutter Redux Libary}
+\par 
+
+
 \newpage
 \section{Gamification} \label{sec:grundlagenkapitelGamification}
 \par In dem folgenden Kapitel werden für diese Arbeit relevante Informationen zu dem Thema Gamification vermittelt. Die dabei gewählte Grundlagenliteratur setzt sich sowohl aus länger bestehenden Werken, als auch, aufgrund der aktuell anhaltenden Relevanz, aktuelleren Werken zusammen.
@@ -254,7 +329,7 @@ beschreiben, sobald Spiel-Design-Elemente in den spezifischen Kontext integriert
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.85\textwidth, keepaspectratio]{Bilder/Diagramme/InterestGraphBartle.png}
+	\includegraphics[width=0.8\textwidth, keepaspectratio]{Bilder/Diagramme/InterestGraphBartle.png}
 	\caption{Interest Graph nach Bartle \cite{bartle1996hearts}}
 	\label{img:interetGraphBartle}
 \end{figure}
@@ -274,7 +349,7 @@ Trotz des Verlaufs des Studiums, des angeeigneten Wissens und der somit zahlreic
 
 \medskip
 \begin{center}
-\scalebox{0.70}{
+\scalebox{0.8}{
 \begin{tabularx}{15cm}{l|l|l|X|X}
 \toprule
 \textbf{Bezeichnung} 
@@ -1138,7 +1213,7 @@ Studierende die zur Überplanung neigen, würden diese auch ohne Applikation dur
 
 \section{Architekturübersicht}
 \par Aufgrund der Vorzüge einer konsequenten zentralen Verwaltung des Zustands der Applikation, welche in diesem Rahmen auch mit einer komfortablen Wartbarkeit und den strikt getrennten und auf diese Weise auch eindeutig nachverfolgbaren Datenflüssen und Operationen einhergeht, wurde eine Architektur konstruiert, welche sich an dem Redux-Architekturmuster orientiert (siehe TODO GRUNDLAGEN). 
-\par Die folgende Grafik soll in vereinfachter Form verdeutlichen, wie die verschiedenen Komponenten der gewählten Architektur hinsichtlich des Aufbaus und des Datenflusses zueinander in Beziehung stehen. Die detaillierte Beschreibung der einzelnen Komponenten folgt in Kapitel \ref{komponentenDetails}.
+\par Die folgende Grafik soll in vereinfachter Form verdeutlichen, wie die verschiedenen Komponenten der gewählten Architektur hinsichtlich des Aufbaus und des Datenflusses zueinander in Beziehung stehen. Die detaillierte Beschreibung der einzelnen Komponenten folgt in Kapitel \ref{sec:komponentenDetails}.
 
 \par \bigskip \textbf{Model}
 \par Die Model Komponenten stellen den aktuellen internen Zustand des Systems dar und enthalten somit in erster Linie die hierfür verwendeten Objekt-Klassen.
