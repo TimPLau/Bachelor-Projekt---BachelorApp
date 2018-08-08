@@ -132,107 +132,13 @@ Die Nachweisführung der Softwareanforderungen, der Usability-Anforderungen, sow
 Abschließend folgt im Kapitel \ref{chap:ergebnisse} eine Zusammenfassung der erreichten Ergebnisse und eine Reflexion der Teilschritte, sowie die Abschlussbetrachtung des gesamten Projekts.
 
 
-\chapter{Beschreibung der Kernkomponenten} \label{chap:grundlagenkapitel}
-
-\section{Vorstellung des Flutter Frameworks}
-\par Flutter ist ein von Google entwickeltes open-source Framework, welches auf die Entwicklung mobiler 2D-Applikationen für Android- und iOS-Betriebssysteme ausgelegt ist. 
-\par \medskip Beworben wird Flutter seit der Ankündigung der Flutter Beta Version durch einen offiziellen Blogeintrag der \textbf{Google Developers}\citep{AnouncingFlutterBeta} im Rahmen des \textbf{Mobile World Congess 2018}\citep{MobileWordCongress}, durch die besonders flexibel handhabbare und mit Leichtigkeit umzusetzende Gestaltung und Kombination von User-Interfaces und Softwarefunktionalität und die in diesem Rahmen extrem hoch zu erwartende Qualität der Ergebnisse und der optimierten Laufzeitperformance. 
-
-\par \medskip Im folgenden Kapitel werden die Kernprinzipien des Frameworks erläutert und die framework-spezifischen Besonderheiten beschrieben, um einen Eindruck von dem Framework zu bekommen und die grundsätzliche Funktionsweise nachvollziehen zu können.
-
-\subsection{Flutter Kerntechnologien} 
-Das Flutter Framework besteht aus verschiedenen Basiskomponenten, welche aus aufeinander aufbauenden Systemschichten bestehen (siehe Abbildung \ref{img:flutterHighLevelSystemOverview}) und sich auf oberster Abstaktionsebene auf die Flutter Engine und das Flutter Framework unterteilen lassen.
-
-\par \medskip Im folgenden Abschnitt werden die drei Basistechnologien von Flutter kurz beschrieben:
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.8\textwidth, keepaspectratio]{Bilder/highLevelOverview.png}
-	\caption{Flutter High-Level Systemarchitektur \cite{Flu5}}
-	\label{img:flutterHighLevelSystemOverview}
-\end{figure}
-
-\newpage
-\par \bigskip \textbf{Flutter Engine}
-\par Wie in dem Flutter Wiki \citep{Flu4} beschrieben wird, setzt sich die C/C++ basierte Flutter Engine aus den drei Kerntechnologien Skia\citep{Skia1}, eine open source 2D Graphics Libary, die Dart Virtual Machine sowie die verschiedene verwendeten Bibliotheken zum Rendern von Texten zusammen.
-
-\par \bigskip \textbf{Foundation Libary}
-\par Die Dart basierte Foundation Libary\citep{FoundationLibary} stellt Basisklassen und -funktionen zur Verfügung, welche von den anderen in der Flutter Architektur überliegenden Schichten genutzt werden (siehe Abbildung \ref{img:flutterHighLevelSystemOverview}) und stellt somit eine zentralen Grundlage bei der Konstruktion von Applikationen mittels dem Flutter Framework dar.
-
-\par \bigskip \textbf{Design-specific Widgets}
-\par Das Flutter Framework stellt zwei verschiedene Design-Stile der Widgets zur Verfügung, welche den jeweiligen Design Sprachen von \textbf{Google Material Design}\citep{Mat1}, welche 2014 entwickelt wurde sowie die \textbf{iOS Design}\citep{iOSDesign} kopierende Design Sprache \textbf{Cupertino}\citep{Cup1} entsprechen.
-
-\subsection{Plattformübergreifende Entwicklung von mobilen Applikationen}
-\par Flutter ermöglicht das plattform-unabhängige Entwickeln von mobilen Applikationen für Android- und iOS-Betriebssystemen und verarbeitet Oberflächen-spezifische Darstellungsformen der jeweiligen Zielplattformen, Framework-intern. Dies bedeutet, dass zum Zeitpunkt der Entwicklung auf extrem abstrakter Ebene ein Zielplattform-unabhängiges Oberflächendesign konzipiert werden kann, da die Plattform-spezifischen Darstellungsweisen von dem Framework selbst gelöst werden und von den jeweiligen Entwicklern nicht berücksichtigt werden muss. 
-\par \bigskip Hinweis: Die in Abbildung \ref{img:FlutterVisualisierungiOSAndoid} gezeigten Oberflächen, entstammen dem selben Programmcode.
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.55\textwidth, keepaspectratio]{Bilder/PlattformUebergreifendDesign.png}
-	\caption{Darstellung (Android und iOS): Plattformunabhängige Entwicklung von Applikationen \cite[What is Flutter?]{Flu8}}
-	\label{img:FlutterVisualisierungiOSAndoid}
-\end{figure}
-
-\newpage
-\subsection{Hot-Reload Funktion}
-\par Die sogenannte \grqq Hot Reload\grqq -Funktion spielt im Rahmen der App Entwicklung mit Flutter eine primäre Rolle, da bei Änderungen an der Oberfläche während der Laufzeit ermöglicht wird innerhalb von \grqq Millisekunden\grqq{} die Oberfläche neu zu generieren und das System dabei den internen Zustand beibehält. Diese Funktion soll eine schnelle und experimentelle Vorgehensweise ermöglichen.\citep{Flu1}
-
-\subsection{Flutter Widgets}
-\par Alle User-Interface Grundbausteine in Flutter werden als sogenannte Widgets bezeichnet und dementsprechend gleich behandelt(\cite[vgl. Everything’s a Widget]{Flu5}). Diese Grundbausteine stellen die jeweiligen Design- und Interaktions-Elemente der Applikation dar und umfassen verschieden spezialisierte Ausprägungen wie in Abbildung \ref{img:FlutterWidgetButtonSectionExample} beispielhaft zu sehen ist.
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.8\textwidth, keepaspectratio]{Bilder/FlutterWidgetButtonSectionExample.png}
-	\caption{Beispiel: Aufbau von Widgets  \cite{FlutterBuildingLayouts}}
-	\label{img:FlutterWidgetButtonSectionExample}
-\end{figure}
-
-\par \medskip Ein in dem Artikel \citep[Widgets]{HackernoonFlutterArcticle} beschriebener wichtiger Aspekt ist, dass Flutter im Gegensatz zu anderen Alternativen eine eigene erstellte Systemschnittstellen-Architektur besitzt und nicht auf OEM-Widgets oder DOM-Web Views zurückgreift, wie in Abbildung \ref{img:hackernoonFlutterArcticleArchitecture} verdeutlicht wird. Dies ermöglicht eine extrem freie Handhabung und Individualisierung im Umgang mit den Widgets und Plattform spezifischen Diensten.
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.8\textwidth, keepaspectratio]{Bilder/WidgetsFlutterArchitecture.png}
-	\caption{Flutter Widgets Architektur \cite{HackernoonFlutterArcticle}}
-	\label{img:hackernoonFlutterArcticleArchitecture}
-\end{figure}
-
-\par \medskip Diese Widgets bilden zur Laufzeit eine hierarchische Struktur und setzen sich selbst aus weiteren Widgets zusammen. Somit ist der Ursprung einer jeden Programm Oberfläche ein Wurzel-Widget, welches wiederum Kinder-Widgets enthält und diese somit über mehrere Ebenen eine Gesamtkomposition bilden, den sogenannten \textbf{Widget Tree}. 
-
-\par \medskip Diese Widgets können je nach Ausprägung strukturierende Elemente, wie Beispielsweise Spalten, Zeilen oder andere Layout-Strukturen oder auch Stil-definierende Elemente, wie Farbdefinitionen oder Elemente, welche die Interaktion mit dem Benutzer ermöglichen, wie beispielsweise Buttons und Textfelder, und noch viele weitere Elemente mit unterschiedlichen Eigenschaften darstellen.
-
-\subsection{Flutter UI Rendering}
-\par Flutter verwendet im Gegensatz zu anderen Alternativen nach eigener Aussage eine selbst entwickelte und optimierte Rendering-Engine welche die Benutzeroberfläche nach einer Veränderung des aktuellen Status neu generiert, und diese Veränderung dem Benutzer darstellt (vlg. \citep[What makes Flutter unique?]{Flu3}). Die folgende Abbildung \ref{img:flutterHighLevelRendering} stellt einen solchen Ablauf dar.
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.8\textwidth, keepaspectratio]{Bilder/FlutterRendering.png}
-	\caption{Flutter Rendering \cite{Flu5}}
-	\label{img:flutterHighLevelRendering}
-\end{figure}
-
-\par Sollte sich der aktuelle Zustand der Applikation beispielsweise durch eine Benutzeraktion verändern, so werden die ,in der Baumstruktur vorhandenen Widgets, neu generiert, deren Eigenschaften aktualisiert und dem Benutzer letztendlich angezeigt.
-	
-
-		
-\newpage		
-\section{Was ist Redux?}
-\par 
-
-\subsection{Komponenten einer Redux-Architektur}
-\par 
-
-\subsection{Datenfluss einer Redux-Architektur}
-\par 
-
-\subsection{Beschreibung der Flutter Redux Libary}
-\par 
-
-
-\newpage
-\section{Gamification} \label{sec:grundlagenkapitelGamification}
+\chapter{Beschreibung der Kernkomponenten} 
+\label{chap:grundlagenkapitel}
+\section{Gamification} 
+\label{sec:grundlagenkapitelGamification}
 \par In dem folgenden Kapitel werden für diese Arbeit relevante Informationen zu dem Thema Gamification vermittelt. Die dabei gewählte Grundlagenliteratur setzt sich sowohl aus länger bestehenden Werken, als auch, aufgrund der aktuell anhaltenden Relevanz, aktuelleren Werken zusammen.
 
-\subsection{Die heutige Bedeutung von Gamification}
+\subsection{Die Bedeutung von Gamification}
 \par Im Kontext dieser Ausarbeitung wird sich auf die folgende Definition für den Begriff \grqq Gamification\grqq bezogen (vgl. \citep{deterding2011gamification}): 
 \begin{quotation} 
 Gamification is the use of elements of game design in non-game contexts. 
@@ -333,6 +239,134 @@ beschreiben, sobald Spiel-Design-Elemente in den spezifischen Kontext integriert
 	\caption{Interest Graph nach Bartle \cite{bartle1996hearts}}
 	\label{img:interetGraphBartle}
 \end{figure}
+
+\newpage
+\section{Vorstellung des Flutter Frameworks}
+\par Flutter ist ein von Google entwickeltes open-source Framework, welches auf die Entwicklung mobiler 2D-Applikationen für Android- und iOS-Betriebssysteme ausgelegt ist. 
+\par \medskip Beworben wird Flutter seit der Ankündigung der Flutter Beta Version durch einen offiziellen Blogeintrag der \textbf{Google Developers}\citep{AnouncingFlutterBeta} im Rahmen des \textbf{Mobile World Congess 2018}\citep{MobileWordCongress}, durch die besonders flexibel handhabbare und mit Leichtigkeit umzusetzende Gestaltung und Kombination von User-Interfaces und Softwarefunktionalität und die in diesem Rahmen extrem hoch zu erwartende Qualität der Ergebnisse und der optimierten Laufzeitperformance. 
+
+\par \medskip Im folgenden Kapitel werden die Kernprinzipien des Frameworks erläutert und die framework-spezifischen Besonderheiten beschrieben, um einen Eindruck von dem Framework zu bekommen und die grundsätzliche Funktionsweise nachvollziehen zu können.
+
+\subsection{Flutter Kerntechnologien} 
+Das Flutter Framework besteht aus verschiedenen Basiskomponenten, welche aus aufeinander aufbauenden Systemschichten bestehen (siehe Abbildung \ref{img:flutterHighLevelSystemOverview}) und sich auf oberster Abstaktionsebene auf die Flutter Engine und das Flutter Framework unterteilen lassen.
+
+\par \medskip Im folgenden Abschnitt werden die drei Basistechnologien von Flutter kurz beschrieben:
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\textwidth, keepaspectratio]{Bilder/highLevelOverview.png}
+	\caption{Flutter High-Level Systemarchitektur \cite{Flu5}}
+	\label{img:flutterHighLevelSystemOverview}
+\end{figure}
+
+\newpage
+\par \bigskip \textbf{Flutter Engine}
+\par Wie in dem Flutter Wiki \citep{Flu4} beschrieben wird, setzt sich die C/C++ basierte Flutter Engine aus den drei Kerntechnologien Skia\citep{Skia1}, eine open source 2D Graphics Libary, die Dart Virtual Machine sowie die verschiedene verwendeten Bibliotheken zum Rendern von Texten zusammen.
+
+\par \bigskip \textbf{Foundation Libary}
+\par Die Dart basierte Foundation Libary\citep{FoundationLibary} stellt Basisklassen und -funktionen zur Verfügung, welche von den anderen in der Flutter Architektur überliegenden Schichten genutzt werden (siehe Abbildung \ref{img:flutterHighLevelSystemOverview}) und stellt somit eine zentralen Grundlage bei der Konstruktion von Applikationen mittels dem Flutter Framework dar.
+
+\par \bigskip \textbf{Design-specific Widgets}
+\par Das Flutter Framework stellt zwei verschiedene Design-Stile der Widgets zur Verfügung, welche den jeweiligen Design Sprachen von \textbf{Google Material Design}\citep{Mat1}, welche 2014 entwickelt wurde sowie die \textbf{iOS Design}\citep{iOSDesign} kopierende Design Sprache \textbf{Cupertino}\citep{Cup1} entsprechen.
+
+\subsection{Plattformübergreifende Entwicklung von mobilen Applikationen}
+\par Flutter ermöglicht das plattform-unabhängige Entwickeln von mobilen Applikationen für Android- und iOS-Betriebssystemen und verarbeitet Oberflächen-spezifische Darstellungsformen der jeweiligen Zielplattformen, Framework-intern. Dies bedeutet, dass zum Zeitpunkt der Entwicklung auf extrem abstrakter Ebene ein Zielplattform-unabhängiges Oberflächendesign konzipiert werden kann, da die Plattform-spezifischen Darstellungsweisen von dem Framework selbst gelöst werden und von den jeweiligen Entwicklern nicht berücksichtigt werden muss. 
+\par \bigskip Hinweis: Die in Abbildung \ref{img:FlutterVisualisierungiOSAndoid} gezeigten Oberflächen, entstammen dem selben Programmcode.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.55\textwidth, keepaspectratio]{Bilder/PlattformUebergreifendDesign.png}
+	\caption{Darstellung (Android und iOS): Plattformunabhängige Entwicklung von Applikationen \cite[What is Flutter?]{Flu8}}
+	\label{img:FlutterVisualisierungiOSAndoid}
+\end{figure}
+
+\newpage
+\subsection{Hot-Reload Funktion}
+\par Die sogenannte \grqq Hot Reload\grqq -Funktion spielt im Rahmen der App Entwicklung mit Flutter eine primäre Rolle, da bei Änderungen an der Oberfläche während der Laufzeit ermöglicht wird innerhalb von \grqq Millisekunden\grqq{} die Oberfläche neu zu generieren und das System dabei den internen Zustand beibehält. Diese Funktion soll eine schnelle und experimentelle Vorgehensweise ermöglichen.\citep{Flu1}
+
+\subsection{Flutter Widgets}
+\par Alle User-Interface Grundbausteine in Flutter werden als sogenannte Widgets bezeichnet und dementsprechend gleich behandelt(\cite[vgl. Everything’s a Widget]{Flu5}). Diese Grundbausteine stellen die jeweiligen Design- und Interaktions-Elemente der Applikation dar und umfassen verschieden spezialisierte Ausprägungen wie in Abbildung \ref{img:FlutterWidgetButtonSectionExample} beispielhaft zu sehen ist.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\textwidth, keepaspectratio]{Bilder/FlutterWidgetButtonSectionExample.png}
+	\caption{Beispiel: Aufbau von Widgets  \cite{FlutterBuildingLayouts}}
+	\label{img:FlutterWidgetButtonSectionExample}
+\end{figure}
+
+\par \medskip Ein in dem Artikel \citep[Widgets]{HackernoonFlutterArcticle} beschriebener wichtiger Aspekt ist, dass Flutter im Gegensatz zu anderen Alternativen eine eigene erstellte Systemschnittstellen-Architektur besitzt und nicht auf OEM-Widgets oder DOM-Web Views zurückgreift, wie in Abbildung \ref{img:hackernoonFlutterArcticleArchitecture} verdeutlicht wird. Dies ermöglicht eine extrem freie Handhabung und Individualisierung im Umgang mit den Widgets und Plattform spezifischen Diensten.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\textwidth, keepaspectratio]{Bilder/WidgetsFlutterArchitecture.png}
+	\caption{Flutter Widgets Architektur \cite{HackernoonFlutterArcticle}}
+	\label{img:hackernoonFlutterArcticleArchitecture}
+\end{figure}
+
+\par \medskip Diese Widgets bilden zur Laufzeit eine hierarchische Struktur und setzen sich selbst aus weiteren Widgets zusammen. Somit ist der Ursprung einer jeden Programm Oberfläche ein Wurzel-Widget, welches wiederum Kinder-Widgets enthält und diese somit über mehrere Ebenen eine Gesamtkomposition bilden, den sogenannten \textbf{Widget Tree}. 
+
+\par \medskip Diese Widgets können je nach Ausprägung strukturierende Elemente, wie Beispielsweise Spalten, Zeilen oder andere Layout-Strukturen oder auch Stil-definierende Elemente, wie Farbdefinitionen oder Elemente, welche die Interaktion mit dem Benutzer ermöglichen, wie beispielsweise Buttons und Textfelder, und noch viele weitere Elemente mit unterschiedlichen Eigenschaften darstellen.
+
+\subsection{Flutter UI Rendering}
+\par Flutter verwendet im Gegensatz zu anderen Alternativen nach eigener Aussage eine selbst entwickelte und optimierte Rendering-Engine welche die Benutzeroberfläche nach einer Veränderung des aktuellen Status neu generiert, und diese Veränderung dem Benutzer darstellt (vlg. \citep[What makes Flutter unique?]{Flu3}). Die folgende Abbildung \ref{img:flutterHighLevelRendering} stellt einen solchen Ablauf dar.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\textwidth, keepaspectratio]{Bilder/FlutterRendering.png}
+	\caption{Flutter Rendering \cite{Flu5}}
+	\label{img:flutterHighLevelRendering}
+\end{figure}
+
+\par Sollte sich der aktuelle Zustand der Applikation beispielsweise durch eine Benutzeraktion verändern, so werden die ,in der Baumstruktur vorhandenen Widgets, neu generiert, deren Eigenschaften aktualisiert und dem Benutzer letztendlich angezeigt.
+
+\newpage		
+\section{Was ist Redux?}
+\par Redux ist eine von Dan Abramovic und Andrew Clark entwickelte, im Jahr 2015 veröffentlichte,  open-source Bibliothek für JavaScript Anwendungen (vgl. \citep{ReduxWiki}). Durch die zentrale Verwaltung von Zustandsinformationen, soll eine erleichterte pflege der Konsistenz und aufgrund Dessen auch eine \grqq einfache\grqq{} Wartbarkeit und Testbarkeit der Software ermöglicht werden. \citep[vgl. Abschnitt Read Me]{ReduxReadMe}
+\par \bigskip Hinweis: Wie auch in \citep[vgl. Abschnitt Read Me]{ReduxReadMe} angemerkt wird, möchte ich an dieser Stelle darauf hinweisen, dass es sich hierbei nicht um das WirdPress Framework \textbf{Redux Framework}\citep{WordPressRedux} handelt.
+
+\par \bigskip Im weiteren Verlauf des Kapitels werden die grundsätzlichen Funktionsweisen der Bibliothek kurz beschrieben, um die im späteren Teil der Arbeit zur Nachvollziehbarkeit benötigten Kenntnisse zu ermöglichen.
+
+\subsection{Komponenten einer Redux-Architektur}
+\par Innerhalb einer Redux-Architektur existieren verschiedene Komponenten, welche jeweils einen besonderen Zweck erfüllen und durch das modulare Zusammenspiel mit anderen Komponenten in dem System eine Gesamtkomposition bilden.
+\par \bigskip Die wichtigsten Redux-spezifischen Komponenten tragen die folgenden Bezeichnungen und werden in den nachfolgenden Kapiteln beschrieben:
+
+\begin{itemize}
+\item Actions
+\item Reducers
+\item Store
+\end{itemize}
+
+\subsection{Actions}
+\par Wie in den Basics der Online-Dokumentation \citep{ReduxActions} beschrieben wird, definieren Actions im Rahmen von Redux hauptsächlich Informationspakete, welche unter dieser Bedeutung auch als \grqq Payload\grqq{} bezeichnet werden. Sie enthalten in erster Linie nur Informationen über die Action-spezifische Operation, wie beispielsweise das Ändern bestimmter Bestandteile des aktuellen Systemzustands.
+\par \bigskip \textit{Hinweis: Es könnte beispielsweise denkbar sein, dass ein neuer Eintrag einer ToDo Liste angelegt werden soll. Hierbei würde die Action vermutlich einen Namen wie \grqq AddTodoAction\grqq{} tragen und die Informationen des Titels des neuen Eintrags enthalten. \\
+Das Ausführen dieser Zustandsänderung wird also nicht von den Actions selbst ausgeführt, sondern für diesen Zweck dienen die sogenannten Reducer Funktionen.}
+
+\subsection{Reducers}
+\par Reducer-Funktionen erfüllen den Zweck, die durch die jeweilige Action übermittelten Informationen zu verarbeiten und die eigentliche durch die Action spezifizierte Zustandsänderung durchzusetzen. (vgl. \citep{ReduxReducers})
+\par Reducer liegen im Allgemeinen als Pure Function (auch Reine Funktionen) vor. Dies Bedeutet im Rahmen der Redux-Architektur, dass die Funktionen keine direkten Änderungen an den durch die Actions übermittelten Informationen oder an dem Status selbst  vornehmen dürfen und unter keinen Umständen Seiteneffekte produzieren dürfen. Die Auswirkungen von Pure Functions müssen deterministisch bestimmbar sein, also muss unter den gleichen Eingabebedingungen immer das gleiche zu erwartende Ergebnis folgen.
+\par Im Detail werden also nicht direkte Änderungen an Objekten vorgenommen, sondern der gesamte aktuelle Zustand durch das Neuerzeugen überschrieben.
+\par \bigskip \textit{Hinweis: Eine nicht den Eigenschaften von Pure Functions entsprechenden Funktion wäre das Bestimmen des Datums mit der JavaScript-Funktion Date.now(), da hier bei Ausführen immer ein unterschiedliches Ergebnis herauskommt.}
+
+\subsection{Store}
+\par Der Store ist in der Redux-Architektur das zentrale Element, welches nicht nur für die Datenhaltung des aktuellen Zustands (State) der Applikation zuständig ist, sondern auch als Schnittstelle für die Bereitstellung und Veränderung des Zustands Objektes dient (vgl. \citep{ReduxStore})
+\par Im Gegensatz zu den anderen Komponenten ist der Store innerhalb der Architektur einmalig, was viele Vorteile der Redux Architektur überhaupt erst ermöglicht.
+
+\par \bigskip \textit{Hinweis: Der Store enthält alle für die Applikation relevanten Informationen an zentraler Stelle im System in einem State Objekt.\\
+Die gespeicherten Informationen liegen im besten Fall in normalisierter Form vor. Insgesamt ist ein flacher Key-Value Store dem Handhaben komplexer Objekte vorzuziehen}
+
+\subsection{Flutter Redux Libary}
+\par Die Externe Flutter Libary \textbf{flutter\char`_redux}\citep{FlutterReduxLib} setzt die JavaSktipt basierte Redux Funktionsweise für die Entwicklung mobiler Applikation mit Flutter und Dart um, was die komfortable Nutzung der beschriebenen Redux Funktionsweise ermöglicht.
+
+\par \bigskip Grundsätzlich werden also dieselben Funktionsweisen durch die Nutzung der Flutter Redux Libary abgebildet. Es folgt dennoch eine kurze Beschreibung der Flutter Redux Libary spezifischen Redux Widgets, welche sich jedoch alle auf die Interaktion mit dem zentralen Store beziehen:
+
+\begin{itemize}
+\item \textbf{StoreProvider}
+\par Der StoreProvider ist ein Schnittstellen-Widget, welches allen unterliegenden Widgets Zugang zu dem Store ermöglicht.
+\item \textbf{StoreBuilder}
+\par Der StoreBuilder holt sich den aktuellen Zustand von dem in der überliegenden Hierarchie am nächsten platzierten StoreProvider und bietet eine builer-Funktion um die Fall-spezifischen Informationen zu verwenden.
+\item \textbf{StoreConnector}
+\par Der StoreConnector trägt die Aufgabe, den von dem StoreProvider übergebenen Store, durch eine converter-Funktion in ein ViewModel umzuwandeln, welches die benötigten Fall-spezifischen Informationen in sich hält und durch die sogenannte builder-Funktion diese Informationen kontextspezifisch zu verwenden. Weiterhin wird der StoreConnecot bei jeder Änderung des Zustands neu generiert und somit die durch das ViewModel repräsentierten Informationen aktualisiert.
+\end{itemize}
 
 \bigskip
 \chapter{Untersuchung des Problembereiches} \label{chap:problemanalyse}
@@ -1168,18 +1202,18 @@ Das Problem des mangelnden Zeitmanagements äußert sich unter anderem auch dari
 \newpage
 \subsection{Umgang mit Risiken}
 \par Im folgenden Verlauf wird der Umgang den, in Kapitel \ref{sub:risikouebersicht} dargestellten Risiken, diskutiert und beschrieben.
-\par \medskip Da sich die Herausforderungen an dem Ablauf einer Bachelorarbeit orientieren und den Studierenden somit vor typische Aufgaben stellt, kam es im Verlauf der Interviews zu den Befürchtungen \ref{risk:realerZustand}, dass die Applikation nicht den realen Zustand der Bachelorarbeit kennt und somit der Studierende durch das Erfüllen von Herausforderungen ein Gefühl von Erfolg hat, obwohl diese Herausforderungen nicht den geforderten Qualitäten entsprechen und der Studierende dies durch das positive Feedback nicht merkt.
+\par \bigskip Da sich die Herausforderungen an dem Ablauf einer Bachelorarbeit orientieren und den Studierenden somit vor typische Aufgaben stellt, kam es im Verlauf der Interviews zu den Befürchtungen \ref{risk:realerZustand}, dass die Applikation nicht den realen Zustand der Bachelorarbeit kennt und somit der Studierende durch das Erfüllen von Herausforderungen ein Gefühl von Erfolg hat, obwohl diese Herausforderungen nicht den geforderten Qualitäten entsprechen und der Studierende dies durch das positive Feedback nicht merkt.
 \par Um diesem Risiko entgegenzuwirken, sollen die erstellten Herausforderungen möglichst auffordernder Natur entsprechen (Beispiel: Beginne deine Einleitung). Bei Einsatz von Herausforderungen, welche auf inhaltliche Aspekte abzielen, sollen Checklisten zum Abschließen der Herausforderungen genutzt werden, um den Fokus auf eine allgemeingültige Vorgehensweise zu reduzieren, für die die Studierenden im Detail jedoch selbst verantwortlich sind. Auch hier wird eine klare Kommunikation durch die Applikation als zwingend erforderlich angesehen.
 
-\par \medskip Die Befürchtung \ref{risk:keinLerneffekt}, dass die Applikation den Studierenden so viel Arbeit abnimmt, dass sie zu wenig eigenständige Erfahrung sammeln und somit der Lerneffekt zu gering ist, wird berücksichtigt, indem die Applikation einen eher informierenden Charakter aufweist, und keine Funktionalität bezüglich dem Liefern von Ergebnissen vorsieht.
+\par \bigskip Die Befürchtung \ref{risk:keinLerneffekt}, dass die Applikation den Studierenden so viel Arbeit abnimmt, dass sie zu wenig eigenständige Erfahrung sammeln und somit der Lerneffekt zu gering ist, wird berücksichtigt, indem die Applikation einen eher informierenden Charakter aufweist, und keine Funktionalität bezüglich dem Liefern von Ergebnissen vorsieht.
 
-\par \medskip Die Gefahren der Risiken \ref{risk:inhaltUnumstoesslich} und \ref{risk:erstazBetreuer}, welche sich damit auseinander setzen, dass die Applikation fälschlicherweise als Ersatz eines Betreuers wahrgenommen oder der Inhalt der Applikation als unumstößlich angesehen werden könnte, soll durch eine klare Kommunikation mit den Anwendern reduziert werden. Es werden als Maßnahmen einerseits immer die Quellen der Informationen angegeben und weiterhin eine allgemein sichtbare Erklärung zur Anwendung, sowie Fehlanwendung der Applikation deutlich kommuniziert.
+\par \bigskip Die Gefahren der Risiken \ref{risk:inhaltUnumstoesslich} und \ref{risk:erstazBetreuer}, welche sich damit auseinander setzen, dass die Applikation fälschlicherweise als Ersatz eines Betreuers wahrgenommen oder der Inhalt der Applikation als unumstößlich angesehen werden könnte, soll durch eine klare Kommunikation mit den Anwendern reduziert werden. Es werden als Maßnahmen einerseits immer die Quellen der Informationen angegeben und weiterhin eine allgemein sichtbare Erklärung zur Anwendung, sowie Fehlanwendung der Applikation deutlich kommuniziert.
 
-\par \medskip  Das identifizierte Risiko \ref{risk:ueberplanung}, welches die Befürchtung einer Überplanung der Studierenden beinhaltet, was die Auswirkung haben kann, dass die Studierenden von der eigentlichen Arbeit abgehalten werden, wird als nicht ausschlaggebend betrachtet.
+\par \bigskip  Das identifizierte Risiko \ref{risk:ueberplanung}, welches die Befürchtung einer Überplanung der Studierenden beinhaltet, was die Auswirkung haben kann, dass die Studierenden von der eigentlichen Arbeit abgehalten werden, wird als nicht ausschlaggebend betrachtet.
 Studierende die zur Überplanung neigen, würden diese auch ohne Applikation durchführen. 
 \par Wichtiger wird in dieser Hinsicht die Freiheit der einzelnen Planungs-Bedürfnisse durch die individuellen Studierenden angesehen, weshalb keine weiteren Maßnahmen zur Reduzierung der Planungsfreiheit getroffen werden. Weiterhin steht die Intensität der Planung nicht in der Verantwortung der Applikation, sondern in der Verantwortung der Benutzer. 
 
-\par \medskip Das Risiko \ref{risk:gamificationEffekt}, welches sich mit dem Nichtwirken der Gamificationmotivation beschäftigt, wird als nicht weitreichend betrachtet, da die Gamificationinhalte zwar Bestandteil der Applikation, jedoch nicht zwangsweise notwendig zur Benutzung der Applikation sind. Die Spiel-Design-Elemente sollen nicht die Interesse an einem bestimmten Thema steigern, sondern dienen im Kontext der Bachelorarbeit einer wegweisenden Natur, welche motivierende Einflüsse auf die Bearbeitenden hervorrufen können, jedoch nicht müssen, um ihren Nutzen zu erfüllen. 
+\par \bigskip Das Risiko \ref{risk:gamificationEffekt}, welches sich mit dem Nichtwirken der Gamificationmotivation beschäftigt, wird als nicht weitreichend betrachtet, da die Gamificationinhalte zwar Bestandteil der Applikation, jedoch nicht zwangsweise notwendig zur Benutzung der Applikation sind. Die Spiel-Design-Elemente sollen nicht die Interesse an einem bestimmten Thema steigern, sondern dienen im Kontext der Bachelorarbeit einer wegweisenden Natur, welche motivierende Einflüsse auf die Bearbeitenden hervorrufen können, jedoch nicht müssen, um ihren Nutzen zu erfüllen. 
 
 
 \newpage
@@ -1605,7 +1639,7 @@ void notificationMiddleware(
 \bigskip
 
 \par In diesem Rahmen wird nach dem allgemeinen Ausführen von Actions in der Applikation, das Senden einer Notification durch das Aufrufen der Top-Level Funktion checkAchievementNotification() \grqq vorbereitet\grqq (siehe Abbildung \ref{lst:checkAchievementNotification}, vgl. Zeile  9 - 11).
-\par Um zu gewährleisten, dass neue Achievements registriert werden, wird vor Ausführung der SendAchievementNotificationAction in Abbildung \ref{lst:checkAchievementNotification}( vgl. Zeile 3 - 7) die CheckForAchieveAction() ausgelößt, welche für das Aktualisieren der aktuellen Achievements sorgt.
+\par \medskip Um zu gewährleisten, dass neue Achievements registriert werden, wird vor Ausführung der SendAchievementNotificationAction in Abbildung \ref{lst:checkAchievementNotification}( vgl. Zeile 3 - 7) die CheckForAchieveAction() ausgelößt, welche für das Aktualisieren der aktuellen Achievements sorgt.
 \par \medskip Sollten folglich die Bedingungen für das Ausführen dieser Notification zutreffen, so wird wie in Abbildung \ref{lst:notificationMiddleware} zu sehen ist, die \grqq versprochene\grqq Aktion ausgeführt (vlg. Zeile 25) und in diesem Fall die Notification angezeigt. 
 
 \bigskip
@@ -1626,8 +1660,59 @@ Future<dynamic> checkAchievementNotification(context) {
 \bigskip
 
 \chapter{Validierung und Verifikation} \label{chap:nachweisführung}
-\section{Abdeckung der Softwareanforderungen}
-\section{Ausführung der Usabilityevaluation}
+\section{Softwaretesting}
+\subsection{Reducertests}
+\par Im Rahmen der Softwaretests wird speziell das Testen der Reducer Funktionen im Kontext der Redux-Architektur als essenziell betrachtet.
+\par Bei den durchgeführten Tests wurde sich primär an den im Kontext der Redux-Architektur identifizierten Actions orientiert und eine systematisch aufgebaute Abfolge von Tests, welche das Überprüfen des Systemzustands vor sowie nach Ausführen einer Action vorsieht.
+\par \bigskip Insgesamt wurden TODO Reducer Testeinheiten ausgeführt, welche sich alle als positiv abgeschlossene Stichproben herausstellen lassen.
+\par \medskip Die folgenden Testklassen wurden im Rahmen der Reducer Tests definiert: 
+
+\section{Ergebnisse der Nutzerevaluation}
+TODO AUF ANANG HINWEISEN UND ANHANG EINFÜGEN
+\par Insgesamt wurden jeweils 7 Personen einem Test unterzogen, welcher als zentralen Bestandteil die Nutzung der entwickelten Applikation beinhaltet. 
+\par Unter den genannten 7 Personen befinden sich 2 Professoren und 5 Studierende des Studiengangs Informatik/Softwareentwicklung der Fachhochschule Lübeck. 
+\par Unter den 5 Studierenden befinden sich genau 3 Studierende in der Phase während der Bachelorarbeit und 2 Studierende am Ende des 5. Semesters vor der Bearbeitung der Bachelorarbeit.
+
+\par \bigskip Der Test wurde unter Moderation durch Stellen verschiedener vordefinierter Aufgaben durchgeführt, dabei wurde aufgrund der vergleichbar zu haltenden gesammelten Erfahrung und Beurteilung des Tests, nicht zwischen Professoren oder Studierenden unterschieden, sondern der jeweils gleiche Testablauf gewählt.
+
+\par \medskip Das Bildschirmgeschehen aller Tests wurden mit Hilfe einer Software auf dem eigenen Smartphone aufgezeichnet, jedoch ist eine Datei dieser Aufzeichnungen durch einen Datenfehler nicht verwendbar.
+
+\par \medskip Des weiteren wurden nach vorher eingeholter Erlaubnis der Testpersonen, ein Audiomitschnitt erzeugt. Dieser Audiomitschnitt wurde von beiden Professoren und insgesamt 4 von 5 Studierenden zugelassen.
+
+\par \medskip Der in Form von nacheinander gestellten Aufgaben verwendete Testablauf ist im Anhang zu finden und Umfasst 12 Aufgaben (siehe TODO ANHANG).
+
+\subsection{Zusammenfassung der Testdurchführung}
+\par Zusammenfassend hat sich ergeben, dass alle Testpersonen die vorgegebenen Aufgaben fast ohne Schwierigkeiten lösen konnten und der Großteil der Aufgaben ohne Hilfestellung des Moderators erfüllt wurden. Falls ein Eingriff des Moderators erforderlich wurde, so hatte dies lediglich den Zweck, den Fokus der Testpersonen wieder auf die zu lösende Aufgabe zu lenken.
+\par Falls Irritationen bezüglich des Lösens der Aufgaben bei den Testpersonen aufgetreten sind, so konnten diese Selbstständig beseitigt werden.
+
+\par \bigskip Im folgenden Verlauf werden die Ergebnisse des Tests durch verschiedene definierte Parameter, kategorisiert nach den jeweiligen Aufgabenschwerpunkten, zusammengefasst dargestellt. Weiterhin werden, falls vorhanden, die Kernaussagen der aufgabenspezifischen Kommentare und Wünsche der Testpersonen beschrieben.
+
+\begin{itemize}
+\item Kategorie 1 - Der Startbildschirm bei erstmaligem Ausführen der Applikation
+\par 
+
+\item Kategorie 2 - Bachelorarbeit Guide
+\par
+
+\item Kategorie 3 - Meilensteinverwaltung
+\par
+
+\item Kategorie 4 - Achievements
+\par
+
+\item Kategorie 6 - Herausforderungen
+\par
+
+\item Kategorie 5 - Dashboard
+\par
+
+\end{itemize}
+
+\subsection{Zusammenfassung der Befragung von Studierenden}
+
+
+\section{Bewertung des Frameworks Flutter zur Entwicklung von mobilen Appliaktionen}
+\par Im Laufe der Entwicklung der Applikation haben sich sowohl subjektive Erfahrung als auch objektive zu bewertende Fakten in Bezug auf die Nutzung von Flutter zur Entwicklung mobiler Applikationen herausgestellt, welche im folgenden Verlauf diskutiert und abschließend durch eine Gegenüberstellung der jeweiligen Vor- und Nachteile ausgewertet werden.
 
 \chapter{Präsentation der Ergebnisse} \label{chap:ergebnisse}
 \section{Lessons Learned}

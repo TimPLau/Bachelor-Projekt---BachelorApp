@@ -22,7 +22,7 @@
       {{hash=rnAHPD}{%
          prefix={rer.\bibnamedelima nat.},
          prefixi={r\bibinitperiod\bibinitdelim n\bibinitperiod},
-         family={Andreas\bibnamedelima Hanemann},
+         family={Andreas\bibnamedelima Hanemann)},
          familyi={A\bibinitperiod\bibinitdelim H\bibinitperiod},
          given={(Prof.\bibnamedelima Dr.},
          giveni={P\bibinitperiod\bibinitdelim D\bibinitperiod},
@@ -220,10 +220,23 @@
     \field{year}{Februar 27, 2018 (Zugriff Juni 3, 2018)}
   \endentry
 
-  \entry{Flu5}{manual}{}
+  \entry{FlutterReduxLib}{manual}{}
     \field{labeltitlesource}{title}
     \field{labelalpha}{Flu}
     \field{extraalpha}{3}
+    \field{sortinit}{F}
+    \field{sortinithash}{F}
+    \field{title}{Flutter Redux}
+    \verb{url}
+    \verb https://pub.dartlang.org/packages/flutter_redux
+    \endverb
+    \field{year}{(Zugriff Juni 8, 2018)}
+  \endentry
+
+  \entry{Flu5}{manual}{}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{Flu}
+    \field{extraalpha}{4}
     \field{sortinit}{F}
     \field{sortinithash}{F}
     \field{title}{Flutter System Architecture}
@@ -237,7 +250,7 @@
   \entry{Flu6}{manual}{}
     \field{labeltitlesource}{title}
     \field{labelalpha}{Flu}
-    \field{extraalpha}{4}
+    \field{extraalpha}{5}
     \field{sortinit}{F}
     \field{sortinithash}{F}
     \field{title}{Foundation Libary}
@@ -250,7 +263,7 @@
   \entry{Flu2}{manual}{}
     \field{labeltitlesource}{title}
     \field{labelalpha}{Flu}
-    \field{extraalpha}{5}
+    \field{extraalpha}{6}
     \field{sortinit}{F}
     \field{sortinithash}{F}
     \field{title}{Introduction}
@@ -263,7 +276,7 @@
   \entry{Flu7}{manual}{}
     \field{labeltitlesource}{title}
     \field{labelalpha}{Flu}
-    \field{extraalpha}{6}
+    \field{extraalpha}{7}
     \field{sortinit}{F}
     \field{sortinithash}{F}
     \field{title}{Material Components Widgets}
@@ -276,7 +289,7 @@
   \entry{Flu8}{manual}{}
     \field{labeltitlesource}{title}
     \field{labelalpha}{Flu}
-    \field{extraalpha}{7}
+    \field{extraalpha}{8}
     \field{sortinit}{F}
     \field{sortinithash}{F}
     \field{title}{Technical Overview}
@@ -289,7 +302,7 @@
   \entry{Flu3}{manual}{}
     \field{labeltitlesource}{title}
     \field{labelalpha}{Flu}
-    \field{extraalpha}{8}
+    \field{extraalpha}{9}
     \field{sortinit}{F}
     \field{sortinithash}{F}
     \field{title}{Technology}
@@ -302,7 +315,7 @@
   \entry{Flu4}{manual}{}
     \field{labeltitlesource}{title}
     \field{labelalpha}{Flu}
-    \field{extraalpha}{9}
+    \field{extraalpha}{10}
     \field{sortinit}{F}
     \field{sortinithash}{F}
     \field{title}{Welcome to the Engine Wiki}
@@ -512,6 +525,71 @@
     \field{year}{2018}
   \endentry
 
+  \entry{ReduxActions}{manual}{}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{Red}
+    \field{extraalpha}{1}
+    \field{sortinit}{R}
+    \field{sortinithash}{R}
+    \field{title}{Actions}
+    \verb{url}
+    \verb https://redux.js.org/basics/actions
+    \endverb
+    \field{year}{(Zugriff Juni 8, 2018)}
+  \endentry
+
+  \entry{ReduxReadMe}{manual}{}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{Red}
+    \field{extraalpha}{2}
+    \field{sortinit}{R}
+    \field{sortinithash}{R}
+    \field{title}{Read Me}
+    \verb{url}
+    \verb https://redux.js.org/
+    \endverb
+    \field{year}{(Zugriff Juni 8, 2018)}
+  \endentry
+
+  \entry{ReduxReducers}{manual}{}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{Red}
+    \field{extraalpha}{3}
+    \field{sortinit}{R}
+    \field{sortinithash}{R}
+    \field{title}{Reducers}
+    \verb{url}
+    \verb https://redux.js.org/basics/reducers
+    \endverb
+    \field{year}{(Zugriff Juni 8, 2018)}
+  \endentry
+
+  \entry{ReduxWiki}{manual}{}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{Red}
+    \field{extraalpha}{4}
+    \field{sortinit}{R}
+    \field{sortinithash}{R}
+    \field{title}{Redux (JavaScript-Bibliothek)}
+    \verb{url}
+    \verb https://de.wikipedia.org/wiki/Redux_(JavaScript-Bibliothek)
+    \endverb
+    \field{year}{(Zugriff Juni 8, 2018)}
+  \endentry
+
+  \entry{ReduxStore}{manual}{}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{Red}
+    \field{extraalpha}{5}
+    \field{sortinit}{R}
+    \field{sortinithash}{R}
+    \field{title}{Store}
+    \verb{url}
+    \verb https://redux.js.org/basics/store
+    \endverb
+    \field{year}{(Zugriff Juni 8, 2018)}
+  \endentry
+
   \entry{reeves2009total}{book}{}
     \name{author}{2}{}{%
       {{hash=RB}{%
@@ -644,6 +722,18 @@
     \field{title}{For the win: How game thinking can revolutionize your
   business}
     \field{year}{2012}
+  \endentry
+
+  \entry{WordPressRedux}{manual}{}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{Wor}
+    \field{sortinit}{W}
+    \field{sortinithash}{W}
+    \field{title}{Read Me}
+    \verb{url}
+    \verb https://reduxframework.com/
+    \endverb
+    \field{year}{(Zugriff Juni 8, 2018)}
   \endentry
 \enddatalist
 \endinput
