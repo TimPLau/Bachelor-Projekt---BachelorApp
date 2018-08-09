@@ -324,17 +324,8 @@ Das Flutter Framework besteht aus verschiedenen Basiskomponenten, welche aus auf
 \par Redux ist eine von Dan Abramovic und Andrew Clark entwickelte, im Jahr 2015 veröffentlichte,  open-source Bibliothek für JavaScript Anwendungen (vgl. \citep{ReduxWiki}). Durch die zentrale Verwaltung von Zustandsinformationen, soll eine erleichterte pflege der Konsistenz und aufgrund Dessen auch eine \grqq einfache\grqq{} Wartbarkeit und Testbarkeit der Software ermöglicht werden. \citep[vgl. Abschnitt Read Me]{ReduxReadMe}
 \par \bigskip Hinweis: Wie auch in \citep[vgl. Abschnitt Read Me]{ReduxReadMe} angemerkt wird, möchte ich an dieser Stelle darauf hinweisen, dass es sich hierbei nicht um das WirdPress Framework \textbf{Redux Framework}\citep{WordPressRedux} handelt.
 
-\par \bigskip Im weiteren Verlauf des Kapitels werden die grundsätzlichen Funktionsweisen der Bibliothek kurz beschrieben, um die im späteren Teil der Arbeit zur Nachvollziehbarkeit benötigten Kenntnisse zu ermöglichen.
-
-\subsection{Komponenten einer Redux-Architektur}
 \par Innerhalb einer Redux-Architektur existieren verschiedene Komponenten, welche jeweils einen besonderen Zweck erfüllen und durch das modulare Zusammenspiel mit anderen Komponenten in dem System eine Gesamtkomposition bilden.
-\par \bigskip Die wichtigsten Redux-spezifischen Komponenten tragen die folgenden Bezeichnungen und werden in den nachfolgenden Kapiteln beschrieben:
-
-\begin{itemize}
-\item Actions
-\item Reducers
-\item Store
-\end{itemize}
+\par \bigskip Die wichtigsten Redux-spezifischen Komponenten sind \textbf{Actions}, \textbf{Reducers} und der \textbf{Store}, welche hinsichtlich Bedeutung und Funktionsweise in den nachfolgenden Kapiteln beschrieben:
 
 \subsection{Actions}
 \par Wie in den Basics der Online-Dokumentation \citep{ReduxActions} beschrieben wird, definieren Actions im Rahmen von Redux hauptsächlich Informationspakete, welche unter dieser Bedeutung auch als \grqq Payload\grqq{} bezeichnet werden. Sie enthalten in erster Linie nur Informationen über die Action-spezifische Operation, wie beispielsweise das Ändern bestimmter Bestandteile des aktuellen Systemzustands.
@@ -1667,50 +1658,126 @@ Future<dynamic> checkAchievementNotification(context) {
 \par \bigskip Insgesamt wurden TODO Reducer Testeinheiten ausgeführt, welche sich alle als positiv abgeschlossene Stichproben herausstellen lassen.
 \par \medskip Die folgenden Testklassen wurden im Rahmen der Reducer Tests definiert: 
 
+\newpage
 \section{Ergebnisse der Nutzerevaluation}
 TODO AUF ANANG HINWEISEN UND ANHANG EINFÜGEN
 \par Insgesamt wurden jeweils 7 Personen einem Test unterzogen, welcher als zentralen Bestandteil die Nutzung der entwickelten Applikation beinhaltet. 
 \par Unter den genannten 7 Personen befinden sich 2 Professoren und 5 Studierende des Studiengangs Informatik/Softwareentwicklung der Fachhochschule Lübeck. 
-\par Unter den 5 Studierenden befinden sich genau 3 Studierende in der Phase während der Bachelorarbeit und 2 Studierende am Ende des 5. Semesters vor der Bearbeitung der Bachelorarbeit.
+\par Weiterhin befinden sich unter den 5 Studierenden genau 3 Studierende in der Phase während der Bachelorarbeit und 2 Studierende am Ende des 5. Semesters vor der Bearbeitung der Bachelorarbeit.
 
-\par \bigskip Der Test wurde unter Moderation durch Stellen verschiedener vordefinierter Aufgaben durchgeführt, dabei wurde aufgrund der vergleichbar zu haltenden gesammelten Erfahrung und Beurteilung des Tests, nicht zwischen Professoren oder Studierenden unterschieden, sondern der jeweils gleiche Testablauf gewählt.
+\par \bigskip Der Test wurde unter Moderation verschiedener vordefinierter Aufgaben durchgeführt (siehe TODO), wobei hier aufgrund der vergleichbar zu haltenden gesammelten Erfahrung sowie der abschließenden Beurteilung der Tests, nicht zwischen Professoren oder Studierenden unterschieden, sondern der jeweils gleiche Testablauf gewählt wurde.
+\par \bigskip Bei der Durchführung der Tests mit gab es dennoch einige wichtige Unterschiede. 
+\par Zum einen unterlagen die Test mit den Professoren einer ausführlicher gestalteten Vorstellung und Beschreibung der Features, da diese durch die Erfahrung der Professoren hinsichtlich ihres Nutzens als sehr gut beurteilbar angenommen wurden.
+\par Weiterhin wurden bei den Testdurchführungen mit den Studierenden ein abschließender Fragebogen ausgehändigt, in dem die Testpersonen noch einmal die Möglichkeit hatten weitere Anmerkungen zu der Software zu tätigen.
 
-\par \medskip Das Bildschirmgeschehen aller Tests wurden mit Hilfe einer Software auf dem eigenen Smartphone aufgezeichnet, jedoch ist eine Datei dieser Aufzeichnungen durch einen Datenfehler nicht verwendbar.
+\par \bigskip Die eigentliche Testdurchführung wurde auf dem eigenen dafür vorbereiteten Smartphone ausgeführt.
 
-\par \medskip Des weiteren wurden nach vorher eingeholter Erlaubnis der Testpersonen, ein Audiomitschnitt erzeugt. Dieser Audiomitschnitt wurde von beiden Professoren und insgesamt 4 von 5 Studierenden zugelassen.
+\par \bigskip Das Bildschirmgeschehen aller Tests wurden mit Hilfe einer Software aufgezeichnet, jedoch ist eine Datei dieser Aufzeichnungen durch einen Datenfehler nicht verwendbar.
 
-\par \medskip Der in Form von nacheinander gestellten Aufgaben verwendete Testablauf ist im Anhang zu finden und Umfasst 12 Aufgaben (siehe TODO ANHANG).
+\par Des weiteren wurden nach vorher eingeholter Erlaubnis der Testpersonen ein Audiomitschnitt erzeugt. Dieser Audiomitschnitt wurde von allen Professoren und insgesamt 4 von 5 Studierenden zugelassen. Diese Audiomitschnitte unterliegen jedoch aus nicht bekannten Gründen einer schlechten Aufnahmequalität. Es wurden jedoch unmittelbar nach jedem Interview Notizen angefertigt, welche im Anhang dieses Dokuments zu finden sind (siehe Anhang TODO).
 
-\subsection{Zusammenfassung der Testdurchführung}
-\par Zusammenfassend hat sich ergeben, dass alle Testpersonen die vorgegebenen Aufgaben fast ohne Schwierigkeiten lösen konnten und der Großteil der Aufgaben ohne Hilfestellung des Moderators erfüllt wurden. Falls ein Eingriff des Moderators erforderlich wurde, so hatte dies lediglich den Zweck, den Fokus der Testpersonen wieder auf die zu lösende Aufgabe zu lenken.
-\par Falls Irritationen bezüglich des Lösens der Aufgaben bei den Testpersonen aufgetreten sind, so konnten diese Selbstständig beseitigt werden.
+\par \bigskip Der verwendete Testablauf, welcher sich aus nacheinander gestellten Aufgaben zusammensetzt, ist im Anhang zu finden und Umfasst 10 Aufgaben (siehe TODO ANHANG).
+\par Die Aufgaben orientieren sich an den verschiedenen Softwarefunktionen der entwickelten Applikation und umfasst das Verwenden aller Kernfeatures. 
+\par Der Ablauf der Aufgaben, ist im Rahmen des Tests jedoch nicht fest definiert, sondern wurde je nach Situation frei verfolgt.
 
-\par \bigskip Im folgenden Verlauf werden die Ergebnisse des Tests durch verschiedene definierte Parameter, kategorisiert nach den jeweiligen Aufgabenschwerpunkten, zusammengefasst dargestellt. Weiterhin werden, falls vorhanden, die Kernaussagen der aufgabenspezifischen Kommentare und Wünsche der Testpersonen beschrieben.
+\newpage
+\subsection{Zusammenfassung der Testdurchführung mit den Studierenden}
+\par Zusammenfassend hat sich ergeben, dass alle Testpersonen die vorgegebenen Aufgaben fast ohne Schwierigkeiten lösen konnten und der Großteil der Aufgaben ohne Hilfestellung des Moderators erfüllt wurden.
+\par Falls Irritationen bezüglich des Lösens der Aufgaben bei den Testpersonen aufgetreten sind, so konnten diese größtenteils selbstständig beseitigt werden.
 
+\par \bigskip Im folgenden Verlauf werden die Ergebnisse des Tests, nach dem Ablauf der jeweiligen Aufgaben kategorisiert, dargestellt. Weiterhin werden, falls vorhanden, die Kernaussagen der aufgabenspezifischen Kommentare und Wünsche zur Softwaregestaltung und Features der Testpersonen beschrieben.
+
+
+\par \bigskip \textbf{Aufgabe 1 - Anweisungen des Startbildschirms befolgen}
+\par Insgesamt haben 5 von 5 Testpersonen diese Aufgabe erfolgreich abgeschlossen. Alle Studierende konnten den Anweisungen folgen und haben ein Bearbeitungszeitraum für ihre Bachelorarbeit eingetragen und bestätigt, worauf hin sie auf das Dashboard gelangt sind. Es gab keine negativen Anmerkungen zu der Softwareumsetzung dieser Funktionalität.
+
+\par \bigskip \textbf{Aufgabe 2 - Beschreibe die Elemente des Dashboards}
+\par Alle 5 Testpersonen konnten die auf dem Dashboard befindlichen Elemente deren Bedeutung und Nutzen korrekt zuweisen.
+
+\par \bigskip \textbf{Aufgabe 3 - Informiere dich über die Anmeldung der Bachelorarbeit.}
+\par Es konnten 4 von 5 Testpersonen ohne Schwierigkeiten  Informationen über die Anmeldung einer Bachelorarbeit durch die Nutzung der Applikation gewinnen. 
+\par \medskip Eine der Testpersonen hatte starke Schwierigkeiten die Sektion "Bachelorarbeit Guide" als solche zu identifizieren und musste durch Hilfestellung des Moderators geleitet werden. Ab diesem Punkt gelang es der Testperson jedoch Problemlos, sich über das Thema zu informieren.
+
+\par \bigskip \textbf{Aufgabe 4 - Erstelle zwei Meilensteine}
+\par Alle 5 von 5 Testpersonen konnten diese Aufgabe erfolgreich lösen, wobei jedoch 2 von 5 Personen fälschlicherweise als erste Reaktion auf den Dashboard-Zeitstrahl getippt haben, da dieser in die unmittelbare Verbindung mit den zu erstellenden Meilensteinen gebracht wurde.
+
+\par \bigskip \textbf{Aufgabe 5 - Was ist passiert? Begib dich zu dem Achievementbildschirm.}
+\par Insgesamt haben 4 von 5 Testpersonen diese Frage Beantworten können. Eine der Testpersonen hat das durch eine Push-Benachrichtigung verdeutlichte Achievement, nicht als solches wahrgenommen und war verwirrt. Nach einer Erklärung hat diese Person verstanden was passiert ist und hat sich wie die anderen Personen erfolgreich zu dem Achievementbildschirm begeben.
+
+\par \bigskip \textbf{Aufgabe 6 - Füge den Meilensteinen Unteraufgaben hinzu.}
+\par Alle 5 von 5 Testpersonen haben diese Aufgabe abschließen können, wobei 3 von 5 Personen Schwierigkeiten hatten, die gegebene Android-Tastatur nicht nur als Eingabewerkzeug, sondern durch das erforderte Betätigen des Enter-Buttons als Bestätigungsmittel zu identifizieren. Dies führte dazu, das die Testpersonen einen Bestätigungsbutton auf dem Bildschirm gesucht haben. Es wurde der Wunsch nach einem Feedback bei hinzufügen von Aufgaben geäußert, um Kenntnisse über den erfolgreichen Abschluss des Vorgangs zu gewinnen.
+\par Weiterhin führte die Darstellung der ein- und ausklappbaren Aufgabenliste vermehrt zu Irritationen, da offenbar das Gefühl vermittelt wurde, das die eingetragenen Aufgaben verschwunden sind.
+
+\par \bigskip \textbf{Aufgabe 7 - Bearbeite den Meilenstein (Datum ändern)}
+\par Alle Testpersonen konnten diese Aufgabe ohne Schwierigkeiten abschließen.
+
+\par \bigskip \textbf{Aufgabe 8 - Begib dich zum Dashboard}
+\par Alle Testpersonen konnten diese Aufgabe ohne Schwierigkeiten abschließen.
+
+\par \bigskip \textbf{Aufgabe 9 - Schließe eine Unteraufgabe ab.}
+\par Alle Testpersonen konnten diese Aufgabe ohne Schwierigkeiten abschließen und haben die damit zusammenhängende Veränderung des Zeitstrahls erkannt.
+
+\par \bigskip \textbf{Aufgabe 10 - Schließe eine Herausforderung ab.}
+\par Alle Testpersonen konnten diese Aufgabe ohne Schwierigkeiten abschließen und haben die darauf folgende Achievementmeldung wahrgenommen.
+
+\newpage
+\subsection{Zusammenfassung der Testdurchführung mit den Professoren}
+\par Insgesamt wurden alle im Rahmen der Testdurchführung gestellten Aufgaben auch von den Professoren erfolgreich gelöst. Der Schwerpunkt der Tests lag hierbei jedoch auf der Betrachtung der einzelnen Features aus der Meta-Perspektive, welche sich durch die Erfahrung der Professoren auszeichnet und die Beurteilung der Softwareumsetzung hinsichtlich des Inhalts vorsieht.
+\par \bigskip Im folgenden Verlauf ist eine nach den Features der Software kategorisierte Zusammenfassung der Ergebnisse zu finden:
+
+\par \bigskip \textbf{Kategorie 1 - Der Startbildschirm bei erstmaligem Ausführen der Applikation}
+\par Es wurden von einer der beiden Testpersonen verschiedene Anmerkungen zu dem Bildschirm geäußert, auf dem die Datumseingabe für die Bearbeitungszeit der Bachelorarbeit erfolgt. Zum einen wurde kritisiert, dass es sich bei dem Datum um das amerikanische Datumsformat (MM/DD/YYYY) handelt und dies zu Verwirrungen führt. Weiterhin wurde gewünscht, dass Informationskästchen zu der Bachelorarbeit Bearbeitungszeit auf dem Bildschirm platziert werden könnten.
+
+\par \bigskip \textbf{Kategorie 2 - Bachelorarbeit Guide}
+\par Es liegen keine konkreten Anmerkungen zu dieser Funktion vor.
+
+\par \bigskip \textbf{Kategorie 3 - Meilensteinverwaltung}
+\par Grundsätzlich wurden alle Meilenstein Tool spezifischen Aufgaben erfolgreich gelöst, jedoch kam es bei dem Bestätigen von Unteraufgaben aufgrund der nicht erkennbaren Bestätigungsmöglichkeit in beiden Testdurchführungen zu Schwierigkeiten.
+
+\par \bigskip \textbf{Kategorie 4 - Achievements}
+\par Bei Verwendung der Achievement-Funktion wurde angemerkt, dass die zusammenhängenden Achievements und Herausforderungen gegebenenfalls zu wenig trennscharf gehandhabt werden. Es wird gewünscht, dass klassische Gamification-Badges Einzug in die Applikation erhalten.
+
+\par \bigskip \textbf{Kategorie 5 - Herausforderungen}
+\par Die Herausforderungen wurden als äußert sinnvoll bezeichnet, da sie bei richtiger Gestaltung die verschiedenen folgenden Checklisten-Eigenschaften erfüllen können:
 \begin{itemize}
-\item Kategorie 1 - Der Startbildschirm bei erstmaligem Ausführen der Applikation
-\par 
-
-\item Kategorie 2 - Bachelorarbeit Guide
-\par
-
-\item Kategorie 3 - Meilensteinverwaltung
-\par
-
-\item Kategorie 4 - Achievements
-\par
-
-\item Kategorie 6 - Herausforderungen
-\par
-
-\item Kategorie 5 - Dashboard
-\par
-
+\item Man kann überprüfen, ob man alle relevanten Inhalte einer Bachelorarbeit bedacht hat.
+\item Man wird auf Dinge hingewiesen, die man sonst nicht rechtzeitig bedenkt.
+\item Herausforderungen Können einen auffordernden Charakter haben.
+\item Gute Ergänzung zu individuellen Meilenstein-Tool durch stärkere Vorgliederung.
+\item Orientierungsmöglichkeit für Studierende
 \end{itemize}
 
-\subsection{Zusammenfassung der Befragung von Studierenden}
+\newpage
+\par \bigskip Weiterhin wurden die folgenden Wünsche für eine gute Umsetzung von Herausforderungen betont:
+\begin{itemize}
+\item Das selbständiges Erinnern an Herausforderungen könnte eine nützliche Funktion sein.
+\item Verbindung zu anderen Features der Applikation (Bachelorarbeit Guide) sollte gegeben sein, da die Herausforderungen nicht zu isoliert vorliegen sollten und das Gesamtpotential der Software genutzt werden sollte.
+\item Die korrekte Formulierung der Herausforderungen ist essenziell, da es nicht sinnvoll wäre, wenn man nur Achievements bekommt, wenn man etwas angefangen hat, sondern wenn man etwas fertigstellt.
+\item Ein Mechanismus um Selbstbetrug zu verhindern, wäre wünschenswert.
+\end{itemize}
 
+\par \bigskip \textbf{Kategorie 6 - Dashboard}
+\par Das Dashboard und der auf diesem befindliche Zeitstrahl, wurde im Rahmen der Tests als sehr sinnvoll eingeschätzt, da  die folgenden Aspekte bei den Studierenden gefördert werden könnten:
 
+\begin{itemize}
+\item Diszipliniert Studenten sich überhaupt ein Plan zu machen und sich folgende Fragen zu stellen:
+\begin{itemize}
+\item Welche Meilensteine habe ich?
+\item Wie lange brauche ich?
+\end{itemize}
+\item Die einfache Möglichkeit der Übersicht und das fördern folgender Fragen
+\begin{itemize}
+\item Wie weit bin ich denn gerade?
+\item Bin ich früh oder zu spät dran?
+\end{itemize}
+\end{itemize}
+
+\par Weiterhin wurde die Anmerkung gemacht, dass die Auswahl von Meilensteinen auf dem Zeitstrahl erleichtert werden könnte, wenn die Meilensteine über eine andere Visualisierung dargestellt werden, da diese zu klein sind und gerade bei mehreren Meilensteinen nicht auswählbar sein könnten.
+
+\par \bigskip \textbf{Kategorie 7 - Allgemeine Anmerkungen}
+\par Eine der Testpersonen hat die Idee geäußert einen initialen vorbildlichen Meilensteinplan zu erstellen, an dem sich die Anwender für ihre eigenen Zwecke orientieren können.
+
+\newpage
 \section{Bewertung des Frameworks Flutter zur Entwicklung von mobilen Appliaktionen}
 \par Im Laufe der Entwicklung der Applikation haben sich sowohl subjektive Erfahrung als auch objektive zu bewertende Fakten in Bezug auf die Nutzung von Flutter zur Entwicklung mobiler Applikationen herausgestellt, welche im folgenden Verlauf diskutiert und abschließend durch eine Gegenüberstellung der jeweiligen Vor- und Nachteile ausgewertet werden.
 
