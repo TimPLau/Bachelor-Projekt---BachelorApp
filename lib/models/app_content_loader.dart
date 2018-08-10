@@ -6,6 +6,7 @@ import 'package:path_provider/path_provider.dart';
 
 class AppContentLoader {
   String httpRequest;
+  List<JSONAppContentFile> jsonFiles = new List<JSONAppContentFile>();
 
   AppContentLoader(this.httpRequest);
 
@@ -23,12 +24,7 @@ class AppContentLoader {
   }
 
   loadDataFromInternet() async {
-    List<JSONAppContentFile> informationToolFiles = await getFiles(httpRequest);
-
-    for (JSONAppContentFile file in informationToolFiles) {
-      await file.getJsonContent();
-      saveDataOnDevice(file.jsonFileContent, file.name);
-    }
+    this.jsonFiles = await getFiles(httpRequest);
   }
 
   List<JSONAppContentFile> parseFiles(String responseBody) {
@@ -38,8 +34,11 @@ class AppContentLoader {
         .toList();
   }
 
-  void saveDataOnDevice(String jsonContent, String fileName) async {
-    await writeContent(jsonContent, fileName);
+  void saveDataOnDevice() async {
+    for (JSONAppContentFile file in this.jsonFiles) {
+      await writeContent(await file.getJsonContent(), file.name);
+    }
+
   }
 
   Future<File> writeContent(String jsonContent, String fileName) async {
@@ -52,7 +51,7 @@ class AppContentLoader {
       final file = await getLocalFile(fileName);
       return await file.readAsString();
     } catch (e) {
-      return "Empty";
+      return null;
     }
   }
 

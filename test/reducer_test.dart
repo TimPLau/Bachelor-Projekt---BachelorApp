@@ -12,14 +12,17 @@ import 'package:project_bachelorapplication/actions/achievement_tool_actions.dar
 
 import 'package:project_bachelorapplication/main.dart';
 import 'package:project_bachelorapplication/models/achievement_tool.dart';
+import 'package:project_bachelorapplication/models/app_content_loader.dart';
 import 'package:project_bachelorapplication/models/appstate.dart';
+import 'package:project_bachelorapplication/models/bachelorguide_tool_content.dart';
 import 'package:project_bachelorapplication/models/milestone_tool.dart';
 import 'package:redux/redux.dart';
 import 'package:project_bachelorapplication/reducers/app_reducer.dart';
+import 'package:path_provider/path_provider.dart';
 
 void main() {
   group('Milestone Reducer', () {
-    test('Add Milestone to Store', () {
+    test('Add Milestone', () {
       Store<AppState> store = new Store<AppState>(
         appReducer,
         initialState: new AppState(
@@ -47,7 +50,7 @@ void main() {
           newMilestone.title);
     });
 
-    test('Remove Milestone from Store', () {
+    test('Remove Milestone', () {
       Store<AppState> store = new Store<AppState>(
         appReducer,
         initialState: new AppState(
@@ -83,7 +86,7 @@ void main() {
       expect(store.state.currentMilestones.isEmpty, true);
     });
 
-    test('Edit Milestone on Store', () {
+    test('Edit Milestone', () {
       Store<AppState> store = new Store<AppState>(
         appReducer,
         initialState: new AppState(
@@ -128,7 +131,7 @@ void main() {
       expect(store.state.currentMilestones.length, 1);
     });
 
-    test('Add Task to Milestone on Store', () {
+    test('Add Task to Milestone', () {
       Store<AppState> store = new Store<AppState>(
         appReducer,
         initialState: new AppState(
@@ -160,7 +163,7 @@ void main() {
       TaskState.notCompleted);
     });
 
-    test('Remove Task from Milestone on Store', () {
+    test('Remove Task from Milestone', () {
       Store<AppState> store = new Store<AppState>(
         appReducer,
         initialState: new AppState(
@@ -191,7 +194,7 @@ void main() {
       expect(store.state.currentMilestones[milestone.id].tasks.length, 0);
     });
 
-    test('Edit Task from Milestone on Store', () {
+    test('Edit Task from Milestone', () {
       Store<AppState> store = new Store<AppState>(
         appReducer,
         initialState: new AppState(
@@ -229,25 +232,12 @@ void main() {
   });
 
   group('Achievement/Challenge Reducers', () {
-    test('Check Challenge Achievement from Store', () {
+    test('Check Toggle Challenge State', () {
 
       Challenge c1 = new Challenge("Beginne deine Einleitung",
           "Beginne deine Einleitung Beschreibung");
       Challenge c2 = new Challenge("Beginne deine Zweileitung",
           "Beginne deine Zweileitung Beschreibung");
-
-      Property prop = new Property("Beginne deine Einleitung", 0, ACTIVE_IF_EQUALS_TO, 1);
-      Achievement achievement = new Achievement("Beginne deine Einleitung", AchievementType.beginningPhase, [prop]);
-      Map<String, Achievement> achievements = {
-        achievement.title : achievement
-      };
-
-      Map<String, Map<String, Achievement>> achievementState = {
-        RECOGNIZED: {},
-        NOT_RECOGNIZED: {},
-        ACHIEVED: {},
-        ALL_ACHIEVEMENTS: achievements,
-      };
 
       Map<String, Challenge> challenges = {
         c1.title : c1,
@@ -259,8 +249,8 @@ void main() {
         initialState: new AppState(
             informationToolContent: null,
             currentMilestones: {},
-            properties: {prop.name:prop},
-            achievedAchievements: achievementState,
+            properties: {},
+            achievedAchievements: {},
             challenges: challenges,
             begin: null,
             end: null),
@@ -283,6 +273,92 @@ void main() {
       expect(store.state.challenges[c2.title].title, "Beginne deine Zweileitung");
       expect(store.state.challenges[c2.title].description, "Beginne deine Zweileitung Beschreibung");
       expect(store.state.challenges[c2.title].completed, false);
+
+    });
+
+    test('Check Challenge Achievement', () {
+
+      Challenge c1 = new Challenge("Beginne deine Einleitung",
+          "Beginne deine Einleitung Beschreibung");
+
+      Property prop = new Property("Beginne deine Einleitung", 0, ACTIVE_IF_EQUALS_TO, 1);
+      Achievement achievement = new Achievement("Beginne deine Einleitung", AchievementType.beginningPhase, [prop]);
+      Map<String, Achievement> achievements = {
+        achievement.title : achievement
+      };
+
+      Map<String, Map<String, Achievement>> achievementState = {
+        RECOGNIZED: {},
+        NOT_RECOGNIZED: {},
+        ACHIEVED: {},
+        ALL_ACHIEVEMENTS: achievements,
+      };
+
+      Map<String, Challenge> challenges = {
+        c1.title : c1,
+      };
+
+      Store<AppState> store = new Store<AppState>(
+        appReducer,
+        initialState: new AppState(
+            informationToolContent: null,
+            currentMilestones: {},
+            properties: {prop.name:prop},
+            achievedAchievements: achievementState,
+            challenges: challenges,
+            begin: null,
+            end: null),
+      );
+
+      expect(achievementState[ACHIEVED].isEmpty, true);
+
+      store.dispatch(new ChangeStateChallengeAction(c1));
+      store.dispatch(new CheckForAchieveAction(achievementState[ALL_ACHIEVEMENTS]));
+
+      expect(achievementState[ACHIEVED].isEmpty, false);
+      expect(achievementState[ACHIEVED][c1.title].completed, true);
+      expect(achievementState[ALL_ACHIEVEMENTS][c1.title].completed, true);
+
+    });
+  });
+
+  group('Initialization Test', () {
+    test('AppContentLoader/Generator GitRequest Test', () async {
+      String testRepositoryRequest = "https://api.github.com/repos/TimPLau/BachelorAppRepository/contents/appContent/test_content";
+      AppContentLoader contentLoader = new AppContentLoader(testRepositoryRequest);
+      InformationToolContentBuilder informationToolContentBuilder = new InformationToolContentBuilder();
+
+        await contentLoader.loadDataFromInternet();
+        await informationToolContentBuilder.generateContent(
+            await contentLoader.jsonFiles[0].getJsonContent());
+
+        expect(informationToolContentBuilder.rootContent.title, "INIT");
+        expect(informationToolContentBuilder.rootContent.subsections[0].title,
+            "section 1");
+        expect(informationToolContentBuilder.rootContent.subsections[0]
+            .description, "");
+        expect(informationToolContentBuilder.rootContent.subsections[0]
+            .subsections[0].title, "subsection 1");
+        expect(informationToolContentBuilder.rootContent.subsections[0]
+            .subsections[0].description, "subsection 1 description");
+        expect(informationToolContentBuilder.rootContent.subsections[0]
+            .subsections[0].subsections.isEmpty, true);
+
+        expect(informationToolContentBuilder.rootContent.subsections[0]
+            .subsections[1].title, "subsection 2");
+        expect(informationToolContentBuilder.rootContent.subsections[0]
+            .subsections[1].description, "subsection 2 description");
+        expect(informationToolContentBuilder.rootContent.subsections[0]
+            .subsections[1].subsections.isEmpty, true);
+
+        expect(informationToolContentBuilder.rootContent.subsections[1].title,
+            "section 2");
+        expect(informationToolContentBuilder.rootContent.subsections[1]
+            .subsections[0].title, "subsection 3");
+        expect(informationToolContentBuilder.rootContent.subsections[1]
+            .subsections[0].description, "subsection 3 description");
+        expect(informationToolContentBuilder.rootContent.subsections[1]
+            .subsections[0].subsections.isEmpty, true);
 
     });
   });

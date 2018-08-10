@@ -6,6 +6,7 @@ import 'package:project_bachelorapplication/models/milestone_tool.dart';
 import 'package:project_bachelorapplication/main.dart';
 
 part 'appstate.g.dart';
+
 Content globalAppContent;
 
 @JsonSerializable()
@@ -39,8 +40,7 @@ class AppState extends Object with _$AppStateSerializerMixin {
       DateTime begin,
       DateTime end}) {
     return new AppState(
-      informationToolContent:
-          this.informationToolContent,
+      informationToolContent: informationToolContent ?? this.informationToolContent,
       currentMilestones: currentMilestones ?? this.currentMilestones,
       selectedMilestone: selectedMilestone ?? this.selectedMilestone,
       properties: properties ?? this.properties,

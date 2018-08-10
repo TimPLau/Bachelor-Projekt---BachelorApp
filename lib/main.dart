@@ -26,10 +26,9 @@ const String NOT_RECOGNIZED   = "NOT_RECOGNIZED";
 const String ACHIEVED         = "ACHIEVED";
 const String ALL_ACHIEVEMENTS = "ALL_ACHIEVEMENTS";
 
-AppContentLoader contentLoader;
+AppContentLoader contentLoader = new AppContentLoader("https://api.github.com/repos/TimPLau/BachelorAppRepository/contents/appContent/information-tool");
 InformationToolContentBuilder informationToolContentBuilder =
 new InformationToolContentBuilder();
-
 
 Map<String, Map<String, Achievement>> achievedAchievements = {
   RECOGNIZED : {},
@@ -39,22 +38,18 @@ Map<String, Map<String, Achievement>> achievedAchievements = {
 };
 
 init() async {
-  initializationSettingsAndroid =
-      new AndroidInitializationSettings("@mipmap/ic_launcher");
+
+  initializationSettingsAndroid = new AndroidInitializationSettings("@mipmap/ic_launcher");
   initializationSettingsIOS = new IOSInitializationSettings();
-  initializationSettings = new InitializationSettings(
-      initializationSettingsAndroid, initializationSettingsIOS);
+  initializationSettings = new InitializationSettings(initializationSettingsAndroid, initializationSettingsIOS);
   flutterLocalNotificationsPlugin.initialize(initializationSettings);
 
-  contentLoader = new AppContentLoader(
-      "https://api.github.com/repos/TimPLau/BachelorAppRepository/contents/appContent/information-tool");
-
   await contentLoader.loadDataFromInternet();
+  await contentLoader.saveDataOnDevice();
+  await informationToolContentBuilder.generateContent(await contentLoader.getFileContent("guide.json"));
 
-  await informationToolContentBuilder
-      .generateContent(await contentLoader.getFileContent("guide.json"));
+  globalAppContent = await informationToolContentBuilder.rootContent;
 
-  globalAppContent = informationToolContentBuilder.rootContent;
 }
 
 main() async {
@@ -76,7 +71,7 @@ class BachelorApp extends StatelessWidget {
     store = new Store<AppState>(
       appReducer,
       initialState: new AppState(
-          informationToolContent:  globalAppContent,
+          informationToolContent:  informationToolContentBuilder.rootContent,
           currentMilestones:  new SplayTreeMap<String, Milestone>(),
           properties:  properties,
           achievedAchievements:  achievedAchievements,

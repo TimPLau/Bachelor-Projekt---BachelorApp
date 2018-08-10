@@ -4,28 +4,26 @@ import 'package:json_annotation/json_annotation.dart';
 part 'bachelorguide_tool_content.g.dart';
 
 class InformationToolContentBuilder {
-
   Content rootContent;
 
   InformationToolContentBuilder();
 
   generateContent(String jsonFile) {
-    Content init = new Content("", "INIT", "", []);
+    this.rootContent = new Content("", "INIT", "", []);
 
-    for (dynamic jsonContentModule in json.decode(jsonFile)) {
+    if(jsonFile != null) {
+      for (dynamic jsonContentModule in json.decode(jsonFile)) {
+        Content content = new Content(
+          jsonContentModule["type"],
+          jsonContentModule["title"],
+          jsonContentModule["description"],
+          _loadInformation(jsonContentModule["subsections"]),
+        );
 
-      Content content = new Content(
-        jsonContentModule["type"],
-        jsonContentModule["title"],
-        jsonContentModule["description"],
-        _loadInformation(jsonContentModule["subsections"]),
-      );
-
-      print(content.title);
-      init.subsections.add(content);
+        rootContent.subsections.add(content);
+      }
     }
 
-    this.rootContent = init;
 
   }
 
