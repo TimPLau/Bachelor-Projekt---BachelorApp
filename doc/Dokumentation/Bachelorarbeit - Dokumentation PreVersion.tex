@@ -1653,14 +1653,28 @@ Future<dynamic> checkAchievementNotification(context) {
 \chapter{Validierung und Verifikation} \label{chap:nachweisführung}
 \section{Softwaretesting}
 \subsection{Reducertests}
-\par Im Rahmen der Softwaretests wird speziell das Testen der Reducer Funktionen im Kontext der Redux-Architektur als essenziell betrachtet.
-\par Bei den durchgeführten Tests wurde sich primär an den im Kontext der Redux-Architektur identifizierten Actions orientiert und eine systematisch aufgebaute Abfolge von Tests, welche das Überprüfen des Systemzustands vor sowie nach Ausführen einer Action vorsieht.
-\par \bigskip Insgesamt wurden TODO Reducer Testeinheiten ausgeführt, welche sich alle als positiv abgeschlossene Stichproben herausstellen lassen.
-\par \medskip Die folgenden Testklassen wurden im Rahmen der Reducer Tests definiert: 
+\par Im Rahmen der Softwaretests wird speziell das Testen der Reducer-Funktionen im Kontext der Redux-Architektur als essenziell betrachtet, da diese als zentrale Ausführende Einheit der jeweiligen Nutzeraktionen identifiziert werden.
+\par \bigskip Insgesamt wurden TODO Reducer Testeinheiten ausgeführt, welche durch die folgenden Testfälle im Rahmen der Reducer Tests definiert wurden: 
+
+\bigskip
+\begin{tabularx}{\textwidth}{l|X|l}
+	\toprule
+	\textbf{Testgruppe} & \textbf{Testfall} & \textbf{Status}\\ \midrule
+ 	Milestone Reducer & Add Milestone & Erfolgreich \\ 
+ 	& Remove Milestone & Erfolgreich \\ 
+ 	& Edit Milestone & Erfolgreich \\
+ 	& Add Task to Milestone & Erfolgreich \\
+ 	& Remove Task from Milestone & Erfolgreich \\
+ 	& Edit Task from Milestone & Erfolgreich \\ \midrule
+ 	Achievement/Challenge Reducers & Check Challenge Achievement & Erfolgreich \\ 
+	\bottomrule
+\end{tabularx}
+\captionof{table}{Übersicht der Reducertests}
+\label{tab:reducertests}
 
 \newpage
 \section{Ergebnisse der Nutzerevaluation}
-TODO AUF ANANG HINWEISEN UND ANHANG EINFÜGEN
+
 \par Insgesamt wurden jeweils 7 Personen einem Test unterzogen, welcher als zentralen Bestandteil die Nutzung der entwickelten Applikation beinhaltet. 
 \par Unter den genannten 7 Personen befinden sich 2 Professoren und 5 Studierende des Studiengangs Informatik/Softwareentwicklung der Fachhochschule Lübeck. 
 \par Weiterhin befinden sich unter den 5 Studierenden genau 3 Studierende in der Phase während der Bachelorarbeit und 2 Studierende am Ende des 5. Semesters vor der Bearbeitung der Bachelorarbeit.
@@ -1670,9 +1684,7 @@ TODO AUF ANANG HINWEISEN UND ANHANG EINFÜGEN
 \par Zum einen unterlagen die Test mit den Professoren einer ausführlicher gestalteten Vorstellung und Beschreibung der Features, da diese durch die Erfahrung der Professoren hinsichtlich ihres Nutzens als sehr gut beurteilbar angenommen wurden.
 \par Weiterhin wurden bei den Testdurchführungen mit den Studierenden ein abschließender Fragebogen ausgehändigt, in dem die Testpersonen noch einmal die Möglichkeit hatten weitere Anmerkungen zu der Software zu tätigen.
 
-\par \bigskip Die eigentliche Testdurchführung wurde auf dem eigenen dafür vorbereiteten Smartphone ausgeführt.
-
-\par \bigskip Das Bildschirmgeschehen aller Tests wurden mit Hilfe einer Software aufgezeichnet, jedoch ist eine Datei dieser Aufzeichnungen durch einen Datenfehler nicht verwendbar.
+\par \bigskip Die eigentliche Testdurchführung wurde auf dem eigenen dafür vorbereiteten Smartphone ausgeführt, wobei das Bildschirmgeschehen aller Tests mit Hilfe einer Software aufgezeichnet wurde, jedoch ist eine Datei dieser Aufzeichnungen durch einen unbekannten Datenfehler nicht verwendbar.
 
 \par Des weiteren wurden nach vorher eingeholter Erlaubnis der Testpersonen ein Audiomitschnitt erzeugt. Dieser Audiomitschnitt wurde von allen Professoren und insgesamt 4 von 5 Studierenden zugelassen. Diese Audiomitschnitte unterliegen jedoch aus nicht bekannten Gründen einer schlechten Aufnahmequalität. Es wurden jedoch unmittelbar nach jedem Interview Notizen angefertigt, welche im Anhang dieses Dokuments zu finden sind (siehe Anhang TODO).
 
@@ -1778,8 +1790,63 @@ TODO AUF ANANG HINWEISEN UND ANHANG EINFÜGEN
 \par Eine der Testpersonen hat die Idee geäußert einen initialen vorbildlichen Meilensteinplan zu erstellen, an dem sich die Anwender für ihre eigenen Zwecke orientieren können.
 
 \newpage
+\subsection{Ergebnis der Nutzerevaluation}
+\par Zusammenfassend lässt sich aus der Evaluation mit den Professoren und den Studierenden ein konkreter aktueller Stand ableiten, welcher als Orientierungspunkt für die weitere Entwicklung der Software dient.
+\par \bigskip Im Allgemeinen gilt der Software-Prototyp als noch nicht reif für den realen Einsatz, da er sowohl hinsichtlich der Usability Aspekte, als auch der inhaltlichen Umsetzung im Rahmen der Tests als ausbaufähig und unfertig erscheint.
+\par \bigskip Die folgenden Punkte dienen als Konkretisierung der größten zu leistenden Änderungen oder Erweiterungen der Software:
+
+\begin{itemize}
+\item Zeitstrahl-Element auf dem Dashboard sollte durch eine geeignetere Visualisierung ersetzt oder der besseren Bedienbarkeit bei mehreren eingetragenen Meilensteinen entsprechend angepasst werden.
+\item Achievements sollten stärker von den Herausforderungen differenzierbar sein und durch eine stänkere der Gamification entsprechende Visualisierung, wie beispielsweise Badges statt Farben, verfügen.
+\item Herausforderungen sollten mit den jeweiligen Informationen des Bachelorarbeit Guide verbunden werden, da sie zu isoliert voneinander vorliegen und das mögliche Potential der Funktion nicht genutzt wird.
+\end{itemize}
+
+\par Des weiteren sollen die von den Testpersonen angesprochenen Details im Umgang mit der Software berücksichtigt und eine Lösung geeignet umgesetzt werden, worauf eine weitere Testiteration durchgeführt werden soll.
+
+\newpage
 \section{Bewertung des Frameworks Flutter zur Entwicklung von mobilen Appliaktionen}
-\par Im Laufe der Entwicklung der Applikation haben sich sowohl subjektive Erfahrung als auch objektive zu bewertende Fakten in Bezug auf die Nutzung von Flutter zur Entwicklung mobiler Applikationen herausgestellt, welche im folgenden Verlauf diskutiert und abschließend durch eine Gegenüberstellung der jeweiligen Vor- und Nachteile ausgewertet werden.
+\par Im Laufe der im Rahmen dieser Arbeit durchgeführten Entwicklung einer Applikation mit dem Flutter Framework haben sich sowohl subjektive Erfahrungen als auch objektive Fakten ergeben, welche im folgenden Verlauf unter der Fragestellung, inwiefern sich Flutter für die Entwicklung von mobilen Applikationen eignet, bewertet werden.
+
+\par \bigskip Die Wahl der Bewertungskriterien orientiert sich einerseits an den im Rahmen einer Softwareentwicklung bezeichnenden Eigenschaften eines Frameworks, unter denen die Qualität der Dokumentation, die Komplexität des Erarbeitungsaufwandes, die Wahl der zu verwendenden Programmiersprache, die  Handlichkeit der allgemeinen Anwendung, die Performance Eigenschaften und der Support sowie die zugehörige Communityaktivität des Framesworks im Detail steht. \par Weiterhin werden die Framework spezifischen Merkmale mit in den Bewertungsumfang einbezogen, um die klaren Anwendungsfall spezifischen Stärken des Frameworks abzubilden.
+
+\subsection{Einführung und Dokumentation}
+\par Das Flutter Framework weist eine ausführlich gestaltete und sehr gut strukturierte Online Dokumentation vor, welche besonders auf die für Einsteiger wichtigsten und interessantesten Funktionen mit ausführlichen Beispielanwendungen und Schritt-für-Schritt Anleitungen eingeht.
+Besonders wird dies durch die Hilfestellungen der zielplattform-spezifischen \textbf{Get Started Anleitung}\citep{FlutterGetStarted}  verdeutlicht.
+
+\par \bigskip Hierbei werden ausführliche Anleitungen zur Einrichtung und Installation der benötigten Softwarekomponenten für die verbreiteten Betriebssysteme Windows, MacOS und Linux  gegeben, wobei nach Abschluss der Installationsschritte der Flutter Neueinsteiger im zweiten Teil des \textbf{Get Started} Programms mit dem Erstellen einer Beispielapplikation unter detaillierter Anleitung und einer abschließenden Tour durch das Flutter Framework in die Flutter App-Entwicklung entlassen wird und die benötigten Grundlagen, zur selbstständigen Weiterbildung durch die Dokumentation, erlernt haben sollte. 
+
+\subsection{Verwendete Programmiersprache}
+\par Mit \textbf{Dart}\citep{DartLangHomepage} erhält man bei der Entwicklung mit Flutter eine Google zugehörige moderne, ebenfalls gut Dokumentierte und für die mobile Entwicklung optimierte Programmiersprache, welche die objektorientierte Programmierung unterstützt. 
+
+\subsection{Handhabung und Anwendung}
+\label{sub:handhabungFLutter}
+\par Durch die Handhabung der Flutter Widgets, welche in einer Baumstruktur organisiert sind und die Grundbausteine einer jeder Benutzeroberfläche darstellen, sollten Entwickler im Allgemeinen einen sehr intuitiven Umgang erwarten, welcher weiterhin durch die Dokumentation unterstützt werden sollte. Weiterhin gestaltet es sich aufgrund der einfach gehaltenen Grundstrukturen als sehr einfach, in kurzer Zeit eine lauffähige Minimalsoftware zu erstellen, was erneut für eine sehr gute Erlernbarkeit der Flutter Funktionsweise spricht.
+
+\par \bigskip Flutter enthält von Haus aus eine große Vielfalt an Widgets, welche dem Entwickler große Freiheiten bei der Gestaltung der Software lassen und  hinsichtlich der Plattformunabhängigkeit viel Arbeit abnehmen.
+
+\par \bigskip Es kann jedoch je nach Anwendungsfall, abseits des reinen Oberflächendesigns schnell zum Erreichen dieser Grenze kommen, da viele Services wie beispielsweise Push-Notifications, nicht von Flutter unterstützt werden. Im Rahmen dieser Arbeit wurde hierfür ein externes Plug-In verwendet, wobei zusätzlich zielplattformspezifische Konfigurationen zwingend notwendig waren.
+
+\par \bigskip Als nicht sehr komfortabel hat sich das Ausführen auf einem iOS Endgerät herausgestellt, sofern man keinen Zugriff auf ein MacOS Gerät/Betriebssystem hat. Dies lässt sich zwar nicht auf das Flutter Framework zurückführen, sondern auf die Philosophie der Firma \textbf{Apple}\citep{AppleHomepage}, sollte jedoch trotzdem an dieser Stelle Erwähnung finden. 
+\par \bigskip Es ist zwar möglich, eine virtuelle Maschine mit einem MacOS Betriebssystem einzurichten, jedoch gestaltet sich das unter Umständen als sehr Umständlich und nicht sehr praktikabel. Da jedoch bei der Entwicklung einer plattformübergreifenden Applikation das Ausführen auf allen Zielplattformen aus Testzwecken vorgesehen sein sollte, kommt man als Entwickler unter Umständen in Unannehmlichkeiten.
+
+\subsection{UI-Performance}
+\par Da Flutter Applikationen nativ kompiliert ausgeführt werden, sollte es laut Dokumentation auf einfache Weise möglich sein bei der Ausführung von Software konstante 60 Bilder in der Sekunde zu erreichen. \citep[Abschnitt \grqq What kind of App Perdormance can I expext?\grqq]{Flu3}
+\par \bigskip Weiterhin bietet Flutter den sogenannten \textbf{Flutter Performance Profiler}\citep{FlutterPerformanceProfiler} , welcher es ermöglicht, die Performance Eigenschaften der Applikation bei Laufzeit zu Überwachen. 
+
+\subsection{Support und Community}
+\par Da sich das Flutter Framework noch in der Betaphase der Entwicklung befindet, ist mit einigen Problemen bei dem Einsatz zu rechnen, jedoch kann bei Nachverfolgung der im Git-Repository erfolgenden Fortschritte und Meilensteine im Allgemeinen davon ausgegangen werden, das an regelmäßigen Updates und Softwareverbesserungen dauerhaft gearbeitet wird.
+\par \bigskip Weiterhin hat sich die Verwendung von Flutter im Falle dieser Arbeit als sehr stabil und zuverlässig geäußert.
+\par \bigskip Aufgrund des derzeitigen hohen und weiter steigenden Interesses an dem Flutter Framework ist eine sehr aktive Community zu erwarten, welche auch zur Lösung von Verständnisproblemen, dem Aufsuchen von Ratschlägen und zum einfachen Interessenaustausch als Anlaufstelle angesehen werden kann.
+
+\subsection{Framework spezifische Features}
+\par Das wohl ausschlaggebendste Feature des Flutter Frameworks ist die sogenannte \textbf{Hot Reload Funktion}. Es wird bei Programm Laufzeit ermöglicht innerhalb von Millisekunden, die UI-Komponenten neu zu generieren ohne den inneren Zustand des Systems zurückzusetzen. Dies führt einer extremen flexiblen Gestaltung und Änderungen des Obeflächendesigns bei Laufzeit, was nicht nur zur Einarbeitung in das Framework besonders nützlich ist, sondern auch bei der direkten Entwicklung mit Kunden oder den späteren Anwendern. Beispielsweise könnten Kunden bei Präsentation der Software Änderungswünsche äußern, welche je nach Aufwand der Änderung, direkt umgesetzt werden können. Dies könnte bei den typischerweise häufiger ausfallenden Zwischenpräsentationen im Rahmen von agilen Softwareprojekten für eine starke Entlastung von Kommunikationsbarrieren sorgen.
+
+\subsection{Zusammenfassung der Bewertung}
+\par Zusammenfassend lässt sich sagen, dass sich Flutter im Allgemeinen ausgesprochen gut für die zielgruppennahe Front-End fokussierte Entwicklung von mobilen Applikationen nutzen lässt. Die größten Stärken von Flutter liegen ganz eindeutig in den schnell und effizient zu erreichenden Ergebnissen, was Oberflächendesign betrifft. Der Nutzer kann unkompliziert in die Entwicklung und Veränderung der Oberfläche miteinbezogen werden, was sich in der Entwicklung von mobilen Applikationen stark anbietet. 
+\par \bigskip Allerdings muss darauf hingewiesen werden, dass Flutter aus der eigenen Natur heraus kein Alleskönner ist, was sich durch die Präsentation des Frameworks von Google in der Öffentlichkeit erst auf den Zweiten Blick erfahren lässt, da der Konsument der Dokumentation oder der verschiedenen veröffentlichten Vorträgen von dem vermeintlichen Überschuss an Vorteilen überwältigt wird.
+\par \bigskip Ab einem gewissen Punkt müssen die jeweiligen Entwickler selbst tätig werden oder auf bereits entwickelte externe Plug-Ins zurückgreifen und können sich, wie beispielsweise bei den in Kapitel \ref{sub:handhabungFLutter} angesprochenen Push-Notifications, nicht allein auf Flutter stütze. Dies kann wiederum unter Umständen zu einer erhöhten Komplexität hinsichtlich der Wartbarkeit der Software führen, da man sich somit auf eigene Verantwortung aus Googles Versprechen einer plattformunabhängigen Entwicklung entfernt.
+\par \bigskip Grundsätzlich würde ich Flutter in dem Rahmen dieser Arbeit als geeignet für die Entwicklung mobiler Applikationen bewerten.
+
 
 \chapter{Präsentation der Ergebnisse} \label{chap:ergebnisse}
 \section{Lessons Learned}

@@ -195,26 +195,42 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {6.2.2}Zusammenfassung der Testdurchf\IeC {\"u}hrung mit den Professoren}{79}{subsection.6.2.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6.3}Bewertung des Frameworks Flutter zur Entwicklung von mobilen Appliaktionen}{81}{section.6.3}
+\contentsline {subsection}{\numberline {6.2.3}Ergebnis der Nutzerevaluation}{81}{subsection.6.2.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {7}Pr\IeC {\"a}sentation der Ergebnisse}{82}{chapter.7}
+\contentsline {section}{\numberline {6.3}Bewertung des Frameworks Flutter zur Entwicklung von mobilen Appliaktionen}{82}{section.6.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {7.1}Lessons Learned}{82}{section.7.1}
+\contentsline {subsection}{\numberline {6.3.1}Einf\IeC {\"u}hrung und Dokumentation}{82}{subsection.6.3.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {7.2}Abschlussbetrachtung}{82}{section.7.2}
+\contentsline {subsection}{\numberline {6.3.2}Verwendete Programmiersprache}{82}{subsection.6.3.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\nonumberline Literatur}{83}{chapter*.5}
+\contentsline {subsection}{\numberline {6.3.3}Handhabung und Anwendung}{82}{subsection.6.3.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {A}Anhang}{85}{appendix.A}
+\contentsline {subsection}{\numberline {6.3.4}UI-Performance}{83}{subsection.6.3.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {A.1}Befragung der Beteiligten}{86}{section.A.1}
+\contentsline {subsection}{\numberline {6.3.5}Support und Community}{83}{subsection.6.3.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {A.1.1}Aktivit\IeC {\"a}tsdiagramm: Strategie und Vorgehensweise der Datenerhebung}{87}{subsection.A.1.1}
+\contentsline {subsection}{\numberline {6.3.6}Framework spezifische Features}{84}{subsection.6.3.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {A.1.2}Transkripte der Interviews mit den Professoren}{89}{subsection.A.1.2}
+\contentsline {subsection}{\numberline {6.3.7}Zusammenfassung der Bewertung}{84}{subsection.6.3.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {A.1.3}Auswertung der Ergebnisse der Interviews mit den Professoren}{126}{subsection.A.1.3}
+\contentsline {chapter}{\numberline {7}Pr\IeC {\"a}sentation der Ergebnisse}{85}{chapter.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {A.1.4}Zusammenfassung der schriftlichen Befragung der Studierenden}{135}{subsection.A.1.4}
+\contentsline {section}{\numberline {7.1}Lessons Learned}{85}{section.7.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {A.1.5}Ergebnisse der Online-Umfrage f\IeC {\"u}r die Studierenden}{142}{subsection.A.1.5}
+\contentsline {section}{\numberline {7.2}Abschlussbetrachtung}{85}{section.7.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\nonumberline Literatur}{86}{chapter*.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {A}Anhang}{89}{appendix.A}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {A.1}Befragung der Beteiligten}{90}{section.A.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {A.1.1}Aktivit\IeC {\"a}tsdiagramm: Strategie und Vorgehensweise der Datenerhebung}{91}{subsection.A.1.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {A.1.2}Transkripte der Interviews mit den Professoren}{93}{subsection.A.1.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {A.1.3}Auswertung der Ergebnisse der Interviews mit den Professoren}{130}{subsection.A.1.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {A.1.4}Zusammenfassung der schriftlichen Befragung der Studierenden}{139}{subsection.A.1.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {A.1.5}Ergebnisse der Online-Umfrage f\IeC {\"u}r die Studierenden}{146}{subsection.A.1.5}

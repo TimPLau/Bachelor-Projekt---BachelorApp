@@ -53,6 +53,18 @@
     \field{year}{Februar 27, 2018 (Zugriff Juni 3, 2018)}
   \endentry
 
+  \entry{AppleHomepage}{manual}{}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{App}
+    \field{sortinit}{A}
+    \field{sortinithash}{A}
+    \field{title}{Apple Homepage}
+    \verb{url}
+    \verb https://www.apple.com/
+    \endverb
+    \field{year}{(Zugriff Juni 10, 2018)}
+  \endentry
+
   \entry{Balzert2010}{book}{}
     \name{author}{1}{}{%
       {{hash=BH}{%
@@ -151,6 +163,18 @@
     \field{year}{(Zugriff Juni 3, 2018)}
   \endentry
 
+  \entry{DartLangHomepage}{manual}{}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{Dar}
+    \field{sortinit}{D}
+    \field{sortinithash}{D}
+    \field{title}{Dart Homepage}
+    \verb{url}
+    \verb https://www.dartlang.org/
+    \endverb
+    \field{year}{(Zugriff Juni 10, 2018)}
+  \endentry
+
   \entry{deterding2011gamification}{inproceedings}{}
     \name{author}{4}{}{%
       {{hash=DS}{%
@@ -220,10 +244,23 @@
     \field{year}{Februar 27, 2018 (Zugriff Juni 3, 2018)}
   \endentry
 
-  \entry{FlutterReduxLib}{manual}{}
+  \entry{FlutterPerformanceProfiler}{manual}{}
     \field{labeltitlesource}{title}
     \field{labelalpha}{Flu}
     \field{extraalpha}{3}
+    \field{sortinit}{F}
+    \field{sortinithash}{F}
+    \field{title}{Flutter Performance Profiler}
+    \verb{url}
+    \verb https://flutter.io/ui-performance/
+    \endverb
+    \field{year}{(Zugriff Juni 10, 2018)}
+  \endentry
+
+  \entry{FlutterReduxLib}{manual}{}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{Flu}
+    \field{extraalpha}{4}
     \field{sortinit}{F}
     \field{sortinithash}{F}
     \field{title}{Flutter Redux}
@@ -236,7 +273,7 @@
   \entry{Flu5}{manual}{}
     \field{labeltitlesource}{title}
     \field{labelalpha}{Flu}
-    \field{extraalpha}{4}
+    \field{extraalpha}{5}
     \field{sortinit}{F}
     \field{sortinithash}{F}
     \field{title}{Flutter System Architecture}
@@ -250,7 +287,7 @@
   \entry{Flu6}{manual}{}
     \field{labeltitlesource}{title}
     \field{labelalpha}{Flu}
-    \field{extraalpha}{5}
+    \field{extraalpha}{6}
     \field{sortinit}{F}
     \field{sortinithash}{F}
     \field{title}{Foundation Libary}
@@ -260,10 +297,23 @@
     \field{year}{(Zugriff Juni 3, 2018)}
   \endentry
 
+  \entry{FlutterGetStarted}{manual}{}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{Flu}
+    \field{extraalpha}{7}
+    \field{sortinit}{F}
+    \field{sortinithash}{F}
+    \field{title}{Get Startet}
+    \verb{url}
+    \verb https://flutter.io/get-started/
+    \endverb
+    \field{year}{(Zugriff Juni 10, 2018)}
+  \endentry
+
   \entry{Flu2}{manual}{}
     \field{labeltitlesource}{title}
     \field{labelalpha}{Flu}
-    \field{extraalpha}{6}
+    \field{extraalpha}{8}
     \field{sortinit}{F}
     \field{sortinithash}{F}
     \field{title}{Introduction}
@@ -276,7 +326,7 @@
   \entry{Flu7}{manual}{}
     \field{labeltitlesource}{title}
     \field{labelalpha}{Flu}
-    \field{extraalpha}{7}
+    \field{extraalpha}{9}
     \field{sortinit}{F}
     \field{sortinithash}{F}
     \field{title}{Material Components Widgets}
@@ -289,7 +339,7 @@
   \entry{Flu8}{manual}{}
     \field{labeltitlesource}{title}
     \field{labelalpha}{Flu}
-    \field{extraalpha}{8}
+    \field{extraalpha}{10}
     \field{sortinit}{F}
     \field{sortinithash}{F}
     \field{title}{Technical Overview}
@@ -302,7 +352,7 @@
   \entry{Flu3}{manual}{}
     \field{labeltitlesource}{title}
     \field{labelalpha}{Flu}
-    \field{extraalpha}{9}
+    \field{extraalpha}{11}
     \field{sortinit}{F}
     \field{sortinithash}{F}
     \field{title}{Technology}
@@ -315,7 +365,7 @@
   \entry{Flu4}{manual}{}
     \field{labeltitlesource}{title}
     \field{labelalpha}{Flu}
-    \field{extraalpha}{10}
+    \field{extraalpha}{12}
     \field{sortinit}{F}
     \field{sortinithash}{F}
     \field{title}{Welcome to the Engine Wiki}

@@ -9,6 +9,16 @@
   <component name="ChangeListManager">
     <list default="true" id="f4dd6696-99ed-42f9-ad55-ec4d525f5ce1" name="Default" comment="Refactoring">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/doc/Dokumentation/Bachelorarbeit - Dokumentation PreVersion.aux" afterPath="$PROJECT_DIR$/doc/Dokumentation/Bachelorarbeit - Dokumentation PreVersion.aux" />
+      <change beforePath="$PROJECT_DIR$/doc/Dokumentation/Bachelorarbeit - Dokumentation PreVersion.bbl" afterPath="$PROJECT_DIR$/doc/Dokumentation/Bachelorarbeit - Dokumentation PreVersion.bbl" />
+      <change beforePath="$PROJECT_DIR$/doc/Dokumentation/Bachelorarbeit - Dokumentation PreVersion.log" afterPath="$PROJECT_DIR$/doc/Dokumentation/Bachelorarbeit - Dokumentation PreVersion.log" />
+      <change beforePath="$PROJECT_DIR$/doc/Dokumentation/Bachelorarbeit - Dokumentation PreVersion.lot" afterPath="$PROJECT_DIR$/doc/Dokumentation/Bachelorarbeit - Dokumentation PreVersion.lot" />
+      <change beforePath="$PROJECT_DIR$/doc/Dokumentation/Bachelorarbeit - Dokumentation PreVersion.out" afterPath="$PROJECT_DIR$/doc/Dokumentation/Bachelorarbeit - Dokumentation PreVersion.out" />
+      <change beforePath="$PROJECT_DIR$/doc/Dokumentation/Bachelorarbeit - Dokumentation PreVersion.pdf" afterPath="$PROJECT_DIR$/doc/Dokumentation/Bachelorarbeit - Dokumentation PreVersion.pdf" />
+      <change beforePath="$PROJECT_DIR$/doc/Dokumentation/Bachelorarbeit - Dokumentation PreVersion.synctex.gz" afterPath="$PROJECT_DIR$/doc/Dokumentation/Bachelorarbeit - Dokumentation PreVersion.synctex.gz" />
+      <change beforePath="$PROJECT_DIR$/doc/Dokumentation/Bachelorarbeit - Dokumentation PreVersion.tex" afterPath="$PROJECT_DIR$/doc/Dokumentation/Bachelorarbeit - Dokumentation PreVersion.tex" />
+      <change beforePath="$PROJECT_DIR$/doc/Dokumentation/Bachelorarbeit - Dokumentation PreVersion.toc" afterPath="$PROJECT_DIR$/doc/Dokumentation/Bachelorarbeit - Dokumentation PreVersion.toc" />
+      <change beforePath="$PROJECT_DIR$/doc/Dokumentation/lit.bib" afterPath="$PROJECT_DIR$/doc/Dokumentation/lit.bib" />
     </list>
     <ignored path="$PROJECT_DIR$/.dart_tool/" />
     <ignored path="$PROJECT_DIR$/.idea/" />
@@ -26,16 +36,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="milestone_tool_edit_milestone.dart" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/containers/milestone_tool_edit_milestone.dart">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="15" column="38" lean-forward="false" selection-start-line="15" selection-start-column="38" selection-end-line="15" selection-end-column="38" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="milestone_tool_actions.dart" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/actions/milestone_tool_actions.dart">
           <provider selected="true" editor-type-id="text-editor">
@@ -56,14 +56,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.dart" pinned="false" current-in-tab="true">
+      <file leaf-file-name="main.dart" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/main.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
+            <state relative-caret-position="-425">
               <caret line="35" column="22" lean-forward="false" selection-start-line="35" selection-start-column="22" selection-end-line="35" selection-end-column="22" />
               <folding>
                 <element signature="e#0#25#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="reducer_test.dart" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/test/reducer_test.dart">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="384">
+              <caret line="224" column="5" lean-forward="false" selection-start-line="224" selection-start-column="5" selection-end-line="224" selection-end-column="5" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -262,9 +272,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="Scratches" />
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -1028,13 +1038,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/reducer_test.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="622">
-          <caret line="271" column="0" lean-forward="false" selection-start-line="271" selection-start-column="0" selection-end-line="271" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/containers/milestone_tool_edit_milestone.dart">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
@@ -1109,11 +1112,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/main.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
+        <state relative-caret-position="-425">
           <caret line="35" column="22" lean-forward="false" selection-start-line="35" selection-start-column="22" selection-end-line="35" selection-end-column="22" />
           <folding>
             <element signature="e#0#25#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/reducer_test.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="384">
+          <caret line="224" column="5" lean-forward="false" selection-start-line="224" selection-start-column="5" selection-end-line="224" selection-end-column="5" />
+          <folding />
         </state>
       </provider>
     </entry>
