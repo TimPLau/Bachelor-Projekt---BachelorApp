@@ -9,7 +9,7 @@
 \BOOKMARK [1][-]{section.1.5}{Ausblick auf die Bachelorarbeit}{chapter.1}% 9
 \BOOKMARK [2][-]{subsection.1.5.1}{Beschreibung der Kernkomponenten}{section.1.5}% 10
 \BOOKMARK [2][-]{subsection.1.5.2}{Untersuchung des Problembereiches}{section.1.5}% 11
-\BOOKMARK [2][-]{subsection.1.5.3}{Konzeptvortellung der Applikation}{section.1.5}% 12
+\BOOKMARK [2][-]{subsection.1.5.3}{Konzeptvorstellung der Applikation}{section.1.5}% 12
 \BOOKMARK [2][-]{subsection.1.5.4}{Architektur der Software}{section.1.5}% 13
 \BOOKMARK [2][-]{subsection.1.5.5}{Implementierung}{section.1.5}% 14
 \BOOKMARK [2][-]{subsection.1.5.6}{Validierung und Verifikation}{section.1.5}% 15
@@ -40,12 +40,12 @@
 \BOOKMARK [2][-]{subsection.3.4.1}{Art der Arbeit}{section.3.4}% 40
 \BOOKMARK [2][-]{subsection.3.4.2}{Erwartungen an den Bacheloranden}{section.3.4}% 41
 \BOOKMARK [2][-]{subsection.3.4.3}{H\344ufig auftretende Probleme}{section.3.4}% 42
-\BOOKMARK [2][-]{subsection.3.4.4}{Die Applikation - W\374nsche und Anregungen}{section.3.4}% 43
+\BOOKMARK [2][-]{subsection.3.4.4}{Die Applikation \205 W\374nsche und Anregungen}{section.3.4}% 43
 \BOOKMARK [2][-]{subsection.3.4.5}{Die Applikation - Chancen und Risiken}{section.3.4}% 44
 \BOOKMARK [1][-]{section.3.5}{Ergebnisse der Studierenden}{chapter.3}% 45
 \BOOKMARK [2][-]{subsection.3.5.1}{Erwartungen an den Betreuer}{section.3.5}% 46
 \BOOKMARK [2][-]{subsection.3.5.2}{Die gr\366\337ten Probleme der Studierenden}{section.3.5}% 47
-\BOOKMARK [2][-]{subsection.3.5.3}{W\374nsche f\374r bessere Vorbereitung auf die Bachelorarbeit}{section.3.5}% 48
+\BOOKMARK [2][-]{subsection.3.5.3}{Wunsch nach besserer Vorbereitung auf die Bachelorarbeit}{section.3.5}% 48
 \BOOKMARK [2][-]{subsection.3.5.4}{Einbezug der Studierenden in die Gestaltung der Applikation}{section.3.5}% 49
 \BOOKMARK [1][-]{section.3.6}{Untersuchung der Ergebnisse}{chapter.3}% 50
 \BOOKMARK [2][-]{subsection.3.6.1}{Identifikation des Problembereichs}{section.3.6}% 51
@@ -55,13 +55,13 @@
 \BOOKMARK [2][-]{subsection.3.6.5}{\334bersicht der Chancen}{section.3.6}% 55
 \BOOKMARK [0][-]{chapter.4}{Konzeptvorstellung der Applikation}{}% 56
 \BOOKMARK [1][-]{section.4.1}{Beschreibung der Software}{chapter.4}% 57
-\BOOKMARK [2][-]{subsection.4.1.1}{Fortschrittsmanagement}{section.4.1}% 58
+\BOOKMARK [2][-]{subsection.4.1.1}{Meilensteinverwaltung}{section.4.1}% 58
 \BOOKMARK [2][-]{subsection.4.1.2}{Guide}{section.4.1}% 59
 \BOOKMARK [2][-]{subsection.4.1.3}{Herausforderungen}{section.4.1}% 60
 \BOOKMARK [2][-]{subsection.4.1.4}{Achievements}{section.4.1}% 61
 \BOOKMARK [2][-]{subsection.4.1.5}{Sonstige Softwareinhalte}{section.4.1}% 62
 \BOOKMARK [2][-]{subsection.4.1.6}{Dashboard}{section.4.1}% 63
-\BOOKMARK [2][-]{subsection.4.1.7}{\334bersicht der Abdeckung der Produktfunktionen}{section.4.1}% 64
+\BOOKMARK [2][-]{subsection.4.1.7}{\334bersicht der Produktfunktionen}{section.4.1}% 64
 \BOOKMARK [2][-]{subsection.4.1.8}{Umgang mit Risiken}{section.4.1}% 65
 \BOOKMARK [1][-]{section.4.2}{Beschreibung der Gamification-Elemente}{chapter.4}% 66
 \BOOKMARK [2][-]{subsection.4.2.1}{Achievements}{section.4.2}% 67
@@ -89,9 +89,9 @@
 \BOOKMARK [2][-]{subsection.5.6.1}{Beispielhafte Demonstration einer Meilensteinbearbeitung}{section.5.6}% 89
 \BOOKMARK [1][-]{section.5.7}{Middleware}{chapter.5}% 90
 \BOOKMARK [2][-]{subsection.5.7.1}{Beispielhafte Demonstration der Notification Middleware}{section.5.7}% 91
-\BOOKMARK [0][-]{chapter.6}{Validierung und Verifikation}{}% 92
+\BOOKMARK [0][-]{chapter.6}{Evaluation}{}% 92
 \BOOKMARK [1][-]{section.6.1}{Softwaretesting}{chapter.6}% 93
-\BOOKMARK [2][-]{subsection.6.1.1}{Reducertests}{section.6.1}% 94
+\BOOKMARK [2][-]{subsection.6.1.1}{Ergebnisse der Softwaretests}{section.6.1}% 94
 \BOOKMARK [1][-]{section.6.2}{Ergebnisse der Nutzerevaluation}{chapter.6}% 95
 \BOOKMARK [2][-]{subsection.6.2.1}{Zusammenfassung der Testdurchf\374hrung mit den Studierenden}{section.6.2}% 96
 \BOOKMARK [2][-]{subsection.6.2.2}{Zusammenfassung der Testdurchf\374hrung mit den Professoren}{section.6.2}% 97

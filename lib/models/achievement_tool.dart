@@ -26,12 +26,14 @@ class Challenge extends Object with _$ChallengeSerializerMixin{
 @immutable
 @JsonSerializable()
 class Achievement extends Object with _$AchievementSerializerMixin{
+  final String id;
   final String title;
   final bool completed;
   final AchievementType type;
   final List<Property> properties;
+  final DateTime completeDate;
 
-  Achievement(this.title, this.type, this.properties, [this.completed = false]);
+  Achievement(this.id, this.title, this.type, this.properties, this.completed, this.completeDate);
 
   factory Achievement.fromJson(Map<String, dynamic> json) => _$AchievementFromJson(json);
 

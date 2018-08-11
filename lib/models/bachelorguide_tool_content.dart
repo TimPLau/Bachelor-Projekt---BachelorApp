@@ -24,7 +24,6 @@ class InformationToolContentBuilder {
       }
     }
 
-
   }
 
   List<Content> _loadInformation(List<dynamic> subsections) {

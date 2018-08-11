@@ -11,16 +11,18 @@ class TimeSeriesRangeAnnotationChart extends StatelessWidget {
   final Map<String, Milestone> milestones;
 
   TimeSeriesRangeAnnotationChart(
-      {this.milestones, this.onSelectedMilestone, this.begin, this.end}) {
+      {this.milestones, this.onSelectedMilestone, this.begin, this.end, this.selectedMilestone}) {
     this.seriesList = new List<charts.Series<Milestone, DateTime>>();
   }
 
   factory TimeSeriesRangeAnnotationChart.fromData(
       Map<String, Milestone> milestones,
       Function(Milestone) onSelectedMilestone,
+      Milestone selectedMilestone,
       DateTime begin,
       DateTime end) {
     return new TimeSeriesRangeAnnotationChart(
+      selectedMilestone: selectedMilestone,
       milestones: milestones,
       onSelectedMilestone: onSelectedMilestone,
       begin: begin,
@@ -36,22 +38,6 @@ class TimeSeriesRangeAnnotationChart extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
-    final staticTicks = <charts.TickSpec<String>>[
-      new charts.TickSpec(
-        // Value must match the domain value.
-          '2014',
-          // Optional label for this tick, defaults to domain value if not set.
-          label: 'Year 2014',
-          // The styling for this tick.
-          style: new charts.TextStyleSpec(
-              color: new charts.Color(r: 0x4C, g: 0xAF, b: 0x50))),
-      // If no text style is specified - the style from renderSpec will be used
-      // if one is specified.
-      new charts.TickSpec('2015'),
-      new charts.TickSpec('2016'),
-      new charts.TickSpec('2017'),
-    ];
 
     final children = <Widget>[
       new Expanded(
@@ -84,21 +70,17 @@ class TimeSeriesRangeAnnotationChart extends StatelessWidget {
               listener: onSelectionChanged,
             ),
           ],
+          defaultRenderer: new charts.LineRendererConfig(
+            includePoints: true,
+            includeLine: false,
+
+          ),
+
           //defaultRenderer: new charts.LineRendererConfig(includePoints: true)
         ),
       )
     ];
 
-    if (selectedMilestone != null) {
-      children.add(
-        new Expanded(
-          child: new Text(
-            selectedMilestone.title,
-            softWrap: true,
-          ),
-        ),
-      );
-    }
     return new Column(
       children: children,
     );
@@ -110,6 +92,8 @@ class TimeSeriesRangeAnnotationChart extends StatelessWidget {
     if (milestones.isNotEmpty) {
       ret.add(new charts.Series<Milestone, DateTime>(
         id: "Milestones",
+        colorFn:  (milestone, _) => charts.MaterialPalette.gray.shadeDefault,
+        radiusPxFn: (milestone, _) => milestone.id == selectedMilestone.id ? 5.0 : 0.0,
         domainFn: (milestone, _) => milestone.date,
         measureFn: (milestone, _) => 0,
         data: this.milestones.values.toList(),

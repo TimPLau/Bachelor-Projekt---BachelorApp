@@ -282,7 +282,7 @@ void main() {
           "Beginne deine Einleitung Beschreibung");
 
       Property prop = new Property("Beginne deine Einleitung", 0, ACTIVE_IF_EQUALS_TO, 1);
-      Achievement achievement = new Achievement("Beginne deine Einleitung", AchievementType.beginningPhase, [prop]);
+      Achievement achievement = new Achievement("1", "Beginne deine Einleitung", AchievementType.beginningPhase, [prop], false, null);
       Map<String, Achievement> achievements = {
         achievement.title : achievement
       };

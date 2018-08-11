@@ -23,6 +23,7 @@ abstract class _$ChallengeSerializerMixin {
 }
 
 Achievement _$AchievementFromJson(Map<String, dynamic> json) => new Achievement(
+    json['id'] as String,
     json['title'] as String,
     json['type'] == null
         ? null
@@ -32,18 +33,25 @@ Achievement _$AchievementFromJson(Map<String, dynamic> json) => new Achievement(
         ?.map((e) =>
             e == null ? null : new Property.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    json['completed'] as bool);
+    json['completed'] as bool,
+    json['completeDate'] == null
+        ? null
+        : DateTime.parse(json['completeDate'] as String));
 
 abstract class _$AchievementSerializerMixin {
+  String get id;
   String get title;
   bool get completed;
   AchievementType get type;
   List<Property> get properties;
+  DateTime get completeDate;
   Map<String, dynamic> toJson() => <String, dynamic>{
+        'id': id,
         'title': title,
         'completed': completed,
         'type': type == null ? null : type.toString().split('.')[1],
-        'properties': properties
+        'properties': properties,
+        'completeDate': completeDate?.toIso8601String()
       };
 }
 

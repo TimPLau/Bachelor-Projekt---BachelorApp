@@ -45,7 +45,7 @@ class MilestoneDetailScreen extends StatelessWidget {
           ],
         ),
         body: new Container(
-          padding: EdgeInsets.all(20.0),
+          padding: EdgeInsets.all(15.0),
           child: new ListView(
               children: itemListOf(context, this.milestone, onAdd,
                   onChangeState, onEdit, onRemoveTask)),
@@ -56,7 +56,6 @@ class MilestoneDetailScreen extends StatelessWidget {
 Container buildInfoSectionElement(
     IconData iconData, String title, String information) {
   return new Container(
-    padding: EdgeInsets.only(bottom: 5.0),
     child: new Flex(
       direction: Axis.horizontal,
       mainAxisAlignment: MainAxisAlignment.start,
@@ -112,66 +111,75 @@ List<Widget> itemListOf(
     Function onRemoveTask) {
   List<Widget> ret = [];
 
-  List<Widget> taskTiles = [];
-  milestone.tasks.forEach((s, t) => taskTiles
-      .add(toListTaskTile(t, onChangeState, onEdit, onRemoveTask, milestone)));
-
   ret.addAll([
-    new InkWell(
-      onTap: () {
-        Navigator.push(context,
-            MaterialPageRoute(builder: (context) => EditMilestone(milestone)));
-      },
-      child: new Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: <Widget>[
-          buildHeading("Informationen"),
-          buildInfoSectionElement(Icons.local_play, "Titel:", milestone.title),
-          milestone.description.isEmpty
-              ? new Text("")
-              : buildInfoSectionElement(
-                  Icons.description, "Beschreibung:", milestone.description),
-          buildInfoSectionElement(
-              Icons.date_range,
-              "Datum:",
-              "${DateFormat.d().format(
-                  milestone.date)}.${DateFormat.M().format(
-                  milestone.date)}.${DateFormat.y().format(
-                  milestone.date)}"),
-        ],
+    Column(crossAxisAlignment: CrossAxisAlignment.start, children: <Widget>[
+      new InkWell(
+        onTap: () {
+          Navigator.push(context,
+              MaterialPageRoute(builder: (context) => EditMilestone(milestone)));
+        },
+        child: new Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: <Widget>[
+            buildHeading("Informationen"),
+            buildInfoSectionElement(Icons.local_play, "Titel:", milestone.title),
+            milestone.description.isEmpty
+                ? new Text("")
+                : buildInfoSectionElement(
+                Icons.description, "Beschreibung:", milestone.description),
+            buildInfoSectionElement(
+                Icons.date_range,
+                "Datum:",
+                "${DateFormat.d().format(
+                    milestone.date)}.${DateFormat.M().format(
+                    milestone.date)}.${DateFormat.y().format(
+                    milestone.date)}"),
+          ],
+        ),
       ),
-    ),
-    new Container(
-      padding: EdgeInsets.only(top: 20.0, bottom: 20.0),
-      child: new Divider(),
-    ),
-    new Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: <Widget>[
-        new Container(
-          child: buildHeading("Aufgaben"),
-        ),
-        new TextFormField(
-          controller: new TextEditingController(text: ""),
-          autofocus: false,
-          keyboardType: TextInputType.text,
-          decoration: new InputDecoration(
-              hintText: 'Aufgabentitel',
-              labelText: 'Neue Aufgabe hinzufügen...'),
-          onFieldSubmitted: (input) {
-            onAdd(input, milestone);
-          },
-        ),
-        new ExpansionTile(
-          initiallyExpanded: true,
-          title: new Text("Aufgaben"),
-          children: taskTiles,
-        ),
-      ],
-    )
+      new Container(
+        padding: EdgeInsets.only(top: 10.0, bottom: 5.0),
+        child: new Divider(),
+      ),
+      new Container(
+        child: buildHeading("Aufgaben"),
+      ),
+      new TextFormField(
+        controller: new TextEditingController(text: ""),
+        autofocus: false,
+        keyboardType: TextInputType.text,
+        decoration: new InputDecoration(
+            hintText: 'Aufgabentitel',
+            labelText: 'Neue Aufgabe hinzufügen...'),
+        onFieldSubmitted: (input) {
+          onAdd(input, milestone);
+        },
+      ),
+      getMilestoneTasks(onAdd, onChangeState, onEdit, onRemoveTask, milestone),
+    ],)
+
   ]);
 
   return ret;
+}
+
+Column getMilestoneTasks(Function onAdd, Function onChangeState, Function onEdit, Function onRemoveTask, Milestone milestone, ){
+
+  List<Widget> taskTiles = [];
+  milestone.tasks.forEach((s, t) => taskTiles
+      .add(toListTaskTile(t, onChangeState, onEdit, onRemoveTask, milestone)));
+  
+  return new Column(
+    crossAxisAlignment: CrossAxisAlignment.start,
+    children: <Widget>[
+
+      new ExpansionTile(
+        initiallyExpanded: true,
+        title: new Text("Aufgaben"),
+        children: taskTiles,
+      ),
+    ],
+  );
 }
 
 Container toListTaskTile(Task t, Function onChangeState, Function onEdit,

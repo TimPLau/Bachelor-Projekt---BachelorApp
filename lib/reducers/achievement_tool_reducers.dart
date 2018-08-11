@@ -5,8 +5,9 @@ import 'package:project_bachelorapplication/models/achievement_tool.dart';
 import 'package:project_bachelorapplication/achievement_tool_datas.dart';
 
 Map<String, Property> updateProperties(Map<String, Property> current, action) {
+
   if (action is AddMilestoneAction) {
-    current = setPropertyValue(current, firstMilestone.name, 1);
+    current = setPropertyValue(current, prop3.name, 1);
     return current;
   }
 
@@ -51,14 +52,14 @@ Map<String, Map<String, Achievement>> setAchievedAchievements(
     if (achievement.completed == false) {
 
       if (checkAchievement(achievement, properties) == true) {
-        Achievement newAchievement = new Achievement(achievement.title, achievement.type, achievement.properties, true);
+        Achievement newAchievement = new Achievement(achievement.id, achievement.title, achievement.type, achievement.properties, true, DateTime.now());
 
-        achievements[ALL_ACHIEVEMENTS][achievement.title] = newAchievement;
-        achievements[ACHIEVED][achievement.title] = newAchievement;
+        achievements[ALL_ACHIEVEMENTS][achievement.id] = newAchievement;
+        achievements[ACHIEVED][achievement.id] = newAchievement;
 
-        if (!achievements[NOT_RECOGNIZED].containsKey(newAchievement.title) &&
-            !achievements[RECOGNIZED].containsKey(newAchievement.title)) {
-            achievements[NOT_RECOGNIZED][newAchievement.title] = newAchievement;
+        if (!achievements[NOT_RECOGNIZED].containsKey(newAchievement.id) &&
+            !achievements[RECOGNIZED].containsKey(newAchievement.id)) {
+            achievements[NOT_RECOGNIZED][newAchievement.id] = newAchievement;
         }
 
       }

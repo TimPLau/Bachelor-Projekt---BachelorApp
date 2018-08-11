@@ -185,8 +185,6 @@ class AddEditMilestoneForm extends State<AddEditMilestoneScreen> {
       });
 
       Navigator.pop(this.context);
-      Navigator.pop(this.context);
-
     }
   }
 }

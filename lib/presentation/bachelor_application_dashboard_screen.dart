@@ -7,8 +7,6 @@ import 'package:project_bachelorapplication/presentation/bachelor_application_da
 import 'package:project_bachelorapplication/widgets/navigation_widget.dart';
 import 'package:project_bachelorapplication/presentation/milestone_tool_milestone_detail_screen.dart';
 
-OverlayVisualizer ov;
-
 class DashboardScreen extends StatelessWidget {
   final Map<String, Milestone> milestones;
   final Milestone selectedMilestone;
@@ -39,7 +37,7 @@ class DashboardScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     Milestone activeMilestone;
 
-    if(selectedMilestone != null) {
+    if (selectedMilestone != null) {
       activeMilestone = milestones[selectedMilestone.id] != null
           ? milestones[selectedMilestone.id]
           : getActiveMilestone(this.milestones.values.toList());
@@ -66,17 +64,16 @@ class DashboardScreen extends StatelessWidget {
                           EdgeInsets.only(top: 20.0, left: 20.0, right: 20.0),
                       child: new Card(
                         elevation: 5.0,
-                        child: getTimeRangeChart(context,
-                            this.milestones, activeMilestone, onSelectedMilestone, begin, end),
+                        child: getTimeRangeChart(context, this.milestones,
+                            activeMilestone, onSelectedMilestone, begin, end),
                       ),
                     ),
                   ),
                   new Container(
-                    padding:
-                        EdgeInsets.all(20.0),
+                    padding: EdgeInsets.all(20.0),
                     child: new Card(
                       elevation: 5.0,
-                      child: getActiveMilestoneDetails(context, activeMilestone ,
+                      child: getActiveMilestoneDetails(context, activeMilestone,
                           onAdd, onChangeState, onEdit, onRemoveTask),
                     ),
                   ),
@@ -95,41 +92,91 @@ class DashboardScreen extends StatelessWidget {
       Function onEdit,
       Function onRemoveTask) {
     return new Container(
-      padding: EdgeInsets.all(10.0),
       child: new Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
-          new Text(
-            "Dein Meilenstein",
-            softWrap: true,
-            style: TextStyle(
-              fontSize: 20.0,
-              decorationStyle: TextDecorationStyle.wavy,
-            ),
-          ),
-          new Divider(),
-          activeMilestone == null
+          activeMilestone != null
               ? new Container(
-              padding: EdgeInsets.all(10.0),
-              child: new Center(
-                child: new Text(
-                    "Du hast zurzeit keine zukünftigen Meilensteine. Erstelle einen Meilenstein, um dir die Informationen anzeigen zu lassen"),
-              ))
-              : new Column(
-            children: itemListOf(context, activeMilestone, onAdd,
-                onChangeState, onEdit, onRemoveTask),
-          )
+                  padding: EdgeInsets.all(10.0),
+                  child: new Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: <Widget>[
+                      new Container(
+
+                        child: new Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: <Widget>[
+                            new IconButton(icon: new Icon(Icons.chevron_left), onPressed: (){onSelectedMilestone(getPreviousMilestone(this.milestones, activeMilestone));}),
+                            new Expanded(child: new Text(
+                              "Dein Meilenstein",
+                              softWrap: true,
+                              textAlign: TextAlign.center,
+                              style: TextStyle(
+                                fontSize: 20.0,
+                                decorationStyle: TextDecorationStyle.wavy,
+                              ),
+                            ),
+                            ),
+                            new IconButton(icon: new Icon(Icons.chevron_right), onPressed: (){onSelectedMilestone(getNextMilestone(this.milestones, activeMilestone));}),
+                          ],
+                        )
+                      ),
+                      new Divider(),
+                      new Column(children: itemListOf(context, activeMilestone, onAdd, onChangeState, onEdit, onRemoveTask),)
+                      //getMilestoneTasks(onAdd, onChangeState, onEdit,
+                          //onRemoveTask, activeMilestone)
+                    ],
+                  ))
+              : new Text(
+                  "Du hast zurzeit keine zukünftigen Meilensteine. Erstelle einen Meilenstein, um dir die Informationen anzeigen zu lassen"),
         ],
       ),
     );
   }
 
-  Container getTimeRangeChart(BuildContext context, Map<String, Milestone> milestones,
-      Milestone activeMilestone, Function(Milestone) onSelectedMilestone, DateTime begin, DateTime end) {
+  getPreviousMilestone(Map<String, Milestone> milestones, Milestone currentMilestone){
+    int indexOfCurrent = milestones.keys.toList().indexOf(currentMilestone.id);
 
-    this.chart =
-    new TimeSeriesRangeAnnotationChart.fromData(
-        milestones, onSelectedMilestone, begin, end);
+    print(currentMilestone.title);
+
+    if(milestones.length > 1) {
+      if (milestones.values.toList().first.id != currentMilestone.id) {
+        return milestones.values.toList().elementAt(indexOfCurrent-1);
+      } else {
+        return milestones.values.toList().last;
+      }
+    } else {
+      return currentMilestone;
+    }
+
+  }
+
+  getNextMilestone(Map<String, Milestone> milestones, Milestone currentMilestone){
+    int indexOfCurrent = milestones.keys.toList().indexOf(currentMilestone.id);
+
+    print(currentMilestone.title);
+
+    if(milestones.length > 1) {
+      if (milestones.values.toList().last.id != currentMilestone.id) {
+        return milestones.values.toList().elementAt(indexOfCurrent+1);
+      } else {
+        return milestones.values.toList().first;
+      }
+    } else {
+      return currentMilestone;
+    }
+
+  }
+
+  Container getTimeRangeChart(
+      BuildContext context,
+      Map<String, Milestone> milestones,
+      Milestone activeMilestone,
+      Function(Milestone) onSelectedMilestone,
+      DateTime begin,
+      DateTime end) {
+    this.chart = new TimeSeriesRangeAnnotationChart.fromData(
+        milestones, onSelectedMilestone, activeMilestone, begin, end);
 
     return new Container(
       padding: EdgeInsets.all(10.0),
@@ -148,12 +195,15 @@ class DashboardScreen extends StatelessWidget {
                   ),
                 ),
               ),
-              new IconButton(icon: Icon(Icons.edit),onPressed: (){
-                Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => EditBeginEndDate()));
-              },),
+              new IconButton(
+                icon: Icon(Icons.edit),
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => EditBeginEndDate()));
+                },
+              ),
             ],
           ),
           new Divider(),
@@ -167,7 +217,8 @@ class DashboardScreen extends StatelessWidget {
               title: new Text("Legende"),
               children: <Widget>[
                 new Container(
-                  padding: EdgeInsets.only(top: 10.0, left: 10.0, right: 10.0, bottom: 20.0),
+                  padding: EdgeInsets.only(
+                      top: 10.0, left: 10.0, right: 10.0, bottom: 20.0),
                   child: new Column(
                     children: <Widget>[
                       getLabelDescription(Icons.label, Colors.green,
@@ -176,8 +227,8 @@ class DashboardScreen extends StatelessWidget {
                           "Zukünftiger Meilensteine mit offenen Aufgaben"),
                       getLabelDescription(Icons.label, Colors.red,
                           "Abgelaufener Meilenstein mit offenen Aufgaben"),
-                      getLabelDescription(
-                          Icons.label, Colors.grey, "Meilenstein ohne Aufgaben"),
+                      getLabelDescription(Icons.label, Colors.grey,
+                          "Meilenstein ohne Aufgaben"),
                       getLabelDescription(Icons.label, Colors.black,
                           "Start- und Endtermin der Bachelorarbeit"),
                       getLabelDescription(Icons.label, Colors.blue.shade100,
@@ -188,37 +239,21 @@ class DashboardScreen extends StatelessWidget {
               ],
             ),
           ),
-          new Text(chart.selectedMilestone != null ? chart.selectedMilestone.title : ""),
         ],
       ),
     );
   }
 
   Milestone getActiveMilestone(List<Milestone> milestones) {
-
     for (Milestone milestone in milestones) {
       if (milestone.date.compareTo(DateTime(
-          DateTime.now().year, DateTime.now().month, DateTime.now().day)) >=
+              DateTime.now().year, DateTime.now().month, DateTime.now().day)) >=
           0) {
         return milestone;
       }
     }
 
     return null;
-  }
-}
-
-
-
-/// Sample time series data type.
-
-class OverlayVisualizer {
-  BuildContext context;
-
-  OverlayVisualizer(this.context);
-
-  showAchievementOverlay() {
-    Navigator.pushNamed(context, '/achievementOverlay');
   }
 }
 

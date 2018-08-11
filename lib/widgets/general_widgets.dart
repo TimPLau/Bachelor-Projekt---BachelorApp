@@ -30,7 +30,7 @@ Flexible buildDescriptionContainer(String heading, List<String> information) {
 
 Container buildHeading(String heading) {
   return new Container(
-    padding: EdgeInsets.only(bottom: 20.0),
+    padding: EdgeInsets.only(top: 10.0, bottom: 10.0),
     child: new Text(
       heading,
       softWrap: true,
