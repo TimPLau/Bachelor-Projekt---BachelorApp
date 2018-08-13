@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_redux/flutter_redux.dart';
-import 'package:project_bachelorapplication/actions/achievement_tool_actions.dart';
 import 'package:project_bachelorapplication/models/achievement_tool.dart';
 import 'package:project_bachelorapplication/models/appstate.dart';
-import 'package:project_bachelorapplication/models/notifications.dart';
 import 'package:project_bachelorapplication/presentation/achievement_tool_challenges_overview_screen.dart';
 import 'package:redux/redux.dart';
 
@@ -17,7 +15,7 @@ class ChallengesOverview extends StatelessWidget {
         return _ViewModel.fromStore(store, context);
       },
       builder: (BuildContext context, _ViewModel vm) {
-        return ChallengesOverviewScreen(vm.challenges, vm.changeChallengeState);
+        return ChallengesOverviewScreen(vm.challenges);
       },
     );
   }
@@ -25,18 +23,12 @@ class ChallengesOverview extends StatelessWidget {
 
 class _ViewModel {
   List<Challenge> challenges;
-  Function changeChallengeState;
-  BuildContext context;
 
-  _ViewModel({this.challenges, this.changeChallengeState});
+  _ViewModel({this.challenges});
 
   factory _ViewModel.fromStore(Store<AppState> store, context) {
     return _ViewModel(
       challenges: store.state.challenges.values.toList(),
-      changeChallengeState: (Challenge challenge) {
-        store.dispatch(new ChangeStateChallengeAction(challenge));
-        checkAchievementNotification(context);
-      },
     );
   }
 }

@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:project_bachelorapplication/containers/milestone_tool_milestone_details.dart';
 import 'package:project_bachelorapplication/widgets/navigation_widget.dart';
 import 'package:project_bachelorapplication/models/milestone_tool.dart';
-import 'package:project_bachelorapplication/presentation/milestone_tool_milestone_detail_screen.dart';
 
 class MilestoneOverviewScreen extends StatelessWidget {
   final List<Milestone> milestones;
@@ -16,10 +15,10 @@ class MilestoneOverviewScreen extends StatelessWidget {
       //bottomNavigationBar: NavigatorWidget(),
       appBar: new AppBar(
         backgroundColor: Theme.of(context).bottomAppBarColor,
-        title: new Text("Deine Meilensteine"),
+        title: new Text("Deine Meilensteine".toUpperCase()),
       ),
       floatingActionButton: new FloatingActionButton(
-        backgroundColor: Colors.red,
+        backgroundColor: Theme.of(context).bottomAppBarColor,
         child: new Icon(Icons.add),
         onPressed: () {
           Navigator.pushNamed(context, "/milestoneOverview/AddingMilestones");
@@ -90,5 +89,6 @@ Color getStateColor(MilestoneState state) {
     case MilestoneState.outOfDateAndSomeTasksNotCompleted:
       return Colors.red;
       break;
+    default: return Colors.black;
   }
 }

@@ -12,8 +12,8 @@ class AchievementDetailsOverviewScreen extends StatelessWidget {
     return new Scaffold(
         //bottomNavigationBar: NavigatorWidget(),
         appBar: new AppBar(
-          backgroundColor: Colors.red,
-          title: new Text(title),
+          backgroundColor: Theme.of(context).bottomAppBarColor,
+          title: new Text(title.toUpperCase()),
         ),
         body: new Container(
           padding: EdgeInsets.only(top: 10.0),

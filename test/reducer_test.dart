@@ -235,9 +235,9 @@ void main() {
     test('Check Toggle Challenge State', () {
 
       Challenge c1 = new Challenge("Beginne deine Einleitung",
-          "Beginne deine Einleitung Beschreibung");
+          ChallengeType.beginningPhase, false);
       Challenge c2 = new Challenge("Beginne deine Zweileitung",
-          "Beginne deine Zweileitung Beschreibung");
+          ChallengeType.beginningPhase, false);
 
       Map<String, Challenge> challenges = {
         c1.title : c1,
@@ -257,21 +257,21 @@ void main() {
       );
 
       expect(store.state.challenges[c1.title].title, "Beginne deine Einleitung");
-      expect(store.state.challenges[c1.title].description, "Beginne deine Einleitung Beschreibung");
+      expect(store.state.challenges[c1.title].type, AchievementType.beginningPhase);
       expect(store.state.challenges[c1.title].completed, false);
 
       expect(store.state.challenges[c2.title].title, "Beginne deine Zweileitung");
-      expect(store.state.challenges[c2.title].description, "Beginne deine Zweileitung Beschreibung");
+      expect(store.state.challenges[c2.title].type, AchievementType.beginningPhase);
       expect(store.state.challenges[c2.title].completed, false);
 
       store.dispatch(new ChangeStateChallengeAction(c1));
 
       expect(store.state.challenges[c1.title].title, "Beginne deine Einleitung");
-      expect(store.state.challenges[c1.title].description, "Beginne deine Einleitung Beschreibung");
+      expect(store.state.challenges[c1.title].type, "Beginne deine Einleitung Beschreibung");
       expect(store.state.challenges[c1.title].completed, true);
 
       expect(store.state.challenges[c2.title].title, "Beginne deine Zweileitung");
-      expect(store.state.challenges[c2.title].description, "Beginne deine Zweileitung Beschreibung");
+      expect(store.state.challenges[c2.title].type, AchievementType.beginningPhase);
       expect(store.state.challenges[c2.title].completed, false);
 
     });
@@ -279,7 +279,7 @@ void main() {
     test('Check Challenge Achievement', () {
 
       Challenge c1 = new Challenge("Beginne deine Einleitung",
-          "Beginne deine Einleitung Beschreibung");
+          ChallengeType.beginningPhase, false);
 
       Property prop = new Property("Beginne deine Einleitung", 0, ACTIVE_IF_EQUALS_TO, 1);
       Achievement achievement = new Achievement("1", "Beginne deine Einleitung", AchievementType.beginningPhase, [prop], false, null);

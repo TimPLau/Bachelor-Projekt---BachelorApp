@@ -1,9 +1,9 @@
-import 'package:project_bachelorapplication/actions/milestone_tool_actions.dart';
-import 'package:project_bachelorapplication/models/appstate.dart';
-import 'package:redux/redux.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_redux/flutter_redux.dart';
+import 'package:project_bachelorapplication/actions/milestone_tool_actions.dart';
+import 'package:project_bachelorapplication/models/appstate.dart';
 import 'package:project_bachelorapplication/presentation/dashboard_initial_date_screen.dart';
+import 'package:redux/redux.dart';
 
 class AddBeginEndDate extends StatelessWidget {
   AddBeginEndDate();
@@ -15,9 +15,8 @@ class AddBeginEndDate extends StatelessWidget {
         return _ViewModel.fromStore(store);
       },
       builder: (BuildContext context, _ViewModel vm) {
-
-        return AddEditBeginEndDateScreen(vm.addEditDate, vm.initialBeginDate, vm.initialEndDate, false);
-
+        return AddEditBeginEndDateScreen(
+            vm.addEditDate, vm.initialBeginDate, vm.initialEndDate, false);
       },
     );
   }
@@ -28,9 +27,11 @@ class _ViewModel {
   DateTime initialBeginDate;
   DateTime initialEndDate;
 
-  _ViewModel({this.addEditDate}){
-    this.initialBeginDate = DateTime(DateTime.now().year, DateTime.now().month, DateTime.now().day);
-    this.initialEndDate = DateTime(DateTime.now().year, DateTime.now().month+3, DateTime.now().day);
+  _ViewModel({this.addEditDate}) {
+    this.initialBeginDate =
+        DateTime(DateTime.now().year, DateTime.now().month, DateTime.now().day);
+    this.initialEndDate = DateTime(
+        DateTime.now().year, DateTime.now().month + 3, DateTime.now().day);
   }
 
   factory _ViewModel.fromStore(Store<AppState> store) {

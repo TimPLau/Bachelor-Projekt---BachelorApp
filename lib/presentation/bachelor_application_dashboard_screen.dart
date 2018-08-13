@@ -1,11 +1,9 @@
-import 'dart:async';
-
 import 'package:flutter/material.dart';
-import 'package:project_bachelorapplication/models/milestone_tool.dart';
 import 'package:project_bachelorapplication/containers/bachelor_application_edit_begin_end_date.dart';
+import 'package:project_bachelorapplication/models/milestone_tool.dart';
 import 'package:project_bachelorapplication/presentation/bachelor_application_dashboard_timechart.dart';
-import 'package:project_bachelorapplication/widgets/navigation_widget.dart';
 import 'package:project_bachelorapplication/presentation/milestone_tool_milestone_detail_screen.dart';
+import 'package:project_bachelorapplication/widgets/navigation_widget.dart';
 
 class DashboardScreen extends StatelessWidget {
   final Map<String, Milestone> milestones;
@@ -48,8 +46,9 @@ class DashboardScreen extends StatelessWidget {
         backgroundColor: Theme.of(context).backgroundColor,
         drawer: NavigatorWidget(),
         appBar: new AppBar(
-          backgroundColor: Colors.red,
-          title: new Text("Dashboard"),
+          //backgroundColor: Colors.red,
+          backgroundColor: Theme.of(context).bottomAppBarColor,
+          title: new Text("Dashboard".toUpperCase()),
         ),
         body: new Container(
           child: ListView(
@@ -95,19 +94,24 @@ class DashboardScreen extends StatelessWidget {
       child: new Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
-          activeMilestone != null
-              ? new Container(
-                  padding: EdgeInsets.all(10.0),
-                  child: new Column(
+          new Container(
+            padding: EdgeInsets.all(10.0),
+            child: activeMilestone != null
+                ? new Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
                       new Container(
-
-                        child: new Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: <Widget>[
-                            new IconButton(icon: new Icon(Icons.chevron_left), onPressed: (){onSelectedMilestone(getPreviousMilestone(this.milestones, activeMilestone));}),
-                            new Expanded(child: new Text(
+                          child: new Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: <Widget>[
+                          new IconButton(
+                              icon: new Icon(Icons.chevron_left),
+                              onPressed: () {
+                                onSelectedMilestone(getPreviousMilestone(
+                                    this.milestones, activeMilestone));
+                              }),
+                          new Expanded(
+                            child: new Text(
                               "Dein Meilenstein",
                               softWrap: true,
                               textAlign: TextAlign.center,
@@ -116,56 +120,64 @@ class DashboardScreen extends StatelessWidget {
                                 decorationStyle: TextDecorationStyle.wavy,
                               ),
                             ),
-                            ),
-                            new IconButton(icon: new Icon(Icons.chevron_right), onPressed: (){onSelectedMilestone(getNextMilestone(this.milestones, activeMilestone));}),
-                          ],
-                        )
-                      ),
+                          ),
+                          new IconButton(
+                              icon: new Icon(Icons.chevron_right),
+                              onPressed: () {
+                                onSelectedMilestone(getNextMilestone(
+                                    this.milestones, activeMilestone));
+                              }),
+                        ],
+                      )),
                       new Divider(),
-                      new Column(children: itemListOf(context, activeMilestone, onAdd, onChangeState, onEdit, onRemoveTask),)
+                      new Column(
+                        children: itemListOf(context, activeMilestone, onAdd,
+                            onChangeState, onEdit, onRemoveTask),
+                      )
                       //getMilestoneTasks(onAdd, onChangeState, onEdit,
-                          //onRemoveTask, activeMilestone)
+                      //onRemoveTask, activeMilestone)
                     ],
-                  ))
-              : new Text(
-                  "Du hast zurzeit keine zukünftigen Meilensteine. Erstelle einen Meilenstein, um dir die Informationen anzeigen zu lassen"),
+                  )
+                : new Text(
+                    "Du hast zurzeit keine zukünftigen Meilensteine. Erstelle einen Meilenstein, um dir die Informationen anzeigen zu lassen"),
+          ),
         ],
       ),
     );
   }
 
-  getPreviousMilestone(Map<String, Milestone> milestones, Milestone currentMilestone){
+  getPreviousMilestone(
+      Map<String, Milestone> milestones, Milestone currentMilestone) {
     int indexOfCurrent = milestones.keys.toList().indexOf(currentMilestone.id);
 
     print(currentMilestone.title);
 
-    if(milestones.length > 1) {
+    if (milestones.length > 1) {
       if (milestones.values.toList().first.id != currentMilestone.id) {
-        return milestones.values.toList().elementAt(indexOfCurrent-1);
+        return milestones.values.toList().elementAt(indexOfCurrent - 1);
       } else {
         return milestones.values.toList().last;
       }
     } else {
       return currentMilestone;
     }
-
   }
 
-  getNextMilestone(Map<String, Milestone> milestones, Milestone currentMilestone){
+  getNextMilestone(
+      Map<String, Milestone> milestones, Milestone currentMilestone) {
     int indexOfCurrent = milestones.keys.toList().indexOf(currentMilestone.id);
 
     print(currentMilestone.title);
 
-    if(milestones.length > 1) {
+    if (milestones.length > 1) {
       if (milestones.values.toList().last.id != currentMilestone.id) {
-        return milestones.values.toList().elementAt(indexOfCurrent+1);
+        return milestones.values.toList().elementAt(indexOfCurrent + 1);
       } else {
         return milestones.values.toList().first;
       }
     } else {
       return currentMilestone;
     }
-
   }
 
   Container getTimeRangeChart(

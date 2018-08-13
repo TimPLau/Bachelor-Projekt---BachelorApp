@@ -8,8 +8,8 @@ import 'package:project_bachelorapplication/presentation/milestone_tool_add_edit
 import 'package:project_bachelorapplication/containers/milestone_tool_add_milestone.dart';
 
 class EditMilestone extends StatelessWidget {
-
   final Milestone milestone;
+
   EditMilestone(this.milestone);
 
   @override
@@ -19,7 +19,8 @@ class EditMilestone extends StatelessWidget {
         return _ViewModel.fromStore(store, this.milestone);
       },
       builder: (BuildContext context, _ViewModel vm) {
-        return AddEditMilestoneScreen(vm.editMilestone, vm.currentMilestones, vm.initialDate, true, milestone);
+        return AddEditMilestoneScreen(vm.editMilestone, vm.currentMilestones,
+            vm.initialDate, true, milestone);
       },
     );
   }
@@ -33,7 +34,10 @@ class _ViewModel {
   DateTime initialDate;
 
   _ViewModel(
-      {this.currentMilestone, this.editMilestone, this.currentMilestones, this.currentMilestonesDates}) {
+      {this.currentMilestone,
+      this.editMilestone,
+      this.currentMilestones,
+      this.currentMilestonesDates}) {
     this.currentMilestonesDates = getMilestoneDates(this.currentMilestones);
     this.initialDate = getInitialDate(currentMilestonesDates);
   }

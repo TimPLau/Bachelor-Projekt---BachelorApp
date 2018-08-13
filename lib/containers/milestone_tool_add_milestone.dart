@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_redux/flutter_redux.dart';
-import 'package:project_bachelorapplication/models/milestone_tool.dart';
-import 'package:project_bachelorapplication/models/appstate.dart';
-import 'package:project_bachelorapplication/models/notifications.dart';
-import 'package:redux/redux.dart';
 import 'package:project_bachelorapplication/actions/milestone_tool_actions.dart';
+import 'package:project_bachelorapplication/models/appstate.dart';
+import 'package:project_bachelorapplication/models/milestone_tool.dart';
+import 'package:project_bachelorapplication/models/notifications.dart';
 import 'package:project_bachelorapplication/presentation/milestone_tool_add_edit_milestone_screen.dart';
+import 'package:redux/redux.dart';
 
 class AddMilestone extends StatelessWidget {
   AddMilestone();
@@ -39,9 +39,7 @@ class _ViewModel {
   factory _ViewModel.fromStore(Store<AppState> store, BuildContext context) {
     return _ViewModel(
       addMilestone: (String title, DateTime date, String description) {
-        store.dispatch(
-            new AddMilestoneAction(title, description, date)
-        );
+        store.dispatch(new AddMilestoneAction(title, description, date));
         checkAchievementNotification(context);
       },
       currentMilestones: store.state.currentMilestones.values.toList(),
@@ -49,7 +47,6 @@ class _ViewModel {
     );
   }
 }
-
 
 List<String> getMilestoneDates(List<Milestone> milestones) {
   List<String> retDates = [];
@@ -61,7 +58,7 @@ List<String> getMilestoneDates(List<Milestone> milestones) {
 
 DateTime getInitialDate(List<String> milestonesDates) {
   DateTime ret =
-  DateTime(DateTime.now().year, DateTime.now().month, DateTime.now().day);
+      DateTime(DateTime.now().year, DateTime.now().month, DateTime.now().day);
   milestonesDates.sort();
   for (String date in milestonesDates) {
     if (date == ret.toIso8601String()) {

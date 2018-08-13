@@ -16,9 +16,10 @@ class AchievementOverlayScreen extends StatelessWidget {
         this.onRecognized();
         Navigator.of(context).pop;
         }),
-        title: new Text("Neue Achievements"),
-        backgroundColor: Colors.red,
+        title: new Text("Neue Achievements".toUpperCase()),
+        backgroundColor: Theme.of(context).bottomAppBarColor,
       ),
+
       //bottomNavigationBar: NavigatorWidget(),
       body: new Flex(
         direction: Axis.vertical,
