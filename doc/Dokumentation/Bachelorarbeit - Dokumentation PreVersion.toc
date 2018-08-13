@@ -37,7 +37,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {2.1.3}Nutzergruppen nach Bartle}{12}{subsection.2.1.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.2}Vorstellung des Flutter Frameworks}{14}{section.2.2}
+\contentsline {section}{\numberline {2.2}Vorstellung des Frameworks Flutter}{14}{section.2.2}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {2.2.1}Flutter Kerntechnologien}{14}{subsection.2.2.1}
 \defcounter {refsection}{0}\relax 
