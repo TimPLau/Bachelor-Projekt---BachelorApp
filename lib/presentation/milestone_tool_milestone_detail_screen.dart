@@ -26,7 +26,7 @@ class MilestoneDetailScreen extends StatelessWidget {
     return new Scaffold(
         appBar: new AppBar(
           backgroundColor: Theme.of(context).bottomAppBarColor,
-          title: new Text(this.milestone.title),
+          title: new Text(this.milestone.title.toUpperCase()),
           actions: <Widget>[
             new IconButton(
                 icon: Icon(Icons.edit),

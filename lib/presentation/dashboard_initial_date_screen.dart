@@ -70,8 +70,8 @@ class AddEditBeginEndDateForm extends State<AddEditBeginEndDateScreen> {
         ],
         backgroundColor: Theme.of(context).bottomAppBarColor,
         title: new Text(this.widget.isEditing
-            ? "Zeitraum bearbeiten"
-            : "Zeitraum auswählen"),
+            ? "Zeitraum".toUpperCase()
+            : "Zeitraum".toUpperCase()),
       ),
       body: new Container(
           padding: EdgeInsets.all(30.0),

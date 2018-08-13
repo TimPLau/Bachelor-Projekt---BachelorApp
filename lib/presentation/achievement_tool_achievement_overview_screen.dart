@@ -14,8 +14,8 @@ class AchievementOverviewScreen extends StatelessWidget {
         drawer: NavigatorWidget(),
         //bottomNavigationBar: NavigatorWidget(),
         appBar: new AppBar(
-          backgroundColor: Colors.red,
-          title: new Text("Achievementübersicht"),
+          backgroundColor: Theme.of(context).bottomAppBarColor,
+          title: new Text("Achievements".toUpperCase()),
         ),
         body: new Container(
           padding: EdgeInsets.only(top: 10.0),

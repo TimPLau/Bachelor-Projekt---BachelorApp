@@ -8,16 +8,19 @@ part of 'achievement_tool.dart';
 
 Challenge _$ChallengeFromJson(Map<String, dynamic> json) => new Challenge(
     json['title'] as String,
-    json['description'] as String,
+    json['type'] == null
+        ? null
+        : ChallengeType.values.singleWhere(
+            (x) => x.toString() == 'ChallengeType.${json['type']}'),
     json['completed'] as bool);
 
 abstract class _$ChallengeSerializerMixin {
   String get title;
-  String get description;
+  ChallengeType get type;
   bool get completed;
   Map<String, dynamic> toJson() => <String, dynamic>{
         'title': title,
-        'description': description,
+    'type': type == null ? null : type.toString().split('.')[1],
         'completed': completed
       };
 }

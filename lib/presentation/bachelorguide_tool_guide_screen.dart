@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:project_bachelorapplication/models/bachelorguide_tool_content.dart';
 import 'package:project_bachelorapplication/widgets/navigation_widget.dart';
-import 'package:redux/redux.dart';
 
 class ContentGuideScreen extends StatelessWidget {
   final Content content;
@@ -12,32 +11,44 @@ class ContentGuideScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     List<Content> content = this.content.subsections;
 
-
     return new Scaffold(
         drawer: NavigatorWidget(),
         //bottomNavigationBar: NavigatorWidget(),
         appBar: new AppBar(
+          leading: (this.content.title != "INIT"
+              ? new IconButton(
+                  icon: new Icon(Icons.arrow_back),
+                  onPressed: () {
+                    Navigator.of(context).pop();
+                  })
+              : null),
           backgroundColor: Theme.of(context).bottomAppBarColor,
           title: new Text(this.content.title == "INIT"
-              ? "Bachelorarbeit Guide"
-              : this.content.title),
+              ? "Bachelorarbeit Guide".toUpperCase()
+              : this.content.title.toUpperCase()),
         ),
         body: new ListView.builder(
             itemCount: content.length,
             itemBuilder: (context, index) {
               if (content[index].type == "ButtonListWidget") {
-                return new ListTile(
-                    title: new Text(
-                      content[index].title,
-                      softWrap: true,
+                return new Container(
+                  padding: EdgeInsets.only(top: 10.0, left: 15.0, right: 15.0),
+                  child: new Card(
+                    child: new ListTile(
+                      title: new Text(
+                        content[index].title,
+                        softWrap: true,
+                      ),
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) =>
+                                    ContentGuideScreen(content[index])));
+                      },
                     ),
-                    onTap: () {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) =>
-                                  ContentGuideScreen(content[index])));
-                    });
+                  ),
+                );
               }
 
               if (content[index].type == "ExtensionPanelWidget") {

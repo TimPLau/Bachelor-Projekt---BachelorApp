@@ -66,14 +66,14 @@ class AddEditMilestoneForm extends State<AddEditMilestoneScreen> {
                   submit(context);
                 },
                 child: new Text(
-                  this.widget.isEditing ? "ÜBERNEHMEN" : "HINZUFÜGEN",
+                  this.widget.isEditing ? "ÜBERNEHMEN".toUpperCase() : "HINZUFÜGEN".toUpperCase(),
                   style: TextStyle(color: Colors.white),
                 ))
           ],
           backgroundColor: Theme.of(context).bottomAppBarColor,
           title: new Text(this.widget.isEditing
-              ? "Meilenstein bearbeiten"
-              : "Meilenstein hinzufügen"),
+              ? "Meilenstein".toUpperCase()
+              : "Meilenstein".toUpperCase()),
         ),
         body: new Container(
             padding: EdgeInsets.all(20.0),

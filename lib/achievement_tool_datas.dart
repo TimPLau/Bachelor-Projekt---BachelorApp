@@ -1,7 +1,7 @@
 import 'package:project_bachelorapplication/models/achievement_tool.dart';
 
-  Challenge challenge1 = new Challenge("Beginne deine Einleitung", "Beginne deine Einleitung, um den ersten Schritt auf dem Weg zur fertigen Bachelorarbeit zu tätigen");
-  Challenge challenge2 = new Challenge("Beginne deine Zweileitung", "Beginne deine Zweileitung, um den zweiten Schritt auf dem Weg zur fertigen Bachelorarbeit zu tätigen");
+  Challenge challenge1 = new Challenge("Beginne deine Einleitung", ChallengeType.beginningPhase, false);
+  Challenge challenge2 = new Challenge("Beginne deine Zweileitung", ChallengeType.beginningPhase, false);
 
   Map<String, Challenge> challenges = {
     challenge1.title: challenge1,

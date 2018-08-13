@@ -14,14 +14,17 @@ const String ACTIVE_IF_EQUALS_TO = "==";
 @JsonSerializable()
 class Challenge extends Object with _$ChallengeSerializerMixin{
   final String title;
-  final String description;
+  //final String description;
+  final ChallengeType type;
   final bool completed;
 
-  Challenge( this.title,  this.description, [this.completed = false]);
+  Challenge( this.title, this.type, this.completed);
 
   factory Challenge.fromJson(Map<String, dynamic> json) => _$ChallengeFromJson(json);
 
 }
+
+enum ChallengeType { prePhase , beginningPhase, processingPhase, conclusionPhase}
 
 @immutable
 @JsonSerializable()

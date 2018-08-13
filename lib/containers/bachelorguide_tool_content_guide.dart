@@ -5,9 +5,7 @@ import 'package:project_bachelorapplication/models/appstate.dart';
 import 'package:project_bachelorapplication/presentation/bachelorguide_tool_guide_screen.dart';
 import 'package:redux/redux.dart';
 
-
 class ContentGuide extends StatelessWidget {
-
   ContentGuide();
 
   @override
@@ -33,5 +31,4 @@ class _ViewModel {
       content: store.state.informationToolContent,
     );
   }
-
 }

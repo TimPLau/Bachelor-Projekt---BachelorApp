@@ -1,13 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_redux/flutter_redux.dart';
 import 'package:project_bachelorapplication/actions/milestone_tool_actions.dart';
+import 'package:project_bachelorapplication/containers/bachelor_application_add_begin_end_date.dart';
 import 'package:project_bachelorapplication/models/achievement_tool.dart';
 import 'package:project_bachelorapplication/models/appstate.dart';
 import 'package:project_bachelorapplication/models/milestone_tool.dart';
 import 'package:project_bachelorapplication/models/notifications.dart';
-import 'package:project_bachelorapplication/containers/bachelor_application_add_begin_end_date.dart';
 import 'package:project_bachelorapplication/presentation/bachelor_application_dashboard_screen.dart';
-import 'package:project_bachelorapplication/presentation/dashboard_initial_date_screen.dart';
 import 'package:redux/redux.dart';
 
 class Dashboard extends StatelessWidget {
@@ -60,18 +59,19 @@ class _ViewModel {
   final DateTime endDate;
   bool isEditing;
 
-  _ViewModel({this.milestones,
-    this.achievements,
-    this.selectedMilestone,
-    this.onAdd,
-    this.onEdit,
-    this.onChangeState,
-    this.onRemoveTask,
-    this.onRemoveMilestone,
-    this.addEditDate,
-    this.onSelectedMilestone,
-    this.beginDate,
-    this.endDate}) {}
+  _ViewModel(
+      {this.milestones,
+      this.achievements,
+      this.selectedMilestone,
+      this.onAdd,
+      this.onEdit,
+      this.onChangeState,
+      this.onRemoveTask,
+      this.onRemoveMilestone,
+      this.addEditDate,
+      this.onSelectedMilestone,
+      this.beginDate,
+      this.endDate}) {}
 
   factory _ViewModel.fromStore(Store<AppState> store) {
     return _ViewModel(
@@ -86,10 +86,8 @@ class _ViewModel {
       onEdit: (Task editTask, String newTitle, Milestone activeMilestone) =>
           store.dispatch(
               new EditTaskAction(activeMilestone, editTask, newTitle)),
-      onChangeState: (Task changedTask, Milestone activeMilestone) =>
-          store
-              .dispatch(
-              new ChangeTaskStateAction(activeMilestone, changedTask)),
+      onChangeState: (Task changedTask, Milestone activeMilestone) => store
+          .dispatch(new ChangeTaskStateAction(activeMilestone, changedTask)),
       addEditDate: (DateTime begin, DateTime end) {
         store.dispatch(UpdateBeginDateAction(begin));
         store.dispatch(UpdateEndDateAction(end));
