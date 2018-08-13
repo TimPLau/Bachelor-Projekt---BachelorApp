@@ -73,7 +73,7 @@ Im Verlauf des Studiums sollten Studierende folgendes Wissen und folgende Fähig
 Wie bei Betrachtung der Umfrageergebnisse (siehe Anhang \ref{anhang:onlineUmfrageStudierendeErgebnisse}) anzunehmen ist, kommt es im Kontext von Bachelorarbeiten dennoch oftmals zu Schwierigkeiten, das erworbene Wissen und die Fähigkeiten zielgerichtet auf reale Probleme anzuwenden und deren Ergebnisse zusammenhängend zu dokumentieren, da sich die Studierenden häufig nicht ausreichend vorbereitet fühlen.
 
 \section{Lösungsansatz}
-Ein möglicher im Rahmen dieser Bachelorarbeit zu verfolgender Lösungsansatz wäre es, eine Software zu entwickeln, welche unterstützend und wegweisend bei systematischen Vorgehen bei komplexen Problemstellungen fungieren könnte und diese den Studierenden zugänglich zu machen.
+Ein möglicher im Rahmen dieser Bachelorarbeit zu verfolgender Lösungsansatz wäre es, eine Software zu entwickeln, welche unterstützend und wegweisend bei systematischen Vorgehen und komplexen Problemstellungen fungieren könnte und diese den Studierenden zugänglich zu machen.
 Hierbei soll es nicht darum gehen, den Studierenden die eigentliche Arbeit abzunehmen, sondern vielmehr darum, Studierende hinsichtlich Vorgehen und Methodenauswahl zielgerichtet zu unterstützen.
 
 \section{Zielsetzung}
@@ -588,7 +588,7 @@ Das Problem des mangelnden Zeitmanagements äußert sich unter anderem auch dari
 \item Die Applikation regt dazu an, sich durch das Zeitmanagementtool zu über-planen, was dafür sorgt, dass der Benutzer von der eigentlichen Arbeit abgehalten wird. In diesem Rahmen kann die Applikation dem Benutzer nicht die Eigenverantwortung abnehmen. Der Studierende kann der Applikation nicht die Schuld für einen Misserfolg geben.
 \item Gamification-Elemente könnten unter Umständen einen sehr begrenzten Effekt haben, da sie kein Interesse an einem Thema wecken können, sondern das Grundinteresse aus der Eigenmotivation erzeugt werden muss.
 \item Befürchtung, dass Studenten gegebenenfalls die Applikation als Leitfaden als unumstößlich ansehen könnten und somit durch unterschiedliche Ansichten in einen Konflikt mit dem Betreuer geraten können.
-\item Die App könnte missverstanden werden als Ersatz für die persönliche Betreuung – insbesondere fachliche Aspekte wird eine App naturgemäß nicht abdecken können. Es könnte weiterhin zu einem \qquad Device Mismatch \qquad kommen, da Bachelorarbeiten üblicherweise nicht an mobilen Endgeräten entstehen man müsste also immer zwei Geräte bedienen: Notebook/Desktop-PC und Smartphone.
+\item Die App könnte missverstanden werden als Ersatz für die persönliche Betreuung – insbesondere fachliche Aspekte wird eine App naturgemäß nicht abdecken können. Es könnte weiterhin zu einem \grqq Device Mismatch\grqq{} kommen, da Bachelorarbeiten üblicherweise nicht an mobilen Endgeräten entstehen man müsste also immer zwei Geräte bedienen: Notebook/Desktop-PC und Smartphone.
 \item Die Applikation könnte den Studierenden zu sehr unterstützen, sodass die eigentliche Arbeit der Prüfungsleistung gar nicht von den Studierenden selbst ausgeführt wird, sondern durch die Applikation. Dies könnte zu einer Minderung des Lerneffektes bei der Bearbeitung der Bachelorarbeit führen.
 
 \end{itemize}
@@ -1202,7 +1202,6 @@ Studierende, die zur Überplanung neigen, würden diese auch ohne Applikation du
 
 \par \medskip Das Risiko \ref{risk:gamificationEffekt}, das sich mit dem Nichtwirken der Gamification-Motivation befasst, wird als nicht weitreichend betrachtet, da die Gamification-Inhalte zwar Bestandteil der Applikation, jedoch nicht zwangsweise notwendig zur Benutzung der Applikation sind. Die Spiel-Design-Elemente sollen nicht das Interesse an einem bestimmten Thema steigern, sondern dienen im Kontext der Bachelorarbeit einer wegweisenden Natur, welche motivierende Einflüsse auf die Bearbeitenden hervorrufen können, jedoch nicht müssen, um ihren Nutzen zu erfüllen. 
 
-
 \newpage
 \section{Beschreibung der Gamification-Elemente} \label{sec:gamificationelemente}
 \par Im folgenden Kapitel werden die Gamification-Elemente, die in der Applikation zum Einsatz kommen, näher beschrieben. Dabei wird vor allem auf die identifizierten Kategorien der Achievements eingegangen, welche den Kern der gewählten Motivationsstrategie bilden. Darüber hinaus wird auch beschrieben in welcher Form die gewählte Motivationsstrategie in der Realität, in Bezug auf den Fortschritt bei der Bearbeitung der Bachelorarbeit, funktioniert.
@@ -1222,8 +1221,8 @@ Studierende, die zur Überplanung neigen, würden diese auch ohne Applikation du
 \par Beinhaltete Achievements, welche mit den Herausforderungen gekoppelt sind, die nach Beginn der Bachelorarbeit erfolgen und sich mit der eigentlichen Bearbeitung der Bachelorarbeit auseinandersetzen.
 \item \textbf{Abschlussphase-Achievements} (Gold)
 \par Beinhaltete Achievements, welche mit den Herausforderungen gekoppelt sind, die sich hauptsächlich mit der Abschlussphase einer Bachelorarbeit beschäftigen.
-\item \textbf{App-Achievements} (Smaragd)
-\par Beinhaltete Achievements, welche mit keinen offensichtlichen Herausforderungen gekoppelt sind, sondern nur durch Benutzung der Applikation erhalten werden können.
+\item \textbf{App-Achievements} (Blau)
+\par Beinhaltete Achievements, welche mit keinen offensichtlichen Herausforderungen gekoppelt sind, sondern nur durch Benutzung der Applikation erhalten werden können. Die hierbei von den klassischen Abstufung der Wertigkeit (Bronze, Silber, Gold) gewählte Farbe (Blau) soll die semantische Differenz zwischen den Herausforderungen und den durch die Benutzung der App ausgelösten Achievements verdeutlichen. 
 \end{itemize} 
 
 \newpage
@@ -1257,8 +1256,8 @@ Studierende, die zur Überplanung neigen, würden diese auch ohne Applikation du
 \newpage
 \section{Detaillierte Beschreibung der Model Komponenten}
 \label{sec:komponentenDetails}
-\par Die Model Komponenten stellen den aktuellen internen Zustand des Systems dar und enthalten somit in erster Linie die verwendeten Objekt-Klassen.
-\par \medskip Die nun folgenden Unterkapitel beschreiben die Klassen, welche Teil der  Model Komponente sind.
+\par Die Model Komponenten stellen den aktuellen internen Zustand des Systems dar und enthalten somit in erster Linie die verwendeten Objekt-Klassen. 
+\par \medskip Die nun folgenden Unterkapitel beschreiben die Klassen, welche Teil der Model Komponente sind und beschreiben die wichtigsten Datenfelder und Klassen-Operationen.
 
 \subsection{Milestone-Klasse}
 \par Ein Meilenstein besitzt die folgenden Attribute und Methoden (siehe Abbildung \ref{img:ClassMilestoneAndTask}):
@@ -1400,7 +1399,7 @@ class AppState{
 \newpage
 \par \bigskip \textbf{Aktueller Zustand der Achievements}
 \par Die von dem Benutzer der Applikation zu erreichenden Achievements werden in dem Datenfeld achievements gespeichert. Dieses Datenfeld weißt einige Besonderheiten vor, auf die ich im Folgenden hinweisen möchte:
-\par \medskip Hinweis: Es handelt sich bei dieser Datenstruktur im Detail um eine HashMap, welche weitere HashMaps beinhaltet. 
+\par \medskip  \textit{Hinweis: Es handelt sich bei dieser Datenstruktur im Detail um eine HashMap, welche weitere HashMaps beinhaltet.}
 \par \medskip Diese HashMap wird mit genau vier verschiedenen konstanten Einträgen initialisiert.
 \begin{itemize}
 \item \textbf{ALL\char`_ACHIEVEMENTS}
@@ -1428,13 +1427,11 @@ class AppState{
 
 \newpage
 \subsection{Notification Funktionen}
-\par Für die Implementierung der Notification wurde ein externes Plugin genutzt TODO LINK, da die grundsätzliche Möglichkeit der Handhabung von Notifications durch das Framework Flutter nicht gegeben ist.
-\par\medskip Bei der Verwendung des Plugins sind jedoch einige zielplattformabhängige Konfigurationen nötig, welche sich unter TODO LINK nachvollziehen lassen.
-\par \medskip Bei der Umsetzung der Notifications wurde sich an den gegebenen Beispielen orientiert, welche für die eigene Umsetzung adaptiert wurden.
-\par Die Verwendung der Notifications wird im Rahmen der prototypischen Implementierung durch spezielle Top-Level Funktionen gelöst, welche durch Aufrufen die jeweiligen Actions senden.
-\par \bigskip Weitere Informationen zum Ablauf und der Funktionsweise von Notification sind in dem Kapitel \ref{sec:middleware} zu finden.
+\par Für die Implementierung der Notification wurde ein externes Plugin genutzt TODO LINK, da die grundsätzliche Möglichkeit der Handhabung von Notifications durch das Framework Flutter nicht gegeben ist. Durch die Verwendung des Plugins sind jedoch einige zielplattformabhängige Konfigurationen nötig, welche sich unter TODO LINK nachvollziehen lassen.
+\par \medskip Bei der Umsetzung der Notifications wurde sich an den dort gegebenen Beispielen orientiert, wobei deren Funktionsweisen für die eigene Umsetzung adaptiert wurden.
+\par Die Verwendung der Notifications wird im Rahmen der prototypischen Implementierung durch spezielle Top-Level Funktionen gelöst, welche durch Aufrufen die jeweiligen Achievement-Actions auslösen. Die dadurch hervorgerufene Aktualisierung der zu den Achievements zugehörigen Bedingungen findet in der updateProperties Reducer-Funktion TODO statt. Hier werden die Nutzeraktionen an zentraler Stelle im System abgefragt und die Änderungen an den aktuellen im Zustand gespeicherten Bedingungen durchgeführt. Somit ist dies die zentral zu erweiternde Stelle im Code, wenn neue Achievements einzug in das System erhalten.
+\par \bigskip Weitere Informationen zum Ablauf und der Funktionsweise von Notifications sind in Kapitel \ref{sec:middleware} zu finden.
 
-\newpage
 \section{Actions}
 \par Im Rahmen der auf der Anforderungsanalyse basierenden Konzeption der Softwarelösung, wurden verschieden Benutzeraktionen identifiziert, welche sich größtenteils in den sogenannten Actions wiederfinden.
 Für jede dieser Actions existiert eine eigene Klasse, welche im folgenden Verlauf beispielhaft an einem für alle Actions repräsentativen Fall erläutert wird.
@@ -1652,22 +1649,22 @@ Future<dynamic> checkAchievementNotification(context) {
 \par \bigskip Insgesamt wurden TODO Reducer Testeinheiten ausgeführt, welche durch die folgenden Testfälle im Rahmen der Reducer Tests definiert wurden: 
 
 \bigskip
-\begin{tabularx}{\textwidth}{l|X|l}
+\begin{tabularx}{\textwidth}{l|X|l|l}
 	\toprule
-	\textbf{Testgruppe} & \textbf{Testfall} & \textbf{Status}\\ 
+	\textbf{Testgruppe} & \textbf{Testfall} & \textbf{Status} & \textbf{Status}\\ 
 	\midrule
- 	Milestone Reducer & Add Milestone & Erfolgreich \\ 
- 	& Remove Milestone & Erfolgreich \\ 
- 	& Edit Milestone & Erfolgreich \\
- 	& Add Task to Milestone & Erfolgreich \\
- 	& Remove Task from Milestone & Erfolgreich \\
- 	& Edit Task from Milestone & Erfolgreich \\ 
+ 	Milestone Reducer & Add Milestone & Erfolgreich & \\ 
+ 	& Remove Milestone & Erfolgreich & \\ 
+ 	& Edit Milestone & Erfolgreich & \\
+ 	& Add Task to Milestone & Erfolgreich & \\
+ 	& Remove Task from Milestone & Erfolgreich & \\
+ 	& Edit Task from Milestone & Erfolgreich & \\ 
  	\midrule
- 	Challenge Reducers & Check Toggle Challenge State & Erfolgreich \\
+ 	Challenge Reducers & Check Toggle Challenge State & Erfolgreich & \\
  	\midrule
- 	Achievement Reducers & Check Challenge Achievement & Erfolgreich \\
+ 	Achievement Reducers & Check Challenge Achievement & Erfolgreich & \\
  	\midrule
- 	Initialization Test & AppContentLoader/Generator GitRequest Test & Erfolgreich
+ 	Initialization Test & AppContentLoader/Generator GitRequest Test & Erfolgreich & 
  	\\ 
 	\bottomrule
 \end{tabularx}
@@ -1717,21 +1714,20 @@ Future<dynamic> checkAchievementNotification(context) {
 \par \bigskip \textbf{Aufgabe 5 - Was ist passiert? Begib dich zu dem Achievementbildschirm.}
 \par Insgesamt haben 4 von 5 Testpersonen diese Frage Beantworten können. Eine der Testpersonen hat das durch eine Push-Benachrichtigung verdeutlichte Achievement, nicht als solches wahrgenommen und war verwirrt. Nach einer Erklärung hat diese Person verstanden was passiert ist und hat sich wie die anderen Personen erfolgreich zu dem Achievementbildschirm begeben.
 
+\newpage
 \par \bigskip \textbf{Aufgabe 6 - Füge den Meilensteinen Unteraufgaben hinzu.}
 \par Alle 5 von 5 Testpersonen haben diese Aufgabe abschließen können, wobei 3 von 5 Personen Schwierigkeiten hatten, die gegebene Android-Tastatur nicht nur als Eingabewerkzeug, sondern durch das erforderte Betätigen des Enter-Buttons als Bestätigungsmittel zu identifizieren. Dies führte dazu, das die Testpersonen einen Bestätigungsbutton auf dem Bildschirm gesucht haben. Es wurde der Wunsch nach einem Feedback bei hinzufügen von Aufgaben geäußert, um Kenntnisse über den erfolgreichen Abschluss des Vorgangs zu gewinnen.
 \par Weiterhin führte die Darstellung der ein- und ausklappbaren Aufgabenliste vermehrt zu Irritationen, da offenbar das Gefühl vermittelt wurde, das die eingetragenen Aufgaben verschwunden sind.
 
-\par \bigskip \textbf{Aufgabe 7 - Bearbeite den Meilenstein (Datum ändern)}
+\par \bigskip \textbf{Aufgabe 7 - 10 Allgemeine Operationen ausführen}
+\par Aufgabe 7 bis Aufgabe 10 befassen sich mit weiteren allgemein in der Software zu tätigenden Benutzerinteraktionen, welche aufgrund der gleich ausfallenden Ergebnisse im Folgenden zusammengefasst werden:
+\begin{itemize}
+\item Aufgabe 7  - Das Bearbeiten von Meilensteinen (Datum ändern)
+\item Aufgabe 8  - Die Navigation innerhalb der Software
+\item Aufgabe 9  - Das Abschließen von Meilenstein Aufgaben
+\item Aufgabe 10 - Das Abschließen definierter Herausforderungen
+\end{itemize}
 \par Alle Testpersonen konnten diese Aufgabe ohne Schwierigkeiten abschließen.
-
-\par \bigskip \textbf{Aufgabe 8 - Begib dich zum Dashboard}
-\par Alle Testpersonen konnten diese Aufgabe ohne Schwierigkeiten abschließen.
-
-\par \bigskip \textbf{Aufgabe 9 - Schließe eine Unteraufgabe ab.}
-\par Alle Testpersonen konnten diese Aufgabe ohne Schwierigkeiten abschließen und haben die damit zusammenhängende Veränderung des Zeitstrahls erkannt.
-
-\par \bigskip \textbf{Aufgabe 10 - Schließe eine Herausforderung ab.}
-\par Alle Testpersonen konnten diese Aufgabe ohne Schwierigkeiten abschließen und haben die darauf folgende Achievementmeldung wahrgenommen.
 
 \newpage
 \subsection{Zusammenfassung der Testdurchführung mit den Professoren}
@@ -1854,8 +1850,61 @@ Besonders wird dies durch die Hilfestellungen der zielplattform-spezifischen \te
 
 
 \chapter{Präsentation der Ergebnisse} \label{chap:ergebnisse}
-\section{Lessons Learned}
-\section{Abschlussbetrachtung}
+\par Die Erstellung einer Bachelorarbeit ist mit dem Durchlaufen vieler verschiedener Teilprozesse verbunden, wobei jeder dieser Teilprozesse unterschiedliche Erkenntnisse, Zusammenhänge sowie auch Probleme offenbaren kann.
+\par In dem folgenden zusammenfassenden Kapitel werden die erreichten Ergebnisse sowie die während der Arbeit aufgetretenen Schwierigkeiten und Erkenntnisse beschrieben. Weiterhin wird ein ausführlicher Teil zum Ausblick der Software die im Laufe der Arbeit gesammelten und entwickelten Ideen vorstellen.
+
+\section{Wichtigsten Erkenntnisse der Arbeit}
+Die Untersuchung dieses Problembereiches brachte im Allgemeinen das Ergebnis hervor, dass Studierende und Professoren im Kern sehr kooperierende Erwartungen und Ansichten bezüglich dem Bearbeiten von Bachelorarbeiten haben und das eigentliche Problem in der Ausführung des Projekts selbst liegt. 
+
+\par \bigskip Studierende sehen sich zum ersten Mal mit einem umfangreichen Projekt konfrontiert, wofür sie nicht ausreichend Vorwissen besitzen. Das hierbei zu fehlende Wissen bezieht sich somit überwiegend auf die Eigenschaften und Durchführung einer wissenschaftlichen Arbeit, sowie der mangelhaften Zeitplanung, welche laut den ermittelten überwiegend einheitlich ausfallenden Aussagen der befragten Personen im Laufe des Studiums nicht ausreichend ausführlich vermittelt wird. 
+\par Das größte identifizierte Problem hierbei ist, dass sich Zeitplanung nur durch eigene gesammelte Praxiserfahrung und nicht durch das theoretische Aneignen von Fachwissen oder das Besuchen des, an der Fachhochschule Lübeck angebotenen, Bachelorarbeit Seminars erlernen lässt. Da die im Studium durchlaufenen Projekte jedoch meist in Gruppenarbeit verlaufen und zudem, besonders aus diesem Grund, sehr überschaubar ausfallen, kommt es unter Umständen nicht zu dem gewünschten Lernprozess. Die somit erste \textbf{Forderung} von Zeitmanagement, mündet offenbar in einer \textbf{Überforderung} bei Durchführen der Bachelorarbeit.
+\par Hinsichtlich der fachspezifischen Kompetenzen der Informatik gibt es auffällig wenig Schwierigkeiten, da Studierende im Laufe des Studiums an der Fachhochschule Lübeck, größtenteils die für die Bachelorarbeit benötigten Methoden, Werkzeuge und Fähigkeiten durch die zahlreichen und vielseitigen Module vermittelt bekommen haben.
+
+\par \bigskip Das Ergebnis der Nutzungsevaluation brachte hervor, dass die Softwarelösung durchaus Potential zur Qualitätssteigerung der Bachelorarbeiten von studierenden führen kann, da besonders die enthaltenen Funktionen der Herausforderungen als Leitfaden und des Bachelorarbeit-Guides als Informationsquelle, auf hohen Zuspruch seitens der Professoren, als auch der Studierenden gestoßen ist. Um eine ausreichend fundierte Aussage über den Nutzen der Software zu ermöglichen, muss jedoch ein Praxis-Test durchgeführt werden, welcher sich im Optimalfall auf mehrere Iterationen von Bachelorarbeit Studiengängen bezieht.
+
+\section{Schwierigkeiten bei der Bearbeitung}
+\par Als persönliche größte Schwierigkeit würde ich das Zeit- und Aufwandsmanagement des Gesamtprozesses betrachten, da die zugehörigen Teilprozesse auf eine unvorhergesehen hohe Komplexität gewachsen sind. Konkret zähle ich hierzu besonders das Durchlaufen der Anforderungsanalyse, welche einerseits durch die in diesem Projekt detaillierte Vorgehensweise der Durchführung und Auswertung der Einzelinterviews einen enormen Arbeitsaufwand eingenommen hat. Andererseits führte dies jedoch auch zu einem sehr detaillierten Bild des Problembereiches, welches in Kapitel \ref{chap:problemanalyse} ausführlich beschrieben wird. 
+\par Durch diesen betriebenen Aufwand kam es somit bei den nachfolgenden, nicht parallelisierbaren Teilprozessen zu einer starken Verschiebung im Zeitplan, was wiederum zu einer Minderung der Gesamtqualität Projektausgangs geführt hat.
+
+\section{Erfüllung der Aufgabenstellung}
+\par Bei der Durchführung des Projektes wurde die Erfüllung der Aufgabenstellung als zentralen Projektziel angesehen. Hierbei gestaltete es sich jedoch aus Zeitgründen Schwierig die angestrebte Qualität in voller Gänze zu erreichen und es mussten bezüglich der Vollständigkeit einige Abstriche gemacht werden.
+\par \bigskip Im folgenden Verlauf des Kapitels werden die erreichten Ziele beschrieben und die nicht vollständig umgesetzten Lösungen begründet. Die dabei gewählte Kategorisierung setzt sich aus den aus der Aufgabenstellung hervorgehenden Aufgabenfelder der Software zusammen.
+
+\subsection{Unterstützung bei Bearbeitung der Bachelorarbeit}
+\par Um den Studierenden Hilfestellungen, in Form von Richtlinien und Ratschlägen zu ermöglichen, wurde einerseits die Bachelorarbeit-Guide Funktion implementiert, welche als Nachschlagewerk zu Rahmenbedingungen, Hinweisen und Bearbeitungsdetails dienen soll. 
+\par Der Inhalt dieser Softwarefunktion wird durch das Einlesen einer JSON-Datei aus einem Git-Repository ermöglicht. Diese Schnittstelle sorgt dafür, das diese Inhalte beliebig verändert oder erweitert werden können, ohne einen Eingriff in den Programmcode zu erfordern.
+\par \bigskip In der Software selbst existiert zum jetzigen Zeitpunkt keine Auswahlmöglichkeit des Studiengangs, welcher jedoch durch einen geringen Erweiterungsaufwand der Software nachträglich integriert werden kann.
+\par Die jetzige Möglichkeit der Kategorisierung von Studiengangsspezifischen Inhalten würde lediglich über die in der JSON Datei gewählten Kategorisierung ermöglicht werden, so dass die Anwender jederzeit auch Zugriff auf andere Studienganginhalte hätten.
+\par Weiterhin liegen die bereits eingefügten Wissenssegmente bei Ende dieses Projekts aufgrund des zu betreibenden Zeitaufwandes nur in obligatorischer Form vor und gelten nicht als vollständig.
+\par Wie bereits erwähnt kann der Inhalt jedoch beliebig erweitert werden, was konkret bedeutet, dass  beispielhafte Gliederungen und alle gewünschten Hinweise, Übersichten und Anleitungen zu fachspezifischen Methoden und Werkzeugen zur Anforderungserhebung, Nachweisführung und/oder Aufbereitung von Ergebnissen beliebig verändert oder hinzugefügt werden können.
+\par \bigskip Ein weiterer wichtiger Bestandteil der Unterstützung der Studierenden liegt in der Definition von Herausforderungen. Diese Herausforderungen sollen einen Leitfaden für die Studierenden darstellen, welcher so allgemein wie nötig und so detailliert wie möglich gewählt werden soll. Die Idee hierbei ist, dass die Studierenden sich an dem durch die Herausforderungen definierten Rahmen und Ablauf einer Bachelorarbeit orientieren können, um von Anfang an eine konkrete Richtung anstreben zu können und nicht \grqq einfach drauf los zu arbeiten\grqq. Es ist von essenzieller Bedeutung, dass die Inhalte so gewählt werden, dass  die Inhalte einer themenspezifischen Lösung innerhalb einer Bachelorarbeit nicht beeinflusst werden, da dies einen zu großen Eingriff in die Prüfungsleistung der Studierenden bedeuten würde und diese sich durch einen manipulativen Charakter negativ auswirken könnten.
+
+\subsection{Unterstützung bei Zeitplanung}
+\par Um die Studierenden bei der Zeitplanung der Bachelorarbeit zu unterstützen, wurde eine Softwarefunktion implementiert, welche es den Studierenden ermöglicht, Meilensteine und Teilaufgaben individuell zu verwalten und diese durch eine geeignete Oberflächenpräsentation in Form eines Zeitstrahls als permanenten Begleiter innerhalb der Applikation zu visualisieren.
+
+\subsection{Motivation der Studierenden}
+\par Um Studierende bei der Durchführung der Bachelorarbeit zu motivieren, wurde ein Gamificationsystem implementiert, welches den Studierenden bei Erfüllung von Herausforderungen und Benutzung der Applikation ein positives Feedback vermitteln sollen.
+
+\section{Ausblick des Projekts}
+\par Der Abschluss dieses Projekts definiert einen Orientierungspunkt, welcher einen Ausblick auf weitere zukünftig zu bearbeitende Fragestellungen und die Gestaltung der Softwarelösung zulässt. In diesem Kapitel werden die Fragen und Ansätze, welche im Rahmen dieses Projekts nicht untersucht oder realisiert werden konnten, angesprochen.
+
+\subsection{Ausblick auf weitere Untersuchungen}
+\par Im Laufe der Anforderungsanalyse wurde oft über die zeitliche Konstellation und Abfolge der an der Fachhochschule Lübeck verfügbaren Module diskutiert, da zum jetzigen Zeitpunkt kein konkretes Modul zur Vorbereitung auf das wissenschaftliche Arbeiten angeboten wird. Eine Problemuntersuchung hinsichtlich des Bedarfs an einem solchen Modul oder einer Alternativlösung wird nach Abschluss dieses Projekts empfohlen.
+
+\subsection{Ausblick auf Softwarefunktionen}
+\par Der im Rahmen der Bachelorarbeit entwickelter Softwareprototyp enthält bereits unterschiedliche Funktionen, welche zur Lösung der auftretenden Probleme dienen sollen. Die hierbei entwickelten Softwareinhalte verfügen im Rahmen einer prototypischen Entwicklung über eine nicht ausreichende Qualität zum Einsatz in einer realen Umgebung. Es wäre zwingend notwendig die vorhandenen Funktionen besonders hinsichtlich der Usability und Wirkungsweise zu überarbeiten oder zu Erweitern. 
+
+\par \bigskip Im folgenden Verlauf werden einige konkrete Ideen zur Erweiterung oder Überarbeitung kurz ausgeführt:
+
+\begin{itemize}
+\item \textbf{Erweiterung der Software für andere Studiengänge}
+\par Die entwickelte Software wurde nur für den Studiengang Informatik/Softwaretechnik der Fachhochschule Lübeck entwickelt. Es wäre denkbar zu untersuchen, inwiefern andere Inhalte von Studiengängen und Hochschulen in die Software integrierbar sein können.
+\par Denkbar wäre eine studiengangs-spezifische Auswahl bei erstmaligem Öffnen der Software.
+\item \textbf{Externe definierbare Erinnerungen}
+\par Eine mögliche Funktion wäre es, durch das externe Absenden von Benachrichtigungen an Studierende, Client-seitige Push-Benachrichtigungen auszulösen. Dies könnte beispielsweise in Form von Newsletter Benachrichtigungen über neue Bachelorthemen sowohl von internen Betreuern oder externen Firmen geschehen, welche auch in der Software selbst angezeigt werden.
+\item \textbf{Auswahl von Sprachpaketen}
+\par Eine wichtige Funktion, welche zum Ende des Projekts nicht realisiert wurde, ist die Auswahl von verschiedenen Sprachen, da auch viele Studierende aus dem Ausland die Fachhochschule Lübeck besuchen. Wichtig hierbei ist vor allem die verschiedenen zu beachtenden Quellen der Inhalte der Software, da beispielsweise der Inhalt des Bachelorarbeit Guides aus einer im Git-Repository liegenden externen JSON Datei erfolgt.
+\end{itemize}
 
 \listoftables
 \listoffigures
