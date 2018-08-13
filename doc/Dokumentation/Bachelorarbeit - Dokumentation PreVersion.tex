@@ -58,9 +58,6 @@
 \begin{document}
 \maketitle
 \tableofcontents
-\listoftables
-\listoffigures
-\lstlistoflistings
 
 \chapter{Einleitung}
 Für Studierende im letzten Semester eines Bachelorstudiengangs umfasst die wesentliche Prüfungsleistung das Verfassen einer Bachelorarbeit.
@@ -1666,8 +1663,10 @@ Future<dynamic> checkAchievementNotification(context) {
  	& Remove Task from Milestone & Erfolgreich \\
  	& Edit Task from Milestone & Erfolgreich \\ 
  	\midrule
- 	Achievement/Challenge Reducers & Check Toggle Challenge State & Erfolgreich \\
- 	 & Check Challenge Achievement & Erfolgreich \\  		\midrule
+ 	Challenge Reducers & Check Toggle Challenge State & Erfolgreich \\
+ 	\midrule
+ 	Achievement Reducers & Check Challenge Achievement & Erfolgreich \\
+ 	\midrule
  	Initialization Test & AppContentLoader/Generator GitRequest Test & Erfolgreich
  	\\ 
 	\bottomrule
@@ -1846,14 +1845,21 @@ Besonders wird dies durch die Hilfestellungen der zielplattform-spezifischen \te
 \subsection{Zusammenfassung der Bewertung}
 \par Zusammenfassend lässt sich sagen, dass sich Flutter im Allgemeinen ausgesprochen gut für die zielgruppennahe Front-End fokussierte Entwicklung von mobilen Applikationen nutzen lässt. Die größten Stärken von Flutter liegen ganz eindeutig in den schnell und effizient zu erreichenden Ergebnissen, was Oberflächendesign betrifft. Der Nutzer kann unkompliziert in die Entwicklung und Veränderung der Oberfläche miteinbezogen werden, was sich in der Entwicklung von mobilen Applikationen stark anbietet. 
 \par \bigskip Allerdings muss darauf hingewiesen werden, dass Flutter aus der eigenen Natur heraus kein Alleskönner ist, was sich durch die Präsentation des Frameworks von Google in der Öffentlichkeit erst auf den Zweiten Blick erfahren lässt, da der Konsument der Dokumentation oder der verschiedenen veröffentlichten Vorträgen von dem vermeintlichen Überschuss an Vorteilen überwältigt wird.
-\par \bigskip Ab einem gewissen Punkt müssen die jeweiligen Entwickler selbst tätig werden oder auf bereits entwickelte externe Plug-Ins zurückgreifen und können sich, wie beispielsweise bei den in Kapitel \ref{sub:handhabungFLutter} angesprochenen Push-Notifications, nicht allein auf Flutter stütze. Dies kann wiederum unter Umständen zu einer erhöhten Komplexität hinsichtlich der Wartbarkeit der Software führen, da man sich somit auf eigene Verantwortung aus Googles Versprechen einer plattformunabhängigen Entwicklung entfernt.
-\par \bigskip Grundsätzlich würde ich Flutter in dem Rahmen dieser Arbeit als geeignet für die Entwicklung mobiler Applikationen bewerten.
+
+\par \bigskip Ab einem gewissen Punkt müssen die jeweiligen Entwickler selbst tätig werden oder auf bereits entwickelte externe Plug-Ins zurückgreifen und können sich, wie beispielsweise bei den in Kapitel \ref{sub:handhabungFLutter} angesprochenen Push-Notifications, nicht allein auf Flutter stützen. Dies kann wiederum unter Umständen zu einer erhöhten Komplexität hinsichtlich der Wartbarkeit der Software führen, da sich somit auf eigene Verantwortung aus Googles Versprechen einer plattformunabhängigen Entwicklung entfernt wird.
+
+\par \bigskip Grundsätzlich würde ich Flutter im Rahmen dieser Diskussion als sehr geeignet für die Entwicklung solcher mobiler Applikationen bewerten, da das Framework viele Funktionen erfüllt oder erleichtert, welche wie bei dieser Arbeit ihre Stärken besonders in der benutzernahen Softwareentwicklung hinsichtlich der schnell zu generierenden prototypischen Fortschritte und Änderungen von Oberflächen-Konzepten erfüllen. Mit der Programmiersprache Dart enthält Flutter weiterhin eine optimierte und mächtige Programmiersprache, welche den im Gegensatz zu der fokussierten Front-End Ausrichtung von Flutter auch ein breites Spektrum an Möglichkeiten für die Back-End Entwicklung bietet.
+
+\par \bigskip Weiterhin bleibt jedoch abzuwarten, ob Flutter bezüglich der Relevanz in den nächsten Jahren von Bedeutung bleibt oder ob es genauso schnell wieder von dem Markt verschwindet, wie es erschienen ist.
 
 
 \chapter{Präsentation der Ergebnisse} \label{chap:ergebnisse}
 \section{Lessons Learned}
 \section{Abschlussbetrachtung}
 
+\listoftables
+\listoffigures
+\lstlistoflistings
 \nocite{*}
 \printbibliography
 
