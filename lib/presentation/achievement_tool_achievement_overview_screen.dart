@@ -82,13 +82,13 @@ class AchievementOverviewScreen extends StatelessWidget {
         return "DUMMY";
         break;
       case AchievementType.beginningPhase:
-        return "Beginner Achievemnts";
+        return "Beginner Achievements";
         break;
       case AchievementType.processingPhase:
-        return "Performer Achievemnts";
+        return "Performer Achievements";
         break;
       case AchievementType.conclusionPhase:
-        return "Workaholic Achievemnts";
+        return "Workaholic Achievements";
         break;
       case AchievementType.special:
         return "App Achievements";

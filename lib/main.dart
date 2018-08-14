@@ -93,7 +93,7 @@ class BachelorApp extends StatelessWidget {
               store: store,
               child: new MaterialApp(
                 theme: new ThemeData(
-                  bottomAppBarColor: Colors.redAccent,
+                  bottomAppBarColor: Colors.red,
                     backgroundColor: Colors.white),
                 title: "BachelorApp",
                 initialRoute: '/',

@@ -46,7 +46,6 @@ class DashboardScreen extends StatelessWidget {
         backgroundColor: Theme.of(context).backgroundColor,
         drawer: NavigatorWidget(),
         appBar: new AppBar(
-          //backgroundColor: Colors.red,
           backgroundColor: Theme.of(context).bottomAppBarColor,
           title: new Text("Dashboard".toUpperCase()),
         ),
