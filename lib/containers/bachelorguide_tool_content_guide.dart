@@ -15,14 +15,14 @@ class ContentGuide extends StatelessWidget {
         return _ViewModel.fromStore(store);
       },
       builder: (BuildContext context, _ViewModel vm) {
-        return new ContentGuideScreen(vm.content);
+        return new ContentGuideScreen(vm.content["INIT_ID"].id, vm.content);
       },
     );
   }
 }
 
 class _ViewModel {
-  final Content content;
+  final Map<String, Content> content;
 
   _ViewModel({this.content});
 

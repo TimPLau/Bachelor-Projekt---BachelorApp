@@ -30,7 +30,7 @@ AppState _$AppStateFromJson(Map<String, dynamic> json) => new AppState(
     end: json['end'] == null ? null : DateTime.parse(json['end'] as String));
 
 abstract class _$AppStateSerializerMixin {
-  Content get informationToolContent;
+  Map<String, Content> get informationToolContent;
   Map<String, Milestone> get currentMilestones;
   Milestone get selectedMilestone;
   Map<String, Property> get properties;

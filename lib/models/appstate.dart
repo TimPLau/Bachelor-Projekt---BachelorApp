@@ -7,11 +7,11 @@ import 'package:project_bachelorapplication/main.dart';
 
 part 'appstate.g.dart';
 
-Content globalAppContent;
+Map<String, Content> globalAppContent;
 
 @JsonSerializable()
 class AppState extends Object with _$AppStateSerializerMixin {
-  final Content informationToolContent;
+  final Map<String, Content> informationToolContent;
   final Map<String, Milestone> currentMilestones;
   final Milestone selectedMilestone;
   final Map<String, Property> properties;
@@ -31,7 +31,7 @@ class AppState extends Object with _$AppStateSerializerMixin {
       this.end});
 
   AppState copyWith(
-      {Content informationToolContent,
+      {Map<String, Content> informationToolContent,
       Map<String, Milestone> currentMilestones,
       Milestone selectedMilestone,
       Map<String, Property> properties,

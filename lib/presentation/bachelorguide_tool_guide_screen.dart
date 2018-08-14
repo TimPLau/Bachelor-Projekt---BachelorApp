@@ -3,19 +3,21 @@ import 'package:project_bachelorapplication/models/bachelorguide_tool_content.da
 import 'package:project_bachelorapplication/widgets/navigation_widget.dart';
 
 class ContentGuideScreen extends StatelessWidget {
-  final Content content;
+  final String currentContentID;
+  final Map<String, Content> content;
 
-  ContentGuideScreen(this.content);
+  ContentGuideScreen(this.currentContentID, this.content);
 
   @override
   Widget build(BuildContext context) {
-    List<Content> content = this.content.subsections;
+    Content currentContent = this.content[currentContentID];
+    List<String> currentContentSubsections = currentContent.subsections;
 
     return new Scaffold(
         drawer: NavigatorWidget(),
         //bottomNavigationBar: NavigatorWidget(),
         appBar: new AppBar(
-          leading: (this.content.title != "INIT"
+          leading: (currentContent.title != "INIT"
               ? new IconButton(
                   icon: new Icon(Icons.arrow_back),
                   onPressed: () {
@@ -23,20 +25,21 @@ class ContentGuideScreen extends StatelessWidget {
                   })
               : null),
           backgroundColor: Theme.of(context).bottomAppBarColor,
-          title: new Text(this.content.title == "INIT"
-              ? "Bachelorarbeit Guide".toUpperCase()
-              : this.content.title.toUpperCase()),
+          title: new Text(currentContent.title == "INIT" ? "Bachelorarbeit Guide".toUpperCase() : currentContent.title),
         ),
         body: new ListView.builder(
-            itemCount: content.length,
+            itemCount: currentContentSubsections.length,
             itemBuilder: (context, index) {
-              if (content[index].type == "ButtonListWidget") {
+
+
+              if (this.content[currentContentSubsections[index]].type == "ButtonListWidget") {
+                print("HIER" + currentContent.subsections.toString());
                 return new Container(
                   padding: EdgeInsets.only(top: 10.0, left: 15.0, right: 15.0),
                   child: new Card(
                     child: new ListTile(
                       title: new Text(
-                        content[index].title,
+                        this.content[currentContentSubsections[index]].title,
                         softWrap: true,
                       ),
                       onTap: () {
@@ -44,20 +47,20 @@ class ContentGuideScreen extends StatelessWidget {
                             context,
                             MaterialPageRoute(
                                 builder: (context) =>
-                                    ContentGuideScreen(content[index])));
+                                    ContentGuideScreen(this.content[currentContentSubsections[index]].id , this.content)));
                       },
                     ),
                   ),
                 );
               }
 
-              if (content[index].type == "ExtensionPanelWidget") {
+              if (this.content[currentContentSubsections[index]].type == "ExtensionPanelWidget") {
                 return new Container(
                   padding: EdgeInsets.only(top: 10.0, left: 15.0, right: 15.0),
                   child: new Card(
                     child: new ExpansionTile(
                       title: new Text(
-                        content[index].title,
+                        this.content[currentContentSubsections[index]].title,
                         softWrap: true,
                       ),
                       backgroundColor: Colors.white,
@@ -68,7 +71,7 @@ class ContentGuideScreen extends StatelessWidget {
                             children: <Widget>[
                               new Expanded(
                                 child: new Text(
-                                  content[index].description,
+                                  this.content[currentContentSubsections[index]].description,
                                   textAlign: TextAlign.left,
                                   softWrap: true,
                                 ),

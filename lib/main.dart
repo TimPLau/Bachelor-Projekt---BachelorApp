@@ -52,7 +52,7 @@ init() async {
   await informationToolContentBuilder
       .generateContent(await contentLoader.getFileContent("guide.json"));
 
-  globalAppContent = await informationToolContentBuilder.rootContent;
+  globalAppContent = await informationToolContentBuilder.content;
 }
 
 main() async {
@@ -72,7 +72,7 @@ class BachelorApp extends StatelessWidget {
     store = new Store<AppState>(
       appReducer,
       initialState: new AppState(
-          informationToolContent: informationToolContentBuilder.rootContent,
+          informationToolContent: informationToolContentBuilder.content,
           currentMilestones: new SplayTreeMap<String, Milestone>(),
           properties: properties,
           achievedAchievements: achievedAchievements,

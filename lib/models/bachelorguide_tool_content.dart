@@ -4,33 +4,42 @@ import 'package:json_annotation/json_annotation.dart';
 part 'bachelorguide_tool_content.g.dart';
 
 class InformationToolContentBuilder {
-  Content rootContent;
+  Map<String, Content> content;
 
   InformationToolContentBuilder();
 
   generateContent(String jsonFile) {
-    this.rootContent = new Content("", "INIT", "", []);
+
+    Content initContent = new Content("INIT_ID", "", "INIT", "", []);
+    this.content = {initContent.id : initContent};
 
     if(jsonFile != null) {
       for (dynamic jsonContentModule in json.decode(jsonFile)) {
-        Content content = new Content(
-          jsonContentModule["type"],
-          jsonContentModule["title"],
-          jsonContentModule["description"],
-          _loadInformation(jsonContentModule["subsections"]),
+
+        Content c = new Content(
+            jsonContentModule["id"],
+            jsonContentModule["type"],
+            jsonContentModule["title"],
+            jsonContentModule["description"],
+            jsonContentModule["subsections"].cast<String>()
         );
 
-        rootContent.subsections.add(content);
+        if(jsonContentModule["id"].toString().contains("ROOT_"))
+          initContent.subsections.add(c.id);
+
+        content[c.id] = c;
       }
     }
 
   }
 
-  List<Content> _loadInformation(List<dynamic> subsections) {
+
+/* List<Content> _loadInformation(List<dynamic> subsections) {
     List<Content> ret = [];
 
     for (dynamic subsection in subsections) {
       Content content = new Content(
+        subsection["id"],
         subsection["type"],
         subsection["title"],
         subsection["description"],
@@ -40,34 +49,19 @@ class InformationToolContentBuilder {
     }
 
     return ret;
-  }
+  }*/
 }
 
 @JsonSerializable()
 class Content extends Object with _$ContentSerializerMixin{
+  String id;
   String type;
   String title;
   String description;
-  List<Content> subsections = [];
+  List<String> subsections = [];
 
-  Content(this.type, this.title, this.description, this.subsections);
-
-
-  @override
-  String toString() {
-    String ret = "Title: $title\nDescription: $description";
-
-    for (Content subsection in subsections) {
-      ret = ret + "\n" + subsection.toString();
-    }
-
-    return ret;
-  }
-
-  //factory Challenge.fromJson(Map<String, dynamic> json) => _$ChallengeFromJson(json);
+  Content(this.id, this.type, this.title, this.description, this.subsections);
 
   factory Content.fromJson(Map<String, dynamic> json) => _$ContentFromJson(json);
-
-  //Map<String, dynamic>  toJson() => {'type' : type, 'title' : title, 'description' : description, '_subsections' : _subsections};
 
 }
