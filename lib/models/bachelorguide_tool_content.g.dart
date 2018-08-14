@@ -12,7 +12,7 @@ Content _$ContentFromJson(Map<String, dynamic> json) => new Content(
     json['description'] as String,
     (json['subsections'] as List)
         ?.map((e) =>
-            e == null ? null : new Content.fromJson(e as Map<String, dynamic>))
+            e == null ? null : )
         ?.toList());
 
 abstract class _$ContentSerializerMixin {
