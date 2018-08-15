@@ -44,39 +44,40 @@ class AchievementDetailsOverviewScreen extends StatelessWidget {
         ));
   }
 
-  Image getImageState(Achievement achievement) {
-    String path = "";
+}
 
-    if (achievement.completed) {
-      switch (achievement.type) {
-        case AchievementType.prePhase:
-          path = 'assets/files/LowAchievementBadge.png';
-          break;
-        case AchievementType.beginningPhase:
-          path = 'assets/files/LowAchievementBadge.png';
-          break;
-        case AchievementType.processingPhase:
-          path = 'assets/files/MedAchievementBadge.png';
-          break;
-        case AchievementType.conclusionPhase:
-          path = 'assets/files/HighAchievementBadge.png';
-          break;
-        case AchievementType.special:
-          path = 'assets/files/AppAchievementBadge.png';
-          break;
-        default:
-          return null;
-          break;
-      }
-      return new Image.asset(
-        path,
-        width: 40.0,
-      );
+Image getImageState(Achievement achievement) {
+  String path = "";
+
+  if (achievement.completed) {
+    switch (achievement.type) {
+      case AchievementType.prePhase:
+        path = 'assets/files/LowAchievementBadge.png';
+        break;
+      case AchievementType.beginningPhase:
+        path = 'assets/files/LowAchievementBadge.png';
+        break;
+      case AchievementType.processingPhase:
+        path = 'assets/files/MedAchievementBadge.png';
+        break;
+      case AchievementType.conclusionPhase:
+        path = 'assets/files/HighAchievementBadge.png';
+        break;
+      case AchievementType.special:
+        path = 'assets/files/AppAchievementBadge.png';
+        break;
+      default:
+        return null;
+        break;
     }
     return new Image.asset(
-      'assets/files/AppAchievementBadge.png',
-      color: Colors.grey,
+      path,
       width: 40.0,
     );
   }
+  return new Image.asset(
+    'assets/files/AppAchievementBadge.png',
+    color: Colors.grey,
+    width: 40.0,
+  );
 }

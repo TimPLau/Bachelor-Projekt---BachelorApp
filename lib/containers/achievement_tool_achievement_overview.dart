@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_redux/flutter_redux.dart';
-import 'package:path/path.dart';
 import 'package:project_bachelorapplication/actions/achievement_tool_actions.dart';
 import 'package:project_bachelorapplication/main.dart';
 import 'package:project_bachelorapplication/models/achievement_tool.dart';
@@ -17,7 +16,7 @@ class AchievementOverview extends StatelessWidget {
   Widget build(BuildContext context) {
     return new StoreConnector(
       converter: (Store<AppState> store) {
-        return _ViewModel.fromStore(store);
+        return _ViewModel.fromStore(store, context);
       },
       builder: (BuildContext context, _ViewModel vm) {
         return vm.achievedAchievements.isEmpty
@@ -40,7 +39,7 @@ class _ViewModel {
     this.categoryAchievements = getAchievementCategories();
   }
 
-  factory _ViewModel.fromStore(Store<AppState> store) {
+  factory _ViewModel.fromStore(Store<AppState> store, context) {
     return _ViewModel(
       activeAchievements:
           store.state.achievedAchievements[ALL_ACHIEVEMENTS].values.toList(),

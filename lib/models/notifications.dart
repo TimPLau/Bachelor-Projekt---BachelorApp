@@ -20,7 +20,7 @@ Future onSelectAchievementNotification(String payload, BuildContext context) asy
   Navigator.pushNamed(context, "/achievementOverview");
 }
 
-Future<dynamic> checkAchievementNotification(context) {
+Future<dynamic> checkAchievementNotification(BuildContext context) {
   StoreProvider.of<AppState>(context).dispatch(new CheckForAchieveAction(
       StoreProvider
           .of<AppState>(context)

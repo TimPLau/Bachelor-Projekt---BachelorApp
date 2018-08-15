@@ -7,13 +7,13 @@ import 'package:project_bachelorapplication/achievement_tool_datas.dart';
 Map<String, Property> updateProperties(Map<String, Property> current, action) {
 
   if (action is AddMilestoneAction) {
-    current = setPropertyValue(current, prop3.name, 1);
+    current = setPropertyValue(current, propApp1.name, 1);
     return current;
   }
 
   if (action is ChangeStateChallengeAction) {
     if(current.containsKey(action.challenge.title))
-    current = setPropertyValue(current, action.challenge.title, 1);
+      current = setPropertyValue(current, action.challenge.title, 1);
     return current;
   }
 
@@ -71,9 +71,12 @@ Map<String, Map<String, Achievement>> setAchievedAchievements(
 
 bool checkAchievement(Achievement achievement, Map<String, Property> properties) {
   for (Property property in achievement.properties) {
+    print("IN PROPERTIES " + properties[property.name].name);
+    print("ACHIEVEMENT "  + property.name);
 
-    if (properties[property.name].isActive() == false) return false;
-
+    if (properties[property.name].isActive() == false) {
+      return false;
+    }
   }
 
   return true;

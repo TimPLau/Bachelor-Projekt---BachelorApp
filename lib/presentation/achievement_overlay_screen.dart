@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:project_bachelorapplication/achievement_tool_datas.dart';
 import 'package:project_bachelorapplication/models/achievement_tool.dart';
+import 'package:project_bachelorapplication/presentation/achievement_tool_achievement_details_overview_screen.dart';
 
 
 class AchievementOverlayScreen extends StatelessWidget {
@@ -12,6 +14,17 @@ class AchievementOverlayScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return new Scaffold(
       appBar: AppBar(
+        actions: <Widget>[
+          new FlatButton(
+              onPressed: () {
+                this.onRecognized();
+                Navigator.pushNamed(context, '/achievementOverview');
+              },
+              child: new Text(
+                "BESTÄTIGEN",
+                style: TextStyle(color: Colors.white),
+              ))
+        ],
         leading: new IconButton(icon: new Icon(Icons.arrow_back), onPressed: () {
         this.onRecognized();
         Navigator.of(context).pop;
@@ -29,7 +42,7 @@ class AchievementOverlayScreen extends StatelessWidget {
             child: new Column(
               children: <Widget>[
                 new Text(
-                  "Die folgenden Achievements hast du seit dem letzten Aufruf dieser Seite erlegdigt.\n\nGute Arbeit!\n\nTippe zweimal auf den Bildschirm um deine Achievements zu betrachten oder kehre zum letzten Bildschirm zurück",
+                  "Die folgenden Achievements hast du seit dem letzten Aufruf dieser Seite erlegdigt.\n\nGute Arbeit!",
                   softWrap: true,
                   textAlign: TextAlign.left,
                 ),
@@ -38,26 +51,19 @@ class AchievementOverlayScreen extends StatelessWidget {
             ),
           ),
           new Flexible(
-            child: new GestureDetector(
-              onDoubleTap: () {
-                this.onRecognized();
-                Navigator.pushNamed(context, '/achievementOverview');
-              },
-              child: new Container(
+
+
                 child: new ListView.builder(
                   itemCount: this.achievedAchievements.length,
                   itemBuilder: (context, index) {
                     return new ListTile(
                       title: new Text(achievedAchievements[index].title),
-                      leading: Icon(
-                        Icons.star,
-                        color: Colors.amber,
-                      ),
+                      leading: getImageState(achievedAchievements[index]),
                     );
                   },
                 ),
-              ),
-            ),
+
+
           ),
         ],
       ),
