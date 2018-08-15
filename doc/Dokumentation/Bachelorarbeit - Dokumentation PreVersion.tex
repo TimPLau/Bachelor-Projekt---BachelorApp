@@ -8,7 +8,7 @@
 \usepackage{pifont}
 \usepackage{amsmath}
 \usepackage{hyperref}
-\usepackage{booktabs}
+\usepackage{booktabs} 
 \usepackage{subfigure} 
 \usepackage{colortbl}
 \usepackage{pdfpages}
@@ -1227,7 +1227,7 @@ Studierende, die zur Überplanung neigen, würden dies auch ohne Applikation tun
 
 \newpage
 \chapter{Architektur und Implementierungsdetails} \label{chap:architektur}
-\par Das Ziel dieses Kapitels ist es, das Verständnis für die architekturspezifischen Zusammenhänge sowie die jeweiligen softwareinternen Abläufe zu vermitteln. 
+\par Das Ziel dieses Kapitels ist es, das Verständnis für die architekturspezifischen Zusammenhänge sowie die jeweiligen softwaretechnischen Abläufe zu vermitteln. 
 \par Auf dieser Basis werden die einzelnen Architektur-Komponenten, deren Beziehungen zueinander sowie die Funktionsweise des Gesamtsystems im folgenden Verlauf erläutert und an geeigneter Stelle durch beispielhafte Abläufen von Nutzeraktionen beschrieben.
 
 \section{Architekturübersicht}
@@ -1239,46 +1239,46 @@ Studierende, die zur Überplanung neigen, würden dies auch ohne Applikation tun
 \par Die für die gewählte Architektur durch ihre Wichtigkeit hervorzuhebende Klasse AppState, ist die zentrale Verwaltungsklasse für den gespeicherten Status der Applikation und trägt alle relevanten Informationen in sich, die den aktuellen Zustand des Systems abbilden. Die Klasse AppState selbst dient also lediglich als zentrales Element zur Datenhaltung in der gewählten Architektur.
 
 \par \bigskip \textbf{Action}
-\par Eine Action-Komponente beinhaltet Informationen über die jeweilige auszuführende Operation und dient somit als Identifikationsmittel und Informationspaket, welche von der Middleware und/oder den Reducer Komponenten aufgegriffen und verarbeitet werden.
+\par Eine Action-Komponente beinhaltet Informationen über die jeweilige auszuführende Operation und dient somit als Identifikationsmittel und Informationspaket, die von der Middleware und/oder den Reducer-Komponenten aufgegriffen und verarbeitet werden.
 
 \par \bigskip \textbf{Reducer}
-\par Die Reducer-Komponenten nehmen die eigentliche Änderung am Zustand vor, indem sie einen völlig neuen Zustand generieren und den vorherigen Zustand überschreiben. Durch die über die Actions erhaltene Informationen weiß die Reducer Komponente welche Aktion der Benutzer ausgeführt hat und folglich auch, welche Information sich an dem aktuell existierenden Zustand der Applikation ändern soll. In diesen Komponenten wird also der aktuelle Zustand in einen neuen Zustand transformiert.
+\par Die Reducer-Komponenten nehmen die eigentliche Änderung am Zustand vor, indem sie einen völlig neuen Zustand generieren und den vorherigen Zustand überschreiben. Durch die, über die Actions erhaltene, Informationen weiß die Reducer-Komponente, welche Aktion der Benutzer ausgeführt hat und folglich auch, welche Information sich an dem aktuell existierenden Zustand der Applikation ändern soll. In diesen Komponenten wird also der aktuelle Zustand in einen neuen Zustand transformiert.
 
 \par \bigskip \textbf{Container}
-\par Die Container-Komponenten lesen den aktuellen Zustand der Applikation aus dem State ein und bereiten diesen unter Umständen, vor der Übergabe an die Presentation Komponenten, vor. Weiterhin lösen die Container Komponenten im Allgemeinen die Actions aus, welche auf den von dem Benutzer getätigten Interaktionen basieren.
+\par Die Container-Komponenten lesen den aktuellen Zustand der Applikation aus dem State ein und bereiten diesen unter Umständen, vor der Übergabe an die Presentation-Komponenten, vor. Weiterhin lösen die Container-Komponenten im Allgemeinen die Actions aus, die auf den, von dem Benutzer getätigten, Interaktionen basieren.
 
 \par \bigskip \textbf{Presentation}
 \par Die Presentation-Komponenten sind alleinig für die Visualisierung der gegebenen Informationen sowie für die Entgegennahme der Benutzereingaben zuständig.
 
 \par \bigskip \textbf{Middleware}
-\par Die Middleware verarbeitet und/oder manipuliert die in den Actions übermittelten Informationen bevor diese zu den Reducer Komponenten gelangen. Weiterhin können auch in der Middleware selbst Actions ausgelöst werden wie im späteren Verlauf in Kapitel \ref{sec:middleware} nachzuvollziehen ist. 
+\par Die Middleware verarbeitet und/oder manipuliert die, in den Actions übermittelten, Informationen, bevor diese zu den Reducer-Komponenten gelangen. Weiterhin können auch in der Middleware selbst Actions ausgelöst werden, wie im späteren Verlauf in Kapitel \ref{sec:middleware} nachzuvollziehen ist. 
 
 \newpage
 \section{Detaillierte Beschreibung der Model Komponenten}
 \label{sec:komponentenDetails}
-\par Die Model Komponenten stellen den aktuellen internen Zustand des Systems dar und enthalten somit in erster Linie die verwendeten Objekt-Klassen. 
-\par \medskip Die nun folgenden Unterkapitel beschreiben die Klassen, welche Teil der Model Komponente sind und beschreiben die wichtigsten Datenfelder und Klassen-Operationen.
+\par Die Model-Komponenten stellen den aktuellen internen Zustand des Systems dar und enthalten somit in erster Linie die verwendeten Objekt-Klassen. 
+\par \medskip Die nun folgenden Unterkapitel beschreiben die Klassen, die Teil der Model Komponente sind, und beschreiben die wichtigsten Datenfelder und Klassen-Operationen.
 
 \subsection{Milestone-Klasse}
-\par Ein Meilenstein besitzt die folgenden Attribute und Methoden (siehe Abbildung \ref{img:ClassMilestoneAndTask}):
+\par Ein Meilenstein besitzt folgende Attribute und Methoden (siehe Abbildung \ref{img:ClassMilestoneAndTask}):
 \begin{itemize}
-\item \par Jeder Meilenstein besitzt eine ID (id), welche immer auf dem jeweils festgelegten Datum des Meilensteins basiert.
-\item \par Der eigentliche Titel (title), beschreibt dem von dem Benutzer gegebenen Namen des Meilensteins und dient als Identifikations- und Anzeigemittel für den Benutzer
-\item \par In dem Datenfeld description befindet sich die von dem Benutzer eingetragene Beschreibung des Meilensteins.
-\item \par Jeder Meilenstein muss ein Ablaufdatum erhalten, welches den Tag darstellt, an dem der Meilenstein liegt.
-\item \par Meilensteine besitzen von dem Benutzer hinzugefügte Unteraufgaben, welche in dem Datenfeld tasks liegen.
-\item \par Weiterhin ist durch die Methoden getCompletedTasks() und getNotCompletedTasks() die Möglichkeit gegeben abgeschlossene und noch offene Unteraufgaben der Meilensteine herauszufiltern.
-\item \par Darüber Hinaus bietet sich durch die Methode getMilestoneState() die Möglichkeit den aktuellen Status des Meilensteins zu bestimmen, welcher auf abgeschlossene Unteraufgaben, noch offene Unteraufgaben sowie der Relation zwischen dem aktuellen Zeitpunkt und dem definierten Ablaufzeitpunkt basiert. Für diesen Zweck wurde weiterhin die Enumeration MilestoneState erstellt, welche die vier Zustände Empty, AllTasksCompleted, SomeTasksNotCompleted und outOffDateAndSomeTasksNotCompleted darstellt.
+\item \par Jeder Meilenstein besitzt eine ID (id), die immer auf dem jeweils festgelegten Datum des Meilensteins basiert.
+\item \par Der eigentliche Titel (title) beschreibt den, von dem Benutzer gegebenen, Namen des Meilensteins und dient als Identifikations- und Anzeigemittel für den Benutzer.
+\item \par In dem Datenfeld description befindet sich die, von dem Benutzer eingetragene, Beschreibung des Meilensteins.
+\item \par Jeder Meilenstein muss ein Ablaufdatum enthalten, welches den Tag darstellt, an dem der Meilenstein eingetragen ist.
+\item \par Meilensteine besitzen, von dem Benutzer hinzugefügte, Unteraufgaben, die in dem Datenfeld tasks liegen.
+\item \par Durch die Methoden getCompletedTasks() und getNotCompletedTasks() ist die Möglichkeit gegeben, abgeschlossene und noch offene Unteraufgaben der Meilensteine herauszufiltern.
+\item \par Durch die Methode getMilestoneState() bietet sich die Möglichkeit, den aktuellen Status des Meilensteins zu bestimmen, welcher auf abgeschlossene Unteraufgaben, noch offene Unteraufgaben sowie der Relation zwischen dem aktuellen Zeitpunkt und dem definierten Ablaufzeitpunkt basiert. Für diesen Zweck wurde weiterhin die Enumeration MilestoneState erstellt, die die vier Zustände Empty, AllTasksCompleted, SomeTasksNotCompleted und outOfDateAndSomeTasksNotCompleted darstellt.
 \end{itemize}
 
 
 \subsection{Task-Klasse}
-\par Ein Achievement besitzt die folgenden Attribute und Methoden(siehe Abbildung \ref{img:ClassMilestoneAndTask})
+\par Ein Achievement besitzt folgende Attribute und Methoden(siehe Abbildung \ref{img:ClassMilestoneAndTask})
 
 \begin{itemize}
-\item Jeder Task erhält eine ID (id) als Identifikationsmöglichkeit
-\item Der Titel (title) eines Tasks stellt die von dem Nutzer erstellte inhaltlich zu lösende Aufgabe dar.
-\item Ein Task kann verschiedene Zustände Completed und NotCompleted annehmen, welche durch eine Enumeration dargestellt werden. Es wurde eine Enumeration einem booleschen Wert bevorzugt, da weitere Zustände wie zum Beispiel das Favorisieren von Unteraufgaben bei Bedarf hinzugefügt werden könnten.
+\item Jeder Task erhält eine ID (id) als Identifikationsmöglichkeit.
+\item Der Titel (title) eines Tasks stellt die, von dem Nutzer erstellte, inhaltlich zu lösende Aufgabe dar.
+\item Ein Task kann die verschiedenen Zustände Completed und NotCompleted annehmen, welche durch eine Enumeration dargestellt werden. Eine Enumeration wurde einem booleschen Wert vorgezogen, da weitere Zustände, wie zum Beispiel das Favorisieren von Unteraufgaben, bei Bedarf hinzugefügt werden könnten.
 \end{itemize}
 
 \newpage
@@ -1290,14 +1290,14 @@ Studierende, die zur Überplanung neigen, würden dies auch ohne Applikation tun
 \end{figure}
 
 \subsection{Achievement-Klasse}
-\par Ein Achievement besitzt die folgenden Attribute:
+\par Ein Achievement besitzt folgende Attribute:
 
 \begin{itemize}
-\item \par Der Titel des Achievements ist der Teil, welcher dem Nutzer als Identifikationsmittel des jeweiligen Achievements angezeigt in wird. 
-\item \par Die Information ob ein Achievement erreicht wurde, wird durch den Wert des Attributs completed dargestellt.
+\item \par Der Titel des Achievements ist der Teil, der dem Nutzer als Identifikationsmittel des jeweiligen Achievements angezeigt wird. 
+\item \par Die Information, ob ein Achievement erreicht wurde, wird durch den Wert des Attributs completed dargestellt.
 
-\item \par Weiterhin beinhaltet ein Achievement bestimmte Eigenschaften (siehe Kapitel \ref{sub:propertyclass}), welche erfüllt werden müssen, damit das Achievement als erreicht bezeichnet werden kann. Ein Achievement wird also nur erreicht, wenn alle seine Properties als erfüllt gelten. 
-\par Die Eigenschaften  werden im Rahmen des in der Regel flach ausgerichteten Key-Value Stores des AppStates nicht als Objektreferenzen, sondern als IDs in textueller Form in dem Datenfeld propertiyIDs gespeichert und auf diese Weise im späteren Verlauf identifiziert.
+\item \par Weiterhin beinhaltet ein Achievement bestimmte Eigenschaften (siehe Kapitel \ref{sub:propertyclass}), die erfüllt werden müssen, damit das Achievement als erreicht bezeichnet werden kann. Ein Achievement wird also nur erreicht, wenn alle seine Properties als erfüllt gelten. 
+\par Die Eigenschaften  werden im Rahmen des, in der Regel flach ausgerichteten, Key-Value-Stores des AppStates nicht als Objektreferenzen, sondern als IDs in textueller Form in dem Datenfeld propertyIDs gespeichert und auf diese Weise im späteren Verlauf identifiziert.
 \item \par Der Typ (type), welcher durch eine Enumeration verdeutlicht wird, stellt die Art des Achievements dar.
 \end{itemize}
 
@@ -1311,14 +1311,14 @@ Studierende, die zur Überplanung neigen, würden dies auch ohne Applikation tun
 \newpage
 \subsection{Property-Klasse}
 \label{sub:propertyclass}
-\par \medskip Die Klasse Property enthält die folgenden Attribute und Funktionen:
+\par \medskip Die Klasse Property enthält folgende Attribute und Funktionen:
 
 \begin{itemize}
-\item \par Der Name (name) eines Property-Instanz stellt die Bezeichnung dar, welche dem Nutzer als Identifikationsmöglichkeit und im Rahmen der Applikation als Instruktion angezeigt werden kann., weshalb diese Bezeichnung wohlüberlegt gewählt werden sollte. 
-\item \par Der Initialwert (initialValue) beschreibt wie der Name bereits impliziert den Startwert, welcher bei Initialisieren des Objektes angenommen wird.
-\item \par Ein aktueller Wert (currentValue) stellt den aktuellen Fortschritt der jeweiligen Eigenschaft, welche es zu erfüllen gilt dar. 
-\item \par Das Datenfeld activationValue stellt den Zielwert dar, welcher als zu erfüllen gilt.
-\item \par Die genannten Felder initialValue, currentValue und activationValue werden durch eine definierte Regel (activiationRule) in Beziehung zueinander gesetzt. Diese Regel kann verschieden ausgeprägt sein um dem Ersteller von Achievements sowie deren Kriterien zur Erfüllung eine gewisse Freiheit zu ermöglichen. Im Rahmen des Projektes wurden drei verschiedene Regeln in Form von konstanten Variablen des Datentyps String aufgestellt, welche die Regeln \grqq <\grqq, \grqq >\grqq und \grqq ==\grqq enthalten. 
+\item \par Der Name (name) einer Property-Instanz stellt die Bezeichnung dar, welche dem Nutzer als Identifikationsmöglichkeit dient und im Rahmen der Applikation als Instruktion angezeigt werden kann, weshalb diese Bezeichnung wohlüberlegt gewählt werden sollte. 
+\item \par Der Initialwert (initialValue) beschreibt, wie der Name bereits impliziert, den Startwert, der bei Initialisieren des Objektes angenommen wird.
+\item \par Ein aktueller Wert (currentValue) stellt den aktuellen Fortschritt der jeweiligen Eigenschaft, welche es zu erfüllen gilt, dar. 
+\item \par Das Datenfeld activationValue stellt den Zielwert dar, den es zu erfüllen gilt.
+\item \par Die genannten Felder initialValue, currentValue und activationValue werden durch eine definierte Regel (activiationRule) in Beziehung zueinander gesetzt. Diese Regel kann verschieden ausgeprägt sein, um dem Ersteller von Achievements sowie deren Kriterien zur Erfüllung eine gewisse Freiheit zu ermöglichen. Im Rahmen des Projektes wurden drei verschiedene Regeln in Form von konstanten Variablen des Datentyps String aufgestellt, welche die Regeln \grqq <\grqq, \grqq >\grqq und \grqq ==\grqq enthalten. 
 \item \par Diese Regeln werden als Werkzeug benutzt, um die Semantik der zu erfüllenden Eigenschaften auf die logische Ebene zu übertragen.
 Beispielsweise kann somit in der Methode isActive() überprüft werden, ob der Benutzer bereits drei Meilensteine erstellt hat, also die jeweilige Eigenschaft erfüllt wurde.
 \end{itemize}
@@ -1332,49 +1332,49 @@ Beispielsweise kann somit in der Methode isActive() überprüft werden, ob der B
 
 \newpage
 \subsection{AppContentLoader-Klasse}
-\par Die ContentLoader Klasse stellt die Schnittstelle zum gewählten Git-Repository dar und trägt in diesem Umfang die Aufgabe, die in dem Repository Ordner angelegten JSON-Dateien, welche einen Teil des Inhalts der Applikation darstellen, durch Http-Requests  einzulesen und dem System zur weiteren Verarbeitung zur Verfügung zu stellen. Dies wird umgesetzt, indem diese eingelesenen Dateien in lokaler Form auf dem Endgerät gespeichert werden.
-\par Die Klasse besitzt lediglich ein Datenfeld (String httpRequest), welches die Http-Anfrage beinhaltet, auf welcher die auszuführenden Operationen der Klasseninstanz beruhen.
+\par Die Klasse ContentLoader stellt die Schnittstelle zum gewählten Git-Repository dar und trägt in diesem Umfang die Aufgabe, die in dem Repository-Ordner angelegten JSON-Dateien, welche einen Teil des Inhalts der Applikation darstellen, durch HTTP-Requests  einzulesen und dem System zur weiteren Verarbeitung zur Verfügung zu stellen. Dies wird umgesetzt, indem diese eingelesenen Dateien in lokaler Form auf dem Endgerät gespeichert werden.
+\par Die Klasse besitzt lediglich ein Datenfeld (String httpRequest), welches die HTTP-Anfrage beinhaltet, auf welcher die auszuführenden Operationen der Klasseninstanz beruhen.
 
 \subsection{JSONAppContentFile-Klasse}
-\par Eine Instanz dieser Klasse, welche von durch eine Objektinstanz der Klasse ContentLoader erzeugt wird, stellt eine aus dem Repository eingelesene JSON-Datei dar und enthält die folgenden Attribute:
+\par Eine Instanz dieser Klasse, die durch eine Objektinstanz der Klasse ContentLoader erzeugt wird, stellt eine aus dem Repository eingelesene JSON-Datei dar und enthält folgende Attribute:
 TODO LISTING
 \begin{itemize}
 \item \par Der Name (name) der im Repository vorliegenden JSON-Datei wird auch weiterhin als Dateiname in dem lokalen Speicher des Endgeräts verwendet.
-\item \par Die durch den ContentBuilder ermittelte jeweilige Download Adresse (downloadUrl) der verschiedenen im Repository liegenden Dateien, dient zum Herunterladen des jeweiligen Inhaltes der JSON Dateien.
-\item \par Der jeweilige Inhalt der Datei wird durch das Datenfeld jsonFileContent repräsentiert, welches durch die Methode Future<String> getJsonContent() durch Ausführung eines Http-Requests initialisiert wird.
+\item \par Die durch den ContentBuilder ermittelte jeweilige Download-Adresse (downloadUrl) der verschiedenen im Repository liegenden Dateien dient zum Herunterladen des jeweiligen Inhaltes der JSON-Dateien.
+\item \par Der jeweilige Inhalt der Datei wird durch das Datenfeld jsonFileContent repräsentiert, welches durch die Methode Future<String> getJsonContent() durch Ausführung eines HTTP-Requests initialisiert wird.
 
 \end{itemize}
 
 \subsection{InformationToolContentBuilder-Klasse}
-\par Die Hilfsklasse InformationToolContentBuilder dient als Werkzeug, zur Generierung des Inhaltes der \grqq Guide\grqq Sektion der Applikation. Die Content-Objekte werden durch die jeweilige JSON-Datei, welche zuvor aus dem Git-Repository ausgelesen und gespeichert wurde, in rekursiver Form generiert. Jedes Content Objekt kann mehrere Content Objekte beinhalten, welche in diesem Rahmen als subsections bezeichnet werden. Dies geschieht so lange, bis ein Content-Objekt keine subsections mehr besitzt. Jedes dieser Content-Objekte enthält weiterhin ein Titel (title) sowie eine Beschreibung (description), welche dem Nutzer im Rahmen der \grqq Guide\grqq Funktion dargestellt werden.
+\par Die Hilfsklasse InformationToolContentBuilder dient als Werkzeug zur Generierung des Inhaltes der Sektion \grqq Guide\grqq{} der Applikation. Die Content-Objekte werden durch die jeweilige JSON-Datei, welche zuvor aus dem Git-Repository ausgelesen und gespeichert wurde, in rekursiver Form generiert. Jedes Content-Objekt kann mehrere Content-Objekte beinhalten, welche in diesem Rahmen als subsections bezeichnet werden. Dies geschieht so lange, bis ein Content-Objekt keine subsections mehr besitzt. Jedes dieser Content-Objekte enthält einen Titel (title) sowie eine Beschreibung (description), welche dem Nutzer im Rahmen der \grqq Guide\grqq -Funktion dargestellt werden.
 
 \newpage
 \subsection{Content-Klasse}
-\par Eine Objektinstanz der Content Klasse stellt den Inhalt der \grqq Guide\grqq Funktion dar und enthält die folgenden Attribute:
+\par Eine Objektinstanz der Content-Klasse stellt den Inhalt der \grqq Guide\grqq -Funktion dar und enthält folgende Attribute:
 \begin{itemize}
-\item \par Der Titel (title) des Content Objekts ist gleichzusetzen mit einer Überschrift für den jeweiligen Inhalt, welcher durch die Beschreibung (description) ausgedrückt wird.
-\item \par Das Datenfeld subsections enthält weitere Content-Objekte, welche in Beziehung mit dem jeweils übergeordneten Content-Objekts, als Unterabschnitte zu bezeichnen sind.
-\item \par Der Typ (type) enthält Informationen darüber, welche Art von Darstellung innerhalb des \grqq Guide\grqq - Tools für die Benutzeroberfläche verwendet werden soll. Dies bietet den Vorteil, dass bei dem Erstellen der JSON Datei für den Inhalt dieser Funktion, keine Kenntnisse über die softwareinterne Lösung vorhanden sein muss, sondern der Ersteller nur vordefinierte Begriffe eintragen muss, welche dann softwareintern den jeweiligen Bildschirminhalt generieren.
+\item \par Der Titel (title) des Content-Objekts ist gleichzusetzen mit einer Überschrift für den jeweiligen Inhalt, der durch die Beschreibung (description) ausgedrückt wird.
+\item \par Das Datenfeld subsections enthält weitere Content-Objekte, welche in Beziehung mit dem jeweils übergeordneten Content-Objekts als Unterabschnitte zu bezeichnen sind.
+\item \par Der Typ (type) enthält Informationen darüber, welche Art von Darstellung innerhalb des \grqq Guide\grqq -Tools für die Benutzeroberfläche verwendet werden soll. Das bietet den Vorteil, dass bei dem Erstellen der JSON-Datei für den Inhalt dieser Funktion keine Kenntnisse über die softwareinterne Lösung vorhanden sein muss, sondern der Ersteller nur vordefinierte Begriffe eintragen muss, die dann softwareintern den jeweiligen Bildschirminhalt generieren.
 \par Im Rahmen der Prototypentwicklung sind zwei verschiedene Arten der Darstellung vorgesehen. 
-\par Die erste Möglichkeit ist das Erzeugen eines Buttons (\grqq ButtonListWidget\grqq), welcher den Titel des Content-Objektes anzeigt und bei antippen auf eine nächste Seite führt und dort die jeweiligen subsections anzeigt.
-\par Die zweite Möglichkeit ist das Generieren eines ausklappbaren Elements (\grqq ExtensionPanelWidget\grqq), welches den Titel des Content-Objektes anzeigt und bei Ausklappen dessen Beschreibung sichtbar wird.
+\par Die erste Möglichkeit ist das Erzeugen eines Buttons (\grqq ButtonListWidget\grqq), welcher den Titel des Content-Objektes anzeigt und bei Antippen auf eine nächste Seite führt und dort die jeweiligen subsections anzeigt.
+\par Die zweite Möglichkeit ist das Generieren eines ausklappbaren Elements (\grqq ExtensionPanelWidget\grqq), welches den Titel des Content-Objektes anzeigt und dessen Beschreibung bei Ausklappen sichtbar wird.
 \end{itemize}
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.6\textwidth, keepaspectratio]{Bilder/ClassContent.png}
-	\caption{Content Klasse}
+	\caption{Content-Klasse}
 	\label{img:contentClass}
 \end{figure}
 
 \newpage
 \subsection{AppState-Klasse}
-\par Die Klasse AppState stellt den aktuellen Status der Applikation dar und trägt somit die meisten der zuvor beschrieben Informationen in sich. Diese Informationen werden im Rahmen der Redux-orientierten Architektur durch das Einsetzen von Key-Value Stores strukturiert und verwaltet. 
+\par Die Klasse AppState stellt den aktuellen Status der Applikation dar und trägt somit die meisten der zuvor beschrieben Informationen in sich. Diese Informationen werden im Rahmen der an Redux orientierten Architektur durch das Einsetzen von Key-Value Stores strukturiert und verwaltet. 
 
 \par \medskip Jede für den Zustand der Applikation relevante Information ist auf diese Weise an einer zentralen Stelle im System gespeichert (siehe Abbildung \ref{lst:appstateFields}). Durch einen lesenden Zugriff können die Oberflächenkomponenten alle benötigten aktuellen Informationen ermitteln und abbilden. Weiterhin kann der Status der Applikation durch das Ausführen von Aktionen des Benutzers, was das Auslösen der sogenannten Actions mit sich trägt, verändert werden.
   
   \bigskip
-\begin{lstlisting}[caption={Datenfelder der Klasse Appstate},captionpos=b, label=lst:appstateFields]
+\begin{lstlisting}[caption={Datenfelder der Klasse AppState},captionpos=b, label=lst:appstateFields]
 class AppState{
 
   final Map<String, Milestone> currentMilestones;
@@ -1394,54 +1394,54 @@ class AppState{
 \bigskip
 
 \par \bigskip \textbf{Aktueller Zustand der Meilensteine}
-\par Die aktuellen Meilensteine werden durch das Datenfeld currentMilestones abgebildet. Diese Datenstruktur enthält alle von dem Benutzer angelegten Meilensteine und deren jeweilige Unteraufgaben und wird als SplayTreeMap initialisiert. TODO LINK Die selbst-sortierende Eigenschaft dieser Datenstruktur bietet einige Vorteile im Rahmen der Handhabung von Meilensteinen in der Implementierung, da deren einzigartige IDs auf dem angegebenen Meilensteindatum basieren.
+\par Die aktuellen Meilensteine werden durch das Datenfeld currentMilestones abgebildet. Diese Datenstruktur enthält alle vom Benutzer angelegten Meilensteine und deren jeweilige Unteraufgaben und wird als SplayTreeMap initialisiert. TODO LINK Die selbst-sortierende Eigenschaft dieser Datenstruktur bietet einige Vorteile im Rahmen der Handhabung von Meilensteinen in der Implementierung, da deren einzigartige IDs auf dem angegebenen Meilensteindatum basieren.
 
 \newpage
 \par \bigskip \textbf{Aktueller Zustand der Achievements}
-\par Die von dem Benutzer der Applikation zu erreichenden Achievements werden in dem Datenfeld achievements gespeichert. Dieses Datenfeld weißt einige Besonderheiten vor, auf die ich im Folgenden hinweisen möchte:
+\par Die von dem Benutzer der Applikation zu erreichenden Achievements werden im Datenfeld achievements gespeichert. Dieses Datenfeld weißt einige Besonderheiten vor, auf die ich im Folgenden hinweisen möchte:
 \par \medskip  \textit{Hinweis: Es handelt sich bei dieser Datenstruktur im Detail um eine HashMap, welche weitere HashMaps beinhaltet.}
 \par \medskip Diese HashMap wird mit genau vier verschiedenen konstanten Einträgen initialisiert.
 \begin{itemize}
 \item \textbf{ALL\char`_ACHIEVEMENTS}
-\par Enthält alle vorhandenen Achievements
+\par Enthält alle vorhandenen Achievements.
 \item \textbf{ACHIEVED}
-\par Enthält alle Achievements, welche von dem Benutzer gesammelt wurden
+\par Enthält alle Achievements, die von dem Benutzer gesammelt wurden.
 \item \textbf{RECOGNIZED}
-\par Enthält alle gesammelten Achievements, welche von dem Benutzer betrachtet wurden.
+\par Enthält alle gesammelten Achievements, die von dem Benutzer betrachtet wurden.
 \item \textbf{NOT\char`_RECOGNIZED}
-\par Enthält alle gesammelten Achievements, welche von dem Benutzer noch nicht betrachtet wurden
+\par Enthält alle gesammelten Achievements, die von dem Benutzer noch nicht betrachtet wurden.
 \end{itemize}
 
-\par Diese Unterscheidung ist auf die Idee zurückzuführen, die unterschiedlichen Zustände der Achievements bei der Handhabung der Benutzerinteraktion zu unterschiedlicher Zeit zu berücksichtigen. Beispielsweise sollen neu erworbene Achievements, welche von dem Benutzer noch nicht eingesehen worden sind, bis zu dem Moment in dem sie betrachtet wurden, gesondert behandelt werden.
+\par Diese Unterscheidung ist durch die Idee begründet, die unterschiedlichen Zustände der Achievements bei der Handhabung der Benutzerinteraktion zu unterschiedlicher Zeit zu berücksichtigen. Beispielsweise sollen neu erworbene Achievements, welche vom Benutzer noch nicht eingesehen worden sind, bis zu dem Moment, in dem sie betrachtet wurden, gesondert behandelt werden.
 
 \par \bigskip \textbf{Aktueller Zustand der Properties}
 \par Die zu verwaltenden Eigenschaften zur Erfüllung der Achievements werden in dem Datenfeld properties gespeichert. Dies bietet den Vorteil, dass die Properties, welche von unterschiedlichen Achievements geteilt werden können, an einer zentralen Stelle im State verwaltet werden können.
 
 \par \bigskip \textbf{Aktueller Zustand der Herausforderungen}
 \par Die für den Benutzer zu erledigenden Herausforderungen werden in dem Datenfeld challenges verwaltet.
-Über den bereits genannten Verwaltungsstrukturen hinaus, beinhaltet die Klasse weiterhin spezielle einzelne Informationen:
+Über die bereits genannten Verwaltungsstrukturen hinaus beinhaltet die Klasse weiterhin folgende einzelne Informationen:
 
 \par \bigskip \textbf{Weitere Datenfelder}
-\par Der aktuell, im Rahmen der Bedienung der Applikation, von dem Nutzer ausgewählte Meilenstein wird in dem Datenfeld selectedMilestone gespeichert. 
-\par \medskip Die beiden Felder begin und end, bezeichnen den von dem Benutzer angegebenen Zeitraum der Bearbeitung der Bachelorarbeit.
+\par Der aktuell, im Rahmen der Bedienung der Applikation von dem Nutzer ausgewählte, Meilenstein wird im Datenfeld selectedMilestone gespeichert. 
+\par \medskip Die beiden Felder begin und end, bezeichnen den durch den Benutzer angegebenen Bearbeitungszeitraum der Bachelorarbeit.
 
 \newpage
 \subsection{Notification Funktionen}
 \par Für die Implementierung der Notification wurde ein externes Plugin genutzt TODO LINK, da die grundsätzliche Möglichkeit der Handhabung von Notifications durch das Framework Flutter nicht gegeben ist. Durch die Verwendung des Plugins sind jedoch einige zielplattformabhängige Konfigurationen nötig, welche sich unter TODO LINK nachvollziehen lassen.
 \par \medskip Bei der Umsetzung der Notifications wurde sich an den dort gegebenen Beispielen orientiert, wobei deren Funktionsweisen für die eigene Umsetzung adaptiert wurden.
-\par Die Verwendung der Notifications wird im Rahmen der prototypischen Implementierung durch spezielle Top-Level Funktionen gelöst, welche durch Aufrufen die jeweiligen Achievement-Actions auslösen. Die dadurch hervorgerufene Aktualisierung der zu den Achievements zugehörigen Bedingungen findet in der updateProperties Reducer-Funktion TODO statt. Hier werden die Nutzeraktionen an zentraler Stelle im System abgefragt und die Änderungen an den aktuellen im Zustand gespeicherten Bedingungen durchgeführt. Somit ist dies die zentral zu erweiternde Stelle im Code, wenn neue Achievements einzug in das System erhalten.
+\par Die Verwendung der Notifications wird im Rahmen der prototypischen Implementierung durch spezielle Top-Level-Funktionen gelöst, welche bei Aufrufen die jeweiligen Achievement-Actions auslösen. Die dadurch hervorgerufene Aktualisierung der zu den Achievements zugehörigen Bedingungen findet in der updateProperties Reducer-Funktion TODO statt. Hier werden die Nutzeraktionen an zentraler Stelle im System abgefragt und die Änderungen an den aktuellen, im Zustand gespeicherten, Bedingungen durchgeführt. Somit ist dies die zentral zu erweiternde Stelle im Code, wenn neue Achievements Einzug in das System erhalten.
 \par \bigskip Weitere Informationen zum Ablauf und der Funktionsweise von Notifications sind in Kapitel \ref{sec:middleware} zu finden.
 
 \section{Actions}
-\par Im Rahmen der auf der Anforderungsanalyse basierenden Konzeption der Softwarelösung, wurden verschieden Benutzeraktionen identifiziert, welche sich größtenteils in den sogenannten Actions wiederfinden.
+\par Im Rahmen der auf der Anforderungsanalyse basierenden Konzeption der Softwarelösung wurden verschiede Benutzeraktionen identifiziert, welche sich größtenteils in den sogenannten Actions wiederfinden.
 Für jede dieser Actions existiert eine eigene Klasse, welche im folgenden Verlauf beispielhaft an einem für alle Actions repräsentativen Fall erläutert wird.
 
 \subsection{Beispielhafte Demonstration einer Meilensteinbearbeitung}
 \par Das gewählte Beispiel bezieht sich auf die Nutzeraktion des Änderns eines Meilensteins:
 
 \par Wie in Abbildung \ref{lst:milestoneEditAction} zu sehen ist, enthält die Klasse EditMilestoneAction vier verschiedene Datenfelder. 
-Der zu ändernde Meilenstein (milestone), sowie die jeweiligen neuen Werte newTitle, newDate und newDescription, welche die zu dem vorhandenen Meilenstein zugehörigen Werte überschreiben sollen.
-\par Es wird deutlich, dass eine solche Klasse außer das Beinhalten der spezifischen Payload-Daten, keine tiefe Funktionalität bieten soll. 
+Der zu ändernde Meilenstein (milestone) sowie die jeweiligen neuen Werte newTitle, newDate und newDescription, welche die zu dem vorhandenen Meilenstein zugehörigen Werte überschreiben sollen.
+\par Es wird deutlich, dass eine solche Klasse außer dem Beinhalten der spezifischen Payload-Daten keine tiefe Funktionalität bieten soll. 
 \par Die weitere Verarbeitung der Daten wird im Kapitel \ref{sec:reducer} verdeutlicht.
 
 \bigskip
@@ -1461,15 +1461,15 @@ class EditMilestoneAction {
 \newpage
 \section{Reducer}
 \label{sec:reducer}
-\par Die verschiedenen Reducer Funktionen werden tragen die eigentliche Aufgabe der Datenmanipulation und Verwaltung. In diesen Komponenten passieren die entscheidenden Änderungen am aktuellen Zustand der Applikation.
+\par Die verschiedenen Reducer-Funktionen tragen die eigentliche Aufgabe der Datenmanipulation und Verwaltung. In diesen Komponenten passieren die entscheidenden Änderungen am aktuellen Zustand der Applikation.
 
 \subsection{App-Reducer}
-\par Der App Reducer ist die Top-Funktion der Reducer, welche nach jeder durchgeführten Action einen neuen Zustand der Applikation generiert. Jedes Datenfeld des aktuellen Zustands wird in diesem Rahmen durch die Delegation an untergeordnete Reducer Funktionen neu generiert. Dabei wird immer der aktuelle Zustand des Systems sowie die in der Action-Klasse enthaltenen Informationen übergeben.
+\par Der App-Reducer ist die Top-Funktion der Reducer, welche nach jeder durchgeführten Action einen neuen Zustand der Applikation generiert. Jedes Datenfeld des aktuellen Zustands wird in diesem Rahmen durch die Delegation an untergeordnete Reducer-Funktionen neu generiert. Dabei wird immer der aktuelle Zustand des Systems sowie die in der Action-Klasse enthaltenen Informationen übergeben.
 \par \medskip Im folgenden Verlauf wird dieser Ablauf an einem repräsentativen Beispiel verdeutlicht.
 
-\subsection{Beispielhafte Demonstration eines Meilenstein Reducers}
+\subsection{Beispielhafte Demonstration eines Meilenstein-Reducers}
 
-\par Innerhalb der von dem AppReducer aufgerufenen updateMilestones Funktion (siehe Abbildung \ref{lst:milestoneReducer}), wird überprüft, um welche Action es sich handelt. Sollte es sich um keine der angegebenen Actions handeln, so wird der aktuell existierende Zustand unverändert zurückgegeben (vgl. Zeile \ref{lstNum:returnCurrentMilestones}). Sollte die Action jedoch übereinstimmen, so wird anschließend die jeweils definierte Folge von Befehlen ausgeführt und der neue Zustand der jeweiligen Daten zurückgegeben (vgl. Zeile \ref{lstNum:returnNewMilestones}).
+\par Innerhalb der von dem AppReducer aufgerufenen updateMilestones-Funktion (siehe Abbildung \ref{lst:milestoneReducer}) wird überprüft, um welche Action es sich handelt. Sollte es sich um keine der angegebenen Actions handeln, so wird der aktuell existierende Zustand unverändert zurückgegeben (vgl. Zeile \ref{lstNum:returnCurrentMilestones}). Sollte die Action jedoch übereinstimmen, so wird anschließend die jeweils definierte Folge von Befehlen ausgeführt und der neue Zustand der jeweiligen Daten zurückgegeben (vgl. Zeile \ref{lstNum:returnNewMilestones}).
 
 \bigskip
 \begin{lstlisting}[caption={Meilenstein Reducer Beispiel},captionpos=b, label=lst:milestoneReducer]
@@ -1494,15 +1494,15 @@ Map<String, Milestone> ret = new SplayTreeMap<String, Milestone>();
 
 \newpage
 \section{Container}
-\par Die Container Komponenten dienen in dieser Redux-orientierten Architektur als Schnittstelle zwischen der Benutzeroberfläche (Presentation) und dem internen Zustand der Applikation (Model). Sie stehen somit einerseits in der direkten lesenden Beziehung zu dem Store, welcher den aktuellen Status der Applikation beinhaltet und andererseits in Beziehung zu den Reducer Komponenten, welche diesen Status durch das Auslösen von Actions schreibend aktualisieren. 
-\par Im folgenden Verlauf wird dieser Ablauf an einem repräsentativen Beispiel verdeutlicht
+\par Die Container-Komponenten dienen in dieser an Redux orientierten Architektur als Schnittstelle zwischen der Benutzeroberfläche (Presentation) und dem internen Zustand der Applikation (Model). Sie stehen somit einerseits in der direkten lesenden Beziehung zu dem Store, der den aktuellen Status der Applikation beinhaltet und andererseits in Beziehung zu den Reducer-Komponenten, welche diesen Status durch das Auslösen von Actions schreibend aktualisieren. 
+\par Im folgenden Verlauf wird dieser Ablauf an einem repräsentativen Beispiel verdeutlicht.
 
 \subsection{Beispielhafte Demonstration einer Meilensteinbearbeitung}
 
-\par Die Converter-Funktion (siehe Abbildung \ref{lst:containerMilestoneChange}, vgl. Zeile \ref{lstNum:converter}) des StoreConnectors konvertiert den aktuellen Store in ein ViewModel, welches die für die Presentation Komponente relevanten Daten in der Builder-Funktion (vgl. Zeile \ref{lstNum:builder}) bereitstellen kann.
+\par Die Converter-Funktion (siehe Abbildung  \ref{lst:containerMilestoneChange}, vgl. Zeile \ref{lstNum:converter}) des StoreConnectors konvertiert den aktuellen Store in ein ViewModel, welches die für die Presentation-Komponente relevanten Daten in der Builder-Funktion (vgl. Zeile \ref{lstNum:builder}) bereitstellen kann.
 
 \bigskip
-\begin{lstlisting}[caption={Container Komponente einer Meilensteinänderung},captionpos=b, label=lst:containerMilestoneChange]
+\begin{lstlisting}[caption={Container-Komponente einer Meilensteinänderung},captionpos=b, label=lst:containerMilestoneChange]
 class EditMilestone extends StatelessWidget {
   final Milestone milestone;
   EditMilestone(this.milestone);
@@ -1522,11 +1522,11 @@ class EditMilestone extends StatelessWidget {
 \end{lstlisting}
 \bigskip
 
-\par In der ViewModel Klasse werden einerseits die Informationen aus dem Store geladen (vgl. Zeile \ref{lstNum:getStore}) und weiterhin auch die getätigten Actions gesendet (vgl. Zeile \ref{lstNum:sendAction}). Insbesondere Letzteres funktioniert durch das Übermitteln von Callback Funktionen an die Presentation Komponente (siehe Abbildung \ref{lst:containerMilestoneChange}, vgl. Zeile \ref{lstNum:addEditMilestoneScreen}).
+\par In der ViewModel-Klasse werden einerseits die Informationen aus dem Store geladen (vgl. Zeile \ref{lstNum:getStore}) und weiterhin auch die getätigten Actions gesendet (vgl. Zeile \ref{lstNum:sendAction}). Letzteres funktioniert durch das Übermitteln von Callback Funktionen an die Presentation-Komponente (siehe Abbildung \ref{lst:containerMilestoneChange}, vgl. Zeile \ref{lstNum:addEditMilestoneScreen}).
 
 \newpage
 \bigskip
-\begin{lstlisting}[caption={ViewModel von Container Komponente einer Meilensteinänderung},captionpos=b, label=lst:containerMilestoneChangeViewModel]
+\begin{lstlisting}[caption={ViewModel von Container-Komponente einer Meilensteinänderung},captionpos=b, label=lst:containerMilestoneChangeViewModel]
 class _ViewModel {
   final Milestone currentMilestone;
   final Function(String, DateTime, String) editMilestone;
@@ -1536,7 +1536,7 @@ class _ViewModel {
 
   _ViewModel(
       {this.currentMilestone, this.editMilestone, this.currentMilestones, this.currentMilestonesDates}) {
-   // ... initialisieren von currentMilestoneDates und initialDate
+   // ... Initialisieren von currentMilestoneDates und initialDate
   }
 
   
@@ -1555,12 +1555,12 @@ class _ViewModel {
 
 \newpage
 \section{Presentation}
-\par Die Presentation Komponenten stellen die Schnittstelle zwischen System und dem Benutzer dar. In dieser Hinsicht ist die Aufgabe dieser Komponenten die über die Nutzereigaben erhaltenen Informationen an die jeweiligen Container Komponenten zur Weiterverarbeitung zu vermittelt und den aktuellen Systemzustand für den Anwender geeignet darzustellen. Eine Presentation Komponente erhält alle nötigen Informationen von der jeweiligen übergeordneten Container Komponente und soll nicht direkt mit dem Store interagieren. Ziel ist es, die Darstellung von der direkten Systeminteraktion scharf zu trennen, um Austauschbarkeit und Änderungen an der Benutzeroberfläche zu erleichtern.
-\par \medskip Im folgenden Verlauf wird dieser Ablauf an einem repräsentativen Beispiel verdeutlicht
+\par Die Presentation-Komponenten stellen die Schnittstelle zwischen System und Benutzer dar. Die Aufgabe dieser Komponenten ist, die über die Nutzereingaben erhaltenen Informationen an die jeweiligen Container-Komponenten zur Weiterverarbeitung zu vermitteln und den aktuellen Systemzustand für den Anwender geeignet darzustellen. Eine Presentation-Komponente erhält alle nötigen Informationen von der jeweils übergeordneten Container-Komponente und soll nicht direkt mit dem Store interagieren. Ziel ist es, die Darstellung von der direkten Systeminteraktion strikt zu trennen, um Austauschbarkeit und Änderungen an der Benutzeroberfläche zu erleichtern.
+\par \medskip Im folgenden Verlauf wird dieser Ablauf an einem repräsentativen Beispiel verdeutlicht.
 
 \subsection{Beispielhafte Demonstration einer Meilensteinbearbeitung}
 
-\par Wie in Abbildung \ref{lst:submitMilestoneChange} zu sehen ist, wird die von der Container Komponente übermittelte Callback Funktion addEditMilestone bei Bestätigen der vom Nutzer eingegebenen Inhalte ausgeführt.
+\par Wie in Abbildung \ref{lst:submitMilestoneChange} zu sehen ist, wird die von der Container-Komponente übermittelte Callback-Funktion addEditMilestone bei Bestätigen der vom Nutzer eingegebenen Inhalte ausgeführt.
 Darunter zählen in diesem Fall der Titel, das Datum und eine optionale Beschreibung des bearbeiteten Meilensteins.
 
 \bigskip
@@ -1582,12 +1582,12 @@ void submit(context) {
 \newpage
 \section{Middleware}
 \label{sec:middleware}
-\par Im Folgenden wird die eingesetzte Middleware beschrieben, welche im Rahmen der prototypischen Entwicklung der Applikation für die Verwaltung von Push Notifications und das Lokale Speichern und Laden des aktuellen Zustands bei Schließen und Öffnen der Applikation zuständig ist.
+\par Im Folgenden wird die eingesetzte Middleware beschrieben, welche im Rahmen der prototypischen Entwicklung der Applikation für die Verwaltung von Push-Notifications und das lokale Speichern und Laden des aktuellen Zustands bei Schließen und Öffnen der Applikation zuständig ist.
 
 \subsection{Beispielhafte Demonstration der Notification Middleware}
-\par Wie in Abbildung \ref{lst:notificationMiddleware} zu sehen ist, wird auch hier wie in den Reducer Komponenten innerhalb dieser Middleware eine Abfrage zu der Art der ausgelösten Actions getätigt (vlg. Zeile 6). Sollte die Bedingung, dass es sich um eine SendAchievementNotificationAction nicht bestätigen, so wird die eingegangene Action sofort weiter an die Reducer Komponenten geleitet. Falls sich die Bedingung jedoch als wahr herausstellt, so wird der darauffolgende Ablauf von Befehlen ausgeführt, welcher sich hier auf das Auslösen einer Notification bezieht. 
+\par Wie in Abbildung \ref{lst:notificationMiddleware} zu sehen ist, wird auch hier wie in den Reducer-Komponenten innerhalb dieser Middleware eine Abfrage zu der Art der ausgelösten Actions getätigt (vlg. Zeile 6). Sollte die Bedingung, dass es sich um eine SendAchievementNotificationAction handelt, nicht bestätigen, so wird die eingegangene Action sofort weiter an die Reducer-Komponenten geleitet. Falls sich die Bedingung jedoch als wahr herausstellt, so wird der darauffolgende Ablauf von Befehlen ausgeführt, welcher sich hier auf das Auslösen einer Notification bezieht. 
 \par Eine Besonderheit innerhalb dieser Komponente ist die Verwendung eines Completers, welcher als Teil der Action Payload übermittelt wurde. 
-\par \bigskip Hinweis: Ein Completer ist eine von Dart gegebene Klasse, welche es in diesem Fall ermöglicht, eine zukünftig ausgeführte Funktion so zu behandeln, als wären der Rückgabewert bereits bekannt. Weitere Informationen sind unter 
+\par \bigskip Hinweis: Ein Completer ist eine von Dart gegebene Klasse, die es in diesem Fall ermöglicht, eine zukünftig ausgeführte Funktion so zu behandeln, als wären der Rückgabewert bereits bekannt. Weitere Informationen sind unter 
 TODO https://api.dartlang.org/stable/2.0.0/dart-async/Completer-class.html zu finden.
 
 \bigskip
@@ -1621,9 +1621,9 @@ void notificationMiddleware(
 \end{lstlisting}
 \bigskip
 
-\par In diesem Rahmen wird nach dem allgemeinen Ausführen von Actions in der Applikation, das Senden einer Notification durch das Aufrufen der Top-Level Funktion checkAchievementNotification() \grqq vorbereitet\grqq (siehe Abbildung \ref{lst:checkAchievementNotification}, vgl. Zeile  9 - 11).
-\par \medskip Um zu gewährleisten, dass neue Achievements registriert werden, wird vor Ausführung der SendAchievementNotificationAction in Abbildung \ref{lst:checkAchievementNotification}( vgl. Zeile 3 - 7) die CheckForAchieveAction() ausgelößt, welche für das Aktualisieren der aktuellen Achievements sorgt.
-\par \medskip Sollten folglich die Bedingungen für das Ausführen dieser Notification zutreffen, so wird wie in Abbildung \ref{lst:notificationMiddleware} zu sehen ist, die \grqq versprochene\grqq Aktion ausgeführt (vlg. Zeile 25) und in diesem Fall die Notification angezeigt. 
+\par In diesem Rahmen wird nach dem allgemeinen Ausführen von Actions in der Applikation das Senden einer Notification durch das Aufrufen der Top-Level-Funktion checkAchievementNotification() \grqq vorbereitet\grqq{} (siehe Abbildung \ref{lst:checkAchievementNotification}, vgl. Zeile  9 - 11).
+\par \medskip Um zu gewährleisten, dass neue Achievements registriert werden, wird vor Ausführung der SendAchievementNotificationAction in Abbildung \ref{lst:checkAchievementNotification}{}(vgl. Zeile 3 - 7) die CheckForAchieveAction() ausgelößt, die für das Aktualisieren der aktuellen Achievements sorgt.
+\par \medskip Sollten folglich die Bedingungen für das Ausführen dieser Notification zutreffen, so wird wie in Abbildung \ref{lst:notificationMiddleware} zu sehen ist, die \grqq versprochene\grqq{} Action ausgeführt (vgl. Zeile 25) und in diesem Fall die Notification angezeigt. 
 
 \bigskip
 \begin{lstlisting}[caption={checkAchievementNotification Methode},captionpos=b, label=lst:checkAchievementNotification]
@@ -1645,8 +1645,8 @@ Future<dynamic> checkAchievementNotification(context) {
 \chapter{Evaluation} \label{chap:nachweisführung}
 \section{Softwaretesting}
 \subsection{Ergebnisse der Softwaretests}
-\par Im Rahmen der Softwaretests wird speziell das Testen der Reducer-Funktionen im Kontext der Redux-Architektur als essenziell betrachtet, da diese als zentrale Ausführende Einheit der jeweiligen Nutzeraktionen identifiziert werden.
-\par \bigskip Insgesamt wurden TODO Reducer Testeinheiten ausgeführt, welche durch die folgenden Testfälle im Rahmen der Reducer Tests definiert wurden: 
+\par Im Rahmen der Softwaretests wird speziell das Testen der Reducer-Funktionen im Kontext der Redux-Architektur als essenziell betrachtet, da diese als zentrale ausführende Einheit der jeweiligen Nutzeraktionen identifiziert werden.
+\par \bigskip Insgesamt wurden TODO Reducer-Testeinheiten ausgeführt, welche durch die folgenden Testfälle im Rahmen der Reducer-Tests definiert wurden: 
 
 \bigskip
 \begin{tabularx}{\textwidth}{l|X|l|l}
@@ -1668,63 +1668,63 @@ Future<dynamic> checkAchievementNotification(context) {
  	\\ 
 	\bottomrule
 \end{tabularx}
-\captionof{table}{Übersicht der Reducertests}
+\captionof{table}{Übersicht der Reducer-Tests}
 \label{tab:reducertests}
 
 \newpage
 \section{Ergebnisse der Nutzerevaluation}
-\par Insgesamt wurden jeweils 7 Personen einem Test unterzogen, welcher als zentralen Bestandteil die Nutzung der entwickelten Applikation beinhaltet. 
+\par Insgesamt wurden jeweils 7 Personen einem Test unterzogen, der als zentralen Bestandteil die Nutzung der entwickelten Applikation beinhaltet. 
 \par Unter den genannten 7 Personen befinden sich 2 Professoren und 5 Studierende des Studiengangs Informatik/Softwareentwicklung der Fachhochschule Lübeck. 
-\par Weiterhin befinden sich unter den 5 Studierenden genau 3 Studierende in der Phase während der Bachelorarbeit und 2 Studierende am Ende des 5. Semesters vor der Bearbeitung der Bachelorarbeit.
+\par Weiterhin befinden sich 3 der 5 Studierenden in der Phase während der Bachelorarbeit und 2 Studierende am Ende des 5. Semesters vor der Bearbeitung der Bachelorarbeit.
 
-\par \bigskip Der Test wurde unter Moderation verschiedener vordefinierter Aufgaben durchgeführt (siehe TODO), wobei hier aufgrund der vergleichbar zu haltenden gesammelten Erfahrung sowie der abschließenden Beurteilung der Tests, nicht zwischen Professoren oder Studierenden unterschieden, sondern der jeweils gleiche Testablauf gewählt wurde.
-\par \bigskip Bei der Durchführung der Tests mit gab es dennoch einige wichtige Unterschiede. 
+\par \bigskip Der Test wurde unter Moderation mit verschiedenen vordefinierten Aufgaben durchgeführt (siehe TODO), wobei hier aufgrund der vergleichbar zu behandelnden getesteten Nutzererfahrung sowie der abschließenden Beurteilung der Tests nicht zwischen Professoren oder Studierenden unterschieden, sondern der jeweils gleiche Testablauf gewählt wurde.
+\par \bigskip Bei der Durchführung der Tests gab es dennoch einige wichtige Unterschiede. 
 \par Zum einen unterlagen die Test mit den Professoren einer ausführlicher gestalteten Vorstellung und Beschreibung der Features, da diese durch die Erfahrung der Professoren hinsichtlich ihres Nutzens als sehr gut beurteilbar angenommen wurden.
-\par Weiterhin wurden bei den Testdurchführungen mit den Studierenden ein abschließender Fragebogen ausgehändigt, in dem die Testpersonen noch einmal die Möglichkeit hatten weitere Anmerkungen zu der Software zu tätigen.
+\par Weiterhin wurde bei den Testdurchführungen mit den Studierenden ein abschließender Fragebogen ausgehändigt, in dem die Testpersonen noch einmal die Möglichkeit hatten weitere Anmerkungen zu der Software festzuhalten.
 
-\par \bigskip Die eigentliche Testdurchführung wurde auf dem eigenen dafür vorbereiteten Smartphone ausgeführt, wobei das Bildschirmgeschehen aller Tests mit Hilfe einer Software aufgezeichnet wurde, jedoch ist eine Datei dieser Aufzeichnungen durch einen unbekannten Datenfehler nicht verwendbar.
+\par \bigskip Die eigentliche Testdurchführung wurde auf dem eigenen, dafür vorbereiteten, Smartphone durchgeführt, wobei das Bildschirmgeschehen aller Tests mithilfe einer Software aufgezeichnet wurde, jedoch ist eine der Dateien durch einen unbekannten Datenfehler nicht korrekt aufgezeichnet worden und somit nicht verwendbar.
 
-\par Des weiteren wurden nach vorher eingeholter Erlaubnis der Testpersonen ein Audiomitschnitt erzeugt. Dieser Audiomitschnitt wurde von allen Professoren und insgesamt 4 von 5 Studierenden zugelassen. Diese Audiomitschnitte unterliegen jedoch aus nicht bekannten Gründen einer schlechten Aufnahmequalität. Es wurden jedoch unmittelbar nach jedem Interview Notizen angefertigt, welche im Anhang dieses Dokuments zu finden sind (siehe Anhang TODO).
+\par Des Weiteren wurden nach vorher eingeholter Erlaubnis der Testpersonen ein Audiomitschnitt erzeugt. Dieser Audiomitschnitt wurde von beiden Professoren und insgesamt 4 von 5 Studierenden zugelassen. Diese Audiomitschnitte unterliegen jedoch aus nicht bekannten Gründen einer schlechten Aufnahmequalität. Es wurden jedoch unmittelbar nach jedem Interview Notizen angefertigt, welche im Anhang dieses Dokuments zu finden sind (siehe Anhang TODO).
 
-\par \bigskip Der verwendete Testablauf, welcher sich aus nacheinander gestellten Aufgaben zusammensetzt, ist im Anhang zu finden und Umfasst 10 Aufgaben (siehe TODO ANHANG).
-\par Die Aufgaben orientieren sich an den verschiedenen Softwarefunktionen der entwickelten Applikation und umfasst das Verwenden aller Kernfeatures. 
-\par Der Ablauf der Aufgaben, ist im Rahmen des Tests jedoch nicht fest definiert, sondern wurde je nach Situation frei verfolgt.
+\par \bigskip Der verwendete Testablauf, welcher sich aus nacheinander gestellten Aufgaben zusammensetzt, ist im Anhang zu finden und Umfasst zehn Aufgaben (siehe TODO ANHANG).
+\par Die Aufgaben orientieren sich an den verschiedenen Softwarefunktionen der entwickelten Applikation und umfassen das Verwenden aller Kernfunktionen. 
+\par Die Reihenfolge der gestellten Aufgaben ist im Rahmen des Tests jedoch nicht fest definiert, sondern wurde je nach Situation frei gewählt.
 
 \newpage
 \subsection{Zusammenfassung der Testdurchführung mit den Studierenden}
-\par Zusammenfassend hat sich ergeben, dass alle Testpersonen die vorgegebenen Aufgaben fast ohne Schwierigkeiten lösen konnten und der Großteil der Aufgaben ohne Hilfestellung des Moderators erfüllt wurden.
-\par Falls Irritationen bezüglich des Lösens der Aufgaben bei den Testpersonen aufgetreten sind, so konnten diese größtenteils selbstständig beseitigt werden.
+\par Zusammenfassend hat sich ergeben, dass alle Testpersonen die vorgegebenen Aufgaben fast ohne Schwierigkeiten lösen konnten und der Großteil der Aufgaben ohne Hilfestellung des Moderators erfüllt werden konnten.
+\par Falls Unklarheiten bezüglich des Lösens der Aufgaben bei den Testpersonen aufgetreten sind, so konnten diese größtenteils selbstständig beseitigt werden.
 
-\par \bigskip Im folgenden Verlauf werden die Ergebnisse des Tests, nach dem Ablauf der jeweiligen Aufgaben kategorisiert, dargestellt. Weiterhin werden, falls vorhanden, die Kernaussagen der aufgabenspezifischen Kommentare und Wünsche zur Softwaregestaltung und Features der Testpersonen beschrieben.
+\par \bigskip Im folgenden Verlauf werden die Ergebnisse des Tests, nach dem Ablauf der jeweiligen Aufgaben kategorisiert, dargestellt. Weiterhin werden, falls vorhanden, die Kernaussagen der aufgabenspezifischen Kommentare und Wünsche zur Softwaregestaltung und den Features der Testpersonen beschrieben.
 
 
 \par \bigskip \textbf{Aufgabe 1 - Anweisungen des Startbildschirms befolgen}
-\par Insgesamt haben 5 von 5 Testpersonen diese Aufgabe erfolgreich abgeschlossen. Alle Studierende konnten den Anweisungen folgen und haben ein Bearbeitungszeitraum für ihre Bachelorarbeit eingetragen und bestätigt, worauf hin sie auf das Dashboard gelangt sind. Es gab keine negativen Anmerkungen zu der Softwareumsetzung dieser Funktionalität.
+\par Insgesamt haben 5 von 5 Testpersonen diese Aufgabe erfolgreich abgeschlossen. Alle Studierenden konnten den Anweisungen folgen und haben einen Bearbeitungszeitraum für ihre Bachelorarbeit eingetragen und bestätigt, woraufhin sie auf das Dashboard gelangt sind. Es gab keine negativen Anmerkungen zur Softwareumsetzung dieser Funktionalität.
 
 \par \bigskip \textbf{Aufgabe 2 - Beschreibe die Elemente des Dashboards}
-\par Alle 5 Testpersonen konnten die auf dem Dashboard befindlichen Elemente deren Bedeutung und Nutzen korrekt zuweisen.
+\par Alle 5 Testpersonen konnten die auf dem Dashboard befindlichen Elemente, also deren Bedeutung und Nutzen korrekt deuten.
 
 \par \bigskip \textbf{Aufgabe 3 - Informiere dich über die Anmeldung der Bachelorarbeit.}
 \par Es konnten 4 von 5 Testpersonen ohne Schwierigkeiten  Informationen über die Anmeldung einer Bachelorarbeit durch die Nutzung der Applikation gewinnen. 
-\par \medskip Eine der Testpersonen hatte starke Schwierigkeiten die Sektion "Bachelorarbeit Guide" als solche zu identifizieren und musste durch Hilfestellung des Moderators geleitet werden. Ab diesem Punkt gelang es der Testperson jedoch Problemlos, sich über das Thema zu informieren.
+\par \medskip Eine der Testpersonen hatte große Schwierigkeiten, die Sektion \grqq Bachelorarbeit Guide\grqq als solche zu identifizieren und musste durch Hilfestellung des Moderators geleitet werden. Ab diesem Punkt gelang es der Testperson jedoch Problemlos, sich über das Thema zu informieren.
 
 \par \bigskip \textbf{Aufgabe 4 - Erstelle zwei Meilensteine}
 \par Alle 5 von 5 Testpersonen konnten diese Aufgabe erfolgreich lösen, wobei jedoch 2 von 5 Personen fälschlicherweise als erste Reaktion auf den Dashboard-Zeitstrahl getippt haben, da dieser in die unmittelbare Verbindung mit den zu erstellenden Meilensteinen gebracht wurde.
 
-\par \bigskip \textbf{Aufgabe 5 - Was ist passiert? Begib dich zu dem Achievementbildschirm.}
-\par Insgesamt haben 4 von 5 Testpersonen diese Frage Beantworten können. Eine der Testpersonen hat das durch eine Push-Benachrichtigung verdeutlichte Achievement, nicht als solches wahrgenommen und war verwirrt. Nach einer Erklärung hat diese Person verstanden was passiert ist und hat sich wie die anderen Personen erfolgreich zu dem Achievementbildschirm begeben.
+\par \bigskip \textbf{Aufgabe 5 - Was ist passiert? Begib dich zu dem Achievement-Bildschirm.}
+\par Insgesamt haben 4 von 5 Testpersonen diese Frage beantworten können. Eine der Testpersonen hat das, durch eine Push-Benachrichtigung verdeutlichte, Achievement nicht als solches wahrgenommen und war verwirrt. Nach einer Erklärung hat diese Person verstanden was passiert ist und hat sich wie die anderen Personen erfolgreich zu dem Achievement-Bildschirm begeben.
 
 \newpage
 \par \bigskip \textbf{Aufgabe 6 - Füge den Meilensteinen Unteraufgaben hinzu.}
-\par Alle 5 von 5 Testpersonen haben diese Aufgabe abschließen können, wobei 3 von 5 Personen Schwierigkeiten hatten, die gegebene Android-Tastatur nicht nur als Eingabewerkzeug, sondern durch das erforderte Betätigen des Enter-Buttons als Bestätigungsmittel zu identifizieren. Dies führte dazu, das die Testpersonen einen Bestätigungsbutton auf dem Bildschirm gesucht haben. Es wurde der Wunsch nach einem Feedback bei hinzufügen von Aufgaben geäußert, um Kenntnisse über den erfolgreichen Abschluss des Vorgangs zu gewinnen.
-\par Weiterhin führte die Darstellung der ein- und ausklappbaren Aufgabenliste vermehrt zu Irritationen, da offenbar das Gefühl vermittelt wurde, das die eingetragenen Aufgaben verschwunden sind.
+\par Alle 5 von 5 Testpersonen haben diese Aufgabe abschließen können, wobei 3 von 5 Personen Schwierigkeiten hatten, die gegebene Android-Tastatur nicht nur als Eingabewerkzeug, sondern auch das erforderte Betätigen mithilfe des Enter-Buttons zu identifizieren. Dies führte dazu, dass die Testpersonen einen Bestätigungsbutton auf dem Bildschirm gesucht haben. Es wurde der Wunsch nach einem Feedback bei Hinzufügen von Aufgaben geäußert, um Kenntnisse über den erfolgreichen Abschluss des Vorgangs zu gewinnen.
+\par Weiterhin führte die Darstellung der ein- und ausklappbaren Aufgabenliste vermehrt zu Irritationen, da offenbar das Gefühl vermittelt wurde, dass die eingetragenen Aufgaben verschwunden seien.
 
 \par \bigskip \textbf{Aufgabe 7 - 10 Allgemeine Operationen ausführen}
 \par Aufgabe 7 bis Aufgabe 10 befassen sich mit weiteren allgemein in der Software zu tätigenden Benutzerinteraktionen, welche aufgrund der gleich ausfallenden Ergebnisse im Folgenden zusammengefasst werden:
 \begin{itemize}
 \item Aufgabe 7  - Das Bearbeiten von Meilensteinen (Datum ändern)
 \item Aufgabe 8  - Die Navigation innerhalb der Software
-\item Aufgabe 9  - Das Abschließen von Meilenstein Aufgaben
+\item Aufgabe 9  - Das Abschließen von Meilenstein-Unteraufgaben
 \item Aufgabe 10 - Das Abschließen definierter Herausforderungen
 \end{itemize}
 \par Alle Testpersonen konnten diese Aufgabe ohne Schwierigkeiten abschließen.
@@ -1735,25 +1735,25 @@ Future<dynamic> checkAchievementNotification(context) {
 \par \bigskip Im folgenden Verlauf ist eine nach den Features der Software kategorisierte Zusammenfassung der Ergebnisse zu finden:
 
 \par \bigskip \textbf{Kategorie 1 - Der Startbildschirm bei erstmaligem Ausführen der Applikation}
-\par Es wurden von einer der beiden Testpersonen verschiedene Anmerkungen zu dem Bildschirm geäußert, auf dem die Datumseingabe für die Bearbeitungszeit der Bachelorarbeit erfolgt. Zum einen wurde kritisiert, dass es sich bei dem Datum um das amerikanische Datumsformat (MM/DD/YYYY) handelt und dies zu Verwirrungen führt. Weiterhin wurde gewünscht, dass Informationskästchen zu der Bachelorarbeit Bearbeitungszeit auf dem Bildschirm platziert werden könnten.
+\par Es wurden von einer der beiden Testpersonen verschiedene Anmerkungen zu dem Bildschirm geäußert, auf dem die Datumseingabe für den Bearbeitungszeitraum der Bachelorarbeit erfolgt. Zum einen wurde angemerkt, dass es sich bei dem Datum um das amerikanische Datumsformat (MM/DD/YYYY) handelt und dies zu Verwirrungen führt. Weiterhin wurde gewünscht, dass Informationskästchen mit Inhalten zur Bearbeitungszeit der Bachelorarbeit auf dem Bildschirm platziert werden könnten.
 
 \par \bigskip \textbf{Kategorie 2 - Bachelorarbeit Guide}
 \par Es liegen keine konkreten Anmerkungen zu dieser Funktion vor.
 
 \par \bigskip \textbf{Kategorie 3 - Meilensteinverwaltung}
-\par Grundsätzlich wurden alle Meilenstein Tool spezifischen Aufgaben erfolgreich gelöst, jedoch kam es bei dem Bestätigen von Unteraufgaben aufgrund der nicht erkennbaren Bestätigungsmöglichkeit in beiden Testdurchführungen zu Schwierigkeiten.
+\par Grundsätzlich wurden alle, das Meilenstein-Tool betreffende, Aufgaben erfolgreich gelöst, jedoch kam es bei dem Bestätigen von Unteraufgaben aufgrund der nicht erkennbaren Bestätigungsmöglichkeit in beiden Testdurchführungen zu Schwierigkeiten.
 
 \par \bigskip \textbf{Kategorie 4 - Achievements}
-\par Bei Verwendung der Achievement-Funktion wurde angemerkt, dass die zusammenhängenden Achievements und Herausforderungen gegebenenfalls zu wenig trennscharf gehandhabt werden. Es wird gewünscht, dass klassische Gamification-Badges Einzug in die Applikation erhalten.
+\par Bei Verwendung der Achievement-Funktion wurde angemerkt, dass die zusammenhängenden Achievements und Herausforderungen gegebenenfalls nicht trennscharf genug gehandhabt werden. Es wird gewünscht, dass klassische Gamification-Badges Einzug in die Applikation erhalten.
 
 \par \bigskip \textbf{Kategorie 5 - Herausforderungen}
 \par Die Herausforderungen wurden als äußert sinnvoll bezeichnet, da sie bei richtiger Gestaltung die verschiedenen folgenden Checklisten-Eigenschaften erfüllen können:
 \begin{itemize}
 \item Man kann überprüfen, ob man alle relevanten Inhalte einer Bachelorarbeit bedacht hat.
-\item Man wird auf Dinge hingewiesen, die man sonst nicht rechtzeitig bedenkt.
-\item Herausforderungen Können einen auffordernden Charakter haben.
-\item Gute Ergänzung zu individuellen Meilenstein-Tool durch stärkere Vorgliederung.
-\item Orientierungsmöglichkeit für Studierende
+\item Man wird auf Dinge hingewiesen, die man sonst nicht rechtzeitig bedacht hätte.
+\item Herausforderungen können einen auffordernden Charakter haben.
+\item Gute Ergänzung zum individuellen Meilenstein-Tool durch stärkere inhaltliche Vorgabe.
+\item Orientierungsmöglichkeit für Studierende.
 \end{itemize}
 
 \newpage
@@ -1761,22 +1761,22 @@ Future<dynamic> checkAchievementNotification(context) {
 \begin{itemize}
 \item Das selbständiges Erinnern an Herausforderungen könnte eine nützliche Funktion sein.
 \item Verbindung zu anderen Features der Applikation (Bachelorarbeit Guide) sollte gegeben sein, da die Herausforderungen nicht zu isoliert vorliegen sollten und das Gesamtpotential der Software genutzt werden sollte.
-\item Die korrekte Formulierung der Herausforderungen ist essenziell, da es nicht sinnvoll wäre, wenn man nur Achievements bekommt, wenn man etwas angefangen hat, sondern wenn man etwas fertigstellt.
-\item Ein Mechanismus um Selbstbetrug zu verhindern, wäre wünschenswert.
+\item Die korrekte Formulierung der Herausforderungen ist essenziell, da es nicht sinnvoll wäre, wenn man nur Achievements bekommt, wenn man etwas angefangen hat, sondern auch wenn man etwas fertigstellt.
+\item Eine Mechanik, um Selbstbetrug zu verhindern, wäre wünschenswert.
 \end{itemize}
 
 \par \bigskip \textbf{Kategorie 6 - Dashboard}
-\par Das Dashboard und der auf diesem befindliche Zeitstrahl, wurde im Rahmen der Tests als sehr sinnvoll eingeschätzt, da  die folgenden Aspekte bei den Studierenden gefördert werden könnten:
+\par Das Dashboard und der auf diesem befindliche Zeitstrahl wurde im Rahmen der Tests als sehr sinnvoll eingeschätzt, da  die folgenden Aspekte bei den Studierenden gefördert werden könnten:
 
 \begin{itemize}
-\item Diszipliniert Studenten sich überhaupt ein Plan zu machen und sich folgende Fragen zu stellen:
+\item Motiviert Studenten dazu, sich überhaupt einen Plan zu machen und sich folgende Fragen zu stellen:
 \begin{itemize}
 \item Welche Meilensteine habe ich?
 \item Wie lange brauche ich?
 \end{itemize}
-\item Die einfache Möglichkeit der Übersicht und das fördern folgender Fragen
+\item Die einfache Möglichkeit der Übersicht und das Fördern folgender Fragen:
 \begin{itemize}
-\item Wie weit bin ich denn gerade?
+\item Wie weit bin ich gerade?
 \item Bin ich früh oder zu spät dran?
 \end{itemize}
 \end{itemize}
@@ -1784,106 +1784,106 @@ Future<dynamic> checkAchievementNotification(context) {
 \par Weiterhin wurde die Anmerkung gemacht, dass die Auswahl von Meilensteinen auf dem Zeitstrahl erleichtert werden könnte, wenn die Meilensteine über eine andere Visualisierung dargestellt werden, da diese zu klein sind und gerade bei mehreren Meilensteinen nicht auswählbar sein könnten.
 
 \par \bigskip \textbf{Kategorie 7 - Allgemeine Anmerkungen}
-\par Eine der Testpersonen hat die Idee geäußert einen initialen vorbildlichen Meilensteinplan zu erstellen, an dem sich die Anwender für ihre eigenen Zwecke orientieren können.
+\par Eine der Testpersonen hat die Idee geäußert, einen initialen vorbildlichen Meilensteinplan zu erstellen, an dem sich die Anwender für ihre eigenen Zwecke orientieren können.
 
 \newpage
 \subsection{Ergebnis der Nutzerevaluation}
 \par Zusammenfassend lässt sich aus der Evaluation mit den Professoren und den Studierenden ein konkreter aktueller Stand ableiten, welcher als Orientierungspunkt für die weitere Entwicklung der Software dient.
-\par \bigskip Im Allgemeinen gilt der Software-Prototyp als noch nicht reif für den realen Einsatz, da er sowohl hinsichtlich der Usability Aspekte, als auch der inhaltlichen Umsetzung im Rahmen der Tests als ausbaufähig und unfertig erscheint.
+\par \bigskip Im Allgemeinen gilt der Software-Prototyp als noch nicht reif für den realen Einsatz, da er sowohl hinsichtlich der Usability, als auch der inhaltlichen Umsetzung im Rahmen der Tests als ausbaufähig und unfertig erscheint.
 \par \bigskip Die folgenden Punkte dienen als Konkretisierung der größten zu leistenden Änderungen oder Erweiterungen der Software:
 
 \begin{itemize}
-\item Zeitstrahl-Element auf dem Dashboard sollte durch eine geeignetere Visualisierung ersetzt oder der besseren Bedienbarkeit bei mehreren eingetragenen Meilensteinen entsprechend angepasst werden.
-\item Achievements sollten stärker von den Herausforderungen differenzierbar sein und durch eine stänkere der Gamification entsprechende Visualisierung, wie beispielsweise Badges statt Farben, verfügen.
+\item Das Zeitstrahl-Element auf dem Dashboard sollte durch eine geeignetere Visualisierung ersetzt oder zwecks besserer Bedienbarkeit bei mehreren eingetragenen Meilensteinen entsprechend angepasst werden.
+\item Achievements sollten stärker von den Herausforderungen differenziert sein und durch eine stärkere, der Gamification entsprechenden, Visualisierung, wie beispielsweise Badges statt Farben, verfügen.
 \item Herausforderungen sollten mit den jeweiligen Informationen des Bachelorarbeit Guide verbunden werden, da sie zu isoliert voneinander vorliegen und das mögliche Potential der Funktion nicht genutzt wird.
 \end{itemize}
 
-\par Des weiteren sollen die von den Testpersonen angesprochenen Details im Umgang mit der Software berücksichtigt und eine Lösung geeignet umgesetzt werden, worauf eine weitere Testiteration durchgeführt werden soll.
+\par Des Weiteren sollen die von den Testpersonen angesprochenen Details im Umgang mit der Software berücksichtigt und eine Lösung geeignet umgesetzt werden, worauf eine weitere Testiteration durchgeführt werden soll.
 
 \newpage
 \section{Bewertung des Frameworks Flutter zur Entwicklung von mobilen Appliaktionen}
-\par Im Laufe der im Rahmen dieser Arbeit durchgeführten Entwicklung einer Applikation mit dem Flutter Framework haben sich sowohl subjektive Erfahrungen als auch objektive Fakten ergeben, welche im folgenden Verlauf unter der Fragestellung, inwiefern sich Flutter für die Entwicklung von mobilen Applikationen eignet, bewertet werden.
+\par Im Laufe der in dieser Arbeit durchgeführten Entwicklung einer Applikation mit dem Frameworks Flutter haben sich sowohl subjektive Erfahrungen als auch objektive Fakten ergeben, die im folgenden Verlauf unter der Fragestellung, inwiefern sich Flutter für die Entwicklung von mobilen Applikationen eignet, bewertet werden.
 
-\par \bigskip Die Wahl der Bewertungskriterien orientiert sich einerseits an den im Rahmen einer Softwareentwicklung bezeichnenden Eigenschaften eines Frameworks, unter denen die Qualität der Dokumentation, die Komplexität des Erarbeitungsaufwandes, die Wahl der zu verwendenden Programmiersprache, die  Handlichkeit der allgemeinen Anwendung, die Performance Eigenschaften und der Support sowie die zugehörige Communityaktivität des Framesworks im Detail steht. \par Weiterhin werden die Framework spezifischen Merkmale mit in den Bewertungsumfang einbezogen, um die klaren Anwendungsfall spezifischen Stärken des Frameworks abzubilden.
+\par \bigskip Die Wahl der Bewertungskriterien orientiert sich zum einen an den, im Rahmen einer Softwareentwicklung bezeichnenden, Eigenschaften eines Frameworks. Dazu gehören die Qualität der Dokumentation, die Komplexität des Erarbeitungsaufwandes, die Wahl der zu verwendenden Programmiersprache, die  Handlichkeit der allgemeinen Anwendung, die Performance-Eigenschaften und der Support sowie die zugehörige Community-Aktivität des Frameworks. \par Zum anderen werden die framework-spezifischen Merkmale mit in den Bewertungsumfang einbezogen, um die klaren, den Anwendungsfall betreffenden, Stärken des Frameworks abzubilden.
 
 \subsection{Einführung und Dokumentation}
-\par Das Flutter Framework weist eine ausführlich gestaltete und sehr gut strukturierte Online Dokumentation vor, welche besonders auf die für Einsteiger wichtigsten und interessantesten Funktionen mit ausführlichen Beispielanwendungen und Schritt-für-Schritt Anleitungen eingeht.
+\par Das Framework Flutter weist eine ausführlich gestaltete und sehr gut strukturierte Online-Dokumentation vor, welche besonders auf die, für Einsteiger wichtigsten und interessantesten, Funktionen mit ausführlichen Beispielanwendungen und Schritt-für-Schritt Anleitungen eingeht.
 Besonders wird dies durch die Hilfestellungen der zielplattform-spezifischen \textbf{Get Started Anleitung}\citep{FlutterGetStarted}  verdeutlicht.
 
-\par \bigskip Hierbei werden ausführliche Anleitungen zur Einrichtung und Installation der benötigten Softwarekomponenten für die verbreiteten Betriebssysteme Windows, MacOS und Linux  gegeben, wobei nach Abschluss der Installationsschritte der Flutter Neueinsteiger im zweiten Teil des \textbf{Get Started} Programms mit dem Erstellen einer Beispielapplikation unter detaillierter Anleitung und einer abschließenden Tour durch das Flutter Framework in die Flutter App-Entwicklung entlassen wird und die benötigten Grundlagen, zur selbstständigen Weiterbildung durch die Dokumentation, erlernt haben sollte. 
+\par \bigskip Hierbei werden ausführliche Anleitungen zur Einrichtung und Installation der benötigten Softwarekomponenten für die verbreiteten Betriebssysteme Windows, MacOS und Linux  gegeben. Nach Abschluss der Installationsschritte wird der Flutter-Neueinsteiger im zweiten Teil des \textbf{Get Started} Programms mit dem Erstellen einer Beispielapplikation unter detaillierter Anleitung und einer abschließenden Tour durch das Flutter-Framework in die App-Entwicklung entlassen und die benötigten Grundlagen zur selbstständigen Weiterbildung durch die Dokumentation erlernt haben sollte. 
 
 \subsection{Verwendete Programmiersprache}
-\par Mit \textbf{Dart}\citep{DartLangHomepage} erhält man bei der Entwicklung mit Flutter eine Google zugehörige moderne, ebenfalls gut Dokumentierte und für die mobile Entwicklung optimierte Programmiersprache, welche die objektorientierte Programmierung unterstützt. 
+\par Mit \textbf{Dart}\citep{DartLangHomepage} erhält man bei der Entwicklung mit Flutter eine Google zugehörige, moderne, ebenfalls gut dokumentierte und für die mobile Entwicklung optimierte Programmiersprache, die eine objektorientierte Programmierung unterstützt. 
 
 \subsection{Handhabung und Anwendung}
 \label{sub:handhabungFLutter}
-\par Durch die Handhabung der Flutter Widgets, welche in einer Baumstruktur organisiert sind und die Grundbausteine einer jeder Benutzeroberfläche darstellen, sollten Entwickler im Allgemeinen einen sehr intuitiven Umgang erwarten, welcher weiterhin durch die Dokumentation unterstützt werden sollte. Weiterhin gestaltet es sich aufgrund der einfach gehaltenen Grundstrukturen als sehr einfach, in kurzer Zeit eine lauffähige Minimalsoftware zu erstellen, was erneut für eine sehr gute Erlernbarkeit der Flutter Funktionsweise spricht.
+\par Durch die Handhabung der Flutter-Widgets, welche in einer Baumstruktur organisiert sind, die die Grundbausteine einer jeder Benutzeroberfläche darstellen, sollten Entwickler im Allgemeinen einen sehr intuitiven Umgang erwarten, welcher weiterhin durch die Dokumentation unterstützt wird. Weiterhin gestaltet es sich aufgrund der einfach gehaltenen Grundstrukturen als sehr einfach, in kurzer Zeit eine lauffähige Minimalsoftware zu erstellen, was erneut für eine sehr gute Erlernbarkeit der Funktionsweise von Flutter spricht.
 
 \par \bigskip Flutter enthält von Haus aus eine große Vielfalt an Widgets, welche dem Entwickler große Freiheiten bei der Gestaltung der Software lassen und  hinsichtlich der Plattformunabhängigkeit viel Arbeit abnehmen.
 
-\par \bigskip Es kann jedoch je nach Anwendungsfall, abseits des reinen Oberflächendesigns schnell zum Erreichen dieser Grenze kommen, da viele Services wie beispielsweise Push-Notifications, nicht von Flutter unterstützt werden. Im Rahmen dieser Arbeit wurde hierfür ein externes Plug-In verwendet, wobei zusätzlich zielplattformspezifische Konfigurationen zwingend notwendig waren.
+\par \bigskip Es kann jedoch je nach Anwendungsfall abseits des reinen Oberflächendesigns schnell zum Erreichen dieser Grenze kommen, da viele Services, wie beispielsweise Push-Notifications, nicht von Flutter unterstützt werden. Im Rahmen dieser Arbeit wurde hierfür ein externes Plug-In verwendet, wobei zusätzliche zielplattform-spezifische Konfigurationen zwingend notwendig waren.
 
-\par \bigskip Als nicht sehr komfortabel hat sich das Ausführen auf einem iOS Endgerät herausgestellt, sofern man keinen Zugriff auf ein MacOS Gerät/Betriebssystem hat. Dies lässt sich zwar nicht auf das Flutter Framework zurückführen, sondern auf die Philosophie der Firma \textbf{Apple}\citep{AppleHomepage}, sollte jedoch trotzdem an dieser Stelle Erwähnung finden. 
-\par \bigskip Es ist zwar möglich, eine virtuelle Maschine mit einem MacOS Betriebssystem einzurichten, jedoch gestaltet sich das unter Umständen als sehr Umständlich und nicht sehr praktikabel. Da jedoch bei der Entwicklung einer plattformübergreifenden Applikation das Ausführen auf allen Zielplattformen aus Testzwecken vorgesehen sein sollte, kommt man als Entwickler unter Umständen in Unannehmlichkeiten.
+\par \bigskip Als nicht sehr komfortabel hat sich das Ausführen auf einem iOS Endgerät herausgestellt, sofern man keinen Zugriff auf ein MacOS-Gerät oder -Betriebssystem hat. Dies lässt sich zwar nicht auf das Framework zurückführen, sondern auf die Philosophie des Unternehmens \textbf{Apple}\citep{AppleHomepage}, sollte jedoch trotzdem an dieser Stelle Erwähnung finden. 
+\par \bigskip Es ist zwar möglich, eine virtuelle Maschine mit einem MacOS-Betriebssystem einzurichten, jedoch gestaltet sich das eventuell sehr umständlich und nicht sehr praktikabel. Da jedoch bei der Entwicklung einer plattformübergreifenden Applikation das Ausführen auf allen Zielplattformen aus Testzwecken vorgesehen sein sollte, erfährt man als Entwickler unter Umständen Unannehmlichkeiten.
 
 \subsection{UI-Performance}
-\par Da Flutter Applikationen nativ kompiliert ausgeführt werden, sollte es laut Dokumentation auf einfache Weise möglich sein bei der Ausführung von Software konstante 60 Bilder in der Sekunde zu erreichen. \citep[Abschnitt \grqq What kind of App Perdormance can I expext?\grqq]{Flu3}
-\par \bigskip Weiterhin bietet Flutter den sogenannten \textbf{Flutter Performance Profiler}\citep{FlutterPerformanceProfiler} , welcher es ermöglicht, die Performance Eigenschaften der Applikation bei Laufzeit zu Überwachen. 
+\par Da Flutter-Applikationen nativ kompiliert ausgeführt werden, sollte es laut Dokumentation auf einfache Weise möglich sein, bei der Ausführung von Software konstante 60 Bilder in der Sekunde zu erreichen. \citep[Abschnitt \grqq What kind of App Performance can I expext?\grqq]{Flu3}
+\par \bigskip Weiterhin bietet Flutter den sogenannten \textbf{Flutter Performance Profiler}\citep{FlutterPerformanceProfiler}, der es ermöglicht, die Performance-Eigenschaften der Applikation bei Laufzeit zu Überwachen. 
 
 \subsection{Support und Community}
-\par Da sich das Flutter Framework noch in der Betaphase der Entwicklung befindet, ist mit einigen Problemen bei dem Einsatz zu rechnen, jedoch kann bei Nachverfolgung der im Git-Repository erfolgenden Fortschritte und Meilensteine im Allgemeinen davon ausgegangen werden, das an regelmäßigen Updates und Softwareverbesserungen dauerhaft gearbeitet wird.
+\par Da sich Flutter noch in der Beta-Phase der Entwicklung befindet, ist mit einigen Problemen beim Einsatz zu rechnen, jedoch kann bei Nachverfolgung der im Git-Repository erfolgenden Fortschritte und Meilensteine im Allgemeinen davon ausgegangen werden, dass kontinuierlich an regelmäßigen Updates und Softwareverbesserungen gearbeitet wird.
 \par \bigskip Weiterhin hat sich die Verwendung von Flutter im Falle dieser Arbeit als sehr stabil und zuverlässig geäußert.
-\par \bigskip Aufgrund des derzeitigen hohen und weiter steigenden Interesses an dem Flutter Framework ist eine sehr aktive Community zu erwarten, welche auch zur Lösung von Verständnisproblemen, dem Aufsuchen von Ratschlägen und zum einfachen Interessenaustausch als Anlaufstelle angesehen werden kann.
+\par \bigskip Aufgrund des derzeitig hohen und weiter steigenden Interesses an dem Framework ist eine sehr aktive Community zu erwarten, welche auch zur Lösung von Verständnisproblemen, dem Einholen von Ratschlägen und zum einfachen Interessenaustausch als Anlaufstelle herangezogen werden kann.
 
-\subsection{Framework spezifische Features}
-\par Das wohl ausschlaggebendste Feature des Flutter Frameworks ist die sogenannte \textbf{Hot Reload Funktion}. Es wird bei Programm Laufzeit ermöglicht innerhalb von Millisekunden, die UI-Komponenten neu zu generieren ohne den inneren Zustand des Systems zurückzusetzen. Dies führt einer extremen flexiblen Gestaltung und Änderungen des Obeflächendesigns bei Laufzeit, was nicht nur zur Einarbeitung in das Framework besonders nützlich ist, sondern auch bei der direkten Entwicklung mit Kunden oder den späteren Anwendern. Beispielsweise könnten Kunden bei Präsentation der Software Änderungswünsche äußern, welche je nach Aufwand der Änderung, direkt umgesetzt werden können. Dies könnte bei den typischerweise häufiger ausfallenden Zwischenpräsentationen im Rahmen von agilen Softwareprojekten für eine starke Entlastung von Kommunikationsbarrieren sorgen.
+\subsection{Framework-spezifische Features}
+\par Das wohl ausschlaggebendste Feature von Flutter ist die sogenannte \textbf{Hot Reload Funktion}. Es wird während der Laufzeit ermöglicht, innerhalb von Millisekunden die UI-Komponenten neu zu generieren ohne den inneren Zustand des Systems zurückzusetzen. Dies sorgt für eine extrem flexible Gestaltung und Änderung des Obeflächen-Designs während der Laufzeit, was nicht nur zur Einarbeitung in das Framework besonders nützlich ist, sondern auch bei der direkten Entwicklung mit Kunden oder den späteren Anwendern. Beispielsweise könnten Kunden bei Präsentation der Software Änderungswünsche äußern, welche je nach Aufwand der Änderung direkt umgesetzt werden können. Dies könnte bei den typischerweise häufigen Zwischenpräsentationen im Rahmen von agilen Softwareprojekten zu einer starken Senkung von Kommunikationsbarrieren sorgen.
 
 \subsection{Zusammenfassung der Bewertung}
-\par Zusammenfassend lässt sich sagen, dass sich Flutter im Allgemeinen ausgesprochen gut für die zielgruppennahe Front-End fokussierte Entwicklung von mobilen Applikationen nutzen lässt. Die größten Stärken von Flutter liegen ganz eindeutig in den schnell und effizient zu erreichenden Ergebnissen, was Oberflächendesign betrifft. Der Nutzer kann unkompliziert in die Entwicklung und Veränderung der Oberfläche miteinbezogen werden, was sich in der Entwicklung von mobilen Applikationen stark anbietet. 
-\par \bigskip Allerdings muss darauf hingewiesen werden, dass Flutter aus der eigenen Natur heraus kein Alleskönner ist, was sich durch die Präsentation des Frameworks von Google in der Öffentlichkeit erst auf den Zweiten Blick erfahren lässt, da der Konsument der Dokumentation oder der verschiedenen veröffentlichten Vorträgen von dem vermeintlichen Überschuss an Vorteilen überwältigt wird.
+\par Zusammenfassend lässt sich sagen, dass sich Flutter ausgesprochen gut für die zielgruppennahe Front-End-fokussierte Entwicklung von mobilen Applikationen nutzen lässt. Die größten Stärken von Flutter liegen ganz eindeutig in den schnell und effizient zu erreichenden Ergebnissen, was Oberflächendesign betrifft. Der Nutzer kann unkompliziert in die Entwicklung und Veränderung der Oberfläche miteinbezogen werden, was sich in der Entwicklung von mobilen Applikationen stark anbietet. 
+\par \bigskip Allerdings muss darauf hingewiesen werden, dass Flutter aus der eigenen Natur heraus kein Alleskönner ist, was sich durch die Präsentation des Frameworks seitens Google in der Öffentlichkeit erst auf den Zweiten Blick erahnen lässt, da der Konsument der Dokumentation oder der verschiedenen veröffentlichten Vorträge von dem vermeintlichen Überschuss an Vorteilen überwältigt wird.
 
-\par \bigskip Ab einem gewissen Punkt müssen die jeweiligen Entwickler selbst tätig werden oder auf bereits entwickelte externe Plug-Ins zurückgreifen und können sich, wie beispielsweise bei den in Kapitel \ref{sub:handhabungFLutter} angesprochenen Push-Notifications, nicht allein auf Flutter stützen. Dies kann wiederum unter Umständen zu einer erhöhten Komplexität hinsichtlich der Wartbarkeit der Software führen, da sich somit auf eigene Verantwortung aus Googles Versprechen einer plattformunabhängigen Entwicklung entfernt wird.
+\par \bigskip Ab einem gewissen Punkt müssen die jeweiligen Entwickler selbst tätig werden oder auf bereits entwickelte externe Plug-Ins zurückgreifen und können sich, wie beispielsweise bei den in Kapitel \ref{sub:handhabungFLutter} angesprochenen Push-Notifications, nicht allein auf Flutter stützen. Dies kann wiederum unter Umständen zu einer erhöhten Komplexität hinsichtlich der Wartbarkeit der Software führen, da sich somit auf eigene Verantwortung von Googles Versprechen einer plattformunabhängigen Entwicklung entfernt wird.
 
-\par \bigskip Grundsätzlich würde ich Flutter im Rahmen dieser Diskussion als sehr geeignet für die Entwicklung solcher mobiler Applikationen bewerten, da das Framework viele Funktionen erfüllt oder erleichtert, welche wie bei dieser Arbeit ihre Stärken besonders in der benutzernahen Softwareentwicklung hinsichtlich der schnell zu generierenden prototypischen Fortschritte und Änderungen von Oberflächen-Konzepten erfüllen. Mit der Programmiersprache Dart enthält Flutter weiterhin eine optimierte und mächtige Programmiersprache, welche den im Gegensatz zu der fokussierten Front-End Ausrichtung von Flutter auch ein breites Spektrum an Möglichkeiten für die Back-End Entwicklung bietet.
+\par \bigskip Grundsätzlich würde ich Flutter im Rahmen dieser Diskussion als sehr geeignet für die Entwicklung mobiler Applikationen bewerten, da das Framework viele Funktionen bietet oder vereinfacht, die, wie bei dieser Arbeit, ihre Stärken besonders in der benutzernahen Softwareentwicklung hinsichtlich der schnell zu generierenden prototypischen Fortschritte und Änderungen von Oberflächen-Konzepten zeigen. Mit der Programmiersprache Dart enthält Flutter weiterhin eine optimierte und mächtige Programmiersprache, die den, im Gegensatz zu der fokussierten Front-End-Ausrichtung von Flutter, auch ein breites Spektrum von Möglichkeiten für die Back-End-Entwicklung bietet.
 
-\par \bigskip Weiterhin bleibt jedoch abzuwarten, ob Flutter bezüglich der Relevanz in den nächsten Jahren von Bedeutung bleibt oder ob es genauso schnell wieder von dem Markt verschwindet, wie es erschienen ist.
+\par \bigskip Es bleibt jedoch abzuwarten, ob Flutter bezüglich der Relevanz in den nächsten Jahren von Bedeutung bleibt oder ob es genauso schnell wieder vom Markt verschwindet, wie es erschienen ist.
 
 
 \chapter{Präsentation der Ergebnisse} \label{chap:ergebnisse}
 \par Die Erstellung einer Bachelorarbeit ist mit dem Durchlaufen vieler verschiedener Teilprozesse verbunden, wobei jeder dieser Teilprozesse unterschiedliche Erkenntnisse, Zusammenhänge sowie auch Probleme offenbaren kann.
-\par In dem folgenden zusammenfassenden Kapitel werden die erreichten Ergebnisse sowie die während der Arbeit aufgetretenen Schwierigkeiten und Erkenntnisse beschrieben. Weiterhin wird ein ausführlicher Teil zum Ausblick der Software die im Laufe der Arbeit gesammelten und entwickelten Ideen vorstellen.
+\par Im folgenden zusammenfassenden Kapitel werden die erreichten Ergebnisse sowie die während der Arbeit aufgetretenen Schwierigkeiten und Erkenntnisse resümiert. Außerdem wird ein Ausblick der Software gegeben und die im Laufe der Arbeit gesammelten und entwickelten Ideen beschrieben.
 
 \section{Wichtigsten Erkenntnisse der Arbeit}
 Die Untersuchung dieses Problembereiches brachte im Allgemeinen das Ergebnis hervor, dass Studierende und Professoren im Kern sehr kooperierende Erwartungen und Ansichten bezüglich dem Bearbeiten von Bachelorarbeiten haben und das eigentliche Problem in der Ausführung des Projekts selbst liegt. 
 
-\par \bigskip Studierende sehen sich zum ersten Mal mit einem umfangreichen Projekt konfrontiert, wofür sie nicht ausreichend Vorwissen besitzen. Das hierbei zu fehlende Wissen bezieht sich somit überwiegend auf die Eigenschaften und Durchführung einer wissenschaftlichen Arbeit, sowie der mangelhaften Zeitplanung, welche laut den ermittelten überwiegend einheitlich ausfallenden Aussagen der befragten Personen im Laufe des Studiums nicht ausreichend ausführlich vermittelt wird. 
-\par Das größte identifizierte Problem hierbei ist, dass sich Zeitplanung nur durch eigene gesammelte Praxiserfahrung und nicht durch das theoretische Aneignen von Fachwissen oder das Besuchen des, an der Fachhochschule Lübeck angebotenen, Bachelorarbeit Seminars erlernen lässt. Da die im Studium durchlaufenen Projekte jedoch meist in Gruppenarbeit verlaufen und zudem, besonders aus diesem Grund, sehr überschaubar ausfallen, kommt es unter Umständen nicht zu dem gewünschten Lernprozess. Die somit erste \textbf{Forderung} von Zeitmanagement, mündet offenbar in einer \textbf{Überforderung} bei Durchführen der Bachelorarbeit.
-\par Hinsichtlich der fachspezifischen Kompetenzen der Informatik gibt es auffällig wenig Schwierigkeiten, da Studierende im Laufe des Studiums an der Fachhochschule Lübeck, größtenteils die für die Bachelorarbeit benötigten Methoden, Werkzeuge und Fähigkeiten durch die zahlreichen und vielseitigen Module vermittelt bekommen haben.
+\par \bigskip Studierende sehen sich zum ersten Mal mit einem umfangreichen und komplexen Projekt konfrontiert, wofür sie nicht ausreichend Vorwissen besitzen. Die fehlenden Kompetenzen umfassen somit überwiegend das Wissen um die Eigenschaften und die Durchführung einer wissenschaftlichen Arbeit, sowie der mangelhaften Zeitplanung, die laut der ermittelten und überwiegend einheitlich ausfallenden Aussagen der befragten Personen im Laufe des Studiums nicht ausreichend ausführlich vermittelt wird. 
+\par Das größte identifizierte Problem hierbei ist, dass sich Zeitplanung nur durch eigens gesammelte Praxiserfahrung und nicht durch das theoretische Aneignen von Fachwissen oder Besuchen des, an der Fachhochschule Lübeck angebotenen, Bachelorarbeit-Seminars erlernen lässt. Da die im Studium durchlaufenen Projekte jedoch meist in Gruppenarbeit verlaufen und zudem, besonders aus diesem Grund, sehr überschaubar ausfallen, kommt es unter Umständen nicht zu dem gewünschten Lernprozess. Die somit erste \textbf{Forderung} von Zeitmanagement mündet offenbar in einer \textbf{Überforderung} bei der Bearbeitung der Bachelorarbeit.
+\par Hinsichtlich der fachspezifischen Kompetenzen der Informatik gibt es auffallend wenig Schwierigkeiten, da Studierende im Laufe des Studiums an der Fachhochschule Lübeck größtenteils die für die Bachelorarbeit benötigten Methoden, Werkzeuge und Fähigkeiten durch die zahlreichen und vielseitigen Module vermittelt bekommen haben.
 
-\par \bigskip Das Ergebnis der Nutzungsevaluation brachte hervor, dass die Softwarelösung durchaus Potential zur Qualitätssteigerung der Bachelorarbeiten von studierenden führen kann, da besonders die enthaltenen Funktionen der Herausforderungen als Leitfaden und des Bachelorarbeit-Guides als Informationsquelle, auf hohen Zuspruch seitens der Professoren, als auch der Studierenden gestoßen ist. Um eine ausreichend fundierte Aussage über den Nutzen der Software zu ermöglichen, muss jedoch ein Praxis-Test durchgeführt werden, welcher sich im Optimalfall auf mehrere Iterationen von Bachelorarbeit Studiengängen bezieht.
+\par \bigskip Das Ergebnis der Nutzungsevaluation brachte hervor, dass die Softwarelösung durchaus Potential zur Qualitätssteigerung der Bachelorarbeiten von Studierenden haben kann. Besonders die enthaltene Funktion der Herausforderungen als Leitfaden sowie der Bachelorarbeit-Guide als Informationsquelle stoßen auf hohen Zuspruch seitens der Professoren und der Studierenden. Um eine ausreichend fundierte Aussage über den Nutzen der Software zu ermöglichen, muss jedoch ein Praxis-Test durchgeführt werden, welcher sich im Optimalfall auf mehrere Iterationen von Bachelorarbeit-Studiengängen bezieht.
 
 \section{Schwierigkeiten bei der Bearbeitung}
-\par Als persönliche größte Schwierigkeit würde ich das Zeit- und Aufwandsmanagement des Gesamtprozesses betrachten, da die zugehörigen Teilprozesse auf eine unvorhergesehen hohe Komplexität gewachsen sind. Konkret zähle ich hierzu besonders das Durchlaufen der Anforderungsanalyse, welche einerseits durch die in diesem Projekt detaillierte Vorgehensweise der Durchführung und Auswertung der Einzelinterviews einen enormen Arbeitsaufwand eingenommen hat. Andererseits führte dies jedoch auch zu einem sehr detaillierten Bild des Problembereiches, welches in Kapitel \ref{chap:problemanalyse} ausführlich beschrieben wird. 
-\par Durch diesen betriebenen Aufwand kam es somit bei den nachfolgenden, nicht parallelisierbaren Teilprozessen zu einer starken Verschiebung im Zeitplan, was wiederum zu einer Minderung der Gesamtqualität Projektausgangs geführt hat.
+\par Als persönliche größte Schwierigkeit betrachte ich das Zeit- und Aufwandsmanagement des Gesamtprozesses, da die zugehörigen Teilprozesse auf eine unvorhergesehen hohe Komplexität gewachsen sind. Konkret zähle ich hierzu besonders das Durchlaufen der Anforderungsanalyse, die, durch die in diesem Projekt detaillierte Vorgehensweise der Durchführung und Auswertung der Einzelinterviews, einen enormen Arbeitsaufwand eingenommen hat. Ferner führte dies jedoch auch zu einem sehr detaillierten Bild des Problembereiches, welches in Kapitel \ref{chap:problemanalyse} ausführlich beschrieben wird. 
+\par Durch diesen betriebenen Aufwand kam es somit bei den nachfolgenden, nicht parallelisierbaren Teilprozessen zu einer starken Verschiebung im Zeitplan, was wiederum zu einer Minderung der Gesamtqualität des Projektausgangs geführt hat.
 
 \section{Erfüllung der Aufgabenstellung}
-\par Bei der Durchführung des Projektes wurde die Erfüllung der Aufgabenstellung als zentralen Projektziel angesehen. Hierbei gestaltete es sich jedoch aus Zeitgründen Schwierig die angestrebte Qualität in voller Gänze zu erreichen und es mussten bezüglich der Vollständigkeit einige Abstriche gemacht werden.
-\par \bigskip Im folgenden Verlauf des Kapitels werden die erreichten Ziele beschrieben und die nicht vollständig umgesetzten Lösungen begründet. Die dabei gewählte Kategorisierung setzt sich aus den aus der Aufgabenstellung hervorgehenden Aufgabenfelder der Software zusammen.
+\par Bei der Durchführung des Projektes wurde die Erfüllung der Aufgabenstellung als zentrales Projektziel angesehen. Hierbei gestaltete es sich jedoch aus Zeitgründen schwierig, die angestrebte Qualität in voller Gänze zu erreichen und es mussten bezüglich der Vollständigkeit einige Abstriche gemacht werden.
+\par \bigskip Im Verlauf des Kapitels werden die erreichten Ziele beschrieben und die nicht vollständig umgesetzten Lösungen begründet. Die dabei gewählte Kategorisierung setzt sich aus den, aus der Aufgabenstellung hervorgehenden, Aufgabenfeldern der Software zusammen.
 
 \subsection{Unterstützung bei Bearbeitung der Bachelorarbeit}
 \par Um den Studierenden Hilfestellungen, in Form von Richtlinien und Ratschlägen zu ermöglichen, wurde einerseits die Bachelorarbeit-Guide Funktion implementiert, welche als Nachschlagewerk zu Rahmenbedingungen, Hinweisen und Bearbeitungsdetails dienen soll. 
-\par Der Inhalt dieser Softwarefunktion wird durch das Einlesen einer JSON-Datei aus einem Git-Repository ermöglicht. Diese Schnittstelle sorgt dafür, das diese Inhalte beliebig verändert oder erweitert werden können, ohne einen Eingriff in den Programmcode zu erfordern.
+\par Der Inhalt dieser Softwarefunktion wird durch das Einlesen einer JSON-Datei aus einem Git-Repository ermöglicht. Diese Schnittstelle sorgt dafür, dass diese Inhalte beliebig verändert oder erweitert werden können, ohne einen Eingriff in den Programmcode zu erfordern.
 \par \bigskip In der Software selbst existiert zum jetzigen Zeitpunkt keine Auswahlmöglichkeit des Studiengangs, welcher jedoch durch einen geringen Erweiterungsaufwand der Software nachträglich integriert werden kann.
-\par Die jetzige Möglichkeit der Kategorisierung von Studiengangsspezifischen Inhalten würde lediglich über die in der JSON Datei gewählten Kategorisierung ermöglicht werden, so dass die Anwender jederzeit auch Zugriff auf andere Studienganginhalte hätten.
-\par Weiterhin liegen die bereits eingefügten Wissenssegmente bei Ende dieses Projekts aufgrund des zu betreibenden Zeitaufwandes nur in obligatorischer Form vor und gelten nicht als vollständig.
+\par Die jetzige Möglichkeit der Kategorisierung von studiengangspezifischen Inhalten würde lediglich über die, in der JSON Datei gewählten, Kategorisierung ermöglicht werden, so dass die Anwender jederzeit auch Zugriff auf andere Studienganginhalte hätten.
+\par Weiterhin liegen die bereits eingefügten Wissenssegmente bei Ende dieses Projekts aufgrund des zu betreibenden Zeitaufwandes nur in beispielhafter Form vor und gelten nicht als vollständig.
 \par Wie bereits erwähnt kann der Inhalt jedoch beliebig erweitert werden, was konkret bedeutet, dass  beispielhafte Gliederungen und alle gewünschten Hinweise, Übersichten und Anleitungen zu fachspezifischen Methoden und Werkzeugen zur Anforderungserhebung, Nachweisführung und/oder Aufbereitung von Ergebnissen beliebig verändert oder hinzugefügt werden können.
-\par \bigskip Ein weiterer wichtiger Bestandteil der Unterstützung der Studierenden liegt in der Definition von Herausforderungen. Diese Herausforderungen sollen einen Leitfaden für die Studierenden darstellen, welcher so allgemein wie nötig und so detailliert wie möglich gewählt werden soll. Die Idee hierbei ist, dass die Studierenden sich an dem durch die Herausforderungen definierten Rahmen und Ablauf einer Bachelorarbeit orientieren können, um von Anfang an eine konkrete Richtung anstreben zu können und nicht \grqq einfach drauf los zu arbeiten\grqq. Es ist von essenzieller Bedeutung, dass die Inhalte so gewählt werden, dass  die Inhalte einer themenspezifischen Lösung innerhalb einer Bachelorarbeit nicht beeinflusst werden, da dies einen zu großen Eingriff in die Prüfungsleistung der Studierenden bedeuten würde und diese sich durch einen manipulativen Charakter negativ auswirken könnten.
+\par \bigskip Ein weiterer wichtiger Bestandteil der Unterstützung der Studierenden liegt in der Definition von Herausforderungen. Diese Herausforderungen sollen einen Leitfaden für die Studierenden darstellen, welcher so allgemein wie nötig und so detailliert wie möglich gewählt werden soll. Die Idee hierbei ist, dass die Studierenden sich an dem, durch die Herausforderungen definierten, Rahmen und Ablauf einer Bachelorarbeit orientieren können, um von Anfang an eine konkrete Richtung anstreben zu können und nicht \grqq einfach drauf los zu arbeiten\grqq. Es ist von essenzieller Bedeutung, dass die Inhalte so gewählt werden, dass  sie die Inhalte einer themenspezifischen Lösung innerhalb einer Bachelorarbeit nicht beeinflussen, da dies einen zu großen Eingriff in die Prüfungsleistung der Studierenden bedeuten würde und dies sich durch einen manipulativen Charakter negativ auswirken könnte.
 
 \subsection{Unterstützung bei Zeitplanung}
 \par Um die Studierenden bei der Zeitplanung der Bachelorarbeit zu unterstützen, wurde eine Softwarefunktion implementiert, welche es den Studierenden ermöglicht, Meilensteine und Teilaufgaben individuell zu verwalten und diese durch eine geeignete Oberflächenpräsentation in Form eines Zeitstrahls als permanenten Begleiter innerhalb der Applikation zu visualisieren.
 
 \subsection{Motivation der Studierenden}
-\par Um Studierende bei der Durchführung der Bachelorarbeit zu motivieren, wurde ein Gamificationsystem implementiert, welches den Studierenden bei Erfüllung von Herausforderungen und Benutzung der Applikation ein positives Feedback vermitteln sollen.
+\par Um Studierende bei der Durchführung der Bachelorarbeit zu motivieren, wurde ein Gamification-System implementiert, welches den Studierenden bei Erfüllung von Herausforderungen und Benutzung der Applikation ein positives Feedback vermitteln solle.
 
 \section{Ausblick des Projekts}
 \par Der Abschluss dieses Projekts definiert einen Orientierungspunkt, welcher einen Ausblick auf weitere zukünftig zu bearbeitende Fragestellungen und die Gestaltung der Softwarelösung zulässt. In diesem Kapitel werden die Fragen und Ansätze, welche im Rahmen dieses Projekts nicht untersucht oder realisiert werden konnten, angesprochen.
@@ -1892,18 +1892,18 @@ Die Untersuchung dieses Problembereiches brachte im Allgemeinen das Ergebnis her
 \par Im Laufe der Anforderungsanalyse wurde oft über die zeitliche Konstellation und Abfolge der an der Fachhochschule Lübeck verfügbaren Module diskutiert, da zum jetzigen Zeitpunkt kein konkretes Modul zur Vorbereitung auf das wissenschaftliche Arbeiten angeboten wird. Eine Problemuntersuchung hinsichtlich des Bedarfs an einem solchen Modul oder einer Alternativlösung wird nach Abschluss dieses Projekts empfohlen.
 
 \subsection{Ausblick auf Softwarefunktionen}
-\par Der im Rahmen der Bachelorarbeit entwickelter Softwareprototyp enthält bereits unterschiedliche Funktionen, welche zur Lösung der auftretenden Probleme dienen sollen. Die hierbei entwickelten Softwareinhalte verfügen im Rahmen einer prototypischen Entwicklung über eine nicht ausreichende Qualität zum Einsatz in einer realen Umgebung. Es wäre zwingend notwendig die vorhandenen Funktionen besonders hinsichtlich der Usability und Wirkungsweise zu überarbeiten oder zu Erweitern. 
+\par Der im Rahmen der Bachelorarbeit entwickelte Software-Prototyp enthält bereits unterschiedliche Funktionen, welche zur Lösung der auftretenden Probleme dienen sollen. Die hierbei entwickelten Software-Inhalte verfügen im Rahmen einer prototypischen Entwicklung über eine nicht ausreichende Qualität zum Einsatz in einer realen Umgebung. Es wäre zwingend notwendig die vorhandenen Funktionen besonders hinsichtlich der Usability und Wirkungsweise zu überarbeiten oder zu erweitern. 
 
-\par \bigskip Im folgenden Verlauf werden einige konkrete Ideen zur Erweiterung oder Überarbeitung kurz ausgeführt:
+\par \bigskip Im folgenden Verlauf werden einige konkrete Ideen zur Erweiterung oder Überarbeitung aufgeführt:
 
 \begin{itemize}
 \item \textbf{Erweiterung der Software für andere Studiengänge}
-\par Die entwickelte Software wurde nur für den Studiengang Informatik/Softwaretechnik der Fachhochschule Lübeck entwickelt. Es wäre denkbar zu untersuchen, inwiefern andere Inhalte von Studiengängen und Hochschulen in die Software integrierbar sein können.
-\par Denkbar wäre eine studiengangs-spezifische Auswahl bei erstmaligem Öffnen der Software.
+\par Die entwickelte Software wurde nur für den Studiengang Informatik/Softwaretechnik der Fachhochschule Lübeck entwickelt. Es wäre denkbar, zu untersuchen, inwiefern andere Inhalte von Studiengängen und Hochschulen in die Software integrierbar sein können.
+\par Denkbar wäre eine studiengangspezifische Auswahl bei erstmaligem Öffnen der Software.
 \item \textbf{Externe definierbare Erinnerungen}
-\par Eine mögliche Funktion wäre es, durch das externe Absenden von Benachrichtigungen an Studierende, Client-seitige Push-Benachrichtigungen auszulösen. Dies könnte beispielsweise in Form von Newsletter Benachrichtigungen über neue Bachelorthemen sowohl von internen Betreuern oder externen Firmen geschehen, welche auch in der Software selbst angezeigt werden.
+\par Eine mögliche Funktion wäre es, durch das externe Absenden von Benachrichtigungen an Studierende, client-seitige Push-Benachrichtigungen auszulösen. Dies könnte beispielsweise in Form von Newsletter-Benachrichtigungen über neue Bachelorthemen sowohl von internen Betreuern, als auch externen Firmen geschehen, die auch in der Software selbst angezeigt werden.
 \item \textbf{Auswahl von Sprachpaketen}
-\par Eine wichtige Funktion, welche zum Ende des Projekts nicht realisiert wurde, ist die Auswahl von verschiedenen Sprachen, da auch viele Studierende aus dem Ausland die Fachhochschule Lübeck besuchen. Wichtig hierbei ist vor allem die verschiedenen zu beachtenden Quellen der Inhalte der Software, da beispielsweise der Inhalt des Bachelorarbeit Guides aus einer im Git-Repository liegenden externen JSON Datei erfolgt.
+\par Eine wichtige Funktion, welche zum Ende des Projekts nicht realisiert wurde, ist die Auswahl von verschiedenen Sprachen, da auch viele Studierende aus dem Ausland die Fachhochschule Lübeck besuchen. Wichtig hierbei sind vor allem die verschiedenen zu beachtenden Quellen der Inhalte der Software, da beispielsweise der Inhalt des Bachelorarbeit-Guides aus einer, im Git-Repository liegenden, externen JSON Datei kommt.
 \end{itemize}
 
 \listoftables
