@@ -66,7 +66,7 @@
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>labeldateparts</bcf:key>
-      <bcf:value>0</bcf:value>
+      <bcf:value>1</bcf:value>
     </bcf:option>
     <bcf:option type="multivalued">
       <bcf:key>labeldatespec</bcf:key>
@@ -131,7 +131,7 @@
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>sortingtemplatename</bcf:key>
-      <bcf:value>nty</bcf:value>
+      <bcf:value>nyt</bcf:value>
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>sortsets</bcf:key>
@@ -139,11 +139,11 @@
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>uniquelist</bcf:key>
-      <bcf:value>0</bcf:value>
+      <bcf:value>1</bcf:value>
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>uniquename</bcf:key>
-      <bcf:value>0</bcf:value>
+      <bcf:value>2</bcf:value>
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>uniqueprimaryauthor</bcf:key>
@@ -373,7 +373,8 @@
     <bcf:option datatype="boolean">doi</bcf:option>
     <bcf:option datatype="boolean">eprint</bcf:option>
     <bcf:option datatype="boolean">related</bcf:option>
-    <bcf:option datatype="boolean">subentry</bcf:option>
+    <bcf:option datatype="boolean">dashed</bcf:option>
+    <bcf:option datatype="boolean">mergedate</bcf:option>
     <bcf:option datatype="integer">mincrossrefs</bcf:option>
     <bcf:option datatype="integer">minxrefs</bcf:option>
     <bcf:option datatype="integer">maxnames</bcf:option>
@@ -1974,19 +1975,65 @@
     <bcf:datasource type="file" datatype="bibtex">lit.bib</bcf:datasource>
   </bcf:bibdata>
   <bcf:section number="0">
-    <bcf:citekey order="1">Skia1</bcf:citekey>
-    <bcf:citekey order="2">Mat1</bcf:citekey>
-    <bcf:citekey order="3">Cup1</bcf:citekey>
-    <bcf:citekey order="4">Strahringer2017</bcf:citekey>
-    <bcf:citekey order="5">Mayring2015</bcf:citekey>
+    <bcf:citekey order="1">deterding2011gamification</bcf:citekey>
+    <bcf:citekey order="2">Sailer2016</bcf:citekey>
+    <bcf:citekey order="3">Sailer2016</bcf:citekey>
+    <bcf:citekey order="4">blohm2013gamification</bcf:citekey>
+    <bcf:citekey order="5">blohm2013gamification</bcf:citekey>
     <bcf:citekey order="6">Sailer2016</bcf:citekey>
-    <bcf:citekey order="7">Balzert2010</bcf:citekey>
-    <bcf:citekey order="8">FHLuebeckBAAnleitung</bcf:citekey>
-    <bcf:citekey order="9">FHLuebeckBAAnleitung</bcf:citekey>
+    <bcf:citekey order="7">werbach2012win</bcf:citekey>
+    <bcf:citekey order="8">Sailer2016</bcf:citekey>
+    <bcf:citekey order="9">mekler2013disassembling</bcf:citekey>
+    <bcf:citekey order="10">mekler2013points</bcf:citekey>
+    <bcf:citekey order="11">reeves2009total</bcf:citekey>
+    <bcf:citekey order="12">pflanzl2018gamification</bcf:citekey>
+    <bcf:citekey order="13">pflanzl2018gamification</bcf:citekey>
+    <bcf:citekey order="14">bartle1996hearts</bcf:citekey>
+    <bcf:citekey order="15">bartle1996hearts</bcf:citekey>
+    <bcf:citekey order="16">bartle1996hearts</bcf:citekey>
+    <bcf:citekey order="17">AnouncingFlutterBeta</bcf:citekey>
+    <bcf:citekey order="18">MobileWordCongress</bcf:citekey>
+    <bcf:citekey order="19">Flu5</bcf:citekey>
+    <bcf:citekey order="20">Flu5</bcf:citekey>
+    <bcf:citekey order="21">Flu4</bcf:citekey>
+    <bcf:citekey order="22">Skia1</bcf:citekey>
+    <bcf:citekey order="23">FoundationLibary</bcf:citekey>
+    <bcf:citekey order="24">Mat1</bcf:citekey>
+    <bcf:citekey order="25">iOSDesign</bcf:citekey>
+    <bcf:citekey order="26">Cup1</bcf:citekey>
+    <bcf:citekey order="27">Flu8</bcf:citekey>
+    <bcf:citekey order="28">Flu8</bcf:citekey>
+    <bcf:citekey order="29">Flu1</bcf:citekey>
+    <bcf:citekey order="30">Flu5</bcf:citekey>
+    <bcf:citekey order="31">FlutterBuildingLayouts</bcf:citekey>
+    <bcf:citekey order="32">FlutterBuildingLayouts</bcf:citekey>
+    <bcf:citekey order="33">HackernoonFlutterArcticle</bcf:citekey>
+    <bcf:citekey order="34">HackernoonFlutterArcticle</bcf:citekey>
+    <bcf:citekey order="35">HackernoonFlutterArcticle</bcf:citekey>
+    <bcf:citekey order="36">Flu3</bcf:citekey>
+    <bcf:citekey order="37">Flu5</bcf:citekey>
+    <bcf:citekey order="38">Flu5</bcf:citekey>
+    <bcf:citekey order="39">ReduxWiki</bcf:citekey>
+    <bcf:citekey order="40">ReduxReadMe</bcf:citekey>
+    <bcf:citekey order="41">ReduxReadMe</bcf:citekey>
+    <bcf:citekey order="42">WordPressRedux</bcf:citekey>
+    <bcf:citekey order="43">ReduxActions</bcf:citekey>
+    <bcf:citekey order="44">ReduxReducers</bcf:citekey>
+    <bcf:citekey order="45">ReduxStore</bcf:citekey>
+    <bcf:citekey order="46">FlutterReduxLib</bcf:citekey>
+    <bcf:citekey order="47">Mayring2015</bcf:citekey>
+    <bcf:citekey order="48">Sailer2016</bcf:citekey>
+    <bcf:citekey order="49">Balzert2010</bcf:citekey>
+    <bcf:citekey order="50">FHLuebeckBAAnleitung</bcf:citekey>
+    <bcf:citekey order="51">FlutterGetStarted</bcf:citekey>
+    <bcf:citekey order="52">DartLangHomepage</bcf:citekey>
+    <bcf:citekey order="53">AppleHomepage</bcf:citekey>
+    <bcf:citekey order="54">Flu3</bcf:citekey>
+    <bcf:citekey order="55">FlutterPerformanceProfiler</bcf:citekey>
     <bcf:citekey order="0">*</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
-  <bcf:sortingtemplate name="nty">
+  <bcf:sortingtemplate name="nyt">
     <bcf:sort order="1">
       <bcf:sortitem order="1">presort</bcf:sortitem>
     </bcf:sort>
@@ -2002,12 +2049,12 @@
       <bcf:sortitem order="6">title</bcf:sortitem>
     </bcf:sort>
     <bcf:sort order="4">
-      <bcf:sortitem order="1">sorttitle</bcf:sortitem>
-      <bcf:sortitem order="2">title</bcf:sortitem>
-    </bcf:sort>
-    <bcf:sort order="5">
       <bcf:sortitem order="1">sortyear</bcf:sortitem>
       <bcf:sortitem order="2">year</bcf:sortitem>
+    </bcf:sort>
+    <bcf:sort order="5">
+      <bcf:sortitem order="1">sorttitle</bcf:sortitem>
+      <bcf:sortitem order="2">title</bcf:sortitem>
     </bcf:sort>
     <bcf:sort order="6">
       <bcf:sortitem order="1">volume</bcf:sortitem>
@@ -2016,9 +2063,9 @@
   </bcf:sortingtemplate>
   <!-- DATALISTS -->
   <bcf:datalist section="0"
-                name="nty/global//global/global"
+                name="nyt/global//global/global"
                 type="entry"
-                sortingtemplatename="nty"
+                sortingtemplatename="nyt"
                 sortingnamekeytemplatename="global"
                 labelprefix=""
                 uniquenametemplatename="global"

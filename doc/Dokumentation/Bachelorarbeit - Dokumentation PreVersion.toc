@@ -1,27 +1,27 @@
 \boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
 \babel@toc {ngerman}{}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {1}Einleitung}{6}{chapter.1}
+\contentsline {chapter}{\numberline {1}Einleitung}{5}{chapter.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {1.1}Motivation}{6}{section.1.1}
+\contentsline {section}{\numberline {1.1}Motivation}{5}{section.1.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {1.2}L\IeC {\"o}sungsansatz}{6}{section.1.2}
+\contentsline {section}{\numberline {1.2}L\IeC {\"o}sungsansatz}{5}{section.1.2}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {1.3}Zielsetzung}{6}{section.1.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {1.4}Aufgabenbeschreibung}{7}{section.1.4}
+\contentsline {section}{\numberline {1.4}Aufgabenbeschreibung}{6}{section.1.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {1.5}Ausblick auf die Bachelorarbeit}{8}{section.1.5}
+\contentsline {section}{\numberline {1.5}Ausblick auf die Bachelorarbeit}{7}{section.1.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.5.1}Beschreibung der Kernkomponenten}{8}{subsection.1.5.1}
+\contentsline {subsection}{\numberline {1.5.1}Beschreibung der Kernkomponenten}{7}{subsection.1.5.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.5.2}Untersuchung des Problembereiches}{8}{subsection.1.5.2}
+\contentsline {subsection}{\numberline {1.5.2}Untersuchung des Problembereiches}{7}{subsection.1.5.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.5.3}Konzeptvorstellung der Applikation}{8}{subsection.1.5.3}
+\contentsline {subsection}{\numberline {1.5.3}Konzeptvorstellung der Applikation}{7}{subsection.1.5.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.5.4}Architektur der Software}{8}{subsection.1.5.4}
+\contentsline {subsection}{\numberline {1.5.4}Architektur der Software}{7}{subsection.1.5.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.5.5}Implementierung}{8}{subsection.1.5.5}
+\contentsline {subsection}{\numberline {1.5.5}Implementierung}{7}{subsection.1.5.5}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {1.5.6}Validierung und Verifikation}{8}{subsection.1.5.6}
 \defcounter {refsection}{0}\relax 
@@ -129,31 +129,33 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {4.2.1}Achievements}{55}{subsection.4.2.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {5}Architektur und Implementierungsdetails}{56}{chapter.5}
+\contentsline {chapter}{\numberline {5}Architektur und prototypische Implementierungsdetails}{56}{chapter.5}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {5.1}Architektur\IeC {\"u}bersicht}{56}{section.5.1}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {5.2}Detaillierte Beschreibung der Model Komponenten}{58}{section.5.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.2.1}Milestone-Klasse}{58}{subsection.5.2.1}
+\contentsline {subsection}{\numberline {5.2.1}AppState-Klasse}{58}{subsection.5.2.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.2.2}Task-Klasse}{58}{subsection.5.2.2}
+\contentsline {subsection}{\numberline {5.2.2}Milestone-Klasse}{60}{subsection.5.2.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.2.3}Achievement-Klasse}{59}{subsection.5.2.3}
+\contentsline {subsection}{\numberline {5.2.3}Task-Klasse}{61}{subsection.5.2.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.2.4}Property-Klasse}{60}{subsection.5.2.4}
+\contentsline {subsection}{\numberline {5.2.4}Challenge-Klasse}{61}{subsection.5.2.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.2.5}AppContentLoader-Klasse}{61}{subsection.5.2.5}
+\contentsline {subsection}{\numberline {5.2.5}Achievement-Klasse}{61}{subsection.5.2.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.2.6}JSONAppContentFile-Klasse}{61}{subsection.5.2.6}
+\contentsline {subsection}{\numberline {5.2.6}Property-Klasse}{62}{subsection.5.2.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.2.7}InformationToolContentBuilder-Klasse}{61}{subsection.5.2.7}
+\contentsline {subsection}{\numberline {5.2.7}Content-Klasse}{63}{subsection.5.2.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.2.8}Content-Klasse}{62}{subsection.5.2.8}
+\contentsline {subsection}{\numberline {5.2.8}AppContentLoader-Klasse}{64}{subsection.5.2.8}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.2.9}AppState-Klasse}{63}{subsection.5.2.9}
+\contentsline {subsection}{\numberline {5.2.9}JSONAppContentFile-Klasse}{64}{subsection.5.2.9}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.2.10}Notification Funktionen}{65}{subsection.5.2.10}
+\contentsline {subsection}{\numberline {5.2.10}InformationToolContentBuilder-Klasse}{64}{subsection.5.2.10}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.2.11}Achievement-Notification Funktionen}{64}{subsection.5.2.11}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {5.3}Actions}{65}{section.5.3}
 \defcounter {refsection}{0}\relax 
@@ -221,11 +223,11 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {7.3.3}Motivation der Studierenden}{84}{subsection.7.3.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {7.4}Ausblick des Projekts}{84}{section.7.4}
+\contentsline {section}{\numberline {7.4}Ausblick des Projekts}{85}{section.7.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.4.1}Ausblick auf weitere Untersuchungen}{84}{subsection.7.4.1}
+\contentsline {subsection}{\numberline {7.4.1}Ausblick auf weitere Untersuchungen}{85}{subsection.7.4.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.4.2}Ausblick auf Softwarefunktionen}{84}{subsection.7.4.2}
+\contentsline {subsection}{\numberline {7.4.2}Ausblick auf Softwarefunktionen}{85}{subsection.7.4.2}
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\nonumberline Tabellenverzeichnis}{86}{chapter*.2}
 \defcounter {refsection}{0}\relax 
@@ -243,8 +245,6 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {A.1.2}Transkripte der Interviews mit den Professoren}{96}{subsection.A.1.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {A.1.3}Auswertung der Ergebnisse der Interviews mit den Professoren}{133}{subsection.A.1.3}
+\contentsline {subsection}{\numberline {A.1.3}Zusammenfassung der schriftlichen Befragung der Studierenden}{133}{subsection.A.1.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {A.1.4}Zusammenfassung der schriftlichen Befragung der Studierenden}{142}{subsection.A.1.4}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {A.1.5}Ergebnisse der Online-Umfrage f\IeC {\"u}r die Studierenden}{149}{subsection.A.1.5}
+\contentsline {subsection}{\numberline {A.1.4}Ergebnisse der Online-Umfrage f\IeC {\"u}r die Studierenden}{140}{subsection.A.1.4}

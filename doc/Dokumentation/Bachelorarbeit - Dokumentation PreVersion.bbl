@@ -17,6 +17,20 @@
 \endgroup
 
 \datalist[entry]{anyt/global//global/global}
+  \entry{AchievementsImplementation}{manual}{}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{Ach}
+    \field{sortinit}{A}
+    \field{sortinithash}{A}
+    \field{title}{How to Code Unlockable Achievements for Your Game (A Simple
+  Approach)}
+    \verb{url}
+    \verb https://gamedevelopment.tutsplus.com/tutorials/how-to-code-unlockable
+    \verb -achievements-for-your-game-a-simple-approach--gamedev-6012
+    \endverb
+    \field{year}{(Zugriff August 16, 2018)}
+  \endentry
+
   \entry{FHLuebeckBAAnleitung}{unpublished}{}
     \name{author}{1}{}{%
       {{hash=rnAHPD}{%
@@ -163,9 +177,23 @@
     \field{year}{(Zugriff Juni 3, 2018)}
   \endentry
 
+  \entry{DartCompleter}{manual}{}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{Dar}
+    \field{extraalpha}{1}
+    \field{sortinit}{D}
+    \field{sortinithash}{D}
+    \field{title}{Completer<T> class}
+    \verb{url}
+    \verb https://api.dartlang.org/stable/2.0.0/dart-async/Completer-class.html
+    \endverb
+    \field{year}{(Zugriff Juni 16, 2018)}
+  \endentry
+
   \entry{DartLangHomepage}{manual}{}
     \field{labeltitlesource}{title}
     \field{labelalpha}{Dar}
+    \field{extraalpha}{2}
     \field{sortinit}{D}
     \field{sortinithash}{D}
     \field{title}{Dart Homepage}
@@ -244,10 +272,23 @@
     \field{year}{Februar 27, 2018 (Zugriff Juni 3, 2018)}
   \endentry
 
-  \entry{FlutterPerformanceProfiler}{manual}{}
+  \entry{FlutterLocalNotificationPlugin}{manual}{}
     \field{labeltitlesource}{title}
     \field{labelalpha}{Flu}
     \field{extraalpha}{3}
+    \field{sortinit}{F}
+    \field{sortinithash}{F}
+    \field{title}{Flutter Local Notification Plugin}
+    \verb{url}
+    \verb https://pub.dartlang.org/packages/flutter_local_notifications
+    \endverb
+    \field{year}{(Zugriff Juni 16, 2018)}
+  \endentry
+
+  \entry{FlutterPerformanceProfiler}{manual}{}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{Flu}
+    \field{extraalpha}{4}
     \field{sortinit}{F}
     \field{sortinithash}{F}
     \field{title}{Flutter Performance Profiler}
@@ -260,7 +301,7 @@
   \entry{FlutterReduxLib}{manual}{}
     \field{labeltitlesource}{title}
     \field{labelalpha}{Flu}
-    \field{extraalpha}{4}
+    \field{extraalpha}{5}
     \field{sortinit}{F}
     \field{sortinithash}{F}
     \field{title}{Flutter Redux}
@@ -273,7 +314,7 @@
   \entry{Flu5}{manual}{}
     \field{labeltitlesource}{title}
     \field{labelalpha}{Flu}
-    \field{extraalpha}{5}
+    \field{extraalpha}{6}
     \field{sortinit}{F}
     \field{sortinithash}{F}
     \field{title}{Flutter System Architecture}
@@ -287,7 +328,7 @@
   \entry{Flu6}{manual}{}
     \field{labeltitlesource}{title}
     \field{labelalpha}{Flu}
-    \field{extraalpha}{6}
+    \field{extraalpha}{7}
     \field{sortinit}{F}
     \field{sortinithash}{F}
     \field{title}{Foundation Libary}
@@ -300,7 +341,7 @@
   \entry{FlutterGetStarted}{manual}{}
     \field{labeltitlesource}{title}
     \field{labelalpha}{Flu}
-    \field{extraalpha}{7}
+    \field{extraalpha}{8}
     \field{sortinit}{F}
     \field{sortinithash}{F}
     \field{title}{Get Startet}
@@ -313,7 +354,7 @@
   \entry{Flu2}{manual}{}
     \field{labeltitlesource}{title}
     \field{labelalpha}{Flu}
-    \field{extraalpha}{8}
+    \field{extraalpha}{9}
     \field{sortinit}{F}
     \field{sortinithash}{F}
     \field{title}{Introduction}
@@ -326,7 +367,7 @@
   \entry{Flu7}{manual}{}
     \field{labeltitlesource}{title}
     \field{labelalpha}{Flu}
-    \field{extraalpha}{9}
+    \field{extraalpha}{10}
     \field{sortinit}{F}
     \field{sortinithash}{F}
     \field{title}{Material Components Widgets}
@@ -339,7 +380,7 @@
   \entry{Flu8}{manual}{}
     \field{labeltitlesource}{title}
     \field{labelalpha}{Flu}
-    \field{extraalpha}{10}
+    \field{extraalpha}{11}
     \field{sortinit}{F}
     \field{sortinithash}{F}
     \field{title}{Technical Overview}
@@ -352,7 +393,7 @@
   \entry{Flu3}{manual}{}
     \field{labeltitlesource}{title}
     \field{labelalpha}{Flu}
-    \field{extraalpha}{11}
+    \field{extraalpha}{12}
     \field{sortinit}{F}
     \field{sortinithash}{F}
     \field{title}{Technology}
@@ -365,7 +406,7 @@
   \entry{Flu4}{manual}{}
     \field{labeltitlesource}{title}
     \field{labelalpha}{Flu}
-    \field{extraalpha}{12}
+    \field{extraalpha}{13}
     \field{sortinit}{F}
     \field{sortinithash}{F}
     \field{title}{Welcome to the Engine Wiki}
