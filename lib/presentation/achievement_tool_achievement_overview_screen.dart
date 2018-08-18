@@ -35,27 +35,32 @@ class AchievementOverviewScreen extends StatelessWidget {
         String title = getTitle(type);
         listTiles.add(
           new Container(
+            height: 100.0,
             padding: EdgeInsets.only(left: 15.0, right: 15.0, top: 5.0),
             child: new Card(
-              child: new ListTile(
-                title: new Text(
-                  title,
-                  softWrap: true,
-                ),
-                onTap: () {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) =>
-                              AchievementDetailsOverviewScreen(
-                                  achievements[type], title)));
-                },
-                trailing: new Text(
-                  achievements[type].length > 0
-                      ? "${getCompletedAchievementCount(
-                      achievements[type])}/${achievements[type].length}"
-                      : "",
-                ),
+              child: new Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
+                  new ListTile(
+                    leading: getImage(type),
+                    title: new Text(
+                      title,
+                      softWrap: true,
+                    ),
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) =>
+                                  AchievementDetailsOverviewScreen(
+                                      achievements[type], title)));
+                    },
+                    trailing: new Text(
+                      "${getCompletedAchievementCount(
+                          achievements[type])}/${achievements[type].length}",
+                    ),
+                  ),
+                ],
               ),
             ),
           ),
@@ -76,19 +81,53 @@ class AchievementOverviewScreen extends StatelessWidget {
     return completeAchievements;
   }
 
+  Image getImage(AchievementType type) {
+    String path = "";
+
+    switch (type) {
+      case AchievementType.prePhase:
+        path = 'assets/files/LowAchievementBadge.png';
+        break;
+      case AchievementType.beginningPhase:
+        path = 'assets/files/LowAchievementBadge.png';
+        break;
+      case AchievementType.processingPhase:
+        path = 'assets/files/MedAchievementBadge.png';
+        break;
+      case AchievementType.conclusionPhase:
+        path = 'assets/files/HighAchievementBadge.png';
+        break;
+      case AchievementType.special:
+        path = 'assets/files/AppAchievementBadge.png';
+        break;
+      default:
+        return new Image.asset(
+          'assets/files/AppAchievementBadge.png',
+          color: Colors.grey,
+          width: 40.0,
+        );
+        break;
+    }
+
+    return new Image.asset(
+      path,
+      width: 60.0,
+    );
+  }
+
   String getTitle(AchievementType type) {
     switch (type) {
       case AchievementType.prePhase:
         return "DUMMY";
         break;
       case AchievementType.beginningPhase:
-        return "Beginner Achievements";
+        return "Planner Achievements";
         break;
       case AchievementType.processingPhase:
-        return "Performer Achievements";
+        return "Goal-Hunter Achievements";
         break;
       case AchievementType.conclusionPhase:
-        return "Workaholic Achievements";
+        return "High-Level Achievements";
         break;
       case AchievementType.special:
         return "App Achievements";

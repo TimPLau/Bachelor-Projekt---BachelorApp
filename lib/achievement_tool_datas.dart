@@ -120,7 +120,7 @@ Map<String, Property> properties = {
   Achievement achievementChallenge4   = Achievement("C4", "Genug Platz für Snacks, Arbeit und Snacks!",  AchievementType.beginningPhase, [propChallenge4], false, null);
   Achievement achievementChallenge5   = Achievement("C5", "Gratulation! Die Probleme sind klar. Jetzt kommst du!",  AchievementType.beginningPhase, [propChallenge5], false, null);
   Achievement achievementChallenge6   = Achievement("C6", "Alles in Reih‘ und Glied",  AchievementType.beginningPhase, [propChallenge6], false, null);
-  Achievement achievementChallenge7   = Achievement("C7", "Pünktlich wie die Deutsche Bahn ;-)",  AchievementType.beginningPhase, [propChallenge7], false, null);
+  Achievement achievementChallenge7   = Achievement("C7", "Pünktlich wie die Deutsche Bahn",  AchievementType.beginningPhase, [propChallenge7], false, null);
   Achievement achievementChallenge8   = Achievement("C8", "Exzellente Vorbereitung!",  AchievementType.beginningPhase, [propChallenge8], false, null);
   Achievement achievementChallenge9   = Achievement("C9", "So viel Text! … und so wenig Inhalt?",  AchievementType.beginningPhase, [propChallenge9], false, null);
   Achievement achievementChallenge10  = Achievement("C10", "Alles da, wo es hingehört!", AchievementType.beginningPhase, [propChallenge10], false, null);
@@ -136,12 +136,12 @@ Map<String, Property> properties = {
   Achievement achievementChallenge20  = Achievement("C20", "Vier Augen sehen besser als zwei.", AchievementType.processingPhase, [propChallenge20], false, null);
   Achievement achievementChallenge21  = Achievement("C21", "Mein Fräund, die Rehctschreibunck", AchievementType.conclusionPhase, [propChallenge21], false, null);
   Achievement achievementChallenge22  = Achievement("C22", "Letzter Feinschliff", AchievementType.conclusionPhase, [propChallenge22], false, null);
-  Achievement achievementChallenge23  = Achievement("C23", "Unter Druck zum Diamanten ;-)", AchievementType.conclusionPhase, [propChallenge23], false, null);
+  Achievement achievementChallenge23  = Achievement("C23", "Unter Druck zum Diamanten", AchievementType.conclusionPhase, [propChallenge23], false, null);
   Achievement achievementChallenge24  = Achievement("C24", "FunFact: Einsteins Doktorarbeit umfasste 17 Seiten", AchievementType.conclusionPhase, [propChallenge24], false, null);
   Achievement achievementChallenge25  = Achievement("C25", "Fast geschafft!", AchievementType.conclusionPhase, [propChallenge25], false, null);
-  Achievement achievementChallenge26  = Achievement("C26", "Feier schön! Du hast es dir verdient ;-)", AchievementType.conclusionPhase, [propChallenge26], false, null);
+  Achievement achievementChallenge26  = Achievement("C26", "Feier schön! Du hast es dir verdient.", AchievementType.conclusionPhase, [propChallenge26], false, null);
 
-  Achievement achievementSpecial1 = Achievement("S1", "Planschmieder", AchievementType.special, [
+  Achievement achievementSpecial1 = Achievement("S1", "Planungs-Ass", AchievementType.special, [
     propChallenge1,
     propChallenge2,
     propChallenge3,
@@ -159,7 +159,7 @@ Map<String, Property> properties = {
     propChallenge15
   ], false, null);
 
-  Achievement achievementSpecial2 = Achievement("S2", "Arbeitstier", AchievementType.special, [
+  Achievement achievementSpecial2 = Achievement("S2", "Herausforderungs-Jäger", AchievementType.special, [
     propChallenge16,
     propChallenge17,
     propChallenge18,
@@ -167,7 +167,7 @@ Map<String, Property> properties = {
     propChallenge20,
   ], false, null);
 
-  Achievement achievementSpecial3 = Achievement("S3", "Arbeitstier", AchievementType.special, [
+  Achievement achievementSpecial3 = Achievement("S3", "Arbeitstier-Ausstrahlung", AchievementType.special, [
     propChallenge21,
     propChallenge22,
     propChallenge23,

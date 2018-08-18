@@ -8,20 +8,31 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f4dd6696-99ed-42f9-ad55-ec4d525f5ce1" name="Default" comment="Refactoring">
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/doc/Dokumentation/Bachelorarbeit - Dokumentation PreVersion.aux" afterPath="$PROJECT_DIR$/doc/Dokumentation/Bachelorarbeit - Dokumentation PreVersion.aux" />
-      <change beforePath="$PROJECT_DIR$/doc/Dokumentation/Bachelorarbeit - Dokumentation PreVersion.bcf" afterPath="$PROJECT_DIR$/doc/Dokumentation/Bachelorarbeit - Dokumentation PreVersion.bcf" />
       <change beforePath="$PROJECT_DIR$/doc/Dokumentation/Bachelorarbeit - Dokumentation PreVersion.lof" afterPath="$PROJECT_DIR$/doc/Dokumentation/Bachelorarbeit - Dokumentation PreVersion.lof" />
       <change beforePath="$PROJECT_DIR$/doc/Dokumentation/Bachelorarbeit - Dokumentation PreVersion.log" afterPath="$PROJECT_DIR$/doc/Dokumentation/Bachelorarbeit - Dokumentation PreVersion.log" />
       <change beforePath="$PROJECT_DIR$/doc/Dokumentation/Bachelorarbeit - Dokumentation PreVersion.lol" afterPath="$PROJECT_DIR$/doc/Dokumentation/Bachelorarbeit - Dokumentation PreVersion.lol" />
       <change beforePath="$PROJECT_DIR$/doc/Dokumentation/Bachelorarbeit - Dokumentation PreVersion.lot" afterPath="$PROJECT_DIR$/doc/Dokumentation/Bachelorarbeit - Dokumentation PreVersion.lot" />
-      <change beforePath="$PROJECT_DIR$/doc/Dokumentation/Bachelorarbeit - Dokumentation PreVersion.out" afterPath="$PROJECT_DIR$/doc/Dokumentation/Bachelorarbeit - Dokumentation PreVersion.out" />
       <change beforePath="$PROJECT_DIR$/doc/Dokumentation/Bachelorarbeit - Dokumentation PreVersion.pdf" afterPath="$PROJECT_DIR$/doc/Dokumentation/Bachelorarbeit - Dokumentation PreVersion.pdf" />
       <change beforePath="$PROJECT_DIR$/doc/Dokumentation/Bachelorarbeit - Dokumentation PreVersion.synctex.gz" afterPath="$PROJECT_DIR$/doc/Dokumentation/Bachelorarbeit - Dokumentation PreVersion.synctex.gz" />
       <change beforePath="$PROJECT_DIR$/doc/Dokumentation/Bachelorarbeit - Dokumentation PreVersion.tex" afterPath="$PROJECT_DIR$/doc/Dokumentation/Bachelorarbeit - Dokumentation PreVersion.tex" />
       <change beforePath="$PROJECT_DIR$/doc/Dokumentation/Bachelorarbeit - Dokumentation PreVersion.toc" afterPath="$PROJECT_DIR$/doc/Dokumentation/Bachelorarbeit - Dokumentation PreVersion.toc" />
-      <change beforePath="$PROJECT_DIR$/pubspec.lock" afterPath="$PROJECT_DIR$/pubspec.lock" />
+      <change beforePath="$PROJECT_DIR$/doc/Dokumentation/Bilder/Prototyp/AchievementsUebersicht.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/doc/Dokumentation/Bilder/Prototyp/AchievementsUebersichtAchievements.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/doc/Dokumentation/Bilder/Prototyp/Aufgaben.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/doc/Dokumentation/Bilder/Prototyp/AufgabenSortiert.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/doc/Dokumentation/Bilder/Prototyp/Dashboard.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/doc/Dokumentation/Bilder/Prototyp/Guide.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/doc/Dokumentation/Bilder/Prototyp/GuideThemenbereich.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/doc/Dokumentation/Bilder/Prototyp/GuideThemenbereichInformationen.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/doc/Dokumentation/Bilder/Prototyp/Menu.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/doc/Dokumentation/Bilder/Prototyp/Zeitmanagement.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/lib/achievement_tool_datas.dart" afterPath="$PROJECT_DIR$/lib/achievement_tool_datas.dart" />
+      <change beforePath="$PROJECT_DIR$/lib/presentation/achievement_tool_achievement_details_overview_screen.dart" afterPath="$PROJECT_DIR$/lib/presentation/achievement_tool_achievement_details_overview_screen.dart" />
+      <change beforePath="$PROJECT_DIR$/lib/presentation/achievement_tool_achievement_overview_screen.dart" afterPath="$PROJECT_DIR$/lib/presentation/achievement_tool_achievement_overview_screen.dart" />
+      <change beforePath="$PROJECT_DIR$/lib/presentation/achievement_tool_challenges_details_screen.dart" afterPath="$PROJECT_DIR$/lib/presentation/achievement_tool_challenges_details_screen.dart" />
+      <change beforePath="$PROJECT_DIR$/lib/presentation/bachelorguide_tool_guide_screen.dart" afterPath="$PROJECT_DIR$/lib/presentation/bachelorguide_tool_guide_screen.dart" />
     </list>
     <ignored path="$PROJECT_DIR$/.dart_tool/" />
     <ignored path="$PROJECT_DIR$/.idea/" />
@@ -39,31 +50,71 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="notifications.dart" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/models/notifications.dart">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="25" column="32" lean-forward="false" selection-start-line="25" selection-start-column="32" selection-end-line="25" selection-end-column="32" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="milestone_tool.dart" pinned="false" current-in-tab="true">
+      <file leaf-file-name="milestone_tool.dart" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/models/milestone_tool.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="56" column="20" lean-forward="true" selection-start-line="56" selection-start-column="20" selection-end-line="56" selection-end-column="20" />
+            <state relative-caret-position="816">
+              <caret line="52" column="0" lean-forward="false" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="bachelorguide_tool_content.g.dart" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/models/bachelorguide_tool_content.g.dart">
+      <file leaf-file-name="bachelor_application_dashboard_screen.dart" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/presentation/bachelor_application_dashboard_screen.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="13" column="35" lean-forward="false" selection-start-line="13" selection-start-column="35" selection-end-line="13" selection-end-column="35" />
+            <state relative-caret-position="378">
+              <caret line="60" column="30" lean-forward="false" selection-start-line="60" selection-start-column="30" selection-end-line="60" selection-end-column="30" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="bachelorguide_tool_guide_screen.dart" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/lib/presentation/bachelorguide_tool_guide_screen.dart">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="397">
+              <caret line="49" column="24" lean-forward="true" selection-start-line="49" selection-start-column="24" selection-end-line="49" selection-end-column="24" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="dashboard_initial_date_screen.dart" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/presentation/dashboard_initial_date_screen.dart">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-215">
+              <caret line="75" column="26" lean-forward="false" selection-start-line="75" selection-start-column="26" selection-end-line="75" selection-end-column="26" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="achievement_tool_achievement_details_overview_screen.dart" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/presentation/achievement_tool_achievement_details_overview_screen.dart">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="380">
+              <caret line="34" column="59" lean-forward="false" selection-start-line="34" selection-start-column="59" selection-end-line="34" selection-end-column="59" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="achievement_tool_achievement_overview_screen.dart" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/presentation/achievement_tool_achievement_overview_screen.dart">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="17" column="56" lean-forward="false" selection-start-line="17" selection-start-column="56" selection-end-line="17" selection-end-column="56" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="achievement_tool_challenges_details_screen.dart" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/presentation/achievement_tool_challenges_details_screen.dart">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="329">
+              <caret line="29" column="31" lean-forward="false" selection-start-line="29" selection-start-column="31" selection-end-line="29" selection-end-column="31" />
               <folding />
             </state>
           </provider>
@@ -72,18 +123,8 @@
       <file leaf-file-name="achievement_tool_datas.dart" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/achievement_tool_datas.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1564">
-              <caret line="209" column="43" lean-forward="false" selection-start-line="209" selection-start-column="43" selection-end-line="209" selection-end-column="43" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="appstate.dart" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/models/appstate.dart">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="13" column="51" lean-forward="false" selection-start-line="13" selection-start-column="29" selection-end-line="13" selection-end-column="51" />
+            <state relative-caret-position="383">
+              <caret line="200" column="20" lean-forward="false" selection-start-line="200" selection-start-column="20" selection-end-line="200" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -102,38 +143,8 @@
       <file leaf-file-name="achievement_tool.dart" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/models/achievement_tool.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
+            <state relative-caret-position="272">
               <caret line="18" column="23" lean-forward="false" selection-start-line="18" selection-start-column="23" selection-end-line="18" selection-end-column="23" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="achievement_tool_reducers.dart" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/reducers/achievement_tool_reducers.dart">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-187">
-              <caret line="23" column="44" lean-forward="false" selection-start-line="23" selection-start-column="44" selection-end-line="23" selection-end-column="44" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="milestone_tool_reducers.dart" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/reducers/milestone_tool_reducers.dart">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-395">
-              <caret line="43" column="0" lean-forward="false" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="challenge_tool_reducers.dart" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/reducers/challenge_tool_reducers.dart">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -226,13 +237,11 @@
         <option value="$PROJECT_DIR$/lib/containers/achievement_tool_challenges_details.dart" />
         <option value="$PROJECT_DIR$/lib/widgets/navigation_widget.dart" />
         <option value="$PROJECT_DIR$/lib/presentation/milestone_tool_milestone_overview_screen.dart" />
-        <option value="$PROJECT_DIR$/lib/presentation/achievement_tool_challenges_details_screen.dart" />
         <option value="$PROJECT_DIR$/lib/presentation/dashboard_initial_date_screen.dart" />
         <option value="$PROJECT_DIR$/lib/presentation/milestone_tool_add_edit_milestone_screen.dart" />
         <option value="$PROJECT_DIR$/lib/presentation/milestone_tool_milestone_detail_screen.dart" />
         <option value="$PROJECT_DIR$/lib/presentation/bachelor_application_dashboard_screen.dart" />
         <option value="$PROJECT_DIR$/lib/presentation/achievement_tool_challenges_overview_screen.dart" />
-        <option value="$PROJECT_DIR$/lib/presentation/achievement_tool_achievement_overview_screen.dart" />
         <option value="$PROJECT_DIR$/lib/main.dart" />
         <option value="$PROJECT_DIR$/lib/reducers/information_tool_reducer.dart" />
         <option value="$PROJECT_DIR$/lib/models/appstate.dart" />
@@ -241,13 +250,15 @@
         <option value="$PROJECT_DIR$/lib/containers/bachelorguide_tool_content_guide.dart" />
         <option value="$PROJECT_DIR$/lib/models/bachelorguide_tool_content.g.dart" />
         <option value="$PROJECT_DIR$/lib/models/bachelorguide_tool_content.dart" />
-        <option value="$PROJECT_DIR$/lib/presentation/bachelorguide_tool_guide_screen.dart" />
         <option value="$PROJECT_DIR$/lib/reducers/achievement_tool_reducers.dart" />
-        <option value="$PROJECT_DIR$/lib/achievement_tool_datas.dart" />
-        <option value="$PROJECT_DIR$/lib/presentation/achievement_tool_achievement_details_overview_screen.dart" />
         <option value="$PROJECT_DIR$/lib/presentation/achievement_overlay_screen.dart" />
         <option value="$PROJECT_DIR$/lib/models/notifications.dart" />
         <option value="$PROJECT_DIR$/lib/containers/achievement_tool_achievement_overview.dart" />
+        <option value="$PROJECT_DIR$/lib/achievement_tool_datas.dart" />
+        <option value="$PROJECT_DIR$/lib/presentation/achievement_tool_achievement_details_overview_screen.dart" />
+        <option value="$PROJECT_DIR$/lib/presentation/achievement_tool_achievement_overview_screen.dart" />
+        <option value="$PROJECT_DIR$/lib/presentation/achievement_tool_challenges_details_screen.dart" />
+        <option value="$PROJECT_DIR$/lib/presentation/bachelorguide_tool_guide_screen.dart" />
       </list>
     </option>
   </component>
@@ -276,7 +287,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -293,13 +303,7 @@
               <item name="Abgabe" type="b2602c69:ProjectViewProjectNode" />
               <item name="Abgabe" type="462c0819:PsiDirectoryNode" />
               <item name="lib" type="462c0819:PsiDirectoryNode" />
-              <item name="models" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Abgabe" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Abgabe" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
-              <item name="reducers" type="462c0819:PsiDirectoryNode" />
+              <item name="presentation" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -307,6 +311,7 @@
         <option name="show-excluded-files" value="false" />
       </pane>
       <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="AndroidView" />
       <pane id="PackagesPane" />
     </panes>
@@ -640,38 +645,37 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1296" height="1000" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Android Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18070363" sideWeight="0.5056361" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3008658" sideWeight="0.35394457" order="12" side_tool="true" content_ui="tabs" />
-      <window_info id="Dart Analysis" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3272933" sideWeight="0.48027718" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Flutter Outline" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32889125" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Logcat" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32616082" sideWeight="0.48560768" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24961598" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Device File Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6759062" sideWeight="0.50549453" order="4" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32616082" sideWeight="0.61488676" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="simpleUML" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3107676" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32603687" sideWeight="0.5671642" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18070363" sideWeight="0.5056361" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29591838" sideWeight="0.64605546" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3008658" sideWeight="0.35394457" order="12" side_tool="true" content_ui="tabs" />
+      <window_info id="Dart Analysis" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3272933" sideWeight="0.48027718" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29493088" sideWeight="0.64605546" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32616082" sideWeight="0.48381877" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.45866364" sideWeight="0.45415777" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Flutter Outline" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32889125" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Logcat" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32616082" sideWeight="0.48560768" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32949308" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26618123" sideWeight="0.49436393" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24961598" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Device File Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6759062" sideWeight="0.50549453" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18070363" sideWeight="0.5056361" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Flutter Inspector" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.58324385" sideWeight="0.4945055" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Flutter Inspector" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5825243" sideWeight="0.4945055" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32603687" sideWeight="0.5671642" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" x="92" y="92" width="1736" height="856" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32792208" sideWeight="0.48294243" order="1" side_tool="false" content_ui="tabs" />
@@ -795,24 +799,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/presentation/achievement_tool_challenges_details_screen.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="15" column="45" lean-forward="false" selection-start-line="15" selection-start-column="45" selection-end-line="15" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/presentation/bachelor_application_dashboard_timechart.dart">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="697">
           <caret line="43" column="42" lean-forward="false" selection-start-line="43" selection-start-column="42" selection-end-line="43" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/presentation/dashboard_initial_date_screen.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1241">
-          <caret line="75" column="26" lean-forward="false" selection-start-line="75" selection-start-column="26" selection-end-line="75" selection-end-column="26" />
         </state>
       </provider>
     </entry>
@@ -833,20 +823,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/presentation/bachelor_application_dashboard_screen.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="47" column="27" lean-forward="false" selection-start-line="47" selection-start-column="27" selection-end-line="47" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/presentation/achievement_tool_achievement_overview_screen.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1680">
-          <caret line="83" column="42" lean-forward="false" selection-start-line="83" selection-start-column="42" selection-end-line="83" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/middleware/notificationMiddleware.dart">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="546">
@@ -858,7 +834,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -866,7 +841,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="294">
           <caret line="38" column="21" lean-forward="true" selection-start-line="38" selection-start-column="21" selection-end-line="38" selection-end-column="21" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -889,7 +863,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="252">
           <caret line="12" column="25" lean-forward="false" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -897,7 +870,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1134">
           <caret line="58" column="38" lean-forward="false" selection-start-line="58" selection-start-column="38" selection-end-line="58" selection-end-column="38" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -908,18 +880,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/presentation/bachelorguide_tool_guide_screen.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="903">
-          <caret line="45" column="39" lean-forward="false" selection-start-line="45" selection-start-column="39" selection-end-line="45" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/reducers/app_reducer.dart">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="189">
           <caret line="14" column="37" lean-forward="false" selection-start-line="14" selection-start-column="37" selection-end-line="14" selection-end-column="37" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -934,7 +898,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="126">
           <caret line="6" column="77" lean-forward="true" selection-start-line="6" selection-start-column="77" selection-end-line="6" selection-end-column="77" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -954,14 +917,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/presentation/achievement_tool_achievement_details_overview_screen.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="27" column="26" lean-forward="false" selection-start-line="27" selection-start-column="26" selection-end-line="27" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/presentation/achievement_overlay_screen.dart">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="969">
@@ -974,23 +929,19 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="467">
           <caret line="62" column="0" lean-forward="false" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#39#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/reducers/achievement_tool_reducers.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-187">
+        <state relative-caret-position="323">
           <caret line="23" column="44" lean-forward="false" selection-start-line="23" selection-start-column="44" selection-end-line="23" selection-end-column="44" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/reducers/milestone_tool_reducers.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-395">
+        <state relative-caret-position="663">
           <caret line="43" column="0" lean-forward="false" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
           <folding />
         </state>
@@ -1006,7 +957,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/models/notifications.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
+        <state relative-caret-position="323">
           <caret line="25" column="32" lean-forward="false" selection-start-line="25" selection-start-column="32" selection-end-line="25" selection-end-column="32" />
           <folding />
         </state>
@@ -1014,16 +965,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/models/bachelorguide_tool_content.g.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
+        <state relative-caret-position="221">
           <caret line="13" column="35" lean-forward="false" selection-start-line="13" selection-start-column="35" selection-end-line="13" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/achievement_tool_datas.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1564">
-          <caret line="209" column="43" lean-forward="false" selection-start-line="209" selection-start-column="43" selection-end-line="209" selection-end-column="43" />
           <folding />
         </state>
       </provider>
@@ -1046,7 +989,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/models/achievement_tool.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
+        <state relative-caret-position="272">
           <caret line="18" column="23" lean-forward="false" selection-start-line="18" selection-start-column="23" selection-end-line="18" selection-end-column="23" />
           <folding />
         </state>
@@ -1054,8 +997,64 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/models/milestone_tool.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="56" column="20" lean-forward="true" selection-start-line="56" selection-start-column="20" selection-end-line="56" selection-end-column="20" />
+        <state relative-caret-position="816">
+          <caret line="52" column="0" lean-forward="false" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/presentation/bachelor_application_dashboard_screen.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="60" column="30" lean-forward="false" selection-start-line="60" selection-start-column="30" selection-end-line="60" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/presentation/dashboard_initial_date_screen.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-215">
+          <caret line="75" column="26" lean-forward="false" selection-start-line="75" selection-start-column="26" selection-end-line="75" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/achievement_tool_datas.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="383">
+          <caret line="200" column="20" lean-forward="false" selection-start-line="200" selection-start-column="20" selection-end-line="200" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/presentation/achievement_tool_achievement_details_overview_screen.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="34" column="59" lean-forward="false" selection-start-line="34" selection-start-column="59" selection-end-line="34" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/presentation/achievement_tool_achievement_overview_screen.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="17" column="56" lean-forward="false" selection-start-line="17" selection-start-column="56" selection-end-line="17" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/presentation/achievement_tool_challenges_details_screen.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="329">
+          <caret line="29" column="31" lean-forward="false" selection-start-line="29" selection-start-column="31" selection-end-line="29" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/presentation/bachelorguide_tool_guide_screen.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="397">
+          <caret line="49" column="24" lean-forward="true" selection-start-line="49" selection-start-column="24" selection-end-line="49" selection-end-column="24" />
           <folding />
         </state>
       </provider>

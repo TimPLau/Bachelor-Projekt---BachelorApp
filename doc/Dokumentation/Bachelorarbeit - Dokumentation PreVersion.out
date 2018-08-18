@@ -1,123 +1,114 @@
 \BOOKMARK [0][-]{chapter.1}{Einleitung}{}% 1
 \BOOKMARK [1][-]{section.1.1}{Motivation}{chapter.1}% 2
-\BOOKMARK [1][-]{section.1.2}{L\366sungsansatz}{chapter.1}% 3
-\BOOKMARK [1][-]{section.1.3}{Zielsetzung}{chapter.1}% 4
-\BOOKMARK [1][-]{section.1.4}{Aufgabenbeschreibung}{chapter.1}% 5
-\BOOKMARK [1][-]{section.1.5}{Ausblick auf die Bachelorarbeit}{chapter.1}% 6
-\BOOKMARK [2][-]{subsection.1.5.1}{Beschreibung der Kernkomponenten}{section.1.5}% 7
-\BOOKMARK [2][-]{subsection.1.5.2}{Untersuchung des Problembereiches}{section.1.5}% 8
-\BOOKMARK [2][-]{subsection.1.5.3}{Konzeptvorstellung der Applikation}{section.1.5}% 9
-\BOOKMARK [2][-]{subsection.1.5.4}{Architektur der Software}{section.1.5}% 10
-\BOOKMARK [2][-]{subsection.1.5.5}{Implementierung}{section.1.5}% 11
-\BOOKMARK [2][-]{subsection.1.5.6}{Validierung und Verifikation}{section.1.5}% 12
-\BOOKMARK [2][-]{subsection.1.5.7}{Pr\344sentation der Ergebnisse}{section.1.5}% 13
-\BOOKMARK [0][-]{chapter.2}{Beschreibung der Kernkomponenten}{}% 14
-\BOOKMARK [1][-]{section.2.1}{Gamification}{chapter.2}% 15
-\BOOKMARK [2][-]{subsection.2.1.1}{Die Bedeutung von Gamification}{section.2.1}% 16
-\BOOKMARK [2][-]{subsection.2.1.2}{Bekannte Spiel-Design-Elemente}{section.2.1}% 17
-\BOOKMARK [2][-]{subsection.2.1.3}{Nutzergruppen nach Bartle}{section.2.1}% 18
-\BOOKMARK [1][-]{section.2.2}{Vorstellung des Frameworks Flutter}{chapter.2}% 19
-\BOOKMARK [2][-]{subsection.2.2.1}{Flutter Kerntechnologien}{section.2.2}% 20
-\BOOKMARK [2][-]{subsection.2.2.2}{Plattform\374bergreifende Entwicklung von mobilen Applikationen}{section.2.2}% 21
-\BOOKMARK [2][-]{subsection.2.2.3}{Hot-Reload Funktion}{section.2.2}% 22
-\BOOKMARK [2][-]{subsection.2.2.4}{Flutter Widgets}{section.2.2}% 23
-\BOOKMARK [2][-]{subsection.2.2.5}{Flutter UI Rendering}{section.2.2}% 24
-\BOOKMARK [1][-]{section.2.3}{Was ist Redux?}{chapter.2}% 25
-\BOOKMARK [2][-]{subsection.2.3.1}{Actions}{section.2.3}% 26
-\BOOKMARK [2][-]{subsection.2.3.2}{Reducers}{section.2.3}% 27
-\BOOKMARK [2][-]{subsection.2.3.3}{Store}{section.2.3}% 28
-\BOOKMARK [2][-]{subsection.2.3.4}{Flutter Redux Libary}{section.2.3}% 29
-\BOOKMARK [0][-]{chapter.3}{Untersuchung des Problembereiches}{}% 30
-\BOOKMARK [1][-]{section.3.1}{Hypothese}{chapter.3}% 31
-\BOOKMARK [1][-]{section.3.2}{Identifikation der Interessengruppen}{chapter.3}% 32
-\BOOKMARK [1][-]{section.3.3}{Wahl der Analysestrategie}{chapter.3}% 33
-\BOOKMARK [2][-]{subsection.3.3.1}{Einbezug der Professoren}{section.3.3}% 34
-\BOOKMARK [2][-]{subsection.3.3.2}{Einbezug der Studierenden}{section.3.3}% 35
-\BOOKMARK [1][-]{section.3.4}{Ergebnisse der Professoren}{chapter.3}% 36
-\BOOKMARK [2][-]{subsection.3.4.1}{Art der Arbeit}{section.3.4}% 37
-\BOOKMARK [2][-]{subsection.3.4.2}{Erwartungen an den Bacheloranden}{section.3.4}% 38
-\BOOKMARK [2][-]{subsection.3.4.3}{H\344ufig auftretende Probleme}{section.3.4}% 39
-\BOOKMARK [2][-]{subsection.3.4.4}{Die Applikation \205 W\374nsche und Anregungen}{section.3.4}% 40
-\BOOKMARK [2][-]{subsection.3.4.5}{Die Applikation - Chancen und Risiken}{section.3.4}% 41
-\BOOKMARK [1][-]{section.3.5}{Ergebnisse der Studierenden}{chapter.3}% 42
-\BOOKMARK [2][-]{subsection.3.5.1}{Erwartungen an den Betreuer}{section.3.5}% 43
-\BOOKMARK [2][-]{subsection.3.5.2}{Die gr\366\337ten Probleme der Studierenden}{section.3.5}% 44
-\BOOKMARK [2][-]{subsection.3.5.3}{Wunsch nach besserer Vorbereitung auf die Bachelorarbeit}{section.3.5}% 45
-\BOOKMARK [2][-]{subsection.3.5.4}{Einbezug der Studierenden in die Gestaltung der Applikation}{section.3.5}% 46
-\BOOKMARK [1][-]{section.3.6}{Untersuchung der Ergebnisse}{chapter.3}% 47
-\BOOKMARK [2][-]{subsection.3.6.1}{Identifikation des Problembereichs}{section.3.6}% 48
-\BOOKMARK [2][-]{subsection.3.6.2}{Auswahl der Motivationsstrategie}{section.3.6}% 49
-\BOOKMARK [2][-]{subsection.3.6.3}{\334bersicht der abgeleiteten Produktfunktionen und Anforderungen}{section.3.6}% 50
-\BOOKMARK [2][-]{subsection.3.6.4}{\334bersicht der Risiken}{section.3.6}% 51
-\BOOKMARK [2][-]{subsection.3.6.5}{\334bersicht der Chancen}{section.3.6}% 52
-\BOOKMARK [0][-]{chapter.4}{Konzeptvorstellung der Applikation}{}% 53
-\BOOKMARK [1][-]{section.4.1}{Beschreibung der Software}{chapter.4}% 54
-\BOOKMARK [2][-]{subsection.4.1.1}{Meilensteinverwaltung}{section.4.1}% 55
-\BOOKMARK [2][-]{subsection.4.1.2}{Bachelorarbeit Guide}{section.4.1}% 56
-\BOOKMARK [2][-]{subsection.4.1.3}{Herausforderungen}{section.4.1}% 57
-\BOOKMARK [2][-]{subsection.4.1.4}{Achievements}{section.4.1}% 58
-\BOOKMARK [2][-]{subsection.4.1.5}{Sonstige Softwareinhalte}{section.4.1}% 59
-\BOOKMARK [2][-]{subsection.4.1.6}{Dashboard}{section.4.1}% 60
-\BOOKMARK [2][-]{subsection.4.1.7}{\334bersicht der Produktfunktionen}{section.4.1}% 61
-\BOOKMARK [2][-]{subsection.4.1.8}{Umgang mit Risiken}{section.4.1}% 62
-\BOOKMARK [1][-]{section.4.2}{Beschreibung der Gamification-Elemente}{chapter.4}% 63
-\BOOKMARK [2][-]{subsection.4.2.1}{Achievements}{section.4.2}% 64
-\BOOKMARK [0][-]{chapter.5}{Architektur und prototypische Implementierungsdetails}{}% 65
-\BOOKMARK [1][-]{section.5.1}{Architektur\374bersicht}{chapter.5}% 66
-\BOOKMARK [1][-]{section.5.2}{Detaillierte Beschreibung der Model Komponenten}{chapter.5}% 67
-\BOOKMARK [2][-]{subsection.5.2.1}{AppState-Klasse}{section.5.2}% 68
-\BOOKMARK [2][-]{subsection.5.2.2}{Milestone-Klasse}{section.5.2}% 69
-\BOOKMARK [2][-]{subsection.5.2.3}{Task-Klasse}{section.5.2}% 70
-\BOOKMARK [2][-]{subsection.5.2.4}{Challenge-Klasse}{section.5.2}% 71
-\BOOKMARK [2][-]{subsection.5.2.5}{Achievement-Klasse}{section.5.2}% 72
-\BOOKMARK [2][-]{subsection.5.2.6}{Property-Klasse}{section.5.2}% 73
-\BOOKMARK [2][-]{subsection.5.2.7}{Content-Klasse}{section.5.2}% 74
-\BOOKMARK [2][-]{subsection.5.2.8}{AppContentLoader-Klasse}{section.5.2}% 75
-\BOOKMARK [2][-]{subsection.5.2.9}{JSONAppContentFile-Klasse}{section.5.2}% 76
-\BOOKMARK [2][-]{subsection.5.2.10}{InformationToolContentBuilder-Klasse}{section.5.2}% 77
-\BOOKMARK [2][-]{subsection.5.2.11}{Achievement-Notification Funktionen}{section.5.2}% 78
-\BOOKMARK [1][-]{section.5.3}{Actions}{chapter.5}% 79
-\BOOKMARK [2][-]{subsection.5.3.1}{Beispielhafte Demonstration einer Meilensteinbearbeitung}{section.5.3}% 80
-\BOOKMARK [1][-]{section.5.4}{Reducer}{chapter.5}% 81
-\BOOKMARK [2][-]{subsection.5.4.1}{App-Reducer}{section.5.4}% 82
-\BOOKMARK [2][-]{subsection.5.4.2}{Beispielhafte Demonstration eines Meilenstein-Reducers}{section.5.4}% 83
-\BOOKMARK [1][-]{section.5.5}{Container}{chapter.5}% 84
-\BOOKMARK [2][-]{subsection.5.5.1}{Beispielhafte Demonstration einer Meilensteinbearbeitung}{section.5.5}% 85
-\BOOKMARK [1][-]{section.5.6}{Presentation}{chapter.5}% 86
-\BOOKMARK [2][-]{subsection.5.6.1}{Beispielhafte Demonstration einer Meilensteinbearbeitung}{section.5.6}% 87
-\BOOKMARK [1][-]{section.5.7}{Middleware}{chapter.5}% 88
-\BOOKMARK [2][-]{subsection.5.7.1}{Beispielhafte Demonstration der Notification Middleware}{section.5.7}% 89
-\BOOKMARK [0][-]{chapter.6}{Evaluation}{}% 90
-\BOOKMARK [1][-]{section.6.1}{Ergebnisse der Softwaretests}{chapter.6}% 91
-\BOOKMARK [1][-]{section.6.2}{Ergebnisse der Nutzerevaluation}{chapter.6}% 92
-\BOOKMARK [2][-]{subsection.6.2.1}{Zusammenfassung der Testdurchf\374hrung mit den Studierenden}{section.6.2}% 93
-\BOOKMARK [2][-]{subsection.6.2.2}{Zusammenfassung der Testdurchf\374hrung mit den Professoren}{section.6.2}% 94
-\BOOKMARK [2][-]{subsection.6.2.3}{Ergebnis der Nutzerevaluation}{section.6.2}% 95
-\BOOKMARK [1][-]{section.6.3}{Bewertung des Frameworks Flutter zur Entwicklung von mobilen Appliaktionen}{chapter.6}% 96
-\BOOKMARK [2][-]{subsection.6.3.1}{Einf\374hrung und Dokumentation}{section.6.3}% 97
-\BOOKMARK [2][-]{subsection.6.3.2}{Verwendete Programmiersprache}{section.6.3}% 98
-\BOOKMARK [2][-]{subsection.6.3.3}{Handhabung und Anwendung}{section.6.3}% 99
-\BOOKMARK [2][-]{subsection.6.3.4}{UI-Performance}{section.6.3}% 100
-\BOOKMARK [2][-]{subsection.6.3.5}{Support und Community}{section.6.3}% 101
-\BOOKMARK [2][-]{subsection.6.3.6}{Framework-spezifische Features}{section.6.3}% 102
-\BOOKMARK [2][-]{subsection.6.3.7}{Zusammenfassung der Bewertung}{section.6.3}% 103
-\BOOKMARK [0][-]{chapter.7}{Pr\344sentation der Ergebnisse}{}% 104
-\BOOKMARK [1][-]{section.7.1}{Wichtigsten Erkenntnisse der Arbeit}{chapter.7}% 105
-\BOOKMARK [1][-]{section.7.2}{Schwierigkeiten bei der Bearbeitung}{chapter.7}% 106
-\BOOKMARK [1][-]{section.7.3}{Erf\374llung der Aufgabenstellung}{chapter.7}% 107
-\BOOKMARK [2][-]{subsection.7.3.1}{Unterst\374tzung bei Bearbeitung der Bachelorarbeit}{section.7.3}% 108
-\BOOKMARK [2][-]{subsection.7.3.2}{Unterst\374tzung bei Zeitplanung}{section.7.3}% 109
-\BOOKMARK [2][-]{subsection.7.3.3}{Motivation der Studierenden}{section.7.3}% 110
-\BOOKMARK [1][-]{section.7.4}{Ausblick des Projekts}{chapter.7}% 111
-\BOOKMARK [2][-]{subsection.7.4.1}{Ausblick auf weitere Untersuchungen}{section.7.4}% 112
-\BOOKMARK [2][-]{subsection.7.4.2}{Ausblick auf Softwarefunktionen}{section.7.4}% 113
-\BOOKMARK [0][-]{chapter*.2}{Tabellenverzeichnis}{}% 114
-\BOOKMARK [0][-]{chapter*.3}{Abbildungsverzeichnis}{}% 115
-\BOOKMARK [0][-]{chapter*.4}{Listings}{}% 116
-\BOOKMARK [0][-]{chapter*.5}{Literatur}{}% 117
-\BOOKMARK [0][-]{appendix.A}{Anhang}{}% 118
-\BOOKMARK [1][-]{section.A.1}{Befragung der Beteiligten}{appendix.A}% 119
-\BOOKMARK [2][-]{subsection.A.1.1}{Aktivit\344tsdiagramm: Strategie und Vorgehensweise der Datenerhebung}{section.A.1}% 120
-\BOOKMARK [2][-]{subsection.A.1.2}{Transkripte der Interviews mit den Professoren}{section.A.1}% 121
-\BOOKMARK [2][-]{subsection.A.1.3}{Zusammenfassung der schriftlichen Befragung der Studierenden}{section.A.1}% 122
-\BOOKMARK [2][-]{subsection.A.1.4}{Ergebnisse der Online-Umfrage f\374r die Studierenden}{section.A.1}% 123
+\BOOKMARK [1][-]{section.1.2}{L\366sungsansatz und Zielstellung}{chapter.1}% 3
+\BOOKMARK [1][-]{section.1.3}{Aufgabenbeschreibung}{chapter.1}% 4
+\BOOKMARK [1][-]{section.1.4}{Ausblick auf die Bachelorarbeit}{chapter.1}% 5
+\BOOKMARK [0][-]{chapter.2}{Beschreibung der Kernkomponenten}{}% 6
+\BOOKMARK [1][-]{section.2.1}{Gamification}{chapter.2}% 7
+\BOOKMARK [2][-]{subsection.2.1.1}{Die Bedeutung von Gamification}{section.2.1}% 8
+\BOOKMARK [2][-]{subsection.2.1.2}{Bekannte Spiel-Design-Elemente}{section.2.1}% 9
+\BOOKMARK [2][-]{subsection.2.1.3}{Nutzergruppen nach Bartle}{section.2.1}% 10
+\BOOKMARK [1][-]{section.2.2}{Vorstellung des Frameworks Flutter}{chapter.2}% 11
+\BOOKMARK [2][-]{subsection.2.2.1}{Flutter Kerntechnologien}{section.2.2}% 12
+\BOOKMARK [2][-]{subsection.2.2.2}{Plattform\374bergreifende Entwicklung von mobilen Applikationen}{section.2.2}% 13
+\BOOKMARK [2][-]{subsection.2.2.3}{Hot-Reload Funktion}{section.2.2}% 14
+\BOOKMARK [2][-]{subsection.2.2.4}{Flutter Widgets}{section.2.2}% 15
+\BOOKMARK [2][-]{subsection.2.2.5}{Flutter UI Rendering}{section.2.2}% 16
+\BOOKMARK [1][-]{section.2.3}{Was ist Redux?}{chapter.2}% 17
+\BOOKMARK [2][-]{subsection.2.3.1}{Actions}{section.2.3}% 18
+\BOOKMARK [2][-]{subsection.2.3.2}{Reducers}{section.2.3}% 19
+\BOOKMARK [2][-]{subsection.2.3.3}{Store}{section.2.3}% 20
+\BOOKMARK [2][-]{subsection.2.3.4}{Flutter Redux Libary}{section.2.3}% 21
+\BOOKMARK [0][-]{chapter.3}{Untersuchung des Problembereiches}{}% 22
+\BOOKMARK [1][-]{section.3.1}{Hypothese}{chapter.3}% 23
+\BOOKMARK [1][-]{section.3.2}{Identifikation der Interessengruppen}{chapter.3}% 24
+\BOOKMARK [1][-]{section.3.3}{Wahl der Analysestrategie}{chapter.3}% 25
+\BOOKMARK [2][-]{subsection.3.3.1}{Einbezug der Professoren}{section.3.3}% 26
+\BOOKMARK [2][-]{subsection.3.3.2}{Einbezug der Studierenden}{section.3.3}% 27
+\BOOKMARK [1][-]{section.3.4}{Ergebnisse der Professoren}{chapter.3}% 28
+\BOOKMARK [2][-]{subsection.3.4.1}{Art der Arbeit}{section.3.4}% 29
+\BOOKMARK [2][-]{subsection.3.4.2}{Erwartungen an den Bacheloranden}{section.3.4}% 30
+\BOOKMARK [2][-]{subsection.3.4.3}{H\344ufig auftretende Probleme}{section.3.4}% 31
+\BOOKMARK [2][-]{subsection.3.4.4}{Die Applikation \205 W\374nsche und Anregungen}{section.3.4}% 32
+\BOOKMARK [2][-]{subsection.3.4.5}{Die Applikation - Chancen und Risiken}{section.3.4}% 33
+\BOOKMARK [1][-]{section.3.5}{Ergebnisse der Studierenden}{chapter.3}% 34
+\BOOKMARK [2][-]{subsection.3.5.1}{Erwartungen an den Betreuer}{section.3.5}% 35
+\BOOKMARK [2][-]{subsection.3.5.2}{Die gr\366\337ten Probleme der Studierenden}{section.3.5}% 36
+\BOOKMARK [2][-]{subsection.3.5.3}{Wunsch nach besserer Vorbereitung auf die Bachelorarbeit}{section.3.5}% 37
+\BOOKMARK [2][-]{subsection.3.5.4}{Einbezug der Studierenden in die Gestaltung der Applikation}{section.3.5}% 38
+\BOOKMARK [1][-]{section.3.6}{Untersuchung der Ergebnisse}{chapter.3}% 39
+\BOOKMARK [2][-]{subsection.3.6.1}{Identifikation des Problembereichs}{section.3.6}% 40
+\BOOKMARK [2][-]{subsection.3.6.2}{Auswahl der Motivationsstrategie}{section.3.6}% 41
+\BOOKMARK [2][-]{subsection.3.6.3}{\334bersicht der abgeleiteten Produktfunktionen und Anforderungen}{section.3.6}% 42
+\BOOKMARK [2][-]{subsection.3.6.4}{\334bersicht der Risiken}{section.3.6}% 43
+\BOOKMARK [2][-]{subsection.3.6.5}{\334bersicht der Chancen}{section.3.6}% 44
+\BOOKMARK [0][-]{chapter.4}{Konzeptvorstellung der Applikation}{}% 45
+\BOOKMARK [1][-]{section.4.1}{Beschreibung der Software}{chapter.4}% 46
+\BOOKMARK [2][-]{subsection.4.1.1}{Meilensteinverwaltung}{section.4.1}% 47
+\BOOKMARK [2][-]{subsection.4.1.2}{Bachelorarbeit Guide}{section.4.1}% 48
+\BOOKMARK [2][-]{subsection.4.1.3}{Herausforderungen}{section.4.1}% 49
+\BOOKMARK [2][-]{subsection.4.1.4}{Achievements}{section.4.1}% 50
+\BOOKMARK [2][-]{subsection.4.1.5}{Sonstige Softwareinhalte}{section.4.1}% 51
+\BOOKMARK [2][-]{subsection.4.1.6}{Dashboard}{section.4.1}% 52
+\BOOKMARK [2][-]{subsection.4.1.7}{\334bersicht der Produktfunktionen}{section.4.1}% 53
+\BOOKMARK [2][-]{subsection.4.1.8}{Umgang mit Risiken}{section.4.1}% 54
+\BOOKMARK [1][-]{section.4.2}{Beschreibung der Gamification-Elemente}{chapter.4}% 55
+\BOOKMARK [2][-]{subsection.4.2.1}{Achievements}{section.4.2}% 56
+\BOOKMARK [0][-]{chapter.5}{Architektur und prototypische Implementierungsdetails}{}% 57
+\BOOKMARK [1][-]{section.5.1}{Architektur\374bersicht}{chapter.5}% 58
+\BOOKMARK [1][-]{section.5.2}{Detaillierte Beschreibung der Model Komponenten}{chapter.5}% 59
+\BOOKMARK [2][-]{subsection.5.2.1}{AppState-Klasse}{section.5.2}% 60
+\BOOKMARK [2][-]{subsection.5.2.2}{Milestone-Klasse}{section.5.2}% 61
+\BOOKMARK [2][-]{subsection.5.2.3}{Task-Klasse}{section.5.2}% 62
+\BOOKMARK [2][-]{subsection.5.2.4}{Challenge-Klasse}{section.5.2}% 63
+\BOOKMARK [2][-]{subsection.5.2.5}{Achievement-Klasse}{section.5.2}% 64
+\BOOKMARK [2][-]{subsection.5.2.6}{Property-Klasse}{section.5.2}% 65
+\BOOKMARK [2][-]{subsection.5.2.7}{Content-Klasse}{section.5.2}% 66
+\BOOKMARK [2][-]{subsection.5.2.8}{AppContentLoader-Klasse}{section.5.2}% 67
+\BOOKMARK [2][-]{subsection.5.2.9}{JSONAppContentFile-Klasse}{section.5.2}% 68
+\BOOKMARK [2][-]{subsection.5.2.10}{InformationToolContentBuilder-Klasse}{section.5.2}% 69
+\BOOKMARK [2][-]{subsection.5.2.11}{Achievement-Notification Funktionen}{section.5.2}% 70
+\BOOKMARK [1][-]{section.5.3}{Actions}{chapter.5}% 71
+\BOOKMARK [2][-]{subsection.5.3.1}{Beispielhafte Demonstration einer Meilensteinbearbeitung}{section.5.3}% 72
+\BOOKMARK [1][-]{section.5.4}{Reducer}{chapter.5}% 73
+\BOOKMARK [2][-]{subsection.5.4.1}{App-Reducer}{section.5.4}% 74
+\BOOKMARK [2][-]{subsection.5.4.2}{Beispielhafte Demonstration eines Meilenstein-Reducers}{section.5.4}% 75
+\BOOKMARK [1][-]{section.5.5}{Container}{chapter.5}% 76
+\BOOKMARK [2][-]{subsection.5.5.1}{Beispielhafte Demonstration einer Meilensteinbearbeitung}{section.5.5}% 77
+\BOOKMARK [1][-]{section.5.6}{Presentation}{chapter.5}% 78
+\BOOKMARK [2][-]{subsection.5.6.1}{Beispielhafte Demonstration einer Meilensteinbearbeitung}{section.5.6}% 79
+\BOOKMARK [1][-]{section.5.7}{Middleware}{chapter.5}% 80
+\BOOKMARK [2][-]{subsection.5.7.1}{Beispielhafte Demonstration der Notification Middleware}{section.5.7}% 81
+\BOOKMARK [0][-]{chapter.6}{Evaluation}{}% 82
+\BOOKMARK [1][-]{section.6.1}{Ergebnisse der Softwaretests}{chapter.6}% 83
+\BOOKMARK [1][-]{section.6.2}{Ergebnisse der Nutzerevaluation}{chapter.6}% 84
+\BOOKMARK [2][-]{subsection.6.2.1}{Zusammenfassung der Testdurchf\374hrung mit den Studierenden}{section.6.2}% 85
+\BOOKMARK [2][-]{subsection.6.2.2}{Zusammenfassung der Testdurchf\374hrung mit den Professoren}{section.6.2}% 86
+\BOOKMARK [2][-]{subsection.6.2.3}{Ergebnis der Nutzerevaluation}{section.6.2}% 87
+\BOOKMARK [1][-]{section.6.3}{Bewertung des Frameworks Flutter zur Entwicklung von mobilen Appliaktionen}{chapter.6}% 88
+\BOOKMARK [2][-]{subsection.6.3.1}{Einf\374hrung und Dokumentation}{section.6.3}% 89
+\BOOKMARK [2][-]{subsection.6.3.2}{Verwendete Programmiersprache}{section.6.3}% 90
+\BOOKMARK [2][-]{subsection.6.3.3}{Handhabung und Anwendung}{section.6.3}% 91
+\BOOKMARK [2][-]{subsection.6.3.4}{UI-Performance}{section.6.3}% 92
+\BOOKMARK [2][-]{subsection.6.3.5}{Support und Community}{section.6.3}% 93
+\BOOKMARK [2][-]{subsection.6.3.6}{Framework-spezifische Features}{section.6.3}% 94
+\BOOKMARK [2][-]{subsection.6.3.7}{Zusammenfassung der Bewertung}{section.6.3}% 95
+\BOOKMARK [0][-]{chapter.7}{Pr\344sentation der Ergebnisse}{}% 96
+\BOOKMARK [1][-]{section.7.1}{Wichtigsten Erkenntnisse der Arbeit}{chapter.7}% 97
+\BOOKMARK [1][-]{section.7.2}{Schwierigkeiten bei der Bearbeitung}{chapter.7}% 98
+\BOOKMARK [1][-]{section.7.3}{Erf\374llung der Aufgabenstellung}{chapter.7}% 99
+\BOOKMARK [2][-]{subsection.7.3.1}{Unterst\374tzung bei Bearbeitung der Bachelorarbeit}{section.7.3}% 100
+\BOOKMARK [2][-]{subsection.7.3.2}{Unterst\374tzung bei Zeitplanung}{section.7.3}% 101
+\BOOKMARK [2][-]{subsection.7.3.3}{Motivation der Studierenden}{section.7.3}% 102
+\BOOKMARK [1][-]{section.7.4}{Ausblick des Projekts}{chapter.7}% 103
+\BOOKMARK [2][-]{subsection.7.4.1}{Ausblick auf weitere Untersuchungen}{section.7.4}% 104
+\BOOKMARK [2][-]{subsection.7.4.2}{Ausblick auf Softwarefunktionen}{section.7.4}% 105
+\BOOKMARK [0][-]{chapter*.2}{Tabellenverzeichnis}{}% 106
+\BOOKMARK [0][-]{chapter*.3}{Abbildungsverzeichnis}{}% 107
+\BOOKMARK [0][-]{chapter*.4}{Listings}{}% 108
+\BOOKMARK [0][-]{chapter*.5}{Literatur}{}% 109
+\BOOKMARK [0][-]{appendix.A}{Anhang}{}% 110
+\BOOKMARK [1][-]{section.A.1}{Befragung der Beteiligten}{appendix.A}% 111
+\BOOKMARK [2][-]{subsection.A.1.1}{Transkripte der Interviews mit den Professoren}{section.A.1}% 112
+\BOOKMARK [2][-]{subsection.A.1.2}{Zusammenfassung der schriftlichen Befragung der Studierenden}{section.A.1}% 113
+\BOOKMARK [2][-]{subsection.A.1.3}{Ergebnisse der Online-Umfrage f\374r die Studierenden}{section.A.1}% 114

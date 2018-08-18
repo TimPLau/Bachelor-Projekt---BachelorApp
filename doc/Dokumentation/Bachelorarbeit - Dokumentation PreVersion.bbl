@@ -616,6 +616,18 @@
     \field{year}{2018}
   \endentry
 
+  \entry{PixabayAchievement}{misc}{}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{Pix}
+    \field{sortinit}{P}
+    \field{sortinithash}{P}
+    \field{title}{Pixabay}
+    \verb{url}
+    \verb https://pixabay.com/de/abzeichen-blau-button-aufkleber-150755/
+    \endverb
+    \field{year}{(Zugriff August 18, 2018)}
+  \endentry
+
   \entry{ReduxActions}{manual}{}
     \field{labeltitlesource}{title}
     \field{labelalpha}{Red}

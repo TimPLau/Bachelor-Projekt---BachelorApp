@@ -31,13 +31,12 @@ class ContentGuideScreen extends StatelessWidget {
             itemCount: currentContentSubsections.length,
             itemBuilder: (context, index) {
 
-
               if (this.content[currentContentSubsections[index]].type == "ButtonListWidget") {
-                print("HIER" + currentContent.subsections.toString());
                 return new Container(
-                  padding: EdgeInsets.only(top: 10.0, left: 15.0, right: 15.0),
+                  padding: EdgeInsets.only(top: 20.0, left: 15.0, right: 15.0),
                   child: new Card(
                     child: new ListTile(
+                      leading: Icon(Icons.chevron_right),
                       title: new Text(
                         this.content[currentContentSubsections[index]].title,
                         softWrap: true,
@@ -56,9 +55,10 @@ class ContentGuideScreen extends StatelessWidget {
 
               if (this.content[currentContentSubsections[index]].type == "ExtensionPanelWidget") {
                 return new Container(
-                  padding: EdgeInsets.only(top: 10.0, left: 15.0, right: 15.0),
+                  padding: EdgeInsets.only(top: 20.0, left: 15.0, right: 15.0),
                   child: new Card(
                     child: new ExpansionTile(
+                      leading: Icon(Icons.info_outline),
                       title: new Text(
                         this.content[currentContentSubsections[index]].title,
                         softWrap: true,

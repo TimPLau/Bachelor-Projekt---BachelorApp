@@ -21,16 +21,16 @@ class ChallengesDetailsScreen extends StatelessWidget {
             itemCount: this.challenges.length,
             itemBuilder: (context, index) {
               return new Container(
-                padding: EdgeInsets.only(left: 15.0, right: 15.0, top: 5.0),
+                padding: EdgeInsets.only(left: 15.0, right: 15.0, top: 15.0),
                 child: new Card(
-                  elevation: 5.0,
+                  elevation: 1.5,
                   child: new ListTile(
                     leading: ((this.challenges[index].completed)
-                        ? Icon(Icons.check_box)
+                        ? Icon(Icons.check_box, color: Colors.green,)
                         : Icon(
                             Icons.check_box_outline_blank,
-                          )),
-                    title: new Text(
+                    )),
+                    title: new Text((index+1).toString() + ". \r" +
                       this.challenges[index].title,
                       softWrap: true,
                     ),

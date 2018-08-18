@@ -21,7 +21,7 @@ class AchievementDetailsOverviewScreen extends StatelessWidget {
             itemCount: this.achievements.length,
             itemBuilder: (context, index) {
               return new Container(
-                padding: EdgeInsets.only(left: 15.0, right: 15.0, top: 5.0),
+                padding: EdgeInsets.only(left: 15.0, right: 15.0, top: 10.0),
                 child: new Card(
                   elevation: 5.0,
                   child: new ListTile(
