@@ -5,9 +5,9 @@
 \documentclass[bibliography=totoc,listof=totoc,BCOR=5mm,DIV=12,oneside]{scrbook}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
+
 \usepackage{lmodern}
 \usepackage[ngerman]{babel}
-\usepackage[T1]{fontenc}
 \usepackage{microtype}
 \usepackage{pifont}
 \usepackage{amsmath}
@@ -49,19 +49,102 @@
 \usepackage{pdflscape}
 %\usepackage{lscape}
 \setlength{\parindent}{0em} 
-\usepackage[citestyle=alphabetic,natbib=true,style=alphabetic,backend=bibtex]{biblatex}
+\usepackage[citestyle=numeric,natbib=true,style=numeric,backend=bibtex]{biblatex}
 \usepackage{tabularx}
 
 \newcommand*\adjust{\setlength\hsize{3\hsize+4\tabcolsep}} 
 
 \addbibresource{lit.bib} 
 
-\title{Eine gamifizierte Howto-App für Bachelorarbeiten}
-\author{Tim-Pascal Lau}
-\date{28.05.2018}
 \begin{document}
-\maketitle
+
+\frontmatter
+    \pagestyle{empty}
+\thispagestyle{empty}
+
+\begin{center}
+
+\vspace*{-2cm}
+
+\includegraphics[width=1.2\textwidth]{Bilder/Form/fhl_logo.png}
+
+\vspace*{3cm}
+{\Large \textbf{Bachelorarbeit}}\\
+
+\vspace{2.0cm}
+{\Huge \textbf{Eine gamifizierte Howto-App für Bachelorarbeiten}}\\
+\vspace*{3mm}
+
+\vspace{1.5cm}
+
+vorgelegt von
+\vspace{1.5cm}
+
+{\LARGE Tim-Pascal Lau} % Name des Autors
+\vspace{2cm}
+
+\parbox{1cm}{
+\begin{large}
+\begin{tabbing}
+Ausgabedatum: \hspace{.5cm} \=24. Mai 2018\\
+Abgabedatum: \>24. August 2018\\
+\end{tabbing}
+\end{large}}\\
+\vspace{5mm}
+\end{center}
+
+\newpage
+\chapter*{Aufgabenstellung}
+\par Für Studierende im letzten Semester eines Bachelorstudiengangs umfasst \textbf{DIE} wesentliche Prüfungsleistung das Verfassen einer Bachelorarbeit.
+Die Auseinandersetzung mit komplexen Problemstellungen stellt jedoch erfahrungsgemäß für viele Studierende eine große Herausforderung dar, welche sich aus dem erstmaligen Zusammenspiel von selbständigem und eigenverantwortlichem Arbeiten sowie Problemlösen mittels erworbener Fach- und Methodenkenntnisse über einen längeren (dreimonatigen) Zeitraum ergibt.
+
+\par \bigskip Im Verlauf des Studiums sollten Studierende folgendes Wissen und folgende Fähigkeiten erworben haben und zielgerichtet anwenden können:
+\begin{itemize}
+\item Studiengang-spezifisches Grundlagenwissen
+\item Wissensansammlung über fachspezifische Methoden und deren Eigenschaften
+\item Die Fähigkeit, komplexe Probleme zu erkennen, zu strukturieren und systematisch mittels geeigneter Methoden zu bearbeiten
+\end{itemize}
+
+\par Es kommt im Kontext von Bachelorarbeiten dennoch oftmals zu Schwierigkeiten, das erworbene Wissen und Fähigkeiten zielgerichtet auf reale Probleme anzuwenden und deren Ergebnisse zusammenhängend zu dokumentieren.
+
+\section*{Lösungsansatz}
+\par Ein möglicher Lösungsansatz wäre es, Studierenden eine Software bereitzustellen, welche unterstützend und wegweisend bei dem systematischen Vorgehen für komplexe Problemstellungen fungieren könnte. Hierbei soll es nicht darum gehen, dem Studierenden die eigentliche Arbeit abzunehmen, sondern vielmehr darum, Studierende hinsichtlich Vorgehen und Methodenauswahl zielgerichtet zu unterstützen.
+\par \bigskip Im Rahmen dieser Bachelorarbeit soll hierzu eine mobile Applikation entwickelt werden, die den Studierenden während der Dauer seiner Bachelorarbeit kontinuierlich \grqq begleitet\grqq. Dabei sollen Gamificationansätze realisiert werden, die motivierend im Rahmen einer Bachelorarbeit wirken sollen. Dies soll beispielhaft für den Studiengang Informatik/Softwareentwicklung erfolgen. Eine Erweiterbarkeit für andere Studiengänge ist hierbei jedoch von Anfang an konzeptionell vorzusehen.
+
+\newpage
+\par \bigskip Primäre Funktion der Software ist Studierenden bei den folgenden Aufgaben begleitend zu unterstützen und fortwährend zu motivieren \grqq am Ball zu bleiben\grqq:
+
+\begin{itemize}
+\item Brainstorming (zur Unterstützung der Ideenfindung für Bachelorarbeiten)
+\item Recherche und Literaturverwaltung
+\item Gliederung (unterschiedlicher Kategorien von Bachelorarbeiten, zum Beispiel mittels bewehrter Templates)
+\item Zeitplanung/Fortschrittsverfolgung sowie Erinnerungs- und Benachrichtigungsfunktion 
+\item Problem-orientierte Anforderungsanalyse und deren Dokumentation
+\item Problem-orientierte Methoden- und Tool-/Framework-Selektion und deren Dokumentation
+\item Methoden-spezifische Aufbereitung von Ergebnissen
+\item Problem-orientierte Nachweisführung und deren Dokumentation
+\end{itemize}
+\par Die App soll mit Flutter für Android und iOS entwickelt werden. Dabei soll erhoben werden, inwiefern sich Flutter für die Entwicklung solcher Apps eignet (Lessons Learned).
+
+\section*{Teilaufgaben}
+\begin{itemize}
+\item Detaillierte Anforderungsanalyse oben angegebener Funktionen. Hierbei sind Studenten und Professoren des Studiengangs Informatik/Softwaretechnik geeignet einzubeziehen und relevante Literatur (insbesondere zu Gamification und Methoden der Informatik und des Softwareengineering) zu berücksichtigen.
+\item Architekturentwurf der Anwendung (Erweiterbarkeit für andere Studiengänge ist konzeptionell vorzusehen)
+\item Implementierung der Anwendung
+\item Die Funktionsfähigkeit der App soll mittels Softwaretests geeignet nachgewiesen werden.
+\item Die Nutzbarkeit der App soll systematisch evaluiert werden. Hierbei sind Studenten und Professoren des Studiengangs Informatik/Softwaretechnik geeignet einzubeziehen.
+\item Dokumentation der oben angegebenen Schritte inklusive Bewertung der Nutzbarkeit des Frameworks Flutter für solche Arten von Apps.
+\end{itemize}
+
+Es wird empfohlen die Dokumentation von Anfang an begleitend zur Arbeit zu erstellen und sich an einem Dokumentations-Template - wie bspw. diesem - zu orientieren.
+
+\newpage
+\includepdf[pages=-]{Bilder/Form/erklaerung.pdf}
+
 \tableofcontents
+\newpage
+\mainmatter
+\pagestyle{plain}
 
 \chapter{Einleitung}
 \par Für Studierende im letzten Semester eines Bachelorstudiengangs umfasst die wesentliche Prüfungsleistung das Verfassen einer Bachelorarbeit.
@@ -75,12 +158,52 @@ Die Auseinandersetzung mit komplexen Problemstellungen stellt jedoch erfahrungsg
 \item Die Fähigkeit, komplexe Probleme zu erkennen, zu strukturieren und systematisch mittels geeigneter Methoden zu bearbeiten
 \end{itemize}
 
-\par \medskip Des Weiteren stellt eine Online-Umfrage den Teil der Datenerhebung dar, die quantitative Ergebnisse erzielt und deren Aussage somit eine nicht durch die schriftlichen Befragungen abgebildete Menge darstellt.
+\par \bigskip Des Weiteren stellt eine Online-Umfrage den Teil der Datenerhebung dar, die quantitative Ergebnisse erzielt und deren Aussage somit eine nicht durch die schriftlichen Befragungen abgebildete Menge darstellt.
 \par Die Umfrage richtete sich nicht nur an die Studierenden des Studiengangs Informatik/Softwaretechnik, sondern an Studierende im Allgemeinen, welche sich ab dem 4. Semester bereits in der zweiten Hälfte des Studiums befinden und somit schon einen einschätzbaren Erfahrungsschatz aufgebaut haben. Diese Umfrage fließt jedoch nicht mit in die Anforderungsanalyse ein, sondern dient lediglich dazu, ein allgemeines Bild des Bedarfs der zu entwickelnden Software zu ermitteln.
 
-\par \bigskip Im Vorfeld zur Entwicklung der Applikation wurde eine Online Umfrage durchgeführt (siehe Anhang \ref{anhang:onlineUmfrageStudierendeErgebnisse}), welche die Bedarfssituation unter den Studierenden nach Untersützung bei der Bearbeitung der Bachelorarbeit darstellen soll.
+\newpage
+\subsection{Voruntersuchung zur Ermittlung der Bedarfssituation}
+\par \bigskip Im Vorfeld zur Entwicklung der Applikation wurde eine Online-Umfrage an verschiedenen Hochschulen durchgeführt (siehe Anhang \ref{anhang:onlineUmfrageStudierendeErgebnisse}), welche als Voruntersuchung des Problemfeldes dient und somit einen ersten Eindruck über den Bedarf an einer Software zur Unterstützung der Studierenden bei der Bearbeitung der Bachelorarbeit liefert.
 
-\par Bei Betrachtung der Umfrageergebnisse ist anzunehmen, dass es im Kontext von Bachelorarbeiten unter einem großen Teil der Studierenden oftmals zu Schwierigkeiten kommt, das erworbene Wissen und die erlernten Fähigkeiten zielgerichtet auf reale Probleme anzuwenden sowie deren Ergebnisse zusammenhängend zu dokumentieren. Die hierbei erzielten Ergebnisse befassen sich nicht ausschließlich mit Studierenden an der Fachhochschule Lübeck, sondern mit Studierenden im Allgemeinen.
+\par \bigskip Insgesamt haben 44 Studierende unterschiedlicher Hochschulen an der Umfrage teilgenommen, wobei sich diese in weitere drei Gruppen aufteilen lassen. Diese Unterteilung erfolgt nach den unterschiedlichen Phasen, in denen sich die jeweiligen teilnehmenden Studierenden zur Zeit der Umfrage befinden. 
+
+\par \bigskip Im Folgenden werden die wichtigsten Erkenntnisse der zusammengefassten Umfrage (siehe Abbildung \ref{img:zusammenfassungOnlineUmfrage}) beschrieben:
+
+\begin{itemize}
+\item \textbf{Vor Beginn der Bachelorarbeit (Ab 4. Semester)}
+\par \textbf{Teilnehmerzahl: 24}
+\par Die Ergebnisse der Befragung von Studierenden, die sich noch vor der Bearbeitung der Bachelorarbeit befinden, zeigen bezüglich der Kenntnisse über Ablauf der Bachelorarbeit und Erwartungen an den Studierenden, sowie deren Einschätzung zu Selbst- und Zeitmanagement ein relativ gleichmäßig verteiltes Bild der Situation auf. 
+\par Hierbei fällt auf, dass ein nicht geringer Teil explizit angibt, Schwierigkeiten mit den genannten Aspekten zu haben. 
+
+\item \textbf{Während der Bachelorarbeit}
+\par \textbf{Teilnehmerzahl: 14}
+\par Bei Betrachtung der Umfrageergebnisse der Studierenden, die sich in der Phase während der Bachelorarbeit befinden, ist abzulesen, dass es im Kontext von Bachelorarbeiten unter einem nicht geringen Teil der Studierenden zu Schwierigkeiten kommt. 
+\par Hierbei gelten besonders das Zeitmanagement und das wissenschaftliche Arbeiten durchaus als problematisch. Weiterhin sagt über die Hälfte der Studierenden aus, dass sie mit der gesamten Bearbeitung der Bachelorarbeit überfordert sind und ein weiterer Teil, dass sie sich nicht ausreichend mit den Formalien einer Bachelorarbeit auskennen. Viele der Studierende fühlen sich unsicher gegenüber dem, was von ihnen erwartet wird, schätzen sich im Allgemeinen jedoch durch das Studium, als gut vorbereitet ein.
+
+\item \textbf{Nach Abschluss der Bachelorarbeit}
+\par \textbf{Teilnehmerzahl: 6}
+\par Auffällig einstimmig verhalten sich die Ergebnisse der Studierenden, die sich bereits nach Abschluss der Bachelorarbeit befinden. Das selbstständige Arbeiten sowie das Einschätzen von Zeitaufwand haben nach Aussage der Studierenden offensichtlich wenig bis keine Schwierigkeiten dargestellt. Weiterhin geben die Befragten an, sich bei der Fertigstellung der Bachelorarbeit nicht überfordert gefühlt zu haben. Ein wichtiges Detail ist jedoch, dass über die Hälfte der Befragten angeben, sich durch das Studium nicht ausreichend auf die Bachelorarbeit vorbereitet gefühlt zu haben. 
+\end{itemize}
+
+\bigskip
+\begin{figure}[H]
+
+	\subfigure[Vor Beginn der Bachelorarbeit]
+	{\includegraphics[width=1\textwidth, keepaspectratio]{Bilder/ZusammenfassungVorBachelorarbeit.JPG}}
+	
+	\vspace{1.5cm}
+	\subfigure[Während der Bachelorarbeit]
+	{\includegraphics[width=1\textwidth, keepaspectratio]{Bilder/ZusammenfassungWaehrendBachelorarbeit.JPG}}
+	
+	\vspace{1.5cm}
+	\subfigure[Nach Abschluss der Bachelorarbeit]
+	{\includegraphics[width=1\textwidth, keepaspectratio]{Bilder/ZusammenfassungNachBachelorarbeit.JPG}}
+	
+	\caption{Online Umfrage: Zusammenfassung der Umfrageergebnisse}
+	\label{img:zusammenfassungOnlineUmfrage}
+\end{figure}
+
+\par \bigskip Das Gesamtbild der Umfrage zeigt die verschiedenen Schwierigkeiten, mit denen Studierende im Laufe der Bachelorarbeit zu tun haben und stellt diese als wichtige Untersuchungselemente zur Analyse des Problembereichs heraus.
 
 \section{Lösungsansatz und Zielstellung}
 \par Ein möglicher zu verfolgender Lösungsansatz wäre es, eine Software zu entwickeln, welche unterstützend und wegweisend bei dem systematischen Vorgehen unter komplexen Problemstellungen fungieren könnte und auf diese Weise dabei hilft, den Ablauf der Bachelorarbeit für Studierende zugänglicher zu gestalten.
@@ -89,8 +212,8 @@ Die Auseinandersetzung mit komplexen Problemstellungen stellt jedoch erfahrungsg
 \par \bigskip Mit einem solchen Ansatz soll es Studierenden ermöglicht werden, ihr gelerntes Wissen durch Fokussierung bestimmter Aufgaben und Zusammenhänge im Rahmen ihres eigenen Bachelorprojekts auf die Realität zu übertragen und somit einen motivierenden sowie weiterhin fordernden Rahmen zu schaffen, um ihr Bachelorprojekt erfolgreich abzuschließen.
 
 \section{Aufgabenbeschreibung}
-Im Rahmen dieser Bachelorarbeit soll hierfür eine mobile Applikation entwickelt werden, die den Studierenden während der Dauer der Bachelorarbeit kontinuierlich \qquad begleitet\qquad . Dabei sollen Gamificationansätze realisiert werden, welche motivierend bei der Bearbeitung und dem Vorgehen bei der eigenen Bachelorarbeit wirken sollen. Dies soll beispielhaft für den Studiengang Informatik/Softwareentwicklung erfolgen. Eine Erweiterbarkeit für andere Studiengänge ist hierbei jedoch konzeptionell vorzusehen.
-Primäre Funktion der Software ist, Studierenden bei den folgenden Aufgaben begleitend zu unterstützen und fortwährend zu motivieren \qquad am Ball zu bleiben \qquad :
+Im Rahmen dieser Bachelorarbeit soll hierfür eine mobile Applikation entwickelt werden, die den Studierenden während der Dauer der Bachelorarbeit kontinuierlich \grqq begleitet\grqq . Dabei sollen Gamificationansätze realisiert werden, welche motivierend bei der Bearbeitung und dem Vorgehen bei der eigenen Bachelorarbeit wirken sollen. Dies soll beispielhaft für den Studiengang Informatik/Softwareentwicklung erfolgen. Eine Erweiterbarkeit für andere Studiengänge ist hierbei jedoch konzeptionell vorzusehen.
+Primäre Funktion der Software ist, Studierenden bei den folgenden Aufgaben begleitend zu unterstützen und fortwährend zu motivieren \grqq am Ball zu bleiben\grqq:
 \begin{itemize}
 \item Brainstorming (zur Unterstützung der Ideenfindung für Bachelorarbeiten)
 \item Recherche und Literaturverwaltung
@@ -103,7 +226,6 @@ Primäre Funktion der Software ist, Studierenden bei den folgenden Aufgaben begl
 \end{itemize}
 Die Applikation soll mittels Flutter für Android und iOS entwickelt werden. Dabei soll erhoben werden, inwiefern sich Flutter für die Entwicklung solcher Apps eignet(Lessons Learned). 
 
-\newpage
 \par Die im Rahmen der Aufgabenbeschreibung entstandenen Anforderungen werden durch die folgenden Teilaufgaben spezifiziert:
 \begin{itemize}
 \item Detaillierte Anforderungsanalyse oben angegebener Funktionen. Hierbei sind Studenten und Professoren des Studiengangs Informatik/Softwaretechnik geeignet einzubeziehen und relevante Literatur (insbesondere zu Gamification und Methoden der Informatik und des Softwareengineering) zu berücksichtigen.
@@ -130,6 +252,8 @@ Die Applikation soll mittels Flutter für Android und iOS entwickelt werden. Dab
 \par \bigskip Jeder dieser beschriebenen Kapitel trägt im Kern die Schwerpunkte einer jeden Softwareentwicklung, welche sich zwischen technischem Fachwissen und Kompetenzen (Hard Skills) und der zwischenmenschlichen Kommunikationsfähigkeit sowie der eigenen Persönlichkeit (Soft Skills) definieren lassen. Nach Durchführung des Projekts wurden durch alle einzelnen Schritte Teil- sowie Gesamtergebnisse erreicht, welche im abschließenden \textbf{Kapitel \ref{chap:ergebnisse}} zusammenlaufen und unter Schilderung eigener Erfahrungen diskutiert werden sowie einen Ausblick auf die Zukunft des Projekt ermöglichen.
 
 \chapter{Beschreibung der Kernkomponenten} 
+\par In diesem Kapitel werden die Grundlagen zur Nachvollziehbarkeit dieser Projektarbeit vermittelt. Es wird somit empfohlen die folgenden Kapitel zu Gamification, Flutter und die für die Beschreibung der Implementierungsdetails relevanten Redux-Architektur zu lesen, um ein Gesamtverständnis für Begriffe und weitere Zusammenhänge des Projekts zu ermöglichen.
+
 \label{chap:grundlagenkapitel}
 \section{Gamification} 
 \label{sec:grundlagenkapitelGamification}
@@ -146,6 +270,7 @@ beschreiben, sobald Spiel-Design-Elemente in den spezifischen Kontext integriert
 \par \bigskip \textbf{Enterprise Gamification} bezeichnet das konkrete Einbinden von Gamification-Elementen in Arbeits- und/oder Lernprozessen, mit dem expliziten Ziel der Motivationssteigerung seitens der Anwender.
 \par \bigskip Gegenüber diesem Ansatz hat sich weiterhin der Begriff \textbf{Serious Games} integriert, welcher das explizite Einsetzen von Spielen in einem ernsten Kontext vorsieht und die Unterhaltung nicht im Fokus der Anwendung steht, sondern die Wertschöpfung von Wissen und Realwelterfahrungen. 
 
+\newpage
 \subsection{Bekannte Spiel-Design-Elemente} \label{sub:grundlagenSpielDesignElemente}
 
 \par Im folgenden Kapitel werden die wichtigsten interaktiven Spiel-Design-Elemente, welche in Tabelle \ref{tab:spielDesignElemente} genannt werden, vorgestellt und beschrieben. 
@@ -176,13 +301,14 @@ beschreiben, sobald Spiel-Design-Elemente in den spezifischen Kontext integriert
 \par Punktesysteme sind in ihrer Einfachheit eine weitverbreitete Form der Spiel-Design-Elemente, welche hauptsächlich eine Feedback-Funktion erfüllen. Diese Feedback-Funktion kann dem Spieler durch diverse weitere Möglichkeiten, wie zum Beispiel durch das Aufsteigen eines Levels, unterschiedlich stark verdeutlicht werden, weshalb Punkte häufig als Grundbestandteil von Gamification-Anwendungen auftreten. Weiterhin symbolisieren Punkte dem Spieler seinen derzeitigen Spielstand und bieten bei der Kombination mit Bestenlisten eine Vergleichsmöglichkeit zu anderen Spielern. In dieser Kombination können Punktesysteme also je nach Zielstellung auch Gewinner einer Herausforderung identifizieren.
 \par In den zwei, in \citep{Sailer2016} behandelten, empirischen Untersuchungen \citep{mekler2013disassembling} und \citep{mekler2013points}, wurde nachgewiesen, dass der Einsatz von Punktesystemen durchaus einen leistungsfördernden Effekt auf die Spieler haben kann.
 
+\newpage
 \par \bigskip \textbf{Abzeichen}
 \par Die Abzeichen, welche sich in der Regel durch erreichbare Achievements, Badges und/oder Trophäen innerhalb von Gamification-Anwendungen etabliert haben, dienen einerseits einer zielsetzenden und darüber Hinaus auch einer nicht-kontrollierenden Feedback-Funktion. 
 \par Zu erwähnen gilt, dass Badges und Trophäen nicht mit Achievements gleichzusetzen sind, sondern lediglich die visuelle Repräsentation eines Achievements darstellen.
 \par Durch den Einsatz solcher Spiel-Design-Elemente soll der Benutzer sinnvoll gefordert werden und sich im Optimalfall durch das somit klar gesteckte Ziel motiviert fühlen.
 \par \medskip Weiterhin lassen sich bei dem Einsatz von Achievements unterschiedliche strategische Ansätze identifizieren, die sich von der bereits genannten zielsetzenden Strategie abheben. 
 \par Beispielsweise kann bewusst auf die Angabe des Ziels eines Achievements verzichtet werden, um je nach Kontext die Neugierde des Benutzers zu fördern und den Effekt des Erreichens umso größer ausfallen zu lassen, da diese Achievements durch Ausführen verschiedener Tätigkeiten überraschend erreicht werden. Dies spricht aufgrund des erforschenden Charakters vor allem die Benutzerklasse \textbf{Explorer} an (siehe Kapitel \ref{sub:nutzergruppenBartle}). 
-\par Auf diese Weise kann auch eine stärkere Bindung einer Comunity entstehen, da der Austausch zwischen Benutzern, die bereits wissen wie ein bestimmtes Achievement erreicht wird und denjenigen, die es noch nicht erreicht haben, die Kommunikation untereinander fördern kann.
+\par \bigskip Auf diese Weise kann auch eine stärkere Bindung einer Comunity entstehen, da der Austausch zwischen Benutzern, die bereits wissen wie ein bestimmtes Achievement erreicht wird und denjenigen, die es noch nicht erreicht haben, die Kommunikation untereinander fördern kann.
 
 \par \bigskip \textbf{Ranglisten}
 \par Die sogenannten Rang- oder auch Bestenlisten dienen der Identifikation und Abgrenzung von unterschiedlichen Benutzern, die im Kontext der Gamification-Anwendung unterschiedliche Erfolge, häufig in Form von Punkten, erreicht haben.
@@ -201,7 +327,6 @@ beschreiben, sobald Spiel-Design-Elemente in den spezifischen Kontext integriert
 \par Ein wichtiger Aspekt, welcher je nach Anwendungsfeld unterschiedlich ausgelegt wird, ist das Interagieren mit der virtuellen Welt, in der sich der Avatar befindet. Hierbei kann es zur Interaktion mit anderen Spieler-Avataren oder mit definierten Teilen der virtuellen Welt kommen. Die virtuelle Welt kann hierbei beispielsweise Möglichkeiten bieten, sich frei in einer dreidimensionalen Umgebung zu bewegen. 
 \par Die virtuelle Welt muss nicht zwangsweise dreidimensional ausfallen, sondern kann durch geschickte Konzipierung des Interface-Designs auch mit weniger Umgebungsfreiheit den gewünschten Effekt erzielen.
 
-\newpage
 \par \bigskip \textbf{Zeitdruck, Aufgaben, Missionen}
 \par In \citep[Kapitel 6.1.1 Tasks]{pflanzl2018gamification} wird beschrieben, dass Aufgaben und Missionen im Kontext von Gamification-Anwendungen sehr breit vertretene Varianten von Spiel-Design-Elementen sind. 
 \par Sie können sehr gut mit anderen Elementen wie Level-Systemen kombiniert werden und lassen sich durch die hohe Individualisierbarkeit der Aufgabeninhalte im Rahmen des jeweiligen Anwendungskontext als ziel- oder wegweisende Spiel-Elemente benutzen, die gleichzeitig in direkter Form auf das tatsächliche Anwendungsfeld Bezug nehmen.
@@ -210,8 +335,9 @@ beschreiben, sobald Spiel-Design-Elemente in den spezifischen Kontext integriert
 \par Wie in \citep[Kapitel 6.1.1 Tasks]{pflanzl2018gamification} weiterhin beschrieben wird, stehen die Gruppenaufgaben, wie auch die Einzelaufgaben, für eine zu erfüllende Gesamtaufgabe. Eine Gruppenaufgabe hebt sich jedoch insofern ab, dass sie aus mehreren kleinen Aufgaben besteht, welche im Team gelöst werden sollen. Wie auch in den Team-Bestenlisten rückt bei Einsatz dieser Elemente die kooperative Ausführung von Aufgaben in den Vordergrund und soll so durch eine starke Teamidentifikation für eine erhöhte Motivation des Einzelnen sorgen.
 
 \subsection{Nutzergruppen nach Bartle} \label{sub:nutzergruppenBartle}
-\par Nach Bartle \citep{bartle1996hearts} werden vier verschiedene Nutzertypen voneinander unterschieden, welche in vielen Literaturwerken zur Gamification als Grundlage oder zumindest als Orientierung referenziert werden. Diese verschiedenen Nutzerklassen werden im Folgenden kurz erläutert.
-
+\par Nach Bartle \citep{bartle1996hearts} werden vier verschiedene Nutzertypen voneinander unterschieden, welche in vielen Literaturwerken zur Gamification als Grundlage oder zumindest als Orientierung referenziert werden.
+ 
+\par Die vier verschiedenen Nutzerklassen werden im folgenden Verlauf vorgestellt und hinsichtlich ihrer Bedürfnisse erläutert:
 \begin{itemize}
 \item \textbf{Der Killer}
 \par Die Killer legen den Fokus auf den Wettkampf. Somit beruht ihre Motivationsquelle auf stark kompetitiv ausgeprägte Ansätze. Sie fühlen sich dadurch motiviert, den Kontakt mit anderen Individuen im Rahmen eines Wettkampfes zu suchen und sich durch den eigenen Sieg gegenüber anderen Personen zu behaupten.
@@ -219,24 +345,26 @@ beschreiben, sobald Spiel-Design-Elemente in den spezifischen Kontext integriert
 \item \textbf{Der Socialiser}
 \par Die Gruppe der Socialiser sind auf der Suche nach sozialer Interaktion. Ohne diese können sie der Spielwelt wenig bis keine Motivation abgewinnen. Die Spielwelt, in der sie sich bewegen, ist vor allem nur das Mittel zum Zweck der Kommunikation. Der größte Anreiz der Socialiser ist die Freundschaft und der Kontakt zu anderen Personen.
 
+\newpage
 \item \textbf{Der Achiever}
 \par Die Achiever konzentrieren sich auf das Erbringen von Leistungen und das Abschließen von Herausforderungen. Sie werden so eingeschätzt, dass sie die möglichst optimale geforderte Leistung erbringen wollen und daher ihre Motivation aus dem schrittweisen Sammeln von Erfolgen und dem Erfüllen von Aufgaben ziehen.
 
-\newpage
 \item \textbf{Der Explorer}
 \par Die Explorer legen den Hauptfokus auf die Welt, in der sie sich bewegen und möchten im Zusammenspiel mit dieser Spielwelt durch immer wieder neu gestellte Aufgaben und erlebte Überraschungen alles entdecken, was es zu entdecken gibt. Sie sind sehr ambitioniert und empfinden Stolz für ihr Wissen und ihre Erfahrung in der Spielwelt. 
 \par Die Explorer haben vor allem Interesse an der Spielwelt und weniger an den Personen, die sie im Laufe der Erkundung treffen.
 \end{itemize}
 
 \par \bigskip Wie aus den Beschreibungen zu erkennen ist, entsteht bei der allgemeinen Betrachtung aller Benutzerklassen ein Spannungsfeld der Interessen, welches in Abbildung \ref{img:interetGraphBartle} verdeutlicht werden soll.
-\par \bigskip Das Spannungsfeld wird weiterhin definiert durch die vier verschiedenen Interessenausprägungen der Spieler (Players), der virtuellen Welt (World), des Handelns in dieser Welt (Acting) und des Interagierens mit der virtuellen Welt (Interacting).
 
+\bigskip
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.8\textwidth, keepaspectratio]{Bilder/Diagramme/InterestGraphBartle.png}
+	\includegraphics[width=0.75\textwidth, keepaspectratio]{Bilder/Diagramme/InterestGraphBartle.png}
 	\caption{Interest Graph nach Bartle \cite{bartle1996hearts}}
 	\label{img:interetGraphBartle}
 \end{figure}
+
+\par \bigskip Das Spannungsfeld wird weiterhin definiert durch die vier verschiedenen Interessenausprägungen der Spieler (Players), der virtuellen Welt (World), des Handelns in dieser Welt (Acting) und des Interagierens mit der virtuellen Welt (Interacting).
 
 \newpage
 \section{Vorstellung des Frameworks Flutter}
@@ -248,6 +376,7 @@ beschreiben, sobald Spiel-Design-Elemente in den spezifischen Kontext integriert
 \subsection{Flutter Kerntechnologien} 
 Das Flutter Framework besteht aus verschiedenen Basiskomponenten, welche aus aufeinander aufbauenden Systemschichten bestehen (siehe Abbildung \ref{img:flutterHighLevelSystemOverview}) und sich auf oberster Abstraktionsebene auf die Flutter-Engine und das Flutter-Framework unterteilen lassen.
 
+\bigskip
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.8\textwidth, keepaspectratio]{Bilder/highLevelOverview.png}
@@ -271,6 +400,7 @@ Das Flutter Framework besteht aus verschiedenen Basiskomponenten, welche aus auf
 \par Flutter ermöglicht das plattform-unabhängige Entwickeln von mobilen Applikationen für Android- und iOS-Betriebssysteme und verarbeitet oberflächen-spezifische Darstellungsformen der jeweiligen Zielplattformen framework-intern. Dies bedeutet, dass zum Zeitpunkt der Entwicklung auf extrem abstrakter Ebene ein Oberflächendesign unabhängig von der Zielplattform konzipiert werden kann, da die plattform-spezifischen Darstellungsweisen von dem Framework selbst gelöst werden und von den jeweiligen Entwicklern nicht berücksichtigt werden müssen. 
 \par \bigskip \textit{Hinweis: Die in Abbildung \ref{img:FlutterVisualisierungiOSAndoid} gezeigten Oberflächen entstammen demselben Programmcode.}
 
+\bigskip
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.55\textwidth, keepaspectratio]{Bilder/PlattformUebergreifendDesign.png}
@@ -285,6 +415,7 @@ Das Flutter Framework besteht aus verschiedenen Basiskomponenten, welche aus auf
 \subsection{Flutter Widgets}
 \par Alle User-Interface Grundbausteine in Flutter werden als sogenannte Widgets bezeichnet und dementsprechend gleich behandelt(\cite[vgl. Everything’s a Widget]{Flu5}). Diese Grundbausteine stellen die jeweiligen Design- und Interaktions-Elemente der Applikation dar und umfassen verschieden spezialisierte Ausprägungen wie in Abbildung \ref{img:FlutterWidgetButtonSectionExample} beispielhaft zu sehen ist.
 
+\bigskip
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.8\textwidth, keepaspectratio]{Bilder/FlutterWidgetButtonSectionExample.png}
@@ -294,6 +425,7 @@ Das Flutter Framework besteht aus verschiedenen Basiskomponenten, welche aus auf
 
 \par \medskip Ein in dem Artikel \citep[Widgets]{HackernoonFlutterArcticle} beschriebener wichtiger Aspekt ist, dass Flutter im Gegensatz zu anderen Alternativen eine eigens erstellte Systemschnittstellen-Architektur besitzt und nicht auf OEM-Widgets oder DOM-Web Views zurückgreift, wie in Abbildung \ref{img:hackernoonFlutterArcticleArchitecture} verdeutlicht wird. Dies ermöglicht eine extrem freie Handhabung und Individualisierung im Umgang mit den Widgets und Plattform spezifischen Diensten.
 
+\bigskip
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.8\textwidth, keepaspectratio]{Bilder/WidgetsFlutterArchitecture.png}
@@ -308,6 +440,7 @@ Das Flutter Framework besteht aus verschiedenen Basiskomponenten, welche aus auf
 \subsection{Flutter UI Rendering}
 \par Flutter verwendet im Gegensatz zu anderen Alternativen nach eigener Aussage eine selbst entwickelte und optimierte Rendering-Engine, die die Benutzeroberfläche nach einer Veränderung des aktuellen Status neu generiert und diese Veränderung dem Benutzer darstellt (vgl. \citep[What makes Flutter unique?]{Flu3}). Die folgende Abbildung \ref{img:flutterHighLevelRendering} stellt einen solchen Ablauf dar.
 
+\bigskip
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.8\textwidth, keepaspectratio]{Bilder/FlutterRendering.png}
@@ -441,18 +574,19 @@ Trotz des Verlaufs des Studiums, des angeeigneten Wissens und der somit zahlreic
 
 \par Durch die initial durchgeführten Gespräche mit den Studierenden ließen sich Erkenntnisse über den Umfang des Problems gewinnen. Auf Grundlage dieser Erkenntnisse wurde die weitere Analysestrategie verfeinert und für die Umsetzung durch die Erstellung von Fragenkatalogen und Interview-Leitfaden vorbereitet (siehe Abbildung \ref{img:analysestrategie}), welche im folgenden Verlauf beschrieben werden.
 \par Die Interviews mit den Studierenden sollen somit als Grundlage zu Konzeption und Design weiterer Befragungsstrategien dienen und stellen in diesem Umfang einen Ausgangspunkt für die Problemanalyse dar. Weiterhin wurden die gewählten Interviewpartner bei Zustimmung über das gesamte Projekt und nach Absprache auch in die Evaluation der Applikation miteinbezogen.
-\par\medskip Durch das Durchführen von Gruppeninterviews sollen die Studierenden zu Diskussionen angeregt werden, welche durch den Leiter des Interviews gezielt angeregt werden können. Dies hat den Zweck, die Situation und die Rolle der Studierenden für den Interviewer erkenntlich zu machen.  Diese persönlichen Interviews dienen in erster Linie also nicht der Erhebung konkreter Daten, sondern als erster Berührungspunkt mit dem Problembereich und in diesem Rahmen als strategischer Orientierungspunkt für das weitere Vorgehen.
+
+\newpage
+\par Durch das Durchführen von Gruppeninterviews sollen die Studierenden zu Diskussionen angeregt werden, welche durch den Leiter des Interviews gezielt angeregt werden können. Dies hat den Zweck, die Situation und die Rolle der Studierenden für den Interviewer erkenntlich zu machen.  Diese persönlichen Interviews dienen in erster Linie also nicht der Erhebung konkreter Daten, sondern als erster Berührungspunkt mit dem Problembereich und in diesem Rahmen als strategischer Orientierungspunkt für das weitere Vorgehen.
 
 \subsection{Einbezug der Professoren}
 \par Für die Interessengruppe der Professoren aus dem Fachbereich Informatik wurden als Grundlage der Datenerhebung Einzelinterviews mit einer ausgewählten Gruppe von Professoren durchgeführt, während eine weitere Gruppe von Professoren schriftlich per E-Mail befragt wurde (siehe Abbildung \ref{img:analysestrategie}). Dies bietet sowohl den Zugriff auf die unmittelbaren Erfahrungen der einzelnen Professoren als Spezialisten in ihren jeweiligen Fachgebieten, als auch auf die Erfahrungen der Professoren in der Position eines Betreuers und Ansprechpartners für Bacheloranden. 
-\par Durch das Durchführen von Einzelinterviews wird ermöglicht, die Erwartungen seitens der Professoren an die Bacheloranden im Detail zu identifizieren und die in dieser Hinsicht priorisierten inhaltlichen und methodischen Aspekte bei der Bearbeitung einer Bachelorarbeit herauszuarbeiten. Die Aufteilung auf Einzelinterviews und E-Mail Befragungen bietet den Vorteil, beide Strategien simultan zu verfolgen und nach Abschluss der Datenerhebung sowohl die detaillierten Einzelinterviews, als auch die oberflächlicher ausfallenden E-Mail Antworten in bereits dokumentierter Form vorliegen zu haben, um diese dann auszuwerten.
+\par \bigskip Durch das Durchführen von Einzelinterviews wird ermöglicht, die Erwartungen seitens der Professoren an die Bacheloranden im Detail zu identifizieren und die in dieser Hinsicht priorisierten inhaltlichen und methodischen Aspekte bei der Bearbeitung einer Bachelorarbeit herauszuarbeiten. Die Aufteilung auf Einzelinterviews und E-Mail Befragungen bietet den Vorteil, beide Strategien simultan zu verfolgen und nach Abschluss der Datenerhebung sowohl die detaillierten Einzelinterviews, als auch die oberflächlicher ausfallenden E-Mail Antworten in bereits dokumentierter Form vorliegen zu haben, um diese dann auszuwerten.
 
 \subsection{Einbezug der Studierenden}
-\par Nach Absprache mit den interviewten Studierenden werden diese weiterhin per schriftlicher Befragung in die Entwicklung des Projektes, unter ergänzender Zunahme anderer Studierender, eingebunden.
-\par In diesem Zusammenhang werden die teilnehmenden Studierenden mittels Bildern, Fragen und Gestaltungsideen der Applikation regelmäßig über den aktuellen Stand der Entwicklung informiert. Auf diese Weise sollte es möglich sein, ein breites, jedoch persönliches Feedback zu erhalten, da sich die Einbindung der Studierenden auf diese Weise sehr gut automatisieren lässt. Wesentlich dabei ist auch die Tatsache, dass die Reaktionsfreudigkeit der Studierenden höher ausfällt, als für die im Vergleich existierende Alternative der zeitaufwändigeren persönlichen Interviews.
-\par Durch die Durchführung der schriftlichen Befragung wird der Ablauf bereits dokumentiert und der Fragesteller sowie die Studierenden haben jederzeit die Möglichkeit Fragen und Anregungen zu teilen.
-\par Miteinbezogen werden vorzugsweise Studierende der oberen Semester, unabhängig davon, ob sie sich vor Beginn, während der Bearbeitung oder nach Abschluss der Bachelorarbeit befinden, da die unterschiedlichen Sichtweisen und Erfahrungsstände wichtige Impulse für die Entwicklung der Applikation geben.
+\par Nach Absprache mit den interviewten Studierenden werden diese weiterhin per schriftlicher Befragung in die Entwicklung des Projektes, unter ergänzender Zunahme anderer Studierender, eingebunden.In diesem Zusammenhang werden die teilnehmenden Studierenden mittels Bildern, Fragen und Gestaltungsideen der Applikation regelmäßig über den aktuellen Stand der Entwicklung informiert. Auf diese Weise sollte es möglich sein, ein breites, jedoch persönliches Feedback zu erhalten, da sich die Einbindung der Studierenden auf diese Weise sehr gut automatisieren lässt. Wesentlich dabei ist auch die Tatsache, dass die Reaktionsfreudigkeit der Studierenden höher ausfällt, als für die im Vergleich existierende Alternative der zeitaufwändigeren persönlichen Interviews.
+\par \bigskip Aufgrund der Durchführung der schriftlichen Befragung wird der Ablauf bereits dokumentiert und der Fragesteller sowie die Studierenden haben jederzeit die Möglichkeit Fragen und Anregungen zu teilen. Miteinbezogen werden vorzugsweise Studierende der oberen Semester, unabhängig davon, ob sie sich vor Beginn, während der Bearbeitung oder nach Abschluss der Bachelorarbeit befinden, da die unterschiedlichen Sichtweisen und Erfahrungsstände wichtige Impulse für die Entwicklung der Applikation geben.
 
+\newpage
 \section{Ergebnisse der Professoren}
 \par Im Folgenden sind die gewonnenen Eindrücke und Kenntnisse der Einzelinterviews mit den Professoren des Fachbereichs Informatik durch Themenkategorien geordnet und in zusammengefasster Form dokumentiert.
 \par Es haben insgesamt sechs Professoren an persönlichen Einzelinterviews teilgenommen, wobei es für fünf Interviews gestattet wurde, eine Tonaufzeichnung anzufertigen.
@@ -1989,8 +2123,6 @@ Die Untersuchung dieses Problembereiches brachte im Allgemeinen das Ergebnis her
 \listoftables
 \listoffigures
 \lstlistoflistings
-\nocite{*}
-\printbibliography
 
 \newpage
 \appendix
@@ -2020,4 +2152,7 @@ Die Untersuchung dieses Problembereiches brachte im Allgemeinen das Ergebnis her
 \label{anhang:onlineUmfrageStudierendeErgebnisse}
 \includepdf[pages=-]{Anhang/Anforderungsanalyse/Studenten/Umfrage/Auswertung_Umfrage.pdf}
 
+
+\nocite{*}
+\printbibliography
 \end{document}

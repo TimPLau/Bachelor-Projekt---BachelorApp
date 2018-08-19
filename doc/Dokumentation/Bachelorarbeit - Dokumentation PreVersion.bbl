@@ -16,19 +16,16 @@
   {}
 \endgroup
 
-\datalist[entry]{anyt/global//global/global}
-  \entry{AchievementsImplementation}{manual}{}
+\datalist[entry]{nty/global//global/global}
+  \entry{ReduxActions}{manual}{}
     \field{labeltitlesource}{title}
-    \field{labelalpha}{Ach}
     \field{sortinit}{A}
     \field{sortinithash}{A}
-    \field{title}{How to Code Unlockable Achievements for Your Game (A Simple
-  Approach)}
+    \field{title}{Actions}
     \verb{url}
-    \verb https://gamedevelopment.tutsplus.com/tutorials/how-to-code-unlockable
-    \verb -achievements-for-your-game-a-simple-approach--gamedev-6012
+    \verb https://redux.js.org/basics/actions
     \endverb
-    \field{year}{(Zugriff August 16, 2018)}
+    \field{year}{(Zugriff Juni 8, 2018)}
   \endentry
 
   \entry{FHLuebeckBAAnleitung}{unpublished}{}
@@ -46,7 +43,6 @@
     \strng{fullhash}{AHPDrn1}
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
-    \field{labelalpha}{AH}
     \field{sortinit}{A}
     \field{sortinithash}{A}
     \field{note}{Herausgegeben an Studenten der Fachhochschule Lübeck, die das
@@ -56,7 +52,6 @@
 
   \entry{AnouncingFlutterBeta}{manual}{}
     \field{labeltitlesource}{title}
-    \field{labelalpha}{Ano}
     \field{sortinit}{A}
     \field{sortinithash}{A}
     \field{title}{Announcing Flutter beta 1: Build beautiful native apps}
@@ -69,7 +64,6 @@
 
   \entry{AppleHomepage}{manual}{}
     \field{labeltitlesource}{title}
-    \field{labelalpha}{App}
     \field{sortinit}{A}
     \field{sortinithash}{A}
     \field{title}{Apple Homepage}
@@ -95,7 +89,6 @@
     \strng{fullhash}{BH1}
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
-    \field{labelalpha}{Bal10}
     \field{sortinit}{B}
     \field{sortinithash}{B}
     \field{isbn}{978-3-827-42247-7}
@@ -120,7 +113,6 @@
     \strng{fullhash}{BR1}
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
-    \field{labelalpha}{Bar96}
     \field{sortinit}{B}
     \field{sortinithash}{B}
     \field{number}{1}
@@ -153,7 +145,6 @@
     \strng{fullhash}{BILJM1}
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
-    \field{labelalpha}{BL13}
     \field{sortinit}{B}
     \field{sortinithash}{B}
     \field{number}{4}
@@ -165,9 +156,41 @@
     \field{year}{2013}
   \endentry
 
+  \entry{Flu1}{manual}{}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{B}
+    \field{sortinithash}{B}
+    \field{title}{Build beautiful native apps in record time}
+    \verb{url}
+    \verb https://flutter.io/
+    \endverb
+    \field{year}{(Zugriff Juni 3, 2018)}
+  \endentry
+
+  \entry{FlutterBuildingLayouts}{manual}{}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{B}
+    \field{sortinithash}{B}
+    \field{title}{Building Layouts in Flutter}
+    \verb{url}
+    \verb https://flutter.io/tutorials/layout/
+    \endverb
+    \field{year}{Februar 27, 2018 (Zugriff Juni 3, 2018)}
+  \endentry
+
+  \entry{DartCompleter}{manual}{}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{C}
+    \field{sortinithash}{C}
+    \field{title}{Completer<T> class}
+    \verb{url}
+    \verb https://api.dartlang.org/stable/2.0.0/dart-async/Completer-class.html
+    \endverb
+    \field{year}{(Zugriff Juni 16, 2018)}
+  \endentry
+
   \entry{Cup1}{manual}{}
     \field{labeltitlesource}{title}
-    \field{labelalpha}{Cup}
     \field{sortinit}{C}
     \field{sortinithash}{C}
     \field{title}{Cupertino (iOS-style) Widgets}
@@ -177,23 +200,8 @@
     \field{year}{(Zugriff Juni 3, 2018)}
   \endentry
 
-  \entry{DartCompleter}{manual}{}
-    \field{labeltitlesource}{title}
-    \field{labelalpha}{Dar}
-    \field{extraalpha}{1}
-    \field{sortinit}{D}
-    \field{sortinithash}{D}
-    \field{title}{Completer<T> class}
-    \verb{url}
-    \verb https://api.dartlang.org/stable/2.0.0/dart-async/Completer-class.html
-    \endverb
-    \field{year}{(Zugriff Juni 16, 2018)}
-  \endentry
-
   \entry{DartLangHomepage}{manual}{}
     \field{labeltitlesource}{title}
-    \field{labelalpha}{Dar}
-    \field{extraalpha}{2}
     \field{sortinit}{D}
     \field{sortinithash}{D}
     \field{title}{Dart Homepage}
@@ -237,7 +245,6 @@
     \strng{fullhash}{DSKRNLEDD1}
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
-    \field{labelalpha}{Det+11}
     \field{sortinit}{D}
     \field{sortinithash}{D}
     \field{booktitle}{CHI 2011 gamification workshop proceedings}
@@ -246,36 +253,8 @@
     \field{year}{2011}
   \endentry
 
-  \entry{Flu1}{manual}{}
-    \field{labeltitlesource}{title}
-    \field{labelalpha}{Flu}
-    \field{extraalpha}{1}
-    \field{sortinit}{F}
-    \field{sortinithash}{F}
-    \field{title}{Build beautiful native apps in record time}
-    \verb{url}
-    \verb https://flutter.io/
-    \endverb
-    \field{year}{(Zugriff Juni 3, 2018)}
-  \endentry
-
-  \entry{FlutterBuildingLayouts}{manual}{}
-    \field{labeltitlesource}{title}
-    \field{labelalpha}{Flu}
-    \field{extraalpha}{2}
-    \field{sortinit}{F}
-    \field{sortinithash}{F}
-    \field{title}{Building Layouts in Flutter}
-    \verb{url}
-    \verb https://flutter.io/tutorials/layout/
-    \endverb
-    \field{year}{Februar 27, 2018 (Zugriff Juni 3, 2018)}
-  \endentry
-
   \entry{FlutterLocalNotificationPlugin}{manual}{}
     \field{labeltitlesource}{title}
-    \field{labelalpha}{Flu}
-    \field{extraalpha}{3}
     \field{sortinit}{F}
     \field{sortinithash}{F}
     \field{title}{Flutter Local Notification Plugin}
@@ -287,8 +266,6 @@
 
   \entry{FlutterPerformanceProfiler}{manual}{}
     \field{labeltitlesource}{title}
-    \field{labelalpha}{Flu}
-    \field{extraalpha}{4}
     \field{sortinit}{F}
     \field{sortinithash}{F}
     \field{title}{Flutter Performance Profiler}
@@ -300,8 +277,6 @@
 
   \entry{FlutterReduxLib}{manual}{}
     \field{labeltitlesource}{title}
-    \field{labelalpha}{Flu}
-    \field{extraalpha}{5}
     \field{sortinit}{F}
     \field{sortinithash}{F}
     \field{title}{Flutter Redux}
@@ -313,8 +288,6 @@
 
   \entry{Flu5}{manual}{}
     \field{labeltitlesource}{title}
-    \field{labelalpha}{Flu}
-    \field{extraalpha}{6}
     \field{sortinit}{F}
     \field{sortinithash}{F}
     \field{title}{Flutter System Architecture}
@@ -325,10 +298,19 @@
     \field{year}{April 23, 2017 (Zugriff Juni 3, 2018)}
   \endentry
 
+  \entry{FoundationLibary}{manual}{}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{F}
+    \field{sortinithash}{F}
+    \field{title}{Foundation Libary}
+    \verb{url}
+    \verb https://docs.flutter.io/flutter/foundation/foundation-library.html
+    \endverb
+    \field{year}{(Zugriff August 6, 2018)}
+  \endentry
+
   \entry{Flu6}{manual}{}
     \field{labeltitlesource}{title}
-    \field{labelalpha}{Flu}
-    \field{extraalpha}{7}
     \field{sortinit}{F}
     \field{sortinithash}{F}
     \field{title}{Foundation Libary}
@@ -340,10 +322,8 @@
 
   \entry{FlutterGetStarted}{manual}{}
     \field{labeltitlesource}{title}
-    \field{labelalpha}{Flu}
-    \field{extraalpha}{8}
-    \field{sortinit}{F}
-    \field{sortinithash}{F}
+    \field{sortinit}{G}
+    \field{sortinithash}{G}
     \field{title}{Get Startet}
     \verb{url}
     \verb https://flutter.io/get-started/
@@ -351,12 +331,23 @@
     \field{year}{(Zugriff Juni 10, 2018)}
   \endentry
 
+  \entry{AchievementsImplementation}{manual}{}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{H}
+    \field{sortinithash}{H}
+    \field{title}{How to Code Unlockable Achievements for Your Game (A Simple
+  Approach)}
+    \verb{url}
+    \verb https://gamedevelopment.tutsplus.com/tutorials/how-to-code-unlockable
+    \verb -achievements-for-your-game-a-simple-approach--gamedev-6012
+    \endverb
+    \field{year}{(Zugriff August 16, 2018)}
+  \endentry
+
   \entry{Flu2}{manual}{}
     \field{labeltitlesource}{title}
-    \field{labelalpha}{Flu}
-    \field{extraalpha}{9}
-    \field{sortinit}{F}
-    \field{sortinithash}{F}
+    \field{sortinit}{I}
+    \field{sortinithash}{I}
     \field{title}{Introduction}
     \verb{url}
     \verb https://flutter.io/faq/#introduction
@@ -364,85 +355,8 @@
     \field{year}{(Zugriff Juni 3, 2018)}
   \endentry
 
-  \entry{Flu7}{manual}{}
-    \field{labeltitlesource}{title}
-    \field{labelalpha}{Flu}
-    \field{extraalpha}{10}
-    \field{sortinit}{F}
-    \field{sortinithash}{F}
-    \field{title}{Material Components Widgets}
-    \verb{url}
-    \verb https://flutter.io/widgets/material/
-    \endverb
-    \field{year}{(Zugriff Juni 3, 2018)}
-  \endentry
-
-  \entry{Flu8}{manual}{}
-    \field{labeltitlesource}{title}
-    \field{labelalpha}{Flu}
-    \field{extraalpha}{11}
-    \field{sortinit}{F}
-    \field{sortinithash}{F}
-    \field{title}{Technical Overview}
-    \verb{url}
-    \verb https://flutter.io/technical-overview/
-    \endverb
-    \field{year}{(Zugriff Juni 3, 2018)}
-  \endentry
-
-  \entry{Flu3}{manual}{}
-    \field{labeltitlesource}{title}
-    \field{labelalpha}{Flu}
-    \field{extraalpha}{12}
-    \field{sortinit}{F}
-    \field{sortinithash}{F}
-    \field{title}{Technology}
-    \verb{url}
-    \verb https://flutter.io/faq/
-    \endverb
-    \field{year}{(Zugriff Juni 3, 2018)}
-  \endentry
-
-  \entry{Flu4}{manual}{}
-    \field{labeltitlesource}{title}
-    \field{labelalpha}{Flu}
-    \field{extraalpha}{13}
-    \field{sortinit}{F}
-    \field{sortinithash}{F}
-    \field{title}{Welcome to the Engine Wiki}
-    \verb{url}
-    \verb https://github.com/flutter/engine/wiki
-    \endverb
-    \field{year}{(Zugriff Juni 3, 2018)}
-  \endentry
-
-  \entry{FoundationLibary}{manual}{}
-    \field{labeltitlesource}{title}
-    \field{labelalpha}{Fou}
-    \field{sortinit}{F}
-    \field{sortinithash}{F}
-    \field{title}{Foundation Libary}
-    \verb{url}
-    \verb https://docs.flutter.io/flutter/foundation/foundation-library.html
-    \endverb
-    \field{year}{(Zugriff August 6, 2018)}
-  \endentry
-
-  \entry{HackernoonFlutterArcticle}{manual}{}
-    \field{labeltitlesource}{title}
-    \field{labelalpha}{Hac}
-    \field{sortinit}{H}
-    \field{sortinithash}{H}
-    \field{title}{What’s Revolutionary about Flutter}
-    \verb{url}
-    \verb https://hackernoon.com/whats-revolutionary-about-flutter-946915b09514
-    \endverb
-    \field{year}{(Zugriff Juni 3, 2018)}
-  \endentry
-
   \entry{iOSDesign}{manual}{}
     \field{labeltitlesource}{title}
-    \field{labelalpha}{Ios}
     \field{sortinit}{I}
     \field{sortinithash}{I}
     \field{title}{iOS Design Themes}
@@ -453,9 +367,19 @@
     \field{year}{(Zugriff Juni 3, 2018)}
   \endentry
 
+  \entry{Flu7}{manual}{}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{M}
+    \field{sortinithash}{M}
+    \field{title}{Material Components Widgets}
+    \verb{url}
+    \verb https://flutter.io/widgets/material/
+    \endverb
+    \field{year}{(Zugriff Juni 3, 2018)}
+  \endentry
+
   \entry{Mat1}{manual}{}
     \field{labeltitlesource}{title}
-    \field{labelalpha}{Mat}
     \field{sortinit}{M}
     \field{sortinithash}{M}
     \field{title}{Material Design}
@@ -481,7 +405,6 @@
     \strng{fullhash}{MP1}
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
-    \field{labelalpha}{May15}
     \field{sortinit}{M}
     \field{sortinithash}{M}
     \field{isbn}{978-3-407-25730-7}
@@ -526,8 +449,6 @@
     \strng{fullhash}{MEDBFOKTAN1}
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
-    \field{labelalpha}{Mek+13}
-    \field{extraalpha}{1}
     \field{sortinit}{M}
     \field{sortinithash}{M}
     \field{booktitle}{CHI'13 extended abstracts on human factors in computing
@@ -572,8 +493,6 @@
     \strng{fullhash}{MEDBFOKTAN1}
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
-    \field{labelalpha}{Mek+13}
-    \field{extraalpha}{2}
     \field{sortinit}{M}
     \field{sortinithash}{M}
     \field{booktitle}{Proceedings of the First International Conference on
@@ -586,7 +505,6 @@
 
   \entry{MobileWordCongress}{manual}{}
     \field{labeltitlesource}{title}
-    \field{labelalpha}{Mob}
     \field{sortinit}{M}
     \field{sortinithash}{M}
     \field{title}{Mobile World Congress}
@@ -609,7 +527,6 @@
     \strng{fullhash}{PN1}
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
-    \field{labelalpha}{Pfl18}
     \field{sortinit}{P}
     \field{sortinithash}{P}
     \field{title}{Gamification for business process modeling}
@@ -618,7 +535,6 @@
 
   \entry{PixabayAchievement}{misc}{}
     \field{labeltitlesource}{title}
-    \field{labelalpha}{Pix}
     \field{sortinit}{P}
     \field{sortinithash}{P}
     \field{title}{Pixabay}
@@ -628,23 +544,8 @@
     \field{year}{(Zugriff August 18, 2018)}
   \endentry
 
-  \entry{ReduxActions}{manual}{}
-    \field{labeltitlesource}{title}
-    \field{labelalpha}{Red}
-    \field{extraalpha}{1}
-    \field{sortinit}{R}
-    \field{sortinithash}{R}
-    \field{title}{Actions}
-    \verb{url}
-    \verb https://redux.js.org/basics/actions
-    \endverb
-    \field{year}{(Zugriff Juni 8, 2018)}
-  \endentry
-
   \entry{ReduxReadMe}{manual}{}
     \field{labeltitlesource}{title}
-    \field{labelalpha}{Red}
-    \field{extraalpha}{2}
     \field{sortinit}{R}
     \field{sortinithash}{R}
     \field{title}{Read Me}
@@ -654,10 +555,19 @@
     \field{year}{(Zugriff Juni 8, 2018)}
   \endentry
 
+  \entry{WordPressRedux}{manual}{}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{R}
+    \field{sortinithash}{R}
+    \field{title}{Read Me}
+    \verb{url}
+    \verb https://reduxframework.com/
+    \endverb
+    \field{year}{(Zugriff Juni 8, 2018)}
+  \endentry
+
   \entry{ReduxReducers}{manual}{}
     \field{labeltitlesource}{title}
-    \field{labelalpha}{Red}
-    \field{extraalpha}{3}
     \field{sortinit}{R}
     \field{sortinithash}{R}
     \field{title}{Reducers}
@@ -669,26 +579,11 @@
 
   \entry{ReduxWiki}{manual}{}
     \field{labeltitlesource}{title}
-    \field{labelalpha}{Red}
-    \field{extraalpha}{4}
     \field{sortinit}{R}
     \field{sortinithash}{R}
     \field{title}{Redux (JavaScript-Bibliothek)}
     \verb{url}
     \verb https://de.wikipedia.org/wiki/Redux_(JavaScript-Bibliothek)
-    \endverb
-    \field{year}{(Zugriff Juni 8, 2018)}
-  \endentry
-
-  \entry{ReduxStore}{manual}{}
-    \field{labeltitlesource}{title}
-    \field{labelalpha}{Red}
-    \field{extraalpha}{5}
-    \field{sortinit}{R}
-    \field{sortinithash}{R}
-    \field{title}{Store}
-    \verb{url}
-    \verb https://redux.js.org/basics/store
     \endverb
     \field{year}{(Zugriff Juni 8, 2018)}
   \endentry
@@ -715,7 +610,6 @@
     \strng{fullhash}{RBRJL1}
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
-    \field{labelalpha}{RR09}
     \field{sortinit}{R}
     \field{sortinithash}{R}
     \field{title}{Total engagement: How games and virtual worlds are changing
@@ -739,7 +633,6 @@
     \strng{fullhash}{SM1}
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
-    \field{labelalpha}{Sai16}
     \field{sortinit}{S}
     \field{sortinithash}{S}
     \field{isbn}{978-3-658-14309-1}
@@ -753,7 +646,6 @@
 
   \entry{Skia1}{manual}{}
     \field{labeltitlesource}{title}
-    \field{labelalpha}{Ski}
     \field{sortinit}{S}
     \field{sortinithash}{S}
     \field{title}{Skia Graphics Library}
@@ -761,6 +653,17 @@
     \verb https://skia.org/
     \endverb
     \field{year}{(Zugriff Juni 3, 2018)}
+  \endentry
+
+  \entry{ReduxStore}{manual}{}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{S}
+    \field{sortinithash}{S}
+    \field{title}{Store}
+    \verb{url}
+    \verb https://redux.js.org/basics/store
+    \endverb
+    \field{year}{(Zugriff Juni 8, 2018)}
   \endentry
 
   \entry{Strahringer2017}{book}{}
@@ -785,7 +688,6 @@
     \strng{fullhash}{SSLC1}
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
-    \field{labelalpha}{SL17}
     \field{sortinit}{S}
     \field{sortinithash}{S}
     \field{isbn}{978-3-658-16742-4}
@@ -795,6 +697,39 @@
       {Berlin Heidelberg New York}%
     }
     \field{year}{2017}
+  \endentry
+
+  \entry{Flu8}{manual}{}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{T}
+    \field{sortinithash}{T}
+    \field{title}{Technical Overview}
+    \verb{url}
+    \verb https://flutter.io/technical-overview/
+    \endverb
+    \field{year}{(Zugriff Juni 3, 2018)}
+  \endentry
+
+  \entry{Flu3}{manual}{}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{T}
+    \field{sortinithash}{T}
+    \field{title}{Technology}
+    \verb{url}
+    \verb https://flutter.io/faq/
+    \endverb
+    \field{year}{(Zugriff Juni 3, 2018)}
+  \endentry
+
+  \entry{Flu4}{manual}{}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{W}
+    \field{sortinithash}{W}
+    \field{title}{Welcome to the Engine Wiki}
+    \verb{url}
+    \verb https://github.com/flutter/engine/wiki
+    \endverb
+    \field{year}{(Zugriff Juni 3, 2018)}
   \endentry
 
   \entry{werbach2012win}{book}{}
@@ -819,7 +754,6 @@
     \strng{fullhash}{WKHD1}
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
-    \field{labelalpha}{WH12}
     \field{sortinit}{W}
     \field{sortinithash}{W}
     \field{title}{For the win: How game thinking can revolutionize your
@@ -827,16 +761,15 @@
     \field{year}{2012}
   \endentry
 
-  \entry{WordPressRedux}{manual}{}
+  \entry{HackernoonFlutterArcticle}{manual}{}
     \field{labeltitlesource}{title}
-    \field{labelalpha}{Wor}
     \field{sortinit}{W}
     \field{sortinithash}{W}
-    \field{title}{Read Me}
+    \field{title}{What’s Revolutionary about Flutter}
     \verb{url}
-    \verb https://reduxframework.com/
+    \verb https://hackernoon.com/whats-revolutionary-about-flutter-946915b09514
     \endverb
-    \field{year}{(Zugriff Juni 8, 2018)}
+    \field{year}{(Zugriff Juni 3, 2018)}
   \endentry
 \enddatalist
 \endinput
