@@ -237,19 +237,19 @@ Die Applikation soll mittels Flutter für Android und iOS entwickelt werden. Dab
 \end{itemize}
 
 \newpage
-\section{Ausblick auf die Bachelorarbeit}
-\par In der folgenden Dokumentation der Bachelorarbeit sind verschiedene aufeinander aufbauende Prozesse, Teilschritte und Ergebnisse der Softwareentwicklung dokumentiert. 
+\section{Aufbau der Dokumentation}
+\par In der folgenden Dokumentation sind verschiedene aufeinander aufbauende Prozesse, Teilschritte und Ergebnisse der Softwareentwicklung dokumentiert. 
 
 \par \bigskip Im Rahmen dieses Projekts werden verschiedene Inhalte aus dem Gebiet der Gamification bezüglich Software-Anwendungen behandelt. Um einen Eindruck über die Umsetzung und Bedeutung von gamifizierten Inhalten in modernen Software-Anwendungen zu bekommen, werden im \textbf{Kapitel \ref{chap:grundlagenkapitel}}, die für diese Arbeit benötigten Grundlagen beschrieben.
 \par Weiterhin enthält das Grundlagenkapitel wichtige Informationen für die Nachvollziehbarkeit der für die Entwicklung der Software gewählten Redux-Architektur unter Verwendung von Google's Framework Flutter und dessen Funktionsweise.
 
-\par \bigskip Das Durchführen der Anforderungsanalyse im Rahmen einer Softwareentwicklung, ist je nach Ausgangspunkt mit einem enormen Aufwand verbunden, da je nach Komplexität viele verschiedene Personen in ein ihnen fremdes Projekt einbezogen werden. Im Rahmen diese Projekts haben sich sowohl Professoren der Fachhochschule Lübeck als auch Studierende bereit erklärt, an Interviews und weiteren Einbindungen in das Projekt teilzunehmen und somit das zu untersuchende Problemfeld schrittweise aufzudecken. Die aus der gewählten Befragungsstrategie resultierenden Ergebnisse werden im \textbf{Kapitel \ref{chap:problemanalyse}} diskutiert und durch das Ableiten von präzisen Lösungsmöglichkeiten beschrieben.
+\par \bigskip Bei der Durchführung dieses Projekts haben sich sowohl Professoren als auch Studierende der Fachhochschule Lübeck bereit erklärt, an Interviews und weiteren Einbindungen in das Projekt teilzunehmen und somit einen Beitrag zu leisten, das zu untersuchende Problemfeld aufzudecken. Die aus der gewählten Befragungsstrategie resultierenden Ergebnisse werden im \textbf{Kapitel \ref{chap:problemanalyse}} diskutiert und durch das Ableiten von präzisen Lösungsmöglichkeiten beschrieben.
 
-\par \bigskip Basierend auf den abgeleiteten Anforderungen, werden im folgenden Verlauf der Dokumentation die verschiedenen Abstraktionsebenen der Software beschrieben. In \textbf{Kapitel \ref{chap:konzept}} wird anhand der Oberfläche der Applikation das Gesamtkonzept unter Einbezug von Hintergründen der gewählten Lösungswege und Designentscheidungen beschrieben, wohingegen in Kapitel \ref{chap:architektur} die Beschreibung der wichtigsten Details zur technischen Umsetzung der Softwarelösung ausgeführt wird.
+\par \bigskip Basierend auf den abgeleiteten Anforderungen, werden im folgenden Verlauf der Dokumentation die verschiedenen Abstraktionsebenen der Software beschrieben. In \textbf{Kapitel \ref{chap:konzept}} wird anhand der Oberfläche der Applikation das Gesamtkonzept unter Einbezug von Hintergründen der gewählten Lösungswege und Designentscheidungen beschrieben, wohingegen in \textbf{Kapitel \ref{chap:architektur}} die Beschreibung der wichtigsten Details zur technischen Umsetzung der Softwarelösung ausgeführt wird.
 
-\par \bigskip Nach der Entwicklung einer Softwarelösung sollte letztendlich immer der wichtige Schritt der Evaluation folgen, welcher in diesem Fall erneut durch das Einbeziehen von Professoren und Studierenden stattfinden konnte. Die Ergebnisse dieser Evaluation, der Softwaretest und die abschließende Bewertung des Frameworks Flutter werden im \textbf{Kapitel \ref{chap:nachweisführung}} behandelt.
+\par \bigskip Die Evaluation der umgesetzten Softwarelösung wird unter der Durchführung von Softwaretests und dem erneuten Einbeziehen von Professoren und Studierenden in Kapitel \textbf{Kapitel \ref{chap:nachweisführung}} behandelt. Zusätzlich wird in diesem Kapitel auch die abschließende Bewertung des Frameworks Flutter durchgeführt und diskutiert.
 
-\par \bigskip Jeder dieser beschriebenen Kapitel trägt im Kern die Schwerpunkte einer jeden Softwareentwicklung, welche sich zwischen technischem Fachwissen und Kompetenzen (Hard Skills) und der zwischenmenschlichen Kommunikationsfähigkeit sowie der eigenen Persönlichkeit (Soft Skills) definieren lassen. Nach Durchführung des Projekts wurden durch alle einzelnen Schritte Teil- sowie Gesamtergebnisse erreicht, welche im abschließenden \textbf{Kapitel \ref{chap:ergebnisse}} zusammenlaufen und unter Schilderung eigener Erfahrungen diskutiert werden sowie einen Ausblick auf die Zukunft des Projekt ermöglichen.
+\par \bigskip Die im Laufe des Projekts erreichten Ergebnisse werden in \textbf{Kapitel \ref{chap:ergebnisse}} zusammengefasst und dienen unter Betrachtung des zukünftigen Projektverlaufs als Grundlage für weitere dort beschriebene potentielle Ideen und Erweiterungsmöglichkeiten der Software.
 
 \chapter{Beschreibung der Kernkomponenten} 
 \par In diesem Kapitel werden die Grundlagen zur Nachvollziehbarkeit dieser Projektarbeit vermittelt. Es wird somit empfohlen die folgenden Kapitel zu Gamification, Flutter und die für die Beschreibung der Implementierungsdetails relevanten Redux-Architektur zu lesen, um ein Gesamtverständnis für Begriffe und weitere Zusammenhänge des Projekts zu ermöglichen.
@@ -259,7 +259,7 @@ Die Applikation soll mittels Flutter für Android und iOS entwickelt werden. Dab
 \label{sec:grundlagenkapitelGamification}
 \par Im folgenden Kapitel werden die für diese Arbeit relevante Informationen bezüglich Gamification vermittelt. Hierbei wird erst auf die grundlegende Bedeutung sowie deren Abgrenzung gegenüber verschiedenen Ansätzen eingegangen. Im weiteren Verlauf werden dann tiefgreifendere Informationen zu den verschiedenen Benutzerklassen und den jeweiligen kompatiblen Spiel-Design-Elementen beschrieben.
 
-\subsection{Die Bedeutung von Gamification}
+\subsection{Was ist Gamification?}
 \par Im Kontext dieser Ausarbeitung wird sich auf die in \citep{deterding2011gamification} genannte Definition für den Begriff \grqq Gamification\grqq{} bezogen:
 \begin{quotation} 
 Gamification is the use of elements of game design in non-game contexts. 
@@ -268,7 +268,7 @@ Gamification is the use of elements of game design in non-game contexts.
 \par Somit lässt sich ein Kontext bereits als \grqq gamifiziert\grqq{}
 beschreiben, sobald Spiel-Design-Elemente in den spezifischen Kontext integriert worden sind, weshalb besonders im Rahmen der Unternehmenseinführung von Gamification-Ansätzen zwischen \textbf{Enterprise Gamification} und \textbf{Serious Games} unterschieden wird\citep[vgl. Kapitel 1.1 Gamification: Definition und Abgrenzung, Seite 4]{Sailer2016}.
 \par \bigskip \textbf{Enterprise Gamification} bezeichnet das konkrete Einbinden von Gamification-Elementen in Arbeits- und/oder Lernprozessen, mit dem expliziten Ziel der Motivationssteigerung seitens der Anwender.
-\par \bigskip Gegenüber diesem Ansatz hat sich weiterhin der Begriff \textbf{Serious Games} integriert, welcher das explizite Einsetzen von Spielen in einem ernsten Kontext vorsieht und die Unterhaltung nicht im Fokus der Anwendung steht, sondern die Wertschöpfung von Wissen und Realwelterfahrungen. 
+\par \bigskip Gegenüber diesem Ansatz hat sich weiterhin der Begriff \textbf{Serious Games} etabliert, welcher das explizite Einsetzen von Spielen in einem ernsten Kontext vorsieht und die Unterhaltung nicht im Fokus der Anwendung steht, sondern die Wertschöpfung von Wissen und Realwelterfahrungen. 
 
 \newpage
 \subsection{Bekannte Spiel-Design-Elemente} \label{sub:grundlagenSpielDesignElemente}
@@ -289,7 +289,7 @@ beschreiben, sobald Spiel-Design-Elemente in den spezifischen Kontext integriert
 	Avatare, virtuelle Welten, virtueller Handel & Entwickeln/Organisieren & Selbstbestimmung \\ 
 	\bottomrule
 \end{tabularx}
-\captionof{table}{Übersicht der Spiel-Design-Elemente \citep[vgl.]{blohm2013gamification}}
+\captionof{table}{Übersicht der Spiel-Design-Elemente \citep{blohm2013gamification}}
 \label{tab:spielDesignElemente}
 
 \par \bigskip Die folgenden aufgeführten Informationen wurden größtenteils aus den Werken \citep[Kapitel 2.2.2 Analyse einzelner Spiel-Design-Elemente]{Sailer2016} und \citep[Kapitel 4 The Gamification Toolkit Game Elements]{werbach2012win} entnommen, bei Abweichungen werden die konkreten Literaturwerke aus Gründen des Leseflusses explizit angegeben.
@@ -368,13 +368,13 @@ beschreiben, sobald Spiel-Design-Elemente in den spezifischen Kontext integriert
 
 \newpage
 \section{Vorstellung des Frameworks Flutter}
+\par Im Rahmen des Projekts ergibt sich durch die Aufgabenstellung die Verwendung des Frameworks Flutter zur Entwicklung der mobilen Ziel-Applikationen. Im folgenden Verlauf wird das Framework näher betrachtet und dessen Funktionsweisen und Besonderheiten beschrieben, um einen besseren Eindruck darüber zu bekommen, warum genau Flutter als Teil der Problemlösung eingesetzt wird.
+
+\subsection{Was ist Flutter?} 
 \par Flutter ist ein von Google entwickeltes Open-Source-Framework, das auf die Entwicklung mobiler 2D-Applikationen für Android- und iOS-Betriebssysteme ausgelegt ist. 
-\par \medskip Beworben wird Flutter seit der Ankündigung der Beta-Version, welche in einem offiziellen Blogeintrag der \textbf{Google Developers}\citep{AnouncingFlutterBeta} im Rahmen des \textbf{Mobile World Congress 2018}\citep{MobileWordCongress} veröffentlicht wurde, unter anderem durch eine besonders flexibel handhabbare und mit Leichtigkeit umzusetzende Gestaltung von hochqualitativen Benutzeroberflächen. Weiterhin wird betont, dass die zu erzielenden Ergebnisse das Produkt einer extrem schnell umsetzbaren Entwicklung \grqq in Rekordzeit\grqq{} sind.
+\par \bigskip Beworben wird Flutter seit der Ankündigung der Beta-Version, welche in einem offiziellen Blogeintrag der \textbf{Google Developers}\citep{AnouncingFlutterBeta} im Rahmen des \textbf{Mobile World Congress 2018}\citep{MobileWordCongress} veröffentlicht wurde, unter anderem durch eine besonders flexibel handhabbare und mit Leichtigkeit umzusetzende Gestaltung von hochqualitativen Benutzeroberflächen. Weiterhin wird betont, dass die zu erzielenden Ergebnisse das Produkt einer extrem schnell umsetzbaren Entwicklung \grqq in Rekordzeit\grqq{} sind.
 
-\par \medskip Im folgenden Kapitel werden die Kernprinzipien von Flutter erläutert und die framework-spezifischen Besonderheiten beschrieben um Ihnen als Leser einen Eindruck von dem Framework zu ermöglichen und die grundsätzliche Funktionsweise sowie dessen Besonderheiten, hinter den werbe-zweckmäßigen Worten der öffentlichen Präsentation, nachvollziehbar zu gestalten.
-
-\subsection{Flutter Kerntechnologien} 
-Das Flutter Framework besteht aus verschiedenen Basiskomponenten, welche aus aufeinander aufbauenden Systemschichten bestehen (siehe Abbildung \ref{img:flutterHighLevelSystemOverview}) und sich auf oberster Abstraktionsebene auf die Flutter-Engine und das Flutter-Framework unterteilen lassen.
+\par \bigskip Das Flutter Framework besteht aus verschiedenen Basiskomponenten, welche aus aufeinander aufbauenden Systemschichten bestehen (siehe Abbildung \ref{img:flutterHighLevelSystemOverview}) und sich auf oberster Abstraktionsebene auf die Flutter-Engine und das Flutter-Framework unterteilen lassen.
 
 \bigskip
 \begin{figure}[H]
@@ -384,12 +384,11 @@ Das Flutter Framework besteht aus verschiedenen Basiskomponenten, welche aus auf
 	\label{img:flutterHighLevelSystemOverview}
 \end{figure}
 
-\par \bigskip Im folgenden Abschnitt werden die drei Basistechnologien von Flutter kurz beschrieben:
+\newpage
 
 \par \bigskip \textbf{Flutter Engine}
 \par Wie in dem Flutter Wiki \citep{Flu4} beschrieben wird, setzt sich die C/C++ basierte Flutter Engine aus den drei Kerntechnologien Skia\citep{Skia1}, eine open source 2D Graphics Libary, die Dart Virtual Machine sowie die verschiedenen verwendeten Bibliotheken zum Rendern von Texten zusammen.
 
-\newpage
 \par \bigskip \textbf{Foundation Libary}
 \par Die Dart-basierte Foundation Libary\citep{FoundationLibary} stellt Basisklassen und -funktionen zur Verfügung, die von den anderen in der Flutter-Architektur überliegenden Schichten genutzt werden (siehe Abbildung \ref{img:flutterHighLevelSystemOverview}) und stellt somit eine zentralen Grundlage bei der Konstruktion von Applikationen mittels dem Flutter-Framework dar.
 
@@ -409,11 +408,8 @@ Das Flutter Framework besteht aus verschiedenen Basiskomponenten, welche aus auf
 \end{figure}
 
 \newpage
-\subsection{Hot-Reload Funktion}
-\par Die sogenannte \grqq Hot Reload\grqq -Funktion spielt im Rahmen der App-Entwicklung mit Flutter eine primäre Rolle, da bei Änderungen an der Oberfläche während der Laufzeit ermöglicht wird, innerhalb von \grqq Millisekunden\grqq{} die Oberfläche neu zu generieren und das System dabei den internen Zustand beibehält. Diese Funktion soll eine schnelle und experimentelle Vorgehensweise ermöglichen.\citep{Flu1}
-
 \subsection{Flutter Widgets}
-\par Alle User-Interface Grundbausteine in Flutter werden als sogenannte Widgets bezeichnet und dementsprechend gleich behandelt(\cite[vgl. Everything’s a Widget]{Flu5}). Diese Grundbausteine stellen die jeweiligen Design- und Interaktions-Elemente der Applikation dar und umfassen verschieden spezialisierte Ausprägungen wie in Abbildung \ref{img:FlutterWidgetButtonSectionExample} beispielhaft zu sehen ist.
+\par Alle User-Interface Grundbausteine in Flutter werden als sogenannte Widgets bezeichnet und dementsprechend gleich behandelt(\cite{Flu5}). Diese Grundbausteine stellen die jeweiligen Design- und Interaktions-Elemente der Applikation dar und umfassen verschieden spezialisierte Ausprägungen wie in Abbildung \ref{img:FlutterWidgetButtonSectionExample} beispielhaft zu sehen ist.
 
 \bigskip
 \begin{figure}[H]
@@ -423,7 +419,7 @@ Das Flutter Framework besteht aus verschiedenen Basiskomponenten, welche aus auf
 	\label{img:FlutterWidgetButtonSectionExample}
 \end{figure}
 
-\par \medskip Ein in dem Artikel \citep[Widgets]{HackernoonFlutterArcticle} beschriebener wichtiger Aspekt ist, dass Flutter im Gegensatz zu anderen Alternativen eine eigens erstellte Systemschnittstellen-Architektur besitzt und nicht auf OEM-Widgets oder DOM-Web Views zurückgreift, wie in Abbildung \ref{img:hackernoonFlutterArcticleArchitecture} verdeutlicht wird. Dies ermöglicht eine extrem freie Handhabung und Individualisierung im Umgang mit den Widgets und Plattform spezifischen Diensten.
+\par \medskip Ein wichtiger Aspekt ist, dass Flutter im Gegensatz zu anderen Alternativen eine eigens erstellte Systemschnittstellen-Architektur besitzt und nicht auf OEM-Widgets oder DOM-Web Views zurückgreift\citep{HackernoonFlutterArcticle}, wie in Abbildung \ref{img:hackernoonFlutterArcticleArchitecture} verdeutlicht wird. Dies ermöglicht eine extrem freie Handhabung und Individualisierung im Umgang mit den Widgets und Plattform spezifischen Diensten.
 
 \bigskip
 \begin{figure}[H]
@@ -433,12 +429,14 @@ Das Flutter Framework besteht aus verschiedenen Basiskomponenten, welche aus auf
 	\label{img:hackernoonFlutterArcticleArchitecture}
 \end{figure}
 
-\par \medskip Diese Widgets bilden zur Laufzeit eine hierarchische Struktur und setzen sich selbst aus weiteren Widgets zusammen. Somit ist der Ursprung einer jeden Programm-Oberfläche ein Wurzel-Widget, welches wiederum Kinder-Widgets enthält und diese somit über mehrere Ebenen eine Gesamtkomposition bilden, den sogenannten \textbf{Widget Tree}. 
+\par \bigskip Diese Widgets bilden zur Laufzeit eine hierarchische Struktur und setzen sich selbst aus weiteren Widgets zusammen. Somit ist der Ursprung einer jeden Programm-Oberfläche ein Wurzel-Widget, welches wiederum Kinder-Widgets enthält und diese somit über mehrere Ebenen eine Gesamtkomposition bilden, den sogenannten \textbf{Widget Tree}. 
 
-\par \medskip Widgets können also je nach Ausprägung beispielsweise strukturierende Elemente, wie Spalten und Zeilen sowie stil-definierende Elemente in Form von Farbdefinitionen darstellen. Weiterhin können Widgets auch Interaktion-Elemente, wie Buttons und Textfelder und noch viele weitere Elemente mit unterschiedlichen Eigenschaften definieren.
+\par \bigskip Widgets können also je nach Ausprägung beispielsweise strukturierende Elemente, wie Spalten und Zeilen sowie stil-definierende Elemente in Form von Farbdefinitionen darstellen. Weiterhin können Widgets auch Interaktion-Elemente, wie Buttons und Textfelder und noch viele weitere Elemente mit unterschiedlichen Eigenschaften definieren.
 
 \subsection{Flutter UI Rendering}
-\par Flutter verwendet im Gegensatz zu anderen Alternativen nach eigener Aussage eine selbst entwickelte und optimierte Rendering-Engine, die die Benutzeroberfläche nach einer Veränderung des aktuellen Status neu generiert und diese Veränderung dem Benutzer darstellt (vgl. \citep[What makes Flutter unique?]{Flu3}). Die folgende Abbildung \ref{img:flutterHighLevelRendering} stellt einen solchen Ablauf dar.
+\par Flutter verwendet im Gegensatz zu anderen Alternativen nach eigener Aussage eine selbst entwickelte und optimierte Rendering-Engine, die die Benutzeroberfläche nach einer Veränderung des aktuellen Status neu generiert und diese Veränderung dem Benutzer darstellt\citep{Flu3}. 
+
+\par \bigskip Abbildung \ref{img:flutterHighLevelRendering} stellt den soeben beschriebenen Ablauf dar:
 
 \bigskip
 \begin{figure}[H]
@@ -452,11 +450,10 @@ Das Flutter Framework besteht aus verschiedenen Basiskomponenten, welche aus auf
 
 \newpage		
 \section{Was ist Redux?}
-\par Redux ist eine von Dan Abramovic und Andrew Clark entwickelte, im Jahr 2015 veröffentlichte  open-source Bibliothek für JavaScript-Anwendungen (vgl. \citep{ReduxWiki}). Durch die zentrale Verwaltung von Zustandsinformationen soll eine erleichterte Pflege der Konsistenz und aufgrund dessen auch eine \grqq einfache\grqq{} Wartbarkeit und Testbarkeit der Software ermöglicht werden. \citep[vgl. Abschnitt Read Me]{ReduxReadMe}
+\par Redux ist eine von Dan Abramovic und Andrew Clark entwickelte, im Jahr 2015 veröffentlichte  Open-Source Bibliothek für JavaScript-Anwendungen (vgl. \citep{ReduxWiki}). Durch die zentrale Verwaltung von Zustandsinformationen soll eine erleichterte Pflege der Konsistenz und aufgrund dessen auch eine \grqq einfache\grqq{} Wartbarkeit und Testbarkeit der Software ermöglicht werden. {ReduxReadMe}
 \par \bigskip \textit{Hinweis: Wie auch in \citep[vgl. Abschnitt Read Me]{ReduxReadMe} angemerkt wird, wird an dieser Stelle darauf hingewiesen, dass es sich hierbei nicht um das WordPress-Framework \textbf{Redux Framework}\citep{WordPressRedux} handelt.}
 
-\par Innerhalb einer Redux-Architektur existieren verschiedene Komponenten, welche jeweils einen besonderen Zweck erfüllen und durch das modulare Zusammenspiel mit anderen Komponenten in dem System eine Gesamtkomposition bilden.
-\par \bigskip Die wichtigsten Redux-spezifischen Komponenten sind \textbf{Actions}, \textbf{Reducers} und der \textbf{Store}, welche hinsichtlich Bedeutung und Funktionsweise in den nachfolgenden Kapiteln beschrieben werden:
+\par \bigskip Innerhalb einer Redux-Architektur existieren verschiedene Komponenten, welche jeweils einen besonderen Zweck erfüllen und durch das modulare Zusammenspiel mit anderen Komponenten in dem System eine Gesamtkomposition bilden. Die hierbei wichtigsten Redux-spezifischen Komponenten sind \textbf{Actions}, \textbf{Reducers} und der \textbf{Store}, welche hinsichtlich Bedeutung und Funktionsweise in den nachfolgenden Kapiteln beschrieben werden.
 
 \subsection{Actions}
 \par Wie in den Basics der Online-Dokumentation \citep{ReduxActions} beschrieben wird, definieren Actions im Rahmen von Redux hauptsächlich Informationspakete, welche unter dieser Bedeutung auch als \grqq Payload\grqq{} bezeichnet werden. Sie enthalten in erster Linie nur Informationen über die Action-spezifische Operation, wie beispielsweise das Ändern bestimmter Bestandteile des aktuellen Systemzustands.
@@ -470,7 +467,7 @@ Das Ausführen dieser Zustandsänderung wird also nicht von den Actions selbst a
 \par \bigskip \textit{Hinweis: Eine nicht den Eigenschaften von Pure Functions entsprechenden Funktion wäre das Bestimmen des Datums mit der JavaScript-Funktion Date.now(), da hier bei Ausführung immer ein unterschiedliches Ergebnis herauskommt.}
 
 \subsection{Store}
-\par Der Store ist in der Redux-Architektur das zentrale Element, welches nicht nur für die Datenhaltung des aktuellen Zustands (State) der Applikation zuständig ist, sondern auch als Schnittstelle für die Bereitstellung und Veränderung des aktuellen Systemzustands dient (vgl. \citep{ReduxStore}).
+\par Der Store ist in der Redux-Architektur das zentrale Element, welches nicht nur für die Datenhaltung des aktuellen Zustands (State) der Applikation zuständig ist, sondern auch als Schnittstelle für die Bereitstellung und Veränderung des aktuellen Systemzustands dient. \citep{ReduxStore}
 \par Im Gegensatz zu den anderen Komponenten ist der Store innerhalb der Architektur einmalig, was viele Vorteile der Redux-Architektur überhaupt erst ermöglicht.
 
 \par \bigskip \textit{Hinweis: Der Store enthält alle für die Applikation relevanten Informationen an zentraler Stelle im System in einem State Objekt.\\
@@ -841,28 +838,30 @@ Das Problem des mangelnden Zeitmanagements äußert sich auch darin, dass die St
 
 \par \bigskip Aus den Ergebnissen der Befragungen geht hervor, dass die Probleme nicht in den unterschiedlichen Ansichten der Studierenden und der Professoren liegen, da beide beteiligte Gruppen sehr kompatible Erwartungen und Ziele besitzen.
 
-\par\medskip Häufig wird von den Studierenden geäußert, dass sie sich unzureichend vorbereitet für die Bachelorarbeit fühlen und die größten Probleme der Studierenden im Bereich Zeitmanagement und dem wissenschaftlichen Arbeiten liegen. Zusätzlich äußern sich die Studierenden zu fehlenden oder unzureichend aufgebauten Kenntnissen bezüglich der Rahmenbedingungen und weiteren Informationen zu Bachelorarbeiten als Ganzes.
+\par\bigskip Häufig wird von den Studierenden geäußert, dass sie sich unzureichend vorbereitet für die Bachelorarbeit fühlen und die größten Probleme der Studierenden im Bereich Zeitmanagement und dem wissenschaftlichen Arbeiten liegen. Zusätzlich äußern sich die Studierenden zu fehlenden oder unzureichend aufgebauten Kenntnissen bezüglich der Rahmenbedingungen und weiteren Informationen zu Bachelorarbeiten als Ganzes.
 
-\par\medskip Die Professoren sehen die Probleme bei den Studierenden eindeutig auch bei dem Zeitmanagement, dem wissenschaftlichen Arbeiten, der Kommunikation und einer mangelnden Vorbereitung, bezüglich der Formalitäten und des Ablaufs einer Bachelorarbeit.
+\par\bigskip Die Professoren sehen die Probleme bei den Studierenden eindeutig auch bei dem Zeitmanagement, dem wissenschaftlichen Arbeiten, der Kommunikation und einer mangelnden Vorbereitung, bezüglich der Formalitäten und des Ablaufs einer Bachelorarbeit.
 
-\par\medskip Hervorzuheben ist der Aspekt, dass die existierenden Probleme sowohl den Professoren, als auch den Studierenden bewusst sind und unabhängig der unterschiedlich ausfallenden Sichtweisen übereinstimmen.
+\par\bigskip Hervorzuheben ist der Aspekt, dass die existierenden Probleme sowohl den Professoren, als auch den Studierenden bewusst sind und unabhängig der unterschiedlich ausfallenden Sichtweisen übereinstimmen.
 
-\par\medskip Somit lässt sich erwarten, dass die angestrebten Ziele der Studierenden und die Erwartungen der Professoren aufgrund dieser Wissens- und Erfahrungslücken unter Umständen nicht reibungslos im Rahmen der Bachelorarbeit erfüllt werden können. Auf diese Weise werden die Erwartungen der Professoren sowie die Ziele der Studierenden gefährdet und können unter Umständen nicht erfüllt werden, obwohl dies im Sinne beider Beteiligten ist.
+\par\bigskip Aufgrund der resultierenden Ergebnisse der Problemuntersuchung lässt sich erwarten, dass die angestrebten Ziele der Studierenden und die Erwartungen der Professoren aufgrund dieser Wissens- und Erfahrungslücken unter Umständen nicht reibungslos im Rahmen der Bachelorarbeit erfüllt werden können. Auf diese Weise werden die Erwartungen der Professoren sowie die Ziele der Studierenden gefährdet und können unter Umständen nicht erfüllt werden, obwohl dies im Sinne beider Beteiligten ist.
 
 \subsection{Auswahl der Motivationsstrategie}
 \par Wie aus den Ergebnissen in Kapitel \ref{sub:studentenchriftlichErgebnisse} in Tabelle \ref{tab:einbezugStudierende} abzulesen ist, äußern sich die befragten Studierenden gegenüber dem vorgestellten Designvorschlag, welcher die soziale Einbindung der Studierenden vorsieht, überwiegend sehr kritisch. Im Vergleich dazu wird die vorgestellte Variante des Einsetzens von Achievements und Aufgaben in Kombination mit Herausforderungen stark positiv bewertet.
-\par Aufgrund der eindeutigen Reaktionen der eingebundenen Studierenden wird die Entscheidung getroffen, den ersten Ansatz nicht weiter zu verfolgen, dafür aber den zweiten Ansatz auszubauen. Somit fallen die Nutzergruppen überwiegend in den Spannungsbereich der \textbf{Explorers} und \textbf{Achievers}, wie in Abbildung \ref{img:interestGraphBartleAchiversExplorers} verdeutlicht wird. 
+\par \bigskip Aufgrund der eindeutigen Reaktionen der eingebundenen Studierenden wird die Entscheidung getroffen, den ersten Ansatz nicht weiter zu verfolgen, dafür aber den zweiten Ansatz auszubauen. Somit fallen die Nutzergruppen überwiegend in den Spannungsbereich der \textbf{Explorers} und \textbf{Achievers}, wie in Abbildung \ref{img:interestGraphBartleAchiversExplorers} verdeutlicht wird. 
+
+\bigskip
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.75\textwidth, keepaspectratio]{Bilder/Diagramme/InterestGraphBartleAchieversExplorers.png}
-	\caption{Benutzeroberfläche Fortschritts-Management}
+	\caption{Eingrenzung der Bartle-Benutzerklassen}
 	\label{img:interestGraphBartleAchiversExplorers}
 \end{figure}
 
 \par Durch den vorgesehenen Kontext der Applikation, die Studierenden während der Bearbeitung der Bachelorarbeit wegweisend zu unterstützen und zu motivieren, bietet sich somit an, Herausforderungen und die damit verbundenen Achievements in Form von kontextbezogenen fokuslenkenden Game-Design-Elementen (siehe \ref{sec:grundlagenkapitelGamification}) in die Applikation als festen Bestandteil der Motivationsstrategie zu integrieren.
 
-\par\medskip Wie in \citep{Sailer2016}[S. 32 - 34] beschrieben wird, besitzen Achievements verschiedene Eigenschaften, die in Bezug auf Zielstellungen einer steuernden und in diesem Sinne auch fordernden Funktion dienen können. Ein wichtiges Kriterium bei der Wahl der Achievements als Spiel-Design-Elemente ist, dass sie dem Benutzer ein nicht-kontrollierendes, positives Feedback geben und somit nicht unangenehm kontrollieren oder den ohnehin schon sehr hoch ausfallenden Druck auf die Studierenden bei der Bearbeitung der Bachelorarbeit erhöhen. Es sollte in diesem Sinne nicht aus den Augen verloren werden, dass die Applikation den Studierenden positiv unterstützen soll.
+\par\medskip Wie bereits in Kapitel \ref{sub:grundlagenSpielDesignElemente} beschrieben wird, besitzen Achievements verschiedene Eigenschaften, die in Bezug auf Zielstellungen einer steuernden und in diesem Sinne auch fordernden Funktion dienen können. Ein wichtiges Kriterium bei der Wahl der Achievements als Spiel-Design-Elemente ist, dass sie dem Benutzer ein nicht-kontrollierendes, positives Feedback geben und somit nicht unangenehm kontrollieren oder den ohnehin schon sehr hoch ausfallenden Druck auf die Studierenden bei der Bearbeitung der Bachelorarbeit erhöhen. Es sollte in diesem Sinne nicht aus den Augen verloren werden, dass die Applikation den Studierenden positiv unterstützen soll.
 
 \par\medskip Im weiteren Verlauf werden, den Nutzergruppen entsprechend, auf Spiel-Design-Elemente wie Bestenlisten oder andere soziale Motivationsmodelle verzichtet.
 
@@ -1116,7 +1115,7 @@ Das Problem des mangelnden Zeitmanagements äußert sich auch darin, dass die St
 \subsection{Achievements}
 \par Der Achievement-Hauptbildschirm\ref{anf:spielDesignElementeBenutzerklassen} enthält eine Übersicht der verschiedenen Kategorien von Achievements (siehe Abbildung \ref{img:achievements}). Die nächste Ebene dieses Abschnitts zeigt die detaillierte Ansicht der jeweiligen Achievements an, bei welcher der Benutzer einsehen kann, welche Achievements er bereits erhalten hat. 
 
-\par \bigskip \textit{Hinweis: Weitere Informationen zu den einzelnen Achievements und deren Kategorien finden sich im Kapitel \ref{sec:gamificationelemente}.}
+\par \bigskip \textit{Hinweis: Weitere Informationen zu den einzelnen Achievements und den Abstufungen der jeweiligen Kategorien befinden sich in Kapitel \ref{sec:gamificationelemente}.}
 
 \bigskip
 \begin{figure}[H]
@@ -1394,12 +1393,13 @@ Studierende, die zur Überplanung neigen, würden dies auch ohne Applikation tun
 \newpage
 \chapter{Architektur und  prototypische Implementierungsdetails} \label{chap:architektur}
 \par Das Ziel dieses Kapitels ist es, das Verständnis für die architekturspezifischen Zusammenhänge sowie die jeweiligen softwaretechnischen Abläufe zu vermitteln. 
-\par Auf dieser Basis werden die einzelnen Architektur-Komponenten, deren Beziehungen zueinander sowie die Funktionsweise des Gesamtsystems im folgenden Verlauf erläutert und in Kapitel Die detaillierte Beschreibung der einzelnen Komponenten folgt in Kapitel \ref{sec:komponentenDetails} an geeigneter Stelle durch beispielhafte Abläufen von Nutzeraktionen beschrieben.
+\par Auf dieser Basis werden die einzelnen Architektur-Komponenten, deren Beziehungen zueinander sowie die Funktionsweise des Gesamtsystems im folgenden Verlauf erläutert. Die detaillierte Beschreibung der einzelnen Komponenten folgt in Kapitel \ref{sec:komponentenDetails} an geeigneter Stelle durch beispielhafte Abläufen von Nutzeraktionen beschrieben.
 
 \section{Architekturübersicht}
 \par Aufgrund der Vorzüge einer konsequenten zentralen Verwaltung des Zustands der Applikation, welche in diesem Rahmen auch mit einer komfortablen Wartbarkeit und den strikt getrennten und auf diese Weise auch eindeutig nachverfolgbaren Datenflüssen und Operationen einhergeht, wurde eine Architektur konstruiert, die sich an dem Redux-Architekturmuster orientiert. 
-\par Die folgende Abbildung \ref{img:architectureOverview} soll in vereinfachter Form verdeutlichen, wie die verschiedenen Komponenten der gewählten Architektur hinsichtlich des Aufbaus und des Datenflusses zueinander in Beziehung stehen. 
+\par \bigskip Die folgende Abbildung \ref{img:architectureOverview} soll in vereinfachter Form verdeutlichen, wie die verschiedenen Komponenten der gewählten Architektur hinsichtlich des Aufbaus und des Datenflusses zueinander in Beziehung stehen. 
 
+\bigskip
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.95\textwidth,keepaspectratio]{Bilder/ArchitectureOverview.png}
@@ -1638,13 +1638,13 @@ den Namen der im Repository vorliegenden JSON-Datei, welche auch weiterhin als D
 
 \newpage
 \section{Actions}
-\par Im Rahmen der auf der Anforderungsanalyse basierenden Konzeption der Softwarelösung wurden verschiede Benutzeraktionen identifiziert, welche sich größtenteils in den sogenannten Actions wiederfinden.
+\par Im Rahmen der auf der Anforderungsanalyse basierenden Konzeption der Softwarelösung wurden verschiedene Benutzeraktionen identifiziert, welche sich größtenteils in den sogenannten Actions wiederfinden.
 Für jede dieser Actions existiert eine eigene Klasse, welche im folgenden Verlauf beispielhaft an einem für alle Actions repräsentativen Fall erläutert wird.
 
 \subsection{Beispielhafte Demonstration einer Meilensteinbearbeitung}
 \par Das gewählte Beispiel bezieht sich auf die Nutzeraktion des Änderns eines Meilensteins:
 
-\par Wie in Abbildung \ref{lst:milestoneEditAction} zu sehen ist, enthält die Klasse EditMilestoneAction vier verschiedene Datenfelder. 
+\par Wie in Listing \ref{lst:milestoneEditAction} zu sehen ist, enthält die Klasse EditMilestoneAction vier verschiedene Datenfelder. 
 Der zu ändernde Meilenstein (\texttt{milestone}) sowie die jeweiligen neuen Werte newTitle, newDate und newDescription, welche die zu dem vorhandenen Meilenstein zugehörigen Werte überschreiben sollen.
 \par Es wird deutlich, dass eine solche Klasse außer dem Beinhalten der spezifischen Payload-Daten keine tiefe Funktionalität bieten soll. 
 \par Die weitere Verarbeitung der Daten wird im Kapitel \ref{sec:reducer} verdeutlicht.
@@ -1699,12 +1699,12 @@ Map<String, Milestone> ret = new SplayTreeMap<String, Milestone>();
 
 \newpage
 \section{Container}
-\par Die Container-Komponenten dienen in dieser an Redux orientierten Architektur als Schnittstelle zwischen der Benutzeroberfläche (Presentation) und dem internen Zustand der Applikation (Model). Sie stehen somit einerseits in der direkten lesenden Beziehung zu dem Store, der den aktuellen Status der Applikation beinhaltet und andererseits in Beziehung zu den Reducer-Komponenten, welche diesen Status durch das Auslösen von Actions schreibend aktualisieren. 
+\par Die Container-Komponenten dienen als Schnittstelle zwischen der Benutzeroberfläche (Presentation) und dem internen Zustand der Applikation (Model). Sie stehen somit einerseits in der direkten lesenden Beziehung zu dem Store, der den aktuellen Status der Applikation beinhaltet und andererseits in Beziehung zu den Reducer-Komponenten, welche diesen Status durch das Auslösen von Actions schreibend aktualisieren. 
 \par Im folgenden Verlauf wird dieser Ablauf an einem repräsentativen Beispiel verdeutlicht.
 
 \subsection{Beispielhafte Demonstration einer Meilensteinbearbeitung}
 
-\par Die Converter-Funktion (siehe Abbildung  \ref{lst:containerMilestoneChange}, vgl. Zeile \ref{lstNum:converter}) des StoreConnectors konvertiert den aktuellen Store in ein ViewModel, welches die für die Presentation-Komponente relevanten Daten in der Builder-Funktion (vgl. Zeile \ref{lstNum:builder}) bereitstellen kann.
+\par Die Converter-Funktion (siehe Listing  \ref{lst:containerMilestoneChange}, vgl. Zeile \ref{lstNum:converter}) des StoreConnectors konvertiert den aktuellen Store in ein ViewModel, welches die für die Presentation-Komponente relevanten Daten in der Builder-Funktion (vgl. Zeile \ref{lstNum:builder}) bereitstellen kann.
 
 \bigskip
 \begin{lstlisting}[caption={Container-Komponente einer Meilensteinänderung},captionpos=b, label=lst:containerMilestoneChange]
@@ -1727,7 +1727,7 @@ class EditMilestone extends StatelessWidget {
 \end{lstlisting}
 \bigskip
 
-\par In der ViewModel-Klasse werden einerseits die Informationen aus dem Store geladen (vgl. Zeile \ref{lstNum:getStore}) und weiterhin auch die getätigten Actions gesendet (vgl. Zeile \ref{lstNum:sendAction}). Letzteres funktioniert durch das Übermitteln von Callback Funktionen an die Presentation-Komponente (siehe Abbildung \ref{lst:containerMilestoneChange}, vgl. Zeile \ref{lstNum:addEditMilestoneScreen}).
+\par In der ViewModel-Klasse (siehe Listing \ref{lst:containerMilestoneChangeViewModel}) werden einerseits die Informationen aus dem Store geladen (vgl. Zeile \ref{lstNum:getStore}) und weiterhin auch die getätigten Actions gesendet (vgl. Zeile \ref{lstNum:sendAction}). Letzteres funktioniert durch das Übermitteln von Callback Funktionen an die Presentation-Komponente (siehe Abbildung \ref{lst:containerMilestoneChange}, vgl. Zeile \ref{lstNum:addEditMilestoneScreen}).
 
 \newpage
 \bigskip
@@ -1765,7 +1765,7 @@ class _ViewModel {
 
 \subsection{Beispielhafte Demonstration einer Meilensteinbearbeitung}
 
-\par Wie in Abbildung \ref{lst:submitMilestoneChange} zu sehen ist, wird die von der Container-Komponente übermittelte Callback-Funktion addEditMilestone bei Bestätigen der vom Nutzer eingegebenen Inhalte ausgeführt. Darunter zählen in diesem Fall die der Titel, das Datum und eine optionale Beschreibung des bearbeiteten Meilensteins.
+\par Wie in Listing \ref{lst:submitMilestoneChange} zu sehen ist, wird die von der Container-Komponente übermittelte Callback-Funktion addEditMilestone bei Bestätigen der vom Nutzer eingegebenen Inhalte ausgeführt. Darunter zählen in diesem Fall die der Titel, das Datum und eine optionale Beschreibung des bearbeiteten Meilensteins.
 
 \bigskip
 \begin{lstlisting}[caption={Bestätigung einer Meilensteinänderung Methode},captionpos=b, label=lst:submitMilestoneChange]
@@ -1789,8 +1789,8 @@ void submit(context) {
 \par Im Folgenden wird die eingesetzte Middleware beschrieben, welche im Rahmen der prototypischen Entwicklung der Applikation für die Verwaltung von Push-Notifications und das lokale Speichern und Laden des aktuellen Zustands bei Schließen und Öffnen der Applikation zuständig ist.
 
 \subsection{Beispielhafte Demonstration der Notification Middleware}
-\par Wie in Abbildung \ref{lst:notificationMiddleware} zu sehen ist, wird auch hier wie in den Reducer-Komponenten innerhalb dieser Middleware eine Abfrage zu der Art der ausgelösten Actions getätigt (vgl. Zeile 6). Sollte die Bedingung, dass es sich um eine SendAchievementNotificationAction handelt, nicht bestätigen, so wird die eingegangene Action sofort weiter an die Reducer-Komponenten geleitet(vgl. Zeile 21). Falls sich die Bedingung jedoch als wahr herausstellt, so wird der darauffolgende Ablauf von Befehlen ausgeführt, welcher sich hier auf das Auslösen einer Notification bezieht. 
-\par Eine Besonderheit innerhalb dieser Komponente ist die Verwendung eines Completers, welcher als Teil der Action Payload übermittelt wurde. 
+\par Wie in Listing \ref{lst:notificationMiddleware} zu sehen ist, wird auch hier wie in den Reducer-Komponenten innerhalb dieser Middleware eine Abfrage zu der Art der ausgelösten Actions getätigt (vgl. Zeile 6). Sollte die Bedingung, dass es sich um eine SendAchievementNotificationAction handelt, nicht bestätigen, so wird die eingegangene Action sofort weiter an die Reducer-Komponenten geleitet(vgl. Zeile 21). Falls sich die Bedingung jedoch als wahr herausstellt, so wird der darauffolgende Ablauf von Befehlen ausgeführt, welcher sich hier auf das Auslösen einer Notification bezieht. 
+\par \bigskip Eine Besonderheit innerhalb dieser Komponente ist die Verwendung eines Completers, welcher als Teil der Action Payload übermittelt wurde. 
 \par \bigskip \textit{Hinweis: Ein Completer ist eine von Dart gegebene Klasse, die es in diesem Fall ermöglicht, eine zukünftig ausgeführte Funktion so zu behandeln, als wären der Rückgabewert bereits bekannt. Weitere Informationen hierzu, sind in der Dart Dokumentation zu finden (vgl. \citep{DartCompleter})}.
 
 \bigskip
@@ -1885,7 +1885,7 @@ Future<dynamic> checkAchievementNotification(context) {
 
 \par \bigskip Die eigentliche Testdurchführung wurde auf dem eigenen, dafür vorbereiteten, Smartphone durchgeführt, wobei das Bildschirmgeschehen aller Tests mithilfe einer Software aufgezeichnet wurde, jedoch ist eine der Dateien durch einen unbekannten Datenfehler nicht korrekt aufgezeichnet worden und somit nicht verwendbar.
 
-\par Des Weiteren wurden nach vorher eingeholter Erlaubnis der Testpersonen ein Audiomitschnitt erzeugt. Dieser Audiomitschnitt wurde von beiden Professoren und insgesamt 3 von 4 Studierenden zugelassen. Diese Audiomitschnitte unterliegen jedoch aus nicht bekannten Gründen einer schlechten Aufnahmequalität. Es wurden jedoch unmittelbar nach jedem Interview Notizen angefertigt, welche im Anhang dieses Dokuments zu finden sind (siehe Anhang TODO).
+\par Des Weiteren wurden nach vorher eingeholter Erlaubnis der Testpersonen ein Audiomitschnitt erzeugt. Dieser Audiomitschnitt wurde von beiden Professoren und insgesamt 3 von 4 Studierenden zugelassen. Es wurden unmittelbar nach jedem Interview Notizen angefertigt, welche im Anhang dieses Dokuments zu finden sind (siehe Anhang TODO).
 
 \par \bigskip Der verwendete Testablauf, welcher sich aus nacheinander gestellten Aufgaben zusammensetzt, ist im Anhang zu finden und Umfasst zehn Aufgaben (siehe TODO ANHANG).
 \par Die Aufgaben orientieren sich an den verschiedenen Softwarefunktionen der entwickelten Applikation und umfassen das Verwenden aller Kernfunktionen. 
@@ -1893,8 +1893,7 @@ Future<dynamic> checkAchievementNotification(context) {
 
 \newpage
 \subsection{Zusammenfassung der Testdurchführung mit den Studierenden}
-\par Zusammenfassend hat sich ergeben, dass alle Testpersonen die vorgegebenen Aufgaben fast ohne Schwierigkeiten lösen konnten und der Großteil der Aufgaben ohne Hilfestellung des Moderators erfüllt werden konnten.
-\par Falls Unklarheiten bezüglich des Lösens der Aufgaben bei den Testpersonen aufgetreten sind, so konnten diese größtenteils selbstständig beseitigt werden.
+\par Zusammenfassend hat sich ergeben, dass alle Testpersonen die vorgegebenen Aufgaben fast ohne Schwierigkeiten lösen konnten und der Großteil der Aufgaben ohne Hilfestellung des Moderators erfüllt werden konnten. Falls Unklarheiten bezüglich des Lösens der Aufgaben bei den Testpersonen aufgetreten sind, so konnten diese größtenteils selbstständig beseitigt werden.
 
 \par \bigskip Im folgenden Verlauf werden die Ergebnisse des Tests, nach dem Ablauf der jeweiligen Aufgaben kategorisiert, dargestellt. Weiterhin werden, falls vorhanden, die Kernaussagen der aufgabenspezifischen Kommentare und Wünsche zur Softwaregestaltung und den Features der Testpersonen beschrieben.
 
@@ -2008,7 +2007,7 @@ Future<dynamic> checkAchievementNotification(context) {
 \section{Bewertung des Frameworks Flutter zur Entwicklung von mobilen Appliaktionen}
 \par Im Laufe der in dieser Arbeit durchgeführten Entwicklung einer Applikation mit dem Frameworks Flutter haben sich sowohl subjektive Erfahrungen als auch objektive Fakten ergeben, die im folgenden Verlauf unter der Fragestellung, inwiefern sich Flutter für die Entwicklung von mobilen Applikationen eignet, bewertet werden.
 
-\par \bigskip Die Wahl der Bewertungskriterien orientiert sich zum einen an den, im Rahmen einer Softwareentwicklung bezeichnenden, Eigenschaften eines Frameworks. Dazu gehören die Qualität der Dokumentation, die Komplexität des Erarbeitungsaufwandes, die Wahl der zu verwendenden Programmiersprache, die  Handlichkeit der allgemeinen Anwendung, die Performance-Eigenschaften und der Support sowie die zugehörige Community-Aktivität des Frameworks. \par Zum anderen werden die framework-spezifischen Merkmale mit in den Bewertungsumfang einbezogen, um die klaren, den Anwendungsfall betreffenden, Stärken des Frameworks abzubilden.
+\par \bigskip Die Wahl der Bewertungskriterien orientiert sich zum einen an den, im Rahmen einer Softwareentwicklung bezeichnenden, Eigenschaften eines Frameworks. Dazu gehören die Qualität der Dokumentation, die Komplexität des Erarbeitungsaufwandes, die Wahl der zu verwendenden Programmiersprache, die  Handlichkeit der allgemeinen Anwendung, die Performance-Eigenschaften und der Support sowie die zugehörige Community-Aktivität des Frameworks. \par Zum anderen werden die Framework-spezifischen Merkmale mit in den Bewertungsumfang einbezogen, um die klaren, den Anwendungsfall betreffenden, Stärken des Frameworks abzubilden.
 
 \subsection{Einführung und Dokumentation}
 \par Das Framework Flutter weist eine ausführlich gestaltete und sehr gut strukturierte Online-Dokumentation vor, welche besonders auf die, für Einsteiger wichtigsten und interessantesten, Funktionen mit ausführlichen Beispielanwendungen und Schritt-für-Schritt Anleitungen eingeht.
@@ -2031,8 +2030,8 @@ Besonders wird dies durch die Hilfestellungen der zielplattform-spezifischen \te
 \par \bigskip Es ist zwar möglich, eine virtuelle Maschine mit einem MacOS-Betriebssystem einzurichten, jedoch gestaltet sich das eventuell sehr umständlich und nicht sehr praktikabel. Da jedoch bei der Entwicklung einer plattformübergreifenden Applikation das Ausführen auf allen Zielplattformen aus Testzwecken vorgesehen sein sollte, erfährt man als Entwickler unter Umständen Unannehmlichkeiten.
 
 \subsection{UI-Performance}
-\par Da Flutter-Applikationen nativ kompiliert ausgeführt werden, sollte es laut Dokumentation auf einfache Weise möglich sein, bei der Ausführung von Software konstante 60 Bilder in der Sekunde zu erreichen. \citep[Abschnitt \grqq What kind of App Performance can I expext?\grqq]{Flu3}
-\par \bigskip Weiterhin bietet Flutter den sogenannten \textbf{Flutter Performance Profiler}\citep{FlutterPerformanceProfiler}, der es ermöglicht, die Performance-Eigenschaften der Applikation bei Laufzeit zu Überwachen. 
+\par Da Flutter-Applikationen nativ kompiliert ausgeführt werden, sollte es laut Dokumentation auf einfache Weise möglich sein, bei der Ausführung von Software konstante 60 Bilder in der Sekunde zu erreichen\citep{Flu3}. Weiterhin bietet Flutter den sogenannten \textbf{Flutter Performance Profiler}\citep{FlutterPerformanceProfiler}, der es ermöglicht, die Performance-Eigenschaften der Applikation bei Laufzeit zu Überwachen. 
+\par \bigskip Da die entwickelte Software jedoch nicht die Komplexität aufweist, bei der potenzielle Einbrüche der Performance zu erwarten wären, kann dieser Aspekt nicht überprüfbar bewertet werden.
 
 \subsection{Support und Community}
 \par Da sich Flutter noch in der Beta-Phase der Entwicklung befindet, ist mit einigen Problemen beim Einsatz zu rechnen, jedoch kann bei Nachverfolgung der im Git-Repository erfolgenden Fortschritte und Meilensteine im Allgemeinen davon ausgegangen werden, dass kontinuierlich an regelmäßigen Updates und Softwareverbesserungen gearbeitet wird.
@@ -2044,34 +2043,29 @@ Besonders wird dies durch die Hilfestellungen der zielplattform-spezifischen \te
 
 \subsection{Zusammenfassung der Bewertung}
 \par Zusammenfassend lässt sich sagen, dass sich Flutter ausgesprochen gut für die zielgruppennahe Front-End-fokussierte Entwicklung von mobilen Applikationen nutzen lässt. Die größten Stärken von Flutter liegen ganz eindeutig in den schnell und effizient zu erreichenden Ergebnissen, was Oberflächendesign betrifft. Die Kunden und späteren Nutzer können unkompliziert in die Entwicklung und Veränderung der Oberfläche miteinbezogen werden, was sich in der Entwicklung von mobilen Applikationen stark anbietet.
-\par \bigskip Allerdings muss darauf hingewiesen werden, dass Flutter aus der eigenen Natur heraus kein Alleskönner ist, was sich durch die Präsentation des Frameworks seitens Google in der Öffentlichkeit erst auf den Zweiten Blick erahnen lässt, da der Konsument der Dokumentation oder der verschiedenen veröffentlichten Vorträge von dem vermeintlichen Überschuss an Vorteilen überwältigt wird.
 
-\par \bigskip Ab einem gewissen Punkt müssen die jeweiligen Entwickler selbst tätig werden oder auf bereits entwickelte externe Plug-Ins zurückgreifen und können sich, wie beispielsweise bei den in Kapitel \ref{sub:handhabungFLutter} angesprochenen Push-Notifications, nicht allein auf Flutter stützen. Dies kann wiederum unter Umständen zu einer erhöhten Komplexität hinsichtlich der Wartbarkeit der Software führen, da sich somit auf eigene Verantwortung von Googles Versprechen einer plattformunabhängigen Entwicklung entfernt wird.
+\par \bigskip Allerdings muss darauf hingewiesen werden, dass Flutter aus der eigenen Natur heraus kein Alleskönner ist, was sich durch die Präsentation des Frameworks seitens Google in der Öffentlichkeit erst auf den Zweiten Blick erahnen lässt, da der Konsument der Dokumentation oder der verschiedenen veröffentlichten Vorträge von dem vermeintlichen Überschuss an Vorteilen überwältigt wird. Beispielhaft hierfür ist das Handhaben der in Kapitel \ref{sub:handhabungFLutter} angesprochenen Push-Notifications, da diese Funktionalität nicht durch Framework Flutter gegeben ist. Dieser Umstand kann möglicherweise zu einer erhöhten Komplexität hinsichtlich der Wartbarkeit der Software führen, da sich somit auf eigene Verantwortung von Googles Versprechen einer plattformunabhängigen Entwicklung entfernt wird.
 
 \par \bigskip Flutter wird im Rahmen dieser Diskussion als sehr geeignet für die Entwicklung mobiler Applikationen bewerten, da das Framework viele Funktionen bietet oder vereinfacht, welche ihre Stärken besonders in der benutzernahen Softwareentwicklung hinsichtlich der schnell zu generierenden prototypischen Fortschritte und Änderungen von Oberflächen-Konzepten zeigen. Mit der Programmiersprache Dart enthält Flutter weiterhin eine optimierte und mächtige Programmiersprache, welche im Gegensatz zu der fokussierten Front-End-Ausrichtung von Flutter auch ein breites Spektrum von Möglichkeiten für die Back-End-Entwicklung bietet.
 
-\par \bigskip Es bleibt jedoch abzuwarten, ob das Framework Flutter bezüglich der Relevanz in den nächsten Jahren von Bedeutung bleibt oder ob es genauso schnell wieder vom Markt verschwindet, wie es erschienen ist.
+\chapter{Zusammenfassung} \label{chap:ergebnisse}
+\par Im folgenden zusammenfassenden Kapitel werden die erreichten Ergebnisse sowie die während der Arbeit aufgetretenen Schwierigkeiten und Erkenntnisse resümiert. Außerdem wird ein Ausblick der Software gegeben und die im Laufe der Arbeit gesammelten Ideen zur Weiterführung des Projekts kurz beschrieben.
 
-\chapter{Präsentation der Ergebnisse} \label{chap:ergebnisse}
-\par Die Erstellung einer Bachelorarbeit ist mit dem Durchlaufen vieler verschiedener Teilprozesse verbunden, wobei jeder dieser Teilprozesse unterschiedliche Erkenntnisse, Zusammenhänge sowie auch Probleme offenbaren kann.
-\par Im folgenden zusammenfassenden Kapitel werden die erreichten Ergebnisse sowie die während der Arbeit aufgetretenen Schwierigkeiten und Erkenntnisse resümiert. Außerdem wird ein Ausblick der Software gegeben und die im Laufe der Arbeit gesammelten und entwickelten Ideen beschrieben.
+\section{Die wichtigsten Erkenntnisse der Arbeit}
+Die Untersuchung dieses Problembereiches brachte im Allgemeinen das Ergebnis hervor, dass Studierende und Professoren im Kern sehr ähnliche Erwartungen und Ansichten bezüglich dem Bearbeiten von Bachelorarbeiten haben und das eigentliche Problem in der Ausführung des Projekts selbst liegt. Studierende sehen sich hierbei zum ersten Mal mit einem umfangreichen und derart komplexen Projekt konfrontiert, welches sie in dieser Form an ihre Grenzen treibt. Die hierbei auftretenden Schwierigkeiten lassen sich größtenteils auf die fehlende praktische Erfahrung mit solchen Projekten zurückführen, da diese Erfahrungen in einem solchem Umfang vorher nicht im Studium behandelt werden können. Die Durchführung einer wissenschaftlichen Arbeit, sowie die zu einem solchen Projekt zugehörige durchdachte Zeitplanung, stellt somit im Laufe der Bachelorarbeit die erste komplexe Lernerfahrung und große Herausforderung dar.
 
-\section{Wichtigsten Erkenntnisse der Arbeit}
-Die Untersuchung dieses Problembereiches brachte im Allgemeinen das Ergebnis hervor, dass Studierende und Professoren im Kern sehr kooperierende Erwartungen und Ansichten bezüglich dem Bearbeiten von Bachelorarbeiten haben und das eigentliche Problem in der Ausführung des Projekts selbst liegt. 
-
-\par \bigskip Studierende sehen sich zum ersten Mal mit einem umfangreichen und komplexen Projekt konfrontiert, wofür sie nicht ausreichend Vorwissen besitzen. Die fehlenden Kompetenzen umfassen somit überwiegend das Wissen um die Eigenschaften und die Durchführung einer wissenschaftlichen Arbeit, sowie der mangelhaften Zeitplanung, die laut der ermittelten und überwiegend einheitlich ausfallenden Aussagen der befragten Personen im Laufe des Studiums nicht ausreichend ausführlich vermittelt wird. 
-\par Das größte identifizierte Problem hierbei ist, dass sich Zeitplanung nur durch eigens gesammelte Praxiserfahrung und nicht durch das theoretische Aneignen von Fachwissen oder Besuchen des, an der Fachhochschule Lübeck angebotenen, Bachelorarbeit-Seminars erlernen lässt. Da die im Studium durchlaufenen Projekte jedoch meist in Gruppenarbeit verlaufen und zudem, besonders aus diesem Grund, sehr überschaubar ausfallen, kommt es unter Umständen nicht zu dem gewünschten Lernprozess. Die somit erste \textbf{Forderung} von Zeitmanagement mündet offenbar in einer \textbf{Überforderung} bei der Bearbeitung der Bachelorarbeit.
-\par Hinsichtlich der fachspezifischen Kompetenzen der Informatik gibt es auffallend wenig Schwierigkeiten, da Studierende im Laufe des Studiums an der Fachhochschule Lübeck größtenteils die für die Bachelorarbeit benötigten Methoden, Werkzeuge und Fähigkeiten durch die zahlreichen und vielseitigen Module vermittelt bekommen haben.
+\par \bigskip Das größte identifizierte Problem hierbei ist, dass sich Zeitplanung nur durch eigens gesammelte Praxiserfahrung und nicht durch das theoretische Aneignen von Fachwissen oder Besuchen des, an der Fachhochschule Lübeck angebotenen, Bachelorarbeit-Seminars erlernen lässt. Da die im Studium durchlaufenen Projekte meist in Gruppenarbeit verlaufen und zudem, besonders aus diesem Grund, sehr überschaubar für den Einzelnen ausfallen, kommt es unter Umständen nicht zu einem vorherigen Lernprozess, dieser Größenordnung. Die somit erste \textbf{Forderung} von Zeitmanagement mündet offenbar in einer \textbf{Überforderung} bei der Bearbeitung der Bachelorarbeit.
+\par \bigskip Hinsichtlich der fachspezifischen Kompetenzen der Informatik gibt es auffallend wenig Schwierigkeiten, da Studierende im Laufe des Studiums an der Fachhochschule Lübeck größtenteils die für die Bachelorarbeit benötigten Methoden, Werkzeuge und Fähigkeiten durch die zahlreichen und vielseitigen Module theoretisch und auch praktisch vermittelt bekommen haben.
 
 \par \bigskip Das Ergebnis der Nutzungsevaluation brachte hervor, dass die Softwarelösung durchaus Potential zur Qualitätssteigerung der Bachelorarbeiten von Studierenden haben kann. Besonders die enthaltene Funktion der Herausforderungen als Leitfaden sowie der Bachelorarbeit-Guide als Informationsquelle stoßen auf hohen Zuspruch seitens der Professoren und der Studierenden. Um eine ausreichend fundierte Aussage über den Nutzen der Software zu ermöglichen, muss jedoch ein Praxis-Test durchgeführt werden, welcher sich im Optimalfall auf mehrere Iterationen von Bachelorarbeit-Studiengängen bezieht.
 
 \newpage
 \section{Schwierigkeiten bei der Bearbeitung}
-\par Als persönliche größte Schwierigkeit betrachte ich das Zeit- und Aufwandsmanagement des Gesamtprozesses, da die zugehörigen Teilprozesse auf eine unvorhergesehen hohe Komplexität gewachsen sind. Konkret zähle ich hierzu besonders das Durchlaufen der Anforderungsanalyse, welche durch die in diesem Projekt detaillierte Vorgehensweise der Durchführung und Auswertung der Interviews und Befragungen, einen enormen Arbeitsaufwand eingenommen hat. Ferner führte dies jedoch auch zu einem sehr detaillierten Bild des Problembereiches, welches in Kapitel \ref{chap:problemanalyse} ausführlich beschrieben wird. Dies wird im Rahmen der Entwicklung dieser Applikation als essenziell und von hohem Wert betrachtet.
-\par Durch diesen betriebenen Aufwand kam es somit bei den darauf folgenden, nicht parallelisierbaren Teilprozessen zu einer starken Verschiebung im Zeitplan, was wiederum zu einer Minderung der Gesamtqualität des Projektausgangs geführt hat.
-\par Dies wurde vor allem in der Evaluationsphase als enorme zu bewältigende Schwierigkeit wahrgenommen, weshalb die Auswertung des Nutzens der Applikation als nicht ausreichend fundamentiert angesehen werden kann. Dies liegt jedoch weiterhin an den eingeschränkten Evaluationsmöglichkeiten, die durch den Rahmen des Projekts innerhalb so kurzer Zeit gegeben ist, da hierfür eigentlich ein groß angelegter Einbezug von Studierenden und Professoren über mehrere Iterationen von Bachelorarbeiten nötig wäre, um die gewünschte Aussagekraft zu erhalten.
+\par Als persönliche größte Schwierigkeit betrachte ich das Zeit- und Aufwandsmanagement des Gesamtprozesses, da die zugehörigen Teilprozesse auf eine unvorhergesehen hohe Komplexität gewachsen sind. Konkret zähle ich hierzu besonders das Durchlaufen der Anforderungsanalyse, welches durch die in diesem Projekt detaillierte Vorgehensweise der Durchführung und Auswertung der Interviews und Befragungen, einen enormen Arbeitsaufwand eingenommen hat. Das gewählte Vorgehensmodell führte jedoch auch zu einem sehr detaillierten Bild des Problembereiches, was im Rahmen der Entwicklung dieser Applikation als essenziell betrachtet wird. 
 
-\par \bigskip Dennoch werden die umgesetzten Bestandteile der Aufgabenstellung im folgenden Verlauf erläutert und dienen somit als neuer Ausgangspunkt des Projekt.
+\par \bigskip Durch diesen betriebenen Aufwand kam es somit bei den darauf folgenden, nicht parallelisierbaren Teilprozessen zu einer starken Verschiebung im Zeitplan, was wiederum zu einer Minderung der Gesamtqualität des Projektausgangs geführt hat. Dies wurde vor allem in der Evaluationsphase als enorme zu bewältigende Schwierigkeit wahrgenommen, weshalb die Auswertung des Nutzens der Applikation unter Zunahme weiterer Gründe als nicht vollwertig betrachtet werden kann. Die weiteren Gründe hierfür sind die eingeschränkten Möglichkeiten zur Nutzungsevaluation, welche durch den Rahmen des Projekts innerhalb der gegebenen Bearbeitungsfrist, als nicht ausreichend umsetzbar angesehen werden. Der hierfür zu investierende Aufwand wäre ein groß angelegter Einbezug von Studierenden und Professoren, welcher bestenfalls über mehrere Iterationen von Bachelorarbeiten umgesetzt werden müsste, um die gewünschte Aussagekraft zu erhalten.
+
+\par \bigskip In dem folgenden Verlauf werden die erreichten Ergebnisse bezüglich der in der Aufgabenstellung definierten Ziele beschrieben und dienen somit als Ausgangspunkt des Projekts.
 
 \section{Erfüllung der Aufgabenstellung}
 \par Bei der Durchführung des Projektes wurde die Erfüllung der Aufgabenstellung als zentrales Projektziel angesehen. Hierbei gestaltete es sich jedoch aus Zeitgründen schwierig, die angestrebte Qualität in voller Gänze zu erreichen und es mussten bezüglich der Vollständigkeit einige Abstriche gemacht werden.
@@ -2086,13 +2080,13 @@ Die Untersuchung dieses Problembereiches brachte im Allgemeinen das Ergebnis her
 \par Hinsichtlich der Erweiterbarkeit ist es bei den Herausforderungen und Achievements im Gegensatz zu dem Bachelorarbeit Guide zum Ende des Projekts nicht möglich, diese software-extern zu bearbeiten oder hinzuzufügen, jedoch lässt sich auch diese Funktion bei mehr Investition von Zeit und Aufwand nachträglich in das Projekt integrieren.
 
 \subsection{Unterstützung bei Zeitplanung}
-\par Um die Studierenden bei der Zeitplanung der Bachelorarbeit zu unterstützen, wurde eine Softwarefunktion implementiert, welche es den Studierenden ermöglicht, Meilensteine und Teilaufgaben individuell zu verwalten und diese durch eine geeignete Oberflächenpräsentation in Form eines Zeitstrahls als permanenten Begleiter und somit auch als Erinnerungsmöglichkeit innerhalb der Applikation zu visualisieren. Eine konkrete Lösung durch interaktive Erinnerungen, welche beispielsweise mittels Push-Benachrichtigungen ausgelöst werden könnten ist zum Ende des Projektes nicht umgesetzt worden. Dies lässt sich jedoch durch die gewählte Architektur nachträglich in das Projekt integrieren.
+\par Um die Studierenden bei der Zeitplanung der Bachelorarbeit zu unterstützen, wurde eine Softwarefunktion implementiert, welche es den Studierenden ermöglicht, Meilensteine und Teilaufgaben individuell zu verwalten und diese durch eine geeignete Oberflächenpräsentation in Form eines Zeitstrahls als permanenten Begleiter und somit auch als Erinnerungsmöglichkeit innerhalb der Applikation zu visualisieren. Eine konkrete Lösung durch interaktive Erinnerungen, welche beispielsweise mittels Push-Benachrichtigungen ausgelöst werden könnten ist zum Ende des Projektes nicht umgesetzt worden. Dies lässt sich jedoch durch die Nutzung der von dem \textbf{Local Notification Plugin} gegeben Scheduled-Notification Funktion nachträglich in das Projekt integrieren, da die vorhandenen Informationen der Meilensteine zur weiteren Verarbeitung hierfür bereits vorhanden sind. 
 
 \subsection{Motivation der Studierenden}
 \par Um Studierende bei der Durchführung der Bachelorarbeit zu motivieren, wurde ein Gamification-System implementiert, welches den Studierenden bei Erfüllung von Herausforderungen und Benutzung der Applikation ein positives Feedback vermitteln soll. Dies geschieht bei Erfüllen von Herausforderungen durch das Auslösen von Notifications, welche den Herausforderungen entsprechend ironische, sarkastische und lobende Texte oder Sprüche enthalten. Diese Texte und Sprüche bilden gemeinsam mit sich durch die Wertigkeit unterscheidenden Medaillen, den Inhalt der sammelbaren Achievements. Inwiefern diese Strategie ihre Wirkung zur Motivationssteigerung beitragen kann, ist als sehr Zielgruppen-spezifisch anzusehen und sollte weiterhin untersucht werden. Bei einigen Personen wirkt das Feedback laut der Evaluation durchaus positiv auf die Motivation, bei anderen jedoch nicht.
 
-\section{Ausblick des Projekts}
-\par Der Abschluss dieses Projekts definiert einen Orientierungspunkt, welcher einen Ausblick auf weitere zukünftig zu bearbeitende Fragestellungen und die Gestaltung der Softwarelösung zulässt. In diesem Kapitel werden die Fragen und Ansätze, welche im Rahmen dieses Projekts nicht untersucht oder realisiert werden konnten, angesprochen.
+\section{Fortführung des Projekts}
+\par In diesem Kapitel werden die Fragen und Ansätze, welche im Rahmen dieses Projekts nicht untersucht oder realisiert werden konnten, angesprochen und beschrieben.
 
 \subsection{Ausblick auf weitere Untersuchungen}
 \par Im Laufe der Anforderungsanalyse wurde im Rahmen der Interviews oft über die zeitliche Konstellation und Abfolge der an der Fachhochschule Lübeck verfügbaren Module diskutiert, da zum jetzigen Zeitpunkt kein konkretes Modul zur Vorbereitung auf das wissenschaftliche Arbeiten angeboten wird. Eine Problemuntersuchung hinsichtlich des Bedarfs an einem solchen Modul oder einer Alternativlösung wird nach Abschluss dieses Projekts empfohlen.
@@ -2117,8 +2111,9 @@ Die Untersuchung dieses Problembereiches brachte im Allgemeinen das Ergebnis her
 
 \item \textbf{Dynamische Wochenberichte}
 \par Ein gutes Feature um dem Benutzer zu zeigen was dieser diese Woche geschafft hat, könnte durch abschließende Berichte einer Woche umgesetzt werden. Hierbei könnte dem Benutzer durch eine Übersicht gezeigt werden welche Aktionen er an welchem Tag durch nutzen der Meilensteinplanung getätigt hat. Beispielsweise wären hierfür das Erfüllen von eigens erstellten Unteraufgaben der Meilensteine oder das abschließen eines Meilenstein als ganzes. Weiterhin könnte dem Nutzer hier auch angezeigt werden welche Erfolge er hinsichtlich den Herausforderungen und Achivements geschafft hat. Auf diese Weise könnte der bereits vorhandene Softwareinhalt genutzt werden und ohne großen Erweiterungsaufwand zu einer Qualitätssteigerung der Benutzererfahrung führen.
-
 \end{itemize}
+
+\section{Abschließende Worte}
 
 \listoftables
 \listoffigures

@@ -5,19 +5,19 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {1.1}Motivation}{1}{section.1.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.1.1}Online-Umfrage zur Ermittlung der Bedarfssituation}{2}{subsection.1.1.1}
+\contentsline {subsection}{\numberline {1.1.1}Voruntersuchung zur Ermittlung der Bedarfssituation}{2}{subsection.1.1.1}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {1.2}L\IeC {\"o}sungsansatz und Zielstellung}{4}{section.1.2}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {1.3}Aufgabenbeschreibung}{4}{section.1.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {1.4}Ausblick auf die Bachelorarbeit}{6}{section.1.4}
+\contentsline {section}{\numberline {1.4}Aufbau der Dokumentation}{6}{section.1.4}
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {2}Beschreibung der Kernkomponenten}{7}{chapter.2}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {2.1}Gamification}{7}{section.2.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.1.1}Die Bedeutung von Gamification}{7}{subsection.2.1.1}
+\contentsline {subsection}{\numberline {2.1.1}Was ist Gamification?}{7}{subsection.2.1.1}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {2.1.2}Bekannte Spiel-Design-Elemente}{8}{subsection.2.1.2}
 \defcounter {refsection}{0}\relax 
@@ -25,15 +25,13 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {2.2}Vorstellung des Frameworks Flutter}{12}{section.2.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.2.1}Flutter Kerntechnologien}{12}{subsection.2.2.1}
+\contentsline {subsection}{\numberline {2.2.1}Was ist Flutter?}{12}{subsection.2.2.1}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {2.2.2}Plattform\IeC {\"u}bergreifende Entwicklung von mobilen Applikationen}{13}{subsection.2.2.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.2.3}Hot-Reload Funktion}{14}{subsection.2.2.3}
+\contentsline {subsection}{\numberline {2.2.3}Flutter Widgets}{14}{subsection.2.2.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.2.4}Flutter Widgets}{14}{subsection.2.2.4}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.2.5}Flutter UI Rendering}{15}{subsection.2.2.5}
+\contentsline {subsection}{\numberline {2.2.4}Flutter UI Rendering}{15}{subsection.2.2.4}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {2.3}Was ist Redux?}{16}{section.2.3}
 \defcounter {refsection}{0}\relax 
@@ -193,9 +191,9 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {6.3.7}Zusammenfassung der Bewertung}{80}{subsection.6.3.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {7}Pr\IeC {\"a}sentation der Ergebnisse}{81}{chapter.7}
+\contentsline {chapter}{\numberline {7}Zusammenfassung}{81}{chapter.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {7.1}Wichtigsten Erkenntnisse der Arbeit}{81}{section.7.1}
+\contentsline {section}{\numberline {7.1}Die wichtigsten Erkenntnisse der Arbeit}{81}{section.7.1}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {7.2}Schwierigkeiten bei der Bearbeitung}{82}{section.7.2}
 \defcounter {refsection}{0}\relax 
@@ -207,11 +205,13 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {7.3.3}Motivation der Studierenden}{83}{subsection.7.3.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {7.4}Ausblick des Projekts}{84}{section.7.4}
+\contentsline {section}{\numberline {7.4}Fortf\IeC {\"u}hrung des Projekts}{84}{section.7.4}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {7.4.1}Ausblick auf weitere Untersuchungen}{84}{subsection.7.4.1}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {7.4.2}Ausblick auf Softwarefunktionen}{84}{subsection.7.4.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {7.5}Abschlie\IeC {\ss }ende Worte}{85}{section.7.5}
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\nonumberline Tabellenverzeichnis}{86}{chapter*.5}
 \defcounter {refsection}{0}\relax 
