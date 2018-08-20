@@ -10,13 +10,10 @@ Milestone _$MilestoneFromJson(Map<String, dynamic> json) => new Milestone(
     json['title'] as String,
     json['date'] == null ? null : DateTime.parse(json['date'] as String),
     json['id'] as String,
-    json['tasks'] == null
-        ? null
-        : new Map<String, Task>.fromIterables(
-            (json['tasks'] as Map<String, dynamic>).keys,
-            (json['tasks'] as Map).values.map((e) => e == null
-                ? null
-                : new Task.fromJson(e as Map<String, dynamic>))),
+    (json['taskIDs'] as List<String>)
+        ?.map((e) =>
+    e == null ? null : e)
+        ?.toList(),
     json['description'] as String);
 
 abstract class _$MilestoneSerializerMixin {
@@ -24,13 +21,13 @@ abstract class _$MilestoneSerializerMixin {
   String get title;
   String get description;
   DateTime get date;
-  Map<String, Task> get tasks;
+  List<String> get taskIDs;
   Map<String, dynamic> toJson() => <String, dynamic>{
         'id': id,
         'title': title,
         'description': description,
         'date': date?.toIso8601String(),
-        'tasks': tasks
+        'taskIDs': taskIDs
       };
 }
 
