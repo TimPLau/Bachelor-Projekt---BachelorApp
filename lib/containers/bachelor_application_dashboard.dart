@@ -16,7 +16,7 @@ class Dashboard extends StatelessWidget {
   Widget build(BuildContext context) {
     return new StoreConnector(
       converter: (Store<AppState> store) {
-        return _ViewModel.fromStore(store);
+        return _ViewModel.fromStore(store, context);
       },
       builder: (BuildContext context, _ViewModel vm) {
         flutterLocalNotificationsPlugin.onSelectNotification =
@@ -71,9 +71,10 @@ class _ViewModel {
       this.addEditDate,
       this.onSelectedMilestone,
       this.beginDate,
-      this.endDate}) {}
+      this.endDate}) {
+  }
 
-  factory _ViewModel.fromStore(Store<AppState> store) {
+  factory _ViewModel.fromStore(Store<AppState> store, BuildContext context) {
     return _ViewModel(
       milestones: store.state.currentMilestones,
       selectedMilestone: store.state.selectedMilestone,

@@ -24,6 +24,7 @@
 \usepackage{listings}
 \usepackage{color}
 
+\definecolor{light-gray}{gray}{0.80}
 \definecolor{dkgreen}{rgb}{0,0.6,0}
 \definecolor{gray}{rgb}{0.5,0.5,0.5}
 \definecolor{mauve}{rgb}{0.58,0,0.82}
@@ -251,10 +252,7 @@ Die Applikation soll mittels Flutter für Android und iOS entwickelt werden. Dab
 
 \par \bigskip Die im Laufe des Projekts erreichten Ergebnisse werden in \textbf{Kapitel \ref{chap:ergebnisse}} zusammengefasst und dienen unter Betrachtung des zukünftigen Projektverlaufs als Grundlage für weitere dort beschriebene potentielle Ideen und Erweiterungsmöglichkeiten der Software.
 
-\chapter{Beschreibung der Kernkomponenten} 
-\par In diesem Kapitel werden die Grundlagen zur Nachvollziehbarkeit dieser Projektarbeit vermittelt. Es wird somit empfohlen die folgenden Kapitel zu Gamification, Flutter und die für die Beschreibung der Implementierungsdetails relevanten Redux-Architektur zu lesen, um ein Gesamtverständnis für Begriffe und weitere Zusammenhänge des Projekts zu ermöglichen.
-
-\label{chap:grundlagenkapitel}
+\newpage
 \section{Gamification} 
 \label{sec:grundlagenkapitelGamification}
 \par Im folgenden Kapitel werden die für diese Arbeit relevante Informationen bezüglich Gamification vermittelt. Hierbei wird erst auf die grundlegende Bedeutung sowie deren Abgrenzung gegenüber verschiedenen Ansätzen eingegangen. Im weiteren Verlauf werden dann tiefgreifendere Informationen zu den verschiedenen Benutzerklassen und den jeweiligen kompatiblen Spiel-Design-Elementen beschrieben.
@@ -367,7 +365,7 @@ beschreiben, sobald Spiel-Design-Elemente in den spezifischen Kontext integriert
 \par \bigskip Das Spannungsfeld wird weiterhin definiert durch die vier verschiedenen Interessenausprägungen der Spieler (Players), der virtuellen Welt (World), des Handelns in dieser Welt (Acting) und des Interagierens mit der virtuellen Welt (Interacting).
 
 \newpage
-\section{Vorstellung des Frameworks Flutter}
+\chapter{Vorstellung des Frameworks Flutter}
 \par Im Rahmen des Projekts ergibt sich durch die Aufgabenstellung die Verwendung des Frameworks Flutter zur Entwicklung der mobilen Ziel-Applikationen. Im folgenden Verlauf wird das Framework näher betrachtet und dessen Funktionsweisen und Besonderheiten beschrieben, um einen besseren Eindruck darüber zu bekommen, warum genau Flutter als Teil der Problemlösung eingesetzt wird.
 
 \subsection{Was ist Flutter?} 
@@ -448,44 +446,6 @@ beschreiben, sobald Spiel-Design-Elemente in den spezifischen Kontext integriert
 
 \par Sollte sich der aktuelle Zustand der Applikation beispielsweise durch eine Benutzeraktion verändern, so werden die in der Baumstruktur vorhandenen Widgets neu generiert, deren Eigenschaften aktualisiert und dem Benutzer letztendlich angezeigt.
 
-\newpage		
-\section{Was ist Redux?}
-\par Redux ist eine von Dan Abramovic und Andrew Clark entwickelte, im Jahr 2015 veröffentlichte  Open-Source Bibliothek für JavaScript-Anwendungen (vgl. \citep{ReduxWiki}). Durch die zentrale Verwaltung von Zustandsinformationen soll eine erleichterte Pflege der Konsistenz und aufgrund dessen auch eine \grqq einfache\grqq{} Wartbarkeit und Testbarkeit der Software ermöglicht werden. {ReduxReadMe}
-\par \bigskip \textit{Hinweis: Wie auch in \citep[vgl. Abschnitt Read Me]{ReduxReadMe} angemerkt wird, wird an dieser Stelle darauf hingewiesen, dass es sich hierbei nicht um das WordPress-Framework \textbf{Redux Framework}\citep{WordPressRedux} handelt.}
-
-\par \bigskip Innerhalb einer Redux-Architektur existieren verschiedene Komponenten, welche jeweils einen besonderen Zweck erfüllen und durch das modulare Zusammenspiel mit anderen Komponenten in dem System eine Gesamtkomposition bilden. Die hierbei wichtigsten Redux-spezifischen Komponenten sind \textbf{Actions}, \textbf{Reducers} und der \textbf{Store}, welche hinsichtlich Bedeutung und Funktionsweise in den nachfolgenden Kapiteln beschrieben werden.
-
-\subsection{Actions}
-\par Wie in den Basics der Online-Dokumentation \citep{ReduxActions} beschrieben wird, definieren Actions im Rahmen von Redux hauptsächlich Informationspakete, welche unter dieser Bedeutung auch als \grqq Payload\grqq{} bezeichnet werden. Sie enthalten in erster Linie nur Informationen über die Action-spezifische Operation, wie beispielsweise das Ändern bestimmter Bestandteile des aktuellen Systemzustands.
-\par \bigskip \textit{Hinweis: Es könnte beispielsweise denkbar sein, dass ein neuer Eintrag einer ToDo-Liste angelegt werden soll. Hierbei würde die Action vermutlich einen Namen wie \grqq AddTodoAction\grqq{} tragen und die Informationen des Titels des neuen Eintrags enthalten. \\
-Das Ausführen dieser Zustandsänderung wird also nicht von den Actions selbst ausgeführt, für diesen Zweck dienen die sogenannten Reducer-Funktionen.}
-
-\subsection{Reducers}
-\par Reducer-Funktionen erfüllen den Zweck, die durch die jeweilige Action übermittelten Informationen zu verarbeiten und die eigentliche, durch die Action spezifizierte, Zustandsänderung durchzusetzen. (vgl. \citep{ReduxReducers})
-\par Reducer liegen im Allgemeinen als Pure Function (auch Reine Funktionen) vor. Dies Bedeutet im Rahmen der Redux-Architektur, dass die Funktionen keine direkten Änderungen an den durch die Actions übermittelten Informationen oder an dem Status selbst  vornehmen dürfen und unter keinen Umständen Seiteneffekte produzieren dürfen. Die Auswirkungen von Pure Functions müssen deterministisch bestimmbar sein, also muss unter den gleichen Eingabebedingungen immer das gleiche zu erwartende Ergebnis folgen.
-\par Im Detail werden also nicht direkte Änderungen an Objekten vorgenommen, sondern der gesamte aktuelle Zustand durch das Neuerzeugen überschrieben.
-\par \bigskip \textit{Hinweis: Eine nicht den Eigenschaften von Pure Functions entsprechenden Funktion wäre das Bestimmen des Datums mit der JavaScript-Funktion Date.now(), da hier bei Ausführung immer ein unterschiedliches Ergebnis herauskommt.}
-
-\subsection{Store}
-\par Der Store ist in der Redux-Architektur das zentrale Element, welches nicht nur für die Datenhaltung des aktuellen Zustands (State) der Applikation zuständig ist, sondern auch als Schnittstelle für die Bereitstellung und Veränderung des aktuellen Systemzustands dient. \citep{ReduxStore}
-\par Im Gegensatz zu den anderen Komponenten ist der Store innerhalb der Architektur einmalig, was viele Vorteile der Redux-Architektur überhaupt erst ermöglicht.
-
-\par \bigskip \textit{Hinweis: Der Store enthält alle für die Applikation relevanten Informationen an zentraler Stelle im System in einem State Objekt.\\
-Die gespeicherten Informationen liegen im besten Fall in normalisierter Form vor. Insgesamt ist ein flacher Key-Value Store dem Handhaben komplexer Objekte vorzuziehen}
-
-\subsection{Flutter Redux Libary}
-\par Die externe Flutter Libary \textbf{flutter\char`_redux}\citep{FlutterReduxLib} setzt die auf JavaScript basierende Redux-Funktionsweise für die Entwicklung mobiler Applikation mit Flutter und Dart um, dadurch wird die beschriebene komfortable Nutzung der Redux-Funktionsweise ermöglicht.
-
-\par \bigskip Grundsätzlich werden also dieselben Funktionsweisen durch die Nutzung der Flutter Redux Libary abgebildet. Es folgt dennoch eine kurze Beschreibung der spezifischen Redux Widgets, welche sich jedoch alle auf die Interaktion mit dem zentralen Store beziehen:
-
-\begin{itemize}
-\item \textbf{StoreProvider}
-\par Der StoreProvider ist ein Schnittstellen-Widget, das allen unterliegenden Widgets Zugang zum Store ermöglicht.
-\item \textbf{StoreBuilder}
-\par Der StoreBuilder holt sich den aktuellen Zustand von dem in der überliegenden Hierarchie am nächsten platzierten StoreProvider und bietet eine builder-Funktion um die fallspezifischen Informationen zu verwenden.
-\item \textbf{StoreConnector}
-\par Der StoreConnector trägt die Aufgabe, den von dem StoreProvider übergebenen Store durch eine converter-Funktion in ein ViewModel umzuwandeln, welches die benötigten fallspezifischen Informationen in sich hält und durch die builder-Funktion diese Informationen kontextspezifisch verwendet. Weiterhin wird der StoreConnector bei jeder Änderung des Zustands neu generiert und somit die durch das ViewModel repräsentierten Informationen aktualisiert.
-\end{itemize}
 
 \newpage
 \chapter{Untersuchung des Problembereiches} \label{chap:problemanalyse}
@@ -1392,41 +1352,72 @@ Studierende, die zur Überplanung neigen, würden dies auch ohne Applikation tun
 
 \newpage
 \chapter{Architektur und  prototypische Implementierungsdetails} \label{chap:architektur}
-\par Das Ziel dieses Kapitels ist es, das Verständnis für die architekturspezifischen Zusammenhänge sowie die jeweiligen softwaretechnischen Abläufe zu vermitteln. 
-\par Auf dieser Basis werden die einzelnen Architektur-Komponenten, deren Beziehungen zueinander sowie die Funktionsweise des Gesamtsystems im folgenden Verlauf erläutert. Die detaillierte Beschreibung der einzelnen Komponenten folgt in Kapitel \ref{sec:komponentenDetails} an geeigneter Stelle durch beispielhafte Abläufen von Nutzeraktionen beschrieben.
+\par Das Ziel dieses Kapitels ist es, das Verständnis für die architekturspezifischen Zusammenhänge sowie die jeweiligen softwareinternen Abläufe zu vermitteln. Auf dieser Basis werden die einzelnen Architektur-Komponenten, deren Beziehungen zueinander sowie die Funktionsweise des Gesamtsystems im folgenden Verlauf erläutert. 
 
+\par \bigskip Aufgrund der Vorzüge einer konsequenten zentralen Verwaltung des Zustands der Applikation, welche in diesem Rahmen auch mit einer komfortablen Wartbarkeit und den strikt getrennten und somit auch eindeutig nachverfolgbaren Datenflüssen und Operationen einhergeht, wurde eine Architektur konstruiert, die sich an dem sogenannten Redux-Architekturmuster orientiert. 
+
+\par \bigskip Was eine Redux-Architektur genau ist und wodurch sich das Architektur Muster auszeichnet, wird einleitend zu diesem Kapitel beschrieben und führt nachfolgend über die eigentliche Architekturbeschreibung der entwickelten Software bis hin zu den wichtigsten Implementierungsdetails, welche an einem durchgängigen beispielhaften Ablauf einer Nutzeraktion beschrieben werden.
+	
+\section{Was ist Redux?}
+\label{sec:redux}
+\par Redux ist eine von Dan Abramovic und Andrew Clark entwickelte, im Jahr 2015 veröffentlichte  Open-Source Bibliothek für JavaScript-Anwendungen \citep{ReduxWiki}. Durch die zentrale Verwaltung von Zustandsinformationen soll eine erleichterte Pflege der Konsistenz und aufgrund dessen auch eine \grqq einfache\grqq{} Wartbarkeit und Testbarkeit der Software ermöglicht werden. \citep{ReduxReadMe}
+\par \bigskip \textit{Hinweis: Wie auch in \citep{ReduxReadMe} angemerkt ist, wird an dieser Stelle darauf hingewiesen, dass es sich hierbei nicht um das WordPress-Framework \textbf{Redux Framework}\citep{WordPressRedux} handelt.}
+
+\par \bigskip Innerhalb einer Redux-Architektur existieren verschiedene Komponenten, welche jeweils einen besonderen Zweck erfüllen und durch das modulare Zusammenspiel mit anderen Komponenten in dem System eine Gesamtkomposition bilden. Die hierbei wichtigsten Redux-spezifischen Komponenten sind \textbf{Actions}, \textbf{Reducers} und der \textbf{Store}, welche hinsichtlich Bedeutung und Funktionsweise in den nachfolgenden Kapiteln beschrieben werden.
+
+\newpage
+\subsection{Actions}
+\par Wie in den Basics der Online-Dokumentation \citep{ReduxActions} beschrieben wird, definieren Actions im Rahmen von Redux hauptsächlich Informationspakete, welche unter dieser Bedeutung auch als \grqq Payload\grqq{} bezeichnet werden. Sie enthalten in erster Linie nur Informationen über die Action-spezifische Operation, wie beispielsweise das Ändern bestimmter Bestandteile des aktuellen Systemzustands.
+\par \bigskip \textit{Hinweis: Es könnte beispielsweise denkbar sein, dass ein neuer Eintrag einer ToDo-Liste angelegt werden soll. Hierbei würde die Action vermutlich einen Namen wie \grqq AddTodoAction\grqq{} tragen und die Informationen des Titels des neuen Eintrags enthalten. \\
+Das Ausführen dieser Zustandsänderung wird also nicht von den Actions selbst ausgeführt, für diesen Zweck dienen die sogenannten Reducer-Funktionen.}
+
+\subsection{Reducers}
+\par Reducer-Funktionen erfüllen den Zweck, die durch die jeweilige Action übermittelten Informationen zu verarbeiten und die eigentliche, durch die Action spezifizierte, Zustandsänderung durchzusetzen. (vgl. \citep{ReduxReducers})
+\par \bigskip Reducer liegen im Allgemeinen als Pure Functions (auch Reine Funktionen) vor. Dies Bedeutet im Rahmen der Redux-Architektur, dass die Funktionen keine direkten Änderungen an den durch die Actions übermittelten Informationen oder an dem Status selbst  vornehmen dürfen und unter keinen Umständen Seiteneffekte produzieren dürfen. Die Auswirkungen von Pure Functions müssen deterministisch bestimmbar sein, also muss unter den gleichen Eingabebedingungen immer das gleiche zu erwartende Ergebnis folgen. Im Detail werden hierbei keine direkte Änderungen an Objekten vorgenommen, sondern der gesamte aktuelle Zustand durch  Neuerzeugung überschrieben.
+\par \bigskip \textit{Hinweis: Eine nicht den Eigenschaften von Pure Functions entsprechenden Funktion wäre das Bestimmen des Datums mit der JavaScript-Funktion Date.now(), da hier bei Ausführung immer ein unterschiedliches Ergebnis herauskommt.}
+
+\subsection{Store}
+\par Der Store ist in der Redux-Architektur das zentrale Element, welches nicht nur für die Datenhaltung des aktuellen Zustands (State) der Applikation zuständig ist, sondern auch als Schnittstelle für die Bereitstellung und Veränderung des aktuellen Systemzustands dient. \citep{ReduxStore}
+\par Im Gegensatz zu den anderen Komponenten ist der Store innerhalb der Architektur einmalig, was viele Vorteile der Redux-Architektur überhaupt erst ermöglicht.
+
+\par \bigskip \textit{Hinweis: Der Store enthält alle für die Applikation relevanten Informationen an zentraler Stelle im System in einem State Objekt.\\
+Die gespeicherten Informationen liegen im besten Fall in normalisierter Form vor. Insgesamt ist ein flacher Key-Value Store dem Handhaben komplexer Objekte vorzuziehen}
+
+\newpage
+\subsection{Flutter Redux Libary}
+\par Die externe Flutter Libary \textbf{flutter\char`_redux}\citep{FlutterReduxLib} setzt die auf JavaScript basierende Redux-Funktionsweise für die Entwicklung mobiler Applikation mit Flutter und Dart um, wodurch die beschriebene komfortable Nutzung der Redux-Architektur ermöglicht wird.
+
+\par \bigskip Grundsätzlich werden also dieselben Funktionsweisen durch die Nutzung der Flutter Redux Libary abgebildet. Es folgt dennoch eine kurze Beschreibung der spezifischen Redux Widgets, welche sich jedoch alle auf die Interaktion mit dem zentralen Store beziehen:
+
+\begin{itemize}
+\item \textbf{StoreProvider}
+\par Der StoreProvider ist ein Schnittstellen-Widget, das allen unterliegenden Widgets Zugang zum Store ermöglicht.
+\item \textbf{StoreBuilder}
+\par Der StoreBuilder holt sich den aktuellen Zustand von dem in der überliegenden Hierarchie am nächsten platzierten StoreProvider und bietet eine builder-Funktion um die fallspezifischen Informationen zu verwenden.
+\item \textbf{StoreConnector}
+\par Der StoreConnector trägt die Aufgabe, den von dem StoreProvider übergebenen Store durch eine converter-Funktion in ein ViewModel umzuwandeln, welches die benötigten fallspezifischen Informationen in sich hält und durch die builder-Funktion diese Informationen kontextspezifisch verwendet. Weiterhin wird der StoreConnector bei jeder Änderung des Zustands neu generiert und somit die durch das ViewModel repräsentierten Informationen aktualisiert.
+\end{itemize}
+
+\newpage
 \section{Architekturübersicht}
-\par Aufgrund der Vorzüge einer konsequenten zentralen Verwaltung des Zustands der Applikation, welche in diesem Rahmen auch mit einer komfortablen Wartbarkeit und den strikt getrennten und auf diese Weise auch eindeutig nachverfolgbaren Datenflüssen und Operationen einhergeht, wurde eine Architektur konstruiert, die sich an dem Redux-Architekturmuster orientiert. 
-\par \bigskip Die folgende Abbildung \ref{img:architectureOverview} soll in vereinfachter Form verdeutlichen, wie die verschiedenen Komponenten der gewählten Architektur hinsichtlich des Aufbaus und des Datenflusses zueinander in Beziehung stehen. 
+\par Die folgende Abbildung \ref{img:architectureOverview} soll in vereinfachter Form verdeutlichen, wie die verschiedenen Komponenten der gewählten Redux-Architektur hinsichtlich des Aufbaus und des Datenflusses innerhalb der entwickelten Software zueinander in Beziehung stehen. 
 
 \bigskip
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.95\textwidth,keepaspectratio]{Bilder/ArchitectureOverview.png}
-	\caption{Architekturübersicht}
+	\includegraphics[width=1\textwidth,keepaspectratio]{Bilder/ArchitectureOverview.png}
+	\caption{Datenflussübersicht der Softwarearchitektur}
 	\label{img:architectureOverview}
 \end{figure}
 
-\par \bigskip \textbf{Model}
-\par Die Model-Komponenten stellen den aktuellen internen Zustand des Systems dar und enthalten somit in erster Linie die hierfür verwendeten Objekt-Klassen.
-\par Die für die gewählte Architektur durch ihre Wichtigkeit hervorzuhebende Klasse AppState, ist die zentrale Verwaltungsklasse für den gespeicherten Status der Applikation und trägt alle relevanten Informationen in sich, die den aktuellen Zustand des Systems abbilden. Die Klasse AppState selbst dient also lediglich als zentrales Element zur Datenhaltung in der gewählten Architektur.
+\par \bigskip Die Model-Komponenten stellen den aktuellen internen Zustand des Systems dar und enthalten somit in erster Linie die hierfür verwendeten Objekt-Klassen. Die hierbei für die gewählte Architektur durch ihre Wichtigkeit hervorzuhebende Klasse \textbf{AppState}, ist die zentrale Verwaltungsklasse für den gespeicherten Status der Applikation und trägt alle relevanten Informationen in sich, die den aktuellen Zustand des Systems abbilden. Diese Klasse dient also als zentrales Element zur Datenhaltung.
 
-\par \bigskip \textbf{Presentation}
-\par Die Presentation-Komponenten sind alleinig für die Visualisierung der gegebenen Informationen sowie für die Entgegennahme der Benutzereingaben zuständig.
+\par \bigskip Die Presentation-Komponenten sind alleinig für die Visualisierung der gegebenen Informationen sowie für die Entgegennahme der Benutzereingaben zuständig, stehen jedoch im engen Austausch mit den Container-Komponenten, welche den aktuellen Zustand der Applikation aus dem \textbf{AppState} einlesen und die erhaltenen Informationen an die Presentation-Komponenten übermitteln. Da nicht immer alle Informationen für die jeweilige Benutzeroberfläche relevant sind, werden diese vor der Übermittlung hinsichtlich der benötigten Inhalte gefiltert und vorbereitet. Weiterhin lösen die Container-Komponenten im allgemeinen die Actions aus, welche auf den von dem Benutzer getätigten Interaktionen zur Änderung des Systemstatus, wie beispielsweise das Hinzufügen eins Meilensteins, basieren.
 
-\par \bigskip \textbf{Container}
-\par Die Container-Komponenten lesen den aktuellen Zustand der Applikation aus dem AppState ein und bereiten diesen vor der Übergabe an die Presentation-Komponenten vor. Weiterhin lösen die Container-Komponenten die Actions aus, welche auf den von dem Benutzer getätigten Interaktionen basieren.
+\par \bigskip Wie bereits in Kapitel \ref{sec:redux} beschrieben, enthält eine Action-Komponente Informationen über die jeweilige auszuführende Operation, welche von der Middleware und/oder den Reducer-Komponenten aufgegriffen und verarbeitet werden. Das Verarbeiten der Informationen innerhalb der Middleware wird in erster Linie bei Vorgängen gehandhabt, welche sich als zu komplex für die einfach zu haltenden Reducer-Komponenten darstellen. Ein beispielhafter Vorgang wäre hierbei das Überprüfen von Achievements und das zugehörige Auslösen von Notifications. Weiterhin können auch in der Middleware selbst Actions ausgelöst werden, wie im späteren Verlauf in Kapitel \ref{sec:middleware} nachzuvollziehen ist. 
 
-\par \bigskip \textbf{Action}
-\par Eine Action-Komponente beinhaltet Informationen über die jeweilige auszuführende Operation und dient somit als Identifikationsmittel und Informationspaket, die von der Middleware und/oder den Reducer-Komponenten aufgegriffen und verarbeitet werden.
+\par \bigskip Für die eigentliche Änderung des Systemzustands sind jedoch, unabhängig von der in der Middleware getätigten Verarbeitungsschritte, immer die Reducer-Komponenten. Diese \grqq wissen\grqq{} durch die über die Actions erhaltenen Informationen, welche Aktion der Benutzer ausgeführt hat und folglich auch, welche Information sich an dem aktuell existierenden Zustand der Applikation ändern soll.
 
-\par \bigskip \textbf{Middleware}
-\par Die Middleware verarbeitet und/oder manipuliert die, in den Actions übermittelten, Informationen, bevor diese zu den Reducer-Komponenten gelangen. Weiterhin können auch in der Middleware selbst Actions ausgelöst werden, wie im späteren Verlauf in Kapitel \ref{sec:middleware} nachzuvollziehen ist. 
-
-\par \bigskip \textbf{Reducer}
-\par Die Reducer-Komponenten nehmen die eigentliche Änderung am Zustand vor, indem sie einen völlig neuen Zustand generieren und den vorherigen Zustand überschreiben. Durch die, über die Actions erhaltene, Informationen weiß die Reducer-Komponente, welche Aktion der Benutzer ausgeführt hat und folglich auch, welche Information sich an dem aktuell existierenden Zustand der Applikation ändern soll. In diesen Komponenten wird also der aktuelle Zustand in einen neuen Zustand transformiert.
-
-\newpage
 \section{Detaillierte Beschreibung der Model Komponenten}
 \label{sec:komponentenDetails}
 \par \bigskip Die nun folgenden Unterkapitel beschreiben die Klassen, die Teil der Model Komponente sind und teilweise wichtige Datenfelder und Operationen zur Verwaltung des Redux-Stores enthalten.
@@ -1634,20 +1625,72 @@ den Namen der im Repository vorliegenden JSON-Datei, welche auch weiterhin als D
 \par Für die Implementierung der Notification wurde ein externes Plugin genutzt (siehe \citep{FlutterLocalNotificationPlugin}), da die grundsätzliche Möglichkeit der Handhabung von Notifications durch das Framework Flutter nicht gegeben ist. Durch die Verwendung des Plugins sind jedoch einige zielplattformabhängige Konfigurationen nötig, welche sich unter \citep[Android Integration]{FlutterLocalNotificationPlugin} und \citep[iOS Integration]{FlutterLocalNotificationPlugin} nachvollziehen lassen.
 \par \medskip Bei der Umsetzung der Notifications wurde sich an den dort gegebenen Beispielen orientiert, wobei deren Funktionsweisen für die eigene Umsetzung adaptiert wurden.
 \par Die Verwendung der Achievement-Notifications wird im Rahmen der prototypischen Implementierung durch spezielle Top-Level-Funktionen gelöst, welche bei Aufrufen die jeweiligen Achievement-Actions auslösen. Die dadurch hervorgerufene Aktualisierung der zu den Achievements zugehörigen Bedingungen findet in der updateProperties Reducer-Funktion statt. Hier werden die Nutzeraktionen an zentraler Stelle im System abgefragt und die Änderungen an den aktuellen, im Zustand gespeicherten, Bedingungen durchgeführt. Somit ist dies die zentral zu erweiternde Stelle im Code, wenn neue Achievements Einzug in das System erhalten.
-\par \bigskip Weitere Informationen zum Ablauf und der Funktionsweise von Notifications sind in Kapitel \ref{sec:middleware} zu finden.
 
 \newpage
-\section{Actions}
-\par Im Rahmen der auf der Anforderungsanalyse basierenden Konzeption der Softwarelösung wurden verschiedene Benutzeraktionen identifiziert, welche sich größtenteils in den sogenannten Actions wiederfinden.
-Für jede dieser Actions existiert eine eigene Klasse, welche im folgenden Verlauf beispielhaft an einem für alle Actions repräsentativen Fall erläutert wird.
+\section{Beispielhafter Ablauf einer Nutzeraktion}
+\par In dem folgenden Kapitel, wird der typische Ablauf einer Nutzeraktion innerhalb der Redux-Architektur an einem fortlaufenden Szenario erläutert. Die hierbei gewählte Beispielaktion bezieht sich aufgrund der Einfachheit und der gleichzeitigen Repräsentanz des Gesamtsystems auf das Bearbeiten eines bereits vorhandenen Meilensteins.
 
-\subsection{Beispielhafte Demonstration einer Meilensteinbearbeitung}
-\par Das gewählte Beispiel bezieht sich auf die Nutzeraktion des Änderns eines Meilensteins:
+\par \bigskip \textbf{Ausgangspunkt des Szenarios}
+\par Der Nutzer hat bereits einen Meilenstein angelegt, welcher einen Titel, ein Datum und eine Beschreibung enthält.
 
-\par Wie in Listing \ref{lst:milestoneEditAction} zu sehen ist, enthält die Klasse EditMilestoneAction vier verschiedene Datenfelder. 
-Der zu ändernde Meilenstein (\texttt{milestone}) sowie die jeweiligen neuen Werte newTitle, newDate und newDescription, welche die zu dem vorhandenen Meilenstein zugehörigen Werte überschreiben sollen.
-\par Es wird deutlich, dass eine solche Klasse außer dem Beinhalten der spezifischen Payload-Daten keine tiefe Funktionalität bieten soll. 
-\par Die weitere Verarbeitung der Daten wird im Kapitel \ref{sec:reducer} verdeutlicht.
+\par \bigskip Der Nutzer entdeckt nun, dass er den angegebenen Meilenstein aufgrund eines Rechtschreibfehlers falsch benannt hat und öffnet das hierfür vorgesehene Fenster, zur Bearbeitung eines Meilensteins, woraufhin die zugehörige Container-Komponente die hierfür relevanten Informationen aus der AppState Klasse bezieht und an die Presentation-Komponente übergibt und diese den vorhandenen Inhalt anzeigt.
+
+\par \bigskip \textbf{EditMilesone-Container}
+\par Die Container-Komponente funktioniert im Detail durch das Zusammenspiel zweier Klassen, welche zum einen die eigentliche Container-Klasse \texttt{EditMilestone} (vgl. Listing \ref{lst:containerMilestoneChange}) und zum anderen die zugehörige Klasse \texttt{\char`_ViewModel} (vgl. Listing \ref{lst:containerMilestoneChange}) darstellt. \par Die Converter-Funktion, welche in Listing  \ref{lst:containerMilestoneChange} in Zeile \ref{lstNum:converter} zu sehen ist, konvertiert den aktuellen Store in ein ViewModel, welches die für die Presentation-Komponente relevanten Daten in der Builder-Funktion in Zeile \ref{lstNum:builder} bereitstellt und diese erzeugt.
+
+\bigskip
+\begin{lstlisting}[caption={Container-Komponente einer Meilensteinänderung},captionpos=b, label=lst:containerMilestoneChange, escapechar=!]
+class EditMilestone extends StatelessWidget {
+  final Milestone milestone;
+  EditMilestone(this.milestone);
+
+  @override
+  Widget build(BuildContext context) {
+    return new StoreConnector(
+      converter: (Store<AppState> store) (*@ \label{lstNum:converter} @*) {
+        return _ViewModel.fromStore(store, this.milestone, context);
+      },
+      builder: (BuildContext context, _ViewModel vm) (*@ \label{lstNum:builder} @*){
+        return AddEditMilestoneScreen(vm.editMilestone, vm.currentMilestones, vm.initialDate, true, milestone);(*@ \label{lstNum:addEditMilestoneScreen} @*)
+      },
+    );
+  }
+}
+\end{lstlisting}
+
+\newpage
+\par Wie in Listing \ref{lst:containerMilestoneChangeViewModel} zu sehen ist, werden in Zeile \ref{lstNum:getStore} die Informationen aus dem Store geladen und in Zeile \ref{lstNum:sendAction} die getätigt Action ausgelöst. Letzteres funktioniert durch das Übermitteln einer Callback-Funktion an die Presentation-Komponente (siehe Abbildung \ref{lst:containerMilestoneChange}, Zeile \ref{lstNum:addEditMilestoneScreen} \texttt{vm.editMilesone}).
+
+\bigskip
+\begin{lstlisting}[caption={ViewModel von Container-Komponente einer Meilensteinänderung},captionpos=b, label=lst:containerMilestoneChangeViewModel]
+class _ViewModel {
+  final Milestone currentMilestone;
+  final Function(String, DateTime, String) editMilestone;
+  final List<Milestone> currentMilestones;
+  List<String> currentMilestonesDates;
+  DateTime initialDate;
+
+  _ViewModel(
+      {this.currentMilestone, this.editMilestone, this.currentMilestones, this.currentMilestonesDates}) {
+   // ... Initialisieren von currentMilestoneDates und initialDate
+  }
+  
+  factory _ViewModel.fromStore(Store<AppState> store, currentMilestone, context) {
+    return _ViewModel(
+      editMilestone: (String title, DateTime date, String description) { =>(*@ \label{lstNum:sendAction} @*)
+          store.dispatch(new EditMilestoneAction(
+              currentMilestone, title, date, description));
+          checkAchievementNotification(context); (*@ \label{lstNum:checkAchievements} @*)
+      },
+      currentMilestones: store.state.currentMilestones.values.toList(),(*@ \label{lstNum:getStore} @*)
+    );
+  }
+}
+\end{lstlisting}
+
+\par \bigskip \textbf{EditMilestone-Action}
+\par Wie in Listing \ref{lst:milestoneEditAction} zu sehen ist, enthält die in Listing \ref{lst:containerMilestoneChangeViewModel} Zeile \ref{lstNum:sendAction} ausgelöste Action \texttt{EditMilestoneAction} vier verschiedene Datenfelder, welche 
+den zu ändernden Meilenstein (\texttt{milestone}) sowie die neuen Werte \texttt{newTitle}, \texttt{newDate} und \texttt{newDescription}, welche die zu dem vorhandenen Meilenstein zugehörigen Werte überschreiben sollen.
 
 \bigskip
 \begin{lstlisting}[caption={Meilenstein Action Beispiel},captionpos=b, label=lst:milestoneEditAction]
@@ -1662,118 +1705,17 @@ class EditMilestoneAction {
 \end{lstlisting}
 \bigskip
 
-
 \newpage
-\section{Reducer}
-\label{sec:reducer}
-\par Die verschiedenen Reducer-Funktionen tragen die eigentliche Aufgabe der Datenmanipulation und Verwaltung. In diesen Komponenten passieren die entscheidenden Änderungen am aktuellen Zustand der Applikation.
 
-\subsection{App-Reducer}
-\par Der App-Reducer ist die Top-Funktion der Reducer, welche nach jeder durchgeführten Action einen neuen Zustand der Applikation generiert. Jedes Datenfeld des aktuellen Zustands wird in diesem Rahmen durch die Delegation an untergeordnete Reducer-Funktionen neu generiert. Dabei wird immer der aktuelle Zustand des Systems sowie die in der Action-Klasse enthaltenen Informationen übergeben.
-\par \medskip Im folgenden Verlauf wird dieser Ablauf an einem repräsentativen Beispiel verdeutlicht.
-
-\subsection{Beispielhafte Demonstration eines Meilenstein-Reducers}
-
-\par Innerhalb der von dem AppReducer aufgerufenen updateMilestones-Funktion (siehe Abbildung \ref{lst:milestoneReducer}) wird überprüft, um welche Action es sich handelt. Sollte es sich um keine der angegebenen Actions handeln, so wird der aktuell existierende Zustand unverändert zurückgegeben (vgl. Zeile \ref{lstNum:returnCurrentMilestones}). Sollte die Action jedoch übereinstimmen, so wird anschließend die jeweils definierte Folge von Befehlen ausgeführt und der neue Zustand der jeweiligen Daten zurückgegeben (vgl. Zeile \ref{lstNum:returnNewMilestones}).
+\par \bigskip \textbf{EditMilestoneScreen-Presentation}
+\par Bevor die beschriebene Action jedoch gesendet werden kann, muss der Benutzer diese erst einmal auslösen. Wie in Listing \ref{lst:submitMilestoneChange} zu sehen ist, geschieht dies durch das Bestätigen der vom Nutzer eingegebenen Inhalte (vgl. Zeile \ref{lstNum:submit}). Darunter zählen in diesem Fall der Titel, das Datum und eine optionale Beschreibung des bearbeiteten Meilensteins.
 
 \bigskip
-\begin{lstlisting}[caption={Meilenstein Reducer Beispiel},captionpos=b, label=lst:milestoneReducer]
-Map<String, Milestone> updateMilestones (Map<String, Milestone> current, action){
-Map<String, Milestone> ret = new SplayTreeMap<String, Milestone>();
-
-...
-
-  if(action is EditMilestoneAction) {
-
-    Milestone editedMilestone = new Milestone(action.newTitle, action.newDate, action.newDate.toIso8601String(), action.milestone.tasks, action.newDescription);
-    current.remove(action.milestone.id);
-    current[editedMilestone.id] = editedMilestone;
-
-    return current; (*@ \label{lstNum:returnNewMilestones} @*)
-  }
-  
-...
-  return current; (*@ \label{lstNum:returnCurrentMilestones} @*)
-\end{lstlisting}
-\bigskip
-
-\newpage
-\section{Container}
-\par Die Container-Komponenten dienen als Schnittstelle zwischen der Benutzeroberfläche (Presentation) und dem internen Zustand der Applikation (Model). Sie stehen somit einerseits in der direkten lesenden Beziehung zu dem Store, der den aktuellen Status der Applikation beinhaltet und andererseits in Beziehung zu den Reducer-Komponenten, welche diesen Status durch das Auslösen von Actions schreibend aktualisieren. 
-\par Im folgenden Verlauf wird dieser Ablauf an einem repräsentativen Beispiel verdeutlicht.
-
-\subsection{Beispielhafte Demonstration einer Meilensteinbearbeitung}
-
-\par Die Converter-Funktion (siehe Listing  \ref{lst:containerMilestoneChange}, vgl. Zeile \ref{lstNum:converter}) des StoreConnectors konvertiert den aktuellen Store in ein ViewModel, welches die für die Presentation-Komponente relevanten Daten in der Builder-Funktion (vgl. Zeile \ref{lstNum:builder}) bereitstellen kann.
-
-\bigskip
-\begin{lstlisting}[caption={Container-Komponente einer Meilensteinänderung},captionpos=b, label=lst:containerMilestoneChange]
-class EditMilestone extends StatelessWidget {
-  final Milestone milestone;
-  EditMilestone(this.milestone);
-
-  @override
-  Widget build(BuildContext context) {
-    return new StoreConnector(
-      converter: (Store<AppState> store) (*@ \label{lstNum:converter} @*) {
-        return _ViewModel.fromStore(store, this.milestone);
-      },
-      builder: (BuildContext context, _ViewModel vm) (*@ \label{lstNum:builder} @*){
-        return AddEditMilestoneScreen(vm.editMilestone, vm.currentMilestones, vm.initialDate, true, milestone);
-      }(*@ \label{lstNum:addEditMilestoneScreen} @*),
-    );
-  }
-}
-\end{lstlisting}
-\bigskip
-
-\par In der ViewModel-Klasse (siehe Listing \ref{lst:containerMilestoneChangeViewModel}) werden einerseits die Informationen aus dem Store geladen (vgl. Zeile \ref{lstNum:getStore}) und weiterhin auch die getätigten Actions gesendet (vgl. Zeile \ref{lstNum:sendAction}). Letzteres funktioniert durch das Übermitteln von Callback Funktionen an die Presentation-Komponente (siehe Abbildung \ref{lst:containerMilestoneChange}, vgl. Zeile \ref{lstNum:addEditMilestoneScreen}).
-
-\newpage
-\bigskip
-\begin{lstlisting}[caption={ViewModel von Container-Komponente einer Meilensteinänderung},captionpos=b, label=lst:containerMilestoneChangeViewModel]
-class _ViewModel {
-  final Milestone currentMilestone;
-  final Function(String, DateTime, String) editMilestone;
-  final List<Milestone> currentMilestones;
-  List<String> currentMilestonesDates;
-  DateTime initialDate;
-
-  _ViewModel(
-      {this.currentMilestone, this.editMilestone, this.currentMilestones, this.currentMilestonesDates}) {
-   // ... Initialisieren von currentMilestoneDates und initialDate
-  }
-
-  
-  
-  factory _ViewModel.fromStore(Store<AppState> store, currentMilestone) {
-    return _ViewModel(
-      editMilestone: (String title, DateTime date, String description) =>(*@ \label{lstNum:sendAction} @*)
-          store.dispatch(new EditMilestoneAction(
-              currentMilestone, title, date, description)),
-      currentMilestones: store.state.currentMilestones.values.toList(),(*@ \label{lstNum:getStore} @*)
-    );
-  }
-}
-\end{lstlisting}
-\bigskip
-
-\newpage
-\section{Presentation}
-\par Die Presentation-Komponenten stellen die Schnittstelle zwischen System und Benutzer dar. Die Aufgabe dieser Komponenten ist, die über die Nutzereingaben erhaltenen Informationen an die jeweiligen Container-Komponenten zur Weiterverarbeitung zu vermitteln und den aktuellen Systemzustand für den Anwender geeignet darzustellen. Eine Presentation-Komponente erhält alle nötigen Informationen von der jeweils übergeordneten Container-Komponente und soll nicht direkt mit dem Store interagieren. Ziel ist es, die Darstellung von der direkten Systeminteraktion strikt zu trennen, um Austauschbarkeit und Änderungen an der Benutzeroberfläche zu erleichtern.
-\par \medskip Im folgenden Verlauf wird dieser Ablauf an einem repräsentativen Beispiel verdeutlicht.
-
-\subsection{Beispielhafte Demonstration einer Meilensteinbearbeitung}
-
-\par Wie in Listing \ref{lst:submitMilestoneChange} zu sehen ist, wird die von der Container-Komponente übermittelte Callback-Funktion addEditMilestone bei Bestätigen der vom Nutzer eingegebenen Inhalte ausgeführt. Darunter zählen in diesem Fall die der Titel, das Datum und eine optionale Beschreibung des bearbeiteten Meilensteins.
-
-\bigskip
-\begin{lstlisting}[caption={Bestätigung einer Meilensteinänderung Methode},captionpos=b, label=lst:submitMilestoneChange]
+\begin{lstlisting}[caption={Methode: Bestätigung einer Meilensteinänderung },captionpos=b, label=lst:submitMilestoneChange]
 void submit(context) {
 
     if (_formKey.currentState.validate()) {
-      addEditMilestone(_titleInputField.currentState.value, chosenDate,
-          _optionalDescriptionInputField.currentState.value);
+      addEditMilestone(_titleInputField.currentState.value, chosenDate, _optionalDescriptionInputField.currentState.value);(*@ \label{lstNum:submit} @*)
 
       ...
     }
@@ -1781,52 +1723,15 @@ void submit(context) {
   
 }
 \end{lstlisting}
-\bigskip
 
-\newpage
-\section{Middleware}
-\label{sec:middleware}
-\par Im Folgenden wird die eingesetzte Middleware beschrieben, welche im Rahmen der prototypischen Entwicklung der Applikation für die Verwaltung von Push-Notifications und das lokale Speichern und Laden des aktuellen Zustands bei Schließen und Öffnen der Applikation zuständig ist.
 
-\subsection{Beispielhafte Demonstration der Notification Middleware}
-\par Wie in Listing \ref{lst:notificationMiddleware} zu sehen ist, wird auch hier wie in den Reducer-Komponenten innerhalb dieser Middleware eine Abfrage zu der Art der ausgelösten Actions getätigt (vgl. Zeile 6). Sollte die Bedingung, dass es sich um eine SendAchievementNotificationAction handelt, nicht bestätigen, so wird die eingegangene Action sofort weiter an die Reducer-Komponenten geleitet(vgl. Zeile 21). Falls sich die Bedingung jedoch als wahr herausstellt, so wird der darauffolgende Ablauf von Befehlen ausgeführt, welcher sich hier auf das Auslösen einer Notification bezieht. 
-\par \bigskip Eine Besonderheit innerhalb dieser Komponente ist die Verwendung eines Completers, welcher als Teil der Action Payload übermittelt wurde. 
-\par \bigskip \textit{Hinweis: Ein Completer ist eine von Dart gegebene Klasse, die es in diesem Fall ermöglicht, eine zukünftig ausgeführte Funktion so zu behandeln, als wären der Rückgabewert bereits bekannt. Weitere Informationen hierzu, sind in der Dart Dokumentation zu finden (vgl. \citep{DartCompleter})}.
+\par \bigskip \textbf{AchievementNotification-Middleware}
+\par Bei Ausführung des in Listing \ref{lst:containerMilestoneChangeViewModel}, Zeile \ref{lstNum:checkAchievements} befindlichen Aufrufs der Top-Level Funktion \texttt{checkAchievementNotification()} (siehe Listing \ref{lst:checkAchievementNotification}) wird überprüft, ob es nach der Nutzeraktion zu dem Erreichen von Achievements gekommen ist. Der Aufruf dieser Methode muss somit innerhalb der ViewModel Klassen der Container-Komponenten erfolgen, sofern die jeweilige Action eine für die definierten App-Achievements (vgl. Kapitel \ref{sub:konzeptGamificationAchievements}) relevante Bedeutung hat.
+
+\par \bigskip Um zu gewährleisten, dass neue Achievements registriert werden, wird vor Ausführung der SendAchievementNotificationAction in Zeile 3 - 7 die Action \texttt{CheckForAchieveAction()} ausgelößt, welche für das Überprüfen der Achievements hinsichtlich deren zuvor in den Reducer-Funktionen aktualisierten (vgl. Listing \ref{lst:milestoneReducer}, Zeile 1 - 9) Aktivierungsbedingungen sorgt.
 
 \bigskip
-\begin{lstlisting}[caption={Notification Middleware},captionpos=b, label=lst:notificationMiddleware]
-void notificationMiddleware(
-    Store<AppState> store,
-    dynamic action,
-    NextDispatcher next,
-    ) { 
-  if (action is SendAchievementNotificationAction) {
-  	new Future.delayed(new Duration(seconds: 1), () {}).then( (result) {
-      if (NEUE ACHIEVEMENTS VORHANDEN) {
-      ...
-   
-          showAchievementNotification(
-				//... spezifischer Inhalt eines Achievements       
-          );
-  
-      ...
-      action.completer.complete();
-      store.dispatch(new ClearAchievedAction());
-    },
-  );
-  }
-  next(action);
-}
-\end{lstlisting}
-\bigskip
-
-\newpage
-\par In diesem Rahmen wird immer, wenn eine Actions in der Applikation ausgeführt wird, das Senden einer Notification durch das Aufrufen der Top-Level-Funktion checkAchievementNotification() \grqq vorbereitet\grqq{} (siehe Abbildung \ref{lst:checkAchievementNotification}, vgl. Zeile  9 - 11).
-\par \medskip Um zu gewährleisten, dass neue Achievements registriert werden, wird vor Ausführung der SendAchievementNotificationAction in Abbildung \ref{lst:checkAchievementNotification}{}(vgl. Zeile 3 - 7) die Methode CheckForAchieveAction() ausgelößt, die für das Aktualisieren der aktuellen Achievements sorgt.
-\par \medskip Sollten folglich die Bedingungen für das Ausführen dieser Notification zutreffen, so wird wie in Abbildung \ref{lst:notificationMiddleware} zu sehen ist, die \grqq versprochene\grqq{} Action ausgeführt (vgl. Zeile 25) und in diesem Fall die Notification angezeigt. 
-
-\bigskip
-\begin{lstlisting}[caption={checkAchievementNotification Methode},captionpos=b, label=lst:checkAchievementNotification]
+\begin{lstlisting}[caption={Methode: checkAchievementNotification},captionpos=b, label=lst:checkAchievementNotification]
 
 Future<dynamic> checkAchievementNotification(context) {
   StoreProvider.of<AppState>(context).dispatch(new CheckForAchieveAction(
@@ -1838,6 +1743,60 @@ Future<dynamic> checkAchievementNotification(context) {
   final action = new SendAchievementNotificationAction();
   StoreProvider.of<AppState>(context).dispatch(action);
   return action.completer.future;
+}
+\end{lstlisting}
+\bigskip
+
+\newpage
+\par Wie in Listing \ref{lst:notificationMiddleware} zu sehen ist, wird hier eine Abfrage zu der Art der ausgelösten Actions getätigt (vgl. Zeile \ref{lstNum:kindOfAction}). Sollte es sich hierbei nicht um eine \texttt{SendAchievementNotificationAction} handeln, so wird die eingegangene Action sofort weiter an die Reducer-Komponenten geleitet(vgl. Zeile \ref{lstNum:next}). Falls sich die Bedingung jedoch als wahr herausstellt, so wird erst der darauf folgende Ablauf von Befehlen ausgeführt, welcher sich hier auf das Auslösen einer Notification bezieht. Eine Besonderheit innerhalb dieser Komponente ist die Verwendung eines Completers, welcher als Teil der Action Payload übermittelt und bereits in Listing \ref{lst:checkAchievementNotification} \grqq vorbereitet grqq{} wurde.
+
+\par \bigskip \textit{Hinweis: Ein sogenannter Completer ist eine von Dart gegebene Klasse, die es in diesem Fall ermöglicht, eine zukünftig ausgeführte Funktion so zu behandeln, als wären der Rückgabewert bereits bekannt. Weitere Informationen hierzu, sind in der Dart Dokumentation zu finden.} \citep{DartCompleter}
+
+\bigskip
+\begin{lstlisting}[caption={Notification Middleware},captionpos=b, label=lst:notificationMiddleware]
+void notificationMiddleware(Store<AppState> store, dynamic action, NextDispatcher next) { 
+  if (action is SendAchievementNotificationAction) {(*@ \label{lstNum:kindOfAction} @*)
+  	new Future.delayed(new Duration(seconds: 1), () {}).then( (result) {
+      if (NEUE ACHIEVEMENTS VORHANDEN) {
+          showAchievementNotification(
+				//... spezifischer Inhalt eines Achievements       
+          );
+      action.completer.complete();
+      store.dispatch(new ClearAchievedAction());
+    },
+  );
+  }
+  next(action);(*@ \label{lstNum:next} @*)
+}
+\end{lstlisting}
+\bigskip
+
+\par \textbf{EditMilestone-Reducer}
+\par Nach dem Senden der \texttt{EditMilestoneAction} gelangt diese letztendlich an den App-Reducer, welcher wiederum die Top-Level-Funktion weiterer Reducer-Funktionen ist und nach jeder durchgeführten Action den alten Zustand der Applikation überschreibt. Jedes Datenfeld des aktuellen Zustands wird in diesem Rahmen durch die Delegation an untergeordnete Reducer-Funktionen neu generiert. Dabei wird immer der aktuelle Zustand des Systems sowie die in der Action-Klasse enthaltenen Informationen übergeben und dem Fall der Meilensteinbearbeitung die Funktion \texttt{updateMilestones} betrifft (siehe Abbildung \ref{lst:milestoneReducer}). Innerhalb dieser Funktion wird überprüft, um welche Action es sich handelt. Sollte es sich um keine der explizit abgefragten Actions handeln, so wird der aktuell existierende Zustand unverändert zurückgegeben (vgl. Zeile \ref{lstNum:returnCurrentMilestones}). Sollte die Action jedoch wie in diesem Fall übereinstimmen, so wird anschließend die jeweils definierte Folge von Befehlen ausgeführt und der neue Zustand der jeweiligen Daten zurückgegeben (vgl. Zeile \ref{lstNum:returnNewMilestones}).
+
+\newpage
+\bigskip
+\begin{lstlisting}[caption={Reducer Beispiel},captionpos=b, label=lst:milestoneReducer]
+Map<String, Property> updateProperties(Map<String, Property> current, action) {
+...
+  if (action is EditMilestoneAction) {
+    current = setPropertyValue(current, propApp1.name, 1);
+    return current;
+  }
+...
+  return current;
+}
+
+Map<String, Milestone> updateMilestones (Map<String, Milestone> current, action){
+...
+  if(action is EditMilestoneAction) {
+    Milestone editedMilestone = new Milestone(action.newTitle, action.newDate, action.newDate.toIso8601String(), action.milestone.tasks, action.newDescription);
+    current.remove(action.milestone.id);
+    current[editedMilestone.id] = editedMilestone;
+    return current; (*@ \label{lstNum:returnNewMilestones} @*)
+  } 
+...
+  return current; (*@ \label{lstNum:returnCurrentMilestones} @*)
 }
 \end{lstlisting}
 \bigskip

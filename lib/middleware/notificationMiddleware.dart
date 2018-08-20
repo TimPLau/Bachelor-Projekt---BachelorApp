@@ -1,5 +1,7 @@
 import 'dart:async';
+import 'package:flutter/widgets.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
+import 'package:flutter_redux/flutter_redux.dart';
 import 'package:project_bachelorapplication/actions/achievement_tool_actions.dart';
 import 'package:project_bachelorapplication/models/appstate.dart';
 import 'package:project_bachelorapplication/models/notifications.dart';
@@ -11,6 +13,7 @@ void notificationMiddleware(
   dynamic action,
   NextDispatcher next,
 ) {
+
   if (action is SendAchievementNotificationAction) {
     new Future.delayed(new Duration(seconds: 1), () {}).then(
       (result) {
