@@ -1,5 +1,6 @@
 import 'dart:convert';
 import 'package:json_annotation/json_annotation.dart';
+import 'package:meta/meta.dart';
 import 'package:project_bachelorapplication/models/achievement_tool.dart';
 import 'package:project_bachelorapplication/models/bachelorguide_tool_content.dart';
 import 'package:project_bachelorapplication/models/milestone_tool.dart';
@@ -7,8 +8,9 @@ import 'package:project_bachelorapplication/main.dart';
 
 part 'appstate.g.dart';
 
-Map<String, Content> globalAppContent;
+Map<String, Content> appContent;
 
+@immutable
 @JsonSerializable()
 class AppState extends Object with _$AppStateSerializerMixin {
   final Map<String, Content> informationToolContent;

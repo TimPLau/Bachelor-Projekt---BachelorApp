@@ -29,8 +29,6 @@ const String ALL_ACHIEVEMENTS = "ALL_ACHIEVEMENTS";
 
 AppContentLoader contentLoader = new AppContentLoader(
     "https://api.github.com/repos/TimPLau/BachelorAppRepository/contents/appContent/information-tool");
-InformationToolContentBuilder informationToolContentBuilder =
-    new InformationToolContentBuilder();
 
 Map<String, Map<String, Achievement>> achievedAchievements = {
   RECOGNIZED: {},
@@ -49,10 +47,9 @@ init() async {
 
   await contentLoader.loadDataFromInternet();
   await contentLoader.saveDataOnDevice();
-  await informationToolContentBuilder
-      .generateContent(await contentLoader.getFileContent("guide.json"));
 
-  globalAppContent = await informationToolContentBuilder.content;
+  await contentLoader.getFileContent("guide.json");
+  appContent =  await contentLoader.generateContent("guide.json");
 }
 
 main() async {
@@ -72,7 +69,7 @@ class BachelorApp extends StatelessWidget {
     store = new Store<AppState>(
       appReducer,
       initialState: new AppState(
-          informationToolContent: informationToolContentBuilder.content,
+          informationToolContent: appContent,
           currentMilestones: new SplayTreeMap<String, Milestone>(),
           properties: properties,
           achievedAchievements: achievedAchievements,

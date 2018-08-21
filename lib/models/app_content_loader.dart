@@ -3,10 +3,11 @@ import 'dart:convert';
 import 'dart:io';
 import 'package:http/http.dart' as http;
 import 'package:path_provider/path_provider.dart';
+import 'package:project_bachelorapplication/models/bachelorguide_tool_content.dart';
 
 class AppContentLoader {
   String httpRequest;
-  List<JSONAppContentFile> jsonFiles = new List<JSONAppContentFile>();
+  List<JSONAppContentFile> _jsonFiles = new List<JSONAppContentFile>();
 
   AppContentLoader(this.httpRequest);
 
@@ -24,7 +25,7 @@ class AppContentLoader {
   }
 
   loadDataFromInternet() async {
-    this.jsonFiles = await getFiles(httpRequest);
+    this._jsonFiles = await getFiles(httpRequest);
   }
 
   List<JSONAppContentFile> parseFiles(String responseBody) {
@@ -35,7 +36,7 @@ class AppContentLoader {
   }
 
   void saveDataOnDevice() async {
-    for (JSONAppContentFile file in this.jsonFiles) {
+    for (JSONAppContentFile file in this._jsonFiles) {
       await writeContent(await file.getJsonContent(), file.name);
     }
 
@@ -67,6 +68,31 @@ class AppContentLoader {
 
   Future<String> getFileContent(String fileName) async {
     return await readFile(fileName);
+  }
+
+  Future<Map<String, Content>> generateContent(String jsonFile) async {
+    String fileContent = await getFileContent(jsonFile);
+    Content initContent = new Content("INIT_ID", "", "INIT", "", []);
+    Map<String, Content> ret = {initContent.id : initContent};
+
+    if(fileContent != null) {
+      for (dynamic jsonContentModule in json.decode(fileContent)) {
+
+        Content c = new Content(
+            jsonContentModule["id"],
+            jsonContentModule["type"],
+            jsonContentModule["title"],
+            jsonContentModule["description"],
+            jsonContentModule["subsections"].cast<String>()
+        );
+
+        if(jsonContentModule["id"].toString().contains("ROOT_"))
+          initContent.subsections.add(c.id);
+
+        ret[c.id] = c;
+      }
+    }
+    return ret;
   }
 
 }

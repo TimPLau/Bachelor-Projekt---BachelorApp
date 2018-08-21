@@ -7,7 +7,7 @@ part of 'appstate.dart';
 // **************************************************************************
 
 AppState _$AppStateFromJson(Map<String, dynamic> json) => new AppState(
-    informationToolContent: globalAppContent,
+    informationToolContent: appContent,
     currentMilestones: json['currentMilestones'] == null
         ? null
         : new Map<String, Milestone>.fromIterables(

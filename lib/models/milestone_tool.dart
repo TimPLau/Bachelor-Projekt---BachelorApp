@@ -1,22 +1,28 @@
 import 'package:flutter/material.dart';
+
 import 'package:json_annotation/json_annotation.dart';
+
 import 'package:meta/meta.dart';
+
 import 'package:project_bachelorapplication/models/achievement_tool.dart';
+
 import 'package:uuid/uuid.dart';
 
 part 'milestone_tool.g.dart';
+
 final Uuid idGenerator = new Uuid();
 
 @immutable
 @JsonSerializable()
-class Milestone extends Object with _$MilestoneSerializerMixin{
+class Milestone extends Object with _$MilestoneSerializerMixin {
   final String id;
   final String title;
   final String description;
   final DateTime date;
   final Map<String, Task> tasks;
 
-  Milestone(this.title, this.date, this.id, this.tasks, [this.description = ""]);
+  Milestone(this.title, this.date, this.id, this.tasks,
+      [this.description = ""]);
 
   Map<String, Task> getCompletedTasks() {
     Map<String, Task> ret = {};
@@ -49,12 +55,14 @@ class Milestone extends Object with _$MilestoneSerializerMixin{
       return MilestoneState.someTasksNotCompleted;
   }
 
-  factory Milestone.fromJson(Map<String, dynamic> json) => _$MilestoneFromJson(json);
+  factory Milestone.fromJson(Map<String, dynamic> json) =>
+      _$MilestoneFromJson(json);
 
-  //Map<String, dynamic>  toJson() => {'id' : id, 'title' : title, 'description' : description, 'date' : date, 'tasks' : tasks};
+//Map<String, dynamic>  toJson() => {'id' : id, 'title' : title, 'description' : description, 'date' : date, 'tasks' : tasks};
+
 }
 
-enum MilestoneState{
+enum MilestoneState {
   empty,
   allTasksCompleted,
   someTasksNotCompleted,
@@ -63,13 +71,12 @@ enum MilestoneState{
 
 @immutable
 @JsonSerializable()
-class Task extends Object with _$TaskSerializerMixin{
+class Task extends Object with _$TaskSerializerMixin {
   final String id;
   final String title;
   final TaskState taskState;
 
   Task(this.title, this.taskState, this.id);
-
 
   factory Task.fromJson(Map<String, dynamic> json) => _$TaskFromJson(json);
 }

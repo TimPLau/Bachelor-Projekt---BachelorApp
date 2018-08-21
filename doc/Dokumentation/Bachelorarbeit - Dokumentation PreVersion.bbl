@@ -253,6 +253,17 @@
     \field{year}{2011}
   \endentry
 
+  \entry{chartsFlutter}{manual}{}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{F}
+    \field{sortinithash}{F}
+    \field{title}{Flutter Charting Libary}
+    \verb{url}
+    \verb https://pub.dartlang.org/packages/charts_flutter
+    \endverb
+    \field{year}{(Zugriff August 20, 2018)}
+  \endentry
+
   \entry{FlutterLocalNotificationPlugin}{manual}{}
     \field{labeltitlesource}{title}
     \field{sortinit}{F}
@@ -365,6 +376,28 @@
     \verb rview/themes/
     \endverb
     \field{year}{(Zugriff Juni 3, 2018)}
+  \endentry
+
+  \entry{FlutterJSONSerializable}{manual}{}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{J}
+    \field{sortinithash}{J}
+    \field{title}{JSON and serialization}
+    \verb{url}
+    \verb https://flutter.io/json/#code-generation
+    \endverb
+    \field{year}{(Zugriff August 20, 2018)}
+  \endentry
+
+  \entry{JSONSerializable}{manual}{}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{J}
+    \field{sortinithash}{J}
+    \field{title}{Json Serializable}
+    \verb{url}
+    \verb https://pub.dartlang.org/packages/json_serializable
+    \endverb
+    \field{year}{(Zugriff August 20, 2018)}
   \endentry
 
   \entry{Flu7}{manual}{}
@@ -514,6 +547,17 @@
     \field{year}{(Zugriff August 6, 2018)}
   \endentry
 
+  \entry{PathProvider}{manual}{}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{P}
+    \field{sortinithash}{P}
+    \field{title}{Path Provider}
+    \verb{url}
+    \verb https://pub.dartlang.org/packages/path_provider
+    \endverb
+    \field{year}{(Zugriff August 20, 2018)}
+  \endentry
+
   \entry{pflanzl2018gamification}{book}{}
     \name{author}{1}{}{%
       {{hash=PN}{%
@@ -586,6 +630,17 @@
     \verb https://de.wikipedia.org/wiki/Redux_(JavaScript-Bibliothek)
     \endverb
     \field{year}{(Zugriff Juni 8, 2018)}
+  \endentry
+
+  \entry{ReduxPersist}{manual}{}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{R}
+    \field{sortinithash}{R}
+    \field{title}{Redux Persist}
+    \verb{url}
+    \verb https://pub.dartlang.org/packages/redux_persist
+    \endverb
+    \field{year}{(Zugriff August 20, 2018)}
   \endentry
 
   \entry{reeves2009total}{book}{}

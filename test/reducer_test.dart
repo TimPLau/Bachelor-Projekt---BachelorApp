@@ -26,7 +26,7 @@ void main() {
       Store<AppState> store = new Store<AppState>(
         appReducer,
         initialState: new AppState(
-            informationToolContent: informationToolContentBuilder.content,
+            informationToolContent: {},
             currentMilestones: new SplayTreeMap<String, Milestone>(),
             properties: properties,
             achievedAchievements: achievedAchievements,
@@ -54,7 +54,7 @@ void main() {
       Store<AppState> store = new Store<AppState>(
         appReducer,
         initialState: new AppState(
-            informationToolContent: informationToolContentBuilder.content,
+            informationToolContent: {},
             currentMilestones: new SplayTreeMap<String, Milestone>(),
             properties: properties,
             achievedAchievements: achievedAchievements,
@@ -90,7 +90,7 @@ void main() {
       Store<AppState> store = new Store<AppState>(
         appReducer,
         initialState: new AppState(
-            informationToolContent: informationToolContentBuilder.content,
+            informationToolContent: {},
             currentMilestones: new SplayTreeMap<String, Milestone>(),
             properties: properties,
             achievedAchievements: achievedAchievements,
@@ -135,7 +135,7 @@ void main() {
       Store<AppState> store = new Store<AppState>(
         appReducer,
         initialState: new AppState(
-            informationToolContent: informationToolContentBuilder.content,
+            informationToolContent: {},
             currentMilestones: new SplayTreeMap<String, Milestone>(),
             properties: properties,
             achievedAchievements: achievedAchievements,
@@ -167,7 +167,7 @@ void main() {
       Store<AppState> store = new Store<AppState>(
         appReducer,
         initialState: new AppState(
-            informationToolContent: informationToolContentBuilder.content,
+            informationToolContent: {},
             currentMilestones: new SplayTreeMap<String, Milestone>(),
             properties: properties,
             achievedAchievements: achievedAchievements,
@@ -198,7 +198,7 @@ void main() {
       Store<AppState> store = new Store<AppState>(
         appReducer,
         initialState: new AppState(
-            informationToolContent: informationToolContentBuilder.content,
+            informationToolContent: {},
             currentMilestones: new SplayTreeMap<String, Milestone>(),
             properties: properties,
             achievedAchievements: achievedAchievements,
@@ -257,21 +257,21 @@ void main() {
       );
 
       expect(store.state.challenges[c1.title].title, "Beginne deine Einleitung");
-      expect(store.state.challenges[c1.title].type, AchievementType.beginningPhase);
+      expect(store.state.challenges[c1.title].type, ChallengeType.beginningPhase);
       expect(store.state.challenges[c1.title].completed, false);
 
       expect(store.state.challenges[c2.title].title, "Beginne deine Zweileitung");
-      expect(store.state.challenges[c2.title].type, AchievementType.beginningPhase);
+      expect(store.state.challenges[c2.title].type, ChallengeType.beginningPhase);
       expect(store.state.challenges[c2.title].completed, false);
 
       store.dispatch(new ChangeStateChallengeAction(c1));
 
       expect(store.state.challenges[c1.title].title, "Beginne deine Einleitung");
-      expect(store.state.challenges[c1.title].type, "Beginne deine Einleitung Beschreibung");
+      expect(store.state.challenges[c1.title].type, ChallengeType.beginningPhase);
       expect(store.state.challenges[c1.title].completed, true);
 
       expect(store.state.challenges[c2.title].title, "Beginne deine Zweileitung");
-      expect(store.state.challenges[c2.title].type, AchievementType.beginningPhase);
+      expect(store.state.challenges[c2.title].type, ChallengeType.beginningPhase);
       expect(store.state.challenges[c2.title].completed, false);
 
     });
@@ -281,7 +281,7 @@ void main() {
       Challenge c1 = new Challenge("Beginne deine Einleitung",
           ChallengeType.beginningPhase, false);
 
-      Property prop = new Property("Beginne deine Einleitung", 0, ACTIVE_IF_EQUALS_TO, 1);
+      Property prop = new Property(c1.title, 0, ACTIVE_IF_EQUALS_TO, 1);
       Achievement achievement = new Achievement("1", "Beginne deine Einleitung", AchievementType.beginningPhase, [prop], false, null);
       Map<String, Achievement> achievements = {
         achievement.title : achievement
@@ -316,8 +316,8 @@ void main() {
       store.dispatch(new CheckForAchieveAction(achievementState[ALL_ACHIEVEMENTS]));
 
       expect(achievementState[ACHIEVED].isEmpty, false);
-      expect(achievementState[ACHIEVED][c1.title].completed, true);
-      expect(achievementState[ALL_ACHIEVEMENTS][c1.title].completed, true);
+      expect(achievementState[ACHIEVED][achievement.id].completed, true);
+      expect(achievementState[ALL_ACHIEVEMENTS][achievement.id].completed, true);
 
     });
   });
