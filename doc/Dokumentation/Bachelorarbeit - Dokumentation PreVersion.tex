@@ -205,7 +205,7 @@ Die Applikation soll mittels Flutter für Android und iOS entwickelt werden. Dab
 \end{itemize}
 
 \newpage
-\subsection{Voruntersuchung zur Ermittlung der Bedarfssituation}
+\section{Voruntersuchung zur Ermittlung der Bedarfssituation}
 \par \bigskip Im Vorfeld zur Entwicklung der Applikation wurde eine Online-Umfrage an verschiedenen Hochschulen durchgeführt (siehe Anhang \ref{anhang:onlineUmfrageStudierendeErgebnisse}), welche als Voruntersuchung des Problemfeldes dient und somit einen ersten Eindruck über den Bedarf an einer Software zur Unterstützung der Studierenden bei der Bearbeitung der Bachelorarbeit liefert.
 
 \par \bigskip Insgesamt haben 44 Studierende unterschiedlicher Hochschulen an der Umfrage teilgenommen, wobei sich diese in weitere drei Gruppen aufteilen lassen. Diese Unterteilung erfolgt nach den unterschiedlichen Phasen, in denen sich die jeweiligen teilnehmenden Studierenden zur Zeit der Umfrage befinden. 
@@ -939,9 +939,21 @@ Das Problem des mangelnden Zeitmanagements äußert sich auch darin, dass die St
 \newpage
 \subsection{Übersicht der Risiken} \label{sub:risikouebersicht}
 \par Im Laufe der mit den Professoren durchgeführten Interviews wurden häufig Bedenken bezüglich der Risiken geäußert, die der Einsatz der Software für die Studierenden mit sich bringen könnte. 
+
+\par \bigskip Die Stärker der Auswirkungen werden hierbei in die Klassen \textbf{Hoch} und \textbf{Gering} unterteilt, wobei sich diese nach den folgenden Eigenschaften definieren:
+
+\begin{itemize}
+\item Auswirkung werden als \textbf{Hoch} bezeichnet, wenn ein schwerwiegend manipulativer Einfluss auf den Prozess der Bachelorarbeit zu erwarten ist
+
+\item Auswirkung werden als \textbf{Gering} bezeichnet, wenn keine absehbaren Auswirkungen auf den gewohnten Verlauf einer Bachelorarbeit zu erwarten sind
+\end{itemize}
+
 \par \bigskip Es folgt die Aufzählung der ermittelten Risiken sowie einer Gewichtung in Bezug auf die Stärke der negativen Auswirkungen bei Eintreten dieser Risiken:
 
 \begin{enumerate} [label=\textit{[R\arabic*]}]
+\item \label{risk:keinLerneffekt} 
+\par Auswirkungen: Hoch
+\par Durch die Nutzung der Applikation wird dem Studierenden so viel Arbeit abgenommen, dass der Lerneffekt der Bachelorarbeit zu gering ist.
 \item \label{risk:realerZustand} 
 \par Auswirkungen: Hoch
 \par Die Applikation kennt den realen Zustand und Fortschritt der Bachelorarbeit nicht und könnte somit zu einer Verfälschung des realen Bildes führen. Studierende könnten somit den eigentlichen Zustand der Arbeit aus den Augen verlieren.
@@ -951,11 +963,8 @@ Das Problem des mangelnden Zeitmanagements äußert sich auch darin, dass die St
 \item \label{risk:erstazBetreuer} 
 \par Auswirkungen: Hoch
 \par Die Applikation kann als Ersatz für die Betreuung von einem Professor oder einer Professorin wahrgenommen werden, was zu weitreichenden Konsequenzen für die Qualität der Abschlussarbeit führen könnte.
-\item \label{risk:keinLerneffekt} 
-\par Auswirkungen: Hoch
-\par Durch die Nutzung der Applikation wird dem Studierenden so viel Arbeit abgenommen, dass der Lerneffekt der Bachelorarbeit zu gering ist.
 \item \label{risk:ueberplanung} 
-\par Auswirkungen: Mittel
+\par Auswirkungen: Hoch
 \par Die Applikation könnte im Rahmen des Zeitmanagement-Tools zu einer Überplanung führen, was den Studierenden von der eigentlichen Arbeit abhalten könnte.
 \item \label{risk:gamificationEffekt} 
 \par Auswirkungen: Gering
@@ -966,12 +975,20 @@ Das Problem des mangelnden Zeitmanagements äußert sich auch darin, dass die St
 \subsection{Übersicht der Chancen} \label{sub:chancenuebersicht}
 \par Aus den gewonnen Informationen, die sich aus dem Verlauf der Interviews mit den Professoren und der schriftlichen Befragung mit den Studierenden ergeben haben, ließen sich Chancen für Betreuer und Studierende durch Einsatz der Applikation identifizieren, welche im Folgenden genannt werden.
 
-\par \bigskip Es folgt die Aufzählung der ermittelten Chancen sowie einer Gewichtung in Bezug auf die Stärke der positiven Auswirkungen bei Erreichen dieser Chancen:
+\par \bigskip Die Stärker der Auswirkungen werden hierbei in die Klassen \textbf{Hoch} und \textbf{Gering} unterteilt, wobei sich diese nach den folgenden Eigenschaften definieren:
+
+\begin{itemize}
+\item Auswirkung werden als \textbf{Hoch} bezeichnet, wenn ein positiver Einfluss auf den Prozess der Bachelorarbeit, im gegensatz zur Ist-Situation zu erwarten ist.
+
+\item Auswirkung werden als \textbf{Gering} bezeichnet, wenn keine tiefgehenden Auswirkungen auf den gewohnten Verlauf einer Bachelorarbeit zu erwarten sind
+\end{itemize}
+
+\par  Es folgt die Aufzählung der ermittelten Chancen sowie einer Gewichtung in Bezug auf die Stärke der positiven Auswirkungen bei Erreichen dieser Chancen:
 
 \begin{enumerate} [label=\textit{[C\arabic*]}]
 \item 
 \par Auswirkungen: Hoch
-\par Aufnahmebereitschaft gegenüber Tipps, Empfehlungen und anderen Aspekten könnte im Gegensatz zum Bachelorarbeit-Seminar gesteigert werden, da der Einsatz der Applikation von begleitender Natur ist und sich die Studierenden somit besser mit dem Problem identifizieren könnten.
+\par Die Aufnahmebereitschaft für Tipps und Empfehlungen könnte im Gegensatz zum Bachelorarbeit-Seminar gesteigert werden, da die Verwendung der App von begleitender Natur ist und sich die Studierenden besser mit dem Problem identifizieren könnten.
 \item
 \par Auswirkungen: Hoch
 \par Vermeiden von großen Fehlern durch Lenken des Fokus der Studierenden auf wichtige Aspekte der Bachelorarbeit, bei denen üblicherweise häufig Probleme auftreten.
@@ -983,19 +1000,16 @@ Das Problem des mangelnden Zeitmanagements äußert sich auch darin, dass die St
 \par Systematischere Vorgehensweise der Studierenden bei Problemanalyse, Anforderungserhebung und Nachweisführung
 \item
 \par Auswirkungen: Hoch
-\par Senken des Beratungsaufwandes seitens der Betreuer bei Trivialitäten und bei sich wiederholenden Fragestellungen.
-\item 
-\par Auswirkungen: Mittel
 \par Neuer Informationskanal für Studierende, welcher Wissenslücken bezüglich der Rahmenbedingungen und Regeln einer Bachelorarbeit schließen kann.
 \item
-\par Auswirkungen: Mittel
+\par Auswirkungen: Hoch
 \par Zielgerichteterer Methoden- und Werkzeugeinsatz sowie Anwendung fachspezifischer und fachübergreifender Techniken.
 \item
-\par Auswirkungen: Mittel
-\par Minimieren von Problemen bei der Gestaltung der Dokumentation.
-\item
-\par Auswirkungen: Gering
+\par Auswirkungen: Hoch
 \par Bessere Vorbereitung der Studierenden auf Gesprächstermine mit dem Betreuer.
+\item 
+\par Auswirkungen: Gering
+\par Senken des Beratungsaufwandes seitens der Betreuer bei Trivialitäten und bei sich wiederholenden Fragestellungen.
 \end{enumerate}
 
 \newpage
@@ -1323,11 +1337,12 @@ Das Problem des mangelnden Zeitmanagements äußert sich auch darin, dass die St
 
 \newpage
 \subsection{Umgang mit Risiken}
-\par Im folgenden Verlauf wird der Umgang mit den, in Kapitel \ref{sub:risikouebersicht} dargestellten, Risiken diskutiert und beschrieben.
-\par \medskip Da sich die Herausforderungen an dem Ablauf einer Bachelorarbeit orientieren und den Studierenden somit vor typische Aufgaben stellt, kam es im Verlauf der Interviews zu den Befürchtungen \ref{risk:realerZustand}, dass die Applikation nicht den realen Zustand der Bachelorarbeit kennt und somit der Studierende durch das Erfüllen von Herausforderungen ein Gefühl von Erfolg hat, obwohl diese Herausforderungen nicht den geforderten Qualitäten entsprechen und der Studierende dies durch das positive Feedback nicht merkt.
-\par Um diesem Risiko entgegenzuwirken sollen die erstellten Herausforderungen möglichst auffordernder Natur sein (Beispiel: Beginne deine Einleitung). Bei Einsatz von Herausforderungen, welche auf inhaltliche Aspekte abzielen, sollen Checklisten zum Abschließen der Herausforderungen genutzt werden, um den Fokus auf eine allgemeingültige Vorgehensweise zu reduzieren, für deren Erfüllung die Studierenden jedoch selbst verantwortlich sind. Auch hier wird eine klare Kommunikation durch die Applikation als zwingend erforderlich angesehen.
 
 \par \medskip Die Befürchtung \ref{risk:keinLerneffekt}, dass die Applikation den Studierenden so viel Arbeit abnimmt, dass sie zu wenig eigenständige Erfahrung sammeln und somit der Lerneffekt zu gering ist, wird berücksichtigt, indem die Applikation einen eher informierenden Charakter aufweist, und keine Funktionalität bezüglich dem Liefern von Ergebnissen vorsieht.
+
+\par Im folgenden Verlauf wird der Umgang mit den, in Kapitel \ref{sub:risikouebersicht} dargestellten, Risiken diskutiert und beschrieben.
+\par \medskip Da sich die Herausforderungen an dem Ablauf einer Bachelorarbeit orientieren und den Studierenden somit vor typische Aufgaben stellt, kam es im Verlauf der Interviews zu den Befürchtungen \ref{risk:realerZustand}, dass die Applikation nicht den realen Zustand der Bachelorarbeit kennt und somit der Studierende durch das Erfüllen von Herausforderungen ein Gefühl von Erfolg hat, obwohl diese Herausforderungen nicht den geforderten Qualitäten entsprechen und der Studierende dies durch das positive Feedback nicht merkt.
+\par Um diesem Risiko entgegenzuwirken sollen die erstellten Herausforderungen möglichst auffordernder Natur sein (Beispiel: \grqq Beginne deine Einleitung\grqq). Bei Einsatz von Herausforderungen, welche auf inhaltliche Aspekte abzielen, sollen Checklisten zum Abschließen der Herausforderungen genutzt werden, um den Fokus auf eine allgemeingültige Vorgehensweise zu reduzieren, für deren Erfüllung die Studierenden jedoch selbst verantwortlich sind. Auch hier wird eine klare Kommunikation durch die Applikation als zwingend erforderlich angesehen.
 
 \par \medskip Die Gefahren der Risiken \ref{risk:inhaltUnumstoesslich} und \ref{risk:erstazBetreuer}, die sich damit befassen, dass die Applikation fälschlicherweise als Ersatz eines Betreuers wahrgenommen oder der Inhalt der Applikation als unumstößlich angesehen werden könnte, soll durch eine klare Kommunikation mit den Anwendern reduziert werden. Es werden als Maßnahmen einerseits immer die Quellen der Informationen angegeben und weiterhin eine allgemein sichtbare Erklärung zur Anwendung oder Fehlanwendung der Applikation deutlich kommuniziert.
 
@@ -1343,11 +1358,11 @@ Studierende, die zur Überplanung neigen, würden dies auch ohne Applikation tun
 
 \par \bigskip Die Achievements verfolgen im Rahmen der Applikation die Aufgabe, motivierende Inhalte vor allem für die identifizierten Benutzergruppen der \textbf{Achiever} und \textbf{Explorer} (siehe \ref{sub:nutzergruppenBartle}) zu bieten. Dies soll erreicht werden, indem die Achievements dem Benutzer als Belohnung für eine abgeschlossene Herausforderung als Sammelstück hinzugefügt werden.
 \par \medskip Im Rahmen der gewählten Motivationsstrategie werden verschiedenen Arten von Achievements in die Applikation integriert. Dies passiert unter anderem mit dem Ziel, eine an den Ablauf einer Bachelorarbeit gekoppelte Abstufung von Fortschritt und Erfolgen zu ermöglichen. 
-\par Weiterhin werden auch die sogenannten \textit{App-Achievements} Einzug in die Applikation erhalten. Diese sollen weitestgehend die Bedürfnisse der Benutzergruppe \textbf{Explorer} ansprechen und im Gegensatz zu den anderen Achievements nicht an einer konkreten Herausforderung gekoppelt sein, sondern im Laufe der Nutzung der Applikation durch \textit{versteckte Aufgaben} freigeschaltet und offen gelegt werden können.
+\par Weiterhin werden auch die sogenannten \textit{App-Achievements} Einzug in die Applikation erhalten. Diese sollen weitestgehend die Bedürfnisse der Benutzergruppe \textbf{Explorer} ansprechen und im Gegensatz zu den anderen Achievements nicht an einer konkreten Herausforderung gekoppelt sein, sondern im Laufe der Nutzung der Applikation durch \textit{versteckte} Aufgaben, wie das Erstellen eines Meilensteins in der App, freigeschaltet und offen gelegt werden können.
 
 \par \medskip Um den Achievements, über das Sammeln und die Vervollständigung hinaus, eine Wertigkeit zu geben, werden diese durch verschieden visualisierte Medaillen dargestellt. 
 
-\bigskip
+\medskip
 \begin{figure}[H]
 \centering
 
@@ -1357,7 +1372,7 @@ Studierende, die zur Überplanung neigen, würden dies auch ohne Applikation tun
 	\label{img:achievements}
 \end{figure}
 
-\par \bigskip Diese Achievements basieren auf einem Bild aus der gemeinfreien Bilderdatenbank Pixabay (vgl. \citep{PixabayAchievement}) und wurden mit einer Bilderbearbeitungssoftware für die eigenen Zwecke bearbeitet.
+\par \medskip Diese Achievements basieren auf einem Bild aus der gemeinfreien Bilderdatenbank Pixabay (vgl. \citep{PixabayAchievement}) und wurden mit einer Bilderbearbeitungssoftware für die eigenen Zwecke bearbeitet.
 
 \par \bigskip Es folgt eine Übersicht und Beschreibung der verschiedenen Achievement-Typen:
 \begin{itemize}
@@ -1372,7 +1387,7 @@ Studierende, die zur Überplanung neigen, würden dies auch ohne Applikation tun
 \end{itemize} 
 
 \par \bigskip Der Inhalt wird durch unterschiedliche, den Achievements entsprechenden, Texten dargestellt. Hierbei geht es darum, die mit den Herausforderungen gekoppelten Achievements durch das Verfassen passender Texte eine Ausstrahlung zu verleihen, welche dem Benutzer, als Reaktion auf die Erfüllung eines Achievements, als Titel angezeigt wird. Der Inhalt der Texte ist nicht festgelegt, sollte jedoch so gewählt werden, dass eine positive oder ironische Stimmung gegenüber dem Benutzer vermittelt wird.
-\par \bigskip \textit{Hinweis: Eine für den Protypen gewählte Übersicht der Achievements ist im Anhang zu finden (siehe Angang \ref{anhang:achievementuebersicht}).}
+\par \bigskip \textit{Hinweis: Eine für den Protypen gewählte Übersicht der Achievements ist im Anhang zu finden (siehe Anhang \ref{anhang:achievementuebersicht}).}
 
 \newpage
 \chapter{Architektur und  prototypische Implementierungsdetails} \label{chap:architektur}
@@ -1961,33 +1976,36 @@ Die Untersuchung dieses Problembereiches brachte im Allgemeinen das Ergebnis her
 \par Ein gutes Feature um dem Benutzer zu zeigen was dieser diese Woche geschafft hat, könnte durch abschließende Berichte einer Woche umgesetzt werden. Hierbei könnte dem Benutzer durch eine Übersicht gezeigt werden welche Aktionen er an welchem Tag durch nutzen der Meilensteinplanung getätigt hat. Beispielsweise wären hierfür das Erfüllen von eigens erstellten Unteraufgaben der Meilensteine oder das abschließen eines Meilenstein als ganzes. Weiterhin könnte dem Nutzer hier auch angezeigt werden welche Erfolge er hinsichtlich den Herausforderungen und Achivements geschafft hat. Auf diese Weise könnte der bereits vorhandene Softwareinhalt genutzt werden und ohne großen Erweiterungsaufwand zu einer Qualitätssteigerung der Benutzererfahrung führen.
 \end{itemize}
 
-\section{Abschließende Worte}
+\section{Fazit}
+\par Im Rahmen dieses Projekts wurde eine mobile Applikation entwickelt, die Studierenden die Möglichkeit bieten soll, durch eine wegweisende Vorbereitung den Prozess der Bachelorarbeit zu überblicken und zu durchlaufen. Hierbei wurde der Fokus unter anderem auf Features zur Verbesserung von Zeitmanagement und dem Bereitstellen eines Informationskanals zu themenrelevanten Inhalten gelegt. Ein weiterer Teil der Software sind die gamifizierten Inhalte, welche eng im Kontakt zu den Checklisten-artigen Herausforderungen stehen. Diese Inhalte erfüllen den Zweck, jeden geschafften Schritt in Richtung des großen Ziels mit einem positiven Feedback zu belohnen und somit das strukturierte Organisieren des Projektverlaufs zu fördern und die Studierenden zu dem Erreichen von Fortschritten zu motivieren.
+
+\par \bigskip Es hat sich hierbei gezeigt, dass erst durch die gezielte Einbindung der Beteiligten und eine genaue Auseinandersetzung mit dem Problembereich die benötigten Kenntnisse zur Entwicklung einer organisierten Projektlösung aufgebaut werden können und dieser Schritt ein wichtiger Teil der modernen Softwareentwicklung solcher Anwendungen ist.
 
 \listoffigures
 \listoftables
 \lstlistoflistings
 
 
-\chapter*{Inhaltsverzeichnis der beigelegten CD}
+\chapter*{Inhalt der beigelegten CD}
 \par Das Grundverzeichnis der beigefügten CD einhält den folgenden Inhalt:
 
 \begin{itemize}
 \item[] \textbf{\texttt{Dokumentation/}}
-\par Dokumentation des Projekts in Form eines Latex-Projekts
+\par Dokumentation des Projekts in Form eines Latex-Projekts.
 \begin{itemize}
 \item[] \textbf{\texttt{Anhang/}}
-\par Anhang des durchgeführten Projekts
+\par Die im Laufe des Projekts entstandenen Daten.
 	\begin{itemize}
 		\item[] \textbf{\texttt{Anforderungsanalyse/}}
-		\par Ergebnisse, Auswertungen und Audio- sowie Videomitschnitte der Anforderungsanalyse
+		\par Ergebnisse, Auswertungen und Audio- sowie Videomitschnitte der Anforderungsanalyse.
 		\item[] \textbf{\texttt{Daten/}}
-		\par Daten der in der Software eingesetzten Inhalte
+		\par Daten der in der Software eingesetzten Inhalte.
 		\item[] \textbf{\texttt{Evaluation/}}
-		\par Ergebnisse, Auswertungen und Audio- sowie Videomitschnitte der Evaluation
+		\par Ergebnisse, Auswertungen und Audio- sowie Videomitschnitte der Evaluation.
 	\end{itemize}
 \end{itemize}
 \item[] \textbf{\texttt{Software/}}
-\par Android Studio Projekt der entwickelten Software
+\par Android Studio Projekt der entwickelten Software.
 \end{itemize}
 
 \newpage
@@ -2029,7 +2047,7 @@ Die Untersuchung dieses Problembereiches brachte im Allgemeinen das Ergebnis her
 \label{anhang:onlineUmfrageStudierendeErgebnisse}
 \includepdf[pages=-]{Anhang/Anforderungsanalyse/Studenten/Umfrage/Auswertung_Umfrage.pdf}
 
-\section{Übersicht der Achievements}
+\section{Übersicht der Herausforderungen und Achievements}
 \label{anhang:achievementuebersicht}
 \includepdf[pages=-]{Anhang/Daten/Herausforderungen.pdf}
 

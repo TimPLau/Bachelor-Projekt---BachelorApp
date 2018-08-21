@@ -9,9 +9,9 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {1.3}Aufgabenbeschreibung}{2}{section.1.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.3.1}Voruntersuchung zur Ermittlung der Bedarfssituation}{4}{subsection.1.3.1}
+\contentsline {section}{\numberline {1.4}Voruntersuchung zur Ermittlung der Bedarfssituation}{4}{section.1.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {1.4}Aufbau der Dokumentation}{6}{section.1.4}
+\contentsline {section}{\numberline {1.5}Aufbau der Dokumentation}{6}{section.1.5}
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {2}Beschreibung der Grundlagen}{7}{chapter.2}
 \defcounter {refsection}{0}\relax 
@@ -173,7 +173,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {7.4.2}Ausblick auf Softwarefunktionen}{78}{subsection.7.4.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {7.5}Abschlie\IeC {\ss }ende Worte}{79}{section.7.5}
+\contentsline {section}{\numberline {7.5}Fazit}{79}{section.7.5}
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\nonumberline Abbildungsverzeichnis}{80}{chapter*.6}
 \defcounter {refsection}{0}\relax 
@@ -199,7 +199,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {A.1.7}Ergebnisse der Online-Umfrage f\IeC {\"u}r die Studierenden}{127}{subsection.A.1.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {A.2}\IeC {\"U}bersicht der Achievements}{139}{section.A.2}
+\contentsline {section}{\numberline {A.2}\IeC {\"U}bersicht der Herausforderungen und Achievements}{139}{section.A.2}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {A.3}Oberfl\IeC {\"a}chenprototyp}{142}{section.A.3}
 \defcounter {refsection}{0}\relax 
