@@ -15,7 +15,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {lstlisting}{\numberline {5.3}ViewModel von Container-Komponente einer Meilenstein\IeC {\"a}nderung}{60}{lstlisting.5.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {lstlisting}{\numberline {5.4}Meilenstein Action Beispiel}{60}{lstlisting.5.4}
+\contentsline {lstlisting}{\numberline {5.4}Meilenstein-Action Beispiel}{60}{lstlisting.5.4}
 \defcounter {refsection}{0}\relax 
 \contentsline {lstlisting}{\numberline {5.5}Methode: Best\IeC {\"a}tigung einer Meilenstein\IeC {\"a}nderung}{61}{lstlisting.5.5}
 \defcounter {refsection}{0}\relax 
