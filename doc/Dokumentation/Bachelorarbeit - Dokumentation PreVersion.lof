@@ -3,7 +3,7 @@
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {\relax 1.1}{\ignorespaces Online Umfrage: Zusammenfassung der Umfrageergebnisse}}{4}{figure.1.1}
+\contentsline {figure}{\numberline {\relax 1.1}{\ignorespaces Online-Umfrage: Zusammenfassung der Umfrageergebnisse}}{4}{figure.1.1}
 \defcounter {refsection}{0}\relax 
 \contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Vor Beginn der Bachelorarbeit}}}{4}{figure.1.1}
 \defcounter {refsection}{0}\relax 
@@ -15,90 +15,90 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {\relax 2.1}{\ignorespaces Interest Graph nach Bartle \cite {bartle1996hearts}}}{10}{figure.2.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {\relax 2.2}{\ignorespaces Flutter High-Level Systemarchitektur \cite {Flu5}}}{12}{figure.2.2}
+\contentsline {figure}{\numberline {\relax 2.2}{\ignorespaces Flutter High-Level Systemarchitektur \cite {Flu5}}}{11}{figure.2.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {\relax 2.3}{\ignorespaces Darstellung (iOS und Android): Plattformunabh\IeC {\"a}ngige Entwicklung von Applikationen \cite [What is Flutter?]{Flu8}}}{13}{figure.2.3}
+\contentsline {figure}{\numberline {\relax 2.3}{\ignorespaces Darstellung (iOS und Android): Plattformunabh\IeC {\"a}ngige Entwicklung von Applikationen \cite [What is Flutter?]{Flu8}}}{12}{figure.2.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {\relax 2.4}{\ignorespaces Beispiel: Aufbau von Widgets \cite {FlutterBuildingLayouts}}}{14}{figure.2.4}
+\contentsline {figure}{\numberline {\relax 2.4}{\ignorespaces Beispiel: Aufbau von Widgets \cite {FlutterBuildingLayouts}}}{13}{figure.2.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {\relax 2.5}{\ignorespaces Flutter Widgets Architektur \cite {HackernoonFlutterArcticle}}}{14}{figure.2.5}
+\contentsline {figure}{\numberline {\relax 2.5}{\ignorespaces Flutter Widgets Architektur \cite {HackernoonFlutterArcticle}}}{13}{figure.2.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {\relax 2.6}{\ignorespaces Flutter Rendering \cite {Flu5}}}{15}{figure.2.6}
-\defcounter {refsection}{0}\relax 
-\addvspace {10\p@ }
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {\relax 3.1}{\ignorespaces Beschreibung der Analysestrategie}}{18}{figure.3.1}
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {\relax 3.2}{\ignorespaces Eingrenzung der Bartle-Benutzerklassen}}{34}{figure.3.2}
+\contentsline {figure}{\numberline {\relax 2.6}{\ignorespaces Flutter Rendering \cite {Flu5}}}{14}{figure.2.6}
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {\relax 4.1}{\ignorespaces Benutzeroberfl\IeC {\"a}che Meilensteinverwaltung}}{41}{figure.4.1}
+\contentsline {figure}{\numberline {\relax 3.1}{\ignorespaces Darstellung der Analysestrategie}}{17}{figure.3.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {\relax 4.2}{\ignorespaces Benutzeroberfl\IeC {\"a}che Guide}}{42}{figure.4.2}
-\defcounter {refsection}{0}\relax 
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Guide Hauptbildschirm}}}{42}{figure.4.2}
-\defcounter {refsection}{0}\relax 
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Guide Themen-Ebene}}}{42}{figure.4.2}
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {\relax 4.3}{\ignorespaces Benutzeroberfl\IeC {\"a}che Herausforderungen}}{44}{figure.4.3}
-\defcounter {refsection}{0}\relax 
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Herausforderungen - Roter Faden}}}{44}{figure.4.3}
-\defcounter {refsection}{0}\relax 
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Herausforderungen - Details}}}{44}{figure.4.3}
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {\relax 4.4}{\ignorespaces Benutzeroberfl\IeC {\"a}che Achievements}}{45}{figure.4.4}
-\defcounter {refsection}{0}\relax 
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Achievements Hauptbildschirm}}}{45}{figure.4.4}
-\defcounter {refsection}{0}\relax 
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Beispiel: Planner Achievements}}}{45}{figure.4.4}
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {\relax 4.5}{\ignorespaces Benutzeroberfl\IeC {\"a}che Navigations-Men\IeC {\"u}}}{46}{figure.4.5}
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {\relax 4.6}{\ignorespaces Benutzeroberfl\IeC {\"a}che Dashboard}}{47}{figure.4.6}
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {\relax 4.7}{\ignorespaces Visualisierung der Achievements}}{51}{figure.4.7}
+\contentsline {figure}{\numberline {\relax 3.2}{\ignorespaces Eingrenzung der Bartle-Benutzerklassen}}{33}{figure.3.2}
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {\relax 5.1}{\ignorespaces Datenfluss\IeC {\"u}bersicht der Softwarearchitektur}}{56}{figure.5.1}
+\contentsline {figure}{\numberline {\relax 4.1}{\ignorespaces Benutzeroberfl\IeC {\"a}che Meilensteinverwaltung}}{40}{figure.4.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {\relax 5.2}{\ignorespaces Architektur der Model-Komponenten}}{58}{figure.5.2}
+\contentsline {figure}{\numberline {\relax 4.2}{\ignorespaces Benutzeroberfl\IeC {\"a}che Guide}}{41}{figure.4.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Guide Hauptbildschirm}}}{41}{figure.4.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Guide Themen-Ebene}}}{41}{figure.4.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {\relax 4.3}{\ignorespaces Benutzeroberfl\IeC {\"a}che Herausforderungen}}{43}{figure.4.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Herausforderungen - Roter Faden}}}{43}{figure.4.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Herausforderungen - Details}}}{43}{figure.4.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {\relax 4.4}{\ignorespaces Benutzeroberfl\IeC {\"a}che Achievements}}{44}{figure.4.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Achievements Hauptbildschirm}}}{44}{figure.4.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Beispiel: Planner Achievements}}}{44}{figure.4.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {\relax 4.5}{\ignorespaces Benutzeroberfl\IeC {\"a}che Navigations-Men\IeC {\"u}}}{45}{figure.4.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {\relax 4.6}{\ignorespaces Benutzeroberfl\IeC {\"a}che Dashboard}}{46}{figure.4.6}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {\relax 4.7}{\ignorespaces Visualisierung der Achievements}}{50}{figure.4.7}
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\addvspace {10\p@ }
+\contentsline {figure}{\numberline {\relax 5.1}{\ignorespaces Datenfluss\IeC {\"u}bersicht der Softwarearchitektur}}{55}{figure.5.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {\relax 5.2}{\ignorespaces Architektur der Model-Komponenten}}{57}{figure.5.2}
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {\relax A.1}{\ignorespaces Oberfl\IeC {\"a}chenprototyp: Dashboard}}{142}{figure.A.1}
+\addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {\relax A.2}{\ignorespaces Oberfl\IeC {\"a}chenprototyp: Guide}}{143}{figure.A.2}
+\addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Guide}}}{143}{figure.A.2}
+\contentsline {figure}{\numberline {\relax A.1}{\ignorespaces Oberfl\IeC {\"a}chenprototyp: Dashboard}}{135}{figure.A.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Guide - Themenebene}}}{143}{figure.A.2}
+\contentsline {figure}{\numberline {\relax A.2}{\ignorespaces Oberfl\IeC {\"a}chenprototyp: Guide}}{136}{figure.A.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Guide - Informationsebene}}}{143}{figure.A.2}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Guide}}}{136}{figure.A.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {\relax A.3}{\ignorespaces Oberfl\IeC {\"a}chenprototyp: Achievements}}{143}{figure.A.3}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Guide - Themenebene}}}{136}{figure.A.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Achievements - \IeC {\"U}bersicht}}}{143}{figure.A.3}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Guide - Informationsebene}}}{136}{figure.A.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Achievements - Detailebene}}}{143}{figure.A.3}
+\contentsline {figure}{\numberline {\relax A.3}{\ignorespaces Oberfl\IeC {\"a}chenprototyp: Achievements}}{136}{figure.A.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {\relax A.4}{\ignorespaces Oberfl\IeC {\"a}chenprototyp: Aufgaben}}{144}{figure.A.4}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Achievements - \IeC {\"U}bersicht}}}{136}{figure.A.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Aufgaben - \IeC {\"U}bersicht}}}{144}{figure.A.4}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Achievements - Detailebene}}}{136}{figure.A.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Aufgaben - Sortiert}}}{144}{figure.A.4}
+\contentsline {figure}{\numberline {\relax A.4}{\ignorespaces Oberfl\IeC {\"a}chenprototyp: Aufgaben}}{137}{figure.A.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {\relax A.5}{\ignorespaces Oberfl\IeC {\"a}chenprototyp: Sonstiges}}{144}{figure.A.5}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Aufgaben - \IeC {\"U}bersicht}}}{137}{figure.A.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Zeitmanagement - \IeC {\"U}bersicht}}}{144}{figure.A.5}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Aufgaben - Sortiert}}}{137}{figure.A.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Menu - Navigation}}}{144}{figure.A.5}
+\contentsline {figure}{\numberline {\relax A.5}{\ignorespaces Oberfl\IeC {\"a}chenprototyp: Sonstiges}}{137}{figure.A.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Zeitmanagement - \IeC {\"U}bersicht}}}{137}{figure.A.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Menu - Navigation}}}{137}{figure.A.5}
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }

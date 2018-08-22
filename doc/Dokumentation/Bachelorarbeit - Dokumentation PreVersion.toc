@@ -25,214 +25,216 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {2.1.4}Bedeutung f\IeC {\"u}r die Arbeit}{10}{subsection.2.1.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.2}Vorstellung des Frameworks Flutter}{12}{section.2.2}
+\contentsline {section}{\numberline {2.2}Vorstellung des Frameworks Flutter}{11}{section.2.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.2.1}Was ist Flutter?}{12}{subsection.2.2.1}
+\contentsline {subsection}{\numberline {2.2.1}Was ist Flutter?}{11}{subsection.2.2.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.2.2}Plattform\IeC {\"u}bergreifende Entwicklung von mobilen Applikationen}{13}{subsection.2.2.2}
+\contentsline {subsection}{\numberline {2.2.2}Plattform\IeC {\"u}bergreifende Entwicklung von mobilen Applikationen}{12}{subsection.2.2.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.2.3}Flutter Widgets}{14}{subsection.2.2.3}
+\contentsline {subsection}{\numberline {2.2.3}Flutter Widgets}{13}{subsection.2.2.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.2.4}Flutter UI Rendering}{15}{subsection.2.2.4}
+\contentsline {subsection}{\numberline {2.2.4}Flutter UI Rendering}{14}{subsection.2.2.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {3}Untersuchung des Problembereiches}{16}{chapter.3}
+\contentsline {chapter}{\numberline {3}Untersuchung des Problembereiches}{15}{chapter.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.1}Hypothese}{16}{section.3.1}
+\contentsline {section}{\numberline {3.1}Hypothese}{15}{section.3.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.2}Identifikation der Interessengruppen}{17}{section.3.2}
+\contentsline {section}{\numberline {3.2}Identifikation der Interessengruppen}{16}{section.3.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.3}Wahl der Analysestrategie}{18}{section.3.3}
+\contentsline {section}{\numberline {3.3}Wahl der Analysestrategie}{17}{section.3.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.3.1}Einbezug der Professoren}{19}{subsection.3.3.1}
+\contentsline {subsection}{\numberline {3.3.1}Einbezug der Professoren}{18}{subsection.3.3.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.3.2}Einbezug der Studierenden}{19}{subsection.3.3.2}
+\contentsline {subsection}{\numberline {3.3.2}Einbezug der Studierenden}{18}{subsection.3.3.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.4}Ergebnisse der Professoren}{20}{section.3.4}
+\contentsline {section}{\numberline {3.4}Ergebnisse der Professoren}{19}{section.3.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.4.1}Art der Arbeit}{21}{subsection.3.4.1}
+\contentsline {subsection}{\numberline {3.4.1}Art der Arbeit}{20}{subsection.3.4.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.4.2}Erwartungen an den Bacheloranden}{23}{subsection.3.4.2}
+\contentsline {subsection}{\numberline {3.4.2}Erwartungen an den Bacheloranden}{22}{subsection.3.4.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.4.3}H\IeC {\"a}ufig auftretende Probleme}{25}{subsection.3.4.3}
+\contentsline {subsection}{\numberline {3.4.3}H\IeC {\"a}ufig auftretende Probleme}{24}{subsection.3.4.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.4.4}Die Applikation \IeC {\textendash } W\IeC {\"u}nsche und Anregungen}{26}{subsection.3.4.4}
+\contentsline {subsection}{\numberline {3.4.4}Die Applikation \IeC {\textendash } W\IeC {\"u}nsche und Anregungen}{25}{subsection.3.4.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.4.5}Die Applikation - Chancen und Risiken}{27}{subsection.3.4.5}
+\contentsline {subsection}{\numberline {3.4.5}Die Applikation - Chancen und Risiken}{26}{subsection.3.4.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.5}Ergebnisse der Studierenden}{29}{section.3.5}
+\contentsline {section}{\numberline {3.5}Ergebnisse der Studierenden}{28}{section.3.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.5.1}Erwartungen an den Betreuer}{29}{subsection.3.5.1}
+\contentsline {subsection}{\numberline {3.5.1}Erwartungen an den Betreuer}{28}{subsection.3.5.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.5.2}Die gr\IeC {\"o}\IeC {\ss }ten Probleme der Studierenden}{30}{subsection.3.5.2}
+\contentsline {subsection}{\numberline {3.5.2}Die gr\IeC {\"o}\IeC {\ss }ten Probleme der Studierenden}{29}{subsection.3.5.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.5.3}Wunsch nach besserer Vorbereitung auf die Bachelorarbeit}{31}{subsection.3.5.3}
+\contentsline {subsection}{\numberline {3.5.3}Wunsch nach besserer Vorbereitung auf die Bachelorarbeit}{30}{subsection.3.5.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.5.4}Einbezug der Studierenden in die Gestaltung der Applikation}{32}{subsection.3.5.4}
+\contentsline {subsection}{\numberline {3.5.4}Einbezug der Studierenden in die Gestaltung der Applikation}{31}{subsection.3.5.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.6}Untersuchung der Ergebnisse}{33}{section.3.6}
+\contentsline {section}{\numberline {3.6}Untersuchung der Ergebnisse}{32}{section.3.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.6.1}Identifikation des Problembereichs}{33}{subsection.3.6.1}
+\contentsline {subsection}{\numberline {3.6.1}Identifikation des Problembereichs}{32}{subsection.3.6.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.6.2}Auswahl der Motivationsstrategie}{34}{subsection.3.6.2}
+\contentsline {subsection}{\numberline {3.6.2}Auswahl der Motivationsstrategie}{33}{subsection.3.6.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.6.3}\IeC {\"U}bersicht der abgeleiteten Produktfunktionen und Anforderungen}{36}{subsection.3.6.3}
+\contentsline {subsection}{\numberline {3.6.3}\IeC {\"U}bersicht der abgeleiteten Produktfunktionen und Anforderungen}{35}{subsection.3.6.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.6.4}\IeC {\"U}bersicht der Risiken}{38}{subsection.3.6.4}
+\contentsline {subsection}{\numberline {3.6.4}\IeC {\"U}bersicht der Risiken}{37}{subsection.3.6.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.6.5}\IeC {\"U}bersicht der Chancen}{39}{subsection.3.6.5}
+\contentsline {subsection}{\numberline {3.6.5}\IeC {\"U}bersicht der Chancen}{38}{subsection.3.6.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {4}Konzeptvorstellung der Applikation}{40}{chapter.4}
+\contentsline {chapter}{\numberline {4}Konzeptvorstellung der Applikation}{39}{chapter.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.1}Beschreibung der Software}{40}{section.4.1}
+\contentsline {section}{\numberline {4.1}Beschreibung der Software}{39}{section.4.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.1.1}Meilensteinverwaltung}{41}{subsection.4.1.1}
+\contentsline {subsection}{\numberline {4.1.1}Meilensteinverwaltung}{40}{subsection.4.1.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.1.2}Bachelorarbeit Guide}{42}{subsection.4.1.2}
+\contentsline {subsection}{\numberline {4.1.2}Bachelorarbeit Guide}{41}{subsection.4.1.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.1.3}Herausforderungen}{44}{subsection.4.1.3}
+\contentsline {subsection}{\numberline {4.1.3}Herausforderungen}{43}{subsection.4.1.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.1.4}Achievements}{45}{subsection.4.1.4}
+\contentsline {subsection}{\numberline {4.1.4}Achievements}{44}{subsection.4.1.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.1.5}Sonstige Softwareinhalte}{46}{subsection.4.1.5}
+\contentsline {subsection}{\numberline {4.1.5}Sonstige Softwareinhalte}{45}{subsection.4.1.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.1.6}Dashboard}{47}{subsection.4.1.6}
+\contentsline {subsection}{\numberline {4.1.6}Dashboard}{46}{subsection.4.1.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.1.7}\IeC {\"U}bersicht der Produktfunktionen}{49}{subsection.4.1.7}
+\contentsline {subsection}{\numberline {4.1.7}\IeC {\"U}bersicht der Produktfunktionen}{48}{subsection.4.1.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.1.8}Umgang mit Risiken}{50}{subsection.4.1.8}
+\contentsline {subsection}{\numberline {4.1.8}Umgang mit Risiken}{49}{subsection.4.1.8}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.2}Beschreibung der Gamification-Elemente}{51}{section.4.2}
+\contentsline {section}{\numberline {4.2}Beschreibung der Gamification-Elemente}{50}{section.4.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {5}Architektur und prototypische Implementierungsdetails}{53}{chapter.5}
+\contentsline {chapter}{\numberline {5}Architektur und prototypische Implementierungsdetails}{52}{chapter.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.1}Was ist Redux?}{53}{section.5.1}
+\contentsline {section}{\numberline {5.1}Was ist Redux?}{52}{section.5.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.1.1}Actions}{54}{subsection.5.1.1}
+\contentsline {subsection}{\numberline {5.1.1}Actions}{53}{subsection.5.1.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.1.2}Reducers}{54}{subsection.5.1.2}
+\contentsline {subsection}{\numberline {5.1.2}Reducers}{53}{subsection.5.1.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.1.3}Store}{54}{subsection.5.1.3}
+\contentsline {subsection}{\numberline {5.1.3}Store}{53}{subsection.5.1.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.1.4}Flutter Redux Libary}{55}{subsection.5.1.4}
+\contentsline {subsection}{\numberline {5.1.4}Flutter Redux Libary}{54}{subsection.5.1.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.2}Architekturbeschreibung}{56}{section.5.2}
+\contentsline {section}{\numberline {5.2}Architekturbeschreibung}{55}{section.5.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.2.1}\IeC {\"U}bersicht des Datenflusses}{56}{subsection.5.2.1}
+\contentsline {subsection}{\numberline {5.2.1}\IeC {\"U}bersicht des Datenflusses}{55}{subsection.5.2.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.2.2}Verwendetet externe Bibliotheken}{57}{subsection.5.2.2}
+\contentsline {subsection}{\numberline {5.2.2}Verwendetet externe Bibliotheken}{56}{subsection.5.2.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.2.3}Architektur\IeC {\"u}bersicht der Model-Komponenten}{58}{subsection.5.2.3}
+\contentsline {subsection}{\numberline {5.2.3}Architektur\IeC {\"u}bersicht der Model-Komponenten}{57}{subsection.5.2.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.3}Beispielhafter Ablauf einer Nutzeraktion}{60}{section.5.3}
+\contentsline {section}{\numberline {5.3}Beispielhafter Ablauf einer Nutzeraktion}{59}{section.5.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {6}Evaluation}{65}{chapter.6}
+\contentsline {chapter}{\numberline {6}Evaluation}{64}{chapter.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6.1}Ergebnisse der Softwaretests}{65}{section.6.1}
+\contentsline {section}{\numberline {6.1}Ergebnisse der Softwaretests}{64}{section.6.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6.2}Ergebnisse der Nutzerevaluation}{66}{section.6.2}
+\contentsline {section}{\numberline {6.2}Ergebnisse der Nutzerevaluation}{65}{section.6.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.2.1}Zusammenfassung der Testdurchf\IeC {\"u}hrung mit den Studierenden}{67}{subsection.6.2.1}
+\contentsline {subsection}{\numberline {6.2.1}Zusammenfassung der Testdurchf\IeC {\"u}hrung mit den Studierenden}{66}{subsection.6.2.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.2.2}Zusammenfassung der Testdurchf\IeC {\"u}hrung mit den Professoren}{69}{subsection.6.2.2}
+\contentsline {subsection}{\numberline {6.2.2}Zusammenfassung der Testdurchf\IeC {\"u}hrung mit den Professoren}{68}{subsection.6.2.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.2.3}Ergebnis der Nutzerevaluation}{71}{subsection.6.2.3}
+\contentsline {subsection}{\numberline {6.2.3}Ergebnis der Nutzerevaluation}{70}{subsection.6.2.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6.3}Bewertung des Frameworks Flutter zur Entwicklung von mobilen Appliaktionen}{72}{section.6.3}
+\contentsline {section}{\numberline {6.3}Bewertung des Frameworks Flutter zur Entwicklung von mobilen Appliaktionen}{71}{section.6.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.3.1}Einf\IeC {\"u}hrung und Dokumentation}{72}{subsection.6.3.1}
+\contentsline {subsection}{\numberline {6.3.1}Einf\IeC {\"u}hrung und Dokumentation}{71}{subsection.6.3.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.3.2}Verwendete Programmiersprache}{72}{subsection.6.3.2}
+\contentsline {subsection}{\numberline {6.3.2}Verwendete Programmiersprache}{71}{subsection.6.3.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.3.3}Handhabung und Anwendung}{72}{subsection.6.3.3}
+\contentsline {subsection}{\numberline {6.3.3}Handhabung und Anwendung}{71}{subsection.6.3.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.3.4}UI-Performance}{73}{subsection.6.3.4}
+\contentsline {subsection}{\numberline {6.3.4}UI-Performance}{72}{subsection.6.3.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.3.5}Support und Community}{73}{subsection.6.3.5}
+\contentsline {subsection}{\numberline {6.3.5}Support und Community}{72}{subsection.6.3.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.3.6}Framework-spezifische Features}{74}{subsection.6.3.6}
+\contentsline {subsection}{\numberline {6.3.6}Framework-spezifische Features}{73}{subsection.6.3.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.3.7}Zusammenfassung der Bewertung}{74}{subsection.6.3.7}
+\contentsline {subsection}{\numberline {6.3.7}Zusammenfassung der Bewertung}{73}{subsection.6.3.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {7}Zusammenfassung}{75}{chapter.7}
+\contentsline {chapter}{\numberline {7}Zusammenfassung}{74}{chapter.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {7.1}Die wichtigsten Erkenntnisse der Arbeit}{75}{section.7.1}
+\contentsline {section}{\numberline {7.1}Die wichtigsten Erkenntnisse der Arbeit}{74}{section.7.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {7.2}Schwierigkeiten bei der Bearbeitung}{76}{section.7.2}
+\contentsline {section}{\numberline {7.2}Schwierigkeiten bei der Bearbeitung}{75}{section.7.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {7.3}Erf\IeC {\"u}llung der Aufgabenstellung}{76}{section.7.3}
+\contentsline {section}{\numberline {7.3}Erf\IeC {\"u}llung der Aufgabenstellung}{75}{section.7.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.3.1}Unterst\IeC {\"u}tzung bei Bearbeitung der Bachelorarbeit}{76}{subsection.7.3.1}
+\contentsline {subsection}{\numberline {7.3.1}Unterst\IeC {\"u}tzung bei Bearbeitung der Bachelorarbeit}{75}{subsection.7.3.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.3.2}Unterst\IeC {\"u}tzung bei Zeitplanung}{77}{subsection.7.3.2}
+\contentsline {subsection}{\numberline {7.3.2}Unterst\IeC {\"u}tzung bei Zeitplanung}{76}{subsection.7.3.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.3.3}Motivation der Studierenden}{77}{subsection.7.3.3}
+\contentsline {subsection}{\numberline {7.3.3}Motivation der Studierenden}{76}{subsection.7.3.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {7.4}Fortf\IeC {\"u}hrung des Projekts}{78}{section.7.4}
+\contentsline {section}{\numberline {7.4}Fortf\IeC {\"u}hrung des Projekts}{77}{section.7.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.4.1}Ausblick auf weitere Untersuchungen}{78}{subsection.7.4.1}
+\contentsline {subsection}{\numberline {7.4.1}Ausblick auf weitere Untersuchungen}{77}{subsection.7.4.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.4.2}Ausblick auf Softwarefunktionen}{78}{subsection.7.4.2}
+\contentsline {subsection}{\numberline {7.4.2}Ausblick auf Softwarefunktionen}{77}{subsection.7.4.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {7.5}Fazit}{79}{section.7.5}
+\contentsline {section}{\numberline {7.5}Fazit}{78}{section.7.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\nonumberline Abbildungsverzeichnis}{80}{chapter*.6}
+\contentsline {chapter}{\nonumberline Abbildungsverzeichnis}{79}{chapter*.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\nonumberline Tabellenverzeichnis}{81}{chapter*.7}
+\contentsline {chapter}{\nonumberline Tabellenverzeichnis}{80}{chapter*.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\nonumberline Listings}{82}{chapter*.8}
+\contentsline {chapter}{\nonumberline Listings}{81}{chapter*.8}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {A}Anhang}{84}{appendix.A}
+\contentsline {chapter}{\numberline {A}Anhang}{83}{appendix.A}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {A.1}Befragung der Beteiligten}{85}{section.A.1}
+\contentsline {section}{\numberline {A.1}Befragung der Beteiligten}{84}{section.A.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {A.1.1}Transkripte der Interviews mit den Professoren (Interview I)}{86}{subsection.A.1.1}
+\contentsline {subsection}{\numberline {A.1.1}Transkripte der Interviews mit den Professoren (Interview I)}{84}{subsection.A.1.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {A.1.2}Transkripte der Interviews mit den Professoren (Interview II)}{94}{subsection.A.1.2}
+\contentsline {subsection}{\numberline {A.1.2}Transkripte der Interviews mit den Professoren (Interview II)}{91}{subsection.A.1.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {A.1.3}Transkripte der Interviews mit den Professoren (Interview III)}{99}{subsection.A.1.3}
+\contentsline {subsection}{\numberline {A.1.3}Transkripte der Interviews mit den Professoren (Interview III)}{95}{subsection.A.1.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {A.1.4}Transkripte der Interviews mit den Professoren (Interview IV)}{107}{subsection.A.1.4}
+\contentsline {subsection}{\numberline {A.1.4}Transkripte der Interviews mit den Professoren (Interview IV)}{102}{subsection.A.1.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {A.1.5}Transkripte der Interviews mit den Professoren (Interview V)}{112}{subsection.A.1.5}
+\contentsline {subsection}{\numberline {A.1.5}Transkripte der Interviews mit den Professoren (Interview V)}{106}{subsection.A.1.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {A.1.6}Zusammenfassung der schriftlichen Befragung der Studierenden}{120}{subsection.A.1.6}
+\contentsline {subsection}{\numberline {A.1.6}Notizen von Interviews mit Professoren (Interview VI)}{113}{subsection.A.1.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {A.1.7}Ergebnisse der Online-Umfrage f\IeC {\"u}r die Studierenden}{127}{subsection.A.1.7}
+\contentsline {subsection}{\numberline {A.1.7}E-Mail-Befragung der Professoren I}{115}{subsection.A.1.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {A.2}\IeC {\"U}bersicht der Herausforderungen und Achievements}{139}{section.A.2}
+\contentsline {subsection}{\numberline {A.1.8}Zusammenfassung der schriftlichen Befragung der Studierenden}{116}{subsection.A.1.8}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {A.3}Oberfl\IeC {\"a}chenprototyp}{142}{section.A.3}
+\contentsline {subsection}{\numberline {A.1.9}Ergebnisse der Online-Umfrage f\IeC {\"u}r die Studierenden}{122}{subsection.A.1.9}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {A.4}Detaillierte Beschreibung der Model Komponenten}{145}{section.A.4}
+\contentsline {section}{\numberline {A.2}\IeC {\"U}bersicht der Herausforderungen und Achievements}{133}{section.A.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {A.4.1}AppState-Klasse}{145}{subsection.A.4.1}
+\contentsline {section}{\numberline {A.3}Oberfl\IeC {\"a}chenprototyp}{135}{section.A.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {A.4.2}Milestone-Klasse}{147}{subsection.A.4.2}
+\contentsline {section}{\numberline {A.4}Detaillierte Beschreibung der Model Komponenten}{138}{section.A.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {A.4.3}Task-Klasse}{148}{subsection.A.4.3}
+\contentsline {subsection}{\numberline {A.4.1}AppState-Klasse (\texttt {@immutable})}{138}{subsection.A.4.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {A.4.4}Challenge-Klasse}{148}{subsection.A.4.4}
+\contentsline {subsection}{\numberline {A.4.2}Milestone-Klasse (\texttt {@immutable})}{140}{subsection.A.4.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {A.4.5}Achievement-Klasse}{148}{subsection.A.4.5}
+\contentsline {subsection}{\numberline {A.4.3}Task-Klasse (\texttt {@immutable})}{141}{subsection.A.4.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {A.4.6}Property-Klasse}{149}{subsection.A.4.6}
+\contentsline {subsection}{\numberline {A.4.4}Challenge-Klasse (\texttt {@immutable})}{141}{subsection.A.4.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {A.4.7}Content-Klasse}{150}{subsection.A.4.7}
+\contentsline {subsection}{\numberline {A.4.5}Achievement-Klasse (\texttt {@immutable})}{141}{subsection.A.4.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {A.4.8}AppContentLoader-Klasse}{151}{subsection.A.4.8}
+\contentsline {subsection}{\numberline {A.4.6}Property-Klasse (\texttt {@immutable})}{142}{subsection.A.4.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {A.4.9}JSONAppContentFile-Klasse}{151}{subsection.A.4.9}
+\contentsline {subsection}{\numberline {A.4.7}Content-Klasse (\texttt {@immutable})}{143}{subsection.A.4.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {A.4.10}InformationToolContentBuilder-Klasse}{151}{subsection.A.4.10}
+\contentsline {subsection}{\numberline {A.4.8}AppContentLoader-Klasse}{144}{subsection.A.4.8}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {A.4.11}Achievement-Notification Funktionen}{151}{subsection.A.4.11}
+\contentsline {subsection}{\numberline {A.4.9}JSONAppContentFile-Klasse}{144}{subsection.A.4.9}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {A.5}Dokumente der Evaluation}{151}{section.A.5}
+\contentsline {subsection}{\numberline {A.4.10}Achievement-Notification Funktionen}{144}{subsection.A.4.10}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {A.5.1}Aufgabenkatalog}{152}{subsection.A.5.1}
+\contentsline {section}{\numberline {A.5}Dokumente der Evaluation}{145}{section.A.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {A.5.2}Ergebnisse der Professoren}{155}{subsection.A.5.2}
+\contentsline {subsection}{\numberline {A.5.1}Aufgabenkatalog}{145}{subsection.A.5.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {A.5.3}Ergebnisse der Studierende}{158}{subsection.A.5.3}
+\contentsline {subsection}{\numberline {A.5.2}Ergebnisse der Professoren}{147}{subsection.A.5.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\nonumberline Literatur}{169}{chapter*.10}
+\contentsline {subsection}{\numberline {A.5.3}Ergebnisse der Studierende}{149}{subsection.A.5.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\nonumberline Literatur}{157}{chapter*.10}

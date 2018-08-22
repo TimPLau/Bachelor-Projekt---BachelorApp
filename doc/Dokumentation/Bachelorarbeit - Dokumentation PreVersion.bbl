@@ -62,17 +62,6 @@
     \field{year}{Februar 27, 2018 (Zugriff Juni 3, 2018)}
   \endentry
 
-  \entry{AppleHomepage}{manual}{}
-    \field{labeltitlesource}{title}
-    \field{sortinit}{A}
-    \field{sortinithash}{A}
-    \field{title}{Apple Homepage}
-    \verb{url}
-    \verb https://www.apple.com/
-    \endverb
-    \field{year}{(Zugriff Juni 10, 2018)}
-  \endentry
-
   \entry{Balzert2010}{book}{}
     \name{author}{1}{}{%
       {{hash=BH}{%
@@ -154,17 +143,6 @@
     \field{volume}{55}
     \field{journaltitle}{Wirtschaftinformatik}
     \field{year}{2013}
-  \endentry
-
-  \entry{Flu1}{manual}{}
-    \field{labeltitlesource}{title}
-    \field{sortinit}{B}
-    \field{sortinithash}{B}
-    \field{title}{Build beautiful native apps in record time}
-    \verb{url}
-    \verb https://flutter.io/
-    \endverb
-    \field{year}{(Zugriff Juni 3, 2018)}
   \endentry
 
   \entry{FlutterBuildingLayouts}{manual}{}
@@ -320,17 +298,6 @@
     \field{year}{(Zugriff August 6, 2018)}
   \endentry
 
-  \entry{Flu6}{manual}{}
-    \field{labeltitlesource}{title}
-    \field{sortinit}{F}
-    \field{sortinithash}{F}
-    \field{title}{Foundation Libary}
-    \verb{url}
-    \verb https://docs.flutter.io/flutter/foundation/foundation-library.html
-    \endverb
-    \field{year}{(Zugriff Juni 3, 2018)}
-  \endentry
-
   \entry{FlutterGetStarted}{manual}{}
     \field{labeltitlesource}{title}
     \field{sortinit}{G}
@@ -353,17 +320,6 @@
     \verb -achievements-for-your-game-a-simple-approach--gamedev-6012
     \endverb
     \field{year}{(Zugriff August 16, 2018)}
-  \endentry
-
-  \entry{Flu2}{manual}{}
-    \field{labeltitlesource}{title}
-    \field{sortinit}{I}
-    \field{sortinithash}{I}
-    \field{title}{Introduction}
-    \verb{url}
-    \verb https://flutter.io/faq/#introduction
-    \endverb
-    \field{year}{(Zugriff Juni 3, 2018)}
   \endentry
 
   \entry{iOSDesign}{manual}{}
@@ -400,15 +356,28 @@
     \field{year}{(Zugriff August 20, 2018)}
   \endentry
 
-  \entry{Flu7}{manual}{}
+  \entry{Anforderungsanalyse}{manual}{}
+    \name{author}{1}{}{%
+      {{hash=KPDR}{%
+         family={Koschke},
+         familyi={K\bibinitperiod},
+         given={Prof. Dr.\bibnamedelima Rainer},
+         giveni={P\bibinitperiod\bibinitdelim D\bibinitperiod\bibinitdelim
+  R\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{KPDR1}
+    \strng{fullhash}{KPDR1}
+    \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
-    \field{sortinit}{M}
-    \field{sortinithash}{M}
-    \field{title}{Material Components Widgets}
+    \field{sortinit}{K}
+    \field{sortinithash}{K}
+    \field{title}{Software-Projekt}
     \verb{url}
-    \verb https://flutter.io/widgets/material/
+    \verb https://www.informatik.uni-bremen.de/st/Lehre/swp0809/skript/analyse-
+    \verb 1x2.pdf
     \endverb
-    \field{year}{(Zugriff Juni 3, 2018)}
+    \field{year}{(Zugriff August 22, 2018)}
   \endentry
 
   \entry{Mat1}{manual}{}
@@ -599,17 +568,6 @@
     \field{year}{(Zugriff Juni 8, 2018)}
   \endentry
 
-  \entry{WordPressRedux}{manual}{}
-    \field{labeltitlesource}{title}
-    \field{sortinit}{R}
-    \field{sortinithash}{R}
-    \field{title}{Read Me}
-    \verb{url}
-    \verb https://reduxframework.com/
-    \endverb
-    \field{year}{(Zugriff Juni 8, 2018)}
-  \endentry
-
   \entry{ReduxReducers}{manual}{}
     \field{labeltitlesource}{title}
     \field{sortinit}{R}
@@ -617,6 +575,17 @@
     \field{title}{Reducers}
     \verb{url}
     \verb https://redux.js.org/basics/reducers
+    \endverb
+    \field{year}{(Zugriff Juni 8, 2018)}
+  \endentry
+
+  \entry{WordPressRedux}{manual}{}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{R}
+    \field{sortinithash}{R}
+    \field{title}{Redux}
+    \verb{url}
+    \verb https://reduxframework.com/
     \endverb
     \field{year}{(Zugriff Juni 8, 2018)}
   \endentry
@@ -719,39 +688,6 @@
     \verb https://redux.js.org/basics/store
     \endverb
     \field{year}{(Zugriff Juni 8, 2018)}
-  \endentry
-
-  \entry{Strahringer2017}{book}{}
-    \name{author}{2}{}{%
-      {{hash=SS}{%
-         family={Strahringer},
-         familyi={S\bibinitperiod},
-         given={Susanne},
-         giveni={S\bibinitperiod},
-      }}%
-      {{hash=LC}{%
-         family={Leyh},
-         familyi={L\bibinitperiod},
-         given={Christian},
-         giveni={C\bibinitperiod},
-      }}%
-    }
-    \list{publisher}{1}{%
-      {Springer-Verlag}%
-    }
-    \strng{namehash}{SSLC1}
-    \strng{fullhash}{SSLC1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{sortinit}{S}
-    \field{sortinithash}{S}
-    \field{isbn}{978-3-658-16742-4}
-    \field{title}{Gamification und Serious Games - Grundlagen, Vorgehen und
-  Anwendungen}
-    \list{location}{1}{%
-      {Berlin Heidelberg New York}%
-    }
-    \field{year}{2017}
   \endentry
 
   \entry{Flu8}{manual}{}

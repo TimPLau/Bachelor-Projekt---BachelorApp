@@ -95,24 +95,25 @@
 \BOOKMARK [2][-]{subsection.A.1.3}{Transkripte der Interviews mit den Professoren \(Interview III\)}{section.A.1}% 95
 \BOOKMARK [2][-]{subsection.A.1.4}{Transkripte der Interviews mit den Professoren \(Interview IV\)}{section.A.1}% 96
 \BOOKMARK [2][-]{subsection.A.1.5}{Transkripte der Interviews mit den Professoren \(Interview V\)}{section.A.1}% 97
-\BOOKMARK [2][-]{subsection.A.1.6}{Zusammenfassung der schriftlichen Befragung der Studierenden}{section.A.1}% 98
-\BOOKMARK [2][-]{subsection.A.1.7}{Ergebnisse der Online-Umfrage f\374r die Studierenden}{section.A.1}% 99
-\BOOKMARK [1][-]{section.A.2}{\334bersicht der Herausforderungen und Achievements}{appendix.A}% 100
-\BOOKMARK [1][-]{section.A.3}{Oberfl\344chenprototyp}{appendix.A}% 101
-\BOOKMARK [1][-]{section.A.4}{Detaillierte Beschreibung der Model Komponenten}{appendix.A}% 102
-\BOOKMARK [2][-]{subsection.A.4.1}{AppState-Klasse}{section.A.4}% 103
-\BOOKMARK [2][-]{subsection.A.4.2}{Milestone-Klasse}{section.A.4}% 104
-\BOOKMARK [2][-]{subsection.A.4.3}{Task-Klasse}{section.A.4}% 105
-\BOOKMARK [2][-]{subsection.A.4.4}{Challenge-Klasse}{section.A.4}% 106
-\BOOKMARK [2][-]{subsection.A.4.5}{Achievement-Klasse}{section.A.4}% 107
-\BOOKMARK [2][-]{subsection.A.4.6}{Property-Klasse}{section.A.4}% 108
-\BOOKMARK [2][-]{subsection.A.4.7}{Content-Klasse}{section.A.4}% 109
-\BOOKMARK [2][-]{subsection.A.4.8}{AppContentLoader-Klasse}{section.A.4}% 110
-\BOOKMARK [2][-]{subsection.A.4.9}{JSONAppContentFile-Klasse}{section.A.4}% 111
-\BOOKMARK [2][-]{subsection.A.4.10}{InformationToolContentBuilder-Klasse}{section.A.4}% 112
-\BOOKMARK [2][-]{subsection.A.4.11}{Achievement-Notification Funktionen}{section.A.4}% 113
-\BOOKMARK [1][-]{section.A.5}{Dokumente der Evaluation}{appendix.A}% 114
-\BOOKMARK [2][-]{subsection.A.5.1}{Aufgabenkatalog}{section.A.5}% 115
-\BOOKMARK [2][-]{subsection.A.5.2}{Ergebnisse der Professoren}{section.A.5}% 116
-\BOOKMARK [2][-]{subsection.A.5.3}{Ergebnisse der Studierende}{section.A.5}% 117
-\BOOKMARK [0][-]{chapter*.10}{Literatur}{}% 118
+\BOOKMARK [2][-]{subsection.A.1.6}{Notizen von Interviews mit Professoren \(Interview VI\)}{section.A.1}% 98
+\BOOKMARK [2][-]{subsection.A.1.7}{E-Mail-Befragung der Professoren I}{section.A.1}% 99
+\BOOKMARK [2][-]{subsection.A.1.8}{Zusammenfassung der schriftlichen Befragung der Studierenden}{section.A.1}% 100
+\BOOKMARK [2][-]{subsection.A.1.9}{Ergebnisse der Online-Umfrage f\374r die Studierenden}{section.A.1}% 101
+\BOOKMARK [1][-]{section.A.2}{\334bersicht der Herausforderungen und Achievements}{appendix.A}% 102
+\BOOKMARK [1][-]{section.A.3}{Oberfl\344chenprototyp}{appendix.A}% 103
+\BOOKMARK [1][-]{section.A.4}{Detaillierte Beschreibung der Model Komponenten}{appendix.A}% 104
+\BOOKMARK [2][-]{subsection.A.4.1}{AppState-Klasse \(@immutable\)}{section.A.4}% 105
+\BOOKMARK [2][-]{subsection.A.4.2}{Milestone-Klasse \(@immutable\)}{section.A.4}% 106
+\BOOKMARK [2][-]{subsection.A.4.3}{Task-Klasse \(@immutable\)}{section.A.4}% 107
+\BOOKMARK [2][-]{subsection.A.4.4}{Challenge-Klasse \(@immutable\)}{section.A.4}% 108
+\BOOKMARK [2][-]{subsection.A.4.5}{Achievement-Klasse \(@immutable\)}{section.A.4}% 109
+\BOOKMARK [2][-]{subsection.A.4.6}{Property-Klasse \(@immutable\)}{section.A.4}% 110
+\BOOKMARK [2][-]{subsection.A.4.7}{Content-Klasse \(@immutable\)}{section.A.4}% 111
+\BOOKMARK [2][-]{subsection.A.4.8}{AppContentLoader-Klasse}{section.A.4}% 112
+\BOOKMARK [2][-]{subsection.A.4.9}{JSONAppContentFile-Klasse}{section.A.4}% 113
+\BOOKMARK [2][-]{subsection.A.4.10}{Achievement-Notification Funktionen}{section.A.4}% 114
+\BOOKMARK [1][-]{section.A.5}{Dokumente der Evaluation}{appendix.A}% 115
+\BOOKMARK [2][-]{subsection.A.5.1}{Aufgabenkatalog}{section.A.5}% 116
+\BOOKMARK [2][-]{subsection.A.5.2}{Ergebnisse der Professoren}{section.A.5}% 117
+\BOOKMARK [2][-]{subsection.A.5.3}{Ergebnisse der Studierende}{section.A.5}% 118
+\BOOKMARK [0][-]{chapter*.10}{Literatur}{}% 119
